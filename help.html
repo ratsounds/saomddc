@@ -1,0 +1,128 @@
+<h2>現在のランイベ</h2>
+<div id="rankingevents">
+    <p>
+    </p>
+</div>
+<p>Twitterでの検索性向上の為にランイベ動画や攻略情報には上記ハッシュタグを使いましょう。動画投稿時は次のようなテンプレートがおすすめです（将来的にテンプレートに基づいた機械処理を考えています）。</p>
+<p class="math">#メモデフ #saomd #<var>ranking event hashtag</var><var>time sec</var><var>char info</var><var>comment</var></p>
+<p class="math"><var>charinfo</var>=<var>char.lv</var><var>gacha</var><var>nick</var>★<var>wep.lv</var>+<var>char.lv</var>...</p>
+<p>例えば下記のような感じです。キャラ名やガチャは後述するリストを参考にしてそろえると検索性が上がります。アドバイス希望の動画等も増えてきましたがその場合は#アドバイス希望とか付けても良いでしょう。</p>
+<div class="sample">
+    <p>#メモデフ #saomd #おとぎランイベ前半 20秒</p>
+    <p>80Pユイ★4+100OSアスナ★5+100HRキリト★5</p>
+    <p>ユイちゃん可愛い</p>
+</div>
+<h2>このWebサイトについて</h2>
+<p>
+    このWebサイトはソードアート・オンライン メモリー・デフラグの非公式ダメージ計算ツールです。ダメージ計算方法や一部のキャラクターパラメータは、
+    <a href="http://www.sao-memodefu.xyz">SAO（SAOMD）メモデフ攻略ヒント</a>や<a href="https://www.reddit.com/r/MemoryDefrag/comments/5yyr4j/sao_md_4_database/">SAO MD 4★ Database</a>で有志によって収集されたデータを基に推定しています。
+</p>
+<h2>使い方</h2>
+<p>ボスのプリセットを選択してランキング確認。</p>
+<p><img src="http://i.imgur.com/WKt5x20.png"></p>
+<table>
+    <tbody>
+        <tr>
+            <th class="icon"><i class="def"></i></th>
+            <td>防御</td>
+        </tr>
+        <tr>
+            <th class="icon"><i class="buff"></i></th>
+            <td>全体攻撃バフの有無(YUI:1.275 ON:1.165 OFF:1.0)</td>
+        </tr>
+        <tr>
+            <th class="icon"><i class="debuff"></i></th>
+            <td>デバフの有無</td>
+        </tr>
+        <tr>
+            <th class="icon"><i class="racc"></i></th>
+            <td>ランキングアクセの有無</td>
+        </tr>
+        <tr>
+            <th class="icon"><i class="trophy"></i></th>
+            <td>称号による攻撃力アップ</td>
+        </tr>
+        <tr>
+            <th class="icon"><i class="weak"></i></th>
+            <td>弱点時ダメージ補正</td>
+        </tr>
+        <tr>
+            <th class="icon"><i class="resist"></i></th>
+            <td>耐性時ダメージ補正</td>
+        </tr>
+        <tr>
+            <th class="icon"><i class="rweak"></i></th>
+            <td>赤Weak時ダメージ補正</td>
+        </tr>
+        <tr>
+            <th class="icon"><i class="limit"></i></th>
+            <td>ダメージ補正上限</td>
+        </tr>
+        <tr>
+            <th class="icon"><i class="etcmod"></i></th>
+            <td>謎ダメージ補正</td>
+        </tr>
+        <tbody>
+</table>
+<h2>ダメージ計算</h2>
+<p>メモデフで敵に与えるダメージは次のような式で計算できる。なお実際のダメージは乱数によって10％のバラ付きがある。</p>
+<p class="math">
+    <var>ダメージ</var><b>=</b><b>(</b><var>攻撃</var><b>-</b><var>防御</var><b>)</b><b>×</b><var>倍率</var><b>×</b><var>補正</var>
+</p>
+<p>このとき<var>攻撃</var>は次のように決定される。</p>
+<p class="math">
+    <var>攻撃</var><b>=</b><b>(</b><var>基礎攻撃力</var><b>+</b><var>SS</var><b>)</b><b>×</b><b>(</b><b>1</b><b>+</b><b>Σ</b><var>BS</var><b>)</b><b>×</b><var>バフ</var>
+</p>
+<p class="math">
+    <var>基礎攻撃力</var><b>=</b><var>キャラ攻撃力</var><b>+</b><var>武器攻撃力</var>
+</p>
+<p><var>SS</var>(スキルスロットの攻撃力Up効果)はステータス画面で確認できないが、基礎攻撃力へ加算後にBSやバフの効果が得られることに注意。</p>
+<p><var>防御</var>はボス毎に固有の値が設定されており、ランキングイベントでは1450であることが多い。デバフを考慮すると次のように計算できる。</p>
+<p class="math">
+    <var>防御</var><b>=</b><var>ボス防御</var><b>×</b><var>デバフ</var>
+</p>
+<p><var>倍率</var>はスキルや通常攻撃毎に設定されている値。</p>
+<p>最後にここまでで得た基礎ダメージ量に各種補正を乗算する。</p>
+<p class="math">
+    <var>補正</var><b>=</b><var>クリ</var><b>×</b><var>属性</var><b>×</b><var>武器種</var><b>×</b><var>ランイベアクセ</var>
+</p>
+<p><var>クリ</var>(クリティカル時の補正倍率)は1.5が基本で一部のキャラはBSとして異なる補正倍率を持つ。</p>
+<p><var>属性</var>と<var>武器種</var>は敵キャラに設定された弱点や耐性から得られる補正倍率で、多くの場合は弱点が1.5、耐性が0.75である。 一部のソードスキルは武器の属性と異なるダメージタイプを持つので注意が必要。例：OSアスナのS3は斬属性、OSシノンのS3は魔法属性、VリーファのS3に至っては切り上げが斬属性でハートが魔法属性。
+</p>
+<p>また、<var>補正</var>は上限があり<var>クリ</var>x2である。</p>
+<h2>防御の測定方法</h2>
+<p>
+    細剣や片手剣の通常攻撃1発目は倍率が0.5なので、<var>補正</var>=1のキャラで出るダメージから推定できる。実際のダメージは乱数によって10％のばらつきがある為、複数サンプルの最大値を取るか平均や中央値を0.95で除算すると誤差が減る。
+    厳密には
+    <var>0</var>&lt;<var>攻撃</var>-<var>防御</var>&lt;<var>1</var>の時、倍率1未満の通常攻撃はダメージ1になり、倍率1以上のスキルは1より大きいダメになる為、誤差なく防御を求める事ができる。
+</p>
+<h2>補正の測定方法</h2>
+<p>属性相性や武器相性の補正はボスによって異なり、測定したダメージの比率からクリティカル等の補正を除外した値で求められる。属性相性による補正と武器相性による補正が同時にかかる場合のロジックが不明確なので、属性相性、武器相性が1つだけ有効な場合と2つ同時に有効な場合にわけて測定する。</p>
+<h2>お試しゴブリンからのS3ダメージ推定方法</h2>
+<p>お試しゴブリンの<var>防御=1450</var>なので与えたダメージからスキルの<var>倍率</var>を推定できる。お試しでのキャラクターはlv80でBSおよびSSをすべて持つがソードスキルがレベル１である。なおソードスキルのレベル2は多くの場合レベル１の1.1倍の<var>倍率</var>、0.5倍の<var>バフ</var>を持つ。</p>
+<h2>攻撃バフ効果の測定方法</h2>
+<p>攻撃バフの効果はバフの有無における単純なダメージの比率で計算出来ないため、必ず既知の防御を持つ敵で測定しダメージ計算式に落とし込んで測定する必要がある。例えばS3が攻撃バフ付の場合、同じ敵に対しバフ有りと無しでS1やS2のダメージを測定し<var>
+倍率</var>と<var>バフ</var>を求める連立方程式を解く。</p>
+<h2>Cheat Sheet</h2>
+<div>
+    <p id="cheetsheet">
+        <img src="http://i.imgur.com/AuVDwTP.png">
+    </p>
+</div>
+<h2>ガチャ短縮名リスト</h2>
+<table id="gacha">
+    <tbody></tbody>
+</table>
+<h2>キャラ短縮名リスト</h2>
+<table id="cname">
+    <tbody></tbody>
+</table>
+<h2>謝辞</h2>
+<p>
+    Thank you so much for all contributors on <a href="http://www.sao-memodefu.xyz">SAO（SAOMD）メモデフ攻略ヒント</a>                    and
+    <a href="https://www.reddit.com/r/MemoryDefrag/comments/5yyr4j/sao_md_4_database/">SAO MD 4★ Database</a>.
+    The data for damage calculation is based on these great databases. I couldn’t have make this tool without
+    your effort. Thank you again.
+</p>
+<h2>最後に...</h2>
+<p>大丈夫、(' ω ' ミ)<a href="https://twitter.com/ratsounds">@ratsounds</a>の攻略本だよ。</p>

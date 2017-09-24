@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SAO:MD:DC</title>
+    <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/icon.css" />
+    <link rel="stylesheet" href="css/artwork.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,width=device-width, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no,shrink-to-fit=no">
+    <base target="_top">
+</head>
+
+<body>
+    <div id="header">
+        <i class="app"></i>
+        <p>SAOMD Damage Calculator</p>
+    </div>
+    <div id="main" class="smoke">
+        <div id="control">
+            <div>
+                <i class="preset"></i>
+                <select id="preset">
+            <option value="default">Default</option>
+          </select>
+                <i class="sort"></i>
+                <select id="sort">
+            <option value="damage">Damage</option>
+            <option value="dps">DPS</option>
+            <option value="capacity">Capacity</option>
+            <option value="duration">Duration</option>
+          </select>
+            </div>
+            <div class="boss">
+                <i class="def"></i>
+                <select name="def">
+                    <option value="145"> 145(x0.1)</option>
+                    <option value="290"> 290(x0.2)</option>
+                    <option value="435"> 435(x0.3)</option>
+                    <option value="580"> 580(x0.4)</option>
+                    <option value="725"> 725(x0.5)</option>
+                    <option value="870"> 870(x0.6)</option>
+                    <option value="1015">1015(x0.7)</option>
+                    <option value="1160">1160(x0.8)</option>
+                    <option value="1305">1305(x0.9)</option>
+                    <option value="1450" selected>1450(x1.0)</option>
+                    <option value="1595">1595(x1.1)</option>
+                    <option value="1740">1740(x1.2)</option>
+                    <option value="1885">1885(x1.3)</option>
+                    <option value="2030">2030(x1.4)</option>
+                    <option value="2175">2175(x1.5)</option>
+                    <option value="2320">2320(x1.6)</option>
+                    <option value="2465">2465(x1.7)</option>
+                    <option value="2610">2610(x1.8)</option>
+                    <option value="2755">2755(x1.9)</option>
+                    <option value="2900">2900(x2.0)</option>
+                    <option value="4350">4350(x3.0)</option>
+                    <option value="1265">1265(SirK)</option>
+                </select>
+                <i class="buff"></i>
+                <input id="cheer_on2" type="radio" name="gbuff" value="1.275">
+                <label for="cheer_on2" class="toggle left"><span>YUI</span></label>
+                <input id="cheer_on" type="radio" name="gbuff" value="1.165">
+                <label for="cheer_on" class="toggle"><span>ON</span></label>
+                <input id="cheer_off" type="radio" name="gbuff" value="1" checked="true">
+                <label for="cheer_off" class="toggle right"><span>OFF</span></label>
+                <i class="debuff"></i>
+                <input id="debuff_on" type="radio" name="debuff" value="0.5">
+                <label for="debuff_on" class="toggle left"><span>ON</span></label>
+                <input id="debuff_off" type="radio" name="debuff" value="1" checked="true">
+                <label for="debuff_off" class="toggle right"><span>OFF</span></label>
+                <i class="combo"></i>
+                <select name="combo">
+                    <option value="0" selected>0</option><option value="20">20</option><option value="30">30</option><option value="50">50</option>
+                </select>
+                <i class="trophy"></i>
+                <select name="trophy">
+                    <option value="1.00" selected>1.00</option><option value="1.01">1.01</option><option value="1.03">1.03</option>
+                </select>
+            </div>
+            <div class="boss">
+                <input id="enone" type="radio" name="element" value="無">
+                <label for="enone" class="none button "></label>
+                <input id="elight" type="radio" name="element" value="光">
+                <label for="elight" class="light button "></label>
+                <input id="edark" type="radio" name="element" value="闇">
+                <label for="edark" class="dark button "></label>
+                <input id="efire" type="radio" name="element" value="火">
+                <label for="efire" class="fire button "></label>
+                <input id="ewater" type="radio" name="element" value="水">
+                <label for="ewater" class="water button "></label>
+                <input id="ewind" type="radio" name="element" value="風">
+                <label for="ewind" class="wind button "></label>
+                <input id="eearth" type="radio" name="element" value="土">
+                <label for="eearth" class="earth button "></label>
+            </div>
+            <div class="boss">
+                <i class="limit"></i>
+                <select name="limit">
+                    <option value="2">2*cm</option>
+                    <option value="3">3*cm</option>
+                    <option value="4" selected>4*cm</option>
+                    <option value="5">5*cm</option>
+                </select>
+                <i class="weak"></i>
+                <select name="epRate">
+            <option value="1">1.00</option><option value="1.05">1.05</option><option value="1.25">1.25</option><option value="1.5" selected>1.50</option><option value="2">2.00</option><option value="0.75">0.75</option><option value="0.5">0.50</option>
+          </select>
+                <i class="resist"></i>
+                <select name="enRate">
+            <option value="1">1.00</option><option value="1.25">1.25</option><option value="1.5">1.50</option><option value="0.75" selected>0.75</option><option value="0.5">0.50</option>
+          </select>
+                <i class="rweak"></i>
+                <select name="repRate">
+            <option value="1" selected>1.00</option><option value="1.25">1.25</option><option value="1.5">1.50</option><option value="2">2.00</option><option value="0.75">0.75</option><option value="0.5">0.50</option>
+          </select>
+                <i class="racc"></i>
+                <input id="racc_on" type="radio" name="racc" value="1.1">
+                <label for="racc_on" class="toggle left"><span>ON</span></label>
+                <input id="racc_off" type="radio" name="racc" value="1" checked="true">
+                <label for="racc_off" class="toggle right"><span>OFF</span></label>
+                <i class="etcmod"></i>
+                <select name="etcMod">
+            <option value="1">1.00</option><option value="1.1">1.10</option><option value="1.25">1.25</option><option value="1.5">1.50</option><option value="2">2.00</option><option value="0.75">0.75</option><option value="0.5">0.50</option><option value="0.33">0.33</option><option value="0.25">0.25</option>
+          </select>
+            </div>
+            <div class="boss">
+                <i class="dual"></i>
+                <i class="sword"></i>
+                <select name="slash">
+          <option value="1">1.00</option><option value="1.25">1.25</option><option value="1.5">1.50</option><option value="2">2.00</option><option value="0.75">0.75</option><option value="0.5">0.50</option>
+          </select>
+                <i class="rapier"></i>
+                <i class="dagger"></i>
+                <i class="bow"></i>
+                <i class="lance"></i>
+                <select name="pierce">
+          <option value="1">1.00</option><option value="1.25">1.25</option><option value="1.5">1.50</option><option value="2">2.00</option><option value="0.75">0.75</option><option value="0.5">0.50</option>
+          </select>
+                <i class="mace"></i>
+                <i class="gun"></i>
+                <select name="blunt">
+          <option value="1">1.00</option><option value="1.25">1.25</option><option value="1.5">1.50</option><option value="2">2.00</option><option value="0.75">0.75</option><option value="0.5">0.50</option>
+          </select>
+                <i class="staff"></i>
+                <select name="magic">
+          <option value="1">1.00</option><option value="1.25">1.25</option><option value="1.5">1.50</option><option value="2">2.00</option><option value="0.75">0.75</option><option value="0.5">0.50</option>
+          </select>
+            </div>
+            <div class="boss hidden">
+                <input id="condition" name="condition" type="text">
+            </div>
+            <div class="filter">
+                <i class="filter_icon"></i>
+                <input id="keyword" name="keyword" type="search" placeholder="Search...">
+            </div>
+            <div class="filter">
+                <input id="sword" type="checkbox" name="type" value="片手剣">
+                <label for="sword" class="sword button"></label>
+                <input id="shield" type="checkbox" name="type" value="盾剣">
+                <label for="shield" class="shield button"></label>
+                <input id="dual" type="checkbox" name="type" value="双剣">
+                <label for="dual" class="dual button"></label>
+                <input id="rapier" type="checkbox" name="type" value="細剣">
+                <label for="rapier" class="rapier button"></label>
+                <input id="dagger" type="checkbox" name="type" value="短剣">
+                <label for="dagger" class="dagger button"></label>
+                <input id="bow" type="checkbox" name="type" value="弓">
+                <label for="bow" class="bow button" button></label>
+                <input id="lance" type="checkbox" name="type" value="槍">
+                <label for="lance" class="lance button"></label>
+                <input id="mace" type="checkbox" name="type" value="片手棍">
+                <label for="mace" class="mace button"></label>
+                <input id="gun" type="checkbox" name="type" value="銃">
+                <label for="gun" class="gun button"></label>
+                <input id="staff" type="checkbox" name="type" value="杖">
+                <label for="staff" class="staff button"></label>
+            </div>
+            <div class="control_wrapper">
+                <div class="filter">
+                    <input id="lv80" type="checkbox" name="lv" value="80" checked="true">
+                    <label for="lv80" class="l80 button"></label>
+                    <input id="lv90" type="checkbox" name="lv" value="90">
+                    <label for="lv90" class="l90 button"></label>
+                    <input id="lv100" type="checkbox" name="lv" value="100">
+                    <label for="lv100" class="l100 button"></label>
+                    <input id="r0" type="checkbox" name="r" value="0">
+                    <label for="r0" class="r0 button"></label>
+                    <input id="r4" type="checkbox" name="r" value="4" checked="true">
+                    <label for="r4" class="r4 button"></label>
+                    <input id="r5" type="checkbox" name="r" value="5">
+                    <label for="r5" class="r5 button"></label>
+                </div>
+                <div class="config_panel">
+                    <button id="help_button" class="help_icon"></button>
+                    <button id="config_button" class="config"></button>
+                </div>
+            </div>
+            <div id="config_wallpaper" class="config_bar hidden">
+                <i class="wallpaper"></i>
+                <input id="wallpaper" name="wallpaper" type="search" placeholder="input wallpaper image url">
+                <select id="effect">
+            <option value="">None</option>
+            <option value="smoke" selected>Smoke</option>
+            <option value="mist">Mist</option>
+            <option value="line">line</option>
+            <option value="grid">Grid</option>
+          </select>
+            </div>
+            <div id="config_theme" class="config_bar hidden">
+                <i class="theme"></i>
+                <select id="theme_preset">
+          </select>
+                <i class="theme_color"></i>
+                <input class="theme_value" id="theme_color" name="theme_color" type="text" value="#666">
+                <i class="theme_body"></i>
+                <input class="theme_value" id="theme_body" name="theme_body" type="text" value="#fff">
+                <i class="theme_head"></i>
+                <input class="theme_value" id="theme_head" name="theme_head" type="text" value="#eb8">
+                <i class="theme_highlight"></i>
+                <input class="theme_value" id="theme_highlight" name="theme_highlight" type="text" value="#d43">
+            </div>
+        </div>
+        <div id="content">
+            <div id="help" class="help hidden">
+            </div>
+            <div id="ranking" tabindex="1">
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p>Don&rsquo;t worry, this is <span class="argo">(&lsquo; ω &lsquo;ミ)</span>&rsquo;s guidebook.</p>
+        <a href="https://twitter.com/ratsounds" class="twitter-follow-button" data-show-count="false">Follow @ratsounds</a>
+    </div>
+
+    <template id="item_info">
+        <div class="item" id="%id%">
+            <div class="rank">%rank%</div>
+            <div class="info">
+                <div class="header" style="background-image: linear-gradient( 90deg, %color% %c.p_dps%\%, transparent 0\% ),linear-gradient( 90deg, %color% %c.p_damage%\%, transparent 0\% ),linear-gradient( 90deg, %color% %c.p_capacity%\%, transparent 0\% );">
+                    <i class="level l%c.lv%"></i>
+                    <i class="rarelity r%c.r%"></i>
+                    <i class="type %c.data.type.type_en%"></i>
+                    <i class="group g%c.data.group.group_class%"></i>
+                    <p class="name"> %cname% </p>
+                    <p class="score"> %score% </p>
+                </div>
+                <div class="detail hidden"></div>
+            </div>
+        </div>
+    </template>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/store.js/1.3.20/store.min.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="js/util.js"></script>
+    <script src="js/dc.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+
+</html>
