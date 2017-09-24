@@ -2,7 +2,9 @@ var db;
 
 function loadDB(callback) {
     fetch('data/data.json', { method: 'GET' })
-        .then(function (response) { return response.json() })
+        //.then(function (response) { return response.json() })
+        .then(function (response) { return response.text(); })
+        .then(function (text) { return JSON.parse(text); })
         .then(initDB)
         .then(callback)
         .catch(function (error) { console.log(error); });
