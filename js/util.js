@@ -1,22 +1,5 @@
-'use strict';
-
-if (!Element.prototype.matches) {
-    Element.prototype.matches = 
-        Element.prototype.matchesSelector || 
-        Element.prototype.mozMatchesSelector ||
-        Element.prototype.msMatchesSelector || 
-        Element.prototype.oMatchesSelector || 
-        Element.prototype.webkitMatchesSelector ||
-        function(s) {
-            var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-                i = matches.length;
-            while (--i >= 0 && matches.item(i) !== this) {}
-            return i > -1;            
-        };
-}
-
 const DO = {
-    _template: document.createElement( 'template' ),
+    _template: document.createElement('template'),
     onLoad: function (callback, option) {
         return document.addEventListener('DOMContentLoaded', callback, option);
     },
@@ -42,15 +25,16 @@ Element.prototype.html = function (html) {
     return this;
 };
 Element.prototype.parents = function (q) {
-    if (this.parentNode.matches) {
-        if (this.parentNode.matches(q)) {
-            return this.parentNode;
+    if (this.matches) {
+        if (this.matches(q)) {
+            return this;
         } else {
-            return this.parentNode.parents(q);
+            if(this.parentNode.parents){
+                return this.parentNode.parents(q);
+            }
         }
-    } else {
-        return null;
     }
+    return null;
 };
 //event_type, callback, option
 //selector, event_type, callback, option
@@ -59,12 +43,9 @@ Element.prototype.on = function (a, b, c, d) {
         return this.addEventListener(a, b, c);
     } else {
         return this.addEventListener(b, function (ev) {
-            for (var i = 0; i < ev.path.length; i++) {
-                var parent = ev.path[i];
-                if (parent.matches && parent.matches(a)) {
-                    c.call(parent, ev);
-                    break;
-                }
+            var parent = ev.target.parents(a);
+            if (parent !== null) {
+                c.call(parent, ev);
             }
         }, d);
     }
