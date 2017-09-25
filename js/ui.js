@@ -119,6 +119,7 @@ function sortObjectArray(obj, key, asend) {
 }
 
 function initPre() {
+    
     //get lang
     var language = (window.navigator.languages && window.navigator.languages[0]) || window.navigator.language || window.navigator.userLanguage || window.navigator.browserLanguage;
     if (language.substr(0, 2) === 'ja') {
@@ -194,6 +195,24 @@ function initPre() {
 }
 function initPost() {
     var db = DC.getData();
+
+    //create group icon css
+    //set app icon
+    fetch('data/appicon.json', { method: 'GET' })
+    .then(function (responce) { return responce.text() })
+    .then(function (text) { return JSON.parse(text); })
+    .then(function (json) { 
+        var gcss = '<style type="text/css">';
+        var url = json[Math.floor(Math.random()*json.length)];
+        if(url){gcss +='.app {background-image:url('+url+')!important} ';}        
+        for(var i in db.group){
+            var gclass = 'g'+db.group[i].class;
+            gcss +='.'+gclass+' {background-image:url(/icons/'+gclass+'.png)} ';
+        }        
+        gcss += '</style>';
+        DO.q('head').append(DO.new(gcss));
+    })
+    .catch(function (error) { console.log(error); });
 
     //load preset
     var elemPreset = DO.qid('preset').html('');
