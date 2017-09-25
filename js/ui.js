@@ -207,7 +207,7 @@ function initPost() {
         if(url){gcss +='.app {background-image:url('+url+')!important} ';}        
         for(var i in db.group){
             var gclass = 'g'+db.group[i].class;
-            gcss +='.'+gclass+' {background-image:url(/icons/'+gclass+'.png)} ';
+            gcss +='.'+gclass+' {background-image:url(icons/'+gclass+'.png)} ';
         }        
         gcss += '</style>';
         DO.q('head').append(DO.new(gcss));
