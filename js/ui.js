@@ -63,29 +63,32 @@ function initHelp(html) {
     var elemCname = DO.q('#cname tbody').html('');
     var elemThemePreset = DO.qid('theme_preset').html('');
     var array_cname = getObjectArray(db.cname);
-    sortObjectArray(array_cname, 'cname_en', true);
+    sortObjectArray(array_cname, 'name_en', true);
     for (var i = 0; i < array_cname.length; i++) {
         var item = array_cname[i];
         var html = '';
         html += '<tr style="color:' + item.color + '; background-color:' + item.body + ';background-image:linear-gradient(45deg,transparent 90%,' + item.body + ' 90%,' + item.body + '),linear-gradient(45deg,transparent 88%,' + item.highlight + ' 88%,' + item.highlight + '), linear-gradient(45deg,transparent 84%,' + item.head + ' 84%,' + item.head + ');"><th>';
         //html+='<tr><th>';
-        html += item.cname;
-        if (item.meta && item.meta !== '') {
-            html += '(' + item.meta + ')';
+        html += item.name;
+        if (item.nick && item.nick !== item.name) {
+            html += '(' + item.nick + ')';
         }
         html += '</th><td>';
-        html += item.cname_en;
+        html += item.name_en;
+        if (item.nick_en && item.nick_en !== item.name_en) {
+            html += '(' + item.nick_en + ')';
+        }
         html += '</td></tr>';
         html += '';
         elemCname.append(DO.new(html));
-        var cn = item['cname' + lang]
-        elemThemePreset.append(DO.new('<option value="' + item.cname + '">' + cn + '</option>'));
+        var cn = item['name' + lang]
+        elemThemePreset.append(DO.new('<option value="' + item.id + '">' + cn + '</option>'));
     }
     elemThemePreset.value = config.theme.preset;
     var elemGacha = DO.q('#gacha tbody').html('');
     var array_group = getObjectArray(db.group);
     sortObjectArray(array_group, 'group_date', true);
-    var mapperGroup = new Mapper('<tr><th class="icon"><i class="g%group_class%"></i></th><td class="short">%group_short% / %group_short_en%</td><td>%group_long% / %group_long_en%</td></tr>');
+    var mapperGroup = new Mapper('<tr><th class="icon"><i class="g%class%"></i></th><td class="short">%short% / %short_en%</td><td>%long% / %long_en%</td></tr>');
     for (var i = 0; i < array_group.length; i++) {
         var item = array_group[i];
         var html = mapperGroup.map(item);
@@ -175,9 +178,8 @@ function initPre() {
             store.set('config', config);
         });
     });
-    var db = DC.getData();
     DO.qid('theme_preset').on('change', function (ev) {
-        var cn = db.cname[ev.target.value];
+        var cn = DC.getCname()[ev.target.value];
         if (cn) {
             DO.qid('theme_color').value = cn.color;
             DO.qid('theme_body').value = cn.body;
