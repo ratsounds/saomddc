@@ -541,7 +541,7 @@ img {
 #content #cheetsheet {
   margin: 0;
   padding: 0;
-  background: url("image/saomd_cheatsheet_box_usage.png") no-repeat;
+  background: url("../image/saomd_cheatsheet_box_usage.png") no-repeat;
   background-size: contain;
   border-bottom: none;  
 }
@@ -558,7 +558,7 @@ img {
   height: 2em;
   border-radius: 2em;
   border: 3px solid #fff;
-  background-image: url("icons/login.gif");
+  background-image: url("../icons/login.gif");
   background-position: 0 0.1em;
   background-size: cover;
   margin: -0.5em 0 -0.5em -0.5em;
