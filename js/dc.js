@@ -1,243 +1,322 @@
-var db;
-
-function loadDB(callback) {
-    fetch('data/data.json', { method: 'GET' })
+function loadDBFromFile(url, callback) {
+    fetch(url, { method: 'GET' })
         //.then(function (response) { return response.json() })
         .then(function (response) { return response.text(); })
         .then(function (text) { return JSON.parse(text); })
-        .then(initDB)
+        .then(DC.loadData)
         .then(callback)
         .catch(function (error) { console.log(error); });
 }
 
-function initDB(raw) {
-    db = raw;
-    for (var i = 0; i < db.relations.length; i++) {
-        var rel = db.relations[i];
-        refer(db[rel.src], db[rel.dst], rel.key);
-    }
-    return db;
-}
-function refer(src, dst, key) {
-    for (var i in src) {
-        var value = src[i][key];
-        src[i][key] = dst[value];
-    }
-}
-
-function getViewModel(c, wep, amr, acc, lv, r) {
-    // init view model object
-    var vm = {};
-    vm.data = c;
-    vm.lv = lv;
-    vm.r = r;
-    vm.mp = getMaxMP(c);
-    vm.duration = formatFloat(c.s3_duration);
-    vm.duration_50 = formatFloat(c.s3_duration * (1 - vm.data.combo_speed * 5));
-
-    // prepare SV(static variables)
-    // SV is static variable for each element
-    vm.sv = {};
-    var sv_others = { eRate: undefined };
-    var sv_strong = { eRate: 'epRate' };
-    var sv_weak = { eRate: 'enRate' };
-    for (var i in db.element) {
-        vm.sv[i] = sv_others;
-    }
-    vm.sv_default = sv_others;
-    vm.sv[c.element.element_weak] = sv_weak;
-    vm.sv[c.element.element_strong] = sv_strong;
-    var boss_others = { element: undefined };
-    var boss_weak = { element: db.element[c.element.element_weak] };
-    var boss_strong = { element: db.element[c.element.element_strong] };
-
-    //calculate base atk
-    var lvd = lv - 80;
+var DC = (function () {
+    var db;
+    var sd;
     var lvup_rate = 0.005245;
-    var lb_rate = 0.025775;
-    if (c.group.group_class === 'kenbu' || c.group.group_class === 'psr' || c.group.group_class === 'ssr' || c.group.group_class === 'isr') {
-        lb_rate = 0.041275;
+    var lb_rate = {
+        normal: 0.025775,
+        high: 0.041275
     }
-    var ss_atk = c.ss_atk;
-    if (lv > 80) {
-        ss_atk += c.ss_dmg_85;
-    }
-    vm.atk_c = c.atk + c.atk * lvd * lvup_rate + c.atk * Math.floor(lvd / 5) * lb_rate + ss_atk;
-    vm.atk_eq = getWeaponAtk(c, wep, r) + getEqValue(c, amr, 'atk') + getEqValue(c, acc, 'atk');
-    vm.atk = vm.atk_c + vm.atk_eq;
-    //bs    
-    calcSVBS(sv_others, c, wep, amr, acc, lv, r, boss_others);
-    calcSVBS(sv_weak, c, wep, amr, acc, lv, r, boss_weak);
-    calcSVBS(sv_strong, c, wep, amr, acc, lv, r, boss_strong);
-    //buff
-    vm.buff = c.s3_atk;
-    //debuff
-    vm.debuf = c.s3_debuf;
-    vm.debuf_pnr = c.s3_debuf_pnr;
-    sv_others.emod = 1;
-    sv_weak.emod = 1;
-    sv_strong.emod = c.ss_elem_dmg;
-    vm.dtmod = {}
-    for (var t in db.dtypes) {
-        vm.dtmod[t] = c['dtr_' + db.dtypes[t]];
-    }
-    vm.mod_dmg = c.ss_dmg;
-    if (lv > 85) {
-        vm.mod_dmg *= c.ss_elem_dmg_90;
-    }
-    var mod_crit = c.cri_dmg * c.ss_cri_dmg;
-    sv_others.mod_crit = mod_crit * (1 + getWeaponCriEDmg(wep, r, boss_others));
-    sv_weak.mod_crit = mod_crit * (1 + getWeaponCriEDmg(wep, r, boss_weak));
-    sv_strong.mod_crit = mod_crit * c.ss_elem_cri_dmg * (1 + getWeaponCriEDmg(wep, r, boss_strong));
+    var key_mp = 'mp';
+    var key_bs_mp = 'bs_mp';
+    var key_mp_dec = 'mp_dec';
+    var key_atk = 'atk';
+    var key_bs_atk = 'bs_atk';
 
-    vm.rate = c.s3_rate;
-
-    return vm;
-}
-
-function calcSVBS(dcv, c, wep, amr, acc, lv, r, boss) {
-    dcv.bs_c = c.bs_atk;
-    dcv.bs_eq = getWeaponBSAtk(wep, r) + getEqBS(c, amr, 'atk', boss) + getEqBS(c, acc, 'atk', boss);
-    dcv.bs = 1 + dcv.bs_c + dcv.bs_eq;
-}
-
-function calcNetDamage(vm, boss) {
-    var dcv = vm.sv_default;
-    if (boss.element) {
-        dcv = vm.sv[boss.element.element];
+    function loadData(raw) {
+        db = raw;
+        //init relation
+        for (var i = 0; i < db.relation.length; i++) {
+            var rel = db.relation[i];
+            refer(db[rel.src], db[rel.dst], rel.key);
+        }
+        //init condition object
+        createConditionObject(db.armor, 'conditional');
+        createConditionObject(db.accessory, 'conditional');
+        createConditionObject(db.preset, 'condition');
+        //init static data
+        sd = {};
+        return db;
     }
-    var buff;
-    if (boss.gbuff === undefined) {
-        buff = vm.buff;
-    } else {
-        buff = Math.max(vm.buff, boss.gbuff);
+    function getData() {
+        return db;
     }
-    buff *= boss.trophy;
-    var debuff = 1.0;
-    if (boss.debuff) {
-        debuff = boss.debuff;
+    function refer(src, dst, key) {
+        for (var i in src) {
+            var value = src[i][key];
+            src[i][key] = dst[value];
+        }
     }
-    var def;
-    if (boss.debuff < 1.0) { //debuff on
-        def = boss.def * debuff;
-    } else { //debuff off
-        def = boss.def * (1 - vm.debuf_pnr + vm.debuf * vm.debuf_pnr);
-    }
-    var emod = dcv.emod;
-    if (dcv.eRate) {
-        emod *= boss[dcv.eRate];
-    }
-    var dtmod = 1;
-    for (var t in db.dtypes) {
-        dtmod += (boss[db.dtypes[t]] - 1) * vm.dtmod[t];
-    }
-    var cmod = 1;
-    if (boss.condition) {
-        var conditions = boss.condition.split(',');
-        for (var j in conditions) {
-            var cdata = conditions[j].split(':');
-            var con = cdata[0].split('=');
-            if (c[con[0]] === con[1]) {
-                cmod *= cdata[1];
+    function createConditionObject(object, key) {
+        for (var i in object) {
+            var condition = {};
+            var condition_string = object[i][key];
+            if (condition_string !== 0) {
+                var conditions = condition_string.split(/,/);
+                for (var j in conditions) {
+                    var sp = conditions[j].split(/:/);
+                    condition.expression = sp[0];
+                    var values = sp[1].split(/&/);
+                    condition.values = {};
+                    for (var k in values) {
+                        var kv = values[k].split(/=/);
+                        condition.values[kv[0]] = parse(kv[1]);
+                    }
+                }
+                object[i][key] = condition;
             }
         }
     }
-    var combo = 1 + Math.floor(boss.combo / 10) * 0.05;
-    if (boss.combo > 20) { combo *= vm.data.combo_damage_20; }
-    if (boss.combo > 30) { combo *= vm.data.combo_damage_30; }
-    var mod = Math.min(combo * vm.mod_dmg * emod * dtmod * boss.repRate * boss.racc * boss.etcMod * cmod, boss.limit);
-    if (boss.crit > 0) {
-        mod *= dcv.mod_crit;
+    function calcRateAtTryout(c,lv,lb,wep,r,amr,acc,boss,damage){
+        var dcv = getDamageCalculationVariables(c,lv,lb,wep,r,amr,acc,boss);
+        dcv.rate = damage/((dcv.atk * dcv.bs * (1+(1-dcv.buff)/1.5) - dcv.def)*dcv.mod)*1.1;
+        return dcv;
+    }    
+    function calcRate(c, lv, lb, wep, r, amr, acc, boss, damage) {
+        var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);
+        dcv.rate = damage / ((dcv.atk * dcv.bs * dcv.buff - dcv.def) * dcv.mod);
+        return dcv;
     }
-    vm.damage = (vm.atk * dcv.bs * buff - def) * vm.rate * mod;
-    //console.log(vm.cname,vm.mod_dmg , emod ,dtmod , boss.repRate , boss.racc , boss.etcMod , cmod, boss.limit);    
-    //console.log(vm.atk,dcv.bs,buff,def,vm.rate,mod);
-    //console.log(dcv.mod_crit);
-    return vm;
-}
+    function calcDamage(c, lv, lb, wep, r, amr, acc, boss, custom_rate) {
+        var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);
+        if (custom_rate) { dcv.rate = custom_rate; }
+        dcv.damage = (dcv.atk * dcv.bs * dcv.buff - dcv.def) * dcv.rate * dcv.mod;
+        return dcv;
+    }
+    function getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss) {
+        var sv = getSV(c, lv, lb, wep, r, amr, acc);
+        var sve = sv['default'];
+        if (boss.element) {
+            sve = sv[boss.element.id];
+        }
 
-function getWeaponAtk(c, wep, r) {
-    var atk = getEqValue(c, wep, 'atk');
-    switch (r) {
-        case 4:
-            return atk * 1;
-        case 5:
-            return atk * 1.36;
-        default:
-            return atk * 0;
+        var exp_obj = { c: c, hp: 100, vs: boss.element ? boss.element.id : undefined, combo: boss.combo };
+        var bs_con_amr = amr && Expression.eval(amr.conditional.expression, exp_obj) ? amr.conditional.values : {};
+        var bs_con_acc = acc && Expression.eval(acc.conditional.expression, exp_obj) ? acc.conditional.values : {};
+        var atk = sv.atk + getEqValue(bs_con_amr, key_atk) + getEqValue(bs_con_acc, key_atk);
+        var bs_atk = sve.bs_atk + getEqValue(bs_con_amr, key_bs_atk) + getEqValue(bs_con_acc, key_bs_atk);
+
+        var buff;
+        if (boss.gbuff === undefined) {
+            buff = sv.c.s3_atk;
+        } else {
+            buff = Math.max(sv.c.s3_atk, boss.gbuff);
+        }
+        buff *= boss.trophy;
+
+        var debuff = 1.0;
+        if (boss.debuff) { debuff = boss.debuff; }
+
+        var def;
+        if (boss.debuff < 1.0) { //debuff on
+            def = boss.def * debuff;
+        } else { //debuff off
+            def = boss.def * (1 - sv.c.s3_debuf_pnr + sv.c.s3_debuf * sv.c.s3_debuf_pnr);
+        }
+
+        var emod = 1;
+        if (sve.eRate) { emod *= boss[sve.eRate]; }
+        var dtmod = 1;
+        for (var t in db.dtype) { dtmod += (boss[t] - 1) * sv.dtmod[t]; }
+
+        var cmod = Expression.eval(boss.condition.expression, exp_obj) ? boss.condition.values.mod : 1;
+
+        var combo = 1 + Math.floor(boss.combo / 10) * 0.05;
+        if (boss.combo > 20) { combo *= sv.c.combo_damage_20; }
+        if (boss.combo > 30) { combo *= sv.c.combo_damage_30; }
+        var mod = Math.min(combo * sve.mod_dmg * emod * dtmod * boss.repRate * boss.racc * boss.etcMod * cmod, boss.limit);
+        if (boss.crit > 0) {
+            mod *= sve.mod_crit;
+        }
+        var dcv = {
+            atk: atk,
+            bs: (1 + bs_atk),
+            buff: buff,
+            def: def,
+            rate: sv.c.s3_rate,
+            mod: mod,
+            sv: sv
+        };
+        return dcv;
     }
-}
-function getWeaponBSAtk(wep, r) {
-    switch (r) {
-        case 4:
-            return wep.bs_atk;
-        case 5:
-            return wep.bs_atk5;
-        default:
-            return 0;
+    function getSV(c, lv, lb, wep, r, amr, acc) {
+        var obj = sd;
+        obj = getSubObject(obj, c.id);
+        obj = getSubObject(obj, lv);
+        obj = getSubObject(obj, lb);
+        obj = getSubObject(obj, wep ? wep.id : 'undefined');
+        obj = getSubObject(obj, r);
+        obj = getSubObject(obj, amr ? amr.id : 'undefined');
+        obj = getSubObject(obj, acc ? acc.id : 'undefined');
+        if (Object.keys(obj).length <= 0) {
+            obj = createSV(c, lv, lb, wep, r, amr, acc, obj);
+        }
+        return obj;
     }
-}
-function getWeaponCriEDmg(wep, r, boss) {
-    //console.log(wep);
-    if (boss.element && boss.element.element_weak === wep.element.element) {
+    function getSubObject(obj, key) {
+        if (obj[key] === undefined) {
+            obj[key] = {};
+        }
+        return obj[key];
+    }
+    function createSV(c, lv, lb, wep, r, amr, acc, sv) {
+        sv.c = c;
+        sv.lv = lv;
+        sv.wep = wep;
+        sv.r = r;
+        sv.amr = amr;
+        sv.acc = acc;
+        sv.mp = (c.mp + getEqValueWithElem(c, amr, key_mp) + getEqValueWithElem(c, acc, key_mp)) * (1 + c.bs_mp + getEqValue(amr, key_bs_mp) + getEqValue(acc, key_bs_mp));
+        sv.cost = c.s3_mp - c.s3_mp * getEqValue(wep, key_mp_dec);
+
+        var lv_dif = lv - 80;
+        var ss_atk = c.ss_atk;
+        if (lv > 80) {
+            ss_atk += c.ss_atk_85;
+        }
+        sv.lb = Math.min(lb, Math.floor(lv_dif / 5))
+        sv.atk_c = c.atk + c.atk * lv_dif * lvup_rate + c.atk * sv.lb * lb_rate[c.lvup] + ss_atk;
+        sv.atk_eq = getWeaponAtk(c, wep, r) + getEqValueWithElem(c, amr, key_atk) + getEqValueWithElem(c, acc, key_atk);
+        sv.atk = sv.atk_c + sv.atk_eq;
+        createSVE(sv, 'default');
+        for (var elem in db.element) {
+            createSVE(sv, elem);
+        }
+        sv.dtmod = {}
+        for (var t in db.dtype) {
+            sv.dtmod[t] = c['dtr_' + t];
+        }
+        return sv;
+    }
+    function createSVE(sv, elem) {
+        var sve = {};
+        sv[elem] = sve;
+        sve.bs_atk_eq = getWeaponBSAtk(sv.wep, sv.r) + getEqValue(sv.amr, key_bs_atk) + getEqValue(sv.acc, key_bs_atk);
+        sve.bs_atk = sv.c.bs_atk + sve.bs_atk_eq;
+        sve.mod_dmg = sv.c.ss_dmg;
+        sve.mod_crit = sv.c.cri_dmg * sv.c.ss_cri_dmg * (1 + getWeaponCriEDmg(sv.wep, sv.r, elem));
+        if (sv.c.element.weak === elem) {
+            sve.eRate = 'enRate';
+        }
+        if (sv.c.element.strong === elem) {
+            sve.eRate = 'epRate';
+            sve.mod_dmg *= sv.c.ss_elem_dmg;
+            if (sv.lv > 85) {
+                sve.mod_dmg *= sv.c.ss_elem_dmg_90;
+            }
+            sve.mod_crit *= sv.c.ss_elem_cri_dmg;
+        }
+    }
+    function getWeaponAtk(c, wep, r) {
+        var atk = getEqValueWithElem(c, wep, key_atk);
         switch (r) {
             case 4:
-                return wep.bs_cri_edmg;
+                return atk * 1;
             case 5:
-                return wep.bs_cri_edmg5;
+                return atk * 1.36;
             default:
-                return 0;
+                return atk * 0;
         }
-    } else {
+    }
+    function getWeaponBSAtk(wep, r) {
+        if (wep) {
+            switch (r) {
+                case 4:
+                    return wep.bs_atk;
+                case 5:
+                    return wep.bs_atk5;
+                default:
+                    return 0;
+            }
+        }
         return 0;
     }
-}
-function getEqBS(c, eq, key, boss) {
-    if (eq === undefined) { return 0; }
-    var bs = eq['bs_' + key];
-    switch (eq.c_key) {
-        case 'hp':
-            return bs + eq['bsc_' + key];
-        case 'vs':
-            //console.log(c.short,eq.name,boss);
-            if (boss.element && eq.c_value === boss.element.element) {
-                return bs + eq['bsc_' + key];
-            } else {
-                return bs;
+    function getWeaponCriEDmg(wep, r, vs) {
+        if (wep && wep.element.strong === vs) {
+            switch (r) {
+                case 4:
+                    return wep.bs_cri_edmg;
+                case 5:
+                    return wep.bs_cri_edmg5;
+                default:
+                    return 0;
             }
-        case 'gender':
-            if (eq.c_value === c.cname.gender) {
-                return bs + eq['bsc_' + key];
-            } else {
-                return bs;
-            }
-        case 'world':
-            if (eq.c_value === c[eq.c_key]) {
-                return bs + eq['bsc_' + key];
-            } else {
-                return bs;
-            }
-        case 0:
-        case undefined:
-            return bs;
-        default:
-            //console.log(c.short,eq.name,eq.c_key, eq.c_value);
-            if (eq.c_value === c[eq.c_key][eq.c_key]) {
-                return bs + eq['bsc_' + key];
-            } else {
-                return bs;
-            }
+        }
+        return 0;
     }
-}
-function getEqValue(c, eq, key) {
-    if (eq === undefined) { return 0; }
-    if (c.element === eq.element) {
-        return eq[key] * 1.2;
-    } else {
+    function getEqValueWithElem(c, eq, key) {
+        var value = getEqValue(eq, key);
+        if (value && c.element === eq.element) {
+            return value * 1.2;
+        } else {
+            return value;
+        }
+    }
+    function getEqValue(eq, key) {
+        if (eq === undefined || eq[key] === undefined) { return 0; }
         return eq[key];
     }
-}
-function getMaxMP(c) {
-    return Math.floor((c.mp + getEqValue(c, c.eq_mp_amr, 'mp') + getEqValue(c, c.eq_mp_acc, 'mp')) * (1 + c.bs_mp + getEqBS(c, c.eq_mp_amr, 'mp') + getEqBS(c, c.eq_mp_acc, 'mp')));
-}
-
+    function get(itemKey, mKey, mValue) {
+        var items = db[itemKey];
+        for (var i in items) {
+            var item = items[i];
+            if (item[mKey] === mValue) {
+                return item;
+            }
+        }
+        return undefined;
+    }
+    function getChar(id) {
+        if (id) { return db.base[id]; }
+        return db.base;
+    }
+    function getWeapon(id) {
+        if (id) { return db.weapon[id]; }
+        return db.weapon;
+    }
+    function getArmor(id) {
+        if (id) { return db.armor[id]; }
+        return db.armor;
+    }
+    function getAccessory(id) {
+        if (id) { return db.accessory[id]; }
+        return db.accessory;
+    }
+    function getBoss(name) {
+        if (id) { return get('preset', 'name', name); }
+        return db.preset;
+    }
+    function getCname(id) {
+        if (id) { return db.cname[id]; }
+        return db.cname;
+    }
+    function getElement(id) {
+        if (id) { return db.element[id]; }
+        return db.element;
+    }
+    function getType(id) {
+        if (id) { return db.type[id]; }
+        return db.type;
+    }
+    function getDtype(id) {
+        if (id) { return db.dtype[id]; }
+        return db.dtype;
+    }
+    return {
+        loadData: loadData,
+        getData: getData,
+        getSV: getSV,
+        calcRateAtTryout:calcRateAtTryout,
+        calcRate: calcRate,
+        calcDamage: calcDamage,
+        get: get,
+        getChar: getChar,
+        getWeapon: getWeapon,
+        getArmor: getArmor,
+        getAccessory: getAccessory,
+        getBoss: getBoss,
+        getCname: getCname,
+        getElement: getElement,
+        getType: getType,
+        getDtype: getDtype
+    }
+})();

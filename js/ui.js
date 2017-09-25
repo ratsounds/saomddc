@@ -1,3 +1,14 @@
+var lvr = [
+    { lv: 80, r: 0 },
+    { lv: 80, r: 4 },
+    { lv: 80, r: 5 },
+    { lv: 90, r: 0 },
+    { lv: 90, r: 4 },
+    { lv: 90, r: 5 },
+    { lv: 100, r: 0 },
+    { lv: 100, r: 4 },
+    { lv: 100, r: 5 },
+];
 var ranking;
 var boss;
 var lang;
@@ -8,18 +19,17 @@ var mapperInfo;
 
 DO.onLoad(function () {
     initPre();
-    loadDB(init);
+    loadDBFromFile('data/data.json', init);
 });
 
 function init() {
     loadHelp();
-    initVM();
     initPost();
 }
 
 function loadHelp() {
     fetch('help' + lang + '.html', { method: 'GET' })
-        .then(function(responce){return responce.text()})
+        .then(function (responce) { return responce.text() })
         .then(initHelp)
         .catch(function (error) { console.log(error); });
 }
@@ -28,7 +38,8 @@ function initHelp(html) {
     DO.qid('help').html(html);
     var elmRankingEvent = DO.qid('rankingevents');
     var day = 24 * 60 * 60 * 1000;
-    for (var i in db.preset) {        
+    var db = DC.getData();
+    for (var i in db.preset) {
         var item = db.preset[i];
         if (item.start && item.end) {
             var today = new Date().getTime();
@@ -74,7 +85,7 @@ function initHelp(html) {
     var elemGacha = DO.q('#gacha tbody').html('');
     var array_group = getObjectArray(db.group);
     sortObjectArray(array_group, 'group_date', true);
-    var mapperGroup = new Mapper('<tr><th class="icon"><i class="g%group_class%"></i></th><td class="short">%group_short% / %group_short_en%</td><td>%group_long% / %group_long_en%</td></tr>'); 
+    var mapperGroup = new Mapper('<tr><th class="icon"><i class="g%group_class%"></i></th><td class="short">%group_short% / %group_short_en%</td><td>%group_long% / %group_long_en%</td></tr>');
     for (var i = 0; i < array_group.length; i++) {
         var item = array_group[i];
         var html = mapperGroup.map(item);
@@ -102,29 +113,6 @@ function sortObjectArray(obj, key, asend) {
             return 0;
         });
     }
-}
-
-function initVM() {
-    var lvr = [
-        { lv: 80, r: 0 },
-        { lv: 80, r: 4 },
-        { lv: 80, r: 5 },
-        { lv: 90, r: 0 },
-        { lv: 90, r: 4 },
-        { lv: 90, r: 5 },
-        { lv: 100, r: 0 },
-        { lv: 100, r: 4 },
-        { lv: 100, r: 5 },
-    ]
-    ranking = [];
-    for (var i in db.base) {
-        var c = db.base[i];
-        //console.log(c);
-        for (var i in lvr) {
-            ranking.push(getViewModel(c, c.eq_atk_wep, c.eq_atk_amr, c.eq_atk_acc, lvr[i].lv, lvr[i].r));
-        }
-    }
-    //console.log('vm',ranking);
 }
 
 function initPre() {
@@ -187,6 +175,7 @@ function initPre() {
             store.set('config', config);
         });
     });
+    var db = DC.getData();
     DO.qid('theme_preset').on('change', function (ev) {
         var cn = db.cname[ev.target.value];
         if (cn) {
@@ -202,6 +191,7 @@ function initPre() {
     mapperInfo = new Mapper(DO.qid('item_info').innerHTML);
 }
 function initPost() {
+    var db = DC.getData();
 
     //load preset
     var elemPreset = DO.qid('preset').html('');
@@ -259,11 +249,6 @@ function getThemeConfig() {
         highlight: DO.qid('theme_highlight').value,
     }
 }
-function setRandomTheme() {
-    //set theme
-    var cname_keys = Object.keys(db.cname);
-    setTheme(db.cname[cname_keys[Math.floor(Math.random() * cname_keys.length)]]);
-}
 function setTheme(theme) {
     DO.qid('header').css({
         'color': theme.color,
@@ -282,6 +267,7 @@ function setWallpaper(url) {
 }
 
 function putBoss() {
+    var db = DC.getData();
     boss = { crit: 1 };
     DO.qa('.boss input,.boss select').forEach(function (item) {
         if (item.type === 'radio') {
@@ -306,7 +292,7 @@ function setBoss(boss) {
         if (item.type === 'radio') {
             if (item.name === 'element') {
                 if (boss[item.name]) {
-                    item.checked = boss[item.name].element === parse(item.value);
+                    item.checked = boss[item.name].id === parse(item.value);
                 } else {
                     item.checked = false;
                 }
@@ -329,13 +315,20 @@ function setBoss(boss) {
 function calcRanking() {
     //console.log('calcRanking');
     putBoss();
-    for (var i in ranking) {
-        var vm = ranking[i];
-        calcNetDamage(vm, boss);
-        var duration = vm.data.s3_duration * (1 - vm.data.combo_speed * Math.floor(boss.combo / 10));
-        vm.dps = Math.floor(vm.damage / duration);
-        vm.capacity = Math.floor(vm.damage * vm.mp / vm.data.s3_mp);
-        vm.damage = Math.floor(vm.damage);
+    var cs = DC.getChar();
+    ranking = [];
+    for (var i in lvr) {
+        var clvr = lvr[i];
+        for (var j in cs) {
+            var c = cs[j];
+            var dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss );
+            ranking.push(dcv);
+            dcv.duration = dcv.sv.c.s3_duration * (1 - dcv.sv.c.combo_speed * Math.floor(boss.combo / 10));
+            dcv.duration_50 = dcv.sv.c.s3_duration * (1 - dcv.sv.c.combo_speed * Math.floor(50 / 10));
+            dcv.dps = Math.floor(dcv.damage / dcv.duration);
+            dcv.capacity = Math.floor(dcv.damage * dcv.sv.mp / dcv.sv.cost);
+            dcv.damage = Math.floor(dcv.damage);
+        }
     }
     var sortKey = elemSort.value;
     switch (sortKey) {
@@ -359,23 +352,29 @@ function showRanking() {
     var max = 0;
     var min = Number.MAX_VALUE;
     for (var i = 0; i < ranking.length; i++) {
-        var c = ranking[i];
-        if (filter.lv[c.lv] && filter.r[c.r] && filter.type[c.data.type.type] && match(c.data.meta, filter.keyword)) {
+        var dcv = ranking[i];
+        if (filter.lv[dcv.sv.lv] && filter.r[dcv.sv.r] && filter.type[dcv.sv.c.type.id] && match(dcv.sv.c.meta, filter.keyword)) {
             rank++;
-            filtered.push({ rank: rank, id: i, c: c });
-            max = Math.max(max, c.capacity);
-            min = Math.min(min, c.dps);
+            dcv.rank = zero(rank, 3);
+            dcv.id = i; 
+            filtered.push(dcv);
+            max = Math.max(max, dcv.capacity);
+            min = Math.min(min, dcv.dps);
         }
     }
     var dif = max * 2 / 3 - min;
     var offset = 30;
     var remains = 100 - offset;
     for (var i = 0; i < filtered.length; i++) {
-        var f = filtered[i];
-        f.c.p_dps = offset + remains * (f.c.dps - min) / dif;
-        f.c.p_damage = offset + remains * (f.c.damage - min) / dif;
-        f.c.p_capacity = offset + remains * (f.c.capacity * 2 / 3 - min) / dif;
-        showInfo(f.id, f.rank, f.c, score_key);
+        var dcv = filtered[i];
+        dcv.p_dps = offset + remains * (dcv.dps - min) / dif;
+        dcv.p_damage = offset + remains * (dcv.damage - min) / dif;
+        dcv.p_capacity = offset + remains * (dcv.capacity * 2 / 3 - min) / dif;
+        dcv.score = dcv[score_key];
+        dcv.color = dcv.sv.c.element.color;
+        dcv.cname = dcv.sv.c.cname['name' + lang];
+        var html = mapperInfo.map(dcv);
+        elemRanking.append(DO.new(html));
     }
 }
 
@@ -400,59 +399,49 @@ function getFilter() {
     return filter;
 }
 
-function showInfo(id, rank, c, score_key) {
-    var html = mapperInfo.map({
-        id:id,
-        rank:zero(rank,3),
-        color:c.data.element.color,
-        c:c,
-        cname:c.data.cname['cname' + lang],
-        score:c[score_key],
-    });
-    elemRanking.append(DO.new(html));
-}
 function getCharDetail(id) {
-    var c = ranking[id];
+    var dcv = ranking[id];
+    var c = dcv.sv.c;
     var html = '<table><tbody>';
     var name_key = 'name' + lang;
-    html += getKVTableRow('Name', c.data[name_key]);
-    html += getKVTableRow('Gacha', c.data.group['group_long' + lang]);
-    html += getKVTableRow('Atk Weapon', c.data.eq_atk_wep[name_key]);
-    html += getKVTableRow('Atk Armor', c.data.eq_atk_amr[name_key]);
-    html += getKVTableRow('Atk Accessory', c.data.eq_atk_acc[name_key]);
-    html += getKVTableRow('MP Weapon', c.data.eq_mp_wep[name_key]);
-    html += getKVTableRow('MP Armor', c.data.eq_mp_amr[name_key]);
-    html += getKVTableRow('MP Accessory', c.data.eq_mp_acc[name_key]);
+    html += getKVTableRow('Name', c[name_key]);
+    html += getKVTableRow('Gacha', c.group['long' + lang]);
+    html += getKVTableRow('Atk Weapon', c.eq_atk_wep[name_key]);
+    html += getKVTableRow('Atk Armor', c.eq_atk_amr[name_key]);
+    html += getKVTableRow('Atk Accessory', c.eq_atk_acc[name_key]);
+    html += getKVTableRow('MP Weapon', c.eq_mp_wep[name_key]);
+    html += getKVTableRow('MP Armor', c.eq_mp_amr[name_key]);
+    html += getKVTableRow('MP Accessory', c.eq_mp_acc[name_key]);
 
-    html += getKVTableRow('Character Atk', Math.floor(c.atk_c));
-    html += getKVTableRow('Equipment Atk', Math.floor(c.atk_eq));
-    if (c.data.s3_gatk > 1) {
-        html += getKVTableRow('Group Atk Buff', c.data.s3_gatk);
-    } else if (c.data.s3_atk > 1) {
-        html += getKVTableRow('Atk Buff', c.data.s3_atk);
+    html += getKVTableRow('Character Atk', Math.floor(dcv.sv.atk_c));
+    html += getKVTableRow('Equipment Atk', Math.floor(dcv.sv.atk_eq));
+    if (c.s3_gatk > 1) {
+        html += getKVTableRow('Group Atk Buff', c.s3_gatk);
+    } else if (c.s3_atk > 1) {
+        html += getKVTableRow('Atk Buff', c.s3_atk);
     }
-    if (c.data.combo_damage_20 > 1) {
-        html += getKVTableRow('Combo Damage 20Hit', c.data.combo_damage_20);
+    if (c.combo_damage_20 > 1) {
+        html += getKVTableRow('Combo Damage 20Hit', c.combo_damage_20);
     }
-    if (c.data.combo_damage_30 > 1) {
-        html += getKVTableRow('Combo Damage 30Hit', c.data.combo_damage_30);
+    if (c.combo_damage_30 > 1) {
+        html += getKVTableRow('Combo Damage 30Hit', c.combo_damage_30);
     }
-    html += getKVTableRow('Skill Duration', c.duration, true);
-    if (c.data.combo_speed > 0) {
-        html += getKVTableRow('Skill Duration (50Hit)', c.duration_50, true);
+    html += getKVTableRow('Skill Duration', dcv.duration, true);
+    if (c.combo_speed > 0) {
+        html += getKVTableRow('Skill Duration (50Hit)', dcv.duration_50, true);
     }
-    html += getKVTableRow('Skill Rate', c.data.s3_rate, true);
-    html += getKVTableRow('Slash/Pierce/Blunt/Magic', formatFloat(c.data.dtr_slash) + '/' + formatFloat(c.data.dtr_pierce) + '/' + formatFloat(c.data.dtr_blunt) + '/' + formatFloat(c.data.dtr_magic));
-    if (c.data.s3_debuf > 0) {
-        html += getKVTableRow('Debuff Rate', c.data.s3_debuf, true);
-        html += getKVTableRow('Debuff P/N Rate', c.data.s3_debuf_pnr, true);
+    html += getKVTableRow('Skill Rate', c.s3_rate, true);
+    html += getKVTableRow('Slash/Pierce/Blunt/Magic', formatFloat(c.dtr_slash) + '/' + formatFloat(c.dtr_pierce) + '/' + formatFloat(c.dtr_blunt) + '/' + formatFloat(c.dtr_magic));
+    if (c.s3_debuf > 0) {
+        html += getKVTableRow('Debuff Rate', c.s3_debuf, true);
+        html += getKVTableRow('Debuff P/N Rate', c.s3_debuf_pnr, true);
     }
-    html += getKVTableRow('SS MP Cost', c.data.s3_mp);
+    html += getKVTableRow('SS MP Cost', c.s3_mp);
     html += getKVTableRow('Possible Max MP', c.mp);
-    html += getKVTableRow('MP Limit Break', c.data.mp_lb_total + '(' + c.data.mp_lb_1 + ',' + c.data.mp_lb_2 + ',' + c.data.mp_lb_3 + ',' + c.data.mp_lb_4 + ') EXPERIMENTAL!');
+    html += getKVTableRow('MP Limit Break', c.mp_lb_total + '(' + c.mp_lb_1 + ',' + c.mp_lb_2 + ',' + c.mp_lb_3 + ',' + c.mp_lb_4 + ') EXPERIMENTAL!');
     html += '</tbody></table>'
-    if (c.data.s3_video) {
-        html += '<div class="tcontainer"><blockquote class="twitter-tweet"><a href="' + c.data.s3_video + '"></a></blockquote><div>';
+    if (c.s3_video) {
+        html += '<div class="tcontainer"><blockquote class="twitter-tweet"><a href="' + c.s3_video + '"></a></blockquote><div>';
     }
     return html;
 }

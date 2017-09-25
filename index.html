@@ -81,19 +81,19 @@
                 </select>
             </div>
             <div class="boss">
-                <input id="enone" type="radio" name="element" value="無">
+                <input id="enone" type="radio" name="element" value="none">
                 <label for="enone" class="none button "></label>
-                <input id="elight" type="radio" name="element" value="光">
+                <input id="elight" type="radio" name="element" value="light">
                 <label for="elight" class="light button "></label>
-                <input id="edark" type="radio" name="element" value="闇">
+                <input id="edark" type="radio" name="element" value="dark">
                 <label for="edark" class="dark button "></label>
-                <input id="efire" type="radio" name="element" value="火">
+                <input id="efire" type="radio" name="element" value="fire">
                 <label for="efire" class="fire button "></label>
-                <input id="ewater" type="radio" name="element" value="水">
+                <input id="ewater" type="radio" name="element" value="water">
                 <label for="ewater" class="water button "></label>
-                <input id="ewind" type="radio" name="element" value="風">
+                <input id="ewind" type="radio" name="element" value="wind">
                 <label for="ewind" class="wind button "></label>
-                <input id="eearth" type="radio" name="element" value="土">
+                <input id="eearth" type="radio" name="element" value="earth">
                 <label for="eearth" class="earth button "></label>
             </div>
             <div class="boss">
@@ -157,25 +157,25 @@
                 <input id="keyword" name="keyword" type="search" placeholder="Search...">
             </div>
             <div class="filter">
-                <input id="sword" type="checkbox" name="type" value="片手剣">
+                <input id="sword" type="checkbox" name="type" value="sword">
                 <label for="sword" class="sword button"></label>
-                <input id="shield" type="checkbox" name="type" value="盾剣">
+                <input id="shield" type="checkbox" name="type" value="shield">
                 <label for="shield" class="shield button"></label>
-                <input id="dual" type="checkbox" name="type" value="双剣">
+                <input id="dual" type="checkbox" name="type" value="dual">
                 <label for="dual" class="dual button"></label>
-                <input id="rapier" type="checkbox" name="type" value="細剣">
+                <input id="rapier" type="checkbox" name="type" value="rapier">
                 <label for="rapier" class="rapier button"></label>
-                <input id="dagger" type="checkbox" name="type" value="短剣">
+                <input id="dagger" type="checkbox" name="type" value="dagger">
                 <label for="dagger" class="dagger button"></label>
-                <input id="bow" type="checkbox" name="type" value="弓">
+                <input id="bow" type="checkbox" name="type" value="bow">
                 <label for="bow" class="bow button" button></label>
-                <input id="lance" type="checkbox" name="type" value="槍">
+                <input id="lance" type="checkbox" name="type" value="lance">
                 <label for="lance" class="lance button"></label>
-                <input id="mace" type="checkbox" name="type" value="片手棍">
+                <input id="mace" type="checkbox" name="type" value="mace">
                 <label for="mace" class="mace button"></label>
-                <input id="gun" type="checkbox" name="type" value="銃">
+                <input id="gun" type="checkbox" name="type" value="gun">
                 <label for="gun" class="gun button"></label>
-                <input id="staff" type="checkbox" name="type" value="杖">
+                <input id="staff" type="checkbox" name="type" value="staff">
                 <label for="staff" class="staff button"></label>
             </div>
             <div class="control_wrapper">
@@ -239,11 +239,11 @@
         <div class="item" id="%id%">
             <div class="rank">%rank%</div>
             <div class="info">
-                <div class="header" style="background-image: linear-gradient( 90deg, %color% %c.p_dps%\%, transparent 0\% ),linear-gradient( 90deg, %color% %c.p_damage%\%, transparent 0\% ),linear-gradient( 90deg, %color% %c.p_capacity%\%, transparent 0\% );">
-                    <i class="level l%c.lv%"></i>
-                    <i class="rarelity r%c.r%"></i>
-                    <i class="type %c.data.type.type_en%"></i>
-                    <i class="group g%c.data.group.group_class%"></i>
+                <div class="header" style="background-image: linear-gradient( 90deg, %color% %p_dps%\%, transparent 0\% ),linear-gradient( 90deg, %color% %p_damage%\%, transparent 0\% ),linear-gradient( 90deg, %color% %p_capacity%\%, transparent 0\% );">
+                    <i class="level l%sv.lv%"></i>
+                    <i class="rarelity r%sv.r%"></i>
+                    <i class="type %sv.c.type.id%"></i>
+                    <i class="group g%sv.c.group.class%"></i>
                     <p class="name"> %cname% </p>
                     <p class="score"> %score% </p>
                 </div>
