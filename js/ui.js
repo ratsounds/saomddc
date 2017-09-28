@@ -153,11 +153,12 @@ function initPre() {
     setWallpaper(config.wallpaper_url);
 
     //set sidebar
-    DO.qid('sidebar_url').value = config.sidebar;
     if (config.sidebar === undefined) {
         config.sidebar = '';
         store.set('config', config)
     }
+    DO.qid('sidebar_url').value = config.sidebar;        
+
     showSidebar();
 
     //set config ui events;
