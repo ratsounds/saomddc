@@ -119,7 +119,7 @@ function sortObjectArray(obj, key, asend) {
 }
 
 function initPre() {
-    
+
     //get lang
     var language = (window.navigator.languages && window.navigator.languages[0]) || window.navigator.language || window.navigator.userLanguage || window.navigator.browserLanguage;
     if (language.substr(0, 2) === 'ja') {
@@ -151,6 +151,15 @@ function initPre() {
     DO.qid('main').className = config.wallpaper_effect;
     DO.qid('wallpaper').value = config.wallpaper_url;
     setWallpaper(config.wallpaper_url);
+
+    //set sidebar
+    DO.qid('sidebar_url').value = config.sidebar;
+    if (config.sidebar === undefined) {
+        config.sidebar = '';
+        store.set('config', config)
+    }
+    showSidebar();
+
     //set config ui events;
     DO.qid('help_button').on('click', function (ev) {
         DO.qid('help' + lang).classList.toggle('hidden');
@@ -191,6 +200,12 @@ function initPre() {
             store.set('config', config);
         }
     });
+    DO.qid('sidebar_url').on('change', function (ev) {
+        config.sidebar = ev.target.value;
+        showSidebar();
+        store.set('config', config);
+    });
+    window.matchMedia('only screen and (orientation:landscape)').addListener(showSidebar);
     mapperInfo = new Mapper(DO.qid('item_info').innerHTML);
 }
 function initPost() {
@@ -199,20 +214,20 @@ function initPost() {
     //create group icon css
     //set app icon
     fetch('data/appicon.json', { method: 'GET' })
-    .then(function (responce) { return responce.text() })
-    .then(function (text) { return JSON.parse(text); })
-    .then(function (json) { 
-        var gcss = '<style type="text/css">';
-        var url = json[Math.floor(Math.random()*json.length)];
-        if(url){gcss +='.app {background-image:url('+url+')!important} ';}        
-        for(var i in db.group){
-            var gclass = 'g'+db.group[i].class;
-            gcss +='.'+gclass+' {background-image:url(icons/'+gclass+'.png)} ';
-        }        
-        gcss += '</style>';
-        DO.q('head').append(DO.new(gcss));
-    })
-    .catch(function (error) { console.log(error); });
+        .then(function (responce) { return responce.text() })
+        .then(function (text) { return JSON.parse(text); })
+        .then(function (json) {
+            var gcss = '<style type="text/css">';
+            var url = json[Math.floor(Math.random() * json.length)];
+            if (url) { gcss += '.app {background-image:url(' + url + ')!important} '; }
+            for (var i in db.group) {
+                var gclass = 'g' + db.group[i].class;
+                gcss += '.' + gclass + ' {background-image:url(icons/' + gclass + '.png)} ';
+            }
+            gcss += '</style>';
+            DO.q('head').append(DO.new(gcss));
+        })
+        .catch(function (error) { console.log(error); });
 
     //load preset
     var elemPreset = DO.qid('preset').html('');
@@ -287,6 +302,23 @@ function setWallpaper(url) {
     DO.qid('main').css({ 'background-image': 'url(' + url + ')' });
 }
 
+function showSidebar(){
+    var elemMain = DO.qid('main');
+    var elemBody = DO.q('body');
+    var elemSidebar = DO.qid('sidebar');
+    if (elemSidebar) {
+        elemMain.removeChild(elemSidebar);
+    }
+    if (config.sidebar === '') {
+        elemBody.classList.remove('withSidebar');
+    } else {
+        if (window.matchMedia('only screen and (orientation:landscape)').matches) {
+            elemMain.append(DO.new('<iframe id="sidebar" src="' + config.sidebar + '"></iframe>'));
+            elemBody.classList.add('withSidebar');
+        }
+    }
+}
+
 function putBoss() {
     var db = DC.getData();
     boss = { crit: 1 };
@@ -342,7 +374,7 @@ function calcRanking() {
         var clvr = lvr[i];
         for (var j in cs) {
             var c = cs[j];
-            var dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss );
+            var dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
             ranking.push(dcv);
             dcv.duration = dcv.sv.c.s3_duration * (1 - dcv.sv.c.combo_speed * Math.floor(boss.combo / 10));
             dcv.duration_50 = dcv.sv.c.s3_duration * (1 - dcv.sv.c.combo_speed * Math.floor(50 / 10));
@@ -377,7 +409,7 @@ function showRanking() {
         if (filter.lv[dcv.sv.lv] && filter.r[dcv.sv.r] && filter.type[dcv.sv.c.type.id] && match(dcv.sv.c.meta, filter.keyword)) {
             rank++;
             dcv.rank = zero(rank, 3);
-            dcv.id = i; 
+            dcv.id = i;
             filtered.push(dcv);
             max = Math.max(max, dcv.capacity);
             min = Math.min(min, dcv.dps);

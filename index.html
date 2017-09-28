@@ -202,17 +202,17 @@
                 <i class="wallpaper"></i>
                 <input id="wallpaper" name="wallpaper" type="search" placeholder="input wallpaper image url">
                 <select id="effect">
-            <option value="">None</option>
-            <option value="smoke" selected>Smoke</option>
-            <option value="mist">Mist</option>
-            <option value="line">line</option>
-            <option value="grid">Grid</option>
-          </select>
+                    <option value="">None</option>
+                    <option value="smoke" selected>Smoke</option>
+                    <option value="mist">Mist</option>
+                    <option value="line">line</option>
+                    <option value="grid">Grid</option>
+                </select>
             </div>
             <div id="config_theme" class="config_bar hidden">
                 <i class="theme"></i>
                 <select id="theme_preset">
-          </select>
+                </select>
                 <i class="theme_color"></i>
                 <input class="theme_value" id="theme_color" name="theme_color" type="text" value="#666">
                 <i class="theme_body"></i>
@@ -221,6 +221,10 @@
                 <input class="theme_value" id="theme_head" name="theme_head" type="text" value="#eb8">
                 <i class="theme_highlight"></i>
                 <input class="theme_value" id="theme_highlight" name="theme_highlight" type="text" value="#d43">
+            </div>
+            <div id="config_sidebar" class="config_bar hidden">
+                <i class="info"></i>
+                <input id="sidebar_url" name="sidebar_url" type="search" placeholder="input sidebar url">
             </div>
         </div>
         <div id="content">
@@ -234,7 +238,7 @@
         <p>Don&rsquo;t worry, this is <span class="argo">(&lsquo; ω &lsquo;ミ)</span>&rsquo;s guidebook.</p>
         <a href="https://twitter.com/ratsounds" class="twitter-follow-button" data-show-count="false">Follow @ratsounds</a>
     </div>
-        
+
     <template id="item_info">
         <div class="item" id="%id%">
             <div class="rank">%rank%</div>
@@ -251,8 +255,8 @@
             </div>
         </div>
     </template>
-    
-    <script src="//cdn.polyfill.io/v2/polyfill.js?features=default,fetch"></script>    
+
+    <script src="//cdn.polyfill.io/v2/polyfill.js?features=default,fetch"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/store.js/1.3.20/store.min.js"></script>
     <script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script src="js/util.js"></script>
