@@ -197,7 +197,7 @@ var DC = (function () {
         if (sv.c.element.weak === elem) {
             sve.eRate = 'enRate';
         }
-        if (sv.c.element.strong === elem) {
+        if (elem===''||sv.c.element.strong === elem) {
             sve.eRate = 'epRate';
             sve.mod_dmg *= sv.c.ss_elem_dmg;
             if (sv.lv > 85) {
@@ -282,7 +282,7 @@ var DC = (function () {
         return db.accessory;
     }
     function getBoss(name) {
-        if (id) { return get('preset', 'name', name); }
+        if (name) { return get('preset', 'name', name); }
         return db.preset;
     }
     function getCname(id) {
