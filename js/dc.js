@@ -196,15 +196,16 @@ var DC = (function () {
         sve.mod_crit = sv.c.cri_dmg * sv.c.ss_cri_dmg * (1 + getWeaponCriEDmg(sv.wep, sv.r, elem));
         if (sv.c.element.weak === elem) {
             sve.eRate = 'enRate';
-        } else {
-            if (sv.c.element.strong === elem) {
+        }
+        switch (elem) {
+            case sv.c.element.strong:
                 sve.eRate = 'epRate';
-            }
-            sve.mod_dmg *= sv.c.ss_elem_dmg;
-            if (sv.lv > 85) {
-                sve.mod_dmg *= sv.c.ss_elem_dmg_90;
-            }
-            sve.mod_crit *= sv.c.ss_elem_cri_dmg;
+            case 'default':
+                sve.mod_dmg *= sv.c.ss_elem_dmg;
+                if (sv.lv > 85) {
+                    sve.mod_dmg *= sv.c.ss_elem_dmg_90;
+                }
+                sve.mod_crit *= sv.c.ss_elem_cri_dmg;
         }
     }
     function getWeaponAtk(c, wep, r) {
