@@ -66,11 +66,11 @@ var DC = (function () {
             }
         }
     }
-    function calcRateAtTryout(c,lv,lb,wep,r,amr,acc,boss,damage){
-        var dcv = getDamageCalculationVariables(c,lv,lb,wep,r,amr,acc,boss);
-        dcv.rate = damage/((dcv.atk * dcv.bs * (1+(1-dcv.buff)/1.5) - dcv.def)*dcv.mod)*1.1;
+    function calcRateAtTryout(c, lv, lb, wep, r, amr, acc, boss, damage) {
+        var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);
+        dcv.rate = damage / ((dcv.atk * dcv.bs * (1 + (1 - dcv.buff) / 1.5) - dcv.def) * dcv.mod) * 1.1;
         return dcv;
-    }    
+    }
     function calcRate(c, lv, lb, wep, r, amr, acc, boss, damage) {
         var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);
         dcv.rate = damage / ((dcv.atk * dcv.bs * dcv.buff - dcv.def) * dcv.mod);
@@ -196,9 +196,10 @@ var DC = (function () {
         sve.mod_crit = sv.c.cri_dmg * sv.c.ss_cri_dmg * (1 + getWeaponCriEDmg(sv.wep, sv.r, elem));
         if (sv.c.element.weak === elem) {
             sve.eRate = 'enRate';
-        }
-        if (elem===''||sv.c.element.strong === elem) {
-            sve.eRate = 'epRate';
+        } else {
+            if (sv.c.element.strong === elem) {
+                sve.eRate = 'epRate';
+            }
             sve.mod_dmg *= sv.c.ss_elem_dmg;
             if (sv.lv > 85) {
                 sve.mod_dmg *= sv.c.ss_elem_dmg_90;
@@ -305,7 +306,7 @@ var DC = (function () {
         loadData: loadData,
         getData: getData,
         getSV: getSV,
-        calcRateAtTryout:calcRateAtTryout,
+        calcRateAtTryout: calcRateAtTryout,
         calcRate: calcRate,
         calcDamage: calcDamage,
         get: get,
