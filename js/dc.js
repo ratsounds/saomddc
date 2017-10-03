@@ -68,7 +68,7 @@ var DC = (function () {
     }
     function calcRateAtTryout(c, lv, lb, wep, r, amr, acc, boss, damage) {
         var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);
-        dcv.rate = damage / ((dcv.atk * dcv.bs * (1 + (1 - dcv.buff) / 1.5) - dcv.def) * dcv.mod) * 1.1;
+        dcv.rate = damage / ((dcv.atk * dcv.bs * (1 + (dcv.buff - 1) / 1.5) - dcv.def) * dcv.mod) * 1.1;
         return dcv;
     }
     function calcRate(c, lv, lb, wep, r, amr, acc, boss, damage) {
