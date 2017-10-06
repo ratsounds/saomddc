@@ -89,7 +89,7 @@ var DC = (function () {
             sve = sv[boss.element.id];
         }
 
-        var exp_obj = { c: c, hp: 100, vs: boss.element ? boss.element.id : undefined, combo: boss.combo };
+        var exp_obj = { c: c, hp: 100, vs: boss.element ? boss.element.id : undefined, combo: boss.combo, switched: boss.switched };
         var bs_con_amr = amr && Expression.eval(amr.conditional.expression, exp_obj) ? amr.conditional.values : {};
         var bs_con_acc = acc && Expression.eval(acc.conditional.expression, exp_obj) ? acc.conditional.values : {};
         var atk = sv.atk + getEqValue(bs_con_amr, key_atk) + getEqValue(bs_con_acc, key_atk);
