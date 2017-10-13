@@ -9017,7 +9017,7 @@
             "eq_atk_wep": "ninja_staff",
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_dark4",
-            "meta": "【祝祭の魔女】リーファ leafa [halloween] e16リーファ e16 leafa ★4 *4 リーファ leafa f 女性 @female イベント event limited 2016 イベント event 制限 restricted 闇 dark alo 防御 デバフ deffence debuff"
+            "meta": "【祝祭の魔女】リーファ leafa [halloween] e16リーファ e16 leafa ★5 *5 リーファ leafa f 女性 @female イベント event limited 2016 イベント event 制限 restricted 闇 dark alo 防御 デバフ deffence debuff 連携 combination リーダースキル ls leader skill"
         },
         "nw_leafa": {
             "id": "nw_leafa",
@@ -10257,7 +10257,7 @@
             "eq_atk_wep": "bonds_rapier",
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_none4",
-            "meta": "【立ち向かう決意】アスナ asuna [heart of confront] osアスナ os asuna ★4 *4 アスナ asuna f 女性 @female 加速する現実 the accelerating reality ガチャ gacha スカウト scout 無 none os 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up リジェネ 持続回復 regeneration 属性クリティカルダメージ アップ elemental critical damage up ヒットストップ hit stop"
+            "meta": "【立ち向かう決意】アスナ asuna [heart of confront] osアスナ os asuna ★5 *5 アスナ asuna f 女性 @female 加速する現実 the accelerating reality ガチャ gacha スカウト scout 無 none os 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up リジェネ 持続回復 regeneration 属性クリティカルダメージ アップ elemental critical damage up ヒットストップ hit stop 連携 combination"
         },
         "os_kirito": {
             "id": "os_kirito",
@@ -10319,7 +10319,7 @@
             "eq_atk_wep": "os3_sword",
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_none4",
-            "meta": "【立ち上がる英雄】キリト kirito [hero's return] osキリト os kirito ★4 *4 キリト kirito m 男性 @male 加速する現実 the accelerating reality ガチャ gacha スカウト scout 無 none os 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up リジェネ 持続回復 regeneration"
+            "meta": "【立ち上がる英雄】キリト kirito [hero's return] osキリト os kirito ★5 *5 キリト kirito m 男性 @male 加速する現実 the accelerating reality ガチャ gacha スカウト scout 無 none os 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up リジェネ 持続回復 regeneration 連携 combination"
         },
         "os_sinon": {
             "id": "os_sinon",
@@ -13481,7 +13481,7 @@
             "eq_atk_wep": "c_sword1",
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_earth5",
-            "meta": "【黄金の騎士】アリス alice [golden knight] bアリス b alice ★4 *4 アリス alice f 女性 @female インテグレーション・ビギニング alicization, integration beginning ガチャ gacha スカウト scout 土 earth alo 攻撃 自己 バフ atk attack self buff クリティカル 自己 バフ critical self buff 属性クリティカルダメージ アップ elemental critical damage up ヒットストップ hit stop 背後取り backstab 無敵 invincible"
+            "meta": "【黄金の騎士】アリス alice [golden knight] bアリス b alice ★5 *5 アリス alice f 女性 @female インテグレーション・ビギニング alicization, integration beginning ガチャ gacha スカウト scout 土 earth alo 攻撃 自己 バフ atk attack self buff クリティカル 自己 バフ critical self buff 属性クリティカルダメージ アップ elemental critical damage up ヒットストップ hit stop 背後取り backstab 無敵 invincible 連携 combination"
         },
         "pwater_suguha": {
             "id": "pwater_suguha",
@@ -15341,7 +15341,7 @@
             "eq_atk_wep": "jr_dual",
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_water5",
-            "meta": "【雨滴りの乙女】レイン rain [raindrops girl] 雨レイン rainy rain ★4 *4 レイン rain f 女性 @female 雨雫の協奏曲 raindrops concerto ガチャ gacha スカウト scout 水 water alo コンボダメージアップ combo damage up 自己回復 self heal 属性クリティカルダメージ アップ elemental critical damage up 無敵 invincible super armor スーパーアーマー sa"
+            "meta": "【雨滴りの乙女】レイン rain [raindrops girl] 雨レイン rainy rain ★5 *5 レイン rain f 女性 @female 雨雫の協奏曲 raindrops concerto ガチャ gacha スカウト scout 水 water alo コンボダメージアップ combo damage up 自己回復 self heal 属性クリティカルダメージ アップ elemental critical damage up 無敵 invincible super armor スーパーアーマー sa 連携 combination"
         },
         "rainy_leafa": {
             "id": "rainy_leafa",
@@ -18379,7 +18379,7 @@
             "eq_atk_wep": "moonlight_dual",
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_dark4",
-            "meta": "【生き血を捧げよ】キリト kirito [offer lifeblood] 月夜キリト moonlight kirito ★5 *5 キリト kirito m 男性 @male 月夜のハロウィンパレード moonlight halloween parade ガチャ gacha スカウト scout 闇 dark alo 連携 combination リーダースキル ls leader skill"
+            "meta": "【生き血を捧げよ】キリト kirito [offer lifeblood] 月夜キリト moonlight kirito ★5 *5 キリト kirito m 男性 @male 月夜のハロウィンパレード moonlight halloween parade ガチャ gacha スカウト scout 闇 dark alo 自己回復 self heal 連携 combination リーダースキル ls leader skill"
         },
         "moonlight_eugeo": {
             "id": "moonlight_eugeo",
@@ -18441,7 +18441,7 @@
             "eq_atk_wep": "moonlight_sword1",
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_dark4",
-            "meta": "【月夜に咆えろ】ユージオ eugeo [howl at the moon] 月夜ユージオ moonlight eugeo ★5 *5 ユージオ eugeo m 男性 @male 月夜のハロウィンパレード moonlight halloween parade ガチャ gacha スカウト scout 闇 dark alo 連携 combination リーダースキル ls leader skill"
+            "meta": "【月夜に咆えろ】ユージオ eugeo [howl at the moon] 月夜ユージオ moonlight eugeo ★5 *5 ユージオ eugeo m 男性 @male 月夜のハロウィンパレード moonlight halloween parade ガチャ gacha スカウト scout 闇 dark alo 自己回復 self heal 連携 combination リーダースキル ls leader skill"
         },
         "moonlight_asuna": {
             "id": "moonlight_asuna",
@@ -18503,7 +18503,7 @@
             "eq_atk_wep": "ninja_staff",
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_dark4",
-            "meta": "【真夜中の誘惑】アスナ asuna [midnight temptation] 月夜アスナ moonlight asuna ★5 *5 アスナ asuna f 女性 @female 月夜のハロウィンパレード moonlight halloween parade ガチャ gacha スカウト scout 闇 dark alo 連携 combination リーダースキル ls leader skill"
+            "meta": "【真夜中の誘惑】アスナ asuna [midnight temptation] 月夜アスナ moonlight asuna ★5 *5 アスナ asuna f 女性 @female 月夜のハロウィンパレード moonlight halloween parade ガチャ gacha スカウト scout 闇 dark alo 自己回復 self heal 連携 combination リーダースキル ls leader skill"
         },
         "moonlight_alice": {
             "id": "moonlight_alice",
@@ -18565,7 +18565,7 @@
             "eq_atk_wep": "moonlight_sword1",
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_dark4",
-            "meta": "【カボチャの騎士】アリス alice [pumpkin knight] 月夜アリス moonlight alice ★5 *5 アリス alice f 女性 @female 月夜のハロウィンパレード moonlight halloween parade ガチャ gacha スカウト scout 闇 dark alo 連携 combination リーダースキル ls leader skill"
+            "meta": "【カボチャの騎士】アリス alice [pumpkin knight] 月夜アリス moonlight alice ★5 *5 アリス alice f 女性 @female 月夜のハロウィンパレード moonlight halloween parade ガチャ gacha スカウト scout 闇 dark alo 自己回復 self heal 連携 combination リーダースキル ls leader skill"
         },
         "moonlightr_lisbeth": {
             "id": "moonlightr_lisbeth",
@@ -18689,7 +18689,7 @@
             "eq_atk_wep": "hhn_mace",
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_dark4",
-            "meta": "【恋するヴァンパイア】ユウキ yuuki [vampire in love] 悪戯ユウキ yuuki ★5 *5 ユウキ yuuki f 女性 @female いたずらハロウィンナイト happy halloween night ガチャ gacha スカウト scout 闇 dark alo 連携 combination リーダースキル ls leader skill"
+            "meta": "【恋するヴァンパイア】ユウキ yuuki [vampire in love] 悪戯ユウキ hhn yuuki ★5 *5 ユウキ yuuki f 女性 @female いたずらハロウィンナイト happy halloween night ガチャ gacha スカウト scout 闇 dark alo 自己回復 self heal 連携 combination リーダースキル ls leader skill"
         },
         "hhn_leafa": {
             "id": "hhn_leafa",
@@ -18751,7 +18751,7 @@
             "eq_atk_wep": "ninja_rapier1",
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_dark4",
-            "meta": "【心優しいモンスター】リーファ leafa [sweet monser] 悪戯リーファ leafa ★5 *5 リーファ leafa f 女性 @female いたずらハロウィンナイト happy halloween night ガチャ gacha スカウト scout 闇 dark alo 連携 combination リーダースキル ls leader skill"
+            "meta": "【心優しいモンスター】リーファ leafa [sweet monser] 悪戯リーファ hhn leafa ★5 *5 リーファ leafa f 女性 @female いたずらハロウィンナイト happy halloween night ガチャ gacha スカウト scout 闇 dark alo 自己回復 self heal 連携 combination リーダースキル ls leader skill"
         },
         "hhn_sinon": {
             "id": "hhn_sinon",
@@ -18813,7 +18813,7 @@
             "eq_atk_wep": "hhn_gun",
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_dark4",
-            "meta": "【スパイダーウィッチ】シノン sinon [spider witch] 悪戯シノン sinon ★5 *5 シノン sinon f 女性 @female いたずらハロウィンナイト happy halloween night ガチャ gacha スカウト scout 闇 dark alo 連携 combination リーダースキル ls leader skill"
+            "meta": "【スパイダーウィッチ】シノン sinon [spider witch] 悪戯シノン hhn sinon ★5 *5 シノン sinon f 女性 @female いたずらハロウィンナイト happy halloween night ガチャ gacha スカウト scout 闇 dark alo 自己回復 self heal 連携 combination リーダースキル ls leader skill"
         },
         "hhn_silica": {
             "id": "hhn_silica",
@@ -18875,7 +18875,7 @@
             "eq_atk_wep": "hhn_dagger",
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_dark4",
-            "meta": "【魔女っ娘にゃんこ】シリカ silica [witchy kitty] 悪戯シリカ silica ★5 *5 シリカ silica f 女性 @female いたずらハロウィンナイト happy halloween night ガチャ gacha スカウト scout 闇 dark alo 連携 combination リーダースキル ls leader skill"
+            "meta": "【魔女っ娘にゃんこ】シリカ silica [witchy kitty] 悪戯シリカ hhn silica ★5 *5 シリカ silica f 女性 @female いたずらハロウィンナイト happy halloween night ガチャ gacha スカウト scout 闇 dark alo 自己回復 self heal 連携 combination リーダースキル ls leader skill"
         }
     },
     "type": {
