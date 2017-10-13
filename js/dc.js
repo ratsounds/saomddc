@@ -165,7 +165,7 @@ var DC = (function () {
         sv.r = r;
         sv.amr = amr;
         sv.acc = acc;
-        sv.mp = (c.mp + getEqValueWithElem(c, amr, key_mp) + getEqValueWithElem(c, acc, key_mp)) * (1 + c.bs_mp + getEqValue(amr, key_bs_mp) + getEqValue(acc, key_bs_mp));
+        sv.mp = Math.floor((c.mp + getEqValueWithElem(c, amr, key_mp) + getEqValueWithElem(c, acc, key_mp)) * (1 + c.bs_mp + getEqValue(amr, key_bs_mp) + getEqValue(acc, key_bs_mp)));
         sv.cost = c.s3_mp - c.s3_mp * getEqValue(wep, key_mp_dec);
 
         var lv_dif = lv - 80;

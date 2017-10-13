@@ -157,7 +157,7 @@ function initPre() {
         config.sidebar = '';
         store.set('config', config)
     }
-    DO.qid('sidebar_url').value = config.sidebar;        
+    DO.qid('sidebar_url').value = config.sidebar;
 
     showSidebar();
 
@@ -303,7 +303,7 @@ function setWallpaper(url) {
     DO.qid('main').css({ 'background-image': 'url(' + url + ')' });
 }
 
-function showSidebar(){
+function showSidebar() {
     var elemMain = DO.qid('main');
     var elemBody = DO.q('body');
     var elemSidebar = DO.qid('sidebar');
@@ -380,6 +380,8 @@ function calcRanking() {
             dcv.duration = dcv.sv.c.s3_duration * (1 - dcv.sv.c.combo_speed * Math.floor(boss.combo / 10));
             dcv.duration_50 = dcv.sv.c.s3_duration * (1 - dcv.sv.c.combo_speed * Math.floor(50 / 10));
             dcv.dps = Math.floor(dcv.damage / dcv.duration);
+            dcv.duration = Math.floor(dcv.duration*100)/100;
+            dcv.duration_50 = Math.floor(dcv.duration_50*100)/100;
             dcv.capacity = Math.floor(dcv.damage * dcv.sv.mp / dcv.sv.cost);
             dcv.damage = Math.floor(dcv.damage);
         }
@@ -491,7 +493,7 @@ function getCharDetail(id) {
         html += getKVTableRow('Debuff P/N Rate', c.s3_debuf_pnr, true);
     }
     html += getKVTableRow('SS MP Cost', c.s3_mp);
-    html += getKVTableRow('Possible Max MP', c.mp);
+    html += getKVTableRow('Possible Max MP', dcv.sv.mp);
     html += getKVTableRow('MP Limit Break', c.mp_lb_total + '(' + c.mp_lb_1 + ',' + c.mp_lb_2 + ',' + c.mp_lb_3 + ',' + c.mp_lb_4 + ') EXPERIMENTAL!');
     html += '</tbody></table>'
     if (c.s3_video) {
