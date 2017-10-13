@@ -380,8 +380,8 @@ function calcRanking() {
             dcv.duration = dcv.sv.c.s3_duration * (1 - dcv.sv.c.combo_speed * Math.floor(boss.combo / 10));
             dcv.duration_50 = dcv.sv.c.s3_duration * (1 - dcv.sv.c.combo_speed * Math.floor(50 / 10));
             dcv.dps = Math.floor(dcv.damage / dcv.duration);
-            dcv.duration = Math.floor(dcv.duration*100)/100;
-            dcv.duration_50 = Math.floor(dcv.duration_50*100)/100;
+            dcv.duration = Math.floor(dcv.duration * 100) / 100;
+            dcv.duration_50 = Math.floor(dcv.duration_50 * 100) / 100;
             dcv.capacity = Math.floor(dcv.damage * dcv.sv.mp / dcv.sv.cost);
             dcv.damage = Math.floor(dcv.damage);
         }
