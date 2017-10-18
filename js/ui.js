@@ -22,6 +22,16 @@ DO.onLoad(function () {
     loadDBFromFile('data/data.json', init);
 });
 
+function loadDBFromFile(url, callback) {
+    fetch(url, { method: 'GET' })
+        //.then(function (response) { return response.json() })
+        .then(function (response) { return response.text(); })
+        .then(function (text) { return JSON.parse(text); })
+        .then(DC.loadData)
+        .then(callback)
+        .catch(function (error) { console.log(error); });
+}
+
 function init() {
     loadHelp();
     initPost();

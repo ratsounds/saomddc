@@ -931,12 +931,32 @@
         "hhn": {
             "id": "hhn",
             "short": "悪戯",
-            "short_en": "hhn",
+            "short_en": "HHN",
             "long": "いたずらハロウィンナイト",
             "long_en": "Happy Halloween Night",
             "date": 1507647600000,
             "class": "moonlight",
             "meta": "ガチャ gacha スカウト scout "
+        },
+        "sports": {
+            "id": "sports",
+            "short": "運動",
+            "short_en": "sports",
+            "long": "友情のバトン！ 秋の大運動会",
+            "long_en": "Baton of Friendship! Sports Festival",
+            "date": 1508166000000,
+            "class": "sports",
+            "meta": "ガチャ gacha スカウト scout "
+        },
+        "nycc": {
+            "id": "nycc",
+            "short": "NY",
+            "short_en": "NYCC",
+            "long": "NYCC記念",
+            "long_en": "NYCC Memorial",
+            "date": 1508079600000,
+            "class": "nycc",
+            "meta": "配布 gift 制限 restricted イベント event"
         }
     },
     "weapon": {
@@ -953,7 +973,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "sao_sword1": {
             "id": "sao_sword1",
@@ -968,7 +991,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "sao_sword2": {
             "id": "sao_sword2",
@@ -983,7 +1009,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "sao_sword3": {
             "id": "sao_sword3",
@@ -998,7 +1027,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "sao_sword4": {
             "id": "sao_sword4",
@@ -1013,7 +1045,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "sao_dual": {
             "id": "sao_dual",
@@ -1028,7 +1063,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "sao_rapier": {
             "id": "sao_rapier",
@@ -1043,7 +1081,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "sao_dagger": {
             "id": "sao_dagger",
@@ -1058,7 +1099,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "sao_dagger1": {
             "id": "sao_dagger1",
@@ -1073,7 +1117,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "sao_mace": {
             "id": "sao_mace",
@@ -1088,7 +1135,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "sao_mace1": {
             "id": "sao_mace1",
@@ -1103,7 +1153,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "sao_gun": {
             "id": "sao_gun",
@@ -1118,7 +1171,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "sao_staff": {
             "id": "sao_staff",
@@ -1133,7 +1189,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "alo_dual": {
             "id": "alo_dual",
@@ -1148,7 +1207,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "alo_staff": {
             "id": "alo_staff",
@@ -1163,7 +1225,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "alo_mace": {
             "id": "alo_mace",
@@ -1178,7 +1243,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "alo_dagger": {
             "id": "alo_dagger",
@@ -1193,7 +1261,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "alo_bow": {
             "id": "alo_bow",
@@ -1208,7 +1279,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "wind_rapier": {
             "id": "wind_rapier",
@@ -1223,7 +1297,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "wind_staff": {
             "id": "wind_staff",
@@ -1238,7 +1315,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "wind_sword": {
             "id": "wind_sword",
@@ -1253,7 +1333,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "wind_dagger": {
             "id": "wind_dagger",
@@ -1268,7 +1351,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "wind_mace": {
             "id": "wind_mace",
@@ -1283,7 +1369,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "hw_mace": {
             "id": "hw_mace",
@@ -1298,7 +1387,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "hw_bow": {
             "id": "hw_bow",
@@ -1313,7 +1405,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "hw_dagger": {
             "id": "hw_dagger",
@@ -1328,7 +1423,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "hw_dual": {
             "id": "hw_dual",
@@ -1343,7 +1441,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "hw_rapier": {
             "id": "hw_rapier",
@@ -1358,7 +1459,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "hw_mace1": {
             "id": "hw_mace1",
@@ -1373,7 +1477,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "earth_dagger": {
             "id": "earth_dagger",
@@ -1388,7 +1495,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "earth_mace": {
             "id": "earth_mace",
@@ -1403,7 +1513,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "earth_sword": {
             "id": "earth_sword",
@@ -1418,7 +1531,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "earth_staff": {
             "id": "earth_staff",
@@ -1433,7 +1549,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "fire_staff": {
             "id": "fire_staff",
@@ -1448,7 +1567,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "fire_gun": {
             "id": "fire_gun",
@@ -1463,7 +1585,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "fire_mace": {
             "id": "fire_mace",
@@ -1478,7 +1603,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "fire_sword": {
             "id": "fire_sword",
@@ -1493,7 +1621,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "xmas_dual": {
             "id": "xmas_dual",
@@ -1508,7 +1639,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "xmas_sword": {
             "id": "xmas_sword",
@@ -1523,7 +1657,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "xmas_rapier": {
             "id": "xmas_rapier",
@@ -1538,7 +1675,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "xmas_staff": {
             "id": "xmas_staff",
@@ -1553,7 +1693,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "xmas_mace": {
             "id": "xmas_mace",
@@ -1568,7 +1711,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "xmas_dagger": {
             "id": "xmas_dagger",
@@ -1583,7 +1729,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "xmas_gun": {
             "id": "xmas_gun",
@@ -1598,7 +1747,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "xmas_dagger1": {
             "id": "xmas_dagger1",
@@ -1613,7 +1765,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "xmas_sword1": {
             "id": "xmas_sword1",
@@ -1628,7 +1783,10 @@
             "bs_atk5": 0.06,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "ny_staff": {
             "id": "ny_staff",
@@ -1643,7 +1801,10 @@
             "bs_atk5": 0.1,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "ny_rapier": {
             "id": "ny_rapier",
@@ -1658,7 +1819,10 @@
             "bs_atk5": 0.1,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "ny_bow": {
             "id": "ny_bow",
@@ -1673,7 +1837,10 @@
             "bs_atk5": 0.1,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "ny_sword": {
             "id": "ny_sword",
@@ -1688,7 +1855,10 @@
             "bs_atk5": 0.1,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "ny_dagger": {
             "id": "ny_dagger",
@@ -1703,7 +1873,10 @@
             "bs_atk5": 0.1,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "water_staff": {
             "id": "water_staff",
@@ -1718,7 +1891,10 @@
             "bs_atk5": 0.1,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "water_mace": {
             "id": "water_mace",
@@ -1733,7 +1909,10 @@
             "bs_atk5": 0.1,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "water_rapier": {
             "id": "water_rapier",
@@ -1748,7 +1927,10 @@
             "bs_atk5": 0.1,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "water_sword": {
             "id": "water_sword",
@@ -1763,7 +1945,10 @@
             "bs_atk5": 0.1,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "val_dagger": {
             "id": "val_dagger",
@@ -1778,7 +1963,10 @@
             "bs_atk5": 0.1,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "val_sword": {
             "id": "val_sword",
@@ -1793,7 +1981,10 @@
             "bs_atk5": 0.1,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "val_bow": {
             "id": "val_bow",
@@ -1808,7 +1999,10 @@
             "bs_atk5": 0.1,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "val_rapier": {
             "id": "val_rapier",
@@ -1823,7 +2017,10 @@
             "bs_atk5": 0.1,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "hr_sword": {
             "id": "hr_sword",
@@ -1838,7 +2035,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "hr_dual": {
             "id": "hr_dual",
@@ -1853,7 +2053,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "hr_rapier": {
             "id": "hr_rapier",
@@ -1868,7 +2071,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "hr_rapier1": {
             "id": "hr_rapier1",
@@ -1883,7 +2089,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "os_sword": {
             "id": "os_sword",
@@ -1898,7 +2107,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "os_rapier": {
             "id": "os_rapier",
@@ -1913,7 +2125,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "os_mace": {
             "id": "os_mace",
@@ -1928,7 +2143,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "os_dagger": {
             "id": "os_dagger",
@@ -1943,7 +2161,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "os_gun": {
             "id": "os_gun",
@@ -1958,7 +2179,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "cheer_bow": {
             "id": "cheer_bow",
@@ -1973,7 +2197,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "cheer_sword": {
             "id": "cheer_sword",
@@ -1988,7 +2215,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "cheer_dagger": {
             "id": "cheer_dagger",
@@ -2003,7 +2233,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "cheer_mace": {
             "id": "cheer_mace",
@@ -2018,7 +2251,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "cheer_rapier": {
             "id": "cheer_rapier",
@@ -2033,7 +2269,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "hina_sword": {
             "id": "hina_sword",
@@ -2048,7 +2287,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.05
+            "mp_dec": 0.05,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "hina_rapier": {
             "id": "hina_rapier",
@@ -2063,7 +2305,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.05
+            "mp_dec": 0.05,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "hina_dagger": {
             "id": "hina_dagger",
@@ -2078,7 +2323,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.05
+            "mp_dec": 0.05,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "a_sword": {
             "id": "a_sword",
@@ -2093,7 +2341,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "a_sword1": {
             "id": "a_sword1",
@@ -2108,7 +2359,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "ninja_rapier": {
             "id": "ninja_rapier",
@@ -2123,7 +2377,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "ninja_sword": {
             "id": "ninja_sword",
@@ -2138,7 +2395,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "ninja_dagger": {
             "id": "ninja_dagger",
@@ -2153,7 +2413,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "ninja_staff": {
             "id": "ninja_staff",
@@ -2168,7 +2431,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "ninja_mace": {
             "id": "ninja_mace",
@@ -2183,7 +2449,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "ps_sword": {
             "id": "ps_sword",
@@ -2198,7 +2467,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.05
+            "mp_dec": 0.05,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "ps_rapier": {
             "id": "ps_rapier",
@@ -2213,7 +2485,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.05
+            "mp_dec": 0.05,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "ps_dagger": {
             "id": "ps_dagger",
@@ -2228,7 +2503,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.05
+            "mp_dec": 0.05,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "ps_mace": {
             "id": "ps_mace",
@@ -2243,7 +2521,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.05
+            "mp_dec": 0.05,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "ps_bow": {
             "id": "ps_bow",
@@ -2258,7 +2539,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.05
+            "mp_dec": 0.05,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "ps_staff": {
             "id": "ps_staff",
@@ -2273,7 +2557,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.05
+            "mp_dec": 0.05,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "sakura_bow": {
             "id": "sakura_bow",
@@ -2288,7 +2575,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.05
+            "mp_dec": 0.05,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "sakura_sword": {
             "id": "sakura_sword",
@@ -2303,7 +2593,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.05
+            "mp_dec": 0.05,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "sakura_mace": {
             "id": "sakura_mace",
@@ -2318,7 +2611,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.05
+            "mp_dec": 0.05,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "princess_sword": {
             "id": "princess_sword",
@@ -2333,7 +2629,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.0500000000000001
+            "mp_dec": 0.0500000000000001,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "princess_dagger": {
             "id": "princess_dagger",
@@ -2348,7 +2647,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.0500000000000001
+            "mp_dec": 0.0500000000000001,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "princess_staff": {
             "id": "princess_staff",
@@ -2363,7 +2665,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.0500000000000001
+            "mp_dec": 0.0500000000000001,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "princess_gun": {
             "id": "princess_gun",
@@ -2378,7 +2683,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.0500000000000001
+            "mp_dec": 0.0500000000000001,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "princess_mace": {
             "id": "princess_mace",
@@ -2393,7 +2701,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.0500000000000001
+            "mp_dec": 0.0500000000000001,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "princess_rapier": {
             "id": "princess_rapier",
@@ -2408,7 +2719,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.0500000000000001
+            "mp_dec": 0.0500000000000001,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "sao_dual1": {
             "id": "sao_dual1",
@@ -2423,7 +2737,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "sao_sword5": {
             "id": "sao_sword5",
@@ -2438,7 +2755,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "wind_sword1": {
             "id": "wind_sword1",
@@ -2453,7 +2773,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "fire_gun1": {
             "id": "fire_gun1",
@@ -2468,7 +2791,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "hr_dual1": {
             "id": "hr_dual1",
@@ -2483,7 +2809,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "maid_staff": {
             "id": "maid_staff",
@@ -2498,7 +2827,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "maid_bow": {
             "id": "maid_bow",
@@ -2513,7 +2845,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "maid_mace": {
             "id": "maid_mace",
@@ -2528,7 +2863,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "maid_rapier": {
             "id": "maid_rapier",
@@ -2543,7 +2881,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "maid_sword": {
             "id": "maid_sword",
@@ -2558,7 +2899,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "maid_dagger": {
             "id": "maid_dagger",
@@ -2573,7 +2917,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "pwater_sword": {
             "id": "pwater_sword",
@@ -2588,7 +2935,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.05
+            "mp_dec": 0.05,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "pwater_mace": {
             "id": "pwater_mace",
@@ -2603,7 +2953,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.05
+            "mp_dec": 0.05,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "pwater_dagger": {
             "id": "pwater_dagger",
@@ -2618,7 +2971,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.05
+            "mp_dec": 0.05,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "zodiac_lance": {
             "id": "zodiac_lance",
@@ -2633,7 +2989,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.05
+            "mp_dec": 0.05,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "zodiac_lance1": {
             "id": "zodiac_lance1",
@@ -2648,7 +3007,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.05
+            "mp_dec": 0.05,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "zodiac_rapier": {
             "id": "zodiac_rapier",
@@ -2663,7 +3025,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.05
+            "mp_dec": 0.05,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "zodiac_sword": {
             "id": "zodiac_sword",
@@ -2678,7 +3043,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.05
+            "mp_dec": 0.05,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "bride_sword": {
             "id": "bride_sword",
@@ -2693,7 +3061,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "bride_rapier": {
             "id": "bride_rapier",
@@ -2708,7 +3079,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "bride_dagger": {
             "id": "bride_dagger",
@@ -2723,7 +3097,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "bride_mace": {
             "id": "bride_mace",
@@ -2738,7 +3115,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "bride_bow": {
             "id": "bride_bow",
@@ -2753,7 +3133,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "cosplay_rapier": {
             "id": "cosplay_rapier",
@@ -2768,7 +3151,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0.1,
             "bs_cri_edmg5": 0.1,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "cosplay_sword": {
             "id": "cosplay_sword",
@@ -2783,7 +3169,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0.1,
             "bs_cri_edmg5": 0.1,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "cosplay_dagger": {
             "id": "cosplay_dagger",
@@ -2798,7 +3187,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0.1,
             "bs_cri_edmg5": 0.1,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "cosplay_lance": {
             "id": "cosplay_lance",
@@ -2813,7 +3205,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0.1,
             "bs_cri_edmg5": 0.1,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "cosplay_gun": {
             "id": "cosplay_gun",
@@ -2828,7 +3223,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0.1,
             "bs_cri_edmg5": 0.1,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "cosplay_mace": {
             "id": "cosplay_mace",
@@ -2843,7 +3241,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0.1,
             "bs_cri_edmg5": 0.1,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "rainy_dual": {
             "id": "rainy_dual",
@@ -2858,7 +3259,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0.1,
             "bs_cri_edmg5": 0.1,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "rainy_sword": {
             "id": "rainy_sword",
@@ -2873,7 +3277,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0.1,
             "bs_cri_edmg5": 0.1,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "rainy_bow": {
             "id": "rainy_bow",
@@ -2888,7 +3295,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0.1,
             "bs_cri_edmg5": 0.1,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "swim_sword": {
             "id": "swim_sword",
@@ -2903,7 +3313,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "swim_dual": {
             "id": "swim_dual",
@@ -2918,7 +3331,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "swim_rapier": {
             "id": "swim_rapier",
@@ -2933,7 +3349,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "swim_dagger": {
             "id": "swim_dagger",
@@ -2948,7 +3367,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "swim_sword1": {
             "id": "swim_sword1",
@@ -2963,7 +3385,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "pns_dual": {
             "id": "pns_dual",
@@ -2978,7 +3403,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0.1,
             "bs_cri_edmg5": 0.1,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "pns_rapier": {
             "id": "pns_rapier",
@@ -2993,7 +3421,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0.1,
             "bs_cri_edmg5": 0.1,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "pns_dagger": {
             "id": "pns_dagger",
@@ -3008,7 +3439,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0.1,
             "bs_cri_edmg5": 0.1,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "yukata_dual": {
             "id": "yukata_dual",
@@ -3023,7 +3457,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "yukata_rapier": {
             "id": "yukata_rapier",
@@ -3038,7 +3475,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "yukata_dagger": {
             "id": "yukata_dagger",
@@ -3053,7 +3493,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "yukata_gun": {
             "id": "yukata_gun",
@@ -3068,7 +3511,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "yukata_lance": {
             "id": "yukata_lance",
@@ -3083,7 +3529,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "ninja_rapier1": {
             "id": "ninja_rapier1",
@@ -3098,7 +3547,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "cheer_sword1": {
             "id": "cheer_sword1",
@@ -3113,7 +3565,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "zodiac_rapier1": {
             "id": "zodiac_rapier1",
@@ -3128,7 +3583,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "pwater_sword1": {
             "id": "pwater_sword1",
@@ -3143,7 +3601,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "princess_sword1": {
             "id": "princess_sword1",
@@ -3158,7 +3619,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "summer_rapier": {
             "id": "summer_rapier",
@@ -3173,7 +3637,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "summer_lance": {
             "id": "summer_lance",
@@ -3188,7 +3655,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "summer_gun": {
             "id": "summer_gun",
@@ -3203,7 +3673,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "summer_mace": {
             "id": "summer_mace",
@@ -3218,7 +3691,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "summer_dagger": {
             "id": "summer_dagger",
@@ -3233,7 +3709,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "festa_sword": {
             "id": "festa_sword",
@@ -3248,7 +3727,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "festa_rapier": {
             "id": "festa_rapier",
@@ -3263,7 +3745,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "festa_lance": {
             "id": "festa_lance",
@@ -3278,7 +3763,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "jr_rapier": {
             "id": "jr_rapier",
@@ -3293,7 +3781,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "jr_dual": {
             "id": "jr_dual",
@@ -3308,7 +3799,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "jr_dagger": {
             "id": "jr_dagger",
@@ -3323,7 +3817,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "jr_sword": {
             "id": "jr_sword",
@@ -3338,7 +3835,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "jr_gun": {
             "id": "jr_gun",
@@ -3353,7 +3853,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "os_sword1": {
             "id": "os_sword1",
@@ -3368,7 +3871,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "os_rapier1": {
             "id": "os_rapier1",
@@ -3383,7 +3889,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "a_sword2": {
             "id": "a_sword2",
@@ -3398,7 +3907,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "maid_sword1": {
             "id": "maid_sword1",
@@ -3413,7 +3925,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "zodiac_lance2": {
             "id": "zodiac_lance2",
@@ -3428,7 +3943,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "bonds_dual": {
             "id": "bonds_dual",
@@ -3443,7 +3961,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "bonds_rapier": {
             "id": "bonds_rapier",
@@ -3458,7 +3979,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "bonds_sword": {
             "id": "bonds_sword",
@@ -3473,7 +3997,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "bonds_bow": {
             "id": "bonds_bow",
@@ -3488,7 +4015,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "c_sword": {
             "id": "c_sword",
@@ -3503,7 +4033,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "c_sword1": {
             "id": "c_sword1",
@@ -3518,7 +4051,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "friends_rapier": {
             "id": "friends_rapier",
@@ -3533,7 +4069,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "friends_sword": {
             "id": "friends_sword",
@@ -3548,7 +4087,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "friends_dagger": {
             "id": "friends_dagger",
@@ -3563,7 +4105,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "friends_mace": {
             "id": "friends_mace",
@@ -3578,7 +4123,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "os3_sword": {
             "id": "os3_sword",
@@ -3593,7 +4141,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "os3_mace": {
             "id": "os3_mace",
@@ -3608,7 +4159,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "moonlight_dual": {
             "id": "moonlight_dual",
@@ -3623,7 +4177,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "moonlight_sword": {
             "id": "moonlight_sword",
@@ -3638,7 +4195,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "moonlight_staff": {
             "id": "moonlight_staff",
@@ -3653,7 +4213,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "moonlight_sword1": {
             "id": "moonlight_sword1",
@@ -3668,7 +4231,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "hhn_mace": {
             "id": "hhn_mace",
@@ -3683,7 +4249,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "hhn_rapier": {
             "id": "hhn_rapier",
@@ -3698,7 +4267,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "hhn_gun": {
             "id": "hhn_gun",
@@ -3713,7 +4285,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "hhn_dagger": {
             "id": "hhn_dagger",
@@ -3728,7 +4303,10 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0,
             "bs_cri_edmg5": 0,
-            "mp_dec": 0.1
+            "mp_dec": 0.1,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
         },
         "rainy_dual1": {
             "id": "rainy_dual1",
@@ -3743,7 +4321,82 @@
             "bs_atk5": 0.15,
             "bs_cri_edmg": 0.1,
             "bs_cri_edmg5": 0.1,
-            "mp_dec": 0
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0,
+            "e_bs_cri_dmg5": 0,
+            "e_mp_dec": 0
+        },
+        "sports_rapier": {
+            "id": "sports_rapier",
+            "name": "ビクトリー・フルーレ",
+            "name_en": "Victory Fleuret",
+            "group": "sports",
+            "type": "rapier",
+            "element": "wind",
+            "atk": 1621,
+            "cri": 1113,
+            "bs_atk": 0.1,
+            "bs_atk5": 0.15,
+            "bs_cri_edmg": 0,
+            "bs_cri_edmg5": 0,
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0.1,
+            "e_bs_cri_dmg5": 0.1,
+            "e_mp_dec": 0.1
+        },
+        "sports_dagger": {
+            "id": "sports_dagger",
+            "name": "チャンピオン・ダガー",
+            "name_en": "Champion Dagger",
+            "group": "sports",
+            "type": "dagger",
+            "element": "wind",
+            "atk": 1531,
+            "cri": 1297,
+            "bs_atk": 0.1,
+            "bs_atk5": 0.15,
+            "bs_cri_edmg": 0,
+            "bs_cri_edmg5": 0,
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0.1,
+            "e_bs_cri_dmg5": 0.1,
+            "e_mp_dec": 0.1
+        },
+        "sports_sword": {
+            "id": "sports_sword",
+            "name": "グロリアス・ブレード",
+            "name_en": "Glorious Blade",
+            "group": "sports",
+            "type": "sword",
+            "element": "wind",
+            "atk": 1614,
+            "cri": 1147,
+            "bs_atk": 0.1,
+            "bs_atk5": 0.15,
+            "bs_cri_edmg": 0,
+            "bs_cri_edmg5": 0,
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0.1,
+            "e_bs_cri_dmg5": 0.1,
+            "e_mp_dec": 0.1
+        },
+        "sports_lance": {
+            "id": "sports_lance",
+            "name": "ウィナーズ・スピア",
+            "name_en": "Winner's Spear",
+            "group": "sports",
+            "type": "lance",
+            "element": "wind",
+            "atk": 1581,
+            "cri": 1283,
+            "bs_atk": 0.1,
+            "bs_atk5": 0.15,
+            "bs_cri_edmg": 0,
+            "bs_cri_edmg5": 0,
+            "mp_dec": 0,
+            "e_bs_cri_dmg": 0.1,
+            "e_bs_cri_dmg5": 0.1,
+            "e_mp_dec": 0.1
         }
     },
     "armor": {
@@ -4592,6 +5245,24 @@
             "bs_def": 0,
             "bs_cri": 0,
             "conditional": "c.element.id=dark:bs_atk=0.03"
+        },
+        "f_wind4": {
+            "id": "f_wind4",
+            "name": "青春の体操着",
+            "name_en": "Gym Clothes in Youth",
+            "type": "F",
+            "element": "wind",
+            "hp": 3241,
+            "mp": 0,
+            "atk": 0,
+            "def": 1093,
+            "cri": 0,
+            "bs_hp": 0,
+            "bs_mp": 0.03,
+            "bs_atk": 0,
+            "bs_def": 0,
+            "bs_cri": 0,
+            "conditional": "c.element.id=wind:bs_atk=0.03"
         }
     },
     "accessory": {
@@ -5187,7 +5858,7 @@
             "bs_atk": 0,
             "bs_def": 0,
             "bs_cri": 0,
-            "conditional": "combo>=30:bs_atk=0.06"
+            "conditional": "combo<=30:bs_atk=0.06"
         },
         "mf_wind3": {
             "id": "mf_wind3",
@@ -5269,7 +5940,7 @@
             "element": "dark",
             "hp": 0,
             "mp": 33,
-            "atk": 11,
+            "atk": 111,
             "def": 0,
             "cri": 87,
             "bs_hp": 0,
@@ -5296,6 +5967,24 @@
             "bs_def": 0,
             "bs_cri": 0,
             "conditional": "switched=1:bs_atk=0.06"
+        },
+        "mf_wind5": {
+            "id": "mf_wind5",
+            "name": "団結のハチマキ",
+            "name_en": "Team-up Headband",
+            "type": "MF",
+            "element": "wind",
+            "hp": 0,
+            "mp": 38,
+            "atk": 102,
+            "def": 0,
+            "cri": 37,
+            "bs_hp": 0,
+            "bs_mp": 0,
+            "bs_atk": 0,
+            "bs_def": 0,
+            "bs_cri": 0,
+            "conditional": "combo>=30:bs_atk=0.06"
         }
     },
     "base": {
@@ -5730,7 +6419,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "xmas_staff",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【光の科学者】セブン seven [star scientist] 初期セブン sao seven ★5 *5 セブン seven f 女性 @female スタートダッシュ starting dash ガチャ gacha スカウト scout 光 light alo 攻撃 自己 バフ atk attack self buff コンボ持続 combo duration up 連携 combination"
         },
         "sao_agil": {
@@ -5973,12 +6662,12 @@
             "mp_lb_2": 8,
             "mp_lb_3": 8,
             "mp_lb_4": 9,
-            "eq_mp_wep": "bonds_sword",
+            "eq_mp_wep": "sports_sword",
             "eq_mp_amr": "f_wind3",
-            "eq_mp_acc": "mf_wind",
-            "eq_atk_wep": "bonds_sword",
+            "eq_mp_acc": "mf_wind5",
+            "eq_atk_wep": "sports_sword",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【疾風の魔法剣士】リーファ leafa [storm mage] 初期リーファ sao leafa ★5 *5 リーファ leafa f 女性 @female スタートダッシュ starting dash ガチャ gacha スカウト scout 風 wind alo コンボ持続 combo duration up 連携 combination"
         },
         "sao_lisbeth": {
@@ -6102,7 +6791,7 @@
             "eq_mp_acc": "mf_earth",
             "eq_atk_wep": "c_sword1",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【多刀流】レイン rain [multi-wielder] 初期レイン sao rain ★5 *5 レイン rain f 女性 @female スタートダッシュ starting dash ガチャ gacha スカウト scout 土 earth alo コンボ持続 combo duration up 連携 combination"
         },
         "alo_asuna": {
@@ -6164,7 +6853,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "ninja_staff",
             "eq_atk_amr": "f_none4",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【癒やしの水妖精】アスナ asuna [undine healer] 旧水アスナ alo asuna ★4 *4 アスナ asuna f 女性 @female 生まれ変わったalfheim alfheim reborn ガチャ gacha スカウト scout 水 water alo 攻撃 自己 バフ atk attack self buff"
         },
         "alo_kirito": {
@@ -6226,7 +6915,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "jr_dual",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【スキル・コネクト】キリト kirito [skill connect] 旧水キリト alo kirito ★4 *4 キリト kirito m 男性 @male 生まれ変わったalfheim alfheim reborn ガチャ gacha スカウト scout 水 water alo 攻撃 自己 バフ atk attack self buff"
         },
         "alo_sinon": {
@@ -6288,7 +6977,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "bonds_bow",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【冷徹な狙撃手】シノン sinon [cool-headed sniper] 旧水シノン alo sinon ★4 *4 シノン sinon f 女性 @female 生まれ変わったalfheim alfheim reborn ガチャ gacha スカウト scout 水 water alo コンボ持続 combo duration up"
         },
         "alo_silica": {
@@ -6350,7 +7039,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "jr_dagger",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【竜使いの妖精】シリカ silica [fairy dragon tamer] 旧水シリカ alo silica ★4 *4 シリカ silica f 女性 @female 生まれ変わったalfheim alfheim reborn ガチャ gacha スカウト scout 水 water alo 攻撃 自己 バフ atk attack self buff"
         },
         "alo_lisbeth": {
@@ -6412,7 +7101,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "bride_mace",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【妖精の鍛冶職人】リズベット lisbeth [fairy blacksmith] 旧水リズ alo lisbeth ★4 *4 リズ lisbeth f 女性 @female 生まれ変わったalfheim alfheim reborn ガチャ gacha スカウト scout 光 light alo"
         },
         "wind_asuna": {
@@ -6469,12 +7158,12 @@
             "mp_lb_2": 9,
             "mp_lb_3": 8,
             "mp_lb_4": 9,
-            "eq_mp_wep": "summer_rapier",
+            "eq_mp_wep": "sports_rapier",
             "eq_mp_amr": "f_none4",
-            "eq_mp_acc": "mf_wind",
-            "eq_atk_wep": "princess_rapier",
+            "eq_mp_acc": "mf_wind5",
+            "eq_atk_wep": "sports_rapier",
             "eq_atk_amr": "f_none4",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【疾風の踊り子】アスナ asuna [wind] 風アスナ wind asuna ★4 *4 アスナ asuna f 女性 @female 爽風がつなぐ絆 wind ガチャ gacha スカウト scout 風 wind alo 攻撃 自己 バフ atk attack self buff"
         },
         "wind_silica": {
@@ -6531,12 +7220,12 @@
             "mp_lb_2": 8,
             "mp_lb_3": 8,
             "mp_lb_4": 9,
-            "eq_mp_wep": "friends_dagger",
+            "eq_mp_wep": "sports_dagger",
             "eq_mp_amr": "f_wind3",
-            "eq_mp_acc": "mf_wind",
-            "eq_atk_wep": "maid_dagger",
+            "eq_mp_acc": "mf_wind5",
+            "eq_atk_wep": "sports_dagger",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【そよ風の猫妖精】シリカ silica [wind] 風シリカ wind silica ★4 *4 シリカ silica f 女性 @female 爽風がつなぐ絆 wind ガチャ gacha スカウト scout 風 wind alo 防御 デバフ deffence debuff"
         },
         "wind_yuuki": {
@@ -6593,12 +7282,12 @@
             "mp_lb_2": 9,
             "mp_lb_3": 9,
             "mp_lb_4": 9,
-            "eq_mp_wep": "bonds_sword",
+            "eq_mp_wep": "sports_sword",
             "eq_mp_amr": "f_wind3",
-            "eq_mp_acc": "mf_wind",
-            "eq_atk_wep": "bonds_sword",
+            "eq_mp_acc": "mf_wind5",
+            "eq_atk_wep": "sports_sword",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【絶風】ユウキ yuuki [wind] 風ユウキ wind yuuki ★4 *4 ユウキ yuuki f 女性 @female 爽風がつなぐ絆 wind ガチャ gacha スカウト scout 風 wind alo"
         },
         "wind_leafa": {
@@ -6657,10 +7346,10 @@
             "mp_lb_4": 9,
             "eq_mp_wep": "moonlight_staff",
             "eq_mp_amr": "f_wind3",
-            "eq_mp_acc": "mf_wind",
+            "eq_mp_acc": "mf_wind5",
             "eq_atk_wep": "maid_staff",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【爽風の巫女】リーファ leafa [wind] 風リーファ wind leafa ★4 *4 リーファ leafa f 女性 @female 爽風がつなぐ絆 wind ガチャ gacha スカウト scout 風 wind alo"
         },
         "wind_lisbeth": {
@@ -6719,10 +7408,10 @@
             "mp_lb_4": 9,
             "eq_mp_wep": "os3_mace",
             "eq_mp_amr": "f_wind3",
-            "eq_mp_acc": "mf_wind",
+            "eq_mp_acc": "mf_wind5",
             "eq_atk_wep": "os3_mace",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【豪風を呼びしもの】リズベット lisbeth [wind] 風リズ wind lisbeth ★4 *4 リズ lisbeth f 女性 @female 爽風がつなぐ絆 wind ガチャ gacha スカウト scout 風 wind alo 防御 デバフ deffence debuff"
         },
         "hw_asuna": {
@@ -7156,7 +7845,7 @@
             "eq_mp_acc": "mf_earth",
             "eq_atk_wep": "yukata_dagger",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【花園に咲く笑顔】シリカ silica [earth] 土シリカ earth silica ★4 *4 シリカ silica f 女性 @female 妖精界の豊穣の祈り earth ガチャ gacha スカウト scout 土 earth alo"
         },
         "earth_yuuki": {
@@ -7218,7 +7907,7 @@
             "eq_mp_acc": "mf_earth",
             "eq_atk_wep": "c_sword1",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【神樹の恵み】ユウキ yuuki [earth] 土ユウキ earth yuuki ★4 *4 ユウキ yuuki f 女性 @female 妖精界の豊穣の祈り earth ガチャ gacha スカウト scout 土 earth alo 防御 デバフ deffence debuff"
         },
         "earth_leafa": {
@@ -7280,7 +7969,7 @@
             "eq_mp_acc": "mf_earth",
             "eq_atk_wep": "ninja_staff",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【神樹を守りしもの】リーファ leafa [earth] 土リーファ earth leafa ★4 *4 リーファ leafa f 女性 @female 妖精界の豊穣の祈り earth ガチャ gacha スカウト scout 土 earth alo 攻撃 自己 バフ atk attack self buff 無敵 invincible"
         },
         "earth_lisbeth": {
@@ -7342,7 +8031,7 @@
             "eq_mp_acc": "mf_earth",
             "eq_atk_wep": "ps_mace",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【豊穣の祭司】リズベット lisbeth [earth] 土リズ earth lisbeth ★4 *4 リズ lisbeth f 女性 @female 妖精界の豊穣の祈り earth ガチャ gacha スカウト scout 土 earth alo 攻撃 自己 バフ atk attack self buff"
         },
         "fire_asuna": {
@@ -7404,7 +8093,7 @@
             "eq_mp_acc": "mf_fire",
             "eq_atk_wep": "ps_staff",
             "eq_atk_amr": "f_none4",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【神炎術士】アスナ asuna [fire] 火アスナ fire asuna ★4 *4 アスナ asuna f 女性 @female 神炎に燃える想い fire ガチャ gacha スカウト scout 火 fire alo 攻撃 自己 バフ atk attack self buff"
         },
         "fire_klein": {
@@ -7466,7 +8155,7 @@
             "eq_mp_acc": "mf_fire",
             "eq_atk_wep": "zodiac_sword",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【神炎の剣客】クライン klein [fire] 火クライン fire klein ★4 *4 クライン klein m 男性 @male 神炎に燃える想い fire ガチャ gacha スカウト scout 火 fire alo 攻撃 自己 バフ atk attack self buff"
         },
         "fire_sinon": {
@@ -7528,7 +8217,7 @@
             "eq_mp_acc": "mf_fire",
             "eq_atk_wep": "fire_gun1",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【神炎銃士】シノン sinon [fire] 火シノン fire sinon ★4 *4 シノン sinon f 女性 @female 神炎に燃える想い fire ガチャ gacha スカウト scout 火 fire alo 攻撃 自己 バフ atk attack self buff"
         },
         "fire_strea": {
@@ -7590,7 +8279,7 @@
             "eq_mp_acc": "mf_fire",
             "eq_atk_wep": "summer_mace",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【神炎騎士】ストレア strea [fire] 火ストレア fire strea ★4 *4 ストレア strea f 女性 @female 神炎に燃える想い fire ガチャ gacha スカウト scout 火 fire alo 攻撃 自己 バフ atk attack self buff"
         },
         "xmas_asuna": {
@@ -7652,7 +8341,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "bride_rapier",
             "eq_atk_amr": "f_none4",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【聖夜の閃光】アスナ asuna [christmas] xアスナ xmas asuna ★4 *4 アスナ asuna f 女性 @female 鈴鳴らす聖夜の贈り物 christmas ガチャ gacha スカウト scout 光 light alo 攻撃 自己 バフ atk attack self buff 自己回復 self heal"
         },
         "xmas_kirito": {
@@ -7714,7 +8403,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "xmas_dual",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【ファンタスティックギフト】キリト kirito [christmas] xキリト xmas kirito ★4 *4 キリト kirito m 男性 @male 鈴鳴らす聖夜の贈り物 christmas ガチャ gacha スカウト scout 光 light alo 自己回復 self heal 速度 アップ speed up"
         },
         "xmas_sinon": {
@@ -7776,7 +8465,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "xmas_gun",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【聖なる夜の女神】シノン sinon [christmas] xシノン xmas sinon ★4 *4 シノン sinon f 女性 @female 鈴鳴らす聖夜の贈り物 christmas ガチャ gacha スカウト scout 光 light ggo 自己回復 self heal 速度 アップ speed up"
         },
         "xmas_silica": {
@@ -7838,7 +8527,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "bride_dagger",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【幸せを運ぶ竜使い】シリカ silica [christmas] xシリカ xmas silica ★4 *4 シリカ silica f 女性 @female 鈴鳴らす聖夜の贈り物 christmas ガチャ gacha スカウト scout 光 light alo 攻撃 自己 バフ atk attack self buff 自己回復 self heal"
         },
         "xmas_strea": {
@@ -7900,7 +8589,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "princess_sword1",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【聖夜の奔放剣士】ストレア strea [christmas] xストレア xmas strea ★4 *4 ストレア strea f 女性 @female 鈴鳴らす聖夜の贈り物 christmas ガチャ gacha スカウト scout 光 light alo 自己回復 self heal"
         },
         "xmas_philia": {
@@ -7962,7 +8651,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "bride_dagger",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【聖夜のトレジャーハンター】フィリア philia [christmas] xフィリア xmas philia ★4 *4 フィリア philia f 女性 @female 鈴鳴らす聖夜の贈り物 christmas ガチャ gacha スカウト scout 光 light alo 自己回復 self heal"
         },
         "xmas_yuuki": {
@@ -8024,7 +8713,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "princess_sword1",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【煌星の剣豪】ユウキ yuuki [christmas] xユウキ xmas yuuki ★4 *4 ユウキ yuuki f 女性 @female 鈴鳴らす聖夜の贈り物 christmas ガチャ gacha スカウト scout 光 light alo 攻撃 自己 バフ atk attack self buff 自己回復 self heal"
         },
         "xmas_leafa": {
@@ -8086,7 +8775,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "xmas_staff",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【慈愛のレジェンドテラー】リーファ leafa [christmas] xリーファ xmas leafa ★4 *4 リーファ leafa f 女性 @female 鈴鳴らす聖夜の贈り物 christmas ガチャ gacha スカウト scout 光 light alo 自己回復 self heal"
         },
         "xmas_lisbeth": {
@@ -8148,7 +8837,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "bride_mace",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【聖誕祭の職人魂】リズベット lisbeth [christmas] xリズ xmas lisbeth ★4 *4 リズ lisbeth f 女性 @female 鈴鳴らす聖夜の贈り物 christmas ガチャ gacha スカウト scout 光 light sao 自己回復 self heal 速度 アップ speed up ヒットストップ hit stop 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "ny_asuna": {
@@ -8210,7 +8899,7 @@
             "eq_mp_acc": "mf_fire",
             "eq_atk_wep": "zodiac_rapier1",
             "eq_atk_amr": "f_none4",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【薄紅に染まる夢】アスナ asuna [new year] 正月アスナ ny asuna ★4 *4 アスナ asuna f 女性 @female 新春を彩る寿ぎの舞初 new year ガチャ gacha スカウト scout 火 fire alo 攻撃 自己 バフ atk attack self buff"
         },
         "ny_sinon": {
@@ -8269,10 +8958,10 @@
             "mp_lb_4": 9,
             "eq_mp_wep": "bonds_bow",
             "eq_mp_amr": "f_none6",
-            "eq_mp_acc": "mf_wind",
+            "eq_mp_acc": "mf_wind5",
             "eq_atk_wep": "maid_bow",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【初春の射手】シノン sinon [new year] 正月シノン ny sinon ★4 *4 シノン sinon f 女性 @female 新春を彩る寿ぎの舞初 new year ガチャ gacha スカウト scout 風 wind alo 攻撃 自己 バフ atk attack self buff"
         },
         "ny_silica": {
@@ -8334,7 +9023,7 @@
             "eq_mp_acc": "mf_earth",
             "eq_atk_wep": "yukata_dagger",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【無垢なる爛漫】シリカ silica [new year] 正月シリカ ny silica ★4 *4 シリカ silica f 女性 @female 新春を彩る寿ぎの舞初 new year ガチャ gacha スカウト scout 土 earth alo 攻撃 自己 バフ atk attack self buff"
         },
         "ny_yuuki": {
@@ -8396,7 +9085,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "princess_sword1",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【祝宴の神楽】ユウキ yuuki [new year] 正月ユウキ ny yuuki ★4 *4 ユウキ yuuki f 女性 @female 新春を彩る寿ぎの舞初 new year ガチャ gacha スカウト scout 光 light alo 攻撃 自己 バフ atk attack self buff"
         },
         "ny_leafa": {
@@ -8706,7 +9395,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "jr_dagger",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【一本釣り】ジーマ zima [fishing] e16ジーマ e16 zima ★4 *4 ジーマ zima f 女性 @female イベント event limited 2016 イベント event 制限 restricted 水 water alo"
         },
         "nw_sinon": {
@@ -8830,7 +9519,7 @@
             "eq_mp_acc": "mf_earth",
             "eq_atk_wep": "sakura_bow",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【草木花の戦乙女】シノン sinon [harvest] e16シノン e16 sinon ★4 *4 シノン sinon f 女性 @female イベント event limited 2016 イベント event 制限 restricted 土 earth alo"
         },
         "nw_silica": {
@@ -9073,12 +9762,12 @@
             "mp_lb_2": 8,
             "mp_lb_3": 8,
             "mp_lb_4": 9,
-            "eq_mp_wep": "bonds_sword",
+            "eq_mp_wep": "sports_sword",
             "eq_mp_amr": "f_wind3",
-            "eq_mp_acc": "mf_wind",
-            "eq_atk_wep": "bonds_sword",
+            "eq_mp_acc": "mf_wind5",
+            "eq_atk_wep": "sports_sword",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【ナイトキャミソール】リーファ leafa [nightwear] キャミリーファ nw leafa ★4 *4 リーファ leafa f 女性 @female キャミソール ranking nightwear 報酬 reward 制限 restricted 風 wind alo 攻撃 自己 バフ atk attack self buff"
         },
         "nw_lisbeth": {
@@ -9202,7 +9891,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "friends_rapier",
             "eq_atk_amr": "f_none4",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【流麗の水剣士】アスナ asuna [water] 水アスナ water asuna ★4 *4 アスナ asuna f 女性 @female 深き海神の導き water ガチャ gacha スカウト scout 水 water alo 攻撃 自己 バフ atk attack self buff"
         },
         "water_seven": {
@@ -9264,7 +9953,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "ninja_staff",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【潮騒のシンフォニー】セブン seven [water] 水セブン water seven ★4 *4 セブン seven f 女性 @female 深き海神の導き water ガチャ gacha スカウト scout 水 water alo 無敵 invincible"
         },
         "water_yuuki": {
@@ -9326,7 +10015,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "pwater_mace",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【おてんば乙姫】ユウキ yuuki [water] 水ユウキ water yuuki ★4 *4 ユウキ yuuki f 女性 @female 深き海神の導き water ガチャ gacha スカウト scout 水 water alo"
         },
         "water_rain": {
@@ -9388,7 +10077,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "c_sword",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【めぐる奔流】レイン rain [water] 水レイン water rain ★4 *4 レイン rain f 女性 @female 深き海神の導き water ガチャ gacha スカウト scout 水 water alo 攻撃 自己 バフ atk attack self buff"
         },
         "val_asuna": {
@@ -9450,7 +10139,7 @@
             "eq_mp_acc": "mf_fire",
             "eq_atk_wep": "zodiac_rapier1",
             "eq_atk_amr": "f_none4",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【とろける愛情】アスナ asuna [valentine] vアスナ v asuna ★4 *4 アスナ asuna f 女性 @female 極上のスウィートハート valentine ガチャ gacha スカウト scout 火 fire alo 防御 デバフ deffence debuff"
         },
         "val_sinon": {
@@ -9512,7 +10201,7 @@
             "eq_mp_acc": "mf_fire",
             "eq_atk_wep": "val_bow",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【いじわる恋天使】シノン sinon [valentine] vシノン v sinon ★4 *4 シノン sinon f 女性 @female 極上のスウィートハート valentine ガチャ gacha スカウト scout 火 fire alo 防御 デバフ deffence debuff 背後取り backstab 無敵 invincible"
         },
         "val_silica": {
@@ -9574,7 +10263,7 @@
             "eq_mp_acc": "mf_fire",
             "eq_atk_wep": "val_dagger",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【プラトニック・ラブ】シリカ silica [valentine] vシリカ v silica ★4 *4 シリカ silica f 女性 @female 極上のスウィートハート valentine ガチャ gacha スカウト scout 火 fire alo 防御 デバフ deffence debuff 背後取り backstab 無敵 invincible"
         },
         "val_leafa": {
@@ -9636,7 +10325,7 @@
             "eq_mp_acc": "mf_fire",
             "eq_atk_wep": "zodiac_sword",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【一途な想い】リーファ leafa [valentine] vリーファ v leafa ★4 *4 リーファ leafa f 女性 @female 極上のスウィートハート valentine ガチャ gacha スカウト scout 火 fire alo 防御 デバフ deffence debuff"
         },
         "oni_sinon": {
@@ -9698,7 +10387,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "bride_mace",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【鬼っ子リーダー】シノン sinon [oni] 鬼シノン oni sinon ★4 *4 シノン sinon f 女性 @female こんな鬼ならウチにほしい？ setsubun ガチャ gacha スカウト scout 光 light alo 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "hr_asuna": {
@@ -10546,7 +11235,7 @@
             "dtr_blunt": 0,
             "dtr_magic": 0,
             "s3_atk": 1.206,
-            "s3_gatk": 1.275,
+            "s3_gatk": 1.206,
             "s3_debuf": 0,
             "s3_debuf_pnr": 0,
             "combo_damage_20": 1,
@@ -10566,7 +11255,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "bride_bow",
             "eq_atk_amr": "f_none4",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【愛のエール】アスナ asuna [cheer of love] チアアスナ ch asuna ★4 *4 アスナ asuna f 女性 @female フレフレ★loveチアーズ hooray love cheers ガチャ gacha スカウト scout 光 light alo 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff コンボ持続 combo duration up"
         },
         "cheer_sinon": {
@@ -10608,7 +11297,7 @@
             "dtr_blunt": 0,
             "dtr_magic": 0,
             "s3_atk": 1.206,
-            "s3_gatk": 1.275,
+            "s3_gatk": 1.206,
             "s3_debuf": 0,
             "s3_debuf_pnr": 0,
             "combo_damage_20": 1,
@@ -10628,7 +11317,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "bride_dagger",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【必勝ガール】シノン sinon [victorious girl] チアシノン ch sinon ★4 *4 シノン sinon f 女性 @female フレフレ★loveチアーズ hooray love cheers ガチャ gacha スカウト scout 光 light alo 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff"
         },
         "cheer_silica": {
@@ -10670,7 +11359,7 @@
             "dtr_blunt": 1,
             "dtr_magic": 0,
             "s3_atk": 1.206,
-            "s3_gatk": 1.275,
+            "s3_gatk": 1.206,
             "s3_debuf": 0,
             "s3_debuf_pnr": 0,
             "combo_damage_20": 1,
@@ -10690,7 +11379,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "bride_mace",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【弾ける歓声】シリカ silica [shouting cheers] チアシリカ ch silica ★4 *4 シリカ silica f 女性 @female フレフレ★loveチアーズ hooray love cheers ガチャ gacha スカウト scout 光 light alo 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff"
         },
         "cheer_strea": {
@@ -10752,7 +11441,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "bride_rapier",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【きらめく青春】ストレア strea [glittering youth] チアストレア ch strea ★4 *4 ストレア strea f 女性 @female フレフレ★loveチアーズ hooray love cheers ガチャ gacha スカウト scout 光 light alo 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff"
         },
         "cheer_yui": {
@@ -10794,7 +11483,7 @@
             "dtr_blunt": 0,
             "dtr_magic": 0,
             "s3_atk": 1.206,
-            "s3_gatk": 1.275,
+            "s3_gatk": 1.206,
             "s3_debuf": 0,
             "s3_debuf_pnr": 0,
             "combo_damage_20": 1,
@@ -10814,7 +11503,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "princess_sword1",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【天使の声援】ユイ yui [angel cheer] チアユイ ch yui ★4 *4 ユイ yui f 女性 @female フレフレ★loveチアーズ hooray love cheers ガチャ gacha スカウト scout 光 light alo 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff"
         },
         "hina_argo": {
@@ -10871,12 +11560,12 @@
             "mp_lb_2": 9,
             "mp_lb_3": 9,
             "mp_lb_4": 9,
-            "eq_mp_wep": "bonds_sword",
+            "eq_mp_wep": "sports_sword",
             "eq_mp_amr": "f_wind3",
-            "eq_mp_acc": "mf_wind",
-            "eq_atk_wep": "bonds_sword",
+            "eq_mp_acc": "mf_wind5",
+            "eq_atk_wep": "sports_sword",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【早春の神楽】アルゴ argo [early spring dance] 雛アルゴ hina argo ★4 *4 アルゴ argo f 女性 @female 春風誘うひな祭り spring breeze hina-matsuri ガチャ gacha スカウト scout 風 wind alo 速度 アップ speed up"
         },
         "hina_silica": {
@@ -10933,12 +11622,12 @@
             "mp_lb_2": 9,
             "mp_lb_3": 9,
             "mp_lb_4": 9,
-            "eq_mp_wep": "friends_dagger",
+            "eq_mp_wep": "sports_dagger",
             "eq_mp_amr": "f_wind3",
-            "eq_mp_acc": "mf_wind",
-            "eq_atk_wep": "maid_dagger",
+            "eq_mp_acc": "mf_wind5",
+            "eq_atk_wep": "sports_dagger",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【花桃の雛】シリカ silica [flower peach baby] 雛シリカ hina silica ★4 *4 シリカ silica f 女性 @female 春風誘うひな祭り spring breeze hina-matsuri ガチャ gacha スカウト scout 風 wind alo"
         },
         "hina_premiere": {
@@ -10995,12 +11684,12 @@
             "mp_lb_2": 10,
             "mp_lb_3": 9,
             "mp_lb_4": 10,
-            "eq_mp_wep": "summer_rapier",
+            "eq_mp_wep": "sports_rapier",
             "eq_mp_amr": "f_wind3",
-            "eq_mp_acc": "mf_wind",
-            "eq_atk_wep": "princess_rapier",
+            "eq_mp_acc": "mf_wind5",
+            "eq_atk_wep": "sports_rapier",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【花より団子】プレミア premiere [pudding rather than praise] 雛プレミア hina premiere ★4 *4 プレミア premiere f 女性 @female 春風誘うひな祭り spring breeze hina-matsuri ガチャ gacha スカウト scout 風 wind sa0"
         },
         "a_alice": {
@@ -11062,7 +11751,7 @@
             "eq_mp_acc": "mf_earth",
             "eq_atk_wep": "c_sword1",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【整合騎士】アリス alice [integrity knight] aアリス a alice ★4 *4 アリス alice f 女性 @female 騎士たちの邂逅 alicization, the knights' encounter ガチャ gacha スカウト scout 土 earth uw 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up リジェネ 持続回復 regeneration 属性クリティカルダメージ アップ elemental critical damage up ヒットストップ hit stop"
         },
         "a_eugeo": {
@@ -11124,7 +11813,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "c_sword",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【天賦の才】ユージオ eugeo [born genius] aユージオ a eugeo ★4 *4 ユージオ eugeo m 男性 @male 騎士たちの邂逅 alicization, the knights' encounter ガチャ gacha スカウト scout 水 water uw 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up リジェネ 持続回復 regeneration 属性クリティカルダメージ アップ elemental critical damage up ヒットストップ hit stop"
         },
         "sd_asuna": {
@@ -11310,7 +11999,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "pwater_mace",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【新春を告げる奏楽】リズベット lisbeth [new year] e17リズ e17 lisbeth ★4 *4 リズ lisbeth f 女性 @female イベント event limited 2017 イベント event 制限 restricted 水 water alo"
         },
         "e17_rechka": {
@@ -11372,7 +12061,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "bride_mace",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_light2",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【凄腕の料理人】レーチカ rechka [queen of chef] e17レーチカ e17 rechka ★4 *4 レーチカ rechka f 女性 @female イベント event limited 2017 イベント event 制限 restricted 光 light alo 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff"
         },
         "ninja_asuna": {
@@ -11682,7 +12371,7 @@
             "eq_mp_acc": "mf_earth",
             "eq_atk_wep": "ps_mace",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【爆砕の剛斧】エギル agil [explosive axe] 剣舞ハゲ kb agil ★4 *4 ハゲ agil m 男性 @male 剣舞 ranking ken-bu 報酬 reward 制限 restricted 土 earth alo"
         },
         "sd_klein": {
@@ -11744,7 +12433,7 @@
             "eq_mp_acc": "mf_fire",
             "eq_atk_wep": "zodiac_sword",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【信義の剣客】クライン klein [faithful swordsman] 剣舞クライン kb klein ★4 *4 クライン klein m 男性 @male 剣舞 ranking ken-bu 報酬 reward 制限 restricted 火 fire alo"
         },
         "ninja_lisbeth": {
@@ -11868,7 +12557,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "princess_sword1",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【煌めきグラドル】リーファ leafa [sparkling teen idol] psリーファ ps leafa ★4 *4 リーファ leafa f 女性 @female 時空の彼方でオンリーユー♥ enduring love in another space ガチャ gacha スカウト scout 光 light pso 属性クリティカルダメージ アップ elemental critical damage up バリア barrier"
         },
         "ps_yuuki": {
@@ -11925,12 +12614,12 @@
             "mp_lb_2": 8,
             "mp_lb_3": 8,
             "mp_lb_4": 9,
-            "eq_mp_wep": "summer_rapier",
+            "eq_mp_wep": "sports_rapier",
             "eq_mp_amr": "f_wind3",
-            "eq_mp_acc": "mf_wind",
-            "eq_atk_wep": "princess_rapier",
+            "eq_mp_acc": "mf_wind5",
+            "eq_atk_wep": "sports_rapier",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【天性ポップスター】ユウキ yuuki [natural pop star] psユウキ ps yuuki ★4 *4 ユウキ yuuki f 女性 @female 時空の彼方でオンリーユー♥ enduring love in another space ガチャ gacha スカウト scout 風 wind pso 属性クリティカルダメージ アップ elemental critical damage up バリア barrier"
         },
         "ps_silica": {
@@ -12054,7 +12743,7 @@
             "eq_mp_acc": "mf_earth",
             "eq_atk_wep": "ps_mace",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【魅惑のmcパフォーマー】リズベット lisbeth [fascinating mc performer] psリズ ps lisbeth ★4 *4 リズ lisbeth f 女性 @female 時空の彼方でオンリーユー♥ enduring love in another space ガチャ gacha スカウト scout 土 earth pso 属性クリティカルダメージ アップ elemental critical damage up バリア barrier"
         },
         "ps_sinon": {
@@ -12116,7 +12805,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "bonds_bow",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【変幻自在アーティスト】シノン sinon [free style artist] psシノン ps sinon ★4 *4 シノン sinon f 女性 @female 時空の彼方でオンリーユー♥ enduring love in another space ガチャ gacha スカウト scout 水 water pso バリア barrier"
         },
         "ps_asuna": {
@@ -12178,7 +12867,7 @@
             "eq_mp_acc": "mf_fire",
             "eq_atk_wep": "ps_staff",
             "eq_atk_amr": "f_none4",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【愛と努力のヒットアイドル】アスナ asuna [hit idol of love and effort] psアスナ ps asuna ★4 *4 アスナ asuna f 女性 @female 時空の彼方でオンリーユー♥ enduring love in another space ガチャ gacha スカウト scout 火 fire pso バリア barrier"
         },
         "psr_yui": {
@@ -12302,7 +12991,7 @@
             "eq_mp_acc": "mf_fire",
             "eq_atk_wep": "val_dagger",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【火狐の巫女装束】シリカ silica [foxy priestess] e17シリカ e17 silica ★4 *4 シリカ silica f 女性 @female イベント event limited 2017 イベント event 制限 restricted 火 fire alo"
         },
         "sakura_strea": {
@@ -12364,7 +13053,7 @@
             "eq_mp_acc": "mf_earth",
             "eq_atk_wep": "c_sword1",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【桜色の爛漫】ストレア strea [sakura romance] 桜ストレア sakura strea ★4 *4 ストレア strea f 女性 @female 桜満開スクールライフ blooming school life ガチャ gacha スカウト scout 土 earth alo 自己回復 self heal super armor スーパーアーマー sa"
         },
         "sakura_yui": {
@@ -12426,7 +13115,7 @@
             "eq_mp_acc": "mf_earth",
             "eq_atk_wep": "ps_mace",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【桜の頃の愛娘】ユイ yui [born in sakura season] 桜ユイ sakura yui ★4 *4 ユイ yui f 女性 @female 桜満開スクールライフ blooming school life ガチャ gacha スカウト scout 土 earth alo 自己回復 self heal super armor スーパーアーマー sa"
         },
         "sakura_philia": {
@@ -12488,7 +13177,7 @@
             "eq_mp_acc": "mf_earth",
             "eq_atk_wep": "sakura_bow",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【揺れる青春】フィリア philia [blossom of youth] 桜フィリア sakura philia ★4 *4 フィリア philia f 女性 @female 桜満開スクールライフ blooming school life ガチャ gacha スカウト scout 土 earth alo 自己回復 self heal 無敵 invincible super armor スーパーアーマー sa"
         },
         "princess_asuna": {
@@ -12550,7 +13239,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "princess_sword1",
             "eq_atk_amr": "f_none4",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【閃光の舞踏】アスナ asuna [lightning dance] 姫アスナ pr asuna ★5 *5 アスナ asuna f 女性 @female 仮想世界のプリンセス princess from the virtual world ガチャ gacha スカウト scout 光 light alo 防御 デバフ deffence debuff 連携 combination"
         },
         "princess_leafa": {
@@ -12612,7 +13301,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "jr_dagger",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【泡沫の想い】リーファ leafa [ephemeral feelings] 姫リーファ pr leafa ★4 *4 リーファ leafa f 女性 @female 仮想世界のプリンセス princess from the virtual world ガチャ gacha スカウト scout 水 water alo 防御 デバフ deffence debuff 背後取り backstab"
         },
         "princess_yuuki": {
@@ -12674,7 +13363,7 @@
             "eq_mp_acc": "mf_fire",
             "eq_atk_wep": "ps_staff",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【型破りの元気頭巾】ユウキ yuuki [eccentric riding hood] 姫ユウキ pr yuuki ★4 *4 ユウキ yuuki f 女性 @female 仮想世界のプリンセス princess from the virtual world ガチャ gacha スカウト scout 火 fire alo 防御 デバフ deffence debuff"
         },
         "princess_sinon": {
@@ -12736,7 +13425,7 @@
             "eq_mp_acc": "mf_earth",
             "eq_atk_wep": "yukata_gun",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【デンジャラス・キス】シノン sinon [dangerous kiss] 姫シノン pr sinon ★4 *4 シノン sinon f 女性 @female 仮想世界のプリンセス princess from the virtual world ガチャ gacha スカウト scout 土 earth alo 防御 デバフ deffence debuff"
         },
         "princess_silica": {
@@ -12855,12 +13544,12 @@
             "mp_lb_2": 10,
             "mp_lb_3": 9,
             "mp_lb_4": 10,
-            "eq_mp_wep": "summer_rapier",
+            "eq_mp_wep": "sports_rapier",
             "eq_mp_amr": "f_wind3",
             "eq_mp_acc": "mf_wind",
-            "eq_atk_wep": "princess_rapier",
+            "eq_atk_wep": "sports_rapier",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【真珠の涙】ユイ yui [pearl tears] 姫ユイ pr yui ★4 *4 ユイ yui f 女性 @female 仮想世界のプリンセス princess from the virtual world ガチャ gacha スカウト scout 風 wind alo 防御 デバフ deffence debuff リジェネ 持続回復 regeneration"
         },
         "sd_leafa": {
@@ -12922,7 +13611,7 @@
             "eq_mp_acc": "mf_wind",
             "eq_atk_wep": "maid_staff",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【神速の女傑】リーファ leafa [swift fast heroine] 剣舞リーファ kb leafa ★4 *4 リーファ leafa f 女性 @female 剣舞 ranking ken-bu 報酬 reward 制限 restricted 風 wind alo"
         },
         "maid_asuna": {
@@ -12984,7 +13673,7 @@
             "eq_mp_acc": "mf_wind",
             "eq_atk_wep": "maid_staff",
             "eq_atk_amr": "f_none4",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【純愛キッチンメイド】アスナ asuna [kitchen maid] メイドアスナ maid asuna ★4 *4 アスナ asuna f 女性 @female キミに届け薫風に舞うメイド to your heart! maid in balmy breeze ガチャ gacha スカウト scout 風 wind alo 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up"
         },
         "maid_sinon": {
@@ -13046,7 +13735,7 @@
             "eq_mp_acc": "mf_wind",
             "eq_atk_wep": "maid_bow",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【清廉スティルルームメイド】シノン sinon [stillroom maid] メイドシノン maid sinon ★4 *4 シノン sinon f 女性 @female キミに届け薫風に舞うメイド to your heart! maid in balmy breeze ガチャ gacha スカウト scout 風 wind alo 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up 属性クリティカルダメージ アップ elemental critical damage up ヒットストップ hit stop"
         },
         "maid_yuuki": {
@@ -13105,10 +13794,10 @@
             "mp_lb_4": 9,
             "eq_mp_wep": "os3_mace",
             "eq_mp_amr": "f_wind3",
-            "eq_mp_acc": "mf_wind",
+            "eq_mp_acc": "mf_wind5",
             "eq_atk_wep": "os3_mace",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【新生トゥイーニー】ユウキ yuuki [fledgling tweeny] メイドユウキ maid yuuki ★4 *4 ユウキ yuuki f 女性 @female キミに届け薫風に舞うメイド to your heart! maid in balmy breeze ガチャ gacha スカウト scout 風 wind alo 攻撃 自己 バフ atk attack self buff 速度 アップ speed up 属性クリティカルダメージ アップ elemental critical damage up"
         },
         "maid_leafa": {
@@ -13165,12 +13854,12 @@
             "mp_lb_2": 9,
             "mp_lb_3": 9,
             "mp_lb_4": 9,
-            "eq_mp_wep": "summer_rapier",
+            "eq_mp_wep": "sports_rapier",
             "eq_mp_amr": "f_wind3",
-            "eq_mp_acc": "mf_wind",
-            "eq_atk_wep": "princess_rapier",
+            "eq_mp_acc": "mf_wind5",
+            "eq_atk_wep": "sports_rapier",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【芳醇デイリーメイド】リーファ leafa [mellow maid] メイドリーファ maid leafa ★4 *4 リーファ leafa f 女性 @female キミに届け薫風に舞うメイド to your heart! maid in balmy breeze ガチャ gacha スカウト scout 風 wind alo 攻撃 自己 バフ atk attack self buff 属性クリティカルダメージ アップ elemental critical damage up"
         },
         "maid_rain": {
@@ -13227,12 +13916,12 @@
             "mp_lb_2": 9,
             "mp_lb_3": 9,
             "mp_lb_4": 9,
-            "eq_mp_wep": "bonds_sword",
+            "eq_mp_wep": "sports_sword",
             "eq_mp_amr": "f_wind3",
-            "eq_mp_acc": "mf_wind",
-            "eq_atk_wep": "bonds_sword",
+            "eq_mp_acc": "mf_wind5",
+            "eq_atk_wep": "sports_sword",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【熟練パーラーメイド】レイン rain [parlor maid] メイドレイン maid rain ★4 *4 レイン rain f 女性 @female キミに届け薫風に舞うメイド to your heart! maid in balmy breeze ガチャ gacha スカウト scout 風 wind alo 攻撃 自己 バフ atk attack self buff"
         },
         "maid_seven": {
@@ -13289,12 +13978,12 @@
             "mp_lb_2": 9,
             "mp_lb_3": 9,
             "mp_lb_4": 9,
-            "eq_mp_wep": "friends_dagger",
+            "eq_mp_wep": "sports_dagger",
             "eq_mp_amr": "f_wind3",
-            "eq_mp_acc": "mf_wind",
-            "eq_atk_wep": "maid_dagger",
+            "eq_mp_acc": "mf_wind5",
+            "eq_atk_wep": "sports_dagger",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【博識スカラリーメイド】セブン seven [omniscient maid] メイドセブン maid seven ★4 *4 セブン seven f 女性 @female キミに届け薫風に舞うメイド to your heart! maid in balmy breeze ガチャ gacha スカウト scout 風 wind alo 攻撃 自己 バフ atk attack self buff"
         },
         "sd_lisbeth": {
@@ -13418,7 +14107,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "c_sword",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【青銀の騎士】ユージオ eugeo [blue silver knight] bユージオ b eugeo ★4 *4 ユージオ eugeo m 男性 @male インテグレーション・ビギニング alicization, integration beginning ガチャ gacha スカウト scout 水 water alo 攻撃 自己 バフ atk attack self buff クリティカル 自己 バフ critical self buff 属性クリティカルダメージ アップ elemental critical damage up 背後取り backstab 無敵 invincible"
         },
         "b_alice": {
@@ -13480,7 +14169,7 @@
             "eq_mp_acc": "mf_earth",
             "eq_atk_wep": "c_sword1",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【黄金の騎士】アリス alice [golden knight] bアリス b alice ★5 *5 アリス alice f 女性 @female インテグレーション・ビギニング alicization, integration beginning ガチャ gacha スカウト scout 土 earth alo 攻撃 自己 バフ atk attack self buff クリティカル 自己 バフ critical self buff 属性クリティカルダメージ アップ elemental critical damage up ヒットストップ hit stop 背後取り backstab 無敵 invincible 連携 combination"
         },
         "pwater_suguha": {
@@ -13542,7 +14231,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "c_sword",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【初夏を彩る乙女】直葉 suguha [summer girl] 濡直葉 pwater suguha ★4 *4 直葉 suguha f 女性 @female 眩い乙女の水遊び beautiful girls playing in the water ガチャ gacha スカウト scout 水 water os リジェネ 持続回復 regeneration 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "pwater_lisbeth": {
@@ -13604,7 +14293,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "pwater_mace",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【水辺に弾ける笑顔】リズベット lisbeth [smile on waterfront] 濡リズ pwater lisbeth ★4 *4 リズ lisbeth f 女性 @female 眩い乙女の水遊び beautiful girls playing in the water ガチャ gacha スカウト scout 水 water os リジェネ 持続回復 regeneration ヒットストップ hit stop 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "pwater_philia": {
@@ -13666,7 +14355,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "jr_dagger",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【清きハンター魂】フィリア philia [pure hunter soul] 濡フィリア pwater philia ★4 *4 フィリア philia f 女性 @female 眩い乙女の水遊び beautiful girls playing in the water ガチャ gacha スカウト scout 水 water alo 自己回復 self heal 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "e17_sphica": {
@@ -13790,7 +14479,7 @@
             "eq_mp_acc": "mf_fire",
             "eq_atk_wep": "zodiac_lance",
             "eq_atk_amr": "f_none4",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【天上の審判リブラ】アスナ asuna [libra] 星座アスナ zodiac asuna ★4 *4 アスナ asuna f 女性 @female 神々と星座の詩 poetry of constellation ガチャ gacha スカウト scout 火 fire alo 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "zodiac_sinon": {
@@ -13852,7 +14541,7 @@
             "eq_mp_acc": "mf_fire",
             "eq_atk_wep": "zodiac_lance",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【孤高の咆哮レオ】シノン sinon [leo] 星座シノン zodiac sinon ★4 *4 シノン sinon f 女性 @female 神々と星座の詩 poetry of constellation ガチャ gacha スカウト scout 火 fire alo 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "zodiac_yuuki": {
@@ -13914,7 +14603,7 @@
             "eq_mp_acc": "mf_fire",
             "eq_atk_wep": "zodiac_rapier1",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【巡る絆ジェミニ】ユウキ yuuki [gemini] 星座ユウキ zodiac yuuki ★4 *4 ユウキ yuuki f 女性 @female 神々と星座の詩 poetry of constellation ガチャ gacha スカウト scout 火 fire alo 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "zodiac_leafa": {
@@ -13976,7 +14665,7 @@
             "eq_mp_acc": "mf_fire",
             "eq_atk_wep": "zodiac_sword",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【深き慈愛アリエス】リーファ leafa [aries] 星座リーファ zodiac leafa ★4 *4 リーファ leafa f 女性 @female 神々と星座の詩 poetry of constellation ガチャ gacha スカウト scout 火 fire alo 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "sd_silica": {
@@ -14100,7 +14789,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "princess_sword1",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【六月の金木犀】アリス alice [fragrant olive in june] 花嫁アリス bride alice ★4 *4 アリス alice f 女性 @female eternal love -夢見る花嫁- eternal love - dreaming brides - ガチャ gacha スカウト scout 光 light uw 自己回復 self heal 属性クリティカルダメージ アップ elemental critical damage up 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "bride_leafa": {
@@ -14162,7 +14851,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "princess_sword1",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【誓いの口づけ】リーファ leafa [the kiss] 花嫁リーファ bride leafa ★4 *4 リーファ leafa f 女性 @female eternal love -夢見る花嫁- eternal love - dreaming brides - ガチャ gacha スカウト scout 光 light alo 自己回復 self heal 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "bride_asuna": {
@@ -14224,7 +14913,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "bride_rapier",
             "eq_atk_amr": "f_none4",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【あの日の約束】アスナ asuna [promise at that time] 花嫁アスナ bride asuna ★4 *4 アスナ asuna f 女性 @female eternal love -夢見る花嫁- eternal love - dreaming brides - ガチャ gacha スカウト scout 光 light alo 自己回復 self heal 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "bride_silica": {
@@ -14286,7 +14975,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "bride_dagger",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【祝福のブレス】シリカ silica [blessed breath] 花嫁シリカ bride silica ★4 *4 シリカ silica f 女性 @female eternal love -夢見る花嫁- eternal love - dreaming brides - ガチャ gacha スカウト scout 光 light alo コンボダメージアップ combo damage up 自己回復 self heal 無敵 invincible 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン ガード guard"
         },
         "bride_yuuki": {
@@ -14348,7 +15037,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "bride_mace",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【ブーケトスの大ジャンプ】ユウキ yuuki [bouquet toss] 花嫁ユウキ bride yuuki ★4 *4 ユウキ yuuki f 女性 @female eternal love -夢見る花嫁- eternal love - dreaming brides - ガチャ gacha スカウト scout 光 light alo 自己回復 self heal 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "bride_sinon": {
@@ -14410,7 +15099,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "bride_bow",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【ピンヒールの花嫁】シノン sinon [stiletto heel bride] 花嫁シノン bride sinon ★4 *4 シノン sinon f 女性 @female eternal love -夢見る花嫁- eternal love - dreaming brides - ガチャ gacha スカウト scout 光 light alo コンボダメージアップ combo damage up 自己回復 self heal 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "sd_yuuki": {
@@ -15340,7 +16029,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "jr_dual",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【雨滴りの乙女】レイン rain [raindrops girl] 雨レイン rainy rain ★5 *5 レイン rain f 女性 @female 雨雫の協奏曲 raindrops concerto ガチャ gacha スカウト scout 水 water alo コンボダメージアップ combo damage up 自己回復 self heal 属性クリティカルダメージ アップ elemental critical damage up 無敵 invincible super armor スーパーアーマー sa 連携 combination"
         },
         "rainy_leafa": {
@@ -15402,7 +16091,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "c_sword",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【雨季の愉しみ】リーファ leafa [rainy season enjoyment] 雨リーファ rainy leafa ★4 *4 リーファ leafa f 女性 @female 雨雫の協奏曲 raindrops concerto ガチャ gacha スカウト scout 水 water alo コンボダメージアップ combo damage up 自己回復 self heal super armor スーパーアーマー sa"
         },
         "rainy_sakuya": {
@@ -15464,7 +16153,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "bonds_bow",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【屋下の興】サクヤ sakuya [indoor gamer] 雨サクヤ rainy sakuya ★4 *4 サクヤ sakuya f 女性 @female 雨雫の協奏曲 raindrops concerto ガチャ gacha スカウト scout 水 water alo コンボダメージアップ combo damage up 自己回復 self heal 属性クリティカルダメージ アップ elemental critical damage up 無敵 invincible super armor スーパーアーマー sa"
         },
         "g17_asuna": {
@@ -15585,10 +16274,10 @@
             "mp_lb_4": 7,
             "eq_mp_wep": "os3_mace",
             "eq_mp_amr": "f_wind3",
-            "eq_mp_acc": "mf_wind",
+            "eq_mp_acc": "mf_wind5",
             "eq_atk_wep": "os3_mace",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【天才クリエイター】ユウキ yuuki [genius creator] e17ユウキ e17 yuuki ★4 *4 ユウキ yuuki f 女性 @female イベント event limited 2017 イベント event 制限 restricted 風 wind alo"
         },
         "swim_kirito": {
@@ -15712,7 +16401,7 @@
             "eq_mp_acc": "mf_earth",
             "eq_atk_wep": "yukata_dagger",
             "eq_atk_amr": "f_none4",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【常夏の恋人】アスナ asuna [tropical lover] 水着アスナ ss asuna ★4 *4 アスナ asuna f 女性 @female 常夏のトロピカル★ドリーム tropical ★ dream ガチャ gacha スカウト scout 土 earth alo バリア barrier s3switch s3スイッチ"
         },
         "swim_yuuki": {
@@ -15774,7 +16463,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "friends_rapier",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【ハツラツ夏色少女】ユウキ yuuki [sunny summer girl] 水着ユウキ ss yuuki ★4 *4 ユウキ yuuki f 女性 @female 常夏のトロピカル★ドリーム tropical ★ dream ガチャ gacha スカウト scout 水 water alo バリア barrier s3switch s3スイッチ"
         },
         "swim_eugeo": {
@@ -15831,12 +16520,12 @@
             "mp_lb_2": 10,
             "mp_lb_3": 10,
             "mp_lb_4": 10,
-            "eq_mp_wep": "bonds_sword",
+            "eq_mp_wep": "sports_sword",
             "eq_mp_amr": "f_wind3",
             "eq_mp_acc": "mf_wind",
-            "eq_atk_wep": "bonds_sword",
+            "eq_atk_wep": "sports_sword",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【波乗りボーイ】ユージオ eugeo [surfer] 水着ユージオ ss eugeo ★4 *4 ユージオ eugeo m 男性 @male 常夏のトロピカル★ドリーム tropical ★ dream ガチャ gacha スカウト scout 風 wind alo 属性クリティカルダメージ アップ elemental critical damage up バリア barrier s3switch s3スイッチ"
         },
         "swim_alice": {
@@ -15898,7 +16587,7 @@
             "eq_mp_acc": "mf_fire",
             "eq_atk_wep": "zodiac_sword",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【火照りの夏姫】アリス alice [summer princess] 水着アリス ss alice ★4 *4 アリス alice f 女性 @female 常夏のトロピカル★ドリーム tropical ★ dream ガチャ gacha スカウト scout 火 fire alo 属性クリティカルダメージ アップ elemental critical damage up 背後取り backstab バリア barrier s3switch s3スイッチ"
         },
         "swimr_yuna": {
@@ -15960,7 +16649,7 @@
             "eq_mp_acc": "mf_earth",
             "eq_atk_wep": "c_sword1",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【トロピカルdb】ユナ yuna [tropical db] 水着ユナ ss yuna ★4 *4 ユナ yuna f 女性 @female 常夏のトロピカル★ドリーム 報酬 tropical ★ dream reward 報酬 reward 制限 restricted 土 earth alo グループ回復 pt回復 group heal 無敵 invincible"
         },
         "pns_yuuki": {
@@ -16001,8 +16690,8 @@
             "dtr_pierce": 0,
             "dtr_blunt": 0,
             "dtr_magic": 0,
-            "s3_atk": 1.165,
-            "s3_gatk": 1.165,
+            "s3_atk": 1.11,
+            "s3_gatk": 1.11,
             "s3_debuf": 0,
             "s3_debuf_pnr": 0,
             "combo_damage_20": 1,
@@ -16063,8 +16752,8 @@
             "dtr_pierce": 1,
             "dtr_blunt": 0,
             "dtr_magic": 0,
-            "s3_atk": 1.165,
-            "s3_gatk": 1.165,
+            "s3_atk": 1.11,
+            "s3_gatk": 1.11,
             "s3_debuf": 0,
             "s3_debuf_pnr": 0,
             "combo_damage_20": 1,
@@ -16125,8 +16814,8 @@
             "dtr_pierce": 1,
             "dtr_blunt": 0,
             "dtr_magic": 0,
-            "s3_atk": 1.165,
-            "s3_gatk": 1.165,
+            "s3_atk": 1.11,
+            "s3_gatk": 1.11,
             "s3_debuf": 0,
             "s3_debuf_pnr": 0,
             "combo_damage_20": 1,
@@ -16208,7 +16897,7 @@
             "eq_mp_acc": "mf_earth",
             "eq_atk_wep": "yukata_rapier",
             "eq_atk_amr": "f_none4",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【夏夜を照らす枝垂柳】アスナ asuna [illuminating weeping willow] 浴衣アスナ yukata asuna ★4 *4 アスナ asuna f 女性 @female yukata night ～花火の下で～ yukata night ガチャ gacha スカウト scout 土 earth os 攻撃 自己 バフ atk attack self buff 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "yukata_sinon": {
@@ -16270,7 +16959,7 @@
             "eq_mp_acc": "mf_earth",
             "eq_atk_wep": "yukata_gun",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【弾道に咲く朝顔】シノン sinon [firey morning glory] 浴衣シノン yukata sinon ★4 *4 シノン sinon f 女性 @female yukata night ～花火の下で～ yukata night ガチャ gacha スカウト scout 土 earth os 攻撃 自己 バフ atk attack self buff 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "yukata_suguha": {
@@ -16332,7 +17021,7 @@
             "eq_mp_acc": "mf_earth",
             "eq_atk_wep": "yukata_dagger",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【夕暮れに涼む萩】直葉 suguha [dusk lespedeza] 浴衣直葉 yukata suguha ★4 *4 直葉 suguha f 女性 @female yukata night ～花火の下で～ yukata night ガチャ gacha スカウト scout 土 earth os 攻撃 自己 バフ atk attack self buff 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "yukata_seven": {
@@ -16394,7 +17083,7 @@
             "eq_mp_acc": "mf_earth",
             "eq_atk_wep": "yukata_lance",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【愛唱の百日草】セブン seven [zinnia melody] 浴衣セブン yukata seven ★4 *4 セブン seven f 女性 @female yukata night ～花火の下で～ yukata night ガチャ gacha スカウト scout 土 earth os 攻撃 自己 バフ atk attack self buff 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "yukata_rain": {
@@ -16456,7 +17145,7 @@
             "eq_mp_acc": "mf_earth",
             "eq_atk_wep": "yukata_dual",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【吹き過ぐ桜楓】レイン rain [blossom shower] 浴衣レイン yukata rain ★4 *4 レイン rain f 女性 @female yukata night ～花火の下で～ yukata night ガチャ gacha スカウト scout 土 earth os 攻撃 自己 バフ atk attack self buff 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "g17_kirito": {
@@ -16575,12 +17264,12 @@
             "mp_lb_2": 10,
             "mp_lb_3": 9,
             "mp_lb_4": 10,
-            "eq_mp_wep": "summer_rapier",
+            "eq_mp_wep": "sports_rapier",
             "eq_mp_amr": "f_none4",
             "eq_mp_acc": "mf_wind",
-            "eq_atk_wep": "princess_rapier",
+            "eq_atk_wep": "sports_rapier",
             "eq_atk_amr": "f_none4",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【癒しの夏美人】アスナ asuna [healing beauty] 夏色アスナ gals asuna ★4 *4 アスナ asuna f 女性 @female はじける★夏色ガール beaming summer gals ガチャ gacha スカウト scout 風 wind os 自己回復 self heal s3switch s3スイッチ"
         },
         "summer_suguha": {
@@ -16704,7 +17393,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "jr_gun",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【いたずら夏ガール】シノン sinon [mischievous summer chick] 夏色シノン gals sinon ★4 *4 シノン sinon f 女性 @female はじける★夏色ガール beaming summer gals ガチャ gacha スカウト scout 水 water os 自己回復 self heal s3switch s3スイッチ"
         },
         "summer_lisbeth": {
@@ -16766,7 +17455,7 @@
             "eq_mp_acc": "mf_fire",
             "eq_atk_wep": "summer_mace",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【太陽の夏娘】リズベット lisbeth [summer sunshine] 夏色リズ gals lisbeth ★4 *4 リズ lisbeth f 女性 @female はじける★夏色ガール beaming summer gals ガチャ gacha スカウト scout 火 fire os 自己回復 self heal s3switch s3スイッチ"
         },
         "summer_silica": {
@@ -16828,7 +17517,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "bride_dagger",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【ひまわり夏少女】シリカ silica [sunflower girl] 夏色シリカ gals silica ★4 *4 シリカ silica f 女性 @female はじける★夏色ガール beaming summer gals ガチャ gacha スカウト scout 光 light os コンボダメージアップ combo damage up 自己回復 self heal s3switch s3スイッチ"
         },
         "isr_yui": {
@@ -16947,12 +17636,12 @@
             "mp_lb_2": 9,
             "mp_lb_3": 8,
             "mp_lb_4": 9,
-            "eq_mp_wep": "bonds_sword",
+            "eq_mp_wep": "sports_sword",
             "eq_mp_amr": "f_wind3",
-            "eq_mp_acc": "mf_wind",
-            "eq_atk_wep": "bonds_sword",
+            "eq_mp_acc": "mf_wind5",
+            "eq_atk_wep": "sports_sword",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【商売上手な露天商】リズベット lisbeth [good street vendor] 祭リズ festa lisbeth ★4 *4 リズ lisbeth f 女性 @female 夏夜の祝祭 summer night festa ガチャ gacha スカウト scout 風 wind alo コンボダメージアップ combo damage up 自己回復 self heal super armor スーパーアーマー sa コンボ持続 combo duration up"
         },
         "festa_leafa": {
@@ -17009,12 +17698,12 @@
             "mp_lb_2": 9,
             "mp_lb_3": 8,
             "mp_lb_4": 9,
-            "eq_mp_wep": "summer_rapier",
+            "eq_mp_wep": "sports_rapier",
             "eq_mp_amr": "f_wind3",
-            "eq_mp_acc": "mf_wind",
-            "eq_atk_wep": "princess_rapier",
+            "eq_mp_acc": "mf_wind5",
+            "eq_atk_wep": "sports_rapier",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【夏宵の響声】リーファ leafa [summer night shout] 祭リーファ festa leafa ★4 *4 リーファ leafa f 女性 @female 夏夜の祝祭 summer night festa ガチャ gacha スカウト scout 風 wind alo コンボダメージアップ combo damage up 自己回復 self heal super armor スーパーアーマー sa コンボ持続 combo duration up"
         },
         "festa_premiere": {
@@ -17071,12 +17760,12 @@
             "mp_lb_2": 9,
             "mp_lb_3": 8,
             "mp_lb_4": 9,
-            "eq_mp_wep": "festa_lance",
+            "eq_mp_wep": "sports_lance",
             "eq_mp_amr": "f_wind3",
-            "eq_mp_acc": "mf_wind",
-            "eq_atk_wep": "festa_lance",
+            "eq_mp_acc": "mf_wind5",
+            "eq_atk_wep": "sports_lance",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【神楽の舞い】プレミア premiere [kagura dance] 祭プレミア festa premiere ★4 *4 プレミア premiere f 女性 @female 夏夜の祝祭 summer night festa ガチャ gacha スカウト scout 風 wind sa0 コンボダメージアップ combo damage up 自己回復 self heal super armor スーパーアーマー sa コンボ持続 combo duration up"
         },
         "jr_kirito": {
@@ -17117,8 +17806,8 @@
             "dtr_pierce": 0,
             "dtr_blunt": 0,
             "dtr_magic": 0,
-            "s3_atk": 1.1,
-            "s3_gatk": 1.1,
+            "s3_atk": 1.11,
+            "s3_gatk": 1.11,
             "s3_debuf": 0.5,
             "s3_debuf_pnr": 1,
             "combo_damage_20": 1,
@@ -17138,7 +17827,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "jr_dual",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【気高き船長】キリト kirito [lofty captain] 海賊キリト pirates kirito ★4 *4 キリト kirito m 男性 @male 嵐に靡くは海賊旗 jolly roger in the stormy sea ガチャ gacha スカウト scout 水 water alo 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff 防御 デバフ deffence debuff"
         },
         "jr_asuna": {
@@ -17179,8 +17868,8 @@
             "dtr_pierce": 1,
             "dtr_blunt": 0,
             "dtr_magic": 0,
-            "s3_atk": 1.1,
-            "s3_gatk": 1.1,
+            "s3_atk": 1.11,
+            "s3_gatk": 1.11,
             "s3_debuf": 0.5,
             "s3_debuf_pnr": 1,
             "combo_damage_20": 1,
@@ -17200,7 +17889,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "friends_rapier",
             "eq_atk_amr": "f_none4",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【甲板を彩る副船長】アスナ asuna [gorgeous quatermaster] 海賊アスナ pirates asuna ★4 *4 アスナ asuna f 女性 @female 嵐に靡くは海賊旗 jolly roger in the stormy sea ガチャ gacha スカウト scout 水 water alo 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff 防御 デバフ deffence debuff"
         },
         "jr_sinon": {
@@ -17241,8 +17930,8 @@
             "dtr_pierce": 0,
             "dtr_blunt": 1,
             "dtr_magic": 0,
-            "s3_atk": 1.1,
-            "s3_gatk": 1.1,
+            "s3_atk": 1.11,
+            "s3_gatk": 1.11,
             "s3_debuf": 0.5,
             "s3_debuf_pnr": 1,
             "combo_damage_20": 1,
@@ -17262,7 +17951,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "jr_gun",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【見張り台の名狙撃手】シノン sinon [great sniper on the lookout] 海賊シノン pirates sinon ★4 *4 シノン sinon f 女性 @female 嵐に靡くは海賊旗 jolly roger in the stormy sea ガチャ gacha スカウト scout 水 water alo 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff 防御 デバフ deffence debuff"
         },
         "jr_leafa": {
@@ -17303,8 +17992,8 @@
             "dtr_pierce": 0,
             "dtr_blunt": 0,
             "dtr_magic": 0,
-            "s3_atk": 1.1,
-            "s3_gatk": 1.1,
+            "s3_atk": 1.11,
+            "s3_gatk": 1.11,
             "s3_debuf": 0.5,
             "s3_debuf_pnr": 1,
             "combo_damage_20": 1,
@@ -17324,7 +18013,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "c_sword",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【晴れやかなる航海士】リーファ leafa [radiant first mate] 海賊リーファ pirates leafa ★4 *4 リーファ leafa f 女性 @female 嵐に靡くは海賊旗 jolly roger in the stormy sea ガチャ gacha スカウト scout 水 water alo 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff 防御 デバフ deffence debuff"
         },
         "jr_yuuki": {
@@ -17365,8 +18054,8 @@
             "dtr_pierce": 1,
             "dtr_blunt": 0,
             "dtr_magic": 0,
-            "s3_atk": 1.1,
-            "s3_gatk": 1.1,
+            "s3_atk": 1.11,
+            "s3_gatk": 1.11,
             "s3_debuf": 0.5,
             "s3_debuf_pnr": 1,
             "combo_damage_20": 1,
@@ -17386,7 +18075,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "jr_dagger",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【直感の操舵手】ユウキ yuuki [intuitive navigator] 海賊ユウキ pirates yuuki ★4 *4 ユウキ yuuki f 女性 @female 嵐に靡くは海賊旗 jolly roger in the stormy sea ガチャ gacha スカウト scout 水 water alo 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff 防御 デバフ deffence debuff"
         },
         "bonds_kirito": {
@@ -17567,12 +18256,12 @@
             "mp_lb_2": 10,
             "mp_lb_3": 9,
             "mp_lb_4": 10,
-            "eq_mp_wep": "bonds_sword",
+            "eq_mp_wep": "sports_sword",
             "eq_mp_amr": "f_wind3",
-            "eq_mp_acc": "mf_wind",
-            "eq_atk_wep": "bonds_sword",
+            "eq_mp_acc": "mf_wind5",
+            "eq_atk_wep": "sports_sword",
             "eq_atk_amr": "f_wind3",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【想いと向き合いし剣士】リーファ leafa [the blade - facing the feelings] 絆リーファ bonds leafa ★5 *5 リーファ leafa f 女性 @female 信頼の証 運命の絆 proof of trust bonds of fate ガチャ gacha スカウト scout 風 wind alo 連携 combination リーダースキル ls leader skill"
         },
         "bonds_sinon": {
@@ -17634,7 +18323,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "bonds_bow",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【過去を克服せし射手】シノン sinon [the archer - overcoming the past] 絆シノン bonds sinon ★5 *5 シノン sinon f 女性 @female 信頼の証 運命の絆 proof of trust bonds of fate ガチャ gacha スカウト scout 水 water alo 連携 combination リーダースキル ls leader skill"
         },
         "cm_eugeo": {
@@ -17696,7 +18385,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "c_sword",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【精悍なる刑事】ユージオ eugeo [intrepid detective] cmユージオ cm eugeo ★5 *5 ユージオ eugeo m 男性 @male cm記念配布 cm memorial gift 配布 gift 制限 restricted イベント event 水 water uw 連携 combination リーダースキル ls leader skill"
         },
         "bondsr_heathcliff": {
@@ -17758,7 +18447,7 @@
             "eq_mp_acc": "mf_light",
             "eq_atk_wep": "princess_sword1",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【神聖剣】ヒースクリフ heathcliff [holy sword] sao団長 sao heathcliff ★5 *5 団長 heathcliff m 男性 @male 攻略戦！強き絆の証 報酬 assault! proof of strong bonds reward 報酬 reward 制限 restricted 光 light sao 連携 combination リーダースキル ls leader skill"
         },
         "c_alice": {
@@ -17820,7 +18509,7 @@
             "eq_mp_acc": "mf_earth",
             "eq_atk_wep": "c_sword1",
             "eq_atk_amr": "f_none6",
-            "eq_atk_acc": "mf_earth5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【金木犀の整合騎士】アリス alice [fragrant olive integrity knight] cアリス c alice ★5 *5 アリス alice f 女性 @female 巡る世界に重ねた剣 the world spins with swords ガチャ gacha スカウト scout 土 earth uw 連携 combination リーダースキル ls leader skill"
         },
         "c_eugeo": {
@@ -17882,7 +18571,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "c_sword",
             "eq_atk_amr": "m_light1",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【青薔薇の整合騎士】ユージオ eugeo [blue rose integrity knight] cユージオ c eugeo ★5 *5 ユージオ eugeo m 男性 @male 巡る世界に重ねた剣 the world spins with swords ガチャ gacha スカウト scout 水 water uw 連携 combination リーダースキル ls leader skill"
         },
         "cm_kirito": {
@@ -18006,7 +18695,7 @@
             "eq_mp_acc": "mf_water4",
             "eq_atk_wep": "friends_rapier",
             "eq_atk_amr": "f_none4",
-            "eq_atk_acc": "mf_water5",
+            "eq_atk_acc": "mf_wind5",
             "meta": "【心を継ぎし水妖精】アスナ asuna [heartful water fairy] 友アスナ friends asuna ★5 *5 アスナ asuna f 女性 @female 過ぎゆく時と友情の記憶 memory of friendship & passing of time ガチャ gacha スカウト scout 水 water alo 連携 combination リーダースキル ls leader skill"
         },
         "friends_yuuki": {
@@ -18634,7 +19323,7 @@
             "name": "【恋するヴァンパイア】ユウキ",
             "name_en": "Yuuki [Vampire in Love]",
             "short": "悪戯ユウキ",
-            "short_en": "hhn Yuuki",
+            "short_en": "HHN Yuuki",
             "cname": "yuuki",
             "group": "hhn",
             "type": "mace",
@@ -18696,7 +19385,7 @@
             "name": "【心優しいモンスター】リーファ",
             "name_en": "Leafa [Sweet Monser]",
             "short": "悪戯リーファ",
-            "short_en": "hhn Leafa",
+            "short_en": "HHN Leafa",
             "cname": "leafa",
             "group": "hhn",
             "type": "rapier",
@@ -18758,7 +19447,7 @@
             "name": "【スパイダーウィッチ】シノン",
             "name_en": "Sinon [Spider Witch]",
             "short": "悪戯シノン",
-            "short_en": "hhn Sinon",
+            "short_en": "HHN Sinon",
             "cname": "sinon",
             "group": "hhn",
             "type": "gun",
@@ -18820,7 +19509,7 @@
             "name": "【魔女っ娘にゃんこ】シリカ",
             "name_en": "Silica [Witchy Kitty]",
             "short": "悪戯シリカ",
-            "short_en": "hhn Silica",
+            "short_en": "HHN Silica",
             "cname": "silica",
             "group": "hhn",
             "type": "dagger",
@@ -18876,6 +19565,316 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_dark4",
             "meta": "【魔女っ娘にゃんこ】シリカ silica [witchy kitty] 悪戯シリカ hhn silica ★5 *5 シリカ silica f 女性 @female いたずらハロウィンナイト happy halloween night ガチャ gacha スカウト scout 闇 dark alo 自己回復 self heal 連携 combination リーダースキル ls leader skill"
+        },
+        "sports_asuna": {
+            "id": "sports_asuna",
+            "name": "【華麗なるゴール】アスナ",
+            "name_en": "Asuna [Reach the Finish Line]",
+            "short": "運動アスナ",
+            "short_en": "sports Asuna",
+            "cname": "asuna",
+            "group": "sports",
+            "type": "rapier",
+            "element": "wind",
+            "world": "alo",
+            "rarity": 5,
+            "ls_atk": 1.06,
+            "cs": "c.cname.alias=yui:mod_dmg=1.1",
+            "hp": 12604,
+            "mp": 237,
+            "atk": 3677,
+            "def": 2296,
+            "cri": 3389,
+            "cri_dmg": 1.5,
+            "lvup": "normal",
+            "bs_hp": 0,
+            "bs_mp": 0.15,
+            "bs_atk": 0.15,
+            "bs_def": 0,
+            "bs_cri": 0,
+            "ss_atk": 250,
+            "ss_cri": 250,
+            "ss_dmg": 1,
+            "ss_elem_dmg": 1.1,
+            "ss_cri_dmg": 1,
+            "ss_elem_cri_dmg": 1.1,
+            "ss_atk_85": 0,
+            "ss_elem_dmg_90": 1,
+            "dtr_slash": 0,
+            "dtr_pierce": 1,
+            "dtr_blunt": 0,
+            "dtr_magic": 0,
+            "s3_atk": 1,
+            "s3_gatk": 1,
+            "s3_debuf": 0.5,
+            "s3_debuf_pnr": 1,
+            "combo_damage_20": 1,
+            "combo_damage_30": 1,
+            "combo_speed": 0,
+            "s3_mp": 120,
+            "s3_duration": 1.73,
+            "s3_rate": 9.689505545956928,
+            "s3_video": 0,
+            "mp_lb_total": 37,
+            "mp_lb_1": 9,
+            "mp_lb_2": 9,
+            "mp_lb_3": 9,
+            "mp_lb_4": 10,
+            "eq_mp_wep": "sports_rapier",
+            "eq_mp_amr": "f_none4",
+            "eq_mp_acc": "mf_wind5",
+            "eq_atk_wep": "sports_rapier",
+            "eq_atk_amr": "f_none4",
+            "eq_atk_acc": "mf_wind5",
+            "meta": "【華麗なるゴール】アスナ asuna [reach the finish line] 運動アスナ sports asuna ★5 *5 アスナ asuna f 女性 @female 友情のバトン！ 秋の大運動会 baton of friendship! sports festival ガチャ gacha スカウト scout 風 wind alo 防御 デバフ deffence debuff 連携 combination リーダースキル ls leader skill"
+        },
+        "sports_yui": {
+            "id": "sports_yui",
+            "name": "【いっとうしょうを目指して】ユイ",
+            "name_en": "Yui [Go for the Top]",
+            "short": "運動ユイ",
+            "short_en": "sports Yui",
+            "cname": "yui",
+            "group": "sports",
+            "type": "dagger",
+            "element": "wind",
+            "world": "alo",
+            "rarity": 5,
+            "ls_atk": 1.06,
+            "cs": "c.cname.alias=asuna:mod_dmg=1.1",
+            "hp": 11453,
+            "mp": 237,
+            "atk": 3564,
+            "def": 2399,
+            "cri": 3513,
+            "cri_dmg": 1.5,
+            "lvup": "normal",
+            "bs_hp": 0,
+            "bs_mp": 0.15,
+            "bs_atk": 0.15,
+            "bs_def": 0,
+            "bs_cri": 0,
+            "ss_atk": 250,
+            "ss_cri": 250,
+            "ss_dmg": 1,
+            "ss_elem_dmg": 1.1,
+            "ss_cri_dmg": 1,
+            "ss_elem_cri_dmg": 1.1,
+            "ss_atk_85": 0,
+            "ss_elem_dmg_90": 1,
+            "dtr_slash": 0,
+            "dtr_pierce": 1,
+            "dtr_blunt": 0,
+            "dtr_magic": 0,
+            "s3_atk": 1,
+            "s3_gatk": 1,
+            "s3_debuf": 0.5,
+            "s3_debuf_pnr": 1,
+            "combo_damage_20": 1,
+            "combo_damage_30": 1,
+            "combo_speed": 0,
+            "s3_mp": 120,
+            "s3_duration": 1.76,
+            "s3_rate": 10.5983902834303,
+            "s3_video": 0,
+            "mp_lb_total": 37,
+            "mp_lb_1": 9,
+            "mp_lb_2": 9,
+            "mp_lb_3": 9,
+            "mp_lb_4": 10,
+            "eq_mp_wep": "sports_dagger",
+            "eq_mp_amr": "f_wind3",
+            "eq_mp_acc": "mf_wind5",
+            "eq_atk_wep": "sports_dagger",
+            "eq_atk_amr": "f_wind3",
+            "eq_atk_acc": "mf_wind5",
+            "meta": "【いっとうしょうを目指して】ユイ yui [go for the top] 運動ユイ sports yui ★5 *5 ユイ yui f 女性 @female 友情のバトン！ 秋の大運動会 baton of friendship! sports festival ガチャ gacha スカウト scout 風 wind alo 防御 デバフ deffence debuff 連携 combination リーダースキル ls leader skill"
+        },
+        "sports_leafa": {
+            "id": "sports_leafa",
+            "name": "【輝く汗と青春の光】リーファ",
+            "name_en": "Leafa [Flush of Youth]",
+            "short": "運動リーファ",
+            "short_en": "sports Leafa",
+            "cname": "leafa",
+            "group": "sports",
+            "type": "sword",
+            "element": "wind",
+            "world": "alo",
+            "rarity": 5,
+            "ls_atk": 1.06,
+            "cs": "c.cname.alias=lisbeth:mod_dmg=1.1",
+            "hp": 13331,
+            "mp": 237,
+            "atk": 3639,
+            "def": 2486,
+            "cri": 2824,
+            "cri_dmg": 1.5,
+            "lvup": "normal",
+            "bs_hp": 0,
+            "bs_mp": 0.15,
+            "bs_atk": 0.15,
+            "bs_def": 0,
+            "bs_cri": 0,
+            "ss_atk": 250,
+            "ss_cri": 250,
+            "ss_dmg": 1,
+            "ss_elem_dmg": 1.1,
+            "ss_cri_dmg": 1,
+            "ss_elem_cri_dmg": 1.1,
+            "ss_atk_85": 0,
+            "ss_elem_dmg_90": 1,
+            "dtr_slash": 1,
+            "dtr_pierce": 0,
+            "dtr_blunt": 0,
+            "dtr_magic": 0,
+            "s3_atk": 1,
+            "s3_gatk": 1,
+            "s3_debuf": 0.5,
+            "s3_debuf_pnr": 1,
+            "combo_damage_20": 1,
+            "combo_damage_30": 1,
+            "combo_speed": 0,
+            "s3_mp": 120,
+            "s3_duration": 2.13,
+            "s3_rate": 10.80239813912943,
+            "s3_video": 0,
+            "mp_lb_total": 37,
+            "mp_lb_1": 9,
+            "mp_lb_2": 9,
+            "mp_lb_3": 9,
+            "mp_lb_4": 10,
+            "eq_mp_wep": "sports_sword",
+            "eq_mp_amr": "f_wind3",
+            "eq_mp_acc": "mf_wind5",
+            "eq_atk_wep": "sports_sword",
+            "eq_atk_amr": "f_wind3",
+            "eq_atk_acc": "mf_wind5",
+            "meta": "【輝く汗と青春の光】リーファ leafa [flush of youth] 運動リーファ sports leafa ★5 *5 リーファ leafa f 女性 @female 友情のバトン！ 秋の大運動会 baton of friendship! sports festival ガチャ gacha スカウト scout 風 wind alo 防御 デバフ deffence debuff 連携 combination リーダースキル ls leader skill"
+        },
+        "sports_lisbeth": {
+            "id": "sports_lisbeth",
+            "name": "【ネバー・ギブアップ】リズベット",
+            "name_en": "Lisbeth [Never Give Up]",
+            "short": "運動リズ",
+            "short_en": "sports Lisbeth",
+            "cname": "lisbeth",
+            "group": "sports",
+            "type": "lance",
+            "element": "wind",
+            "world": "alo",
+            "rarity": 5,
+            "ls_atk": 1.06,
+            "cs": "c.cname.alias=leafa:mod_dmg=1.1",
+            "hp": 12686,
+            "mp": 237,
+            "atk": 3602,
+            "def": 2513,
+            "cri": 3231,
+            "cri_dmg": 1.5,
+            "lvup": "normal",
+            "bs_hp": 0,
+            "bs_mp": 0.15,
+            "bs_atk": 0.15,
+            "bs_def": 0,
+            "bs_cri": 0,
+            "ss_atk": 250,
+            "ss_cri": 250,
+            "ss_dmg": 1,
+            "ss_elem_dmg": 1.1,
+            "ss_cri_dmg": 1,
+            "ss_elem_cri_dmg": 1.1,
+            "ss_atk_85": 0,
+            "ss_elem_dmg_90": 1,
+            "dtr_slash": 0,
+            "dtr_pierce": 1,
+            "dtr_blunt": 0,
+            "dtr_magic": 0,
+            "s3_atk": 1,
+            "s3_gatk": 1,
+            "s3_debuf": 0.5,
+            "s3_debuf_pnr": 1,
+            "combo_damage_20": 1,
+            "combo_damage_30": 1,
+            "combo_speed": 0,
+            "s3_mp": 120,
+            "s3_duration": 2.11,
+            "s3_rate": 10.860352335708635,
+            "s3_video": 0,
+            "mp_lb_total": 37,
+            "mp_lb_1": 9,
+            "mp_lb_2": 9,
+            "mp_lb_3": 9,
+            "mp_lb_4": 10,
+            "eq_mp_wep": "sports_lance",
+            "eq_mp_amr": "f_wind3",
+            "eq_mp_acc": "mf_wind5",
+            "eq_atk_wep": "sports_lance",
+            "eq_atk_amr": "f_wind3",
+            "eq_atk_acc": "mf_wind5",
+            "meta": "【ネバー・ギブアップ】リズベット lisbeth [never give up] 運動リズ sports lisbeth ★5 *5 リズ lisbeth f 女性 @female 友情のバトン！ 秋の大運動会 baton of friendship! sports festival ガチャ gacha スカウト scout 風 wind alo 防御 デバフ deffence debuff 連携 combination リーダースキル ls leader skill"
+        },
+        "nycc_kirito": {
+            "id": "nycc_kirito",
+            "name": "【荒野の一匹狼】キリト",
+            "name_en": "Kirito [Lone Wolf in the Wild]",
+            "short": "NYキリト",
+            "short_en": "NYCC Kirito",
+            "cname": "kirito",
+            "group": "nycc",
+            "type": "sword",
+            "element": "earth",
+            "world": "alo",
+            "rarity": 5,
+            "ls_atk": 1.03,
+            "cs": 0,
+            "hp": 11518,
+            "mp": 211,
+            "atk": 3034,
+            "def": 2090,
+            "cri": 2632,
+            "cri_dmg": 1.5,
+            "lvup": "normal",
+            "bs_hp": 0,
+            "bs_mp": 0.15,
+            "bs_atk": 0.15,
+            "bs_def": 0,
+            "bs_cri": 0,
+            "ss_atk": 250,
+            "ss_cri": 250,
+            "ss_dmg": 1,
+            "ss_elem_dmg": 1.1,
+            "ss_cri_dmg": 1,
+            "ss_elem_cri_dmg": 1,
+            "ss_atk_85": 0,
+            "ss_elem_dmg_90": 1,
+            "dtr_slash": 1,
+            "dtr_pierce": 0,
+            "dtr_blunt": 0,
+            "dtr_magic": 0,
+            "s3_atk": 1,
+            "s3_gatk": 1,
+            "s3_debuf": 0,
+            "s3_debuf_pnr": 0,
+            "combo_damage_20": 1,
+            "combo_damage_30": 1,
+            "combo_speed": 0,
+            "s3_mp": 100,
+            "s3_duration": 3,
+            "s3_rate": 0,
+            "s3_video": 0,
+            "mp_lb_total": 33,
+            "mp_lb_1": 8,
+            "mp_lb_2": 8,
+            "mp_lb_3": 8,
+            "mp_lb_4": 9,
+            "eq_mp_wep": "os_sword",
+            "eq_mp_amr": "mf_water",
+            "eq_mp_acc": "mf_earth",
+            "eq_atk_wep": "os_sword",
+            "eq_atk_amr": "mf_water",
+            "eq_atk_acc": "mf_earth",
+            "meta": "【荒野の一匹狼】キリト kirito [lone wolf in the wild] nyキリト nycc kirito ★5 *5 キリト kirito m 男性 @male nycc記念 nycc memorial 配布 gift 制限 restricted イベント event 土 earth alo 連携 combination リーダースキル ls leader skill"
         }
     },
     "type": {
@@ -19870,7 +20869,7 @@
         {
             "name": "侍",
             "name_en": "OS Samurai",
-            "def": 2900,
+            "def": 2600,
             "element": "none",
             "epRate": 1.5,
             "enRate": 0.75,

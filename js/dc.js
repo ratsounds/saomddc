@@ -1,13 +1,3 @@
-function loadDBFromFile(url, callback) {
-    fetch(url, { method: 'GET' })
-        //.then(function (response) { return response.json() })
-        .then(function (response) { return response.text(); })
-        .then(function (text) { return JSON.parse(text); })
-        .then(DC.loadData)
-        .then(callback)
-        .catch(function (error) { console.log(error); });
-}
-
 var DC = (function () {
     var db;
     var sd;
@@ -19,6 +9,7 @@ var DC = (function () {
     var key_mp = 'mp';
     var key_bs_mp = 'bs_mp';
     var key_mp_dec = 'mp_dec';
+    var key_e_mp_dec = 'e_mp_dec';
     var key_atk = 'atk';
     var key_bs_atk = 'bs_atk';
 
@@ -166,7 +157,7 @@ var DC = (function () {
         sv.amr = amr;
         sv.acc = acc;
         sv.mp = Math.floor((c.mp + getEqValueWithElem(c, amr, key_mp) + getEqValueWithElem(c, acc, key_mp)) * (1 + c.bs_mp + getEqValue(amr, key_bs_mp) + getEqValue(acc, key_bs_mp)));
-        sv.cost = c.s3_mp - c.s3_mp * getEqValue(wep, key_mp_dec);
+        sv.cost = c.s3_mp - c.s3_mp * getWeaponMpDec(c, wep);
 
         var lv_dif = lv - 80;
         var ss_atk = c.ss_atk;
@@ -193,7 +184,7 @@ var DC = (function () {
         sve.bs_atk_eq = getWeaponBSAtk(sv.wep, sv.r) + getEqValue(sv.amr, key_bs_atk) + getEqValue(sv.acc, key_bs_atk);
         sve.bs_atk = sv.c.bs_atk + sve.bs_atk_eq;
         sve.mod_dmg = sv.c.ss_dmg;
-        sve.mod_crit = sv.c.cri_dmg * sv.c.ss_cri_dmg * (1 + getWeaponCriEDmg(sv.wep, sv.r, elem));
+        sve.mod_crit = sv.c.cri_dmg * sv.c.ss_cri_dmg * (1 + getWeaponCriEDmg(sv.wep, sv.r, sv.c, elem));
         if (sv.c.element.weak === elem) {
             sve.eRate = 'enRate';
         }
@@ -232,18 +223,39 @@ var DC = (function () {
         }
         return 0;
     }
-    function getWeaponCriEDmg(wep, r, vs) {
-        if (wep && wep.element.strong === vs) {
-            switch (r) {
-                case 4:
-                    return wep.bs_cri_edmg;
-                case 5:
-                    return wep.bs_cri_edmg5;
-                default:
-                    return 0;
+    function getWeaponCriEDmg(wep, r, c, vs) {
+        var mod = 0;
+        if (wep) {
+            if (c.element === wep.element) {
+                switch (r) {
+                    case 4:
+                        mod += wep.e_bs_cri_dmg;
+                    case 5:
+                        mod += wep.e_bs_cri_dmg5;
+                    default:
+                }
+            }
+            if (wep.element.strong === vs) {
+                switch (r) {
+                    case 4:
+                        mod += wep.bs_cri_edmg;
+                    case 5:
+                        mod += wep.bs_cri_edmg5;
+                    default:
+                }
             }
         }
-        return 0;
+        return mod;
+    }
+    function getWeaponMpDec(c, wep) {
+        var mpdec = 0;
+        if (wep) {
+            mpdec += getEqValue(wep, key_mp_dec);
+            if (c.element === wep.element) {
+                mpdec += getEqValue(wep, key_e_mp_dec);
+            }
+        }
+        return mpdec;
     }
     function getEqValueWithElem(c, eq, key) {
         var value = getEqValue(eq, key);
