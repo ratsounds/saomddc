@@ -394,6 +394,7 @@ function calcRanking() {
             dcv.duration_50 = Math.floor(dcv.duration_50 * 100) / 100;
             dcv.capacity = Math.floor(dcv.damage * dcv.sv.mp / dcv.sv.cost);
             dcv.damage = Math.floor(dcv.damage);
+            dcv.mpr = Math.floor(dcv.sv.mpr);
         }
     }
     var sortKey = elemSort.value;

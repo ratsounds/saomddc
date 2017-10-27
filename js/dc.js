@@ -157,6 +157,7 @@ var DC = (function () {
         sv.amr = amr;
         sv.acc = acc;
         sv.mp = Math.floor((c.mp + getEqValueWithElem(c, amr, key_mp) + getEqValueWithElem(c, acc, key_mp)) * (1 + c.bs_mp + getEqValue(amr, key_bs_mp) + getEqValue(acc, key_bs_mp)));
+        sv.mpr = sv.mp * c.type.mpr;
         sv.cost = c.s3_mp - c.s3_mp * getWeaponMpDec(c, wep);
 
         var lv_dif = lv - 80;
