@@ -106,6 +106,11 @@ var DC = (function () {
 
         var emod = 1;
         if (sve.eRate) { emod *= boss[sve.eRate]; }
+        if (boss.sub) {
+            var sub_eRate = getElementERate(sv.c.element, boss.sub.id);
+            if (sub_eRate) { emod *= boss[sub_eRate]; }
+        }
+
         var dtmod = 1;
         for (var t in db.dtype) { dtmod += (boss[t] - 1) * sv.dtmod[t]; }
 
@@ -186,6 +191,15 @@ var DC = (function () {
         sve.bs_atk = sv.c.bs_atk + sve.bs_atk_eq;
         sve.mod_dmg = sv.c.ss_dmg;
         sve.mod_crit = sv.c.cri_dmg * sv.c.ss_cri_dmg * (1 + getWeaponCriEDmg(sv.wep, sv.r, sv.c, elem));
+        sve.eRate = getElementERate(sv.c.element, elem);
+        if (sve.eRate === 'epRate'||elem==='default') {
+            sve.mod_dmg *= sv.c.ss_elem_dmg;
+            if (sv.lv > 85) {
+                sve.mod_dmg *= sv.c.ss_elem_dmg_90;
+            }
+            sve.mod_crit *= sv.c.ss_elem_cri_dmg;
+        }
+        /*
         if (sv.c.element.weak === elem) {
             sve.eRate = 'enRate';
         }
@@ -199,7 +213,20 @@ var DC = (function () {
                 }
                 sve.mod_crit *= sv.c.ss_elem_cri_dmg;
         }
+        */
     }
+
+    function getElementERate(c_elem, boss_elem_id) {
+        var eRate;
+        if (c_elem.weak === boss_elem_id) {
+            eRate = 'enRate';
+        }
+        if (c_elem.strong === boss_elem_id) {
+            eRate = 'epRate';
+        }
+        return eRate;
+    }
+
     function getWeaponAtk(c, wep, r) {
         var atk = getEqValueWithElem(c, wep, key_atk);
         switch (r) {

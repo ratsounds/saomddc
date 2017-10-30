@@ -23,16 +23,16 @@
             <div>
                 <i class="preset"></i>
                 <select id="preset">
-            <option value="default">Default</option>
-          </select>
+                    <option value="default">default</option>
+                </select>
                 <i class="sort"></i>
                 <select id="sort">
-            <option value="damage">Damage</option>
-            <option value="dps">DPS</option>
-            <option value="capacity">Capacity</option>
-            <option value="duration">Duration</option>
-            <option value="mpr">MP Recovery</option>
-        </select>
+                    <option value="damage">Damage</option>
+                    <option value="dps">DPS</option>
+                    <option value="capacity">Capacity</option>
+                    <option value="duration">Duration</option>
+                    <option value="mpr">MP Recovery</option>
+                </select>
             </div>
             <div class="boss">
                 <i class="def"></i>
@@ -62,40 +62,77 @@
                 </select>
                 <i class="buff"></i>
                 <input id="cheer_on2" type="radio" name="gbuff" value="1.275">
-                <label for="cheer_on2" class="toggle left"><span>YUI</span></label>
+                <label for="cheer_on2" class="toggle left">
+                    <span>YUI</span>
+                </label>
                 <input id="cheer_on" type="radio" name="gbuff" value="1.165">
-                <label for="cheer_on" class="toggle"><span>ON</span></label>
+                <label for="cheer_on" class="toggle">
+                    <span>ON</span>
+                </label>
                 <input id="cheer_off" type="radio" name="gbuff" value="1" checked="true">
-                <label for="cheer_off" class="toggle right"><span>OFF</span></label>
+                <label for="cheer_off" class="toggle right">
+                    <span>OFF</span>
+                </label>
                 <i class="debuff"></i>
                 <input id="debuff_on" type="radio" name="debuff" value="0.5">
-                <label for="debuff_on" class="toggle left"><span>ON</span></label>
+                <label for="debuff_on" class="toggle left">
+                    <span>ON</span>
+                </label>
                 <input id="debuff_off" type="radio" name="debuff" value="1" checked="true">
-                <label for="debuff_off" class="toggle right"><span>OFF</span></label>
+                <label for="debuff_off" class="toggle right">
+                    <span>OFF</span>
+                </label>
                 <i class="combo"></i>
                 <select name="combo">
-                    <option value="0" selected>0</option><option value="20">20</option><option value="30">30</option><option value="50">50</option>
+                    <option value="0" selected>0</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="50">50</option>
                 </select>
                 <i class="trophy"></i>
                 <select name="trophy">
-                    <option value="1.00" selected>1.00</option><option value="1.01">1.01</option><option value="1.03">1.03</option>
+                    <option value="1.00" selected>1.00</option>
+                    <option value="1.01">1.01</option>
+                    <option value="1.03">1.03</option>
                 </select>
             </div>
             <div class="boss">
-                <input id="enone" type="radio" name="element" value="none">
+                <i class="element"></i>
+                <input id="ena" type="radio" name="element" value="" checked="true">
+                <label for="ena" class="na button "></label>
+                <input id="enone" type="radio" name="element" value="none" data-sub="snone">
                 <label for="enone" class="none button "></label>
-                <input id="elight" type="radio" name="element" value="light">
+                <input id="elight" type="radio" name="element" value="light" data-sub="slight">
                 <label for="elight" class="light button "></label>
-                <input id="edark" type="radio" name="element" value="dark">
+                <input id="edark" type="radio" name="element" value="dark" data-sub="sdark">
                 <label for="edark" class="dark button "></label>
-                <input id="efire" type="radio" name="element" value="fire">
+                <input id="efire" type="radio" name="element" value="fire" data-sub="sfire">
                 <label for="efire" class="fire button "></label>
-                <input id="ewater" type="radio" name="element" value="water">
+                <input id="ewater" type="radio" name="element" value="water" data-sub="swater">
                 <label for="ewater" class="water button "></label>
-                <input id="ewind" type="radio" name="element" value="wind">
+                <input id="ewind" type="radio" name="element" value="wind" data-sub="swind">
                 <label for="ewind" class="wind button "></label>
-                <input id="eearth" type="radio" name="element" value="earth">
+                <input id="eearth" type="radio" name="element" value="earth" data-sub="searth">
                 <label for="eearth" class="earth button "></label>
+            </div>
+            <div class="boss">
+                <i class="subelement"></i>
+                <input id="sna" type="radio" name="sub" value="" checked="true">
+                <label for="sna" class="na button "></label>
+                <input id="snone" type="radio" name="sub" value="none" class="sub">
+                <label for="snone" class="none button "></label>
+                <input id="slight" type="radio" name="sub" value="light" class="sub">
+                <label for="slight" class="light button "></label>
+                <input id="sdark" type="radio" name="sub" value="dark" class="sub">
+                <label for="sdark" class="dark button "></label>
+                <input id="sfire" type="radio" name="sub" value="fire" class="sub">
+                <label for="sfire" class="fire button "></label>
+                <input id="swater" type="radio" name="sub" value="water" class="sub">
+                <label for="swater" class="water button "></label>
+                <input id="swind" type="radio" name="sub" value="wind" class="sub">
+                <label for="swind" class="wind button "></label>
+                <input id="searth" type="radio" name="sub" value="earth" class="sub">
+                <label for="searth" class="earth button "></label>
             </div>
             <div class="boss">
                 <i class="limit"></i>
@@ -107,48 +144,95 @@
                 </select>
                 <i class="weak"></i>
                 <select name="epRate">
-            <option value="1">1.00</option><option value="1.05">1.05</option><option value="1.25">1.25</option><option value="1.5" selected>1.50</option><option value="2">2.00</option><option value="0.75">0.75</option><option value="0.5">0.50</option>
-          </select>
+                    <option value="1">1.00</option>
+                    <option value="1.05">1.05</option>
+                    <option value="1.25">1.25</option>
+                    <option value="1.5" selected>1.50</option>
+                    <option value="2">2.00</option>
+                    <option value="0.75">0.75</option>
+                    <option value="0.5">0.50</option>
+                </select>
                 <i class="resist"></i>
                 <select name="enRate">
-            <option value="1">1.00</option><option value="1.25">1.25</option><option value="1.5">1.50</option><option value="0.75" selected>0.75</option><option value="0.5">0.50</option>
-          </select>
+                    <option value="1">1.00</option>
+                    <option value="1.25">1.25</option>
+                    <option value="1.5">1.50</option>
+                    <option value="0.75" selected>0.75</option>
+                    <option value="0.5">0.50</option>
+                </select>
                 <i class="rweak"></i>
                 <select name="repRate">
-            <option value="1" selected>1.00</option><option value="1.25">1.25</option><option value="1.5">1.50</option><option value="2">2.00</option><option value="0.75">0.75</option><option value="0.5">0.50</option>
-          </select>
+                    <option value="1" selected>1.00</option>
+                    <option value="1.25">1.25</option>
+                    <option value="1.5">1.50</option>
+                    <option value="2">2.00</option>
+                    <option value="0.75">0.75</option>
+                    <option value="0.5">0.50</option>
+                </select>
                 <i class="racc"></i>
                 <input id="racc_on" type="radio" name="racc" value="1.1">
-                <label for="racc_on" class="toggle left"><span>ON</span></label>
+                <label for="racc_on" class="toggle left">
+                    <span>ON</span>
+                </label>
                 <input id="racc_off" type="radio" name="racc" value="1" checked="true">
-                <label for="racc_off" class="toggle right"><span>OFF</span></label>
+                <label for="racc_off" class="toggle right">
+                    <span>OFF</span>
+                </label>
                 <i class="etcmod"></i>
                 <select name="etcMod">
-            <option value="1">1.00</option><option value="1.1">1.10</option><option value="1.25">1.25</option><option value="1.5">1.50</option><option value="2">2.00</option><option value="0.75">0.75</option><option value="0.5">0.50</option><option value="0.33">0.33</option><option value="0.25">0.25</option>
-          </select>
+                    <option value="1">1.00</option>
+                    <option value="1.1">1.10</option>
+                    <option value="1.25">1.25</option>
+                    <option value="1.5">1.50</option>
+                    <option value="2">2.00</option>
+                    <option value="0.75">0.75</option>
+                    <option value="0.5">0.50</option>
+                    <option value="0.33">0.33</option>
+                    <option value="0.25">0.25</option>
+                </select>
             </div>
             <div class="boss">
                 <i class="dual"></i>
                 <i class="sword"></i>
                 <select name="slash">
-          <option value="1">1.00</option><option value="1.25">1.25</option><option value="1.5">1.50</option><option value="2">2.00</option><option value="0.75">0.75</option><option value="0.5">0.50</option>
-          </select>
+                    <option value="1">1.00</option>
+                    <option value="1.25">1.25</option>
+                    <option value="1.5">1.50</option>
+                    <option value="2">2.00</option>
+                    <option value="0.75">0.75</option>
+                    <option value="0.5">0.50</option>
+                </select>
                 <i class="rapier"></i>
                 <i class="dagger"></i>
                 <i class="bow"></i>
                 <i class="lance"></i>
                 <select name="pierce">
-          <option value="1">1.00</option><option value="1.25">1.25</option><option value="1.5">1.50</option><option value="2">2.00</option><option value="0.75">0.75</option><option value="0.5">0.50</option>
-          </select>
+                    <option value="1">1.00</option>
+                    <option value="1.25">1.25</option>
+                    <option value="1.5">1.50</option>
+                    <option value="2">2.00</option>
+                    <option value="0.75">0.75</option>
+                    <option value="0.5">0.50</option>
+                </select>
                 <i class="mace"></i>
                 <i class="gun"></i>
                 <select name="blunt">
-          <option value="1">1.00</option><option value="1.25">1.25</option><option value="1.5">1.50</option><option value="2">2.00</option><option value="0.75">0.75</option><option value="0.5">0.50</option>
-          </select>
+                    <option value="1">1.00</option>
+                    <option value="1.25">1.25</option>
+                    <option value="1.5">1.50</option>
+                    <option value="2">2.00</option>
+                    <option value="0.75">0.75</option>
+                    <option value="0.5">0.50</option>
+                </select>
                 <i class="staff"></i>
                 <select name="magic">
-          <option value="1">1.00</option><option value="1.25">1.25</option><option value="1.5">1.50</option><option value="2">2.00</option><option value="0.75">0.75</option><option value="0.5">0.50</option>
-          </select>
+                    <option value="1">1.00</option>
+                    <option value="1.25">1.25</option>
+                    <option value="1.5">1.50</option>
+                    <option value="2">2.00</option>
+                    <option value="0.75">0.75</option>
+                    <option value="0.5">0.50</option>
+                </select>
             </div>
             <div class="boss hidden">
                 <input id="condition" name="condition" type="text">
@@ -236,7 +320,8 @@
         </div>
     </div>
     <div id="footer">
-        <p>Don&rsquo;t worry, this is <span class="argo">(&lsquo; ω &lsquo;ミ)</span>&rsquo;s guidebook.</p>
+        <p>Don&rsquo;t worry, this is
+            <span class="argo">(&lsquo; ω &lsquo;ミ)</span>&rsquo;s guidebook.</p>
         <a href="https://twitter.com/ratsounds" class="twitter-follow-button" data-show-count="false">Follow @ratsounds</a>
     </div>
 

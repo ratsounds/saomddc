@@ -146,6 +146,7 @@ p {
   padding: 0.1em 0.25em;
   border-bottom: 1px solid #ccc;
   background-color:#f0f0f0;
+  align-items: center;
 }
 #control div.control_wrapper{
   padding: 0;
@@ -194,7 +195,7 @@ button, label {
 }
 
 input, textarea, select {
-  padding: 0 0.25em;
+  padding: 0.25em;
 }
 
 i {
@@ -272,6 +273,19 @@ input[type="radio"]:checked+label.toggle {
 
 input[type="radio"]:checked+label {
   color: #666;
+}
+
+input[type="radio"]:disabled+label {
+  color: #666 !important;
+  background-color: #ccc !important;
+}
+
+label.na {
+  background-color: #aaa;
+}
+
+input[type="radio"]:checked+label.na {
+  background-color: #ffffff;
 }
 
 label.none {
