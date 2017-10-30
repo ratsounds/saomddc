@@ -134,7 +134,6 @@ function initPre() {
     var language = (window.navigator.languages && window.navigator.languages[0]) || window.navigator.language || window.navigator.userLanguage || window.navigator.browserLanguage;
     if (language.substr(0, 2) === 'ja') {
         lang = '';
-        //lang = '_en';
     } else {
         lang = '_en';
     }
@@ -173,7 +172,7 @@ function initPre() {
 
     //set config ui events;
     DO.qid('help_button').on('click', function (ev) {
-        DO.qid('help' + lang).classList.toggle('hidden');
+        DO.qid('help').classList.toggle('hidden');
         ev.target.classList.toggle('on');
     });
     DO.qid('config_button').on('click', function (ev) {
