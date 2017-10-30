@@ -78,7 +78,6 @@ function initHelp(html) {
         var item = array_cname[i];
         var html = '';
         html += '<tr style="color:' + item.color + '; background-color:' + item.body + ';background-image:linear-gradient(45deg,transparent 90%,' + item.body + ' 90%,' + item.body + '),linear-gradient(45deg,transparent 88%,' + item.highlight + ' 88%,' + item.highlight + '), linear-gradient(45deg,transparent 84%,' + item.head + ' 84%,' + item.head + ');"><th>';
-        //html+='<tr><th>';
         html += item.name;
         if (item.nick && item.nick !== item.name) {
             html += '(' + item.nick + ')';

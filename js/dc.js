@@ -192,7 +192,7 @@ var DC = (function () {
         sve.mod_dmg = sv.c.ss_dmg;
         sve.mod_crit = sv.c.cri_dmg * sv.c.ss_cri_dmg * (1 + getWeaponCriEDmg(sv.wep, sv.r, sv.c, elem));
         sve.eRate = getElementERate(sv.c.element, elem);
-        if (sve.eRate === 'epRate'||elem==='default') {
+        if (sve.eRate === 'epRate' || elem === 'default') {
             sve.mod_dmg *= sv.c.ss_elem_dmg;
             if (sv.lv > 85) {
                 sve.mod_dmg *= sv.c.ss_elem_dmg_90;
