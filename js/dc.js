@@ -199,21 +199,6 @@ var DC = (function () {
             }
             sve.mod_crit *= sv.c.ss_elem_cri_dmg;
         }
-        /*
-        if (sv.c.element.weak === elem) {
-            sve.eRate = 'enRate';
-        }
-        switch (elem) {
-            case sv.c.element.strong:
-                sve.eRate = 'epRate';
-            case 'default':
-                sve.mod_dmg *= sv.c.ss_elem_dmg;
-                if (sv.lv > 85) {
-                    sve.mod_dmg *= sv.c.ss_elem_dmg_90;
-                }
-                sve.mod_crit *= sv.c.ss_elem_cri_dmg;
-        }
-        */
     }
 
     function getElementERate(c_elem, boss_elem_id) {
