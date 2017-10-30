@@ -1,5 +1,6 @@
 html {
-  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
   width:100%;
   height:100%;
   overflow-x: hidden; overflow-y: auto; 
@@ -12,9 +13,16 @@ body {
   font-weight: bold;
   font-size: 3vw;
   color:#666;
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  align-items: stretch;
-  flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width:100%;
   height:100%;
   overflow-x: hidden; overflow-y: auto; 
@@ -56,12 +64,13 @@ p {
 }
 
 #main {
-  flex:1;
+  -webkit-box-flex:1;
+      -ms-flex:1;
+          flex:1;
   overflow-y: scroll;
   background-image:url("");
   background-position: center;
   background-repeat: no-repeat;
-  -moz-background-size: cover;
   background-size: cover;
 }
 #main::before{
@@ -79,19 +88,27 @@ p {
   background-color: rgba(255,255,255,0.3);
 }
 #main.line::before{
+  background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(transparent));
+  background-image: -webkit-linear-gradient(rgba(0,0,0,0.5),transparent);
+  background-image: -o-linear-gradient(rgba(0,0,0,0.5),transparent);
   background-image: linear-gradient(rgba(0,0,0,0.5),transparent);
   background-size: 3px;
 }
 #main.grid::before{
+  background-image: -webkit-radial-gradient(rgba(0,0,0,0.5) , transparent);
+  background-image: -o-radial-gradient(rgba(0,0,0,0.5) , transparent);
   background-image: radial-gradient(rgba(0,0,0,0.5) , transparent);
   background-size: 3px 3px;
 }
 #header {
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
   color:#666;
   background-color:#fff;
   z-index:2;
-  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
 }
 #control {
   padding: 0.25em 0 0 0;
@@ -104,13 +121,17 @@ p {
 }
 #footer {
   padding: 3px;
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  -webkit-justify-content: flex-end;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   background-color:#fff;
   font-size:50%;
   z-index:2;
-  box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.5);
 }
 
 @media only screen and (orientation:landscape) {
@@ -121,13 +142,19 @@ p {
     font-size: 1.2vw;
   }
   #main {
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    align-items: stretch;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
     overflow-y: hidden;
   }
   #control {
     padding: 3px 0 3px 0;
-    flex:1;
+    -webkit-box-flex:1;
+        -ms-flex:1;
+            flex:1;
     overflow-y: hidden;
     border-bottom: none;
     margin-right: -0.25em;
@@ -135,18 +162,24 @@ p {
   }
   #content {
     padding: 3px 0 3px 0;
-    flex:1;
+    -webkit-box-flex:1;
+        -ms-flex:1;
+            flex:1;
     overflow-y: scroll;
   }
 }
 
 #control div{
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
   margin: 0 0.25em;
   padding: 0.1em 0.25em;
   border-bottom: 1px solid #ccc;
   background-color:#f0f0f0;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 #control div.control_wrapper{
   padding: 0;
@@ -155,7 +188,9 @@ p {
   margin: 0;
 }
 #control div.control_wrapper div.filter{
-  flex:1;
+  -webkit-box-flex:1;
+      -ms-flex:1;
+          flex:1;
 }
 #control div.config_panel{
   background-color:#e0e0e0;
@@ -164,10 +199,14 @@ p {
   background-color:#e0e0e0;
 }
 #control div select#preset, #control div input#wallpaper{
-  flex:2;
+  -webkit-box-flex:2;
+      -ms-flex:2;
+          flex:2;
 }
 #control div select, #control div label, #control div input{
-  flex:1;
+  -webkit-box-flex:1;
+      -ms-flex:1;
+          flex:1;
 }
 #control #config_theme input {
   width: 3em;
@@ -203,7 +242,6 @@ i {
   padding: 0 1em;
   background-position: center;
   background-repeat: no-repeat;
-  -moz-background-size: auto 100%;
   background-size: auto 100%;
   width: 2em;
   height: 2em;
@@ -211,7 +249,6 @@ i {
 button{
   background-position: center;
   background-repeat: no-repeat;
-  -moz-background-size: auto 80%;
   background-size: auto 80% ;
   background-color: #fff;
   width: 2.5em;
@@ -221,7 +258,6 @@ button{
 .button {
   background-position: center;
   background-repeat: no-repeat;
-  -moz-background-size: auto 80%;
   background-size: auto 80% ;
   background-color: #888;
   width: 2.5em;
@@ -232,7 +268,8 @@ button:active {
   background-color: #ccc;
 }
 button:hover {
-  box-shadow: 0px 0px 3px 0px rgba(255, 192, 64, 0.5);
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(255, 192, 64, 0.5);
+          box-shadow: 0px 0px 3px 0px rgba(255, 192, 64, 0.5);
 }
 button.on {
   background-color: #888;
@@ -356,6 +393,8 @@ input[type="checkbox"]:checked+label {
   outline:0;
 }
 #content div{
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
   padding: 0.1em 0.25em;
 }
@@ -363,11 +402,17 @@ input[type="checkbox"]:checked+label {
 #content .item {
   margin:0.25em 0;
   padding:0;
-  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.5);
 }
 #content div div.info {
-  flex-direction: column;
-  flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   margin: 0;
   padding: 0;
   color:rgba(0, 0, 0, 0.5);
@@ -388,11 +433,12 @@ input[type="checkbox"]:checked+label {
 #content i{
   margin: 0.1em 0;
   padding: 0;
-  -moz-background-size: auto 90%;
   background-size: auto 90%;
 }
 #content .name{
-  flex:1;
+  -webkit-box-flex:1;
+      -ms-flex:1;
+          flex:1;
   font-size:150%;
   white-space: nowrap;
 }
@@ -400,7 +446,10 @@ input[type="checkbox"]:checked+label {
   font-size:150%;
 }
 #content .detail {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: 50%;
   background: #fff;
   border-top: 1px solid #ccc;
@@ -455,8 +504,13 @@ twitterwidget {
 }
 
 #content div.help {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: 75%;
   padding: 0.1em 0;
   margin: 0 0.333em;
@@ -492,6 +546,8 @@ twitterwidget {
   border-bottom: none;  
 }
 #content .help .prm {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 0 1em;
   background-color: #eee;
@@ -528,7 +584,10 @@ a {
 }
 
 #content div#rankingevents,#content div#rankingevents_en {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 0;
   padding: 0;
   background-color: #eee;
