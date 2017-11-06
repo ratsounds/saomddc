@@ -396,9 +396,11 @@ function calcRanking() {
             ranking.push(dcv);
             dcv.combo_speed_rate = (1 - dcv.sv.c.combo_speed * Math.floor(boss.combo / 10));
             dcv.duration = dcv.sv.c.s3_duration * dcv.combo_speed_rate;
+            dcv.c2duration = dcv.sv.c.s3_c_duration ? dcv.sv.c.s3_c_duration : dcv.sv.c.s3_duration * dcv.combo_speed_rate;
             dcv.duration_50 = dcv.sv.c.s3_duration * (1 - dcv.sv.c.combo_speed * Math.floor(50 / 10));
             dcv.dps = Math.floor(dcv.damage / dcv.duration);
             dcv.dpm = Math.floor(getDPM(dcv));
+            dcv.c2dps = Math.floor(dcv.damage / dcv.duration + dcv.damage / dcv.c2duration);
             dcv.duration = Math.floor(dcv.duration * 100) / 100;
             dcv.duration_50 = Math.floor(dcv.duration_50 * 100) / 100;
             dcv.capacity = Math.floor(dcv.damage * dcv.sv.mp / dcv.sv.cost);
@@ -429,7 +431,7 @@ function getDPM(dcv) {
             count++;
         } else { // normal set
             time += ns_duration;
-            mp += dcv.sv.c.type.ns_hits*dcv.mpr;
+            mp += dcv.sv.c.type.ns_hits * dcv.mpr;
         }
     }
     return dcv.damage * (count + ((time - 60) / dcv.duration));
