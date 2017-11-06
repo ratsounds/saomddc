@@ -355,7 +355,7 @@ function putBoss() {
 function setBoss(boss) {
     //console.log('setBoss',boss);
     DO.qid('ena').checked = true;
-    DO.qid('sna').checked = true;    
+    DO.qid('sna').checked = true;
     DO.qa('.boss input,.boss select').forEach(function (item) {
         if (item.type === 'radio') {
             if (item.name === 'element' || item.name === 'sub') {
@@ -387,11 +387,18 @@ function calcRanking() {
         var clvr = lvr[i];
         for (var j in cs) {
             var c = cs[j];
-            var dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
+            var dcv;
+            if (clvr.r > 0) { // weapon & armor, accessory
+                dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
+            } else { // no weapon & armor, accessory
+                dcv = DC.calcDamage(c, clvr.lv, 4, undefined, clvr.r, undefined, undefined, boss);
+            }
             ranking.push(dcv);
-            dcv.duration = dcv.sv.c.s3_duration * (1 - dcv.sv.c.combo_speed * Math.floor(boss.combo / 10));
+            dcv.combo_speed_rate = (1 - dcv.sv.c.combo_speed * Math.floor(boss.combo / 10));
+            dcv.duration = dcv.sv.c.s3_duration * dcv.combo_speed_rate;
             dcv.duration_50 = dcv.sv.c.s3_duration * (1 - dcv.sv.c.combo_speed * Math.floor(50 / 10));
             dcv.dps = Math.floor(dcv.damage / dcv.duration);
+            dcv.dpm = Math.floor(getDPM(dcv));
             dcv.duration = Math.floor(dcv.duration * 100) / 100;
             dcv.duration_50 = Math.floor(dcv.duration_50 * 100) / 100;
             dcv.capacity = Math.floor(dcv.damage * dcv.sv.mp / dcv.sv.cost);
@@ -409,6 +416,23 @@ function calcRanking() {
             break;
     }
     //console.log('ranking',ranking);
+}
+function getDPM(dcv) {
+    var time = 0;
+    var mp = dcv.sv.mp;
+    var count = 0;
+    var ns_duration = dcv.sv.c.type.ns_duration * dcv.combo_speed_rate * dcv.sv.c.s3_speed ? dcv.sv.c.s3_speed : 1;
+    while (time <= 60) {
+        if (mp >= dcv.sv.cost) { // s3
+            time += dcv.sv.c.s3_duration;
+            mp -= dcv.sv.cost;
+            count++;
+        } else { // normal set
+            time += ns_duration;
+            mp += dcv.sv.c.type.ns_hits*dcv.mpr;
+        }
+    }
+    return dcv.damage * (count + ((time - 60) / dcv.duration));
 }
 
 function showRanking() {
@@ -498,6 +522,9 @@ function getCharDetail(id) {
     html += getKVTableRow('Skill Duration', dcv.duration, true);
     if (c.combo_speed > 0) {
         html += getKVTableRow('Skill Duration (50Hit)', dcv.duration_50, true);
+    }
+    if (c.s3_c_duration > 0) {
+        html += getKVTableRow('Combination (sec)', c.s3_c_duration, true);
     }
     html += getKVTableRow('Skill Rate', c.s3_rate, true);
     html += getKVTableRow('Slash/Pierce/Blunt/Magic', formatFloat(c.dtr_slash) + '/' + formatFloat(c.dtr_pierce) + '/' + formatFloat(c.dtr_blunt) + '/' + formatFloat(c.dtr_magic));
