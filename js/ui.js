@@ -403,6 +403,7 @@ function calcRanking() {
             dcv.c2dps = Math.floor(dcv.damage / dcv.duration + dcv.damage / dcv.c2duration);
             dcv.duration = Math.floor(dcv.duration * 100) / 100;
             dcv.duration_50 = Math.floor(dcv.duration_50 * 100) / 100;
+            dcv.c2duration = Math.floor((dcv.c2duration + dcv.duration) * 100) / 100;
             dcv.capacity = Math.floor(dcv.damage * dcv.sv.mp / dcv.sv.cost);
             dcv.damage = Math.floor(dcv.damage);
             dcv.mpr = Math.floor(dcv.sv.mpr);
@@ -411,7 +412,8 @@ function calcRanking() {
     var sortKey = elemSort.value;
     switch (sortKey) {
         case 'duration':
-            sortObjectArray(ranking, sortKey, true);
+        case 'c2duration':
+        sortObjectArray(ranking, sortKey, true);
             break;
         default:
             sortObjectArray(ranking, sortKey);
