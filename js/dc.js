@@ -105,10 +105,10 @@ var DC = (function () {
         }
 
         var emod = 1;
-        if (sve.eRate) { emod *= boss[sve.eRate]; }
+        if (sve.eRate&&c.no_elem_mod!==1) { emod *= boss[sve.eRate]; }
         if (boss.sub) {
             var sub_eRate = getElementERate(sv.c.element, boss.sub.id);
-            if (sub_eRate) { emod *= boss[sub_eRate]; }
+            if (sub_eRate&&c.no_elem_mod!==1) { emod *= boss[sub_eRate]; }
         }
 
         var dtmod = 1;
