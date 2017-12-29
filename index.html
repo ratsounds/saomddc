@@ -94,7 +94,7 @@
                 </select>
                 <i class="trophy"></i>
                 <select name="trophy">
-                    <option value="1.00" selected>1.00</option>
+                    <option value="1" selected>1.00</option>
                     <option value="1.01">1.01</option>
                     <option value="1.03">1.03</option>
                 </select>
@@ -117,6 +117,15 @@
                 <label for="ewind" class="wind button "></label>
                 <input id="eearth" type="radio" name="element" value="earth" data-sub="searth">
                 <label for="eearth" class="earth button "></label>
+                <i class="elem_bs"></i>
+                <input id="elem_bs_on" type="radio" name="elem_bs" value="1">
+                <label for="elem_bs_on" class="toggle left">
+                    <span>ON</span>
+                </label>
+                <input id="elem_bs_off" type="radio" name="elem_bs" value="0" checked="true">
+                <label for="elem_bs_off" class="toggle right">
+                    <span>OFF</span>
+                </label>
             </div>
             <div class="boss">
                 <i class="subelement"></i>
@@ -136,6 +145,15 @@
                 <label for="swind" class="wind button "></label>
                 <input id="searth" type="radio" name="sub" value="earth" class="sub">
                 <label for="searth" class="earth button "></label>
+                <i class="elem_bs"></i>
+                <input id="subelem_bs_on" type="radio" name="subelem_bs" value="1">
+                <label for="subelem_bs_on" class="toggle left">
+                    <span>ON</span>
+                </label>
+                <input id="subelem_bs_off" type="radio" name="subelem_bs" value="0" checked="true">
+                <label for="subelem_bs_off" class="toggle right">
+                    <span>OFF</span>
+                </label>
             </div>
             <div class="boss">
                 <i class="limit"></i>
@@ -147,94 +165,116 @@
                 </select>
                 <i class="weak"></i>
                 <select name="epRate">
-                    <option value="1">1.00</option>
-                    <option value="1.05">1.05</option>
-                    <option value="1.25">1.25</option>
-                    <option value="1.5" selected>1.50</option>
-                    <option value="2">2.00</option>
+                    <option value="0">0.00</option>
+                    <option value="0.05">0.05</option>
+                    <option value="0.25">0.25</option>
+                    <option value="0.5" selected>0.50</option>
                     <option value="0.75">0.75</option>
-                    <option value="0.5">0.50</option>
+                    <option value="1">1.00</option>
                 </select>
                 <i class="resist"></i>
                 <select name="enRate">
-                    <option value="1">1.00</option>
-                    <option value="1.25">1.25</option>
-                    <option value="1.5">1.50</option>
-                    <option value="0.75" selected>0.75</option>
-                    <option value="0.5">0.50</option>
+                    <option value="0">0.00</option>
+                    <option value="-0.5">-0.50</option>
+                    <option value="-0.25">-0.25</option>
+                    <option value="-0.50">-0.50</option>
+                    <option value="-0.75">-0.75</option>
+                    <option value="-1">-1.00</option>
                 </select>
                 <i class="rweak"></i>
                 <select name="repRate">
-                    <option value="1" selected>1.00</option>
-                    <option value="1.25">1.25</option>
-                    <option value="1.5">1.50</option>
-                    <option value="2">2.00</option>
-                    <option value="0.75">0.75</option>
+                    <option value="0" selected>0.00</option>
+                    <option value="0.05">0.05</option>
+                    <option value="0.25">0.25</option>
                     <option value="0.5">0.50</option>
+                    <option value="0.75">0.75</option>
+                    <option value="1">1.00</option>
                 </select>
                 <i class="racc"></i>
-                <input id="racc_on" type="radio" name="racc" value="1.1">
+                <input id="racc_on" type="radio" name="racc" value="0.1">
                 <label for="racc_on" class="toggle left">
                     <span>ON</span>
                 </label>
-                <input id="racc_off" type="radio" name="racc" value="1" checked="true">
+                <input id="racc_off" type="radio" name="racc" value="0" checked="true">
                 <label for="racc_off" class="toggle right">
                     <span>OFF</span>
                 </label>
                 <i class="etcmod"></i>
                 <select name="etcMod">
-                    <option value="1">1.00</option>
-                    <option value="1.1">1.10</option>
-                    <option value="1.25">1.25</option>
-                    <option value="1.5">1.50</option>
-                    <option value="2">2.00</option>
-                    <option value="0.75">0.75</option>
-                    <option value="0.5">0.50</option>
-                    <option value="0.33">0.33</option>
+                    <option value="0" selected>0.00</option>
+                    <option value="0.05">0.05</option>
                     <option value="0.25">0.25</option>
+                    <option value="0.5">0.50</option>
+                    <option value="0.75">0.75</option>
+                    <option value="1">1.00</option>
+                    <option value="-0.5">-0.50</option>
+                    <option value="-0.25">-0.25</option>
+                    <option value="-0.50">-0.50</option>
+                    <option value="-0.75">-0.75</option>
+                    <option value="-1">-1.00</option>
                 </select>
             </div>
             <div class="boss">
                 <i class="dual"></i>
                 <i class="sword"></i>
                 <select name="slash">
-                    <option value="1">1.00</option>
-                    <option value="1.25">1.25</option>
-                    <option value="1.5">1.50</option>
-                    <option value="2">2.00</option>
-                    <option value="0.75">0.75</option>
+                    <option value="0" selected>0.00</option>
+                    <option value="0.05">0.05</option>
+                    <option value="0.25">0.25</option>
                     <option value="0.5">0.50</option>
+                    <option value="0.75">0.75</option>
+                    <option value="1">1.00</option>
+                    <option value="-0.5">-0.50</option>
+                    <option value="-0.25">-0.25</option>
+                    <option value="-0.50">-0.50</option>
+                    <option value="-0.75">-0.75</option>
+                    <option value="-1">-1.00</option>
                 </select>
                 <i class="rapier"></i>
                 <i class="dagger"></i>
                 <i class="bow"></i>
                 <i class="lance"></i>
                 <select name="pierce">
-                    <option value="1">1.00</option>
-                    <option value="1.25">1.25</option>
-                    <option value="1.5">1.50</option>
-                    <option value="2">2.00</option>
-                    <option value="0.75">0.75</option>
+                    <option value="0" selected>0.00</option>
+                    <option value="0.05">0.05</option>
+                    <option value="0.25">0.25</option>
                     <option value="0.5">0.50</option>
+                    <option value="0.75">0.75</option>
+                    <option value="1">1.00</option>
+                    <option value="-0.5">-0.50</option>
+                    <option value="-0.25">-0.25</option>
+                    <option value="-0.50">-0.50</option>
+                    <option value="-0.75">-0.75</option>
+                    <option value="-1">-1.00</option>
                 </select>
                 <i class="mace"></i>
                 <i class="gun"></i>
                 <select name="blunt">
-                    <option value="1">1.00</option>
-                    <option value="1.25">1.25</option>
-                    <option value="1.5">1.50</option>
-                    <option value="2">2.00</option>
-                    <option value="0.75">0.75</option>
+                    <option value="0" selected>0.00</option>
+                    <option value="0.05">0.05</option>
+                    <option value="0.25">0.25</option>
                     <option value="0.5">0.50</option>
+                    <option value="0.75">0.75</option>
+                    <option value="1">1.00</option>
+                    <option value="-0.5">-0.50</option>
+                    <option value="-0.25">-0.25</option>
+                    <option value="-0.50">-0.50</option>
+                    <option value="-0.75">-0.75</option>
+                    <option value="-1">-1.00</option>
                 </select>
                 <i class="staff"></i>
                 <select name="magic">
-                    <option value="1">1.00</option>
-                    <option value="1.25">1.25</option>
-                    <option value="1.5">1.50</option>
-                    <option value="2">2.00</option>
-                    <option value="0.75">0.75</option>
+                    <option value="0" selected>0.00</option>
+                    <option value="0.05">0.05</option>
+                    <option value="0.25">0.25</option>
                     <option value="0.5">0.50</option>
+                    <option value="0.75">0.75</option>
+                    <option value="1">1.00</option>
+                    <option value="-0.5">-0.50</option>
+                    <option value="-0.25">-0.25</option>
+                    <option value="-0.50">-0.50</option>
+                    <option value="-0.75">-0.75</option>
+                    <option value="-1">-1.00</option>
                 </select>
             </div>
             <div class="boss hidden">

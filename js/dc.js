@@ -76,8 +76,12 @@ var DC = (function () {
     function getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss) {
         var sv = getSV(c, lv, lb, wep, r, amr, acc);
         var sve = sv['default'];
+        var sve_sub = sv['default'];
         if (boss.element) {
             sve = sv[boss.element.id];
+        }
+        if (boss.sub) {
+            sve_sub = sv[boss.sub.id];
         }
 
         var exp_obj = { c: c, hp: 100, vs: boss.element ? boss.element.id : undefined, combo: boss.combo, switched: boss.switched };
@@ -105,23 +109,33 @@ var DC = (function () {
         }
 
         var emod = 1;
-        if (sve.eRate&&c.no_elem_mod!==1) { emod *= boss[sve.eRate]; }
+        var crit = sve.mod_crit;
+        if (sve.eRate && c.no_elem_mod !== 1) {
+            emod += boss[sve.eRate];
+            emod += sve.mod_elem_dmg * boss.elem_bs
+            crit += sve.mod_elem_crit * boss.elem_bs;
+        }
         if (boss.sub) {
             var sub_eRate = getElementERate(sv.c.element, boss.sub.id);
-            if (sub_eRate&&c.no_elem_mod!==1) { emod *= boss[sub_eRate]; }
+            if (sub_eRate && c.no_elem_mod !== 1) {
+                emod += boss[sub_eRate];
+                emod += sve_sub.mod_elem_dmg * boss.subelem_bs;
+                crit += sve.mod_elem_crit * boss.elem_bs;
+            }
         }
 
-        var dtmod = 1;
-        for (var t in db.dtype) { dtmod += (boss[t] - 1) * sv.dtmod[t]; }
+        var dtmod = 0;
+        for (var t in db.dtype) { dtmod += boss[t] * sv.dtmod[t]; }
 
-        var cmod = Expression.eval(boss.condition.expression, exp_obj) ? boss.condition.values.mod : 1;
+        var cmod = Expression.eval(boss.condition.expression, exp_obj) ? boss.condition.values.mod : 0;
 
-        var combo = 1 + Math.floor(boss.combo / 10) * 0.05;
-        if (boss.combo > 20) { combo *= sv.c.combo_damage_20; }
-        if (boss.combo > 30) { combo *= sv.c.combo_damage_30; }
-        var mod = Math.min(combo * sve.mod_dmg * emod * dtmod * boss.repRate * boss.racc * boss.etcMod * cmod, boss.limit);
+        var combo = Math.floor(boss.combo / 10) * 0.05;
+        if (boss.combo > 20) { combo += sv.c.combo_damage_20; }
+        if (boss.combo > 30) { combo += sv.c.combo_damage_30; }
+
+        var mod = Math.min(combo + sve.mod_dmg + emod + dtmod + boss.repRate + boss.racc + boss.etcMod + cmod, boss.limit);
         if (boss.crit > 0) {
-            mod *= sve.mod_crit;
+            mod *= crit;
         }
         var dcv = {
             atk: atk,
@@ -190,14 +204,16 @@ var DC = (function () {
         sve.bs_atk_eq = getWeaponBSAtk(sv.wep, sv.r) + getEqValue(sv.amr, key_bs_atk) + getEqValue(sv.acc, key_bs_atk);
         sve.bs_atk = sv.c.bs_atk + sve.bs_atk_eq;
         sve.mod_dmg = sv.c.ss_dmg;
-        sve.mod_crit = sv.c.cri_dmg * sv.c.ss_cri_dmg * (1 + getWeaponCriEDmg(sv.wep, sv.r, sv.c, elem));
+        sve.mod_crit = sv.c.cri_dmg + sv.c.ss_cri_dmg + getWeaponCriEDmg(sv.wep, sv.r, sv.c, elem);
         sve.eRate = getElementERate(sv.c.element, elem);
+        sve.mod_elem_dmg = 0;
+        sve.mod_elem_crit = 0;
         if (sve.eRate === 'epRate' || elem === 'default') {
-            sve.mod_dmg *= sv.c.ss_elem_dmg;
+            sve.mod_elem_dmg += sv.c.ss_elem_dmg;
             if (sv.lv > 85) {
-                sve.mod_dmg *= sv.c.ss_elem_dmg_90;
+                sve.mod_elem_dmg += sv.c.ss_elem_dmg_90;
             }
-            sve.mod_crit *= sv.c.ss_elem_cri_dmg;
+            sve.mod_elem_crit += sv.c.ss_elem_cri_dmg;
         }
     }
 
