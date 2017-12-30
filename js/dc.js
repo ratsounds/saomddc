@@ -123,6 +123,11 @@ var DC = (function () {
                 crit += sve.mod_elem_crit * boss.elem_bs;
             }
         }
+        for (var e in db.element) {
+            if(e===sv.c.element.id){
+                emod += boss[e]; 
+            }
+        }
 
         var dtmod = 0;
         for (var t in db.dtype) { dtmod += boss[t] * sv.dtmod[t]; }
