@@ -7254,8 +7254,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "bonds_rapier",
-            "eq_combo_amr": "bonds_rapier",
-            "eq_combo_acc": "bonds_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_none4",
             "meta": "【閃光】アスナ asuna [lightning flash] 初期アスナ sao asuna ★5 *5 アスナ asuna f 女性 @female スタートダッシュ starting dash ガチャ gacha スカウト scout 無 none sao ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination"
         },
         "sao_kirito": {
@@ -7322,8 +7322,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "bonds_dual",
-            "eq_combo_amr": "bonds_dual",
-            "eq_combo_acc": "bonds_dual",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_none4",
             "meta": "【黒の剣士】キリト kirito [black swordsman] 初期キリト sao kirito ★5 *5 キリト kirito m 男性 @male スタートダッシュ starting dash ガチャ gacha スカウト scout 無 none sao ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination"
         },
         "sao_klein": {
@@ -7390,8 +7390,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "fate_sword",
-            "eq_combo_amr": "fate_sword",
-            "eq_combo_acc": "fate_sword",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_none4",
             "meta": "【風林火山】クライン klein [furinkazan] 初期クライン sao klein ★5 *5 クライン klein m 男性 @male スタートダッシュ starting dash ガチャ gacha スカウト scout 無 none sao ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination"
         },
         "sao_sinon": {
@@ -7458,8 +7458,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "pb_gun",
-            "eq_combo_amr": "pb_gun",
-            "eq_combo_acc": "pb_gun",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_none4",
             "meta": "【冥界の女神】シノン sinon [goddess of death] 初期シノン sao sinon ★5 *5 シノン sinon f 女性 @female スタートダッシュ starting dash ガチャ gacha スカウト scout 無 none ggo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination"
         },
         "sao_silica": {
@@ -7526,8 +7526,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "friends_dagger",
-            "eq_combo_amr": "friends_dagger",
-            "eq_combo_acc": "friends_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【竜使い】シリカ silica [dragon tamer] 初期シリカ sao silica ★5 *5 シリカ silica f 女性 @female スタートダッシュ starting dash ガチャ gacha スカウト scout 無 none sao ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up super armor スーパーアーマー sa コンボ持続 combo duration up 連携 combination"
         },
         "sao_strea": {
@@ -7594,8 +7594,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "fate_sword",
-            "eq_combo_amr": "fate_sword",
-            "eq_combo_acc": "fate_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【mhcp-002】ストレア strea [mhcp-002] 初期ストレア sao strea ★5 *5 ストレア strea f 女性 @female スタートダッシュ starting dash ガチャ gacha スカウト scout 無 none sao ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination"
         },
         "sao_seven": {
@@ -7662,8 +7662,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_staff",
-            "eq_combo_amr": "x17p1_staff",
-            "eq_combo_acc": "x17p1_staff",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【光の科学者】セブン seven [star scientist] 初期セブン sao seven ★5 *5 セブン seven f 女性 @female スタートダッシュ starting dash ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 魔 magic 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination"
         },
         "sao_agil": {
@@ -7730,8 +7730,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "os3_mace",
-            "eq_combo_amr": "os3_mace",
-            "eq_combo_acc": "os3_mace",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_none4",
             "meta": "【剛堅の戦斧】エギル agil [brawny axeman] 初期ハゲ sao agil ★5 *5 ハゲ agil m 男性 @male スタートダッシュ starting dash ガチャ gacha スカウト scout 無 none sao ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination"
         },
         "sao_philia": {
@@ -7798,8 +7798,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "friends_dagger",
-            "eq_combo_amr": "friends_dagger",
-            "eq_combo_acc": "friends_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【トレジャーハンター】フィリア philia [treasure hunter] 初期フィリア sao philia ★5 *5 フィリア philia f 女性 @female スタートダッシュ starting dash ガチャ gacha スカウト scout 無 none sao ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination"
         },
         "sao_yuuki": {
@@ -7866,8 +7866,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "hatsu_sword",
-            "eq_combo_amr": "hatsu_sword",
-            "eq_combo_acc": "hatsu_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【絶剣】ユウキ yuuki [zekken] 初期ユウキ sao yuuki ★5 *5 ユウキ yuuki f 女性 @female スタートダッシュ starting dash ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination"
         },
         "sao_leafa": {
@@ -7934,8 +7934,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_sword",
-            "eq_combo_amr": "sports_sword",
-            "eq_combo_acc": "sports_sword",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【疾風の魔法剣士】リーファ leafa [storm mage] 初期リーファ sao leafa ★5 *5 リーファ leafa f 女性 @female スタートダッシュ starting dash ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up コンボ持続 combo duration up 連携 combination"
         },
         "sao_lisbeth": {
@@ -8002,8 +8002,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "os3_mace",
-            "eq_combo_amr": "os3_mace",
-            "eq_combo_acc": "os3_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【マスターメイサー】リズベット lisbeth [mace master] 初期リズ sao lisbeth ★5 *5 リズ lisbeth f 女性 @female スタートダッシュ starting dash ガチャ gacha スカウト scout 無 none sao ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination"
         },
         "sao_rain": {
@@ -8070,8 +8070,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "hatsu_sword",
-            "eq_combo_amr": "hatsu_sword",
-            "eq_combo_acc": "hatsu_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【多刀流】レイン rain [multi-wielder] 初期レイン sao rain ★5 *5 レイン rain f 女性 @female スタートダッシュ starting dash ガチャ gacha スカウト scout 土 earth alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination"
         },
         "alo_asuna": {
@@ -8138,8 +8138,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "x17p1_staff",
-            "eq_combo_amr": "x17p1_staff",
-            "eq_combo_acc": "x17p1_staff",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_water6",
             "meta": "【癒やしの水妖精】アスナ asuna [undine healer] 旧水アスナ alo asuna ★4 *4 アスナ asuna f 女性 @female 生まれ変わったalfheim alfheim reborn ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 魔 magic 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "alo_kirito": {
@@ -8206,8 +8206,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "snow_dual",
-            "eq_combo_amr": "snow_dual",
-            "eq_combo_acc": "snow_dual",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_water6",
             "meta": "【スキル・コネクト】キリト kirito [skill connect] 旧水キリト alo kirito ★4 *4 キリト kirito m 男性 @male 生まれ変わったalfheim alfheim reborn ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "alo_sinon": {
@@ -8274,8 +8274,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "hatsu_bow",
-            "eq_combo_amr": "hatsu_bow",
-            "eq_combo_acc": "hatsu_bow",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_water6",
             "meta": "【冷徹な狙撃手】シノン sinon [cool-headed sniper] 旧水シノン alo sinon ★4 *4 シノン sinon f 女性 @female 生まれ変わったalfheim alfheim reborn ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up"
         },
         "alo_silica": {
@@ -8342,8 +8342,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "jr_dagger",
-            "eq_combo_amr": "jr_dagger",
-            "eq_combo_acc": "jr_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_water6",
             "meta": "【竜使いの妖精】シリカ silica [fairy dragon tamer] 旧水シリカ alo silica ★4 *4 シリカ silica f 女性 @female 生まれ変わったalfheim alfheim reborn ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "alo_lisbeth": {
@@ -8410,8 +8410,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p2_mace",
-            "eq_combo_amr": "x17p2_mace",
-            "eq_combo_acc": "x17p2_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【妖精の鍛冶職人】リズベット lisbeth [fairy blacksmith] 旧水リズ alo lisbeth ★4 *4 リズ lisbeth f 女性 @female 生まれ変わったalfheim alfheim reborn ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "wind_asuna": {
@@ -8478,8 +8478,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_rapier",
-            "eq_combo_amr": "sports_rapier",
-            "eq_combo_acc": "sports_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【疾風の踊り子】アスナ asuna [gale dancer] 風アスナ wind asuna ★4 *4 アスナ asuna f 女性 @female 爽風がつなぐ絆 wind ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 魔 magic 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up"
         },
         "wind_silica": {
@@ -8546,8 +8546,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_dagger",
-            "eq_combo_amr": "sports_dagger",
-            "eq_combo_acc": "sports_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【そよ風の猫妖精】シリカ silica [cait sith cyclone] 風シリカ wind silica ★4 *4 シリカ silica f 女性 @female 爽風がつなぐ絆 wind ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 魔 magic 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "wind_yuuki": {
@@ -8614,8 +8614,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_sword",
-            "eq_combo_amr": "sports_sword",
-            "eq_combo_acc": "sports_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【絶風】ユウキ yuuki [zeppu] 風ユウキ wind yuuki ★4 *4 ユウキ yuuki f 女性 @female 爽風がつなぐ絆 wind ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up"
         },
         "wind_leafa": {
@@ -8682,8 +8682,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "maid_staff",
-            "eq_combo_amr": "maid_staff",
-            "eq_combo_acc": "maid_staff",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【爽風の巫女】リーファ leafa [priestress of the winds] 風リーファ wind leafa ★4 *4 リーファ leafa f 女性 @female 爽風がつなぐ絆 wind ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 魔 magic コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up"
         },
         "wind_lisbeth": {
@@ -8750,8 +8750,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "hatsu_mace",
-            "eq_combo_amr": "hatsu_mace",
-            "eq_combo_acc": "hatsu_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【豪風を呼びしもの】リズベット lisbeth [stormbringer] 風リズ wind lisbeth ★4 *4 リズ lisbeth f 女性 @female 爽風がつなぐ絆 wind ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt 魔 magic 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "hw_asuna": {
@@ -8818,8 +8818,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "princess_mace1",
-            "eq_combo_amr": "princess_mace1",
-            "eq_combo_acc": "princess_mace1",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【闇夜の小悪魔】アスナ asuna [gremlins at midnight] ハロアスナ hw asuna ★4 *4 アスナ asuna f 女性 @female vr世界のハロウィンパーティ halloween ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 魔 magic コンボダメージアップ combo damage up コンボダメージアップ combo damage up 吸収 回復 absorb absorption heal"
         },
         "hw_kirito": {
@@ -8886,8 +8886,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "pns_dual1",
-            "eq_combo_amr": "pns_dual1",
-            "eq_combo_acc": "pns_dual1",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【魅了の血牙】キリト kirito [bloodbond] ハロキリト hw kirito ★4 *4 キリト kirito m 男性 @male vr世界のハロウィンパーティ halloween ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 吸収 回復 absorb absorption heal"
         },
         "hw_sinon": {
@@ -8954,8 +8954,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "hatsu_bow",
-            "eq_combo_amr": "hatsu_bow",
-            "eq_combo_acc": "hatsu_bow",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【小悪魔の一撃】シノン sinon [gremlin attack] ハロシノン hw sinon ★4 *4 シノン sinon f 女性 @female vr世界のハロウィンパーティ halloween ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 吸収 回復 absorb absorption heal"
         },
         "hw_silica": {
@@ -9022,8 +9022,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "hhn_dagger",
-            "eq_combo_amr": "hhn_dagger",
-            "eq_combo_acc": "hhn_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【古城の幼魔女】シリカ silica [young witch of the old castle] ハロシリカ hw silica ★4 *4 シリカ silica f 女性 @female vr世界のハロウィンパーティ halloween ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 吸収 回復 absorb absorption heal"
         },
         "hw_yuuki": {
@@ -9090,8 +9090,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "ninja_rapier1",
-            "eq_combo_amr": "ninja_rapier1",
-            "eq_combo_acc": "ninja_rapier1",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【トリック・オア・トリート】ユウキ yuuki [trick or treat] ハロユウキ hw yuuki ★4 *4 ユウキ yuuki f 女性 @female vr世界のハロウィンパーティ halloween ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 吸収 回復 absorb absorption heal"
         },
         "hw_lisbeth": {
@@ -9158,8 +9158,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "princess_mace1",
-            "eq_combo_amr": "princess_mace1",
-            "eq_combo_acc": "princess_mace1",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【月夜の吸血妃】リズベット lisbeth [vampire empress] ハロリズ hw lisbeth ★4 *4 リズ lisbeth f 女性 @female vr世界のハロウィンパーティ halloween ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up 吸収 回復 absorb absorption heal"
         },
         "earth_silica": {
@@ -9226,8 +9226,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "yukata_dagger",
-            "eq_combo_amr": "yukata_dagger",
-            "eq_combo_acc": "yukata_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【花園に咲く笑顔】シリカ silica [beautiful blossom] 土シリカ earth silica ★4 *4 シリカ silica f 女性 @female 妖精界の豊穣の祈り earth ガチャ gacha スカウト scout 土 earth alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "earth_yuuki": {
@@ -9294,8 +9294,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "hatsu_sword",
-            "eq_combo_amr": "hatsu_sword",
-            "eq_combo_acc": "hatsu_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【神樹の恵み】ユウキ yuuki [blessing of eden] 土ユウキ earth yuuki ★4 *4 ユウキ yuuki f 女性 @female 妖精界の豊穣の祈り earth ガチャ gacha スカウト scout 土 earth alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "earth_leafa": {
@@ -9362,8 +9362,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_staff",
-            "eq_combo_amr": "x17p1_staff",
-            "eq_combo_acc": "x17p1_staff",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【神樹を守りしもの】リーファ leafa [protector of eden] 土リーファ earth leafa ★4 *4 リーファ leafa f 女性 @female 妖精界の豊穣の祈り earth ガチャ gacha スカウト scout 土 earth alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 魔 magic 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 無敵 invincible"
         },
         "earth_lisbeth": {
@@ -9430,8 +9430,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "hatsu_mace",
-            "eq_combo_amr": "hatsu_mace",
-            "eq_combo_acc": "hatsu_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【豊穣の祭司】リズベット lisbeth [harvest priestress] 土リズ earth lisbeth ★4 *4 リズ lisbeth f 女性 @female 妖精界の豊穣の祈り earth ガチャ gacha スカウト scout 土 earth alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "fire_asuna": {
@@ -9498,8 +9498,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "ps_staff",
-            "eq_combo_amr": "ps_staff",
-            "eq_combo_acc": "ps_staff",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【神炎術士】アスナ asuna [mage of the gods] 火アスナ fire asuna ★4 *4 アスナ asuna f 女性 @female 神炎に燃える想い fire ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 魔 magic 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "fire_klein": {
@@ -9566,8 +9566,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "trump_sword",
-            "eq_combo_amr": "trump_sword",
-            "eq_combo_acc": "trump_sword",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【神炎の剣客】クライン klein [swordsman of the gods] 火クライン fire klein ★4 *4 クライン klein m 男性 @male 神炎に燃える想い fire ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "fire_sinon": {
@@ -9634,8 +9634,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "fire_gun1",
-            "eq_combo_amr": "fire_gun1",
-            "eq_combo_acc": "fire_gun1",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【神炎銃士】シノン sinon [gunner of the gods] 火シノン fire sinon ★4 *4 シノン sinon f 女性 @female 神炎に燃える想い fire ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "fire_strea": {
@@ -9702,8 +9702,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "hatsu_mace",
-            "eq_combo_amr": "hatsu_mace",
-            "eq_combo_acc": "hatsu_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【神炎騎士】ストレア strea [knight of the gods] 火ストレア fire strea ★4 *4 ストレア strea f 女性 @female 神炎に燃える想い fire ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "xmas_asuna": {
@@ -9770,8 +9770,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_rapier",
-            "eq_combo_amr": "x17p1_rapier",
-            "eq_combo_acc": "x17p1_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【聖夜の閃光】アスナ asuna [silent night's light] x16アスナ x16 asuna ★4 *4 アスナ asuna f 女性 @female 鈴鳴らす聖夜の贈り物 christmas ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up 自己回復 self heal"
         },
         "xmas_kirito": {
@@ -9838,8 +9838,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "xmas_dual",
-            "eq_combo_amr": "xmas_dual",
-            "eq_combo_acc": "xmas_dual",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【ファンタスティックギフト】キリト kirito [fantastic gift] x16キリト x16 kirito ★4 *4 キリト kirito m 男性 @male 鈴鳴らす聖夜の贈り物 christmas ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up 自己回復 self heal"
         },
         "xmas_sinon": {
@@ -9906,8 +9906,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "xmas_gun",
-            "eq_combo_amr": "xmas_gun",
-            "eq_combo_acc": "xmas_gun",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【聖なる夜の女神】シノン sinon [silent night goddess] x16シノン x16 sinon ★4 *4 シノン sinon f 女性 @female 鈴鳴らす聖夜の贈り物 christmas ガチャ gacha スカウト scout 光 light ggo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up 自己回復 self heal"
         },
         "xmas_silica": {
@@ -9974,8 +9974,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p2_dagger",
-            "eq_combo_amr": "x17p2_dagger",
-            "eq_combo_acc": "x17p2_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【幸せを運ぶ竜使い】シリカ silica [merry dragon tamer] x16シリカ x16 silica ★4 *4 シリカ silica f 女性 @female 鈴鳴らす聖夜の贈り物 christmas ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal"
         },
         "xmas_strea": {
@@ -10042,8 +10042,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_sword",
-            "eq_combo_amr": "x17p1_sword",
-            "eq_combo_acc": "x17p1_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【聖夜の奔放剣士】ストレア strea [yuletide swordswoman] x16ストレア x16 strea ★4 *4 ストレア strea f 女性 @female 鈴鳴らす聖夜の贈り物 christmas ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up 自己回復 self heal"
         },
         "xmas_philia": {
@@ -10110,8 +10110,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p2_dagger",
-            "eq_combo_amr": "x17p2_dagger",
-            "eq_combo_acc": "x17p2_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【聖夜のトレジャーハンター】フィリア philia [silent night hunter] x16フィリア x16 philia ★4 *4 フィリア philia f 女性 @female 鈴鳴らす聖夜の贈り物 christmas ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up 自己回復 self heal"
         },
         "xmas_yuuki": {
@@ -10178,8 +10178,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_sword",
-            "eq_combo_amr": "x17p1_sword",
-            "eq_combo_acc": "x17p1_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【煌星の剣豪】ユウキ yuuki [celestial swordfighter] x16ユウキ x16 yuuki ★4 *4 ユウキ yuuki f 女性 @female 鈴鳴らす聖夜の贈り物 christmas ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up 自己回復 self heal"
         },
         "xmas_leafa": {
@@ -10246,8 +10246,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_staff",
-            "eq_combo_amr": "x17p1_staff",
-            "eq_combo_acc": "x17p1_staff",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【慈愛のレジェンドテラー】リーファ leafa [love raconteur] x16リーファ x16 leafa ★4 *4 リーファ leafa f 女性 @female 鈴鳴らす聖夜の贈り物 christmas ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 魔 magic コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up 自己回復 self heal 選ばれし者 chosen"
         },
         "xmas_lisbeth": {
@@ -10314,8 +10314,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p2_mace",
-            "eq_combo_amr": "x17p2_mace",
-            "eq_combo_acc": "x17p2_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【聖誕祭の職人魂】リズベット lisbeth [christmas artisan] x16リズ x16 lisbeth ★4 *4 リズ lisbeth f 女性 @female 鈴鳴らす聖夜の贈り物 christmas ガチャ gacha スカウト scout 光 light sao ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up 自己回復 self heal ヒットストップ hit stop 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "ny_asuna": {
@@ -10382,8 +10382,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "trump_rapier",
-            "eq_combo_amr": "trump_rapier",
-            "eq_combo_acc": "trump_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【薄紅に染まる夢】アスナ asuna [dreams in crimson] 正月アスナ ny asuna ★4 *4 アスナ asuna f 女性 @female 新春を彩る寿ぎの舞初 new year ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "ny_sinon": {
@@ -10450,8 +10450,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "hatsu_bow",
-            "eq_combo_amr": "hatsu_bow",
-            "eq_combo_acc": "hatsu_bow",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【初春の射手】シノン sinon [springtime sniper] 正月シノン ny sinon ★4 *4 シノン sinon f 女性 @female 新春を彩る寿ぎの舞初 new year ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 選ばれし者 chosen"
         },
         "ny_silica": {
@@ -10518,8 +10518,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "yukata_dagger",
-            "eq_combo_amr": "yukata_dagger",
-            "eq_combo_acc": "yukata_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【無垢なる爛漫】シリカ silica [pure splendor] 正月シリカ ny silica ★4 *4 シリカ silica f 女性 @female 新春を彩る寿ぎの舞初 new year ガチャ gacha スカウト scout 土 earth alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "ny_yuuki": {
@@ -10586,8 +10586,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_sword",
-            "eq_combo_amr": "x17p1_sword",
-            "eq_combo_acc": "x17p1_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【祝宴の神楽】ユウキ yuuki [festive dancer] 正月ユウキ ny yuuki ★4 *4 ユウキ yuuki f 女性 @female 新春を彩る寿ぎの舞初 new year ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "ny_leafa": {
@@ -10654,8 +10654,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "ninja_staff",
-            "eq_combo_amr": "ninja_staff",
-            "eq_combo_acc": "ninja_staff",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【艶美な追羽根】リーファ leafa [beautiful battledore player] 正月リーファ ny leafa ★4 *4 リーファ leafa f 女性 @female 新春を彩る寿ぎの舞初 new year ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 魔 magic 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 無敵 invincible"
         },
         "g16_asuna": {
@@ -10722,8 +10722,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "friends_dagger",
-            "eq_combo_amr": "friends_dagger",
-            "eq_combo_acc": "friends_dagger",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_none4",
             "meta": "【キャミソール】アスナ asuna [nightwear] 配布16アスナ gift16 asuna ★4 *4 アスナ asuna f 女性 @female 配布 event limited (gift) 2016 配布 gift 制限 restricted イベント event 無 none alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "e16_asuna": {
@@ -10790,8 +10790,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_staff",
-            "eq_combo_amr": "x17p1_staff",
-            "eq_combo_acc": "x17p1_staff",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【囚われの妃】アスナ asuna [captive princess] e16アスナ e16 asuna ★5 *5 アスナ asuna f 女性 @female イベント event limited 2016 イベント event 制限 restricted 土 earth alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 魔 magic コンボダメージアップ combo damage up コンボダメージアップ combo damage up 連携 combination リーダースキル ls leader skill"
         },
         "e16_kirito": {
@@ -10858,8 +10858,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "hatsu_sword",
-            "eq_combo_amr": "hatsu_sword",
-            "eq_combo_acc": "hatsu_sword",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【フェアリィ・ダンス】キリト kirito [fairy dance] e16キリト e16 kirito ★4 *4 キリト kirito m 男性 @male イベント event limited 2016 イベント event 制限 restricted 闇 dark alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "e16_zima": {
@@ -10926,8 +10926,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "jr_dagger",
-            "eq_combo_amr": "jr_dagger",
-            "eq_combo_acc": "jr_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_water6",
             "meta": "【一本釣り】ジーマ zima [the fisherman] e16ジーマ e16 zima ★4 *4 ジーマ zima f 女性 @female イベント event limited 2016 イベント event 制限 restricted 水 water alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up 無敵 invincible"
         },
         "nw_sinon": {
@@ -10994,8 +10994,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "pb_gun",
-            "eq_combo_amr": "pb_gun",
-            "eq_combo_acc": "pb_gun",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_none4",
             "meta": "【ナイトキャミソール】シノン sinon [nightwear] キャミシノン nw sinon ★4 *4 シノン sinon f 女性 @female キャミソール ranking nightwear 報酬 reward 制限 restricted 無 none ggo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up"
         },
         "e16_sinon": {
@@ -11062,8 +11062,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "hatsu_bow",
-            "eq_combo_amr": "hatsu_bow",
-            "eq_combo_acc": "hatsu_bow",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【草木花の戦乙女】シノン sinon [pure-hearted warrior of flora] e16シノン e16 sinon ★4 *4 シノン sinon f 女性 @female イベント event limited 2016 イベント event 制限 restricted 土 earth alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "nw_silica": {
@@ -11130,8 +11130,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "friends_dagger",
-            "eq_combo_amr": "friends_dagger",
-            "eq_combo_acc": "friends_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【ナイトキャミソール】シリカ silica [nightwear] キャミシリカ nw silica ★4 *4 シリカ silica f 女性 @female キャミソール ranking nightwear 報酬 reward 制限 restricted 無 none alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up"
         },
         "nw_yuuki": {
@@ -11198,8 +11198,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "hatsu_sword",
-            "eq_combo_amr": "hatsu_sword",
-            "eq_combo_acc": "hatsu_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【ナイトキャミソール】ユウキ yuuki [nightwear] キャミユウキ nw yuuki ★4 *4 ユウキ yuuki f 女性 @female キャミソール ranking nightwear 報酬 reward 制限 restricted 闇 dark alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up"
         },
         "e16_leafa": {
@@ -11266,8 +11266,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "ninja_staff",
-            "eq_combo_amr": "ninja_staff",
-            "eq_combo_acc": "ninja_staff",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【祝祭の魔女】リーファ leafa [rejoicing witch] e16リーファ e16 leafa ★5 *5 リーファ leafa f 女性 @female イベント event limited 2016 イベント event 制限 restricted 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 魔 magic 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 選ばれし者 chosen 連携 combination リーダースキル ls leader skill"
         },
         "nw_leafa": {
@@ -11334,8 +11334,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_sword",
-            "eq_combo_amr": "sports_sword",
-            "eq_combo_acc": "sports_sword",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【ナイトキャミソール】リーファ leafa [nightwear] キャミリーファ nw leafa ★4 *4 リーファ leafa f 女性 @female キャミソール ranking nightwear 報酬 reward 制限 restricted 風 wind alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up"
         },
         "nw_lisbeth": {
@@ -11402,8 +11402,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "os3_mace",
-            "eq_combo_amr": "os3_mace",
-            "eq_combo_acc": "os3_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【ナイトキャミソール】リズベット lisbeth [nightwear] キャミリズ nw lisbeth ★4 *4 リズ lisbeth f 女性 @female キャミソール ranking nightwear 報酬 reward 制限 restricted 無 none alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up"
         },
         "water_asuna": {
@@ -11470,8 +11470,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "hatsu_rapier",
-            "eq_combo_amr": "hatsu_rapier",
-            "eq_combo_acc": "hatsu_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_water6",
             "meta": "【流麗の水剣士】アスナ asuna [elegant water warrior] 水アスナ water asuna ★4 *4 アスナ asuna f 女性 @female 深き海神の導き water ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "water_seven": {
@@ -11538,8 +11538,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "x17p1_staff",
-            "eq_combo_amr": "x17p1_staff",
-            "eq_combo_acc": "x17p1_staff",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_water6",
             "meta": "【潮騒のシンフォニー】セブン seven [symphony of the sea] 水セブン water seven ★4 *4 セブン seven f 女性 @female 深き海神の導き water ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 魔 magic コンボダメージアップ combo damage up コンボダメージアップ combo damage up 無敵 invincible"
         },
         "water_yuuki": {
@@ -11606,8 +11606,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "hatsu_mace",
-            "eq_combo_amr": "hatsu_mace",
-            "eq_combo_acc": "hatsu_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_water6",
             "meta": "【おてんば乙姫】ユウキ yuuki [tomboy queen] 水ユウキ water yuuki ★4 *4 ユウキ yuuki f 女性 @female 深き海神の導き water ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "water_rain": {
@@ -11674,8 +11674,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "steamy_sword",
-            "eq_combo_amr": "steamy_sword",
-            "eq_combo_acc": "steamy_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_water6",
             "meta": "【めぐる奔流】レイン rain [rushing torrent] 水レイン water rain ★4 *4 レイン rain f 女性 @female 深き海神の導き water ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "val_asuna": {
@@ -11742,8 +11742,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "trump_rapier",
-            "eq_combo_amr": "trump_rapier",
-            "eq_combo_acc": "trump_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【とろける愛情】アスナ asuna [enchanting love] vアスナ v asuna ★4 *4 アスナ asuna f 女性 @female 極上のスウィートハート valentine ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "val_sinon": {
@@ -11810,8 +11810,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "trump_bow",
-            "eq_combo_amr": "trump_bow",
-            "eq_combo_acc": "trump_bow",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【いじわる恋天使】シノン sinon [choleric cupid] vシノン v sinon ★4 *4 シノン sinon f 女性 @female 極上のスウィートハート valentine ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 背後取り backstab 無敵 invincible"
         },
         "val_silica": {
@@ -11878,8 +11878,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "steamy_dagger",
-            "eq_combo_amr": "steamy_dagger",
-            "eq_combo_acc": "steamy_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【プラトニック・ラブ】シリカ silica [platonic love] vシリカ v silica ★4 *4 シリカ silica f 女性 @female 極上のスウィートハート valentine ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 背後取り backstab 無敵 invincible"
         },
         "val_leafa": {
@@ -11946,8 +11946,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "trump_sword",
-            "eq_combo_amr": "trump_sword",
-            "eq_combo_acc": "trump_sword",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【一途な想い】リーファ leafa [unfulfilled wish] vリーファ v leafa ★4 *4 リーファ leafa f 女性 @female 極上のスウィートハート valentine ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 魔 magic 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "oni_sinon": {
@@ -12014,8 +12014,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p2_mace",
-            "eq_combo_amr": "x17p2_mace",
-            "eq_combo_acc": "x17p2_mace",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【鬼っ子リーダー】シノン sinon [demon leader] 鬼シノン oni sinon ★4 *4 シノン sinon f 女性 @female こんな鬼ならウチにほしい？ setsubun ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "hr_asuna": {
@@ -12082,8 +12082,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "bonds_rapier",
-            "eq_combo_amr": "bonds_rapier",
-            "eq_combo_acc": "bonds_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_none4",
             "meta": "【白き閃光】アスナ asuna [white flash] hrアスナ hr asuna ★4 *4 アスナ asuna f 女性 @female 存在する理由 hr promotion ガチャ gacha スカウト scout 無 none sa0 ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up スキルコネクト skill connect コンボ持続 combo duration up"
         },
         "hr_kirito": {
@@ -12150,8 +12150,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "bonds_dual",
-            "eq_combo_amr": "bonds_dual",
-            "eq_combo_acc": "bonds_dual",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_none4",
             "meta": "【本物の黒】キリト kirito [true black] hrキリト hr kirito ★4 *4 キリト kirito m 男性 @male 存在する理由 hr promotion ガチャ gacha スカウト scout 無 none sa0 ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up スキルコネクト skill connect"
         },
         "hr_premiere": {
@@ -12218,8 +12218,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "bonds_rapier",
-            "eq_combo_amr": "bonds_rapier",
-            "eq_combo_acc": "bonds_rapier",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【生まれた感情】プレミア premiere [budding emotions] hrプレミア hr premiere ★4 *4 プレミア premiere f 女性 @female 存在する理由 hr promotion ガチャ gacha スカウト scout 無 none sa0 ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up スキルコネクト skill connect"
         },
         "hr_leafa": {
@@ -12286,8 +12286,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "fate_sword",
-            "eq_combo_amr": "fate_sword",
-            "eq_combo_acc": "fate_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【絆の剣】リーファ leafa [bond sword] hrリーファ hr leafa ★4 *4 リーファ leafa f 女性 @female 存在する理由 hr promotion ガチャ gacha スカウト scout 無 none sa0 ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up スキルコネクト skill connect"
         },
         "hrsc_asuna": {
@@ -12354,8 +12354,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "bonds_rapier",
-            "eq_combo_amr": "bonds_rapier",
-            "eq_combo_acc": "bonds_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_none4",
             "meta": "【白き閃光】アスナ asuna [white flash] hrscアスナ hrsc asuna ★4 *4 アスナ asuna f 女性 @female 存在する理由 hr promotion ガチャ gacha スカウト scout 無 none sa0 ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up スキルコネクト skill connect コンボ持続 combo duration up"
         },
         "hrsc_kirito": {
@@ -12422,8 +12422,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "bonds_dual",
-            "eq_combo_amr": "bonds_dual",
-            "eq_combo_acc": "bonds_dual",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_none4",
             "meta": "【本物の黒】キリト kirito [true black] hrscキリト hrsc kirito ★4 *4 キリト kirito m 男性 @male 存在する理由 hr promotion ガチャ gacha スカウト scout 無 none sa0 ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up スキルコネクト skill connect"
         },
         "hrsc_premiere": {
@@ -12490,8 +12490,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "bonds_rapier",
-            "eq_combo_amr": "bonds_rapier",
-            "eq_combo_acc": "bonds_rapier",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【生まれた感情】プレミア premiere [budding emotions] hrscプレミア hrsc premiere ★4 *4 プレミア premiere f 女性 @female 存在する理由 hr promotion ガチャ gacha スカウト scout 無 none sa0 ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up スキルコネクト skill connect"
         },
         "hrsc_leafa": {
@@ -12558,8 +12558,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "fate_sword",
-            "eq_combo_amr": "fate_sword",
-            "eq_combo_acc": "fate_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【絆の剣】リーファ leafa [bond sword] hrscリーファ hrsc leafa ★4 *4 リーファ leafa f 女性 @female 存在する理由 hr promotion ガチャ gacha スカウト scout 無 none sa0 ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up スキルコネクト skill connect"
         },
         "os_asuna": {
@@ -12626,8 +12626,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "bonds_rapier",
-            "eq_combo_amr": "bonds_rapier",
-            "eq_combo_acc": "bonds_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_none4",
             "meta": "【立ち向かう決意】アスナ asuna [heart of confront] osアスナ os asuna ★5 *5 アスナ asuna f 女性 @female 加速する現実 the accelerating reality ガチャ gacha スカウト scout 無 none os ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff リジェネ 持続回復 regeneration ヒットストップ hit stop 選ばれし者 chosen 連携 combination"
         },
         "os_kirito": {
@@ -12694,8 +12694,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "fate_sword",
-            "eq_combo_amr": "fate_sword",
-            "eq_combo_acc": "fate_sword",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_none4",
             "meta": "【立ち上がる英雄】キリト kirito [hero's return] osキリト os kirito ★5 *5 キリト kirito m 男性 @male 加速する現実 the accelerating reality ガチャ gacha スカウト scout 無 none os ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff リジェネ 持続回復 regeneration 連携 combination"
         },
         "os_sinon": {
@@ -12762,8 +12762,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "pb_gun",
-            "eq_combo_amr": "pb_gun",
-            "eq_combo_acc": "pb_gun",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_none4",
             "meta": "【プログレッシブ・ガンナー】シノン sinon [progressive gunner] osシノン os sinon ★4 *4 シノン sinon f 女性 @female 加速する現実 the accelerating reality ガチャ gacha スカウト scout 無 none os ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 魔 magic 攻撃 自己 バフ atk attack self buff リジェネ 持続回復 regeneration"
         },
         "os_silica": {
@@ -12830,8 +12830,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "friends_dagger",
-            "eq_combo_amr": "friends_dagger",
-            "eq_combo_acc": "friends_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【オーグメンテッド・テイマー】シリカ silica [augmented tamer] osシリカ os silica ★5 *5 シリカ silica f 女性 @female 加速する現実 the accelerating reality ガチャ gacha スカウト scout 無 none os ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff リジェネ 持続回復 regeneration 連携 combination"
         },
         "os_lisbeth": {
@@ -12898,8 +12898,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "os3_mace",
-            "eq_combo_amr": "os3_mace",
-            "eq_combo_acc": "os3_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【エフィシェント・スミス】リズベット lisbeth [efficient smith] osリズ os lisbeth ★5 *5 リズ lisbeth f 女性 @female 加速する現実 the accelerating reality ガチャ gacha スカウト scout 無 none os ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt 攻撃 自己 バフ atk attack self buff リジェネ 持続回復 regeneration ガード guard"
         },
         "cheer_asuna": {
@@ -12966,8 +12966,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p2_bow",
-            "eq_combo_amr": "x17p2_bow",
-            "eq_combo_acc": "x17p2_bow",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【愛のエール】アスナ asuna [cheer of love] チアアスナ ch asuna ★4 *4 アスナ asuna f 女性 @female フレフレ★loveチアーズ hooray love cheers ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 選ばれし者 chosen コンボ持続 combo duration up"
         },
         "cheer_sinon": {
@@ -13034,8 +13034,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p2_dagger",
-            "eq_combo_amr": "x17p2_dagger",
-            "eq_combo_acc": "x17p2_dagger",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【必勝ガール】シノン sinon [victorious girl] チアシノン ch sinon ★4 *4 シノン sinon f 女性 @female フレフレ★loveチアーズ hooray love cheers ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "cheer_silica": {
@@ -13102,8 +13102,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p2_mace",
-            "eq_combo_amr": "x17p2_mace",
-            "eq_combo_acc": "x17p2_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【弾ける歓声】シリカ silica [shouting cheers] チアシリカ ch silica ★4 *4 シリカ silica f 女性 @female フレフレ★loveチアーズ hooray love cheers ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "cheer_strea": {
@@ -13170,8 +13170,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_rapier",
-            "eq_combo_amr": "x17p1_rapier",
-            "eq_combo_acc": "x17p1_rapier",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【きらめく青春】ストレア strea [glittering youth] チアストレア ch strea ★4 *4 ストレア strea f 女性 @female フレフレ★loveチアーズ hooray love cheers ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "cheer_yui": {
@@ -13238,8 +13238,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_sword",
-            "eq_combo_amr": "x17p1_sword",
-            "eq_combo_acc": "x17p1_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【天使の声援】ユイ yui [angel cheer] チアユイ ch yui ★4 *4 ユイ yui f 女性 @female フレフレ★loveチアーズ hooray love cheers ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "hina_argo": {
@@ -13306,8 +13306,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_sword",
-            "eq_combo_amr": "sports_sword",
-            "eq_combo_acc": "sports_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【早春の神楽】アルゴ argo [early spring dance] 雛アルゴ hina argo ★4 *4 アルゴ argo f 女性 @female 春風誘うひな祭り spring breeze hina-matsuri ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up コンボ持続 combo duration up"
         },
         "hina_silica": {
@@ -13374,8 +13374,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_dagger",
-            "eq_combo_amr": "sports_dagger",
-            "eq_combo_acc": "sports_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【花桃の雛】シリカ silica [flower peach baby] 雛シリカ hina silica ★4 *4 シリカ silica f 女性 @female 春風誘うひな祭り spring breeze hina-matsuri ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up コンボ持続 combo duration up"
         },
         "hina_premiere": {
@@ -13442,8 +13442,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_rapier",
-            "eq_combo_amr": "sports_rapier",
-            "eq_combo_acc": "sports_rapier",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【花より団子】プレミア premiere [pudding rather than praise] 雛プレミア hina premiere ★4 *4 プレミア premiere f 女性 @female 春風誘うひな祭り spring breeze hina-matsuri ガチャ gacha スカウト scout 風 wind sa0 ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up コンボ持続 combo duration up"
         },
         "a_alice": {
@@ -13510,8 +13510,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "hatsu_sword",
-            "eq_combo_amr": "hatsu_sword",
-            "eq_combo_acc": "hatsu_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【整合騎士】アリス alice [integrity knight] aアリス a alice ★4 *4 アリス alice f 女性 @female 騎士たちの邂逅 alicization, the knights' encounter ガチャ gacha スカウト scout 土 earth uw ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff リジェネ 持続回復 regeneration ヒットストップ hit stop"
         },
         "a_eugeo": {
@@ -13578,8 +13578,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "steamy_sword",
-            "eq_combo_amr": "steamy_sword",
-            "eq_combo_acc": "steamy_sword",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_water6",
             "meta": "【天賦の才】ユージオ eugeo [born genius] aユージオ a eugeo ★4 *4 ユージオ eugeo m 男性 @male 騎士たちの邂逅 alicization, the knights' encounter ガチャ gacha スカウト scout 水 water uw ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff リジェネ 持続回復 regeneration ヒットストップ hit stop"
         },
         "sd_asuna": {
@@ -13646,8 +13646,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "hatsu_rapier",
-            "eq_combo_amr": "hatsu_rapier",
-            "eq_combo_acc": "hatsu_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_none4",
             "meta": "【信望の副団長】アスナ asuna [prestige vice commander] 剣舞アスナ kb asuna ★4 *4 アスナ asuna f 女性 @female 剣舞 ranking ken-bu 報酬 reward 制限 restricted 無 none sao ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "sd_kirito": {
@@ -13714,8 +13714,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "bonds_dual",
-            "eq_combo_amr": "bonds_dual",
-            "eq_combo_acc": "bonds_dual",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_none4",
             "meta": "【秘匿せし二刀】キリト kirito [concealed dual blades] 剣舞キリト kb kirito ★4 *4 キリト kirito m 男性 @male 剣舞 ranking ken-bu 報酬 reward 制限 restricted 無 none sao ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up 無敵 invincible"
         },
         "e17_lisbeth": {
@@ -13782,8 +13782,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "hatsu_mace",
-            "eq_combo_amr": "hatsu_mace",
-            "eq_combo_acc": "hatsu_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_water6",
             "meta": "【新春を告げる奏楽】リズベット lisbeth [bringer of spring] e17リズ e17 lisbeth ★4 *4 リズ lisbeth f 女性 @female イベント event limited 2017 イベント event 制限 restricted 水 water alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "e17_rechka": {
@@ -13850,8 +13850,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p2_mace",
-            "eq_combo_amr": "x17p2_mace",
-            "eq_combo_acc": "x17p2_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【凄腕の料理人】レーチカ rechka [queen of chef] e17レーチカ e17 rechka ★4 *4 レーチカ rechka f 女性 @female イベント event limited 2017 イベント event 制限 restricted 光 light alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "ninja_asuna": {
@@ -13918,8 +13918,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "ninja_rapier1",
-            "eq_combo_amr": "ninja_rapier1",
-            "eq_combo_acc": "ninja_rapier1",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【斬影飛剣】アスナ asuna [shinobi slash] 忍アスナ ninja asuna ★4 *4 アスナ asuna f 女性 @female 百花繚乱くノ一参上 deadly beautiful kunoichi ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up クリティカル 自己 バフ critical self buff"
         },
         "ninja_leafa": {
@@ -13986,8 +13986,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "hatsu_sword",
-            "eq_combo_amr": "hatsu_sword",
-            "eq_combo_acc": "hatsu_sword",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【虚空疾走】リーファ leafa [void runner] 忍リーファ ninja leafa ★4 *4 リーファ leafa f 女性 @female 百花繚乱くノ一参上 deadly beautiful kunoichi ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up"
         },
         "ninja_yuuki": {
@@ -14054,8 +14054,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "hhn_dagger",
-            "eq_combo_amr": "hhn_dagger",
-            "eq_combo_acc": "hhn_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【絶影飛翔】ユウキ yuuki [umbral flight] 忍ユウキ ninja yuuki ★4 *4 ユウキ yuuki f 女性 @female 百花繚乱くノ一参上 deadly beautiful kunoichi ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up クリティカル 自己 バフ critical self buff 背後取り backstab"
         },
         "ninja_silica": {
@@ -14122,8 +14122,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "ninja_staff",
-            "eq_combo_amr": "ninja_staff",
-            "eq_combo_acc": "ninja_staff",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【竜術忍法】シリカ silica [dragon caster] 忍シリカ ninja silica ★4 *4 シリカ silica f 女性 @female 百花繚乱くノ一参上 deadly beautiful kunoichi ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 魔 magic コンボダメージアップ combo damage up"
         },
         "sd_agil": {
@@ -14190,8 +14190,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "hatsu_mace",
-            "eq_combo_amr": "hatsu_mace",
-            "eq_combo_acc": "hatsu_mace",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【爆砕の剛斧】エギル agil [explosive axe] 剣舞ハゲ kb agil ★4 *4 ハゲ agil m 男性 @male 剣舞 ranking ken-bu 報酬 reward 制限 restricted 土 earth alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "sd_klein": {
@@ -14258,8 +14258,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "trump_sword",
-            "eq_combo_amr": "trump_sword",
-            "eq_combo_acc": "trump_sword",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【信義の剣客】クライン klein [faithful swordsman] 剣舞クライン kb klein ★4 *4 クライン klein m 男性 @male 剣舞 ranking ken-bu 報酬 reward 制限 restricted 火 fire alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "ninja_lisbeth": {
@@ -14326,8 +14326,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "princess_mace1",
-            "eq_combo_amr": "princess_mace1",
-            "eq_combo_acc": "princess_mace1",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【暗中乱舞】リズベット lisbeth [dark dancer] 忍リズ ninja lisbeth ★4 *4 リズ lisbeth f 女性 @female 百花繚乱くノ一参上 deadly beautiful kunoichi ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up クリティカル 自己 バフ critical self buff 背後取り backstab"
         },
         "ps_leafa": {
@@ -14394,8 +14394,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_sword",
-            "eq_combo_amr": "x17p1_sword",
-            "eq_combo_acc": "x17p1_sword",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【煌めきグラドル】リーファ leafa [sparkling teen idol] psリーファ ps leafa ★4 *4 リーファ leafa f 女性 @female 時空の彼方でオンリーユー♥ enduring love in another space ガチャ gacha スカウト scout 光 light pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up バリア barrier"
         },
         "ps_yuuki": {
@@ -14462,8 +14462,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_rapier",
-            "eq_combo_amr": "sports_rapier",
-            "eq_combo_acc": "sports_rapier",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【天性ポップスター】ユウキ yuuki [natural pop star] psユウキ ps yuuki ★4 *4 ユウキ yuuki f 女性 @female 時空の彼方でオンリーユー♥ enduring love in another space ガチャ gacha スカウト scout 風 wind pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up バリア barrier"
         },
         "ps_silica": {
@@ -14530,8 +14530,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "hhn_dagger",
-            "eq_combo_amr": "hhn_dagger",
-            "eq_combo_acc": "hhn_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【美少女チャイドル】シリカ silica [young idol] psシリカ ps silica ★4 *4 シリカ silica f 女性 @female 時空の彼方でオンリーユー♥ enduring love in another space ガチャ gacha スカウト scout 闇 dark pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 背後取り backstab バリア barrier コンボ持続 combo duration up"
         },
         "ps_lisbeth": {
@@ -14598,8 +14598,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "hatsu_mace",
-            "eq_combo_amr": "hatsu_mace",
-            "eq_combo_acc": "hatsu_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【魅惑のmcパフォーマー】リズベット lisbeth [fascinating mc performer] psリズ ps lisbeth ★4 *4 リズ lisbeth f 女性 @female 時空の彼方でオンリーユー♥ enduring love in another space ガチャ gacha スカウト scout 土 earth pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up バリア barrier"
         },
         "ps_sinon": {
@@ -14666,8 +14666,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "hatsu_bow",
-            "eq_combo_amr": "hatsu_bow",
-            "eq_combo_acc": "hatsu_bow",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_water6",
             "meta": "【変幻自在アーティスト】シノン sinon [free style artist] psシノン ps sinon ★4 *4 シノン sinon f 女性 @female 時空の彼方でオンリーユー♥ enduring love in another space ガチャ gacha スカウト scout 水 water pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up バリア barrier"
         },
         "ps_asuna": {
@@ -14734,8 +14734,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "ps_staff",
-            "eq_combo_amr": "ps_staff",
-            "eq_combo_acc": "ps_staff",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【愛と努力のヒットアイドル】アスナ asuna [hit idol of love and effort] psアスナ ps asuna ★4 *4 アスナ asuna f 女性 @female 時空の彼方でオンリーユー♥ enduring love in another space ガチャ gacha スカウト scout 火 fire pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 魔 magic 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up バリア barrier コンボ持続 combo duration up"
         },
         "psr_yui": {
@@ -14802,8 +14802,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "bonds_rapier",
-            "eq_combo_amr": "bonds_rapier",
-            "eq_combo_acc": "bonds_rapier",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【期待のジュニアアイドル】ユイ yui [up-and-coming tiny idol] psユイ ps yui ★4 *4 ユイ yui f 女性 @female 時空の彼方でオンリーユー♥ 報酬 enduring love in another space reward 報酬 reward 制限 restricted 無 none pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up バリア barrier"
         },
         "e17_silica": {
@@ -14870,8 +14870,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "steamy_dagger",
-            "eq_combo_amr": "steamy_dagger",
-            "eq_combo_acc": "steamy_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【火狐の巫女装束】シリカ silica [foxy priestess] e17シリカ e17 silica ★4 *4 シリカ silica f 女性 @female イベント event limited 2017 イベント event 制限 restricted 火 fire alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "sakura_strea": {
@@ -14938,8 +14938,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "hatsu_sword",
-            "eq_combo_amr": "hatsu_sword",
-            "eq_combo_acc": "hatsu_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【桜色の爛漫】ストレア strea [sakura romance] 桜ストレア sakura strea ★4 *4 ストレア strea f 女性 @female 桜満開スクールライフ blooming school life ガチャ gacha スカウト scout 土 earth alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal super armor スーパーアーマー sa"
         },
         "sakura_yui": {
@@ -15006,8 +15006,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "hatsu_mace",
-            "eq_combo_amr": "hatsu_mace",
-            "eq_combo_acc": "hatsu_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【桜の頃の愛娘】ユイ yui [born in sakura season] 桜ユイ sakura yui ★5 *5 ユイ yui f 女性 @female 桜満開スクールライフ blooming school life ガチャ gacha スカウト scout 土 earth alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal super armor スーパーアーマー sa コンボ持続 combo duration up"
         },
         "sakura_philia": {
@@ -15074,8 +15074,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "hatsu_bow",
-            "eq_combo_amr": "hatsu_bow",
-            "eq_combo_acc": "hatsu_bow",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【揺れる青春】フィリア philia [blossom of youth] 桜フィリア sakura philia ★4 *4 フィリア philia f 女性 @female 桜満開スクールライフ blooming school life ガチャ gacha スカウト scout 土 earth alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal 無敵 invincible super armor スーパーアーマー sa"
         },
         "princess_asuna": {
@@ -15142,8 +15142,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_sword",
-            "eq_combo_amr": "x17p1_sword",
-            "eq_combo_acc": "x17p1_sword",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【閃光の舞踏】アスナ asuna [lightning dance] 姫アスナ pr asuna ★5 *5 アスナ asuna f 女性 @female 仮想世界のプリンセス princess from the virtual world ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 連携 combination"
         },
         "princess_leafa": {
@@ -15210,8 +15210,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "jr_dagger",
-            "eq_combo_amr": "jr_dagger",
-            "eq_combo_acc": "jr_dagger",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_water6",
             "meta": "【泡沫の想い】リーファ leafa [ephemeral feelings] 姫リーファ pr leafa ★4 *4 リーファ leafa f 女性 @female 仮想世界のプリンセス princess from the virtual world ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 背後取り backstab"
         },
         "princess_yuuki": {
@@ -15278,8 +15278,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "ps_staff",
-            "eq_combo_amr": "ps_staff",
-            "eq_combo_acc": "ps_staff",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【型破りの元気頭巾】ユウキ yuuki [eccentric riding hood] 姫ユウキ pr yuuki ★4 *4 ユウキ yuuki f 女性 @female 仮想世界のプリンセス princess from the virtual world ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 魔 magic 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "princess_sinon": {
@@ -15346,8 +15346,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "yukata_gun",
-            "eq_combo_amr": "yukata_gun",
-            "eq_combo_acc": "yukata_gun",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【デンジャラス・キス】シノン sinon [dangerous kiss] 姫シノン pr sinon ★4 *4 シノン sinon f 女性 @female 仮想世界のプリンセス princess from the virtual world ガチャ gacha スカウト scout 土 earth alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "princess_silica": {
@@ -15414,8 +15414,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "hatsu_mace",
-            "eq_combo_amr": "hatsu_mace",
-            "eq_combo_acc": "hatsu_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【マイリトルラヴァー】シリカ silica [my little lover] 姫シリカ pr silica ★4 *4 シリカ silica f 女性 @female 仮想世界のプリンセス princess from the virtual world ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up ヒットストップ hit stop"
         },
         "princess_yui": {
@@ -15482,8 +15482,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_rapier",
-            "eq_combo_amr": "sports_rapier",
-            "eq_combo_acc": "sports_rapier",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【真珠の涙】ユイ yui [pearl tears] 姫ユイ pr yui ★4 *4 ユイ yui f 女性 @female 仮想世界のプリンセス princess from the virtual world ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up リジェネ 持続回復 regeneration 選ばれし者 chosen"
         },
         "sd_leafa": {
@@ -15550,8 +15550,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "maid_staff",
-            "eq_combo_amr": "maid_staff",
-            "eq_combo_acc": "maid_staff",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【神速の女傑】リーファ leafa [swift fast heroine] 剣舞リーファ kb leafa ★4 *4 リーファ leafa f 女性 @female 剣舞 ranking ken-bu 報酬 reward 制限 restricted 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "maid_asuna": {
@@ -15618,8 +15618,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "maid_staff",
-            "eq_combo_amr": "maid_staff",
-            "eq_combo_acc": "maid_staff",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【純愛キッチンメイド】アスナ asuna [kitchen maid] メイドアスナ maid asuna ★4 *4 アスナ asuna f 女性 @female キミに届け薫風に舞うメイド to your heart! maid in balmy breeze ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 魔 magic 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up 無敵 invincible"
         },
         "maid_sinon": {
@@ -15686,8 +15686,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "hatsu_bow",
-            "eq_combo_amr": "hatsu_bow",
-            "eq_combo_acc": "hatsu_bow",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【清廉スティルルームメイド】シノン sinon [stillroom maid] メイドシノン maid sinon ★4 *4 シノン sinon f 女性 @female キミに届け薫風に舞うメイド to your heart! maid in balmy breeze ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up ヒットストップ hit stop"
         },
         "maid_yuuki": {
@@ -15754,8 +15754,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "hatsu_mace",
-            "eq_combo_amr": "hatsu_mace",
-            "eq_combo_acc": "hatsu_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【新生トゥイーニー】ユウキ yuuki [fledgling tweeny] メイドユウキ maid yuuki ★4 *4 ユウキ yuuki f 女性 @female キミに届け薫風に舞うメイド to your heart! maid in balmy breeze ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "maid_leafa": {
@@ -15822,8 +15822,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_rapier",
-            "eq_combo_amr": "sports_rapier",
-            "eq_combo_acc": "sports_rapier",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【芳醇デイリーメイド】リーファ leafa [mellow maid] メイドリーファ maid leafa ★4 *4 リーファ leafa f 女性 @female キミに届け薫風に舞うメイド to your heart! maid in balmy breeze ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "maid_rain": {
@@ -15890,8 +15890,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_sword",
-            "eq_combo_amr": "sports_sword",
-            "eq_combo_acc": "sports_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【熟練パーラーメイド】レイン rain [parlor maid] メイドレイン maid rain ★4 *4 レイン rain f 女性 @female キミに届け薫風に舞うメイド to your heart! maid in balmy breeze ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "maid_seven": {
@@ -15958,8 +15958,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_dagger",
-            "eq_combo_amr": "sports_dagger",
-            "eq_combo_acc": "sports_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【博識スカラリーメイド】セブン seven [omniscient maid] メイドセブン maid seven ★4 *4 セブン seven f 女性 @female キミに届け薫風に舞うメイド to your heart! maid in balmy breeze ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "sd_lisbeth": {
@@ -16026,8 +16026,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "os3_mace",
-            "eq_combo_amr": "os3_mace",
-            "eq_combo_acc": "os3_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【鬼才の剣匠】リズベット lisbeth [genius of sword smith] 剣舞リズ kb lisbeth ★4 *4 リズ lisbeth f 女性 @female 剣舞 ranking ken-bu 報酬 reward 制限 restricted 無 none sao ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up"
         },
         "b_eugeo": {
@@ -16094,8 +16094,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "steamy_sword",
-            "eq_combo_amr": "steamy_sword",
-            "eq_combo_acc": "steamy_sword",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_water6",
             "meta": "【青銀の騎士】ユージオ eugeo [blue silver knight] bユージオ b eugeo ★4 *4 ユージオ eugeo m 男性 @male インテグレーション・ビギニング alicization, integration beginning ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up クリティカル 自己 バフ critical self buff 背後取り backstab 無敵 invincible"
         },
         "b_alice": {
@@ -16162,8 +16162,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "hatsu_sword",
-            "eq_combo_amr": "hatsu_sword",
-            "eq_combo_acc": "hatsu_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【黄金の騎士】アリス alice [golden knight] bアリス b alice ★5 *5 アリス alice f 女性 @female インテグレーション・ビギニング alicization, integration beginning ガチャ gacha スカウト scout 土 earth alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up クリティカル 自己 バフ critical self buff ヒットストップ hit stop 背後取り backstab 無敵 invincible 連携 combination"
         },
         "pwater_suguha": {
@@ -16230,8 +16230,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "steamy_sword",
-            "eq_combo_amr": "steamy_sword",
-            "eq_combo_acc": "steamy_sword",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_water6",
             "meta": "【初夏を彩る乙女】直葉 suguha [summer girl] 濡直葉 pwater suguha ★4 *4 直葉 suguha f 女性 @female 眩い乙女の水遊び beautiful girls playing in the water ガチャ gacha スカウト scout 水 water os ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up リジェネ 持続回復 regeneration 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "pwater_lisbeth": {
@@ -16298,8 +16298,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "hatsu_mace",
-            "eq_combo_amr": "hatsu_mace",
-            "eq_combo_acc": "hatsu_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_water6",
             "meta": "【水辺に弾ける笑顔】リズベット lisbeth [smile on waterfront] 濡リズ pwater lisbeth ★4 *4 リズ lisbeth f 女性 @female 眩い乙女の水遊び beautiful girls playing in the water ガチャ gacha スカウト scout 水 water os ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up リジェネ 持続回復 regeneration ヒットストップ hit stop 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "pwater_philia": {
@@ -16366,8 +16366,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "jr_dagger",
-            "eq_combo_amr": "jr_dagger",
-            "eq_combo_acc": "jr_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_water6",
             "meta": "【清きハンター魂】フィリア philia [pure hunter soul] 濡フィリア pwater philia ★4 *4 フィリア philia f 女性 @female 眩い乙女の水遊び beautiful girls playing in the water ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "e17_sphica": {
@@ -16434,8 +16434,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "ninja_rapier1",
-            "eq_combo_amr": "ninja_rapier1",
-            "eq_combo_acc": "ninja_rapier1",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【かくれんぼ少女】スフィカ sphica [hide-and-seek girl] e17スフィカ e17 sphica ★4 *4 スフィカ sphica f 女性 @female イベント event limited 2017 イベント event 制限 restricted 闇 dark alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "zodiac_asuna": {
@@ -16502,8 +16502,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "zodiac_lance",
-            "eq_combo_amr": "zodiac_lance",
-            "eq_combo_acc": "zodiac_lance",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【天上の審判リブラ】アスナ asuna [libra] 星座アスナ zodiac asuna ★4 *4 アスナ asuna f 女性 @female 神々と星座の詩 poetry of constellation ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "zodiac_sinon": {
@@ -16570,8 +16570,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "zodiac_lance",
-            "eq_combo_amr": "zodiac_lance",
-            "eq_combo_acc": "zodiac_lance",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【孤高の咆哮レオ】シノン sinon [leo] 星座シノン zodiac sinon ★4 *4 シノン sinon f 女性 @female 神々と星座の詩 poetry of constellation ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up 無敵 invincible 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "zodiac_yuuki": {
@@ -16638,8 +16638,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "trump_rapier",
-            "eq_combo_amr": "trump_rapier",
-            "eq_combo_acc": "trump_rapier",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【巡る絆ジェミニ】ユウキ yuuki [gemini] 星座ユウキ zodiac yuuki ★4 *4 ユウキ yuuki f 女性 @female 神々と星座の詩 poetry of constellation ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "zodiac_leafa": {
@@ -16706,8 +16706,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "trump_sword",
-            "eq_combo_amr": "trump_sword",
-            "eq_combo_acc": "trump_sword",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【深き慈愛アリエス】リーファ leafa [aries] 星座リーファ zodiac leafa ★4 *4 リーファ leafa f 女性 @female 神々と星座の詩 poetry of constellation ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "sd_silica": {
@@ -16774,8 +16774,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "friends_dagger",
-            "eq_combo_amr": "friends_dagger",
-            "eq_combo_acc": "friends_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【憧憬せし剣士】シリカ silica [yearning blade] 剣舞シリカ kb silica ★4 *4 シリカ silica f 女性 @female 剣舞 ranking ken-bu 報酬 reward 制限 restricted 無 none sao ダメージ アップ damage up クリティカルダメージ アップ critical damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "bride_alice": {
@@ -16842,8 +16842,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_sword",
-            "eq_combo_amr": "x17p1_sword",
-            "eq_combo_acc": "x17p1_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【六月の金木犀】アリス alice [fragrant olive in june] 花嫁アリス bride alice ★5 *5 アリス alice f 女性 @female eternal love -夢見る花嫁- eternal love - dreaming brides - ガチャ gacha スカウト scout 光 light uw ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン 連携 combination"
         },
         "bride_leafa": {
@@ -16910,8 +16910,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_sword",
-            "eq_combo_amr": "x17p1_sword",
-            "eq_combo_acc": "x17p1_sword",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【誓いの口づけ】リーファ leafa [the kiss] 花嫁リーファ bride leafa ★4 *4 リーファ leafa f 女性 @female eternal love -夢見る花嫁- eternal love - dreaming brides - ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "bride_asuna": {
@@ -16978,8 +16978,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_rapier",
-            "eq_combo_amr": "x17p1_rapier",
-            "eq_combo_acc": "x17p1_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【あの日の約束】アスナ asuna [promise at that time] 花嫁アスナ bride asuna ★5 *5 アスナ asuna f 女性 @female eternal love -夢見る花嫁- eternal love - dreaming brides - ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン 連携 combination"
         },
         "bride_silica": {
@@ -17046,8 +17046,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p2_dagger",
-            "eq_combo_amr": "x17p2_dagger",
-            "eq_combo_acc": "x17p2_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【祝福のブレス】シリカ silica [blessed breath] 花嫁シリカ bride silica ★4 *4 シリカ silica f 女性 @female eternal love -夢見る花嫁- eternal love - dreaming brides - ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up 自己回復 self heal 無敵 invincible 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン ガード guard"
         },
         "bride_yuuki": {
@@ -17114,8 +17114,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p2_mace",
-            "eq_combo_amr": "x17p2_mace",
-            "eq_combo_acc": "x17p2_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【ブーケトスの大ジャンプ】ユウキ yuuki [bouquet toss] 花嫁ユウキ bride yuuki ★4 *4 ユウキ yuuki f 女性 @female eternal love -夢見る花嫁- eternal love - dreaming brides - ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "bride_sinon": {
@@ -17182,8 +17182,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p2_bow",
-            "eq_combo_amr": "x17p2_bow",
-            "eq_combo_acc": "x17p2_bow",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【ピンヒールの花嫁】シノン sinon [stiletto heel bride] 花嫁シノン bride sinon ★4 *4 シノン sinon f 女性 @female eternal love -夢見る花嫁- eternal love - dreaming brides - ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up 自己回復 self heal 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "sd_yuuki": {
@@ -17250,8 +17250,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "hatsu_sword",
-            "eq_combo_amr": "hatsu_sword",
-            "eq_combo_acc": "hatsu_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【最強の剣士】ユウキ yuuki [sword master] 剣舞ユウキ kb yuuki ★4 *4 ユウキ yuuki f 女性 @female 剣舞 ranking ken-bu 報酬 reward 制限 restricted 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "os2_kirito": {
@@ -17318,8 +17318,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "fate_sword",
-            "eq_combo_amr": "fate_sword",
-            "eq_combo_acc": "fate_sword",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_none4",
             "meta": "【蘇りし剣戟】キリト kirito [resurgent sword] os2キリト os2 kirito ★4 *4 キリト kirito m 男性 @male 追想されし刹那 recalling moments ガチャ gacha スカウト scout 無 none os ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "os2_suguha": {
@@ -17386,8 +17386,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "fate_sword",
-            "eq_combo_amr": "fate_sword",
-            "eq_combo_acc": "fate_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【彼方の剣客】直葉 suguha [faroff fencer] os2直葉 os2 suguha ★4 *4 直葉 suguha f 女性 @female 追想されし刹那 recalling moments ガチャ gacha スカウト scout 無 none os ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "os2_asuna": {
@@ -17454,8 +17454,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "hatsu_rapier",
-            "eq_combo_amr": "hatsu_rapier",
-            "eq_combo_acc": "hatsu_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_none4",
             "meta": "【心根の閃光】アスナ asuna [heart flash] os2アスナ os2 asuna ★5 *5 アスナ asuna f 女性 @female 追想されし刹那 recalling moments ガチャ gacha スカウト scout 無 none os ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 連携 combination"
         },
         "cosplay_asuna": {
@@ -17522,8 +17522,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "hatsu_rapier",
-            "eq_combo_amr": "hatsu_rapier",
-            "eq_combo_acc": "hatsu_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_none4",
             "meta": "【注射のお時間】アスナ asuna [time of injection] 仕事アスナ job asuna ★4 *4 アスナ asuna f 女性 @female 変身っ♪お仕事パラダイス workers' cosplay paradise ガチャ gacha スカウト scout 無 none os ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 無敵 invincible"
         },
         "cosplay_yui": {
@@ -17590,8 +17590,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "fate_sword",
-            "eq_combo_amr": "fate_sword",
-            "eq_combo_acc": "fate_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【しゅっぱつしんこー!!】ユイ yui [all aboard] 仕事ユイ job yui ★4 *4 ユイ yui f 女性 @female 変身っ♪お仕事パラダイス workers' cosplay paradise ガチャ gacha スカウト scout 無 none alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "cosplay_silica": {
@@ -17658,8 +17658,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "friends_dagger",
-            "eq_combo_amr": "friends_dagger",
-            "eq_combo_acc": "friends_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【アテンションプリーズ】シリカ silica [attention please] 仕事シリカ job silica ★4 *4 シリカ silica f 女性 @female 変身っ♪お仕事パラダイス workers' cosplay paradise ガチャ gacha スカウト scout 無 none os ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "cosplay_sinon": {
@@ -17726,8 +17726,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "pb_gun",
-            "eq_combo_amr": "pb_gun",
-            "eq_combo_acc": "pb_gun",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_none4",
             "meta": "【新米ポリス】シノン sinon [novice police] 仕事シノン job sinon ★4 *4 シノン sinon f 女性 @female 変身っ♪お仕事パラダイス workers' cosplay paradise ガチャ gacha スカウト scout 無 none os ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt 防御 デバフ deffence debuff コンボダメージアップ combo damage up"
         },
         "cosplay_strea": {
@@ -17794,8 +17794,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "cosplay_lance",
-            "eq_combo_amr": "cosplay_lance",
-            "eq_combo_acc": "cosplay_lance",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【スパルタ女教師】ストレア strea [spartan female teacher] 仕事ストレア job strea ★4 *4 ストレア strea f 女性 @female 変身っ♪お仕事パラダイス workers' cosplay paradise ガチャ gacha スカウト scout 無 none alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "cosplay_yuna": {
@@ -17862,8 +17862,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "hatsu_mace",
-            "eq_combo_amr": "hatsu_mace",
-            "eq_combo_acc": "hatsu_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【ローラーウェイトレス】ユナ yuna [roller waitress] 仕事ユナ job yuna ★4 *4 ユナ yuna f 女性 @female 変身っ♪お仕事パラダイス workers' cosplay paradise ガチャ gacha スカウト scout 無 none os ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "sd_sinon": {
@@ -17930,8 +17930,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "pb_gun",
-            "eq_combo_amr": "pb_gun",
-            "eq_combo_acc": "pb_gun",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_none4",
             "meta": "【終焉を告げる弾丸】シノン sinon [death bullet] 剣舞シノン kb sinon ★4 *4 シノン sinon f 女性 @female 剣舞 ranking ken-bu 報酬 reward 制限 restricted 無 none ggo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up 無敵 invincible"
         },
         "sd_sachi": {
@@ -17998,8 +17998,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "cosplay_lance",
-            "eq_combo_amr": "cosplay_lance",
-            "eq_combo_acc": "cosplay_lance",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【勇気の槍筋】サチ sachi [bravery lance] 剣舞サチ kb sachi ★4 *4 サチ sachi f 女性 @female 剣舞 ranking ken-bu 報酬 reward 制限 restricted 無 none sao ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "g17_yuna": {
@@ -18066,8 +18066,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "fate_sword",
-            "eq_combo_amr": "fate_sword",
-            "eq_combo_acc": "fate_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【arの歌姫】ユナ yuna [ar idol] 配布17ユナ gift17 yuna ★4 *4 ユナ yuna f 女性 @female 配布 event limited (gift) 2017 配布 gift 制限 restricted イベント event 無 none alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up 選ばれし者 chosen"
         },
         "e16_sachi": {
@@ -18134,8 +18134,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_sword",
-            "eq_combo_amr": "x17p1_sword",
-            "eq_combo_acc": "x17p1_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【思い出のなかの光】サチ sachi [happy memories] e16サチ e16 sachi ★5 *5 サチ sachi f 女性 @female イベント event limited 2016 イベント event 制限 restricted 光 light alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "rainy_rain": {
@@ -18202,8 +18202,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "snow_dual",
-            "eq_combo_amr": "snow_dual",
-            "eq_combo_acc": "snow_dual",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_water6",
             "meta": "【雨滴りの乙女】レイン rain [raindrops girl] 雨レイン rainy rain ★5 *5 レイン rain f 女性 @female 雨雫の協奏曲 raindrops concerto ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up 自己回復 self heal 無敵 invincible super armor スーパーアーマー sa 連携 combination"
         },
         "rainy_leafa": {
@@ -18270,8 +18270,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "steamy_sword",
-            "eq_combo_amr": "steamy_sword",
-            "eq_combo_acc": "steamy_sword",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_water6",
             "meta": "【雨季の愉しみ】リーファ leafa [rainy season enjoyment] 雨リーファ rainy leafa ★4 *4 リーファ leafa f 女性 @female 雨雫の協奏曲 raindrops concerto ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up 自己回復 self heal super armor スーパーアーマー sa"
         },
         "rainy_sakuya": {
@@ -18338,8 +18338,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "bonds_bow",
-            "eq_combo_amr": "bonds_bow",
-            "eq_combo_acc": "bonds_bow",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_water6",
             "meta": "【屋下の興】サクヤ sakuya [indoor gamer] 雨サクヤ rainy sakuya ★4 *4 サクヤ sakuya f 女性 @female 雨雫の協奏曲 raindrops concerto ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up 自己回復 self heal 無敵 invincible super armor スーパーアーマー sa"
         },
         "g17_asuna": {
@@ -18406,8 +18406,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "bonds_rapier",
-            "eq_combo_amr": "bonds_rapier",
-            "eq_combo_acc": "bonds_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_none4",
             "meta": "【恋する料理人】アスナ asuna [made with love] 配布17アスナ gift17 asuna ★4 *4 アスナ asuna f 女性 @female 配布 event limited (gift) 2017 配布 gift 制限 restricted イベント event 無 none alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "e17_yuuki": {
@@ -18474,8 +18474,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "hatsu_mace",
-            "eq_combo_amr": "hatsu_mace",
-            "eq_combo_acc": "hatsu_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【天才クリエイター】ユウキ yuuki [genius creator] e17ユウキ e17 yuuki ★4 *4 ユウキ yuuki f 女性 @female イベント event limited 2017 イベント event 制限 restricted 風 wind alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up"
         },
         "swim_kirito": {
@@ -18542,8 +18542,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "pns_dual1",
-            "eq_combo_amr": "pns_dual1",
-            "eq_combo_acc": "pns_dual1",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【渚の南国少年】キリト kirito [tropical beach boy] 水着キリト ss kirito ★5 *5 キリト kirito m 男性 @male 常夏のトロピカル★ドリーム tropical ★ dream ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up 背後取り backstab バリア barrier s3switch s3スイッチ 連携 combination"
         },
         "swim_asuna": {
@@ -18610,8 +18610,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "yukata_dagger",
-            "eq_combo_amr": "yukata_dagger",
-            "eq_combo_acc": "yukata_dagger",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【常夏の恋人】アスナ asuna [tropical lover] 水着アスナ ss asuna ★4 *4 アスナ asuna f 女性 @female 常夏のトロピカル★ドリーム tropical ★ dream ガチャ gacha スカウト scout 土 earth alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up バリア barrier s3switch s3スイッチ"
         },
         "swim_yuuki": {
@@ -18678,8 +18678,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "hatsu_rapier",
-            "eq_combo_amr": "hatsu_rapier",
-            "eq_combo_acc": "hatsu_rapier",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_water6",
             "meta": "【ハツラツ夏色少女】ユウキ yuuki [sunny summer girl] 水着ユウキ ss yuuki ★4 *4 ユウキ yuuki f 女性 @female 常夏のトロピカル★ドリーム tropical ★ dream ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up バリア barrier s3switch s3スイッチ"
         },
         "swim_eugeo": {
@@ -18746,8 +18746,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_sword",
-            "eq_combo_amr": "sports_sword",
-            "eq_combo_acc": "sports_sword",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【波乗りボーイ】ユージオ eugeo [surfer] 水着ユージオ ss eugeo ★4 *4 ユージオ eugeo m 男性 @male 常夏のトロピカル★ドリーム tropical ★ dream ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up バリア barrier s3switch s3スイッチ"
         },
         "swim_alice": {
@@ -18814,8 +18814,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "trump_sword",
-            "eq_combo_amr": "trump_sword",
-            "eq_combo_acc": "trump_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【火照りの夏姫】アリス alice [summer princess] 水着アリス ss alice ★4 *4 アリス alice f 女性 @female 常夏のトロピカル★ドリーム tropical ★ dream ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up 背後取り backstab バリア barrier s3switch s3スイッチ"
         },
         "swimr_yuna": {
@@ -18882,8 +18882,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "hatsu_sword",
-            "eq_combo_amr": "hatsu_sword",
-            "eq_combo_acc": "hatsu_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【トロピカルdb】ユナ yuna [tropical db] 水着ユナ ss yuna ★4 *4 ユナ yuna f 女性 @female 常夏のトロピカル★ドリーム 報酬 tropical ★ dream reward 報酬 reward 制限 restricted 土 earth alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up グループ回復 pt回復 group heal 無敵 invincible"
         },
         "pns_yuuki": {
@@ -18950,8 +18950,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "pns_dual1",
-            "eq_combo_amr": "pns_dual1",
-            "eq_combo_acc": "pns_dual1",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【天昇の舞姫】ユウキ yuuki [celestial dancer] 織姫ユウキ pns yuuki ★5 *5 ユウキ yuuki f 女性 @female 織姫との逢瀬スカウト promised night of the stars ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal 無敵 invincible 選ばれし者 chosen 連携 combination"
         },
         "pns_philia": {
@@ -19018,8 +19018,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "hhn_dagger",
-            "eq_combo_amr": "hhn_dagger",
-            "eq_combo_acc": "hhn_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【再会の誓い】フィリア philia [promise of reunion] 織姫フィリア pns philia ★4 *4 フィリア philia f 女性 @female 織姫との逢瀬スカウト promised night of the stars ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal 無敵 invincible"
         },
         "pns_silica": {
@@ -19086,8 +19086,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "ninja_rapier1",
-            "eq_combo_amr": "ninja_rapier1",
-            "eq_combo_acc": "ninja_rapier1",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【星影の祈り】シリカ silica [starlight prayer] 織姫シリカ pns silica ★4 *4 シリカ silica f 女性 @female 織姫との逢瀬スカウト promised night of the stars ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal"
         },
         "yukata_asuna": {
@@ -19154,8 +19154,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "hatsu_rapier",
-            "eq_combo_amr": "hatsu_rapier",
-            "eq_combo_acc": "hatsu_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【夏夜を照らす枝垂柳】アスナ asuna [illuminating weeping willow] 浴衣アスナ yukata asuna ★4 *4 アスナ asuna f 女性 @female yukata night ～花火の下で～ yukata night ガチャ gacha スカウト scout 土 earth os ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "yukata_sinon": {
@@ -19222,8 +19222,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "yukata_gun",
-            "eq_combo_amr": "yukata_gun",
-            "eq_combo_acc": "yukata_gun",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【弾道に咲く朝顔】シノン sinon [fiery morning glory] 浴衣シノン yukata sinon ★4 *4 シノン sinon f 女性 @female yukata night ～花火の下で～ yukata night ガチャ gacha スカウト scout 土 earth os ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "yukata_suguha": {
@@ -19290,8 +19290,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "yukata_dagger",
-            "eq_combo_amr": "yukata_dagger",
-            "eq_combo_acc": "yukata_dagger",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【夕暮れに涼む萩】直葉 suguha [dusk lespedeza] 浴衣直葉 yukata suguha ★4 *4 直葉 suguha f 女性 @female yukata night ～花火の下で～ yukata night ガチャ gacha スカウト scout 土 earth os ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "yukata_seven": {
@@ -19358,8 +19358,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "steamy_lance",
-            "eq_combo_amr": "steamy_lance",
-            "eq_combo_acc": "steamy_lance",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【愛唱の百日草】セブン seven [zinnia melody] 浴衣セブン yukata seven ★4 *4 セブン seven f 女性 @female yukata night ～花火の下で～ yukata night ガチャ gacha スカウト scout 土 earth os ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン"
         },
         "yukata_rain": {
@@ -19426,8 +19426,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "yukata_dual1",
-            "eq_combo_amr": "yukata_dual1",
-            "eq_combo_acc": "yukata_dual1",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【吹き過ぐ桜楓】レイン rain [blossom shower] 浴衣レイン yukata rain ★5 *5 レイン rain f 女性 @female yukata night ～花火の下で～ yukata night ガチャ gacha スカウト scout 土 earth os ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン 連携 combination"
         },
         "kr_kirito": {
@@ -19494,8 +19494,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "fate_sword",
-            "eq_combo_amr": "fate_sword",
-            "eq_combo_acc": "fate_sword",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_none4",
             "meta": "【黒の天翼武士】キリト kirito [black wing] 韓キリト korea kirito ★4 *4 キリト kirito m 男性 @male 韓国版リリース記念 korea version release memorial 配布 gift 制限 restricted イベント event 無 none sao ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "summer_asuna": {
@@ -19562,8 +19562,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_rapier",
-            "eq_combo_amr": "sports_rapier",
-            "eq_combo_acc": "sports_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【癒しの夏美人】アスナ asuna [healing beauty] 夏色アスナ gals asuna ★4 *4 アスナ asuna f 女性 @female はじける★夏色ガール beaming summer gals ガチャ gacha スカウト scout 風 wind os ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal s3switch s3スイッチ"
         },
         "summer_suguha": {
@@ -19630,8 +19630,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "summer_lance",
-            "eq_combo_amr": "summer_lance",
-            "eq_combo_acc": "summer_lance",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【胸きゅん夏乙女】直葉 suguha [midsummer babe] 夏色直葉 gals suguha ★4 *4 直葉 suguha f 女性 @female はじける★夏色ガール beaming summer gals ガチャ gacha スカウト scout 闇 dark os ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal s3switch s3スイッチ"
         },
         "summer_sinon": {
@@ -19698,8 +19698,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "jr_gun",
-            "eq_combo_amr": "jr_gun",
-            "eq_combo_acc": "jr_gun",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_water6",
             "meta": "【いたずら夏ガール】シノン sinon [mischievous summer chick] 夏色シノン gals sinon ★4 *4 シノン sinon f 女性 @female はじける★夏色ガール beaming summer gals ガチャ gacha スカウト scout 水 water os ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal s3switch s3スイッチ"
         },
         "summer_lisbeth": {
@@ -19766,8 +19766,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "hatsu_mace",
-            "eq_combo_amr": "hatsu_mace",
-            "eq_combo_acc": "hatsu_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【太陽の夏娘】リズベット lisbeth [summer sunshine] 夏色リズ gals lisbeth ★4 *4 リズ lisbeth f 女性 @female はじける★夏色ガール beaming summer gals ガチャ gacha スカウト scout 火 fire os ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal s3switch s3スイッチ 選ばれし者 chosen"
         },
         "summer_silica": {
@@ -19834,8 +19834,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p2_dagger",
-            "eq_combo_amr": "x17p2_dagger",
-            "eq_combo_acc": "x17p2_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【ひまわり夏少女】シリカ silica [sunflower girl] 夏色シリカ gals silica ★4 *4 シリカ silica f 女性 @female はじける★夏色ガール beaming summer gals ガチャ gacha スカウト scout 光 light os ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up 自己回復 self heal s3switch s3スイッチ"
         },
         "isr_yui": {
@@ -19902,8 +19902,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "fate_sword",
-            "eq_combo_amr": "fate_sword",
-            "eq_combo_acc": "fate_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【本物の心】ユイ yui [true heart] saoユイ sao yui ★4 *4 ユイ yui f 女性 @female 憧れの歌姫 報酬 idol singer reward 報酬 reward 制限 restricted 無 none sao ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "festa_lisbeth": {
@@ -19970,8 +19970,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_sword",
-            "eq_combo_amr": "sports_sword",
-            "eq_combo_acc": "sports_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【商売上手な露天商】リズベット lisbeth [good street vendor] 祭リズ festa lisbeth ★4 *4 リズ lisbeth f 女性 @female 夏夜の祝祭 summer night festa ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up 自己回復 self heal super armor スーパーアーマー sa コンボ持続 combo duration up"
         },
         "festa_leafa": {
@@ -20038,8 +20038,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_rapier",
-            "eq_combo_amr": "sports_rapier",
-            "eq_combo_acc": "sports_rapier",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【夏宵の響声】リーファ leafa [summer night shout] 祭リーファ festa leafa ★4 *4 リーファ leafa f 女性 @female 夏夜の祝祭 summer night festa ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up 自己回復 self heal super armor スーパーアーマー sa コンボ持続 combo duration up"
         },
         "festa_premiere": {
@@ -20106,8 +20106,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_lance",
-            "eq_combo_amr": "sports_lance",
-            "eq_combo_acc": "sports_lance",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【神楽の舞い】プレミア premiere [kagura dance] 祭プレミア festa premiere ★4 *4 プレミア premiere f 女性 @female 夏夜の祝祭 summer night festa ガチャ gacha スカウト scout 風 wind sa0 ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up 自己回復 self heal super armor スーパーアーマー sa コンボ持続 combo duration up"
         },
         "jr_kirito": {
@@ -20174,8 +20174,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "snow_dual",
-            "eq_combo_amr": "snow_dual",
-            "eq_combo_acc": "snow_dual",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_water6",
             "meta": "【気高き船長】キリト kirito [lofty captain] 海賊キリト pirates kirito ★4 *4 キリト kirito m 男性 @male 嵐に靡くは海賊旗 jolly roger in the stormy sea ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "jr_asuna": {
@@ -20242,8 +20242,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "hatsu_rapier",
-            "eq_combo_amr": "hatsu_rapier",
-            "eq_combo_acc": "hatsu_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_water6",
             "meta": "【甲板を彩る副船長】アスナ asuna [gorgeous quartermaster] 海賊アスナ pirates asuna ★4 *4 アスナ asuna f 女性 @female 嵐に靡くは海賊旗 jolly roger in the stormy sea ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 無敵 invincible"
         },
         "jr_sinon": {
@@ -20310,8 +20310,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "jr_gun",
-            "eq_combo_amr": "jr_gun",
-            "eq_combo_acc": "jr_gun",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_water6",
             "meta": "【見張り台の名狙撃手】シノン sinon [great sniper on the lookout] 海賊シノン pirates sinon ★4 *4 シノン sinon f 女性 @female 嵐に靡くは海賊旗 jolly roger in the stormy sea ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "jr_leafa": {
@@ -20378,8 +20378,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "steamy_sword",
-            "eq_combo_amr": "steamy_sword",
-            "eq_combo_acc": "steamy_sword",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_water6",
             "meta": "【晴れやかなる航海士】リーファ leafa [radiant first mate] 海賊リーファ pirates leafa ★4 *4 リーファ leafa f 女性 @female 嵐に靡くは海賊旗 jolly roger in the stormy sea ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "jr_yuuki": {
@@ -20446,8 +20446,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "jr_dagger",
-            "eq_combo_amr": "jr_dagger",
-            "eq_combo_acc": "jr_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_water6",
             "meta": "【直感の操舵手】ユウキ yuuki [intuitive navigator] 海賊ユウキ pirates yuuki ★4 *4 ユウキ yuuki f 女性 @female 嵐に靡くは海賊旗 jolly roger in the stormy sea ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up"
         },
         "bonds_kirito": {
@@ -20514,8 +20514,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "bonds_dual",
-            "eq_combo_amr": "bonds_dual",
-            "eq_combo_acc": "bonds_dual",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_none4",
             "meta": "【システムを超える意志】キリト kirito [the will - transcending the system] 絆キリト bonds kirito ★5 *5 キリト kirito m 男性 @male 信頼の証 運命の絆 proof of trust bonds of fate ガチャ gacha スカウト scout 無 none sao ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "bonds_asuna": {
@@ -20582,8 +20582,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "hatsu_rapier",
-            "eq_combo_amr": "hatsu_rapier",
-            "eq_combo_acc": "hatsu_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_none4",
             "meta": "【運命を変える意思】アスナ asuna [the will - changing the fate] 絆アスナ bonds asuna ★5 *5 アスナ asuna f 女性 @female 信頼の証 運命の絆 proof of trust bonds of fate ガチャ gacha スカウト scout 無 none sao ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up 選ばれし者 chosen コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "bonds_leafa": {
@@ -20650,8 +20650,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_sword",
-            "eq_combo_amr": "sports_sword",
-            "eq_combo_acc": "sports_sword",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【想いと向き合いし剣士】リーファ leafa [the blade - facing the feelings] 絆リーファ bonds leafa ★5 *5 リーファ leafa f 女性 @female 信頼の証 運命の絆 proof of trust bonds of fate ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "bonds_sinon": {
@@ -20718,8 +20718,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "hatsu_bow",
-            "eq_combo_amr": "hatsu_bow",
-            "eq_combo_acc": "hatsu_bow",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_water6",
             "meta": "【過去を克服せし射手】シノン sinon [the archer - overcoming the past] 絆シノン bonds sinon ★5 *5 シノン sinon f 女性 @female 信頼の証 運命の絆 proof of trust bonds of fate ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up 選ばれし者 chosen コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "cm_eugeo": {
@@ -20786,8 +20786,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "steamy_sword",
-            "eq_combo_amr": "steamy_sword",
-            "eq_combo_acc": "steamy_sword",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_water6",
             "meta": "【精悍なる刑事】ユージオ eugeo [intrepid detective] cmユージオ cm eugeo ★5 *5 ユージオ eugeo m 男性 @male cm記念配布 cm memorial gift 配布 gift 制限 restricted イベント event 水 water uw ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "bondsr_heathcliff": {
@@ -20854,8 +20854,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_sword",
-            "eq_combo_amr": "x17p1_sword",
-            "eq_combo_acc": "x17p1_sword",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【神聖剣】ヒースクリフ heathcliff [holy sword] sao団長 sao heathcliff ★5 *5 団長 heathcliff m 男性 @male 攻略戦！強き絆の証 報酬 assault! proof of strong bonds reward 報酬 reward 制限 restricted 光 light sao ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up 選ばれし者 chosen コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "c_alice": {
@@ -20922,8 +20922,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "hatsu_sword",
-            "eq_combo_amr": "hatsu_sword",
-            "eq_combo_acc": "hatsu_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【金木犀の整合騎士】アリス alice [fragrant olive integrity knight] cアリス c alice ★5 *5 アリス alice f 女性 @female 巡る世界に重ねた剣 the world spins with swords ガチャ gacha スカウト scout 土 earth uw ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "c_eugeo": {
@@ -20990,8 +20990,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "steamy_sword",
-            "eq_combo_amr": "steamy_sword",
-            "eq_combo_acc": "steamy_sword",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_water6",
             "meta": "【青薔薇の整合騎士】ユージオ eugeo [blue rose integrity knight] cユージオ c eugeo ★5 *5 ユージオ eugeo m 男性 @male 巡る世界に重ねた剣 the world spins with swords ガチャ gacha スカウト scout 水 water uw ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "cm_kirito": {
@@ -21058,8 +21058,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "bonds_dual",
-            "eq_combo_amr": "bonds_dual",
-            "eq_combo_acc": "bonds_dual",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_none4",
             "meta": "【365日】キリト kirito [365 days] cmキリト cm kirito ★5 *5 キリト kirito m 男性 @male cm記念配布 cm memorial gift 配布 gift 制限 restricted イベント event 無 none sao ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "friends_asuna": {
@@ -21126,8 +21126,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "hatsu_rapier",
-            "eq_combo_amr": "hatsu_rapier",
-            "eq_combo_acc": "hatsu_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_water6",
             "meta": "【心を継ぎし水妖精】アスナ asuna [heartful water fairy] 友アスナ friends asuna ★5 *5 アスナ asuna f 女性 @female 過ぎゆく時と友情の記憶 memory of friendship & passing of time ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "friends_yuuki": {
@@ -21194,8 +21194,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "hatsu_sword",
-            "eq_combo_amr": "hatsu_sword",
-            "eq_combo_acc": "hatsu_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【望みを遂げし剣豪】ユウキ yuuki [wish granter] 友ユウキ friends yuuki ★5 *5 ユウキ yuuki f 女性 @female 過ぎゆく時と友情の記憶 memory of friendship & passing of time ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "friends_silica": {
@@ -21262,8 +21262,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "friends_dagger",
-            "eq_combo_amr": "friends_dagger",
-            "eq_combo_acc": "friends_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【無邪気な笑顔の守護者】シリカ silica [ingenous guardian] 友シリカ friends silica ★5 *5 シリカ silica f 女性 @female 過ぎゆく時と友情の記憶 memory of friendship & passing of time ガチャ gacha スカウト scout 無 none sao ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "friends_lisbeth": {
@@ -21330,8 +21330,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "hatsu_mace",
-            "eq_combo_amr": "hatsu_mace",
-            "eq_combo_acc": "hatsu_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_none4",
             "meta": "【調和を守りし者】リズベット lisbeth [harmony keeper] 友リズ friends lisbeth ★5 *5 リズ lisbeth f 女性 @female 過ぎゆく時と友情の記憶 memory of friendship & passing of time ガチャ gacha スカウト scout 無 none sao ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "os3_klein": {
@@ -21398,8 +21398,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "fate_sword",
-            "eq_combo_amr": "fate_sword",
-            "eq_combo_acc": "fate_sword",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_none4",
             "meta": "【折れない心】クライン klein [strong mind] osクライン os klein ★5 *5 クライン klein m 男性 @male 漢達の狂宴 chivalric men's uproarious banquet ガチャ gacha スカウト scout 無 none os ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "os3_agil": {
@@ -21466,8 +21466,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "hatsu_mace",
-            "eq_combo_amr": "hatsu_mace",
-            "eq_combo_acc": "hatsu_mace",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_none4",
             "meta": "【結束の力】エギル agil [band together] osハゲ os agil ★5 *5 ハゲ agil m 男性 @male 漢達の狂宴 chivalric men's uproarious banquet ガチャ gacha スカウト scout 無 none os ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "moonlight_kirito": {
@@ -21534,8 +21534,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "pns_dual1",
-            "eq_combo_amr": "pns_dual1",
-            "eq_combo_acc": "pns_dual1",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【生き血を捧げよ】キリト kirito [offer lifeblood] 月夜キリト moonlight kirito ★5 *5 キリト kirito m 男性 @male 月夜のハロウィンパレード moonlight halloween parade ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "moonlight_eugeo": {
@@ -21602,8 +21602,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "hatsu_sword",
-            "eq_combo_amr": "hatsu_sword",
-            "eq_combo_acc": "hatsu_sword",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【月夜に咆えろ】ユージオ eugeo [howl at the moon] 月夜ユージオ moonlight eugeo ★5 *5 ユージオ eugeo m 男性 @male 月夜のハロウィンパレード moonlight halloween parade ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "moonlight_asuna": {
@@ -21670,8 +21670,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "ninja_staff",
-            "eq_combo_amr": "ninja_staff",
-            "eq_combo_acc": "ninja_staff",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【真夜中の誘惑】アスナ asuna [midnight temptation] 月夜アスナ moonlight asuna ★5 *5 アスナ asuna f 女性 @female 月夜のハロウィンパレード moonlight halloween parade ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 魔 magic コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "moonlight_alice": {
@@ -21738,8 +21738,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "hatsu_sword",
-            "eq_combo_amr": "hatsu_sword",
-            "eq_combo_acc": "hatsu_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【カボチャの騎士】アリス alice [pumpkin knight] 月夜アリス moonlight alice ★5 *5 アリス alice f 女性 @female 月夜のハロウィンパレード moonlight halloween parade ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "moonlightr_lisbeth": {
@@ -21806,8 +21806,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "summer_lance",
-            "eq_combo_amr": "summer_lance",
-            "eq_combo_acc": "summer_lance",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【お菓子なハロウィン】リズベット lisbeth [wacky happy halloween] 月夜リズ moonlight lisbeth ★5 *5 リズ lisbeth f 女性 @female 魔城の凶星 報酬 the malefic star of the magic citadel reward 報酬 reward 制限 restricted 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "hhn_yuuki": {
@@ -21874,8 +21874,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "hatsu_mace",
-            "eq_combo_amr": "hatsu_mace",
-            "eq_combo_acc": "hatsu_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【恋するヴァンパイア】ユウキ yuuki [vampire in love] 悪戯ユウキ hhn yuuki ★5 *5 ユウキ yuuki f 女性 @female いたずらハロウィンナイト happy halloween night ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "hhn_leafa": {
@@ -21942,8 +21942,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "hatsu_rapier",
-            "eq_combo_amr": "hatsu_rapier",
-            "eq_combo_acc": "hatsu_rapier",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【心優しいモンスター】リーファ leafa [sweet monster] 悪戯リーファ hhn leafa ★5 *5 リーファ leafa f 女性 @female いたずらハロウィンナイト happy halloween night ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal 選ばれし者 chosen コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "hhn_sinon": {
@@ -22010,8 +22010,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "hhn_gun",
-            "eq_combo_amr": "hhn_gun",
-            "eq_combo_acc": "hhn_gun",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【スパイダーウィッチ】シノン sinon [spider witch] 悪戯シノン hhn sinon ★5 *5 シノン sinon f 女性 @female いたずらハロウィンナイト happy halloween night ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "hhn_silica": {
@@ -22078,8 +22078,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_dark4",
             "eq_combo_wep": "hhn_dagger",
-            "eq_combo_amr": "hhn_dagger",
-            "eq_combo_acc": "hhn_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_dark4",
             "meta": "【魔女っ娘にゃんこ】シリカ silica [witchy kitty] 悪戯シリカ hhn silica ★5 *5 シリカ silica f 女性 @female いたずらハロウィンナイト happy halloween night ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "sports_asuna": {
@@ -22146,8 +22146,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_rapier",
-            "eq_combo_amr": "sports_rapier",
-            "eq_combo_acc": "sports_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【華麗なるゴール】アスナ asuna [reach the finish line] 運動アスナ sports asuna ★5 *5 アスナ asuna f 女性 @female 友情のバトン！ 秋の大運動会 baton of friendship! sports festival ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 無敵 invincible コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "sports_yui": {
@@ -22214,8 +22214,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_dagger",
-            "eq_combo_amr": "sports_dagger",
-            "eq_combo_acc": "sports_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【いっとうしょうを目指して】ユイ yui [go for the top] 運動ユイ sports yui ★5 *5 ユイ yui f 女性 @female 友情のバトン！ 秋の大運動会 baton of friendship! sports festival ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 無敵 invincible コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "sports_leafa": {
@@ -22282,8 +22282,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_sword",
-            "eq_combo_amr": "sports_sword",
-            "eq_combo_acc": "sports_sword",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【輝く汗と青春の光】リーファ leafa [flush of youth] 運動リーファ sports leafa ★5 *5 リーファ leafa f 女性 @female 友情のバトン！ 秋の大運動会 baton of friendship! sports festival ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "sports_lisbeth": {
@@ -22350,8 +22350,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_lance",
-            "eq_combo_amr": "sports_lance",
-            "eq_combo_acc": "sports_lance",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【ネバー・ギブアップ】リズベット lisbeth [never give up] 運動リズ sports lisbeth ★5 *5 リズ lisbeth f 女性 @female 友情のバトン！ 秋の大運動会 baton of friendship! sports festival ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "nycc_kirito": {
@@ -22418,8 +22418,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "hatsu_sword",
-            "eq_combo_amr": "hatsu_sword",
-            "eq_combo_acc": "hatsu_sword",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【荒野の一匹狼】キリト kirito [lone wolf in the wild] nyキリト nycc kirito ★5 *5 キリト kirito m 男性 @male nycc記念 nycc memorial 配布 gift 制限 restricted イベント event 土 earth alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "groom_kirito": {
@@ -22486,8 +22486,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_sword",
-            "eq_combo_amr": "x17p1_sword",
-            "eq_combo_acc": "x17p1_sword",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【あの日の約束】キリト kirito [promise at that time] 婿キリト groom kirito ★5 *5 キリト kirito m 男性 @male キリト&アスナ結婚記念日 kirito & asuna wedding anniversary ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "steamy_asuna": {
@@ -22554,8 +22554,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_rapier",
-            "eq_combo_amr": "x17p1_rapier",
-            "eq_combo_acc": "x17p1_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【艶肌の女神】アスナ asuna [the glossy goddess] 湯煙アスナ steamy asuna ★5 *5 アスナ asuna f 女性 @female どきどき 湯けむり美人の湯 steamy beauty bath time ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up バリア barrier コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "steamy_sinon": {
@@ -22622,8 +22622,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "steamy_lance",
-            "eq_combo_amr": "steamy_lance",
-            "eq_combo_acc": "steamy_lance",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【見返り美人】シノン sinon [looking back beauty] 湯煙シノン steamy sinon ★5 *5 シノン sinon f 女性 @female どきどき 湯けむり美人の湯 steamy beauty bath time ガチャ gacha スカウト scout 土 earth alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up バリア barrier コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "steamy_leafa": {
@@ -22690,8 +22690,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "steamy_sword",
-            "eq_combo_amr": "steamy_sword",
-            "eq_combo_acc": "steamy_sword",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_water6",
             "meta": "【秘湯べっぴん】リーファ leafa [beauty secluded in hot springs] 湯煙リーファ steamy leafa ★5 *5 リーファ leafa f 女性 @female どきどき 湯けむり美人の湯 steamy beauty bath time ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up バリア barrier コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "steamy_silica": {
@@ -22758,8 +22758,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "steamy_dagger",
-            "eq_combo_amr": "steamy_dagger",
-            "eq_combo_acc": "steamy_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【紅葉の湯美人】シリカ silica [autumn leaf bath beauty] 湯煙シリカ steamy silica ★5 *5 シリカ silica f 女性 @female どきどき 湯けむり美人の湯 steamy beauty bath time ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up バリア barrier コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "steamyr_strea": {
@@ -22826,8 +22826,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "hatsu_mace",
-            "eq_combo_amr": "hatsu_mace",
-            "eq_combo_acc": "hatsu_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【溢れる名湯】ストレア strea [abounding spring water] 湯煙ストレア steamy strea ★4 *4 ストレア strea f 女性 @female どきどき 湯けむり美人の湯 報酬 steamy beauty bath time reward 報酬 reward 制限 restricted 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "pb_kirito": {
@@ -22894,8 +22894,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "fate_sword",
-            "eq_combo_amr": "fate_sword",
-            "eq_combo_acc": "fate_sword",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_none4",
             "meta": "【荒野に降り立つ剣士】キリト kirito [swordsman in the wilderness] pbキリト pb kirito ★5 *5 キリト kirito m 男性 @male 幻影の弾丸が繋ぐ二人の絆 the two - bonded by phantom bullets scout ガチャ gacha スカウト scout 無 none ggo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up クリティカル保証 critical ensure ensuring 無敵 invincible 選ばれし者 chosen コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "pb_sinon": {
@@ -22962,8 +22962,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "pb_gun",
-            "eq_combo_amr": "pb_gun",
-            "eq_combo_acc": "pb_gun",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_none4",
             "meta": "【思慕を寄せる狙撃手】シノン sinon [sniper in love] pbシノン pb sinon ★5 *5 シノン sinon f 女性 @female 幻影の弾丸が繋ぐ二人の絆 the two - bonded by phantom bullets scout ガチャ gacha スカウト scout 無 none ggo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up クリティカル保証 critical ensure ensuring 無敵 invincible コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "trump_kirito": {
@@ -23030,8 +23030,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "trump_dual",
-            "eq_combo_amr": "trump_dual",
-            "eq_combo_acc": "trump_dual",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【ポーカー・キング】キリト kirito [the king of poker] 切札キリト trump kirito ★5 *5 キリト kirito m 男性 @male 紅蓮の切り札 the crimson trump card ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 選ばれし者 chosen コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "trump_asuna": {
@@ -23098,8 +23098,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "trump_rapier",
-            "eq_combo_amr": "trump_rapier",
-            "eq_combo_acc": "trump_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【レッドハート・クイーン】アスナ asuna [the queen of hearts] 切札アスナ trump asuna ★5 *5 アスナ asuna f 女性 @female 紅蓮の切り札 the crimson trump card ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "trump_yuuki": {
@@ -23166,8 +23166,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "trump_sword",
-            "eq_combo_amr": "trump_sword",
-            "eq_combo_acc": "trump_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【バニー・エース】ユウキ yuuki [the bunny ace] 切札ユウキ trump yuuki ★5 *5 ユウキ yuuki f 女性 @female 紅蓮の切り札 the crimson trump card ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "trump_sinon": {
@@ -23234,8 +23234,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "trump_bow",
-            "eq_combo_amr": "trump_bow",
-            "eq_combo_acc": "trump_bow",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【ワイルド・ジョーカー】シノン sinon [the wild joker] 切札シノン trump sinon ★5 *5 シノン sinon f 女性 @female 紅蓮の切り札 the crimson trump card ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "kg_asuna": {
@@ -23302,8 +23302,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "bonds_rapier",
-            "eq_combo_amr": "bonds_rapier",
-            "eq_combo_acc": "bonds_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_none4",
             "meta": "【舞い踊る韓紅花】アスナ asuna [dancing rose red] 韓アスナ korea asuna ★5 *5 アスナ asuna f 女性 @female g-star記念 g-star memorial 配布 gift 制限 restricted イベント event 無 none sao ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "x17p1_asuna": {
@@ -23370,8 +23370,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_rapier",
-            "eq_combo_amr": "x17p1_rapier",
-            "eq_combo_acc": "x17p1_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【サンタの贈り物】アスナ asuna [gift from santa] x17アスナ x17 asuna ★5 *5 アスナ asuna f 女性 @female 聖夜の銀花が奏でし音色 white christmas - footsteps in the snow ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "x17p1_leafa": {
@@ -23438,8 +23438,8 @@
             "eq_atk_amr": "f_wind3",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_staff",
-            "eq_combo_amr": "x17p1_staff",
-            "eq_combo_acc": "x17p1_staff",
+            "eq_combo_amr": "f_wind3",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【雪夜の訪問者】リーファ leafa [visitor in snow] x17リーファ x17 leafa ★5 *5 リーファ leafa f 女性 @female 聖夜の銀花が奏でし音色 white christmas - footsteps in the snow ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 魔 magic コンボダメージアップ combo damage up 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "x17p1_alice": {
@@ -23506,8 +23506,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_sword",
-            "eq_combo_amr": "x17p1_sword",
-            "eq_combo_acc": "x17p1_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【聖夜の高鳴り】アリス alice [excitement on christmas eve] x17アリス x17 alice ★5 *5 アリス alice f 女性 @female 聖夜の銀花が奏でし音色 white christmas - footsteps in the snow ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン 選ばれし者 chosen コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "x17p1_eugeo": {
@@ -23574,8 +23574,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_sword",
-            "eq_combo_amr": "x17p1_sword",
-            "eq_combo_acc": "x17p1_sword",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【あわてんぼうトナカイ】ユージオ eugeo [hasty reindeer] x17ユージオ x17 eugeo ★5 *5 ユージオ eugeo m 男性 @male 聖夜の銀花が奏でし音色 white christmas - footsteps in the snow ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "x17r_rain": {
@@ -23642,8 +23642,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "xmas_dual",
-            "eq_combo_amr": "xmas_dual",
-            "eq_combo_acc": "xmas_dual",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【君だけのサンタさん】レイン rain [personal santa] x17レイン x17 rain ★5 *5 レイン rain f 女性 @female 聖夜の銀花が奏でし音色 報酬 white christmas - footsteps in the snow reward 報酬 reward 制限 restricted 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン コンボ持続 combo duration up 連携 combination"
         },
         "x17r_seven": {
@@ -23710,8 +23710,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_lance",
-            "eq_combo_amr": "sports_lance",
-            "eq_combo_acc": "sports_lance",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【サンタが訪れる夜】セブン seven [santa is coming] x17セブン x17 seven ★5 *5 セブン seven f 女性 @female 聖夜の銀花が奏でし音色 報酬 white christmas - footsteps in the snow reward 報酬 reward 制限 restricted 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン コンボ持続 combo duration up 連携 combination"
         },
         "snow_kirito": {
@@ -23778,8 +23778,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "snow_dual",
-            "eq_combo_amr": "snow_dual",
-            "eq_combo_acc": "snow_dual",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_water6",
             "meta": "【雪道の案内人】キリト kirito [guide in snow] 粉雪キリト snow kirito ★5 *5 キリト kirito m 男性 @male 心に降る約束の粉雪 my heart's snowfall ガチャ gacha スカウト scout 水 water sao ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal s3switch s3スイッチ コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "snow_sachi": {
@@ -23846,8 +23846,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "snow_lance",
-            "eq_combo_amr": "snow_lance",
-            "eq_combo_acc": "snow_lance",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_water6",
             "meta": "【雪花の祝福】サチ sachi [snow blessings] 粉雪サチ snow sachi ★5 *5 サチ sachi f 女性 @female 心に降る約束の粉雪 my heart's snowfall ガチャ gacha スカウト scout 水 water sao ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal s3switch s3スイッチ コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "x17p2_sinon": {
@@ -23914,8 +23914,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p2_bow",
-            "eq_combo_amr": "x17p2_bow",
-            "eq_combo_acc": "x17p2_bow",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【スノー・スナイパー】シノン sinon [snow sniper] x17シノン x17 sinon ★5 *5 シノン sinon f 女性 @female 星降る夜の妖精サンタ starry night fairy santa ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up"
         },
         "x17p2_lisbeth": {
@@ -23982,8 +23982,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p2_mace",
-            "eq_combo_amr": "x17p2_mace",
-            "eq_combo_acc": "x17p2_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【雪に舞う想い】リズベット lisbeth [thoughts on snowfall] x17リズ x17 lisbeth ★5 *5 リズ lisbeth f 女性 @female 星降る夜の妖精サンタ starry night fairy santa ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up"
         },
         "x17p2_silica": {
@@ -24050,8 +24050,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p2_dagger",
-            "eq_combo_amr": "x17p2_dagger",
-            "eq_combo_acc": "x17p2_dagger",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【ホーリー・テイマー】シリカ silica [holy tamer] x17シリカ x17 silica ★5 *5 シリカ silica f 女性 @female 星降る夜の妖精サンタ starry night fairy santa ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up"
         },
         "x17p2_yuuki": {
@@ -24118,8 +24118,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "x17p1_sword",
-            "eq_combo_amr": "x17p1_sword",
-            "eq_combo_acc": "x17p1_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【クリスマスの奇跡】ユウキ yuuki [chistmas miracle] x17ユウキ x17 yuuki ★5 *5 ユウキ yuuki f 女性 @female 星降る夜の妖精サンタ starry night fairy santa ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up"
         },
         "fate_kirito": {
@@ -24186,8 +24186,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "fate_sword",
-            "eq_combo_amr": "fate_sword",
-            "eq_combo_acc": "fate_sword",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_none4",
             "meta": "【血盟騎士団】キリト kirito [knights of the blood] 宿命キリト fate kirito ★5 *5 キリト kirito m 男性 @male 譲らぬ意思 宿命の対決 fateful showdown - sticking to their guns ガチャ gacha スカウト scout 無 none sao ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up クリティカル保証 critical ensure ensuring 無敵 invincible 選ばれし者 chosen コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "fate_heathcliff": {
@@ -24254,8 +24254,8 @@
             "eq_atk_amr": "m_light1",
             "eq_atk_acc": "mf_none4",
             "eq_combo_wep": "fate_sword",
-            "eq_combo_amr": "fate_sword",
-            "eq_combo_acc": "fate_sword",
+            "eq_combo_amr": "m_light1",
+            "eq_combo_acc": "mf_none4",
             "meta": "【絶対防御】ヒースクリフ heathcliff [ultimate defence] 宿命団長 fate heathcliff ★5 *5 団長 heathcliff m 男性 @male 譲らぬ意思 宿命の対決 fateful showdown - sticking to their guns ガチャ gacha スカウト scout 無 none sao ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up クリティカル保証 critical ensure ensuring 無敵 invincible 選ばれし者 chosen コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "dog_asuna": {
@@ -24322,8 +24322,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "hatsu_mace",
-            "eq_combo_amr": "hatsu_mace",
-            "eq_combo_acc": "hatsu_mace",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【忠実な愛】アスナ asuna [constant love] 戌アスナ dog asuna ★5 *5 アスナ asuna f 女性 @female 年越し! ログインキャンペーン new year's eve log-in cp 配布 gift 制限 restricted イベント event 土 earth sao ダメージ アップ damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up"
         },
         "hatsu_asuna": {
@@ -24390,8 +24390,8 @@
             "eq_atk_amr": "f_none4",
             "eq_atk_acc": "mf_water6",
             "eq_combo_wep": "hatsu_rapier",
-            "eq_combo_amr": "hatsu_rapier",
-            "eq_combo_acc": "hatsu_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_water6",
             "meta": "【絵馬に込めた願い事】アスナ asuna [votive prayers] 初詣アスナ hatsumoude asuna ★5 *5 アスナ asuna f 女性 @female 晴れ着でウキウキ初詣♪ happy hatsumoude in kimono♪ ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up バリア barrier s3switch s3スイッチ コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "hatsu_alice": {
@@ -24458,8 +24458,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "sports_sword",
-            "eq_combo_amr": "sports_sword",
-            "eq_combo_acc": "sports_sword",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【かじかんだ手で鈴の音を】アリス alice [ring the bell] 初詣アリス hatsumoude alice ★5 *5 アリス alice f 女性 @female 晴れ着でウキウキ初詣♪ happy hatsumoude in kimono♪ ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up バリア barrier s3switch s3スイッチ コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "hatsu_sinon": {
@@ -24526,8 +24526,8 @@
             "eq_atk_amr": "f_none6",
             "eq_atk_acc": "mf_fire6",
             "eq_combo_wep": "trump_bow",
-            "eq_combo_amr": "trump_bow",
-            "eq_combo_acc": "trump_bow",
+            "eq_combo_amr": "f_none6",
+            "eq_combo_acc": "mf_fire6",
             "meta": "【羽子板にぶつける想い】シノン sinon [swing a battledore with love] 初詣シノン hatsumoude sinon ★5 *5 シノン sinon f 女性 @female 晴れ着でウキウキ初詣♪ happy hatsumoude in kimono♪ ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up バリア barrier s3switch s3スイッチ コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "hatsu_lisbeth": {
@@ -24594,8 +24594,8 @@
             "eq_atk_amr": "f_none7",
             "eq_atk_acc": "mf_wind5",
             "eq_combo_wep": "hatsu_mace",
-            "eq_combo_amr": "hatsu_mace",
-            "eq_combo_acc": "hatsu_mace",
+            "eq_combo_amr": "f_none7",
+            "eq_combo_acc": "mf_wind5",
             "meta": "【羽根と心は初空に】リズベット lisbeth [fly a shuttlecock with my heart] 初詣リズ hatsumoude lisbeth ★5 *5 リズ lisbeth f 女性 @female 晴れ着でウキウキ初詣♪ happy hatsumoude in kimono♪ ガチャ gacha スカウト scout 土 earth alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up バリア barrier s3switch s3スイッチ コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "g1_kirito": {
@@ -24662,7 +24662,7 @@
             "eq_atk_amr": "mf_water",
             "eq_atk_acc": "mf_dark3",
             "eq_combo_wep": "os_sword",
-            "eq_combo_amr": "os_sword",
+            "eq_combo_amr": "mf_water",
             "eq_combo_acc": "mf_dark3",
             "meta": "【下の句コネクト】キリト kirito [haiku composer] g1キリト g1 kirito ★4 *4 キリト kirito m 男性 @male グローバルスカウト global scout 報酬 reward 制限 restricted 闇 dark ggo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up super armor スーパーアーマー sa"
         },
@@ -24730,7 +24730,7 @@
             "eq_atk_amr": "mf_water",
             "eq_atk_acc": "mf_none6",
             "eq_combo_wep": "os_rapier",
-            "eq_combo_amr": "os_rapier",
+            "eq_combo_amr": "mf_water",
             "eq_combo_acc": "mf_none6",
             "meta": "【星条旗を胸に】アスナ asuna [stars and stripes] g1アスナ g1 asuna ★4 *4 アスナ asuna f 女性 @female グローバルスカウト global scout 報酬 reward 制限 restricted 無 none sao ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up super armor スーパーアーマー sa"
         },
@@ -24798,7 +24798,7 @@
             "eq_atk_amr": "mf_water",
             "eq_atk_acc": "mf_water4",
             "eq_combo_wep": "os_sword",
-            "eq_combo_amr": "os_sword",
+            "eq_combo_amr": "mf_water",
             "eq_combo_acc": "mf_water4",
             "meta": "【水遊びのディアンドル】リーファ leafa [splash in dirndl] g1リーファ g1 leafa ★4 *4 リーファ leafa f 女性 @female グローバルスカウト global scout 報酬 reward 制限 restricted 水 water alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up super armor スーパーアーマー sa"
         },
@@ -24866,7 +24866,7 @@
             "eq_atk_amr": "mf_water",
             "eq_atk_acc": "mf_fire",
             "eq_combo_wep": "os_dagger",
-            "eq_combo_amr": "os_dagger",
+            "eq_combo_amr": "mf_water",
             "eq_combo_acc": "mf_fire",
             "meta": "【チャイナドレスの看板娘】シリカ silica [girl in chinese dress] g1シリカ g1 silica ★4 *4 シリカ silica f 女性 @female グローバルスカウト global scout 報酬 reward 制限 restricted 火 fire alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up super armor スーパーアーマー sa"
         },
@@ -24934,7 +24934,7 @@
             "eq_atk_amr": "mf_water",
             "eq_atk_acc": "mf_earth",
             "eq_combo_wep": "os_gun",
-            "eq_combo_amr": "os_gun",
+            "eq_combo_amr": "mf_water",
             "eq_combo_acc": "mf_earth",
             "meta": "【いったいだれなんだ・・・】シノン sinon [secret] g1シノン g1 sinon ★4 *4 シノン sinon f 女性 @female グローバルスカウト global scout 報酬 reward 制限 restricted 土 earth alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up super armor スーパーアーマー sa"
         }
