@@ -389,11 +389,7 @@ function calcRanking() {
             var c = cs[j];
             var dcv;
             if (clvr.r > 0) { // weapon & armor, accessory
-                if(boss.combo>0){
-                    dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_combo_wep, clvr.r, c.eq_combo_amr, c.eq_combo_acc, boss);
-                } else {
-                    dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
-                }
+                dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
             } else { // no weapon & armor, accessory
                 dcv = DC.calcDamage(c, clvr.lv, 4, undefined, clvr.r, undefined, undefined, boss);
             }
@@ -513,9 +509,6 @@ function getCharDetail(id) {
     html += getKVTableRow('MP Weapon', c.eq_mp_wep[name_key]);
     html += getKVTableRow('MP Armor', c.eq_mp_amr[name_key]);
     html += getKVTableRow('MP Accessory', c.eq_mp_acc[name_key]);
-    html += getKVTableRow('Combo Atk Weapon', c.eq_combo_wep[name_key]);
-    html += getKVTableRow('Combo Atk Armor', c.eq_combo_amr[name_key]);
-    html += getKVTableRow('Combo Atk Accessory', c.eq_combo_acc[name_key]);
 
     html += getKVTableRow('Character Atk', Math.floor(dcv.sv.atk_c));
     html += getKVTableRow('Equipment Atk', Math.floor(dcv.sv.atk_eq));
