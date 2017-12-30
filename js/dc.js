@@ -130,8 +130,15 @@ var DC = (function () {
         var cmod = Expression.eval(boss.condition.expression, exp_obj) ? boss.condition.values.mod : 0;
 
         var combo = Math.floor(boss.combo / 10) * 0.05;
-        if (boss.combo > 20) { combo += sv.c.combo_damage_20; }
-        if (boss.combo > 30) { combo += sv.c.combo_damage_30; }
+        if (boss.combo >= 20) {
+            combo += sv.c.combo_damage_20;
+            if (wep) {
+                combo += wep.c20_bs_cri_dmg;
+            }
+        }
+        if (boss.combo >= 30) {
+            combo += sv.c.combo_damage_30;
+        }
 
         var mod = Math.min(combo + sve.mod_dmg + emod + dtmod + boss.repRate + boss.racc + boss.etcMod + cmod, boss.limit);
         if (boss.crit > 0) {
