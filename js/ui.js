@@ -486,7 +486,7 @@ function calcDCVForChar(oc, clvr) {
         dcv = allWepCombos[0];
 
     } else if (clvr.r > 0) { // weapon & armor, accessory
-        dcv = DC.calcDamage(oc, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
+        dcv = DC.calcDamage(oc, clvr.lv, 4, oc.eq_atk_wep, oclvr.r, oc.eq_atk_amr, oc.eq_atk_acc, boss);
     } else { // no weapon & armor, accessory
         dcv = DC.calcDamage(oc, clvr.lv, 4, undefined, clvr.r, undefined, undefined, boss);
     }
