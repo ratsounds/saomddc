@@ -50,6 +50,7 @@ myWeapons = [
     { id: "steamy_dagger", name_en: "", r: 4},
     { id: "trump_dual", name_en: "", r: 4},
     { id: "cosplay_lance", name_en: "", r: 4},
+    { id: "hatsu_mace", name_en: "", r: 4},
 ];
 // Use id or name_en for character identification. id is slightly quicker at startup.
 myUnits = [
@@ -89,6 +90,7 @@ myUnits = [
     { id: "cheer_sinon", name_en: "", lv: 80},
     { id: "e16_sachi", name_en: "", lv: 80},
     { id: "dog_asuna", name_en: "", lv: 80},
+    { id: "steamy_asuna", name_en: "", lv: 80},
 ];
 
 // Start integration from ui.js
