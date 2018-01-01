@@ -421,7 +421,7 @@ function calcRanking() {
 
     for (var i in lvr) {
         var clvr = lvr[i];
-
+        
         if (useMy.chars) {
             for (var my in myUnits) {
                 var myUnit = myUnits[my];
@@ -619,6 +619,9 @@ function getCharDetail(id) {
     html += getKVTableRow('MP Weapon', c.eq_mp_wep[name_key]);
     html += getKVTableRow('MP Armor', c.eq_mp_amr[name_key]);
     html += getKVTableRow('MP Accessory', c.eq_mp_acc[name_key]);
+    html += getKVTableRow('Combo Atk Weapon', c.eq_combo_wep[name_key]);
+    html += getKVTableRow('Combo Atk Armor', c.eq_combo_amr[name_key]);
+    html += getKVTableRow('Combo Atk Accessory', c.eq_combo_acc[name_key]);
 
     html += getKVTableRow('Character Atk', Math.floor(dcv.sv.atk_c));
     html += getKVTableRow('Equipment Atk', Math.floor(dcv.sv.atk_eq));

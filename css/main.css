@@ -181,6 +181,13 @@ p {
       -ms-flex-align: center;
           align-items: center;
 }
+#control .grid {
+  display: grid;
+  grid-template-columns: 2em 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+#control .grid div {
+  display: none;
+}
 #control div.control_wrapper{
   padding: 0;
 }
@@ -213,7 +220,7 @@ p {
 }
 
 input, button, textarea, select, label {
-  margin: 0.2em 0.1em;
+  margin: 0.1em 0.1em;
   background: none;
   background-color: rgba(0,0,0,0.1);
   color:inherit;
@@ -260,7 +267,7 @@ button{
   background-repeat: no-repeat;
   background-size: auto 80% ;
   background-color: #888;
-  width: 2.5em;
+  min-width: 2.5em;
   height: 2.5em;
   cursor: pointer;
 }
