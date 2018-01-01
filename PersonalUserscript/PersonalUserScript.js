@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ratsounds Own Units & Weps
 // @namespace    http://tampermonkey.net/
-// @version      1.4
+// @version      1.5
 // @description  Filters your own units with their own lvl + your own weapons and their rarity if set to true in the useMyWeapons function
 // @author       Zehnzen
 // @match        https://ratsounds.github.io/saomddc/
@@ -547,12 +547,8 @@ DC = (function () {
     function getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss) {
         var sv = getSV(c, lv, lb, wep, r, amr, acc);
         var sve = sv['default'];
-        var sve_sub = sv['default'];
         if (boss.element) {
             sve = sv[boss.element.id];
-        }
-        if (boss.sub) {
-            sve_sub = sv[boss.sub.id];
         }
 
         var exp_obj = { c: c, hp: 100, vs: boss.element ? boss.element.id : undefined, combo: boss.combo, switched: boss.switched };
@@ -581,18 +577,8 @@ DC = (function () {
 
         var emod = 1;
         var crit = sve.mod_crit;
-        if (sve.eRate && c.no_elem_mod !== 1) {
+        if (sve.eRate) {
             emod += boss[sve.eRate];
-            emod += sve.mod_elem_dmg * boss.elem_bs;
-            crit += sve.mod_elem_crit * boss.elem_bs;
-        }
-        if (boss.sub) {
-            var sub_eRate = getElementERate(sv.c.element, boss.sub.id);
-            if (sub_eRate && c.no_elem_mod !== 1) {
-                emod += boss[sub_eRate];
-                emod += sve_sub.mod_elem_dmg * boss.subelem_bs;
-                crit += sve.mod_elem_crit * boss.elem_bs;
-            }
         }
         for (var e in db.element) {
             if(e===sv.c.element.id){
@@ -689,14 +675,12 @@ DC = (function () {
         sve.mod_dmg = sv.c.ss_dmg;
         sve.mod_crit = sv.c.cri_dmg + sv.c.ss_cri_dmg + getWeaponCriEDmg(sv.wep, sv.r, sv.c, elem);
         sve.eRate = getElementERate(sv.c.element, elem);
-        sve.mod_elem_dmg = 0;
-        sve.mod_elem_crit = 0;
         if (sve.eRate === 'epRate' || elem === 'default') {
-            sve.mod_elem_dmg += sv.c.ss_elem_dmg;
+            sve.mod_dmg += sv.c.ss_elem_dmg;
             if (sv.lv > 85) {
-                sve.mod_elem_dmg += sv.c.ss_elem_dmg_90;
+                sve.mod_dmg += sv.c.ss_elem_dmg_90;
             }
-            sve.mod_elem_crit += sv.c.ss_elem_cri_dmg;
+            sve.mod_crit += sv.c.ss_elem_cri_dmg;
         }
     }
 
