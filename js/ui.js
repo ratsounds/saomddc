@@ -1,3 +1,5 @@
+// Begin Userscript unmodified functions --------------------------
+
 var lvr = [
     { lv: 80, r: 0 },
     { lv: 80, r: 4 },
@@ -126,18 +128,6 @@ function sortObjectArray(obj, key, asend) {
         });
     }
 }
-function sortArrayWithFilter(array) {
-    var sortKey = elemSort.value;
-    switch (sortKey) {
-        case 'duration':
-        case 'c2duration':
-            sortObjectArray(array, sortKey, true);
-            break;
-        default:
-            sortObjectArray(array, sortKey);
-            break;
-    }
-}
 
 function initPre() {
 
@@ -230,6 +220,20 @@ function initPre() {
     mapperInfo = new Mapper(DO.qid('item_info').innerHTML);
 }
 
+// End Userscript unmodified functions --------------------------------------
+
+function sortArrayWithFilter(array) {
+    var sortKey = elemSort.value;
+    switch (sortKey) {
+        case 'duration':
+        case 'c2duration':
+            sortObjectArray(array, sortKey, true);
+            break;
+        default:
+            sortObjectArray(array, sortKey);
+            break;
+    }
+}
 function initPost() {
     loadDBFromFile('data/data.json', initPostPost);
 }
@@ -320,6 +324,8 @@ function initPostPost() {
         }
     };
 }
+
+// Begin Userscript unmodified functions --------------------------------------
 
 function getThemeConfig() {
     return {
@@ -413,6 +419,8 @@ function setBoss(boss) {
         DO.qid('keyword').value = boss.filter;
     }
 }
+
+// End Userscript unmodified functions --------------------------------------
 
 function calcRanking() {
     //console.log('calcRanking');
@@ -514,6 +522,7 @@ function setDCVValues(dcv) {
     dcv.damage = Math.floor(dcv.damage);
 }
 
+// Begin Userscript unmodified functions --------------------------------------
 function getDPM(dcv) {
     var time = 0;
     var mp = dcv.sv.mp;
@@ -531,6 +540,8 @@ function getDPM(dcv) {
     }
     return dcv.damage * (count + ((time - 60) / dcv.duration));
 }
+// End Userscript unmodified functions --------------------------------------
+
 function getC2DPM(dcv) {
     var time = 0;
     var mp = dcv.sv.mp;
@@ -585,6 +596,7 @@ function showRanking() {
     }
 }
 
+// Begin Userscript unmodified functions --------------------------------------
 function getFilter() {
     var filter = { lv: {}, r: {}, type: {} };
     DO.qa('.filter input').forEach(function (item) {
@@ -668,4 +680,4 @@ function getKVTableRow(key, value, float) {
 function formatFloat(value) {
     return Math.floor(value * 100) / 100;
 }
-
+// End Userscript unmodified functions --------------------------------------

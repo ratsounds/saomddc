@@ -91,189 +91,7 @@ myUnits = [
     { id: "dog_asuna", name_en: "", lv: 80},
 ];
 
-function calcRanking() {
-    //console.log('calcRanking');
-    putBoss();
-    ranking = [];
-
-    for (var i in lvr) {
-        var clvr = lvr[i];
-
-        if (useMy.chars) {
-            for (var my in myUnits) {
-                var myUnit = myUnits[my];
-                var c = copy(DC.getChar(myUnit.id));
-
-                if (myUnit.lv != clvr.lv) {
-                    continue;
-                }
-
-                var dcv = calcDCVForChar(c, clvr);
-                if (dcv === null) {
-                    continue;
-                }
-                ranking.push(dcv);
-                setDCVValues(dcv);
-            }
-        } else {
-            for (var j in cs) {
-                var c = copy(cs[j]);
-
-                var dcv = calcDCVForChar(c, clvr);
-                if (dcv === null) {
-                    continue;
-                }
-                ranking.push(dcv);
-                setDCVValues(dcv);
-            }
-        }
-    }
-
-    sortArrayWithFilter(ranking);
-    //console.log('ranking',ranking);
-}
-
-function calcDCVForChar(oc, clvr) {
-    var dcv;
-
-    if (useMy.weapons) {
-        var allWepCombos = [];
-        for (var w in curWeapons) {
-
-            var weapon = DC.getWeapon(curWeapons[w].id);
-            //Check for compatible weapon type
-            if (oc.type.eqtype !== weapon.type.id || clvr.r !== curWeapons[w].r) {
-                continue;
-            }
-
-            var c = copy(oc);
-            c.eq_atk_wep = weapon;
-
-            var wepCombo = DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
-            allWepCombos.push(wepCombo);
-            setDCVValues(wepCombo);
-        }
-
-        if (allWepCombos.length <= 0) {
-            return null;
-        }
-        sortArrayWithFilter(allWepCombos);
-        dcv = allWepCombos[0];
-
-    } else if (clvr.r > 0) { // weapon & armor, accessory
-        dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
-    } else { // no weapon & armor, accessory
-        dcv = DC.calcDamage(c, clvr.lv, 4, undefined, clvr.r, undefined, undefined, boss);
-    }
-
-    return dcv;
-}
-
-function showRanking() {
-    var filter = getFilter();
-    elemRanking.html('');
-    var filtered = [];
-    var score_key = elemSort.value;
-    var rank = 0;
-
-    var max = 0;
-    var min = Number.MAX_VALUE;
-    for (var i = 0; i < ranking.length; i++) {
-        var dcv = ranking[i];
-        if (match(dcv.sv.c.meta, filter.keyword) && filter.type[dcv.sv.c.type.id] && (useMy.weapons ? true : filter.r[dcv.sv.r]) && (useMy.chars ? true : filter.lv[dcv.sv.lv])) {
-            rank++;
-            dcv.rank = zero(rank, 3);
-            dcv.id = i;
-            filtered.push(dcv);
-            max = Math.max(max, dcv.capacity);
-            min = Math.min(min, dcv.dps);
-        }
-    }
-    var dif = max * 2 / 3 - min;
-    var offset = 30;
-    var remains = 100 - offset;
-    for (var i = 0; i < filtered.length; i++) {
-        var dcv = filtered[i];
-        dcv.p_dps = offset + remains * (dcv.dps - min) / dif;
-        dcv.p_damage = offset + remains * (dcv.damage - min) / dif;
-        dcv.p_capacity = offset + remains * (dcv.capacity * 2 / 3 - min) / dif;
-        dcv.score = dcv[score_key];
-        dcv.color = dcv.sv.c.element.color;
-        dcv.cname = dcv.sv.c.cname['name' + lang];
-        var html = mapperInfo.map(dcv);
-        elemRanking.append(DO.new(html));
-    }
-}
-
-function setDCVValues(dcv) {
-    //Required setting beforehand
-    dcv.mpr = Math.floor(dcv.sv.mpr);
-    dcv.combo_speed_rate = (1 - dcv.sv.c.combo_speed * Math.floor(boss.combo / 10));
-    dcv.duration = dcv.sv.c.s3_duration * dcv.combo_speed_rate;
-    dcv.c2duration = (dcv.sv.c.s3_c_duration ? dcv.sv.c.s3_c_duration : dcv.sv.c.s3_duration * dcv.combo_speed_rate) + dcv.duration;
-
-    //Sortable values
-    dcv.c2dps = Math.floor(dcv.damage / dcv.c2duration);
-    dcv.duration_50 = dcv.sv.c.s3_duration * (1 - dcv.sv.c.combo_speed * Math.floor(50 / 10));
-    dcv.dpm = Math.floor(getDPM(dcv));
-    dcv.c2dpm = Math.floor(getC2DPM(dcv));
-
-    //Flooring for ranking list
-    dcv.dps = Math.floor(dcv.damage / dcv.duration);
-    dcv.duration = Math.floor(dcv.duration * 100) / 100;
-    dcv.duration_50 = Math.floor(dcv.duration_50 * 100) / 100;
-    dcv.c2duration = Math.floor(dcv.c2duration * 100) / 100;
-    dcv.capacity = Math.floor(dcv.damage * dcv.sv.mp / dcv.sv.cost);
-    dcv.floorcapacity = Math.floor(dcv.damage * Math.floor(dcv.sv.mp / dcv.sv.cost));
-    dcv.damage = Math.floor(dcv.damage);
-}
-
-function getC2DPM(dcv) {
-    var time = 0;
-    var mp = dcv.sv.mp;
-    var count = 0;
-    var ns_duration = dcv.sv.c.type.ns_duration * dcv.combo_speed_rate * (dcv.sv.c.s3_speed ? dcv.sv.c.s3_speed : 1);
-    while (time <= 60) {
-        if (mp >= dcv.sv.cost) { // s3
-            time += dcv.c2duration;
-            mp -= dcv.sv.cost;
-            count++;
-        } else { // normal set
-            time += ns_duration;
-            mp += dcv.sv.c.type.ns_hits * dcv.mpr;
-        }
-    }
-    return dcv.damage * (count + ((time - 60) / dcv.c2duration));
-}
-
-function removeWepId(id) {
-    for (var i in curWeapons) {
-        var wep = DC.getWeapon(curWeapons[i].id);
-        if (wep.id === id || wep.name_en == id) {
-            console.log("removed wep: " + id);
-            var removedWep = curWeapons.splice(i, 1);
-            break;
-        }
-    }
-    calcRanking();
-    showRanking();
-}
-
-function resetWeps() {
-    console.log("resetWeps");
-    curWeapons = JSON.parse(JSON.stringify(myWeapons));
-    calcRanking();
-    showRanking();
-}
-
-function showAllWeps() {
-    allweps = DC.getWeapon();
-    console.log(allweps);
-}
-
-function showAllChars() {
-    console.log(cs);
-}
+// Start integration from ui.js
 
 function sortArrayWithFilter(array) {
     var sortKey = elemSort.value;
@@ -286,40 +104,6 @@ function sortArrayWithFilter(array) {
             sortObjectArray(array, sortKey);
             break;
     }
-}
-
-function fillMissingCharIds() {
-    for (var i in myUnits) {
-        var myUnit = myUnits[i];
-        if (DC.getChar(myUnit.id).id) {
-            continue;
-        }
-
-        for (var j in cs) {
-            if (myUnit.name_en == cs[j].name_en) {
-                myUnit.id = cs[j].id;
-                break;
-            }
-        }
-    }
-    curUnits = JSON.parse(JSON.stringify(myUnits));
-}
-function fillMissingWepIds() {
-    var allWeps = DC.getWeapon();
-    for (var i in myWeapons) {
-        var myWeapon = myWeapons[i];
-        if (DC.getWeapon(myWeapon.id).id) {
-            continue;
-        }
-
-        for (var j in allWeps) {
-            if (myWeapon.name_en == allWeps[j].name_en) {
-                myWeapon.id = allWeps[j].id;
-                break;
-            }
-        }
-    }
-    curWeapons = JSON.parse(JSON.stringify(myWeapons));
 }
 
 function initPost() {
@@ -414,6 +198,226 @@ function initPostPost() {
     };
 }
 
+function calcRanking() {
+    //console.log('calcRanking');
+    putBoss();
+    ranking = [];
+
+    for (var i in lvr) {
+        var clvr = lvr[i];
+
+        if (useMy.chars) {
+            for (var my in myUnits) {
+                var myUnit = myUnits[my];
+                var c = copy(DC.getChar(myUnit.id));
+
+                if (myUnit.lv !== clvr.lv) {
+                    continue;
+                }
+
+                var dcv = calcDCVForChar(c, clvr);
+                if (dcv === null) {
+                    continue;
+                }
+                ranking.push(dcv);
+                setDCVValues(dcv);
+            }
+        } else {
+            for (var j in cs) {
+                var c = copy(cs[j]);
+
+                var dcv = calcDCVForChar(c, clvr);
+                if (dcv === null) {
+                    continue;
+                }
+                ranking.push(dcv);
+                setDCVValues(dcv);
+            }
+        }
+    }
+
+    sortArrayWithFilter(ranking);
+    //console.log('ranking',ranking);
+}
+function calcDCVForChar(oc, clvr) {
+    var dcv;
+
+    if (useMy.weapons) {
+        var allWepCombos = [];
+        for (var w in curWeapons) {
+
+            var weapon = DC.getWeapon(curWeapons[w].id);
+            //Check for compatible weapon type
+            if (oc.type.eqtype !== weapon.type.id || clvr.r !== curWeapons[w].r) {
+                continue;
+            }
+
+            var c = copy(oc);
+            c.eq_atk_wep = weapon;
+
+            var wepCombo = DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
+            allWepCombos.push(wepCombo);
+            setDCVValues(wepCombo);
+        }
+
+        if (allWepCombos.length <= 0) {
+            return null;
+        }
+        sortArrayWithFilter(allWepCombos);
+        dcv = allWepCombos[0];
+
+    } else if (clvr.r > 0) { // weapon & armor, accessory
+        dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
+    } else { // no weapon & armor, accessory
+        dcv = DC.calcDamage(c, clvr.lv, 4, undefined, clvr.r, undefined, undefined, boss);
+    }
+
+    return dcv;
+}
+
+function setDCVValues(dcv) {
+    //Required setting beforehand
+    dcv.mpr = Math.floor(dcv.sv.mpr);
+    dcv.combo_speed_rate = (1 - dcv.sv.c.combo_speed * Math.floor(boss.combo / 10));
+    dcv.duration = dcv.sv.c.s3_duration * dcv.combo_speed_rate;
+    dcv.c2duration = (dcv.sv.c.s3_c_duration ? dcv.sv.c.s3_c_duration : dcv.sv.c.s3_duration * dcv.combo_speed_rate) + dcv.duration;
+
+    //Sortable values
+    dcv.c2dps = Math.floor(dcv.damage / dcv.c2duration);
+    dcv.duration_50 = dcv.sv.c.s3_duration * (1 - dcv.sv.c.combo_speed * Math.floor(50 / 10));
+    dcv.dpm = Math.floor(getDPM(dcv));
+    dcv.c2dpm = Math.floor(getC2DPM(dcv));
+
+    //Flooring for ranking list
+    dcv.dps = Math.floor(dcv.damage / dcv.duration);
+    dcv.duration = Math.floor(dcv.duration * 100) / 100;
+    dcv.duration_50 = Math.floor(dcv.duration_50 * 100) / 100;
+    dcv.c2duration = Math.floor(dcv.c2duration * 100) / 100;
+    dcv.capacity = Math.floor(dcv.damage * dcv.sv.mp / dcv.sv.cost);
+    dcv.floorcapacity = Math.floor(dcv.damage * Math.floor(dcv.sv.mp / dcv.sv.cost));
+    dcv.damage = Math.floor(dcv.damage);
+}
+
+function getC2DPM(dcv) {
+    var time = 0;
+    var mp = dcv.sv.mp;
+    var count = 0;
+    var ns_duration = dcv.sv.c.type.ns_duration * dcv.combo_speed_rate * (dcv.sv.c.s3_speed ? dcv.sv.c.s3_speed : 1);
+    while (time <= 60) {
+        if (mp >= dcv.sv.cost) { // s3
+            time += dcv.c2duration;
+            mp -= dcv.sv.cost;
+            count++;
+        } else { // normal set
+            time += ns_duration;
+            mp += dcv.sv.c.type.ns_hits * dcv.mpr;
+        }
+    }
+    return dcv.damage * (count + ((time - 60) / dcv.c2duration));
+}
+
+function showRanking() {
+    var filter = getFilter();
+    elemRanking.html('');
+    var filtered = [];
+    var score_key = elemSort.value;
+    var rank = 0;
+
+    var max = 0;
+    var min = Number.MAX_VALUE;
+    for (var i = 0; i < ranking.length; i++) {
+        var dcv = ranking[i];
+        if (match(dcv.sv.c.meta, filter.keyword) && filter.type[dcv.sv.c.type.id] && (useMy.weapons ? true : filter.r[dcv.sv.r]) && (useMy.chars ? true : filter.lv[dcv.sv.lv])) {
+            rank++;
+            dcv.rank = zero(rank, 3);
+            dcv.id = i;
+            filtered.push(dcv);
+            max = Math.max(max, dcv.capacity);
+            min = Math.min(min, dcv.dps);
+        }
+    }
+    var dif = max * 2 / 3 - min;
+    var offset = 30;
+    var remains = 100 - offset;
+    for (var i = 0; i < filtered.length; i++) {
+        var dcv = filtered[i];
+        dcv.p_dps = offset + remains * (dcv.dps - min) / dif;
+        dcv.p_damage = offset + remains * (dcv.damage - min) / dif;
+        dcv.p_capacity = offset + remains * (dcv.capacity * 2 / 3 - min) / dif;
+        dcv.score = dcv[score_key];
+        dcv.color = dcv.sv.c.element.color;
+        dcv.cname = dcv.sv.c.cname['name' + lang];
+        var html = mapperInfo.map(dcv);
+        elemRanking.append(DO.new(html));
+    }
+}
+
+// END ui.js integration
+
+// Begin Userscript specific scripts
+function removeWepId(id) {
+    for (var i in curWeapons) {
+        var wep = DC.getWeapon(curWeapons[i].id);
+        if (wep.id === id || wep.name_en == id) {
+            console.log("removed wep: " + id);
+            var removedWep = curWeapons.splice(i, 1);
+            break;
+        }
+    }
+    calcRanking();
+    showRanking();
+}
+
+function resetWeps() {
+    console.log("resetWeps");
+    curWeapons = JSON.parse(JSON.stringify(myWeapons));
+    calcRanking();
+    showRanking();
+}
+
+function showAllWeps() {
+    allweps = DC.getWeapon();
+    console.log(allweps);
+}
+
+function showAllChars() {
+    console.log(cs);
+}
+
+function fillMissingCharIds() {
+    for (var i in myUnits) {
+        var myUnit = myUnits[i];
+        if (DC.getChar(myUnit.id).id) {
+            continue;
+        }
+
+        for (var j in cs) {
+            if (myUnit.name_en == cs[j].name_en) {
+                myUnit.id = cs[j].id;
+                break;
+            }
+        }
+    }
+    curUnits = JSON.parse(JSON.stringify(myUnits));
+}
+function fillMissingWepIds() {
+    var allWeps = DC.getWeapon();
+    for (var i in myWeapons) {
+        var myWeapon = myWeapons[i];
+        if (DC.getWeapon(myWeapon.id).id) {
+            continue;
+        }
+
+        for (var j in allWeps) {
+            if (myWeapon.name_en == allWeps[j].name_en) {
+                myWeapon.id = allWeps[j].id;
+                break;
+            }
+        }
+    }
+    curWeapons = JSON.parse(JSON.stringify(myWeapons));
+}
+
 function getCharRankWepId(id) {
     var dcv = ranking[id];
     var c = dcv.sv.c;
@@ -461,6 +465,9 @@ function addJS_Node (text, s_URL, funcToRun, runOnLoad) {
     var targ = D.getElementsByTagName ('head')[0] || D.body || D.documentElement;
     targ.appendChild (scriptNode);
 }
+// END userscript specific scripts
+
+//Direct copy of modified dc.js file
 
 DC = (function () {
     var db;
@@ -540,8 +547,12 @@ DC = (function () {
     function getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss) {
         var sv = getSV(c, lv, lb, wep, r, amr, acc);
         var sve = sv['default'];
+        var sve_sub = sv['default'];
         if (boss.element) {
             sve = sv[boss.element.id];
+        }
+        if (boss.sub) {
+            sve_sub = sv[boss.sub.id];
         }
 
         var exp_obj = { c: c, hp: 100, vs: boss.element ? boss.element.id : undefined, combo: boss.combo, switched: boss.switched };
@@ -569,23 +580,45 @@ DC = (function () {
         }
 
         var emod = 1;
-        if (sve.eRate&&c.no_elem_mod!==1) { emod *= boss[sve.eRate]; }
+        var crit = sve.mod_crit;
+        if (sve.eRate && c.no_elem_mod !== 1) {
+            emod += boss[sve.eRate];
+            emod += sve.mod_elem_dmg * boss.elem_bs;
+            crit += sve.mod_elem_crit * boss.elem_bs;
+        }
         if (boss.sub) {
             var sub_eRate = getElementERate(sv.c.element, boss.sub.id);
-            if (sub_eRate&&c.no_elem_mod!==1) { emod *= boss[sub_eRate]; }
+            if (sub_eRate && c.no_elem_mod !== 1) {
+                emod += boss[sub_eRate];
+                emod += sve_sub.mod_elem_dmg * boss.subelem_bs;
+                crit += sve.mod_elem_crit * boss.elem_bs;
+            }
+        }
+        for (var e in db.element) {
+            if(e===sv.c.element.id){
+                emod += boss[e];
+            }
         }
 
-        var dtmod = 1;
-        for (var t in db.dtype) { dtmod += (boss[t] - 1) * sv.dtmod[t]; }
+        var dtmod = 0;
+        for (var t in db.dtype) { dtmod += boss[t] * sv.dtmod[t]; }
 
-        var cmod = Expression.eval(boss.condition.expression, exp_obj) ? boss.condition.values.mod : 1;
+        var cmod = Expression.eval(boss.condition.expression, exp_obj) ? boss.condition.values.mod : 0;
 
-        var combo = 1 + Math.floor(boss.combo / 10) * 0.05;
-        if (boss.combo > 20) { combo *= sv.c.combo_damage_20; }
-        if (boss.combo > 30) { combo *= sv.c.combo_damage_30; }
-        var mod = Math.min(combo * sve.mod_dmg * emod * dtmod * boss.repRate * boss.racc * boss.etcMod * cmod, boss.limit);
+        var combo = Math.floor(boss.combo / 10) * 0.05;
+        if (boss.combo >= 20) {
+            combo += sv.c.combo_damage_20;
+            if (wep) {
+                combo += wep.c20_bs_cri_dmg;
+            }
+        }
+        if (boss.combo >= 30) {
+            combo += sv.c.combo_damage_30;
+        }
+
+        var mod = Math.min(combo + sve.mod_dmg + emod + dtmod + boss.repRate + boss.racc + boss.etcMod + cmod, boss.limit);
         if (boss.crit > 0) {
-            mod *= sve.mod_crit;
+            mod *= crit;
         }
         var dcv = {
             atk: atk,
@@ -654,14 +687,16 @@ DC = (function () {
         sve.bs_atk_eq = getWeaponBSAtk(sv.wep, sv.r) + getEqValue(sv.amr, key_bs_atk) + getEqValue(sv.acc, key_bs_atk);
         sve.bs_atk = sv.c.bs_atk + sve.bs_atk_eq;
         sve.mod_dmg = sv.c.ss_dmg;
-        sve.mod_crit = sv.c.cri_dmg * sv.c.ss_cri_dmg * (1 + getWeaponCriEDmg(sv.wep, sv.r, sv.c, elem));
+        sve.mod_crit = sv.c.cri_dmg + sv.c.ss_cri_dmg + getWeaponCriEDmg(sv.wep, sv.r, sv.c, elem);
         sve.eRate = getElementERate(sv.c.element, elem);
+        sve.mod_elem_dmg = 0;
+        sve.mod_elem_crit = 0;
         if (sve.eRate === 'epRate' || elem === 'default') {
-            sve.mod_dmg *= sv.c.ss_elem_dmg;
+            sve.mod_elem_dmg += sv.c.ss_elem_dmg;
             if (sv.lv > 85) {
-                sve.mod_dmg *= sv.c.ss_elem_dmg_90;
+                sve.mod_elem_dmg += sv.c.ss_elem_dmg_90;
             }
-            sve.mod_crit *= sv.c.ss_elem_cri_dmg;
+            sve.mod_elem_crit += sv.c.ss_elem_cri_dmg;
         }
     }
 
