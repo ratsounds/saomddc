@@ -126,6 +126,18 @@ function sortObjectArray(obj, key, asend) {
         });
     }
 }
+function sortArrayWithFilter(array) {
+    var sortKey = elemSort.value;
+    switch (sortKey) {
+        case 'duration':
+        case 'c2duration':
+            sortObjectArray(array, sortKey, true);
+            break;
+        default:
+            sortObjectArray(array, sortKey);
+            break;
+    }
+}
 
 function initPre() {
 
@@ -217,13 +229,24 @@ function initPre() {
     window.matchMedia('only screen and (orientation:landscape)').addListener(showSidebar);
     mapperInfo = new Mapper(DO.qid('item_info').innerHTML);
 }
+
 function initPost() {
+    loadDBFromFile('data/data.json', initPostPost);
+}
+lastClicked = -1;
+
+function initPostPost() {
     var db = DC.getData();
+
+    //loading for personal scripts
+    cs = DC.getChar();
+    fillMissingCharIds();
+    fillMissingWepIds();
 
     //create group icon css
     //set app icon
     fetch('data/appicon.json', { method: 'GET' })
-        .then(function (responce) { return responce.text() })
+        .then(function (responce) { return responce.text(); })
         .then(function (text) { return JSON.parse(text); })
         .then(function (json) {
             var gcss = '<style type="text/css">';
@@ -248,6 +271,8 @@ function initPost() {
     //init ui
     elemRanking = DO.qid('ranking');
     elemSort = DO.qid('sort');
+    elemSort.append(DO.new('<option value="' + 'floorcapacity' + '">' + 'Floor Capacity' + '</option>'));
+    elemSort.append(DO.new('<option value="' + 'c2dpm' + '">' + 'C/2 DPM' + '</option>'));
     //load default
     putBoss();
     calcRanking();
@@ -280,9 +305,20 @@ function initPost() {
             twttr.widgets.load(elemDetail);
         }
         if (!ev.target.parents('.tcontainer')) {
+            lastClicked = this.id;
             elemDetail.classList.toggle('hidden');
         }
     });
+
+    elemRanking.onkeydown = function (ev) {
+        if (ev.which == 68) { //D press
+            var wepId = getCharRankWepId(lastClicked);
+            removeWepId(wepId);
+        }
+        if (ev.which == 82) { //R press
+            resetWeps();
+        }
+    };
 }
 
 function getThemeConfig() {
@@ -381,46 +417,103 @@ function setBoss(boss) {
 function calcRanking() {
     //console.log('calcRanking');
     putBoss();
-    var cs = DC.getChar();
     ranking = [];
+
     for (var i in lvr) {
         var clvr = lvr[i];
-        for (var j in cs) {
-            var c = cs[j];
-            var dcv;
-            if (clvr.r > 0) { // weapon & armor, accessory
-                dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
-            } else { // no weapon & armor, accessory
-                dcv = DC.calcDamage(c, clvr.lv, 4, undefined, clvr.r, undefined, undefined, boss);
+
+        if (useMy.chars) {
+            for (var my in myUnits) {
+                var myUnit = myUnits[my];
+                var c = copy(DC.getChar(myUnit.id));
+
+                if (myUnit.lv !== clvr.lv) {
+                    continue;
+                }
+
+                var dcv = calcDCVForChar(c, clvr);
+                if (dcv === null) {
+                    continue;
+                }
+                ranking.push(dcv);
+                setDCVValues(dcv);
             }
-            ranking.push(dcv);
-            dcv.combo_speed_rate = (1 - dcv.sv.c.combo_speed * Math.floor(boss.combo / 10));
-            dcv.duration = dcv.sv.c.s3_duration * dcv.combo_speed_rate;
-            dcv.c2duration = dcv.sv.c.s3_c_duration ? dcv.sv.c.s3_c_duration : dcv.sv.c.s3_duration * dcv.combo_speed_rate;
-            dcv.duration_50 = dcv.sv.c.s3_duration * (1 - dcv.sv.c.combo_speed * Math.floor(50 / 10));
-            dcv.dps = Math.floor(dcv.damage / dcv.duration);
-            dcv.dpm = Math.floor(getDPM(dcv));
-            dcv.c2dps = Math.floor(dcv.damage / dcv.duration + dcv.damage / dcv.c2duration);
-            dcv.duration = Math.floor(dcv.duration * 100) / 100;
-            dcv.duration_50 = Math.floor(dcv.duration_50 * 100) / 100;
-            dcv.c2duration = Math.floor((dcv.c2duration + dcv.duration) * 100) / 100;
-            dcv.capacity = Math.floor(dcv.damage * dcv.sv.mp / dcv.sv.cost);
-            dcv.damage = Math.floor(dcv.damage);
-            dcv.mpr = Math.floor(dcv.sv.mpr);
+        } else {
+            for (var j in cs) {
+                var c = copy(cs[j]);
+
+                var dcv = calcDCVForChar(c, clvr);
+                if (dcv === null) {
+                    continue;
+                }
+                ranking.push(dcv);
+                setDCVValues(dcv);
+            }
         }
     }
-    var sortKey = elemSort.value;
-    switch (sortKey) {
-        case 'duration':
-        case 'c2duration':
-        sortObjectArray(ranking, sortKey, true);
-            break;
-        default:
-            sortObjectArray(ranking, sortKey);
-            break;
-    }
+
+    sortArrayWithFilter(ranking);
     //console.log('ranking',ranking);
 }
+function calcDCVForChar(oc, clvr) {
+    var dcv;
+
+    if (useMy.weapons) {
+        var allWepCombos = [];
+        for (var w in curWeapons) {
+
+            var weapon = DC.getWeapon(curWeapons[w].id);
+            //Check for compatible weapon type
+            if (oc.type.eqtype !== weapon.type.id || clvr.r !== curWeapons[w].r) {
+                continue;
+            }
+
+            var c = copy(oc);
+            c.eq_atk_wep = weapon;
+
+            var wepCombo = DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
+            allWepCombos.push(wepCombo);
+            setDCVValues(wepCombo);
+        }
+
+        if (allWepCombos.length <= 0) {
+            return null;
+        }
+        sortArrayWithFilter(allWepCombos);
+        dcv = allWepCombos[0];
+
+    } else if (clvr.r > 0) { // weapon & armor, accessory
+        dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
+    } else { // no weapon & armor, accessory
+        dcv = DC.calcDamage(c, clvr.lv, 4, undefined, clvr.r, undefined, undefined, boss);
+    }
+
+    return dcv;
+}
+
+function setDCVValues(dcv) {
+    //Required setting beforehand
+    dcv.mpr = Math.floor(dcv.sv.mpr);
+    dcv.combo_speed_rate = (1 - dcv.sv.c.combo_speed * Math.floor(boss.combo / 10));
+    dcv.duration = dcv.sv.c.s3_duration * dcv.combo_speed_rate;
+    dcv.c2duration = (dcv.sv.c.s3_c_duration ? dcv.sv.c.s3_c_duration : dcv.sv.c.s3_duration * dcv.combo_speed_rate) + dcv.duration;
+
+    //Sortable values
+    dcv.c2dps = Math.floor(dcv.damage / dcv.c2duration);
+    dcv.duration_50 = dcv.sv.c.s3_duration * (1 - dcv.sv.c.combo_speed * Math.floor(50 / 10));
+    dcv.dpm = Math.floor(getDPM(dcv));
+    dcv.c2dpm = Math.floor(getC2DPM(dcv));
+
+    //Flooring for ranking list
+    dcv.dps = Math.floor(dcv.damage / dcv.duration);
+    dcv.duration = Math.floor(dcv.duration * 100) / 100;
+    dcv.duration_50 = Math.floor(dcv.duration_50 * 100) / 100;
+    dcv.c2duration = Math.floor(dcv.c2duration * 100) / 100;
+    dcv.capacity = Math.floor(dcv.damage * dcv.sv.mp / dcv.sv.cost);
+    dcv.floorcapacity = Math.floor(dcv.damage * Math.floor(dcv.sv.mp / dcv.sv.cost));
+    dcv.damage = Math.floor(dcv.damage);
+}
+
 function getDPM(dcv) {
     var time = 0;
     var mp = dcv.sv.mp;
@@ -438,19 +531,36 @@ function getDPM(dcv) {
     }
     return dcv.damage * (count + ((time - 60) / dcv.duration));
 }
+function getC2DPM(dcv) {
+    var time = 0;
+    var mp = dcv.sv.mp;
+    var count = 0;
+    var ns_duration = dcv.sv.c.type.ns_duration * dcv.combo_speed_rate * (dcv.sv.c.s3_speed ? dcv.sv.c.s3_speed : 1);
+    while (time <= 60) {
+        if (mp >= dcv.sv.cost) { // s3
+            time += dcv.c2duration;
+            mp -= dcv.sv.cost;
+            count++;
+        } else { // normal set
+            time += ns_duration;
+            mp += dcv.sv.c.type.ns_hits * dcv.mpr;
+        }
+    }
+    return dcv.damage * (count + ((time - 60) / dcv.c2duration));
+}
 
 function showRanking() {
     var filter = getFilter();
     elemRanking.html('');
+    var filtered = [];
     var score_key = elemSort.value;
     var rank = 0;
 
-    var filtered = [];
     var max = 0;
     var min = Number.MAX_VALUE;
     for (var i = 0; i < ranking.length; i++) {
         var dcv = ranking[i];
-        if (filter.lv[dcv.sv.lv] && filter.r[dcv.sv.r] && filter.type[dcv.sv.c.type.id] && match(dcv.sv.c.meta, filter.keyword)) {
+        if (match(dcv.sv.c.meta, filter.keyword) && filter.type[dcv.sv.c.type.id] && (useMy.weapons ? true : filter.r[dcv.sv.r]) && (useMy.chars ? true : filter.lv[dcv.sv.lv])) {
             rank++;
             dcv.rank = zero(rank, 3);
             dcv.id = i;

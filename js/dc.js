@@ -1,11 +1,11 @@
-var DC = (function () {
+DC = (function () {
     var db;
     var sd;
     var lvup_rate = 0.005245;
     var lb_rate = {
         normal: 0.025775,
         high: 0.041275
-    }
+    };
     var key_mp = 'mp';
     var key_bs_mp = 'bs_mp';
     var key_mp_dec = 'mp_dec';
@@ -170,7 +170,7 @@ var DC = (function () {
         if (lv > 80) {
             ss_atk += c.ss_atk_85;
         }
-        sv.lb = Math.min(lb, Math.floor(lv_dif / 5))
+        sv.lb = Math.min(lb, Math.floor(lv_dif / 5));
         sv.atk_c = c.atk + c.atk * lv_dif * lvup_rate + c.atk * sv.lb * lb_rate[c.lvup] + ss_atk;
         sv.atk_eq = getWeaponAtk(c, wep, r) + getEqValueWithElem(c, amr, key_atk) + getEqValueWithElem(c, acc, key_atk);
         sv.atk = sv.atk_c + sv.atk_eq;
@@ -178,7 +178,7 @@ var DC = (function () {
         for (var elem in db.element) {
             createSVE(sv, elem);
         }
-        sv.dtmod = {}
+        sv.dtmod = {};
         for (var t in db.dtype) {
             sv.dtmod[t] = c['dtr_' + t];
         }
@@ -239,7 +239,7 @@ var DC = (function () {
     function getWeaponCriEDmg(wep, r, c, vs) {
         var mod = 0;
         if (wep) {
-            if (c.element === wep.element) {
+            if (c.element.id === wep.element.id) {
                 switch (r) {
                     case 4:
                         mod += wep.e_bs_cri_dmg;
@@ -264,7 +264,7 @@ var DC = (function () {
         var mpdec = 0;
         if (wep) {
             mpdec += getEqValue(wep, key_mp_dec);
-            if (c.element === wep.element) {
+            if (c.element.id === wep.element.id) {
                 mpdec += getEqValue(wep, key_e_mp_dec);
             }
         }
@@ -272,7 +272,7 @@ var DC = (function () {
     }
     function getEqValueWithElem(c, eq, key) {
         var value = getEqValue(eq, key);
-        if (value && c.element === eq.element) {
+        if (value && c.element.id === eq.element.id) {
             return value * 1.2;
         } else {
             return value;
@@ -345,5 +345,5 @@ var DC = (function () {
         getElement: getElement,
         getType: getType,
         getDtype: getDtype
-    }
+    };
 })();
