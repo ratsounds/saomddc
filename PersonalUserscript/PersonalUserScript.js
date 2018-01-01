@@ -33,6 +33,7 @@ useMy = {
 };
 
 // Use id or name_en for weapon identification. id is slightly quicker at startup.
+// Use: showAllWeps() in console to get a list of all weapon id's
 myWeapons = [
     { id: "bride_sword1", name_en: "", r: 4},
     { id: "bonds_sword", name_en: "", r: 4},
@@ -53,10 +54,11 @@ myWeapons = [
     { id: "hatsu_mace", name_en: "", r: 4},
 ];
 // Use id or name_en for character identification. id is slightly quicker at startup.
+// Use: showAllChars() in console to get a list of all char id's
 myUnits = [
-    { id: "kr_kirito", name_en: "Kirito [Black Wing]", lv: 80},
-    { id: "bonds_leafa", name_en: "Leafa [The Blade - facing the feelings]", lv: 80},
-    { id: "sports_leafa", name_en: "", lv: 80},
+    { id: "", name_en: "Kirito [Black Wing]", lv: 80}, // works ala name_en is correct
+    { id: "ShitTestingId's", name_en: "Leafa [The Blade - facing the feelings]", lv: 80}, // works ala name_en is correct
+    { id: "sports_leafa", name_en: "", lv: 80}, // Preferred example
     { id: "pns_yuuki", name_en: "", lv: 80},
     { id: "jr_asuna", name_en: "", lv: 80},
     { id: "princess_asuna", name_en: "", lv: 80},
@@ -389,16 +391,12 @@ function showAllChars() {
 function fillMissingCharIds() {
     for (var i in myUnits) {
         var myUnit = myUnits[i];
-        if (DC.getChar(myUnit.id).id) {
+
+        if (myUnit.id !== "" && DC.getChar(myUnit.id)) {
             continue;
         }
 
-        for (var j in cs) {
-            if (myUnit.name_en.toLowerCase() == cs[j].name_en.toLowerCase()) {
-                myUnit.id = cs[j].id;
-                break;
-            }
-        }
+        myUnit.id = findIdInArray(myUnit, cs);
     }
     curUnits = JSON.parse(JSON.stringify(myUnits));
 }
@@ -406,18 +404,24 @@ function fillMissingWepIds() {
     var allWeps = DC.getWeapon();
     for (var i in myWeapons) {
         var myWeapon = myWeapons[i];
-        if (DC.getWeapon(myWeapon.id).id) {
+
+        if (myWeapon.id !== "" && DC.getWeapon(myWeapon.id)) {
             continue;
         }
 
-        for (var j in allWeps) {
-            if (myWeapon.name_en.toLowerCase() == allWeps[j].name_en.toLowerCase()) {
-                myWeapon.id = allWeps[j].id;
-                break;
-            }
-        }
+        myWeapon.id = findIdInArray(myWeapon, allWeps);
     }
     curWeapons = JSON.parse(JSON.stringify(myWeapons));
+}
+
+function findIdInArray(myObject, dbArray) {
+    for (var j in dbArray) {
+        if (myObject.name_en.toLowerCase() == dbArray[j].name_en.toLowerCase()) {
+            return dbArray[j].id;
+        }
+    }
+    console.log("Couldn't find matching id for:");
+    console.log(myObject);
 }
 
 function getCharRankWepId(id) {
@@ -451,6 +455,7 @@ addJS_Node (copy);
 addJS_Node (calcDCVForChar);
 addJS_Node (fillMissingCharIds);
 addJS_Node (fillMissingWepIds);
+addJS_Node (findIdInArray);
 addJS_Node (getC2DPM);
 
 function addJS_Node (text, s_URL, funcToRun, runOnLoad) {
