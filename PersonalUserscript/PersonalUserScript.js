@@ -394,7 +394,7 @@ function fillMissingCharIds() {
         }
 
         for (var j in cs) {
-            if (myUnit.name_en == cs[j].name_en) {
+            if (myUnit.name_en.toLowerCase() == cs[j].name_en.toLowerCase()) {
                 myUnit.id = cs[j].id;
                 break;
             }
@@ -411,7 +411,7 @@ function fillMissingWepIds() {
         }
 
         for (var j in allWeps) {
-            if (myWeapon.name_en == allWeps[j].name_en) {
+            if (myWeapon.name_en.toLowerCase() == allWeps[j].name_en.toLowerCase()) {
                 myWeapon.id = allWeps[j].id;
                 break;
             }
