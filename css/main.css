@@ -183,10 +183,10 @@ p {
 }
 #control .grid {
   display: grid;
-  grid-template-columns: 2em 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
-#control .grid div {
-  display: none;
+i.exelement {
+  width: 100%;
 }
 #control div.control_wrapper{
   padding: 0;

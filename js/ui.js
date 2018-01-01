@@ -367,14 +367,10 @@ function showSidebar() {
 function putBoss() {
     var db = DC.getData();
     boss = { crit: 1 };
-    DO.qa('.sub').forEach(function (sub) { sub.removeAttribute('disabled'); });
     DO.qa('.boss input,.boss select').forEach(function (item) {
         if (item.type === 'radio') {
             if (item.checked) {
-                if (item.dataset.sub) {
-                    DO.qid(item.dataset.sub).setAttribute('disabled', 'disabled');
-                }
-                if (item.name === 'element' || item.name === 'sub' && item.getAttribute('disabled') !== 'disabled') {
+                if (item.name === 'element' && item.getAttribute('disabled') !== 'disabled') {
                     boss[item.name] = db.element[item.value];
                 } else {
                     boss[item.name] = parse(item.value);
@@ -391,10 +387,9 @@ function putBoss() {
 function setBoss(boss) {
     //console.log('setBoss',boss);
     DO.qid('ena').checked = true;
-    DO.qid('sna').checked = true;
     DO.qa('.boss input,.boss select').forEach(function (item) {
         if (item.type === 'radio') {
-            if (item.name === 'element' || item.name === 'sub') {
+            if (item.name === 'element') {
                 if (boss[item.name]) {
                     item.checked = boss[item.name].id === parse(item.value);
                 }
