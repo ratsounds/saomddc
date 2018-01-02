@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         ratsounds Own Units & Weps
+// @name         ratsounds Own Units & Weps & Armors
 // @namespace    http://tampermonkey.net/
-// @version      1.5
-// @description  Filters your own units with their own lvl + your own weapons and their rarity if set to true in the useMyWeapons function
+// @version      2.0
+// @description  Filters your own units with their own lvl + your own weapons and their rarity + own armors
 // @author       Zehnzen
 // @match        https://ratsounds.github.io/saomddc/
 // @grant        unsafewindow
@@ -29,7 +29,18 @@ useMy = {
         showRanking();
     },
     //change true -> false if you want to use all characters by default
-    _char: true
+    _char: true,
+
+    get armors() {
+        return this._armor;
+    },
+    set armors(val) {
+        this._armor = val;
+        calcRanking();
+        showRanking();
+    },
+    //change true -> false if you want to use all characters by default
+    _armor: true,
 };
 
 // Use id or name_en for weapon identification. id is slightly quicker at startup.
@@ -94,6 +105,21 @@ myUnits = [
     { id: "dog_asuna", name_en: "", lv: 80},
     { id: "steamy_asuna", name_en: "", lv: 80},
 ];
+// NOTE: Not all armors are available in the database.
+// Use: showAllArmors() in console to check which ones are possible.
+myArmors = [
+    { id: "mf_dark1", name_en: "Wolf Coat"},
+    { id: "f_dark2", name_en: "Pumpkun Dress"}, //Yes pumpk'u'n, I didn't choose that either
+    { id: "", name_en: "Gym Clothes in Youth"},
+    { id: "", name_en: "Hot Spring Bathtowel"},
+    { id: "", name_en: "Heart Dress"},
+    { id: "", name_en: "Fiery Wind Cape"},
+    { id: "", name_en: "Captain Coat"},
+    { id: "", name_en: "Scale Chainmail"},
+    { id: "", name_en: "Holy Night Cape"},
+    { id: "", name_en: "Snow Fairy Cape"},
+    { id: "", name_en: "Scarlet Party Dress"},
+];
 
 // Start integration from ui.js
 
@@ -123,6 +149,7 @@ function initPostPost() {
     cs = DC.getChar();
     fillMissingCharIds();
     fillMissingWepIds();
+    fillMissingArmorIds();
 
     //create group icon css
     //set app icon
@@ -219,7 +246,7 @@ function calcRanking() {
                     continue;
                 }
 
-                var dcv = calcDCVForChar(c, clvr);
+                var dcv = calcComboDCVForChar(c, clvr, useMy.weapons, curWeapons, calcWeaponDCVForChar);
                 if (dcv === null) {
                     continue;
                 }
@@ -230,7 +257,7 @@ function calcRanking() {
             for (var j in cs) {
                 var c = copy(cs[j]);
 
-                var dcv = calcDCVForChar(c, clvr);
+                var dcv = calcComboDCVForChar(c, clvr, useMy.weapons, curWeapons, calcWeaponDCVForChar);
                 if (dcv === null) {
                     continue;
                 }
@@ -243,32 +270,28 @@ function calcRanking() {
     sortArrayWithFilter(ranking);
     //console.log('ranking',ranking);
 }
-function calcDCVForChar(oc, clvr) {
+
+function calcComboDCVForChar(oc, clvr, useCheck, myObjects, comboCall) {
     var dcv;
 
-    if (useMy.weapons) {
-        var allWepCombos = [];
-        for (var w in curWeapons) {
+    if (useCheck) {
 
-            var weapon = DC.getWeapon(curWeapons[w].id);
-            //Check for compatible weapon type
-            if (oc.type.eqtype !== weapon.type.id || clvr.r !== curWeapons[w].r) {
+        var allCombos = [];
+        for (var i in myObjects) {
+            var combo = comboCall(oc, myObjects[i], clvr);
+            if (combo === null) {
                 continue;
             }
-
-            var c = copy(oc);
-            c.eq_atk_wep = weapon;
-
-            var wepCombo = DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
-            allWepCombos.push(wepCombo);
-            setDCVValues(wepCombo);
+            allCombos.push(combo);
+            setDCVValues(combo);
         }
 
-        if (allWepCombos.length <= 0) {
+        if (allCombos.length <= 0) {
             return null;
         }
-        sortArrayWithFilter(allWepCombos);
-        dcv = allWepCombos[0];
+
+        sortArrayWithFilter(allCombos);
+        dcv = allCombos[0];
 
     } else if (clvr.r > 0) { // weapon & armor, accessory
         dcv = DC.calcDamage(oc, clvr.lv, 4, oc.eq_atk_wep, clvr.r, oc.eq_atk_amr, oc.eq_atk_acc, boss);
@@ -277,6 +300,30 @@ function calcDCVForChar(oc, clvr) {
     }
 
     return dcv;
+}
+function calcWeaponDCVForChar(oc, myWeapon, clvr) {
+    var weapon = DC.getWeapon(myWeapon.id);
+    //Check for compatible weapon type
+    if (oc.type.eqtype != weapon.type.id || clvr.r != myWeapon.r) {
+        return null;
+    }
+
+    var c = copy(oc);
+    c.eq_atk_wep = weapon;
+
+    return calcComboDCVForChar(c, clvr, useMy.armors, curArmors, calcArmorDCVForChar);
+}
+function calcArmorDCVForChar(oc, myArmor, clvr) {
+    var armor = DC.getArmor(myArmor.id);
+    //Check for compatible armor type
+    if (!armor.type.includes(oc.cname.gender)) {
+        return null;
+    }
+
+    var c = copy(oc);
+    c.eq_atk_amr = armor;
+
+    return DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
 }
 
 function setDCVValues(dcv) {
@@ -380,12 +427,13 @@ function resetWeps() {
 }
 
 function showAllWeps() {
-    allweps = DC.getWeapon();
-    console.log(allweps);
+    console.log(DC.getWeapon());
 }
-
 function showAllChars() {
     console.log(cs);
+}
+function showAllArmors() {
+    console.log(DC.getArmor());
 }
 
 function fillMissingCharIds() {
@@ -412,6 +460,19 @@ function fillMissingWepIds() {
         myWeapon.id = findIdInArray(myWeapon, allWeps);
     }
     curWeapons = JSON.parse(JSON.stringify(myWeapons));
+}
+function fillMissingArmorIds() {
+    var allArmors = DC.getArmor();
+    for (var i in myArmors) {
+        var myArmor = myArmors[i];
+
+        if (myArmor.id !== "" && DC.getArmor(myArmor.id)) {
+            continue;
+        }
+
+        myArmor.id = findIdInArray(myArmor, allArmors);
+    }
+    curArmors = JSON.parse(JSON.stringify(myArmors));
 }
 
 function findIdInArray(myObject, dbArray) {
@@ -442,21 +503,25 @@ function copy(o) {
 
 addJS_Node (calcRanking);
 addJS_Node (showRanking);
+addJS_Node (setDCVValues);
+addJS_Node (getC2DPM);
 addJS_Node (resetWeps);
 addJS_Node (removeWepId);
-addJS_Node (sortArrayWithFilter);
-addJS_Node (showAllWeps);
+addJS_Node (getCharRankWepId);
 addJS_Node (initPost);
 addJS_Node (initPostPost);
-addJS_Node (getCharRankWepId);
-addJS_Node (setDCVValues);
-addJS_Node (showAllChars);
+addJS_Node (sortArrayWithFilter);
 addJS_Node (copy);
-addJS_Node (calcDCVForChar);
+addJS_Node (showAllWeps);
+addJS_Node (showAllChars);
+addJS_Node (showAllArmors);
+addJS_Node (calcComboDCVForChar);
+addJS_Node (calcWeaponDCVForChar);
+addJS_Node (calcArmorDCVForChar);
 addJS_Node (fillMissingCharIds);
 addJS_Node (fillMissingWepIds);
+addJS_Node (fillMissingArmorIds);
 addJS_Node (findIdInArray);
-addJS_Node (getC2DPM);
 
 function addJS_Node (text, s_URL, funcToRun, runOnLoad) {
     var D                                   = document;
