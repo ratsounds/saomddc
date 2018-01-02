@@ -15,8 +15,9 @@ Current Version 2.0
 # functions
 - For adding your own stuff replace the arrays with your respective units/weapons/armors following the format.
 - Keep a backup of your own stuff separately so you can easily paste them into updated scripts
-- After pressing a unit in the list you can press "d" to remove the weapon that char had equipped from the calculation
-- Pressing "r" will restore the weapon list.
+- After pressing a unit in the list you can press "d" to remove the weapon and char from current list
+- After pressing a unit in the list you can press "w" to remove only the weapon that char had equipped from the calculation
+- Pressing "r" will restore the weapon and unit list.
 - Added FloorCapacity filter which floors the damage from maximum SS3's to the possible SS3's from start MP. (instead of also counting the remaining mp like Capacity).
 - Added C2DPM filter which also accounts for combo ss3 timings
 - Fixed both DPM filters to also account for regen from attacks

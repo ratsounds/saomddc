@@ -221,10 +221,17 @@ function initPostPost() {
     elemRanking.onkeydown = function (ev) {
         if (ev.which == 68) { //D press
             var wepId = getCharRankWepId(lastClicked);
+            var charId = getCharRankCharId(lastClicked);
+            removeWepId(wepId, false);
+            removeCharId(charId);
+        }
+        if (ev.which == 87) { //W press
+            var wepId = getCharRankWepId(lastClicked);
             removeWepId(wepId);
         }
         if (ev.which == 82) { //R press
-            resetWeps();
+            resetWeps(false);
+            resetChars();
         }
     };
 }
@@ -238,8 +245,8 @@ function calcRanking() {
         var clvr = lvr[i];
 
         if (useMy.chars) {
-            for (var my in myUnits) {
-                var myUnit = myUnits[my];
+            for (var my in curUnits) {
+                var myUnit = curUnits[my];
                 var c = copy(DC.getChar(myUnit.id));
 
                 if (myUnit.lv !== clvr.lv) {
@@ -406,24 +413,52 @@ function showRanking() {
 // END ui.js integration
 
 // Begin Userscript specific scripts
-function removeWepId(id) {
+function removeWepId(id, refresh = true) {
     for (var i in curWeapons) {
         var wep = DC.getWeapon(curWeapons[i].id);
-        if (wep.id === id || wep.name_en == id) {
+        if (wep.id === id) {
             console.log("removed wep: " + id);
-            var removedWep = curWeapons.splice(i, 1);
+            curWeapons.splice(i, 1);
             break;
         }
     }
-    calcRanking();
-    showRanking();
+    if (refresh) {
+        calcRanking();
+        showRanking();
+    }
+}
+function removeCharId(id, refresh = true) {
+    for (var i in curUnits) {
+        var char = curUnits[i];
+        if (char.id === id) {
+            console.log("removed Char: " + id);
+            curUnits.splice(i, 1);
+            break;
+        }
+    }
+    if (refresh) {
+        calcRanking();
+        showRanking();
+    }
 }
 
-function resetWeps() {
+function resetWeps(refresh = true) {
     console.log("resetWeps");
     curWeapons = JSON.parse(JSON.stringify(myWeapons));
-    calcRanking();
-    showRanking();
+
+    if (refresh) {
+        calcRanking();
+        showRanking();
+    }
+}
+function resetChars(refresh = true) {
+    console.log("resetChars");
+    curUnits = JSON.parse(JSON.stringify(myUnits));
+
+    if (refresh) {
+        calcRanking();
+        showRanking();
+    }
 }
 
 function showAllWeps() {
@@ -486,9 +521,10 @@ function findIdInArray(myObject, dbArray) {
 }
 
 function getCharRankWepId(id) {
-    var dcv = ranking[id];
-    var c = dcv.sv.c;
-    return c.eq_atk_wep.id;
+    return ranking[id].sv.c.eq_atk_wep.id;
+}
+function getCharRankCharId(id) {
+    return ranking[id].sv.c.id;
 }
 
 function copy(o) {
@@ -506,8 +542,11 @@ addJS_Node (showRanking);
 addJS_Node (setDCVValues);
 addJS_Node (getC2DPM);
 addJS_Node (resetWeps);
+addJS_Node (resetChars);
 addJS_Node (removeWepId);
+addJS_Node (removeCharId);
 addJS_Node (getCharRankWepId);
+addJS_Node (getCharRankCharId);
 addJS_Node (initPost);
 addJS_Node (initPostPost);
 addJS_Node (sortArrayWithFilter);
