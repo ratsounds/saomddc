@@ -40,7 +40,7 @@ useMy = {
         showRanking();
     },
     //change true -> false if you want to use all characters by default
-    _armor: false,
+    _armor: true,
 };
 
 // Use id or name_en for weapon identification. id is slightly quicker at startup.
@@ -106,7 +106,7 @@ myUnits = [
     { id: "steamy_asuna", name_en: "", lv: 80},
 ];
 myArmors = [
-    { id: "f_none7", name_en: "Silverthread Armor"},
+    { id: "", name_en: "Wolf Coat"},
 ];
 
 // Start integration from ui.js
@@ -290,16 +290,16 @@ function calcComboDCVForChar(oc, clvr, useCheck, myObjects, comboCall) {
     return dcv;
 }
 function calcWeaponDCVForChar(oc, myWeapon, clvr) {
-        var weapon = DC.getWeapon(myWeapon.id);
-        //Check for compatible weapon type
-        if (oc.type.eqtype != weapon.type.id || clvr.r != myWeapon.r) {
-            return null;
-        }
+    var weapon = DC.getWeapon(myWeapon.id);
+    //Check for compatible weapon type
+    if (oc.type.eqtype != weapon.type.id || clvr.r != myWeapon.r) {
+        return null;
+    }
 
-        var c = copy(oc);
-        c.eq_atk_wep = weapon;
+    var c = copy(oc);
+    c.eq_atk_wep = weapon;
 
-        return calcComboDCVForChar(c, clvr, useMy.armors, curArmors, calcArmorDCVForChar);
+    return calcComboDCVForChar(c, clvr, useMy.armors, curArmors, calcArmorDCVForChar);
 }
 function calcArmorDCVForChar(oc, myArmor, clvr) {
     var armor = DC.getArmor(myArmor.id);
@@ -415,12 +415,13 @@ function resetWeps() {
 }
 
 function showAllWeps() {
-    allweps = DC.getWeapon();
-    console.log(allweps);
+    console.log(DC.getWeapon());
 }
-
 function showAllChars() {
     console.log(cs);
+}
+function showAllArmors() {
+    console.log(DC.getArmor());
 }
 
 function fillMissingCharIds() {
@@ -490,16 +491,18 @@ function copy(o) {
 
 addJS_Node (calcRanking);
 addJS_Node (showRanking);
+addJS_Node (setDCVValues);
+addJS_Node (getC2DPM);
 addJS_Node (resetWeps);
 addJS_Node (removeWepId);
-addJS_Node (sortArrayWithFilter);
-addJS_Node (showAllWeps);
+addJS_Node (getCharRankWepId);
 addJS_Node (initPost);
 addJS_Node (initPostPost);
-addJS_Node (getCharRankWepId);
-addJS_Node (setDCVValues);
-addJS_Node (showAllChars);
+addJS_Node (sortArrayWithFilter);
 addJS_Node (copy);
+addJS_Node (showAllWeps);
+addJS_Node (showAllChars);
+addJS_Node (showAllArmors);
 addJS_Node (calcComboDCVForChar);
 addJS_Node (calcWeaponDCVForChar);
 addJS_Node (calcArmorDCVForChar);
@@ -507,7 +510,6 @@ addJS_Node (fillMissingCharIds);
 addJS_Node (fillMissingWepIds);
 addJS_Node (fillMissingArmorIds);
 addJS_Node (findIdInArray);
-addJS_Node (getC2DPM);
 
 function addJS_Node (text, s_URL, funcToRun, runOnLoad) {
     var D                                   = document;
