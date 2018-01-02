@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         ratsounds Own Units & Weps
+// @name         ratsounds Own Units & Weps & Armors
 // @namespace    http://tampermonkey.net/
-// @version      1.5
-// @description  Filters your own units with their own lvl + your own weapons and their rarity if set to true in the useMyWeapons function
+// @version      2.0
+// @description  Filters your own units with their own lvl + your own weapons and their rarity + own armors
 // @author       Zehnzen
 // @match        https://ratsounds.github.io/saomddc/
 // @grant        unsafewindow
@@ -105,8 +105,20 @@ myUnits = [
     { id: "dog_asuna", name_en: "", lv: 80},
     { id: "steamy_asuna", name_en: "", lv: 80},
 ];
+// NOTE: Not all armors are available in the database.
+// Use: showAllArmors() in console to check which ones are possible.
 myArmors = [
-    { id: "", name_en: "Wolf Coat"},
+    { id: "mf_dark1", name_en: "Wolf Coat"},
+    { id: "f_dark2", name_en: "Pumpkun Dress"}, //Yes pumpk'u'n, I didn't choose that either
+    { id: "", name_en: "Gym Clothes in Youth"},
+    { id: "", name_en: "Hot Spring Bathtowel"},
+    { id: "", name_en: "Heart Dress"},
+    { id: "", name_en: "Fiery Wind Cape"},
+    { id: "", name_en: "Captain Coat"},
+    { id: "", name_en: "Scale Chainmail"},
+    { id: "", name_en: "Holy Night Cape"},
+    { id: "", name_en: "Snow Fairy Cape"},
+    { id: "", name_en: "Scarlet Party Dress"},
 ];
 
 // Start integration from ui.js
