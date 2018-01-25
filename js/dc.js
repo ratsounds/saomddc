@@ -118,6 +118,8 @@ var DC = (function () {
         var dtmod = 0;
         for (var t in db.dtype) { dtmod += boss[t] * sv.dtmod[t]; }
 
+        var wtmod = boss[c.type.wtype];
+
         var cmod = Expression.eval(boss.condition.expression, exp_obj) ? boss.condition.values.mod : 0;
 
         var combo = Math.floor(boss.combo / 10) * 0.05;
@@ -131,7 +133,7 @@ var DC = (function () {
             combo += sv.c.combo_damage_30;
         }
 
-        var mod = Math.min(combo + sve.mod_dmg + emod + dtmod + boss.repRate + boss.racc + boss.etcMod + cmod, boss.limit);
+        var mod = Math.min(combo + sve.mod_dmg + emod + dtmod + wtmod + boss.repRate + boss.racc + boss.etcMod + cmod, boss.limit);
         if (boss.crit > 0) {
             mod *= crit;
         }
@@ -193,7 +195,7 @@ var DC = (function () {
         sv.dtmod = {}
         for (var t in db.dtype) {
             sv.dtmod[t] = c['dtr_' + t];
-        }
+        }        
         return sv;
     }
     function createSVE(sv, elem) {
