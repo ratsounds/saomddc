@@ -421,10 +421,11 @@ function calcRanking() {
     //console.log('ranking',ranking);
 }
 function getDPM(dcv) {
-    var time = 0;
     var mp = dcv.sv.mp;
-    var count = 0;
+    var dmp = dcv.sv.c.type.ns_hits * dcv.sv.mpr;
     var ns_duration = dcv.sv.c.type.ns_duration * dcv.combo_speed_rate * dcv.sv.c.s3_speed ? dcv.sv.c.s3_speed : 1;
+    var time = 0;
+    var count = 0;
     while (time <= 60) {
         if (mp >= dcv.sv.cost) { // s3
             time += dcv.duration;
@@ -432,7 +433,7 @@ function getDPM(dcv) {
             count++;
         } else { // normal set
             time += ns_duration;
-            mp += dcv.sv.c.type.ns_hits * dcv.mpr;
+            mp += dmp;
         }
     }
     return dcv.damage * (count + ((time - 60) / dcv.duration));
