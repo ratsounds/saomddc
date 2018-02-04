@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ratsounds Own Units & Weps & Armors
 // @namespace    http://tampermonkey.net/
-// @version      2.0
+// @version      2.0.1
 // @description  Filters your own units with their own lvl + your own weapons and their rarity + own armors
 // @author       Zehnzen
 // @match        https://ratsounds.github.io/saomddc/
@@ -104,6 +104,8 @@ myUnits = [
     { id: "e16_sachi", name_en: "", lv: 80},
     { id: "dog_asuna", name_en: "", lv: 80},
     { id: "steamy_asuna", name_en: "", lv: 80},
+    { id: "g1_silica", name_en: "", lv: 80},
+    { id: "ggo1_sinon", name_en: "", lv: 80},
 ];
 // NOTE: Not all armors are available in the database.
 // Use: showAllArmors() in console to check which ones are possible.
@@ -119,6 +121,7 @@ myArmors = [
     { id: "", name_en: "Holy Night Cape"},
     { id: "", name_en: "Snow Fairy Cape"},
     { id: "", name_en: "Scarlet Party Dress"},
+    { id: "", name_en: "Celebratory Furisode"},
 ];
 
 // Start integration from ui.js
@@ -182,7 +185,7 @@ function initPostPost() {
     elemSort.append(DO.new('<option value="' + 'floorcapacity' + '">' + 'Floor Capacity' + '</option>'));
     elemSort.append(DO.new('<option value="' + 'c2dpm' + '">' + 'C/2 DPM' + '</option>'));
     //load default
-    putBoss();
+    getBoss();
     calcRanking();
     showRanking();
     //init events
@@ -238,7 +241,8 @@ function initPostPost() {
 
 function calcRanking() {
     //console.log('calcRanking');
-    putBoss();
+    getBoss();
+    var cs = DC.getChar();
     ranking = [];
 
     for (var i in lvr) {
