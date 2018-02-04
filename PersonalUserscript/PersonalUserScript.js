@@ -104,6 +104,8 @@ myUnits = [
     { id: "e16_sachi", name_en: "", lv: 80},
     { id: "dog_asuna", name_en: "", lv: 80},
     { id: "steamy_asuna", name_en: "", lv: 80},
+    { id: "g1_silica", name_en: "", lv: 80},
+    { id: "ggo1_sinon", name_en: "", lv: 80},
 ];
 // NOTE: Not all armors are available in the database.
 // Use: showAllArmors() in console to check which ones are possible.
