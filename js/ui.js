@@ -249,7 +249,7 @@ function initPost() {
     elemRanking = DO.qid('ranking');
     elemSort = DO.qid('sort');
     //load default
-    putBoss();
+    getBoss();
     calcRanking();
     showRanking();
     //init events
@@ -328,7 +328,7 @@ function showSidebar() {
     }
 }
 
-function putBoss() {
+function getBoss() {
     var db = DC.getData();
     boss = { crit: 1 };
     DO.qa('.boss input,.boss select').forEach(function (item) {
@@ -344,7 +344,8 @@ function putBoss() {
             boss[item.name] = parse(item.value);
         }
     });
-    //console.log('putBoss',boss);
+    boss.condition = db.preset[DO.qid('preset').value].condition;
+    //console.log('getBoss',boss);
     return boss;
 }
 
@@ -361,11 +362,7 @@ function setBoss(boss) {
                 item.checked = boss[item.name] === parse(item.value);
             }
         } else {
-            if (item.name === 'condition' && boss[item.name] === 0) {
-                item.value = '';
-            } else {
-                item.value = boss[item.name];
-            }
+            item.value = boss[item.name];
         }
     });
     if (boss.filter !== 0) {
@@ -375,7 +372,7 @@ function setBoss(boss) {
 
 function calcRanking() {
     //console.log('calcRanking');
-    putBoss();
+    getBoss();
     var cs = DC.getChar();
     ranking = [];
     for (var i in lvr) {
@@ -384,7 +381,7 @@ function calcRanking() {
             var c = cs[j];
             var dcv;
             if (clvr.r > 0) { // weapon & armor, accessory
-                if(boss.combo>0){
+                if (boss.combo > 0) {
                     dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_combo_wep, clvr.r, c.eq_combo_amr, c.eq_combo_acc, boss);
                 } else {
                     dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
@@ -412,7 +409,7 @@ function calcRanking() {
     switch (sortKey) {
         case 'duration':
         case 'c2duration':
-        sortObjectArray(ranking, sortKey, true);
+            sortObjectArray(ranking, sortKey, true);
             break;
         default:
             sortObjectArray(ranking, sortKey);
