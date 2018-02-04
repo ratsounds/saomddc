@@ -185,7 +185,7 @@ function initPostPost() {
     elemSort.append(DO.new('<option value="' + 'floorcapacity' + '">' + 'Floor Capacity' + '</option>'));
     elemSort.append(DO.new('<option value="' + 'c2dpm' + '">' + 'C/2 DPM' + '</option>'));
     //load default
-    putBoss();
+    getBoss();
     calcRanking();
     showRanking();
     //init events
