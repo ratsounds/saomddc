@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ratsounds Own Units & Weps & Armors
 // @namespace    http://tampermonkey.net/
-// @version      2.0
+// @version      2.0.1
 // @description  Filters your own units with their own lvl + your own weapons and their rarity + own armors
 // @author       Zehnzen
 // @match        https://ratsounds.github.io/saomddc/
@@ -240,7 +240,8 @@ function initPostPost() {
 
 function calcRanking() {
     //console.log('calcRanking');
-    putBoss();
+    getBoss();
+    var cs = DC.getChar();
     ranking = [];
 
     for (var i in lvr) {

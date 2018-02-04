@@ -278,7 +278,7 @@ function initPostPost() {
     elemSort.append(DO.new('<option value="' + 'floorcapacity' + '">' + 'Floor Capacity' + '</option>'));
     elemSort.append(DO.new('<option value="' + 'c2dpm' + '">' + 'C/2 DPM' + '</option>'));
     //load default
-    putBoss();
+    getBoss();
     calcRanking();
     showRanking();
     //init events
@@ -370,7 +370,7 @@ function showSidebar() {
     }
 }
 
-function putBoss() {
+function getBoss() {
     var db = DC.getData();
     boss = { crit: 1 };
     DO.qa('.boss input,.boss select').forEach(function (item) {
@@ -386,7 +386,8 @@ function putBoss() {
             boss[item.name] = parse(item.value);
         }
     });
-    //console.log('putBoss',boss);
+    boss.condition = db.preset[DO.qid('preset').value].condition;
+    //console.log('getBoss',boss);
     return boss;
 }
 
@@ -403,11 +404,7 @@ function setBoss(boss) {
                 item.checked = boss[item.name] === parse(item.value);
             }
         } else {
-            if (item.name === 'condition' && boss[item.name] === 0) {
-                item.value = '';
-            } else {
-                item.value = boss[item.name];
-            }
+            item.value = boss[item.name];
         }
     });
     if (boss.filter !== 0) {
@@ -419,7 +416,8 @@ function setBoss(boss) {
 
 function calcRanking() {
     //console.log('calcRanking');
-    putBoss();
+    getBoss();
+    var cs = DC.getChar();
     ranking = [];
 
     for (var i in lvr) {
@@ -486,7 +484,7 @@ function calcDCVForChar(oc, clvr) {
         dcv = allWepCombos[0];
 
     } else if (clvr.r > 0) { // weapon & armor, accessory
-        dcv = DC.calcDamage(oc, clvr.lv, 4, oc.eq_atk_wep, oclvr.r, oc.eq_atk_amr, oc.eq_atk_acc, boss);
+        dcv = DC.calcDamage(oc, clvr.lv, 4, oc.eq_atk_wep, clvr.r, oc.eq_atk_amr, oc.eq_atk_acc, boss);
     } else { // no weapon & armor, accessory
         dcv = DC.calcDamage(oc, clvr.lv, 4, undefined, clvr.r, undefined, undefined, boss);
     }

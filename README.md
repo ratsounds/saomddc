@@ -1,7 +1,7 @@
 # saomddc
 Userscript for modifying Ratsound's sao:MD calculator for your own Units, Weapons and Armors
 
-Current Version 2.0
+Current Version 2.0.1
 
 # How to use
 1. Install Tampermonkey (chrome), Greasemonkey (firefox) plugin.
