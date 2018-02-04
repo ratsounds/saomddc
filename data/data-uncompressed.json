@@ -26681,9 +26681,9 @@
             "combo": 0,
             "crit": 1,
             "filter": 0,
-            "condition": 0,
-            "start": 0,
-            "end": 0
+            "condition": "c.group.id=g1:mod=0.10",
+            "start": 1486274400000,
+            "end": 1487484000000
         },
         {
             "name": "#BoBv01 土＋聖",
@@ -26716,9 +26716,9 @@
             "combo": 0,
             "crit": 1,
             "filter": 0,
-            "condition": 0,
-            "start": 0,
-            "end": 0
+            "condition": "c.group.id=g1:mod=0.10",
+            "start": 1486274400000,
+            "end": 1487484000000
         },
         {
             "name": "#バレンタインランイベ 前半",
@@ -26752,8 +26752,8 @@
             "crit": 1,
             "filter": 0,
             "condition": 0,
-            "start": 0,
-            "end": 0
+            "start": 1517378400000,
+            "end": 1486792800000
         },
         {
             "name": "#バレンタインランイベ 後半",
@@ -26787,8 +26787,8 @@
             "crit": 1,
             "filter": 0,
             "condition": 0,
-            "start": 0,
-            "end": 0
+            "start": 1517378400000,
+            "end": 1486792800000
         },
         {
             "name": "一般ボス 無",
@@ -27766,7 +27766,7 @@
             "combo": 0,
             "crit": 1,
             "filter": 0,
-            "condition": "group.id=isr:mod=0.10",
+            "condition": "c.group.id=isr:mod=0.10",
             "start": 1506578400000,
             "end": 1507269600000
         },
@@ -27801,7 +27801,7 @@
             "combo": 0,
             "crit": 1,
             "filter": 0,
-            "condition": "group.id=isr:mod=0.10",
+            "condition": "c.group.id=isr:mod=0.10",
             "start": 1506578400000,
             "end": 1507269600000
         },
@@ -27836,7 +27836,7 @@
             "combo": 0,
             "crit": 1,
             "filter": 0,
-            "condition": "group.id=isr:mod=0.10",
+            "condition": "c.group.id=isr:mod=0.10",
             "start": 1506578400000,
             "end": 1507269600000
         },
@@ -27871,7 +27871,7 @@
             "combo": 0,
             "crit": 1,
             "filter": 0,
-            "condition": "group.id=isr:mod=0.10",
+            "condition": "c.group.id=isr:mod=0.10",
             "start": 1506578400000,
             "end": 1507269600000
         },
