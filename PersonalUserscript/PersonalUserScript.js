@@ -121,6 +121,7 @@ myArmors = [
     { id: "", name_en: "Holy Night Cape"},
     { id: "", name_en: "Snow Fairy Cape"},
     { id: "", name_en: "Scarlet Party Dress"},
+    { id: "", name_en: "Celebratory Furisode"},
 ];
 
 // Start integration from ui.js
