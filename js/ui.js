@@ -467,6 +467,8 @@ function showRanking() {
         dcv.score = dcv[score_key];
         dcv.color = dcv.sv.c.element.color;
         dcv.cname = dcv.sv.c.cname['name' + lang];
+        dcv.video=0;
+        if(dcv.sv.c.s3_video){dcv.video=1;}
         var html = mapperInfo.map(dcv);
         elemRanking.append(DO.new(html));
     }
