@@ -392,14 +392,18 @@ function calcRanking() {
             ranking.push(dcv);
             dcv.combo_speed_rate = (1 - dcv.sv.c.combo_speed * Math.floor(boss.combo / 10));
             dcv.duration = dcv.sv.c.s3_duration * dcv.combo_speed_rate;
+            dcv.cduration = dcv.sv.c.s3_c_duration ? dcv.sv.c.s3_c_duration : Infinity;
             dcv.c2duration = dcv.sv.c.s3_c_duration ? dcv.sv.c.s3_c_duration : dcv.sv.c.s3_duration * dcv.combo_speed_rate;
             dcv.duration_50 = dcv.sv.c.s3_duration * (1 - dcv.sv.c.combo_speed * Math.floor(50 / 10));
             dcv.dps = Math.floor(dcv.damage / dcv.duration);
             dcv.dpm = Math.floor(getDPM(dcv));
+            dcv.cdps = Math.floor(dcv.damage / dcv.cduration);
             dcv.c2dps = Math.floor(dcv.damage / dcv.duration + dcv.damage / dcv.c2duration);
             dcv.duration = Math.floor(dcv.duration * 100) / 100;
             dcv.duration_50 = Math.floor(dcv.duration_50 * 100) / 100;
+            dcv.cduration = Math.floor(dcv.cduration * 100) / 100;
             dcv.c2duration = Math.floor((dcv.c2duration + dcv.duration) * 100) / 100;
+            dcv.gap = Math.floor((dcv.duration - dcv.cduration) * 100) / 100;
             dcv.capacity = Math.floor(dcv.damage * dcv.sv.mp / dcv.sv.cost);
             dcv.damage = Math.floor(dcv.damage);
             dcv.mpr = Math.floor(dcv.sv.mpr);
@@ -408,6 +412,7 @@ function calcRanking() {
     var sortKey = elemSort.value;
     switch (sortKey) {
         case 'duration':
+        case 'cduration':
         case 'c2duration':
             sortObjectArray(ranking, sortKey, true);
             break;
@@ -467,8 +472,8 @@ function showRanking() {
         dcv.score = dcv[score_key];
         dcv.color = dcv.sv.c.element.color;
         dcv.cname = dcv.sv.c.cname['name' + lang];
-        dcv.video=0;
-        if(dcv.sv.c.s3_video){dcv.video=1;}
+        dcv.video = 0;
+        if (dcv.sv.c.s3_video) { dcv.video = 1; }
         var html = mapperInfo.map(dcv);
         elemRanking.append(DO.new(html));
     }
