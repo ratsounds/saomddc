@@ -86,13 +86,21 @@ var DC = (function () {
         var atk = sv.atk + getEqValue(bs_con_amr, key_atk) + getEqValue(bs_con_acc, key_atk);
         var bs_atk = sve.bs_atk + getEqValue(bs_con_amr, key_bs_atk) + getEqValue(bs_con_acc, key_bs_atk);
 
-        var buff;
+        var buff = 0;
         if (boss.gbuff === undefined) {
-            buff = sv.c.s3_atk;
+            buff += sv.c.s3_atk;
         } else {
-            buff = Math.max(sv.c.s3_atk, boss.gbuff);
+            buff += Math.max(sv.c.s3_atk, boss.gbuff);
         }
-        buff *= boss.trophy;
+        if (boss.cbuff === undefined) {
+            buff += sv.c.s3_catk;
+        } else if (sv.c.s3_catk > 0) {
+            buff += sv.c.s3_catk;
+        } else {
+            buff += boss.cbuff;
+        }
+        buff += boss.trophy;
+        buff += 1;
 
         var debuff = 1.0;
         if (boss.debuff) { debuff = boss.debuff; }
@@ -110,8 +118,8 @@ var DC = (function () {
             emod += boss[sve.eRate];
         }
         for (var e in db.element) {
-            if(e===sv.c.element.id){
-                emod += boss[e]; 
+            if (e === sv.c.element.id) {
+                emod += boss[e];
             }
         }
 
@@ -195,7 +203,7 @@ var DC = (function () {
         sv.dtmod = {}
         for (var t in db.dtype) {
             sv.dtmod[t] = c['dtr_' + t];
-        }        
+        }
         return sv;
     }
     function createSVE(sv, elem) {
