@@ -30070,7 +30070,7 @@
             "eq_combo_wep": "g18_rifle1",
             "eq_combo_amr": "f_none6",
             "eq_combo_acc": "mf_water8",
-            "meta": "【魅惑のライダー】シノン sinon [charming rider] 配布18シノン gift18 sinon ★5 *5 シノン sinon f 女性 @female 配布 2018 event limited (gift) 2018 配布 gift 制限 restricted イベント event 無 none ggo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up 発生保障 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【魅惑のライダー】シノン sinon [charming rider] 配布18シノン gift18 sinon ★5 *5 シノン sinon f 女性 @female 配布 2018 event limited (gift) 2018 配布 gift 制限 restricted イベント event 無 none ggo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "g5th_strea": {
             "id": "g5th_strea",
@@ -30141,7 +30141,7 @@
             "eq_combo_wep": "os4_sword",
             "eq_combo_amr": "f_none7",
             "eq_combo_acc": "mf_water8",
-            "meta": "【天真爛漫な祝福】ストレア strea [ingenuous blessing] 5周年ストレア 5th strea ★5 *5 ストレア strea f 女性 @female ゲームシリーズ5周年記念 sao game 5th anniversary ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up 速度 アップ speed up 連携mp回復 combination mp recovery 発生保障 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【天真爛漫な祝福】ストレア strea [ingenuous blessing] 5周年ストレア 5th strea ★5 *5 ストレア strea f 女性 @female ゲームシリーズ5周年記念 sao game 5th anniversary ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up 速度 アップ speed up 連携mp回復 combination mp recovery コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "g5th_philia": {
             "id": "g5th_philia",
@@ -30212,7 +30212,7 @@
             "eq_combo_wep": "v18_dagger",
             "eq_combo_amr": "f_none7",
             "eq_combo_acc": "mf_water8",
-            "meta": "【トレジャーハンターの祝福】フィリア philia [treasure hunter's blessing] 5周年フィリア 5th philia ★5 *5 フィリア philia f 女性 @female ゲームシリーズ5周年記念 sao game 5th anniversary ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up 速度 アップ speed up 連携mp回復 combination mp recovery 発生保障 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【トレジャーハンターの祝福】フィリア philia [treasure hunter's blessing] 5周年フィリア 5th philia ★5 *5 フィリア philia f 女性 @female ゲームシリーズ5周年記念 sao game 5th anniversary ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up 速度 アップ speed up 連携mp回復 combination mp recovery コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "band_asuna": {
             "id": "band_asuna",
@@ -30283,7 +30283,7 @@
             "eq_combo_wep": "x17p1_staff",
             "eq_combo_amr": "f_none4",
             "eq_combo_acc": "mf_water8",
-            "meta": "【スウィート・ボイス】アスナ asuna [sweet voice] バンドアスナ band asuna ★5 *5 アスナ asuna f 女性 @female fairy magic fairy magic ガチャ gacha スカウト scout 光 light pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 魔 magic サークル 攻撃 バフ atk attack circle buff コンボダメージアップ combo damage up 発生保障 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【スウィート・ボイス】アスナ asuna [sweet voice] バンドアスナ band asuna ★5 *5 アスナ asuna f 女性 @female fairy magic fairy magic ガチャ gacha スカウト scout 光 light pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 魔 magic サークル 攻撃 バフ atk attack circle buff コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "band_yuuki": {
             "id": "band_yuuki",
@@ -30425,7 +30425,7 @@
             "eq_combo_wep": "band_mace",
             "eq_combo_amr": "f_none8",
             "eq_combo_acc": "mf_water8",
-            "meta": "【グルーヴィー・サウンド】リズベット lisbeth [groovy sound] バンドリズ band lisbeth ★5 *5 リズ lisbeth f 女性 @female fairy magic fairy magic ガチャ gacha スカウト scout 闇 dark pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt サークル 攻撃 バフ atk attack circle buff コンボダメージアップ combo damage up 発生保障 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【グルーヴィー・サウンド】リズベット lisbeth [groovy sound] バンドリズ band lisbeth ★5 *5 リズ lisbeth f 女性 @female fairy magic fairy magic ガチャ gacha スカウト scout 闇 dark pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt サークル 攻撃 バフ atk attack circle buff コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "band_silica": {
             "id": "band_silica",
@@ -30567,7 +30567,7 @@
             "eq_combo_wep": "sao_rapier",
             "eq_combo_amr": "mf_fire",
             "eq_combo_acc": "mf_fire",
-            "meta": "【シャミセン・ロック】プレミア premiere [shamisen rock] バンドプレミア band premiere ★4 *4 プレミア premiere f 女性 @female pop star online live battle!! 報酬 pop star online live battle!! reward 報酬 reward 制限 restricted 火 fire pso ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up 発生保障 guaranteed 連携 combination リーダースキル ls leader skill"
+            "meta": "【シャミセン・ロック】プレミア premiere [shamisen rock] バンドプレミア band premiere ★4 *4 プレミア premiere f 女性 @female pop star online live battle!! 報酬 pop star online live battle!! reward 報酬 reward 制限 restricted 火 fire pso ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up 連携 combination リーダースキル ls leader skill"
         }
     },
     "type": {
