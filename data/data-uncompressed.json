@@ -13020,8 +13020,8 @@
             "s3_speed": 0,
             "combo_speed": 0,
             "s3_mp": 120,
-            "hits": 3,
-            "canceled_hits": 0,
+            "hits": 5,
+            "canceled_hits": 5,
             "s3_duration": 1.46,
             "s3_c_duration": 0.85,
             "s3_rate": 13.484169690231873,
@@ -13040,7 +13040,7 @@
             "eq_combo_wep": "ninja_staff",
             "eq_combo_amr": "f_wind3",
             "eq_combo_acc": "mf_water8",
-            "meta": "【祝祭の魔女】リーファ leafa [rejoicing witch] e16リーファ e16 leafa ★5 *5 リーファ leafa f 女性 @female イベント 2016 event limited 2016 イベント event 制限 restricted 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 魔 magic 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 選ばれし者 chosen 連携 combination リーダースキル ls leader skill"
+            "meta": "【祝祭の魔女】リーファ leafa [rejoicing witch] e16リーファ e16 leafa ★5 *5 リーファ leafa f 女性 @female イベント 2016 event limited 2016 イベント event 制限 restricted 闇 dark alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 魔 magic 防御 デバフ deffence debuff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 選ばれし者 chosen 発生保障 guaranteed 連携 combination リーダースキル ls leader skill"
         },
         "nw_leafa": {
             "id": "nw_leafa",
@@ -30629,7 +30629,7 @@
             "combo_speed": 0,
             "s3_mp": 120,
             "hits": 12,
-            "canceled_hits": 0,
+            "canceled_hits": 8,
             "s3_duration": 2,
             "s3_c_duration": 1.16,
             "s3_rate": 11.380285030089464,
@@ -30700,7 +30700,7 @@
             "combo_speed": 0,
             "s3_mp": 120,
             "hits": 12,
-            "canceled_hits": 0,
+            "canceled_hits": 11,
             "s3_duration": 2.2,
             "s3_c_duration": 1.13,
             "s3_rate": 11.752759029911596,
