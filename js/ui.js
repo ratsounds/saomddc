@@ -77,12 +77,12 @@ function initHelp(html) {
     for (var i = 0; i < array_cname.length; i++) {
         var item = array_cname[i];
         var html = '';
-        html += '<tr style="color:' + item.color + '; background-color:' + item.body + ';background-image:linear-gradient(45deg,transparent 90%,' + item.body + ' 90%,' + item.body + '),linear-gradient(45deg,transparent 88%,' + item.highlight + ' 88%,' + item.highlight + '), linear-gradient(45deg,transparent 84%,' + item.head + ' 84%,' + item.head + ');"><th>';
+        html += '<tr style="color:' + item.color + '; background-color:' + item.body + ';"><th>';
         html += item.name;
         if (item.nick && item.nick !== item.name) {
             html += '(' + item.nick + ')';
         }
-        html += '</th><td>';
+        html += '</th><td style="background-image:linear-gradient(45deg,transparent 90%,' + item.body + ' 90%,' + item.body + '),linear-gradient(45deg,transparent 88%,' + item.highlight + ' 88%,' + item.highlight + '), linear-gradient(45deg,transparent 84%,' + item.head + ' 84%,' + item.head + ');">';
         html += item.name_en;
         if (item.nick_en && item.nick_en !== item.name_en) {
             html += '(' + item.nick_en + ')';
@@ -173,6 +173,8 @@ function initPre() {
     DO.qid('help_button').on('click', function (ev) {
         DO.qid('help').classList.toggle('hidden');
         ev.target.classList.toggle('on');
+        twttr.widgets.load(DO.q('.tips'));
+
     });
     DO.qid('config_button').on('click', function (ev) {
         DO.qa('.config_bar').forEach(function (elem) {

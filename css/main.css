@@ -585,6 +585,18 @@ twitterwidget {
   display: block;
 }
 
+#content .help .tips p {
+  margin:  0;
+  padding:  0;
+  border: 0px;
+  background-color:  transparent;
+  word-break: break-all;
+}
+
+#content .help .tips th {
+  vertical-align: top;
+}
+
 a {
   text-decoration: none;
   color: #864;
