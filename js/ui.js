@@ -521,11 +521,14 @@ function getCharDetail(id) {
 
     html += getKVTableRow('Character Atk', Math.floor(dcv.sv.atk_c));
     html += getKVTableRow('Equipment Atk', Math.floor(dcv.sv.atk_eq));
-    if (c.s3_gatk > 1) {
+    if (c.s3_gatk > 0) {
         html += getKVTableRow('Group Atk Buff', c.s3_gatk);
-    } else if (c.s3_atk > 1) {
+    } else if (c.s3_atk > 0) {
         html += getKVTableRow('Atk Buff', c.s3_atk);
     }
+    if (c.s3_catk > 0) {
+        html += getKVTableRow('Circle Atk Buff', c.s3_catk);
+    }    
     if (c.combo_damage_20 > 1) {
         html += getKVTableRow('Combo Damage 20Hit', c.combo_damage_20);
     }
