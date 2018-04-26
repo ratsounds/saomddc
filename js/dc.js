@@ -57,20 +57,22 @@ var DC = (function () {
             }
         }
     }
+    /*
     function calcRateAtTryout(c, lv, lb, wep, r, amr, acc, boss, damage) {
         var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);
         dcv.rate = damage / ((dcv.atk * dcv.bs * (1 + (dcv.buff - 1) / 1.5) - dcv.def) * dcv.mod) * 1.1;
         return dcv;
     }
+    */
     function calcRate(c, lv, lb, wep, r, amr, acc, boss, damage) {
         var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);
-        dcv.rate = damage / ((dcv.atk * dcv.bs * dcv.buff - dcv.def) * dcv.mod);
+        dcv.rate = damage / ((dcv.atk * dcv.bs * dcv.buff - dcv.def) * dcv.mod * dcv.crit * dcv.combo);
         return dcv;
     }
     function calcDamage(c, lv, lb, wep, r, amr, acc, boss, custom_rate) {
         var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);
         if (custom_rate) { dcv.rate = custom_rate; }
-        dcv.damage = (dcv.atk * dcv.bs * dcv.buff - dcv.def) * dcv.rate * dcv.mod;
+        dcv.damage = (dcv.atk * dcv.bs * dcv.buff - dcv.def) * dcv.rate * dcv.mod * dcv.crit * dcv.combo;
         return dcv;
     }
     function getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss) {
@@ -113,7 +115,6 @@ var DC = (function () {
         }
 
         var emod = 1;
-        var crit = sve.mod_crit;
         if (sve.eRate) {
             emod += boss[sve.eRate];
         }
@@ -130,7 +131,14 @@ var DC = (function () {
 
         var cmod = Expression.eval(boss.condition.expression, exp_obj) ? boss.condition.values.mod : 0;
 
-        var combo = Math.floor(boss.combo / 10) * 0.05;
+        var mod = Math.min(sve.mod_dmg + emod + dtmod + wtmod + boss.repRate + boss.racc + boss.etcMod + cmod, boss.limit);
+
+        var crit = 1.0;
+        if (boss.crit > 0) {
+            crit = sve.mod_crit;
+        }
+
+        var combo = 1 + Math.floor(boss.combo / 10) * 0.05;
         if (boss.combo >= 20) {
             combo += sv.c.combo_damage_20;
             if (wep) {
@@ -141,10 +149,6 @@ var DC = (function () {
             combo += sv.c.combo_damage_30;
         }
 
-        var mod = Math.min(combo + sve.mod_dmg + emod + dtmod + wtmod + boss.repRate + boss.racc + boss.etcMod + cmod, boss.limit);
-        if (boss.crit > 0) {
-            mod *= crit;
-        }
         var dcv = {
             atk: atk,
             bs: (1 + bs_atk),
@@ -152,6 +156,8 @@ var DC = (function () {
             def: def,
             rate: sv.c.s3_rate,
             mod: mod,
+            crit: crit,
+            combo: combo,
             sv: sv
         };
         return dcv;
@@ -354,7 +360,7 @@ var DC = (function () {
         loadData: loadData,
         getData: getData,
         getSV: getSV,
-        calcRateAtTryout: calcRateAtTryout,
+        //calcRateAtTryout: calcRateAtTryout,
         calcRate: calcRate,
         calcDamage: calcDamage,
         get: get,
