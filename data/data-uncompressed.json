@@ -31660,7 +31660,7 @@
         },
         {
             "name": "#FSJランイベ 前半",
-            "name_en": "#PSOLB1 1st",
+            "name_en": "#FSJランイベ 1st",
             "def": 1450,
             "element": "light",
             "epRate": 0.5,
@@ -31695,7 +31695,7 @@
         },
         {
             "name": "#FSJランイベ 後半",
-            "name_en": "#PSOLB1 2nd",
+            "name_en": "#FSJランイベ 2nd",
             "def": 1450,
             "element": "dark",
             "epRate": 0.5,
