@@ -528,7 +528,7 @@ function getCharDetail(id) {
     }
     if (c.s3_catk > 0) {
         html += getKVTableRow('Circle Atk Buff', c.s3_catk);
-    }    
+    }
     if (c.combo_damage_20 > 1) {
         html += getKVTableRow('Combo Damage 20Hit', c.combo_damage_20);
     }
@@ -548,8 +548,8 @@ function getCharDetail(id) {
         html += getKVTableRow('Debuff Rate', c.s3_debuf, true);
         html += getKVTableRow('Debuff P/N Rate', c.s3_debuf_pnr, true);
     }
-    html += getKVTableRow('Hit Count', c.hits===0?'no data':c.hits);
-    html += getKVTableRow('Hit Count at Canceled', c.canceled_hits===0?'no data':c.canceled_hits);
+    html += getKVTableRow('Hit Count', c.hits === 0 ? 'no data' : c.hits);
+    html += getKVTableRow('Hit Count at Canceled', c.canceled_hits === 0 ? 'no data' : c.canceled_hits);
     html += getKVTableRow('SS MP Cost', c.s3_mp);
     html += getKVTableRow('Possible Max MP', dcv.sv.mp);
     html += getKVTableRow('MP Limit Break', c.mp_lb_total + '(' + c.mp_lb_1 + ',' + c.mp_lb_2 + ',' + c.mp_lb_3 + ',' + c.mp_lb_4 + ') EXPERIMENTAL!');

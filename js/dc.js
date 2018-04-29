@@ -39,12 +39,13 @@ var DC = (function () {
     }
     function createConditionObject(object, key) {
         for (var i in object) {
-            var condition = {};
             var condition_string = object[i][key];
             if (condition_string !== 0) {
-                var conditions = condition_string.split(/,/);
-                for (var j in conditions) {
-                    var sp = conditions[j].split(/:/);
+                var conditions = []
+                var condition_src = condition_string.split(/,/);
+                for (var j in condition_src) {
+                    var condition = {};
+                    var sp = condition_src[j].split(/:/);
                     condition.expression = sp[0];
                     var values = sp[1].split(/&/);
                     condition.values = {};
@@ -52,18 +53,28 @@ var DC = (function () {
                         var kv = values[k].split(/=/);
                         condition.values[kv[0]] = parse(kv[1]);
                     }
+                    conditions.push(condition);
                 }
-                object[i][key] = condition;
+                object[i][key] = conditions;
             }
         }
     }
-    /*
-    function calcRateAtTryout(c, lv, lb, wep, r, amr, acc, boss, damage) {
-        var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);
-        dcv.rate = damage / ((dcv.atk * dcv.bs * (1 + (dcv.buff - 1) / 1.5) - dcv.def) * dcv.mod) * 1.1;
-        return dcv;
+    function evalConditions(conditions, data) {
+        values = {};
+        for (var i in conditions) {
+            var condition = conditions[i];
+            if (Expression.eval(condition.expression, data)) {
+                for (var key in condition.values) {
+                    if (values[key]) {
+                        values[key] += condition.values[key];
+                    } else {
+                        values[key] = condition.values[key];
+                    }
+                }
+            }
+        }
+        return values;
     }
-    */
     function calcRate(c, lv, lb, wep, r, amr, acc, boss, damage) {
         var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);
         dcv.rate = damage / ((dcv.atk * dcv.bs * dcv.buff - dcv.def) * dcv.mod * dcv.crit * dcv.combo);
@@ -83,8 +94,8 @@ var DC = (function () {
         }
 
         var exp_obj = { c: c, hp: 100, vs: boss.element ? boss.element.id : undefined, combo: boss.combo, switched: boss.switched };
-        var bs_con_amr = amr && Expression.eval(amr.conditional.expression, exp_obj) ? amr.conditional.values : {};
-        var bs_con_acc = acc && Expression.eval(acc.conditional.expression, exp_obj) ? acc.conditional.values : {};
+        var bs_con_amr = amr ? evalConditions(amr.conditional, exp_obj) : {};
+        var bs_con_acc = acc ? evalConditions(acc.conditional, exp_obj) : {};
         var atk = sv.atk + getEqValue(bs_con_amr, key_atk) + getEqValue(bs_con_acc, key_atk);
         var bs_atk = sve.bs_atk + getEqValue(bs_con_amr, key_bs_atk) + getEqValue(bs_con_acc, key_bs_atk);
 
@@ -129,7 +140,8 @@ var DC = (function () {
 
         var wtmod = boss[c.type.wtype];
 
-        var cmod = Expression.eval(boss.condition.expression, exp_obj) ? boss.condition.values.mod : 0;
+        var cmod = evalConditions(boss.condition, exp_obj).mod;
+        if (cmod === undefined) { cmod = 0; }
 
         var mod = Math.min(sve.mod_dmg + emod + dtmod + wtmod + boss.repRate + boss.racc + boss.etcMod + cmod, boss.limit);
 
@@ -360,7 +372,6 @@ var DC = (function () {
         loadData: loadData,
         getData: getData,
         getSV: getSV,
-        //calcRateAtTryout: calcRateAtTryout,
         calcRate: calcRate,
         calcDamage: calcDamage,
         get: get,

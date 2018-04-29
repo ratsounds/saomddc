@@ -38,7 +38,7 @@ Element.prototype.parents = function (q) {
         if (this.matches(q)) {
             return this;
         } else {
-            if(this.parentNode.parents){
+            if (this.parentNode.parents) {
                 return this.parentNode.parents(q);
             }
         }
@@ -186,67 +186,66 @@ function match(src, keywords) {
 }
 
 //handle logical expression string in given data object
-var Expression = (function(){
+var Expression = (function () {
     var opl = {
-      '&': function (a, b) { return a & b; },
-      '|': function (a, b) { return a | b; }
+        '&': function (a, b) { return a & b; },
+        '|': function (a, b) { return a | b; }
     };
     var opc = {
-      '=': function (a, b) { return a === b; },
-      '!=': function (a, b) { return a !== b; },
-      '>': function (a, b) { return a > b; },
-      '<': function (a, b) { return a < b; },
-      '>=': function (a, b) { return a >= b; },
-      '<=': function (a, b) { return a <= b; }
+        '=': function (a, b) { return a === b; },
+        '!=': function (a, b) { return a !== b; },
+        '>': function (a, b) { return a > b; },
+        '<': function (a, b) { return a < b; },
+        '>=': function (a, b) { return a >= b; },
+        '<=': function (a, b) { return a <= b; }
     };
     var opls = '(\\||&)'
     var rel = new RegExp('(.*?)' + opls + '(.*)', 'im');
     var opcs = '(' + Object.keys(opc).join('|') + ')';
     var rec = new RegExp('(.*?)' + opcs + '(.*)', 'im');
-    function eval(exp,data) {
-      var ml = rel.exec(exp);
-      if (ml === null) {
-        var mc = rec.exec(exp);
-        if (mc === null) {
-          return false;
+    function eval(exp, data) {
+        var ml = rel.exec(exp);
+        if (ml === null) {
+            var mc = rec.exec(exp);
+            if (mc === null) {
+                return false;
+            } else {
+                var a = mc[1].trim();
+                var b = mc[3].trim();
+                var va = getValueFromKeyString(data, a);
+                var vb = getValueFromKeyString(data, b);
+                if (va === undefined) { va = a; }
+                if (vb === undefined) { vb = b; }
+                return opc[mc[2]](parse(va), parse(vb));
+            }
         } else {
-          var a = mc[1].trim();
-          var b = mc[3].trim();
-          var va = getValueFromKeyString(data, a);
-          var vb = getValueFromKeyString(data, b);
-          if (va === undefined) { va = a; }
-          if (vb === undefined) { vb = b; }
-          return opc[mc[2]](parse(va), parse(vb));
+            return opl[ml[2]](eval(ml[1].trim(), data), eval(ml[3].trim(), data));
         }
-      } else {
-        return opl[ml[2]](eval(ml[1].trim()), eval(ml[3].trim()));
-      }
     }
-    function getValueFromKeyString(object,key){
-      var keys = key.split('.');
-      var value = object[keys[0]];
-      if(value){
-        if(keys.length>1){
-          keys.shift();
-          return getValueFromKeyString(value,keys.join('.'));
-        }else{
-          return value;
+    function getValueFromKeyString(object, key) {
+        var keys = key.split('.');
+        var value = object[keys[0]];
+        if (value) {
+            if (keys.length > 1) {
+                keys.shift();
+                return getValueFromKeyString(value, keys.join('.'));
+            } else {
+                return value;
+            }
+        } else {
+            return undefined;
         }
-      } else {
-        return undefined;
-      }
-    } 
+    }
     return {
-      eval:eval
+        eval: eval
     };
-  })();
-  
-  function parse(value) {
+})();
+
+function parse(value) {
     var n = Number(value);
     if (n !== n) {
-      return value;
+        return value;
     } else {
-      return n;
+        return n;
     }
-  }
-  
+}
