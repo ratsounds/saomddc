@@ -32448,7 +32448,7 @@
             "combo": 0,
             "crit": 1,
             "filter": 0,
-            "condition": "c.element.id=dark&c.type.id=sword:mod=0.35,c.element.id=water&c.type.id=rapier:mod=0.35",
+            "condition": "c.element.id=dark&c.type.id=sword:mod=0.5,c.element.id=water&c.type.id=rapier:mod=0.5",
             "start": 1525068000000,
             "end": 1525845600000
         },
@@ -32483,7 +32483,7 @@
             "combo": 0,
             "crit": 1,
             "filter": 0,
-            "condition": "c.element.id=light&c.type.id=bow:mod=0.35,c.element.id=wind&c.type.id=sword:mod=0.35",
+            "condition": "c.element.id=light&c.type.id=bow:mod=.35,c.element.id=wind&c.type.id=sword:mod=0.5",
             "start": 1525068000000,
             "end": 1525845600000
         },
