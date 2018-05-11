@@ -15514,7 +15514,7 @@
             "eq_combo_wep": "sports_sword",
             "eq_combo_amr": "f_none7",
             "eq_combo_acc": "mf_wind6",
-            "meta": "【早春の神楽】アルゴ argo [early spring dance] 雛アルゴ hina argo ★4 *4 アルゴ argo f 女性 @female 春風誘うひな祭り spring breeze hina-matsuri ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up コンボ持続 combo duration up 連携 combination"
+            "meta": "【早春の神楽】アルゴ argo [early spring dance] 雛アルゴ hina argo ★4 *4 アルゴ argo f 女性 @female 春風誘うひな祭り spring breeze hina-matsuri ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up s3switch s3スイッチ コンボ持続 combo duration up 連携 combination"
         },
         "hina_silica": {
             "id": "hina_silica",
@@ -15585,7 +15585,7 @@
             "eq_combo_wep": "sports_dagger",
             "eq_combo_amr": "f_none7",
             "eq_combo_acc": "mf_wind6",
-            "meta": "【花桃の雛】シリカ silica [flower peach baby] 雛シリカ hina silica ★4 *4 シリカ silica f 女性 @female 春風誘うひな祭り spring breeze hina-matsuri ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up コンボ持続 combo duration up 連携 combination"
+            "meta": "【花桃の雛】シリカ silica [flower peach baby] 雛シリカ hina silica ★4 *4 シリカ silica f 女性 @female 春風誘うひな祭り spring breeze hina-matsuri ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up s3switch s3スイッチ コンボ持続 combo duration up 連携 combination"
         },
         "hina_premiere": {
             "id": "hina_premiere",
@@ -15656,7 +15656,7 @@
             "eq_combo_wep": "sports_rapier",
             "eq_combo_amr": "f_none7",
             "eq_combo_acc": "mf_wind6",
-            "meta": "【花より団子】プレミア premiere [pudding rather than praise] 雛プレミア hina premiere ★4 *4 プレミア premiere f 女性 @female 春風誘うひな祭り spring breeze hina-matsuri ガチャ gacha スカウト scout 風 wind sa0 ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up コンボ持続 combo duration up 連携 combination"
+            "meta": "【花より団子】プレミア premiere [pudding rather than praise] 雛プレミア hina premiere ★4 *4 プレミア premiere f 女性 @female 春風誘うひな祭り spring breeze hina-matsuri ガチャ gacha スカウト scout 風 wind sa0 ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up s3switch s3スイッチ コンボ持続 combo duration up 連携 combination"
         },
         "a_alice": {
             "id": "a_alice",
@@ -29818,7 +29818,7 @@
             "ss_cri": 250,
             "ss_dmg": 0,
             "ss_elem_dmg": 0,
-            "ss_cri_dmg": 0,
+            "ss_cri_dmg": 0.1,
             "ss_elem_cri_dmg": 0,
             "ss_atk_85": 0,
             "ss_elem_dmg_90": 0,
@@ -29840,7 +29840,7 @@
             "canceled_hits": 3,
             "s3_duration": 2.31,
             "s3_c_duration": 1.05,
-            "s3_rate": 13.684791501399337,
+            "s3_rate": 12.829492032561841,
             "s3_video": 0,
             "mp_lb_total": 38,
             "mp_lb_1": 9,
@@ -29856,7 +29856,7 @@
             "eq_combo_wep": "g18_rifle1",
             "eq_combo_amr": "f_none11",
             "eq_combo_acc": "mf_water8",
-            "meta": "【ちっこい主人公】レン llenn [itsy-bitsy heroine] sjレン sj llenn ★5 *5 レン llenn f 女性 @female もう一つのガンゲイル・オンライン another gun gale online ガチャ gacha スカウト scout 無 none ggo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up 速度 アップ speed up クリティカル保証 critical ensure ensuring コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【ちっこい主人公】レン llenn [itsy-bitsy heroine] sjレン sj llenn ★5 *5 レン llenn f 女性 @female もう一つのガンゲイル・オンライン another gun gale online ガチャ gacha スカウト scout 無 none ggo ダメージ アップ damage up 属性ダメージ アップ elemental damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up 速度 アップ speed up クリティカル保証 critical ensure ensuring コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "sj_pitohui": {
             "id": "sj_pitohui",
@@ -29889,7 +29889,7 @@
             "ss_cri": 250,
             "ss_dmg": 0,
             "ss_elem_dmg": 0,
-            "ss_cri_dmg": 0,
+            "ss_cri_dmg": 0.1,
             "ss_elem_cri_dmg": 0,
             "ss_atk_85": 0,
             "ss_elem_dmg_90": 0,
@@ -29911,7 +29911,7 @@
             "canceled_hits": 6,
             "s3_duration": 2.26,
             "s3_c_duration": 1.5,
-            "s3_rate": 14.050046402796866,
+            "s3_rate": 13.171918502622093,
             "s3_video": 0,
             "mp_lb_total": 38,
             "mp_lb_1": 9,
@@ -29927,7 +29927,7 @@
             "eq_combo_wep": "g18_rifle1",
             "eq_combo_amr": "f_none11",
             "eq_combo_acc": "mf_water8",
-            "meta": "【猛毒の美女】ピトフーイ pitohui [toxic beauty] sjピト sj pitohui ★5 *5 ピト pitohui f 女性 @female もう一つのガンゲイル・オンライン another gun gale online ガチャ gacha スカウト scout 無 none ggo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up クリティカル保証 critical ensure ensuring コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【猛毒の美女】ピトフーイ pitohui [toxic beauty] sjピト sj pitohui ★5 *5 ピト pitohui f 女性 @female もう一つのガンゲイル・オンライン another gun gale online ガチャ gacha スカウト scout 無 none ggo ダメージ アップ damage up 属性ダメージ アップ elemental damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up クリティカル保証 critical ensure ensuring コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "e18_yuna": {
             "id": "e18_yuna",
@@ -32142,26 +32142,26 @@
             "element": "none",
             "world": "ggo",
             "rarity": 4,
-            "ls_atk": 0,
-            "cs": 0,
-            "hp": 10386,
-            "mp": 210,
-            "atk": 2919,
-            "def": 1886,
-            "cri": 2700,
+            "ls_atk": 1.06,
+            "cs": "c.element.id=none:mod_dmg=1.05",
+            "hp": 11325,
+            "mp": 220,
+            "atk": 3182,
+            "def": 2057,
+            "cri": 2940,
             "cri_dmg": 1.5,
             "no_elem_mod": 0,
-            "lvup": "normal",
+            "lvup": "high",
             "bs_hp": 0,
-            "bs_mp": 0.1,
-            "bs_atk": 0.1,
+            "bs_mp": 0.15,
+            "bs_atk": 0.15,
             "bs_def": 0,
             "bs_cri": 0,
             "ss_atk": 250,
             "ss_cri": 250,
             "ss_dmg": 0,
-            "ss_elem_dmg": 0,
-            "ss_cri_dmg": 0,
+            "ss_elem_dmg": 0.1,
+            "ss_cri_dmg": 0.1,
             "ss_elem_cri_dmg": 0,
             "ss_atk_85": 0,
             "ss_elem_dmg_90": 0,
@@ -32174,20 +32174,20 @@
             "s3_catk": 0,
             "s3_debuf": 0,
             "s3_debuf_pnr": 0,
-            "combo_damage_20": 0,
+            "combo_damage_20": 0.05,
             "combo_damage_30": 0,
             "s3_speed": 0,
             "combo_speed": 0,
             "s3_mp": 120,
             "hits": 6,
-            "canceled_hits": 0,
-            "s3_duration": 1.93,
-            "s3_c_duration": 0,
-            "s3_rate": 13.052267356506267,
-            "s3_video": 0,
-            "mp_lb_total": 33,
+            "canceled_hits": 5,
+            "s3_duration": 2,
+            "s3_c_duration": 1.35,
+            "s3_rate": 12.011624867331095,
+            "s3_video": "https://twitter.com/ratsounds/status/995045701783404544",
+            "mp_lb_total": 34,
             "mp_lb_1": 8,
-            "mp_lb_2": 8,
+            "mp_lb_2": 9,
             "mp_lb_3": 8,
             "mp_lb_4": 9,
             "eq_mp_wep": "g18_rifle1",
@@ -32199,12 +32199,12 @@
             "eq_combo_wep": "g18_rifle1",
             "eq_combo_amr": "f_none11",
             "eq_combo_acc": "mf_water8",
-            "meta": "【小柄な二丁持ち】フカ次郎 fukaziroh [little gunner] グレネフカ grenade fukaziroh ★4 *4 フカ fukaziroh f 女性 @female グレネード弾メダル 報酬 grenade medal reward 報酬 reward 制限 restricted 無 none ggo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up 連携 combination リーダースキル ls leader skill"
+            "meta": "【小柄な二丁持ち】フカ次郎 fukaziroh [little gunner] グレネフカ grenade fukaziroh ★4 *4 フカ fukaziroh f 女性 @female グレネード弾メダル 報酬 grenade medal reward 報酬 reward 制限 restricted 無 none ggo ダメージ アップ damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "loli_asuna": {
             "id": "loli_asuna",
             "name": "【こどもじゃないもん】アスナ",
-            "name_en": "Asuna [I'm not a Kid]",
+            "name_en": "Asuna [I'm not a kid]",
             "short": "ロリアスナ",
             "short_en": "Loli Asuna",
             "cname": "asuna",
@@ -32251,7 +32251,7 @@
             "combo_speed": 0.04,
             "s3_mp": 120,
             "hits": 14,
-            "canceled_hits": 0,
+            "canceled_hits": 10,
             "s3_duration": 1.73,
             "s3_c_duration": 1,
             "s3_rate": 9.91999914287035,
@@ -32270,12 +32270,12 @@
             "eq_combo_wep": "sports_dagger",
             "eq_combo_amr": "f_none4",
             "eq_combo_acc": "mf_wind6",
-            "meta": "#N/A"
+            "meta": "【こどもじゃないもん】アスナ asuna [i'm not a kid] ロリアスナ loli asuna ★5 *5 アスナ asuna f 女性 @female つないだ手と手 こどもの日 hand in hand - children’s day ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff コンボダメージアップ combo damage up 連携 combination リーダースキル ls leader skill"
         },
         "loli_yuuki": {
             "id": "loli_yuuki",
             "name": "【お姉さん気分】ユウキ",
-            "name_en": "Yuuki [Feels Like a Big Sister]",
+            "name_en": "Yuuki [Feels like a big sis]",
             "short": "ロリユウキ",
             "short_en": "Loli Yuuki",
             "cname": "yuuki",
@@ -32341,7 +32341,7 @@
             "eq_combo_wep": "sports_sword",
             "eq_combo_amr": "f_none7",
             "eq_combo_acc": "mf_wind6",
-            "meta": "#N/A"
+            "meta": "【お姉さん気分】ユウキ yuuki [feels like a big sis] ロリユウキ loli yuuki ★5 *5 ユウキ yuuki f 女性 @female つないだ手と手 こどもの日 hand in hand - children’s day ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff コンボダメージアップ combo damage up 発生保障 guaranteed 連携 combination リーダースキル ls leader skill"
         }
     },
     "type": {

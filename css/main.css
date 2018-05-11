@@ -585,16 +585,36 @@ twitterwidget {
   display: block;
 }
 
-#content .help .tips p {
-  margin:  0;
-  padding:  0;
-  border: 0px;
-  background-color:  transparent;
-  word-break: break-all;
+#content .help dl.tips {
+  margin: 0;
+  padding: 0;
 }
 
-#content .help .tips th {
-  vertical-align: top;
+#content .help .tips dt {
+  background-color: #fff;
+  padding: 0.25em 0.5em 0 0.5em;
+  border-top: 0.1em solid #ccc;
+  font-size: 120%;
+}
+
+#content .help .tips dt.sub {
+  padding: 0 0.5em;
+  border-top: 0;
+  border-bottom: 0.1em solid #ccc;
+  font-size: 100%;
+}
+
+#content .help .tips dd {
+  margin: 0;
+  padding: 0.5em 1em 0.5em 1em;
+  background-color: #eee;
+  word-break: break-word;
+}
+#content .help .tips dd p {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border-bottom: 0px;
 }
 
 a {
