@@ -30812,7 +30812,7 @@
             "eq_combo_wep": "x17p1_staff",
             "eq_combo_amr": "f_none4",
             "eq_combo_acc": "mf_water8",
-            "meta": "【スウィート・ボイス】アスナ asuna [sweet voice] バンドアスナ band asuna ★5 *5 アスナ asuna f 女性 @female fairy magic fairy magic ガチャ gacha スカウト scout 光 light pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 魔 magic サークル 攻撃 バフ atk attack circle buff コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【スウィート・ボイス】アスナ asuna [sweet voice] バンドアスナ band asuna ★5 *5 アスナ asuna f 女性 @female fairy magic fairy magic ガチャ gacha スカウト scout 光 light pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 魔 magic グループ pt 攻撃 バフ atk attack group buff サークル circle コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "band_yuuki": {
             "id": "band_yuuki",
@@ -30883,7 +30883,7 @@
             "eq_combo_wep": "sports_lance",
             "eq_combo_amr": "f_none7",
             "eq_combo_acc": "mf_wind6",
-            "meta": "【ファンキー・プレイ】ユウキ yuuki [funky play] バンドユウキ band yuuki ★5 *5 ユウキ yuuki f 女性 @female fairy magic fairy magic ガチャ gacha スカウト scout 風 wind pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce サークル 攻撃 バフ atk attack circle buff コンボダメージアップ combo damage up 発生保障 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【ファンキー・プレイ】ユウキ yuuki [funky play] バンドユウキ band yuuki ★5 *5 ユウキ yuuki f 女性 @female fairy magic fairy magic ガチャ gacha スカウト scout 風 wind pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce グループ pt 攻撃 バフ atk attack group buff サークル circle コンボダメージアップ combo damage up 発生保障 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "band_lisbeth": {
             "id": "band_lisbeth",
@@ -30954,7 +30954,7 @@
             "eq_combo_wep": "band_mace",
             "eq_combo_amr": "f_none8",
             "eq_combo_acc": "mf_water8",
-            "meta": "【グルーヴィー・サウンド】リズベット lisbeth [groovy sound] バンドリズ band lisbeth ★5 *5 リズ lisbeth f 女性 @female fairy magic fairy magic ガチャ gacha スカウト scout 闇 dark pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt サークル 攻撃 バフ atk attack circle buff コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【グルーヴィー・サウンド】リズベット lisbeth [groovy sound] バンドリズ band lisbeth ★5 *5 リズ lisbeth f 女性 @female fairy magic fairy magic ガチャ gacha スカウト scout 闇 dark pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt グループ pt 攻撃 バフ atk attack group buff サークル circle コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "band_silica": {
             "id": "band_silica",
@@ -31025,7 +31025,7 @@
             "eq_combo_wep": "steamy_sword",
             "eq_combo_amr": "f_none7",
             "eq_combo_acc": "mf_water8",
-            "meta": "【エンジェル・トーン】シリカ silica [angelic tone] バンドシリカ band silica ★5 *5 シリカ silica f 女性 @female fairy magic fairy magic ガチャ gacha スカウト scout 水 water pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice サークル 攻撃 バフ atk attack circle buff コンボダメージアップ combo damage up 発生保障 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【エンジェル・トーン】シリカ silica [angelic tone] バンドシリカ band silica ★5 *5 シリカ silica f 女性 @female fairy magic fairy magic ガチャ gacha スカウト scout 水 water pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice グループ pt 攻撃 バフ atk attack group buff サークル circle コンボダメージアップ combo damage up 発生保障 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "bandr_premiere": {
             "id": "bandr_premiere",
@@ -31096,7 +31096,7 @@
             "eq_combo_wep": "trump_rapier",
             "eq_combo_amr": "f_none7",
             "eq_combo_acc": "mf_water8",
-            "meta": "【シャミセン・ロック】プレミア premiere [shamisen rock] バンドプレミア band premiere ★4 *4 プレミア premiere f 女性 @female pop star online live battle!! 報酬 pop star online live battle!! reward 報酬 reward 制限 restricted 火 fire pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce サークル 攻撃 バフ atk attack circle buff コンボダメージアップ combo damage up 発生保障 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【シャミセン・ロック】プレミア premiere [shamisen rock] バンドプレミア band premiere ★4 *4 プレミア premiere f 女性 @female pop star online live battle!! 報酬 pop star online live battle!! reward 報酬 reward 制限 restricted 火 fire pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce グループ pt 攻撃 バフ atk attack group buff サークル circle コンボダメージアップ combo damage up 発生保障 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "sj2_llenn": {
             "id": "sj2_llenn",
@@ -31309,7 +31309,7 @@
             "eq_combo_wep": "miko_rapier",
             "eq_combo_amr": "f_none7",
             "eq_combo_acc": "mf_water8",
-            "meta": "【アイドル・エコー】セブン seven [sweet vocals] バンドセブン band seven ★5 *5 セブン seven f 女性 @female rainbow sky rainbow sky ガチャ gacha スカウト scout 土 earth pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce サークル 攻撃 バフ atk attack circle buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 発生保障 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【アイドル・エコー】セブン seven [sweet vocals] バンドセブン band seven ★5 *5 セブン seven f 女性 @female rainbow sky rainbow sky ガチャ gacha スカウト scout 土 earth pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce グループ pt 攻撃 バフ atk attack group buff サークル circle コンボダメージアップ combo damage up コンボダメージアップ combo damage up 発生保障 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "band2_rain": {
             "id": "band2_rain",
@@ -31380,7 +31380,7 @@
             "eq_combo_wep": "band2_dual",
             "eq_combo_amr": "f_none7",
             "eq_combo_acc": "mf_water8",
-            "meta": "【トリッキー・リズム】レイン rain [cool drum beats] バンドレイン band rain ★5 *5 レイン rain f 女性 @female rainbow sky rainbow sky ガチャ gacha スカウト scout 土 earth pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice サークル 攻撃 バフ atk attack circle buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 発生保障 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【トリッキー・リズム】レイン rain [cool drum beats] バンドレイン band rain ★5 *5 レイン rain f 女性 @female rainbow sky rainbow sky ガチャ gacha スカウト scout 土 earth pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice グループ pt 攻撃 バフ atk attack group buff サークル circle コンボダメージアップ combo damage up コンボダメージアップ combo damage up 発生保障 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "band2_sinon": {
             "id": "band2_sinon",
@@ -31451,7 +31451,7 @@
             "eq_combo_wep": "band2_gun",
             "eq_combo_amr": "f_none6",
             "eq_combo_acc": "mf_water8",
-            "meta": "【パーフェクト・プレイ】シノン sinon [perfect play] バンドシノン band sinon ★5 *5 シノン sinon f 女性 @female rainbow sky rainbow sky ガチャ gacha スカウト scout 土 earth pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt サークル 攻撃 バフ atk attack circle buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 発生保障 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【パーフェクト・プレイ】シノン sinon [perfect play] バンドシノン band sinon ★5 *5 シノン sinon f 女性 @female rainbow sky rainbow sky ガチャ gacha スカウト scout 土 earth pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt グループ pt 攻撃 バフ atk attack group buff サークル circle コンボダメージアップ combo damage up コンボダメージアップ combo damage up 発生保障 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "band2_leafa": {
             "id": "band2_leafa",
@@ -31522,7 +31522,7 @@
             "eq_combo_wep": "band2_sword",
             "eq_combo_amr": "f_wind3",
             "eq_combo_acc": "mf_water8",
-            "meta": "【パッション・ストローク】リーファ leafa [passionate strumming] バンドリーファ band leafa ★5 *5 リーファ leafa f 女性 @female rainbow sky rainbow sky ガチャ gacha スカウト scout 土 earth pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice サークル 攻撃 バフ atk attack circle buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【パッション・ストローク】リーファ leafa [passionate strumming] バンドリーファ band leafa ★5 *5 リーファ leafa f 女性 @female rainbow sky rainbow sky ガチャ gacha スカウト scout 土 earth pso ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice グループ pt 攻撃 バフ atk attack group buff サークル circle コンボダメージアップ combo damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "g5th_premiere": {
             "id": "g5th_premiere",
@@ -32587,7 +32587,7 @@
             "eq_combo_wep": "gunners_rifle1",
             "eq_combo_amr": "f_none7",
             "eq_combo_acc": "mf_water8",
-            "meta": "【リトルビューティー】レン llenn [fc] 銃士レン gunnners llenn ★5 *5 レン llenn f 女性 @female 銃士たちの休息日 a rest day for gunners ガチャ gacha スカウト scout 水 water ggo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【リトルビューティー】レン llenn [little beauty] 銃士レン gunnners llenn ★5 *5 レン llenn f 女性 @female 銃士たちの休息日 a rest day for gunners ガチャ gacha スカウト scout 水 water ggo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "gunners_pitohui": {
             "id": "gunners_pitohui",
@@ -32658,7 +32658,7 @@
             "eq_combo_wep": "gunners_rifle1",
             "eq_combo_amr": "f_none7",
             "eq_combo_acc": "mf_water8",
-            "meta": "【魅惑の眼差し】ピトフーイ pitohui [fc] 銃士ピト gunnners pitohui ★5 *5 ピト pitohui f 女性 @female 銃士たちの休息日 a rest day for gunners ガチャ gacha スカウト scout 水 water ggo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【魅惑の眼差し】ピトフーイ pitohui [charming look] 銃士ピト gunnners pitohui ★5 *5 ピト pitohui f 女性 @female 銃士たちの休息日 a rest day for gunners ガチャ gacha スカウト scout 水 water ggo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "gunners_fukaziroh": {
             "id": "gunners_fukaziroh",
@@ -32729,7 +32729,7 @@
             "eq_combo_wep": "gunners_rifle1",
             "eq_combo_amr": "f_none7",
             "eq_combo_acc": "mf_water8",
-            "meta": "【小さな壊し屋】フカ次郎 fukaziroh [fc] 銃士フカ gunnners fukaziroh ★5 *5 フカ fukaziroh f 女性 @female 銃士たちの休息日 a rest day for gunners ガチャ gacha スカウト scout 水 water ggo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン 発生保障 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【小さな壊し屋】フカ次郎 fukaziroh [storm baby] 銃士フカ gunnners fukaziroh ★5 *5 フカ fukaziroh f 女性 @female 銃士たちの休息日 a rest day for gunners ガチャ gacha スカウト scout 水 water ggo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン 発生保障 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         }
     },
     "type": {
