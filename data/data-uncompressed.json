@@ -500,7 +500,8 @@
             "long_en": "Event limited 2016",
             "date": 1451574000000,
             "class": "e16",
-            "meta": "イベント event 制限 restricted "
+            "meta": "イベント event 制限 restricted ",
+            "restricted": 1
         },
         "nw": {
             "id": "nw",
@@ -510,7 +511,8 @@
             "long_en": "Ranking Nightwear",
             "date": 1451574000000,
             "class": "nw",
-            "meta": "報酬 reward 制限 restricted "
+            "meta": "報酬 reward 制限 restricted ",
+            "restricted": 1
         },
         "g16": {
             "id": "g16",
@@ -520,7 +522,8 @@
             "long_en": "Event limited (Gift) 2016",
             "date": 1451574000000,
             "class": "g16",
-            "meta": "配布 gift 制限 restricted イベント event"
+            "meta": "配布 gift 制限 restricted イベント event",
+            "restricted": 1
         },
         "sao": {
             "id": "sao",
@@ -530,7 +533,8 @@
             "long_en": "Starting Dash",
             "date": 1472655600000,
             "class": "sao",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "alo": {
             "id": "alo",
@@ -540,7 +544,8 @@
             "long_en": "Alfheim Reborn",
             "date": 1473433200000,
             "class": "alo",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "wind": {
             "id": "wind",
@@ -550,7 +555,8 @@
             "long_en": "Wind",
             "date": 1474297200000,
             "class": "wind",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "hw": {
             "id": "hw",
@@ -560,7 +566,8 @@
             "long_en": "Halloween",
             "date": 1475247600000,
             "class": "hw",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "earth": {
             "id": "earth",
@@ -570,7 +577,8 @@
             "long_en": "Earth",
             "date": 1476457200000,
             "class": "earth",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "fire": {
             "id": "fire",
@@ -580,7 +588,8 @@
             "long_en": "Fire",
             "date": 1477926000000,
             "class": "fire",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "xmas": {
             "id": "xmas",
@@ -590,7 +599,8 @@
             "long_en": "Christmas",
             "date": 1480518000000,
             "class": "xmas",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "ny": {
             "id": "ny",
@@ -600,7 +610,8 @@
             "long_en": "New Year",
             "date": 1481727600000,
             "class": "ny",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "e17": {
             "id": "e17",
@@ -610,7 +621,8 @@
             "long_en": "Event limited 2017",
             "date": 1483196400000,
             "class": "e17",
-            "meta": "イベント event 制限 restricted "
+            "meta": "イベント event 制限 restricted ",
+            "restricted": 1
         },
         "sd": {
             "id": "sd",
@@ -620,7 +632,8 @@
             "long_en": "Ranking Ken-Bu",
             "date": 1483196400000,
             "class": "sd",
-            "meta": "報酬 reward 制限 restricted "
+            "meta": "報酬 reward 制限 restricted ",
+            "restricted": 1
         },
         "g17": {
             "id": "g17",
@@ -630,7 +643,8 @@
             "long_en": "Event limited (Gift) 2017",
             "date": 1483196400000,
             "class": "g17",
-            "meta": "配布 gift 制限 restricted イベント event"
+            "meta": "配布 gift 制限 restricted イベント event",
+            "restricted": 1
         },
         "water": {
             "id": "water",
@@ -640,7 +654,8 @@
             "long_en": "Water",
             "date": 1484838000000,
             "class": "water",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "v17": {
             "id": "v17",
@@ -650,7 +665,8 @@
             "long_en": "Valentine",
             "date": 1485874800000,
             "class": "v17",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "oni": {
             "id": "oni",
@@ -660,7 +676,8 @@
             "long_en": "Setsubun",
             "date": 1486652400000,
             "class": "oni",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "hr": {
             "id": "hr",
@@ -670,7 +687,8 @@
             "long_en": "HR promotion",
             "date": 1487084400000,
             "class": "hr",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "hrsc": {
             "id": "hrsc",
@@ -680,7 +698,8 @@
             "long_en": "HR promotion",
             "date": 1487084400000,
             "class": "hrsc",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "os": {
             "id": "os",
@@ -690,7 +709,8 @@
             "long_en": "The Accelerating Reality",
             "date": 1488294000000,
             "class": "os",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "cheer": {
             "id": "cheer",
@@ -700,7 +720,8 @@
             "long_en": "Hooray Love Cheers",
             "date": 1488639600000,
             "class": "cheer",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "hina": {
             "id": "hina",
@@ -710,7 +731,8 @@
             "long_en": "Spring Breeze Hina-Matsuri",
             "date": 1489071600000,
             "class": "hina",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "a": {
             "id": "a",
@@ -720,7 +742,8 @@
             "long_en": "Alicization, The Knights' Encounter",
             "date": 1489503600000,
             "class": "a",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "ninja": {
             "id": "ninja",
@@ -730,7 +753,8 @@
             "long_en": "Deadly Beautiful Kunoichi",
             "date": 1490022000000,
             "class": "ninja",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "ps": {
             "id": "ps",
@@ -740,7 +764,8 @@
             "long_en": "Enduring Love in Another Space",
             "date": 1490886000000,
             "class": "ps",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "psr": {
             "id": "psr",
@@ -750,7 +775,8 @@
             "long_en": "Enduring Love in Another Space Reward",
             "date": 1490886000000,
             "class": "ps",
-            "meta": "報酬 reward 制限 restricted "
+            "meta": "報酬 reward 制限 restricted ",
+            "restricted": 1
         },
         "sakura": {
             "id": "sakura",
@@ -760,7 +786,8 @@
             "long_en": "Blooming School life",
             "date": 1491490800000,
             "class": "seihuku",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "princess": {
             "id": "princess",
@@ -770,7 +797,8 @@
             "long_en": "Princess from the Virtual World",
             "date": 1492182000000,
             "class": "princess",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "maid": {
             "id": "maid",
@@ -780,7 +808,8 @@
             "long_en": "To Your Heart! Maid in Balmy Breeze",
             "date": 1493478000000,
             "class": "maid",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "b": {
             "id": "b",
@@ -790,7 +819,8 @@
             "long_en": "Alicization, Integration Beginning",
             "date": 1493564400000,
             "class": "b",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "pwater": {
             "id": "pwater",
@@ -800,7 +830,8 @@
             "long_en": "Beautiful Girls Playing in the Water",
             "date": 1494342000000,
             "class": "pwater",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "zodiac": {
             "id": "zodiac",
@@ -810,7 +841,8 @@
             "long_en": "Poetry of Constellation",
             "date": 1495119600000,
             "class": "zodiac",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "bride": {
             "id": "bride",
@@ -820,7 +852,8 @@
             "long_en": "Eternal Love - Dreaming Brides -",
             "date": 1496156400000,
             "class": "bride",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "os2": {
             "id": "os2",
@@ -830,7 +863,8 @@
             "long_en": "Recalling Moments",
             "date": 1496847600000,
             "class": "os2",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "cosplay": {
             "id": "cosplay",
@@ -840,7 +874,8 @@
             "long_en": "Workers' Cosplay Paradise",
             "date": 1497366000000,
             "class": "cosplay",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "rainy": {
             "id": "rainy",
@@ -850,7 +885,8 @@
             "long_en": "Raindrops Concerto",
             "date": 1497798000000,
             "class": "rainy",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "swim": {
             "id": "swim",
@@ -860,7 +896,8 @@
             "long_en": "Tropical ★ Dream",
             "date": 1498662000000,
             "class": "swim",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "swimr": {
             "id": "swimr",
@@ -870,7 +907,8 @@
             "long_en": "Tropical ★ Dream reward",
             "date": 1498662000000,
             "class": "swim",
-            "meta": "報酬 reward 制限 restricted "
+            "meta": "報酬 reward 制限 restricted ",
+            "restricted": 1
         },
         "pns": {
             "id": "pns",
@@ -880,7 +918,8 @@
             "long_en": "Promised Night of the Stars",
             "date": 1499353200000,
             "class": "pns",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "yukata": {
             "id": "yukata",
@@ -890,7 +929,8 @@
             "long_en": "Yukata Night",
             "date": 1499958000000,
             "class": "yukata",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "summer": {
             "id": "summer",
@@ -900,7 +940,8 @@
             "long_en": "Beaming Summer Gals",
             "date": 1501340400000,
             "class": "summer",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "isr": {
             "id": "isr",
@@ -910,7 +951,8 @@
             "long_en": "Idol Singer Reward",
             "date": 1501340400000,
             "class": "sao",
-            "meta": "報酬 reward 制限 restricted "
+            "meta": "報酬 reward 制限 restricted ",
+            "restricted": 1
         },
         "festa": {
             "id": "festa",
@@ -920,7 +962,8 @@
             "long_en": "Summer Night Festa",
             "date": 1502031600000,
             "class": "festa",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "jr": {
             "id": "jr",
@@ -930,7 +973,8 @@
             "long_en": "Jolly Roger in the Stormy Sea",
             "date": 1502636400000,
             "class": "jr",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "bonds": {
             "id": "bonds",
@@ -940,7 +984,8 @@
             "long_en": "Proof of Trust Bonds of Fate",
             "date": 1503932400000,
             "class": "bonds",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "cm": {
             "id": "cm",
@@ -950,7 +995,8 @@
             "long_en": "CM Memorial Gift",
             "date": 1503932400000,
             "class": "cm",
-            "meta": "配布 gift 制限 restricted イベント event"
+            "meta": "配布 gift 制限 restricted イベント event",
+            "restricted": 1
         },
         "bondsr": {
             "id": "bondsr",
@@ -960,7 +1006,8 @@
             "long_en": "Assault! Proof of Strong Bonds Reward",
             "date": 1503932400000,
             "class": "bondsr",
-            "meta": "報酬 reward 制限 restricted "
+            "meta": "報酬 reward 制限 restricted ",
+            "restricted": 1
         },
         "c": {
             "id": "c",
@@ -970,7 +1017,8 @@
             "long_en": "The World Spins with Swords",
             "date": 1504710000000,
             "class": "c",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "friends": {
             "id": "friends",
@@ -980,7 +1028,8 @@
             "long_en": "Memory of Friendship & Passing of Time",
             "date": 1505401200000,
             "class": "friends",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "os3": {
             "id": "os3",
@@ -990,7 +1039,8 @@
             "long_en": "Chivalric Men's Uproarious Banquet",
             "date": 1506438000000,
             "class": "os3",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "moonlight": {
             "id": "moonlight",
@@ -1000,7 +1050,8 @@
             "long_en": "Moonlight Halloween Parade ",
             "date": 1506697200000,
             "class": "moonlight",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "moonlightr": {
             "id": "moonlightr",
@@ -1010,7 +1061,8 @@
             "long_en": "The Malefic Star of the Magic Citadel Reward",
             "date": 1506870000000,
             "class": "moonlight",
-            "meta": "報酬 reward 制限 restricted "
+            "meta": "報酬 reward 制限 restricted ",
+            "restricted": 1
         },
         "hhn": {
             "id": "hhn",
@@ -1020,7 +1072,8 @@
             "long_en": "Happy Halloween Night",
             "date": 1507647600000,
             "class": "moonlight",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "sports": {
             "id": "sports",
@@ -1030,7 +1083,8 @@
             "long_en": "Baton of Friendship! Sports Festival",
             "date": 1508166000000,
             "class": "sports",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "nycc": {
             "id": "nycc",
@@ -1040,7 +1094,8 @@
             "long_en": "NYCC Memorial",
             "date": 1508079600000,
             "class": "nycc",
-            "meta": "配布 gift 制限 restricted イベント event"
+            "meta": "配布 gift 制限 restricted イベント event",
+            "restricted": 1
         },
         "groom": {
             "id": "groom",
@@ -1050,7 +1105,8 @@
             "long_en": "Kirito & Asuna Wedding Anniversary",
             "date": 1508684400000,
             "class": "bride",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "steamy": {
             "id": "steamy",
@@ -1060,7 +1116,8 @@
             "long_en": "Steamy Beauty Bath Time ",
             "date": 1509375600000,
             "class": "steamy",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "steamyr": {
             "id": "steamyr",
@@ -1070,7 +1127,8 @@
             "long_en": "Steamy Beauty Bath Time Reward",
             "date": 1509375600000,
             "class": "steamy",
-            "meta": "報酬 reward 制限 restricted "
+            "meta": "報酬 reward 制限 restricted ",
+            "restricted": 1
         },
         "ggo1": {
             "id": "ggo1",
@@ -1080,7 +1138,8 @@
             "long_en": "The Two - Bonded By Phantom Bullets Scout",
             "date": 1509980400000,
             "class": "ggo1",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "trump": {
             "id": "trump",
@@ -1090,7 +1149,8 @@
             "long_en": "The Crimson Trump Card",
             "date": 1510671600000,
             "class": "trump",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "kg": {
             "id": "kg",
@@ -1100,7 +1160,8 @@
             "long_en": "G-Star Memorial",
             "date": 1510758000000,
             "class": "korea",
-            "meta": "配布 gift 制限 restricted イベント event"
+            "meta": "配布 gift 制限 restricted イベント event",
+            "restricted": 1
         },
         "kr": {
             "id": "kr",
@@ -1110,7 +1171,8 @@
             "long_en": "Korea Version Release Memorial",
             "date": 1510758000000,
             "class": "korea",
-            "meta": "配布 gift 制限 restricted イベント event"
+            "meta": "配布 gift 制限 restricted イベント event",
+            "restricted": 1
         },
         "x17p1": {
             "id": "x17p1",
@@ -1120,7 +1182,8 @@
             "long_en": "White Christmas - Footsteps in the Snow",
             "date": 1511967600000,
             "class": "x17",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "x17r": {
             "id": "x17r",
@@ -1130,7 +1193,8 @@
             "long_en": "White Christmas - Footsteps in the Snow Reward",
             "date": 1511967600000,
             "class": "x17",
-            "meta": "報酬 reward 制限 restricted "
+            "meta": "報酬 reward 制限 restricted ",
+            "restricted": 1
         },
         "snow": {
             "id": "snow",
@@ -1140,7 +1204,8 @@
             "long_en": "My Heart's Snowfall",
             "date": 1512572400000,
             "class": "snow",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "x17p2": {
             "id": "x17p2",
@@ -1150,7 +1215,8 @@
             "long_en": "Starry Night Fairy Santa",
             "date": 1513177200000,
             "class": "x17",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "fate": {
             "id": "fate",
@@ -1160,7 +1226,8 @@
             "long_en": "Fateful Showdown - Sticking to Their Guns",
             "date": 1513868400000,
             "class": "fate",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "dog": {
             "id": "dog",
@@ -1170,7 +1237,8 @@
             "long_en": "New Year's Eve Log-in CP",
             "date": 1514041200000,
             "class": "dog",
-            "meta": "配布 gift 制限 restricted イベント event"
+            "meta": "配布 gift 制限 restricted イベント event",
+            "restricted": 1
         },
         "hatsu": {
             "id": "hatsu",
@@ -1180,7 +1248,8 @@
             "long_en": "Happy Hatsumoude in Kimono♪",
             "date": 1514559600000,
             "class": "hatsu",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "g1": {
             "id": "g1",
@@ -1190,7 +1259,8 @@
             "long_en": "Global Scout",
             "date": 1514559600000,
             "class": "g1",
-            "meta": "報酬 reward 制限 restricted "
+            "meta": "報酬 reward 制限 restricted ",
+            "restricted": 1
         },
         "breeze": {
             "id": "breeze",
@@ -1200,7 +1270,8 @@
             "long_en": "First Play in the New Year's Breeze",
             "date": 1515337200000,
             "class": "breeze",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "miko": {
             "id": "miko",
@@ -1210,7 +1281,8 @@
             "long_en": "First Priestess Experience",
             "date": 1515942000000,
             "class": "miko",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "ggo2": {
             "id": "ggo2",
@@ -1220,7 +1292,8 @@
             "long_en": "Leaning on You Scout",
             "date": 1516719600000,
             "class": "ggo2",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "v18": {
             "id": "v18",
@@ -1230,7 +1303,8 @@
             "long_en": "Sweet Chocolatiere - Melt Your Sweetheart",
             "date": 1517324400000,
             "class": "v18",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "v18r": {
             "id": "v18r",
@@ -1240,7 +1314,8 @@
             "long_en": "Passionate Pure Hearts - Valentine's Day Frenzy Reward",
             "date": 1517324400000,
             "class": "v18",
-            "meta": "報酬 reward 制限 restricted "
+            "meta": "報酬 reward 制限 restricted ",
+            "restricted": 1
         },
         "circus": {
             "id": "circus",
@@ -1250,7 +1325,8 @@
             "long_en": "Dream Circus - Breathtaking Performances",
             "date": 1519657200000,
             "class": "circus",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "e18": {
             "id": "e18",
@@ -1260,7 +1336,8 @@
             "long_en": "Event limited 2018",
             "date": 1514732400000,
             "class": "e16",
-            "meta": "イベント event 制限 restricted "
+            "meta": "イベント event 制限 restricted ",
+            "restricted": 1
         },
         "g18": {
             "id": "g18",
@@ -1270,7 +1347,8 @@
             "long_en": "Event limited (Gift) 2018",
             "date": 1514732400000,
             "class": "g16",
-            "meta": "配布 gift 制限 restricted イベント event"
+            "meta": "配布 gift 制限 restricted イベント event",
+            "restricted": 1
         },
         "fb": {
             "id": "fb",
@@ -1280,7 +1358,8 @@
             "long_en": "Fatal Bullet - Unstoppable Force",
             "date": 1518620400000,
             "class": "fb",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "os4": {
             "id": "os4",
@@ -1290,7 +1369,8 @@
             "long_en": "Reawakened Memories",
             "date": 1519743600000,
             "class": "os4",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "os4r": {
             "id": "os4r",
@@ -1300,7 +1380,8 @@
             "long_en": "ORDINAL SCALE Another Stage Reward",
             "date": 1519743600000,
             "class": "os4",
-            "meta": "報酬 reward 制限 restricted "
+            "meta": "報酬 reward 制限 restricted ",
+            "restricted": 1
         },
         "seihuku": {
             "id": "seihuku",
@@ -1310,7 +1391,8 @@
             "long_en": "The Vernal Memory",
             "date": 1520262000000,
             "class": "seihuku",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "sj": {
             "id": "sj",
@@ -1320,7 +1402,8 @@
             "long_en": "Another Gun Gale Online",
             "date": 1520607600000,
             "class": "sj",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "kemomimi": {
             "id": "kemomimi",
@@ -1330,7 +1413,8 @@
             "long_en": "Furry Morphin' Time ♪",
             "date": 1521471600000,
             "class": "kemomimi",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "g5th": {
             "id": "g5th",
@@ -1340,7 +1424,8 @@
             "long_en": "SAO Game 5th Anniversary",
             "date": 1521817200000,
             "class": "g5th",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "band": {
             "id": "band",
@@ -1350,7 +1435,8 @@
             "long_en": "Fairy Magic",
             "date": 1522422000000,
             "class": "band",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "bandr": {
             "id": "bandr",
@@ -1360,7 +1446,8 @@
             "long_en": "Pop Star Online LIVE BATTLE!! Reward",
             "date": 1522422000000,
             "class": "band",
-            "meta": "報酬 reward 制限 restricted "
+            "meta": "報酬 reward 制限 restricted ",
+            "restricted": 1
         },
         "sj2": {
             "id": "sj2",
@@ -1370,7 +1457,8 @@
             "long_en": "Bullet Battle Royal",
             "date": 1523199600000,
             "class": "sj2",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "band2": {
             "id": "band2",
@@ -1380,7 +1468,8 @@
             "long_en": "Rainbow Sky",
             "date": 1523545200000,
             "class": "band",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "sm": {
             "id": "sm",
@@ -1390,7 +1479,8 @@
             "long_en": "Master Swordsmen in the Battlefield",
             "date": 1525014000000,
             "class": "sm",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "smtz": {
             "id": "smtz",
@@ -1400,7 +1490,8 @@
             "long_en": "Master Swordsmen in the Battlefield",
             "date": 1525014000000,
             "class": "smtz",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "grenade": {
             "id": "grenade",
@@ -1410,7 +1501,8 @@
             "long_en": "Grenade Medal Reward",
             "date": 1525014000000,
             "class": "grenade",
-            "meta": "報酬 reward 制限 restricted "
+            "meta": "報酬 reward 制限 restricted ",
+            "restricted": 1
         },
         "loli": {
             "id": "loli",
@@ -1420,7 +1512,8 @@
             "long_en": "Hand in Hand - Children’s Day",
             "date": 1525446000000,
             "class": "loli",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         },
         "gunners": {
             "id": "gunners",
@@ -1430,7 +1523,8 @@
             "long_en": "A Rest Day for Gunners",
             "date": 1526482800000,
             "class": "gunners",
-            "meta": "ガチャ gacha スカウト scout "
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
         }
     },
     "weapon": {
@@ -16199,26 +16293,26 @@
             "type": "mace",
             "element": "light",
             "world": "alo",
-            "rarity": 4,
+            "rarity": 5,
             "ls_atk": 0,
             "cs": 0,
-            "hp": 13157,
-            "mp": 192,
-            "atk": 2692,
-            "def": 2203,
-            "cri": 1921,
+            "hp": 16296,
+            "mp": 221,
+            "atk": 2865,
+            "def": 2548,
+            "cri": 2043,
             "cri_dmg": 1.5,
             "no_elem_mod": 0,
             "lvup": "normal",
-            "bs_hp": 0.03,
+            "bs_hp": 0.1,
             "bs_mp": 0.1,
-            "bs_atk": 0.12,
+            "bs_atk": 0.1,
             "bs_def": 0,
             "bs_cri": 0,
-            "ss_atk": 0,
-            "ss_cri": 0,
+            "ss_atk": 500,
+            "ss_cri": 500,
             "ss_dmg": 0,
-            "ss_elem_dmg": 0,
+            "ss_elem_dmg": 0.1,
             "ss_cri_dmg": 0,
             "ss_elem_cri_dmg": 0,
             "ss_atk_85": 0,
@@ -16227,8 +16321,8 @@
             "dtr_pierce": 0,
             "dtr_blunt": 1,
             "dtr_magic": 0,
-            "s3_atk": 0.165,
-            "s3_gatk": 0.165,
+            "s3_atk": 0,
+            "s3_gatk": 0,
             "s3_catk": 0,
             "s3_debuf": 0,
             "s3_debuf_pnr": 0,
@@ -16238,16 +16332,16 @@
             "combo_speed": 0,
             "s3_mp": 80,
             "hits": 3,
-            "canceled_hits": 0,
-            "s3_duration": 2.6,
-            "s3_c_duration": 0,
-            "s3_rate": 8.584990458008955,
-            "s3_video": "https://twitter.com/azami0172/status/955430013620256769",
-            "mp_lb_total": 30,
-            "mp_lb_1": 7,
-            "mp_lb_2": 8,
-            "mp_lb_3": 7,
-            "mp_lb_4": 8,
+            "canceled_hits": 2,
+            "s3_duration": 2.56,
+            "s3_c_duration": 1.31,
+            "s3_rate": 16.466719977288594,
+            "s3_video": "https://twitter.com/ratsounds/status/998572355348709377",
+            "mp_lb_total": 35,
+            "mp_lb_1": 8,
+            "mp_lb_2": 9,
+            "mp_lb_3": 9,
+            "mp_lb_4": 9,
             "eq_mp_wep": "x17p2_mace",
             "eq_mp_amr": "f_none7",
             "eq_mp_acc": "mf_light",
@@ -16257,7 +16351,7 @@
             "eq_combo_wep": "x17p2_mace",
             "eq_combo_amr": "f_none7",
             "eq_combo_acc": "mf_water8",
-            "meta": "【凄腕の料理人】レーチカ rechka [queen of chef] e17レーチカ e17 rechka ★4 *4 レーチカ rechka f 女性 @female イベント 2017 event limited 2017 イベント event 制限 restricted 光 light alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt 攻撃 自己 バフ atk attack self buff グループ pt 攻撃 バフ atk attack group buff コンボダメージアップ combo damage up コンボダメージアップ combo damage up 連携 combination"
+            "meta": "【凄腕の料理人】レーチカ rechka [queen of chef] e17レーチカ e17 rechka ★5 *5 レーチカ rechka f 女性 @female イベント 2017 event limited 2017 イベント event 制限 restricted 光 light alo ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up 連携 combination"
         },
         "ninja_asuna": {
             "id": "ninja_asuna",
@@ -22345,7 +22439,7 @@
             "s3_mp": 110,
             "hits": 4,
             "canceled_hits": 0,
-            "s3_duration": 1.86,
+            "s3_duration": 1.83,
             "s3_c_duration": 0,
             "s3_rate": 11.879955703211522,
             "s3_video": "https://twitter.com/azami0172/status/951953175648518144",
@@ -22376,14 +22470,14 @@
             "type": "mace",
             "element": "fire",
             "world": "os",
-            "rarity": 4,
+            "rarity": 5,
             "ls_atk": 0,
             "cs": 0,
-            "hp": 13964,
+            "hp": 15892,
             "mp": 250,
-            "atk": 3568,
-            "def": 2143,
-            "cri": 2596,
+            "atk": 3783,
+            "def": 2272,
+            "cri": 2752,
             "cri_dmg": 1.5,
             "no_elem_mod": 0,
             "lvup": "normal",
@@ -22414,11 +22508,11 @@
             "s3_speed": 0,
             "combo_speed": 0,
             "s3_mp": 110,
-            "hits": 10,
+            "hits": 11,
             "canceled_hits": 0,
             "s3_duration": 1.83,
-            "s3_c_duration": 0,
-            "s3_rate": 11.981909069269227,
+            "s3_c_duration": 1.18,
+            "s3_rate": 14.55648091511264,
             "s3_video": "https://twitter.com/azami0172/status/953581708904824832",
             "mp_lb_total": 39,
             "mp_lb_1": 9,
@@ -22434,7 +22528,7 @@
             "eq_combo_wep": "hatsu_mace",
             "eq_combo_amr": "f_none8",
             "eq_combo_acc": "mf_water8",
-            "meta": "【太陽の夏娘】リズベット lisbeth [summer sunshine] 夏色リズ gals lisbeth ★4 *4 リズ lisbeth f 女性 @female はじける★夏色ガール beaming summer gals ガチャ gacha スカウト scout 火 fire os ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal s3switch s3スイッチ 選ばれし者 chosen 連携 combination"
+            "meta": "【太陽の夏娘】リズベット lisbeth [summer sunshine] 夏色リズ gals lisbeth ★5 *5 リズ lisbeth f 女性 @female はじける★夏色ガール beaming summer gals ガチャ gacha スカウト scout 火 fire os ダメージ アップ damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up コンボダメージアップ combo damage up 自己回復 self heal s3switch s3スイッチ 選ばれし者 chosen コンボ持続 combo duration up 連携 combination"
         },
         "summer_silica": {
             "id": "summer_silica",
@@ -32730,6 +32824,148 @@
             "eq_combo_amr": "f_none7",
             "eq_combo_acc": "mf_water8",
             "meta": "【小さな壊し屋】フカ次郎 fukaziroh [storm baby] 銃士フカ gunnners fukaziroh ★5 *5 フカ fukaziroh f 女性 @female 銃士たちの休息日 a rest day for gunners ガチャ gacha スカウト scout 水 water ggo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt コンボダメージアップ combo damage up 麻痺 ピヨピヨ ぴよぴよ dizzy stun スタン 発生保障 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+        },
+        "g5th_asuna": {
+            "id": "g5th_asuna",
+            "name": "【閃光の祝福】アスナ",
+            "name_en": "Asuna [Blessing of Light]",
+            "short": "5周年アスナ",
+            "short_en": "5th Asuna",
+            "cname": "asuna",
+            "group": "g5th",
+            "type": "rapier",
+            "element": "light",
+            "world": "alo",
+            "rarity": 5,
+            "ls_atk": 1.1,
+            "cs": "c.type.id=sword:mod_dmg=1.1",
+            "hp": 11523,
+            "mp": 237,
+            "atk": 3873,
+            "def": 2318,
+            "cri": 3283,
+            "cri_dmg": 1.5,
+            "no_elem_mod": 0,
+            "lvup": "normal",
+            "bs_hp": 0,
+            "bs_mp": 0.15,
+            "bs_atk": 0.15,
+            "bs_def": 0,
+            "bs_cri": 0,
+            "ss_atk": 250,
+            "ss_cri": 250,
+            "ss_dmg": 0,
+            "ss_elem_dmg": 0,
+            "ss_cri_dmg": 0,
+            "ss_elem_cri_dmg": 0.1,
+            "ss_atk_85": 0,
+            "ss_elem_dmg_90": 0,
+            "dtr_slash": 0,
+            "dtr_pierce": 1,
+            "dtr_blunt": 0,
+            "dtr_magic": 0,
+            "s3_atk": 0,
+            "s3_gatk": 0,
+            "s3_catk": 0,
+            "s3_debuf": 0,
+            "s3_debuf_pnr": 0,
+            "combo_damage_20": 0.05,
+            "combo_damage_30": 0,
+            "s3_speed": 0.825,
+            "combo_speed": 0,
+            "s3_mp": 120,
+            "hits": 12,
+            "canceled_hits": 0,
+            "s3_duration": 2,
+            "s3_c_duration": 1.13,
+            "s3_rate": 12.303493394501917,
+            "s3_video": 0,
+            "mp_lb_total": 37,
+            "mp_lb_1": 9,
+            "mp_lb_2": 9,
+            "mp_lb_3": 9,
+            "mp_lb_4": 10,
+            "eq_mp_wep": "x17p1_rapier",
+            "eq_mp_amr": "f_none4",
+            "eq_mp_acc": "mf_light",
+            "eq_atk_wep": "x17p1_rapier",
+            "eq_atk_amr": "f_none4",
+            "eq_atk_acc": "mf_water8",
+            "eq_combo_wep": "x17p1_rapier",
+            "eq_combo_amr": "f_none4",
+            "eq_combo_acc": "mf_water8",
+            "meta": "【閃光の祝福】アスナ asuna [blessing of light] 5周年アスナ 5th asuna ★5 *5 アスナ asuna f 女性 @female ゲームシリーズ5周年記念 sao game 5th anniversary ガチャ gacha スカウト scout 光 light alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce コンボダメージアップ combo damage up 速度 アップ speed up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+        },
+        "g5th_kirito": {
+            "id": "g5th_kirito",
+            "name": "【英雄の祝福】キリト",
+            "name_en": "Kirito [Hero's Blessing]",
+            "short": "5周年キリト",
+            "short_en": "5th Kirito",
+            "cname": "kirito",
+            "group": "g5th",
+            "type": "sword",
+            "element": "dark",
+            "world": "alo",
+            "rarity": 5,
+            "ls_atk": 1.1,
+            "cs": "c.type.id=rapier:mod_dmg=1.1",
+            "hp": 12131,
+            "mp": 237,
+            "atk": 3834,
+            "def": 2499,
+            "cri": 2736,
+            "cri_dmg": 1.5,
+            "no_elem_mod": 0,
+            "lvup": "normal",
+            "bs_hp": 0,
+            "bs_mp": 0.15,
+            "bs_atk": 0.15,
+            "bs_def": 0,
+            "bs_cri": 0,
+            "ss_atk": 250,
+            "ss_cri": 250,
+            "ss_dmg": 0,
+            "ss_elem_dmg": 0,
+            "ss_cri_dmg": 0,
+            "ss_elem_cri_dmg": 0.1,
+            "ss_atk_85": 0,
+            "ss_elem_dmg_90": 0,
+            "dtr_slash": 1,
+            "dtr_pierce": 0,
+            "dtr_blunt": 0,
+            "dtr_magic": 0,
+            "s3_atk": 0,
+            "s3_gatk": 0,
+            "s3_catk": 0,
+            "s3_debuf": 0,
+            "s3_debuf_pnr": 0,
+            "combo_damage_20": 0.05,
+            "combo_damage_30": 0,
+            "s3_speed": 0.825,
+            "combo_speed": 0,
+            "s3_mp": 120,
+            "hits": 16,
+            "canceled_hits": 0,
+            "s3_duration": 3.3,
+            "s3_c_duration": 2.53,
+            "s3_rate": 17.315447955810182,
+            "s3_video": 0,
+            "mp_lb_total": 37,
+            "mp_lb_1": 9,
+            "mp_lb_2": 9,
+            "mp_lb_3": 9,
+            "mp_lb_4": 10,
+            "eq_mp_wep": "sm_sword",
+            "eq_mp_amr": "m_none2",
+            "eq_mp_acc": "mf_dark3",
+            "eq_atk_wep": "sm_sword",
+            "eq_atk_amr": "m_none2",
+            "eq_atk_acc": "mf_water8",
+            "eq_combo_wep": "sm_sword",
+            "eq_combo_amr": "m_none2",
+            "eq_combo_acc": "mf_water8",
+            "meta": "【英雄の祝福】キリト kirito [hero's blessing] 5周年キリト 5th kirito ★5 *5 キリト kirito m 男性 @male ゲームシリーズ5周年記念 sao game 5th anniversary ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice コンボダメージアップ combo damage up 速度 アップ speed up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         }
     },
     "type": {
@@ -33029,6 +33265,111 @@
             "condition": 0,
             "start": 1526536800000,
             "end": 1527400800000
+        },
+        {
+            "name": "制限特攻+50%",
+            "name_en": "restricted+50%",
+            "def": 1450,
+            "element": 0,
+            "epRate": 0.5,
+            "enRate": -0.5,
+            "none": 0,
+            "light": 0,
+            "dark": 0,
+            "fire": 0,
+            "water": 0,
+            "wind": 0,
+            "earth": 0,
+            "pierce": 0,
+            "blunt": 0,
+            "magic": 0,
+            "slash": 0,
+            "melee": 0,
+            "range": 0,
+            "etcMod": -0.5,
+            "limit": 5,
+            "repRate": 1,
+            "racc": 0.1,
+            "gbuff": 0,
+            "cbuff": 0,
+            "debuff": 1,
+            "trophy": 0.03,
+            "combo": 0,
+            "crit": 1,
+            "filter": 0,
+            "condition": "c.group.restricted>0:mod=0.50",
+            "start": 1527746400000,
+            "end": 1529042400000
+        },
+        {
+            "name": "制限特攻+75%",
+            "name_en": "restricted+75%",
+            "def": 1450,
+            "element": 0,
+            "epRate": 0.5,
+            "enRate": -0.5,
+            "none": 0,
+            "light": 0,
+            "dark": 0,
+            "fire": 0,
+            "water": 0,
+            "wind": 0,
+            "earth": 0,
+            "pierce": 0,
+            "blunt": 0,
+            "magic": 0,
+            "slash": 0,
+            "melee": 0,
+            "range": 0,
+            "etcMod": -0.5,
+            "limit": 5,
+            "repRate": 1,
+            "racc": 0.1,
+            "gbuff": 0,
+            "cbuff": 0,
+            "debuff": 1,
+            "trophy": 0.03,
+            "combo": 0,
+            "crit": 1,
+            "filter": 0,
+            "condition": "c.group.restricted>0:mod=0.75",
+            "start": 1527746400000,
+            "end": 1529042400000
+        },
+        {
+            "name": "制限特攻+100%",
+            "name_en": "restricted+100%",
+            "def": 1450,
+            "element": 0,
+            "epRate": 0.5,
+            "enRate": -0.5,
+            "none": 0,
+            "light": 0,
+            "dark": 0,
+            "fire": 0,
+            "water": 0,
+            "wind": 0,
+            "earth": 0,
+            "pierce": 0,
+            "blunt": 0,
+            "magic": 0,
+            "slash": 0,
+            "melee": 0,
+            "range": 0,
+            "etcMod": -0.5,
+            "limit": 5,
+            "repRate": 1,
+            "racc": 0.1,
+            "gbuff": 0,
+            "cbuff": 0,
+            "debuff": 1,
+            "trophy": 0.03,
+            "combo": 0,
+            "crit": 1,
+            "filter": 0,
+            "condition": "c.group.restricted>0:mod=1.00",
+            "start": 1527746400000,
+            "end": 1529042400000
         },
         {
             "name": "一般ボス 無",
