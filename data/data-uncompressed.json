@@ -33193,7 +33193,7 @@
         "passion_suguha": {
             "id": "passion_suguha",
             "name": "【心に秘める愛の形】直葉",
-            "name_en": "Suguha [Hopeful Smile]",
+            "name_en": "Suguha [Unrequited Love]",
             "short": "嫁18直葉",
             "short_en": "Bride18 Suguha",
             "cname": "suguha",
@@ -33259,7 +33259,7 @@
             "eq_combo_wep": "steamy_dagger",
             "eq_combo_amr": "f_wind3",
             "eq_combo_acc": "mf_water8",
-            "meta": "【心に秘める愛の形】直葉 suguha [hopeful smile] 嫁18直葉 bride18 suguha ★5 *5 直葉 suguha f 女性 @female 烈火の想い秘め咲く花嫁 passionate bloom ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce グループ pt 攻撃 バフ atk attack group buff サークル circle コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【心に秘める愛の形】直葉 suguha [unrequited love] 嫁18直葉 bride18 suguha ★5 *5 直葉 suguha f 女性 @female 烈火の想い秘め咲く花嫁 passionate bloom ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 突 pierce グループ pt 攻撃 バフ atk attack group buff サークル circle コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "passion_rain": {
             "id": "passion_rain",
@@ -33310,8 +33310,8 @@
             "s3_speed": 0.825,
             "combo_speed": 0,
             "s3_mp": 100,
-            "hits": 0,
-            "canceled_hits": 0,
+            "hits": 8,
+            "canceled_hits": 8,
             "s3_duration": 2.16,
             "s3_c_duration": 1.1,
             "s3_rate": 11.902309194498656,
@@ -33330,12 +33330,12 @@
             "eq_combo_wep": "trump_dual",
             "eq_combo_amr": "f_none7",
             "eq_combo_acc": "mf_water8",
-            "meta": "【優雅に舞う花びら】レイン rain [fluttering petals] 嫁18レイン bride18 rain ★5 *5 レイン rain f 女性 @female 烈火の想い秘め咲く花嫁 passionate bloom ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice グループ pt 攻撃 バフ atk attack group buff サークル circle コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【優雅に舞う花びら】レイン rain [fluttering petals] 嫁18レイン bride18 rain ★5 *5 レイン rain f 女性 @female 烈火の想い秘め咲く花嫁 passionate bloom ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice グループ pt 攻撃 バフ atk attack group buff サークル circle コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up 発生保障 発生保証 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "passion_lisbeth": {
             "id": "passion_lisbeth",
             "name": "【希望の笑顔咲く花嫁】リズベット",
-            "name_en": "Lisbeth [Unrequited Love]",
+            "name_en": "Lisbeth [Hopeful Smile]",
             "short": "嫁18リズ",
             "short_en": "Bride18 Lisbeth",
             "cname": "lisbeth",
@@ -33381,8 +33381,8 @@
             "s3_speed": 0.825,
             "combo_speed": 0,
             "s3_mp": 100,
-            "hits": 0,
-            "canceled_hits": 0,
+            "hits": 11,
+            "canceled_hits": 8,
             "s3_duration": 2.2,
             "s3_c_duration": 1.43,
             "s3_rate": 12.39117090992618,
@@ -33401,7 +33401,7 @@
             "eq_combo_wep": "passion_mace",
             "eq_combo_amr": "f_none8",
             "eq_combo_acc": "mf_water8",
-            "meta": "【希望の笑顔咲く花嫁】リズベット lisbeth [unrequited love] 嫁18リズ bride18 lisbeth ★5 *5 リズ lisbeth f 女性 @female 烈火の想い秘め咲く花嫁 passionate bloom ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt グループ pt 攻撃 バフ atk attack group buff サークル circle コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【希望の笑顔咲く花嫁】リズベット lisbeth [hopeful smile] 嫁18リズ bride18 lisbeth ★5 *5 リズ lisbeth f 女性 @female 烈火の想い秘め咲く花嫁 passionate bloom ガチャ gacha スカウト scout 火 fire alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up クリティカルダメージ アップ critical damage up 属性ダメージ アップ elemental damage up 打 blunt グループ pt 攻撃 バフ atk attack group buff サークル circle コンボダメージアップ combo damage up コンボダメージアップ combo damage up 速度 アップ speed up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "hairpin_alice": {
             "id": "hairpin_alice",
