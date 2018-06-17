@@ -140,10 +140,8 @@ var DC = (function () {
 
         var wtmod = boss[c.type.wtype];
 
-        var cmod = evalConditions(boss.condition, exp_obj).mod;
-        if (cmod === undefined) { cmod = 0; }
-
-        var mod = Math.min(sve.mod_dmg + emod + dtmod + wtmod + boss.repRate + boss.racc + boss.etcMod + cmod, boss.limit);
+        var conmod = evalConditions(boss.condition, exp_obj).mod;
+        if (conmod === undefined) { conmod = 0; }
 
         var crit = 1.0;
         if (boss.crit > 0) {
@@ -151,15 +149,18 @@ var DC = (function () {
         }
 
         var combo = 1 + Math.floor(boss.combo / 10) * 0.05;
+        var commod = 0.0;
         if (boss.combo >= 20) {
-            combo += sv.c.combo_damage_20;
+            commod += sv.c.combo_damage_20;
             if (wep) {
-                combo += wep.c20_bs_cri_dmg;
+                commod += wep.c20_bs_cri_dmg;
             }
         }
         if (boss.combo >= 30) {
-            combo += sv.c.combo_damage_30;
+            commod += sv.c.combo_damage_30;
         }
+
+        var mod = Math.min(sve.mod_dmg + emod + dtmod + wtmod + boss.repRate + boss.racc + boss.etcMod + conmod + commod, boss.limit);
 
         var dcv = {
             atk: atk,
@@ -229,15 +230,22 @@ var DC = (function () {
         sv[elem] = sve;
         sve.bs_atk_eq = getWeaponBSAtk(sv.wep, sv.r) + getEqValue(sv.amr, key_bs_atk) + getEqValue(sv.acc, key_bs_atk);
         sve.bs_atk = sv.c.bs_atk + sve.bs_atk_eq;
-        sve.mod_dmg = sv.c.ss_dmg;
-        sve.mod_crit = sv.c.cri_dmg + sv.c.ss_cri_dmg + getWeaponCriEDmg(sv.wep, sv.r, sv.c, elem);
+        //type 1: crit damage up modifier is added to mod_crit
+        //sve.mod_dmg = sv.c.ss_dmg;
+        //sve.mod_crit = sv.c.cri_dmg + sv.c.ss_cri_dmg + getWeaponCriEDmg(sv.wep, sv.r, sv.c, elem);
+        //type 2: crit damage up modifier is added to mod_dmg
+        sve.mod_dmg = sv.c.ss_dmg + sv.c.ss_cri_dmg + getWeaponCriEDmg(sv.wep, sv.r, sv.c, elem);
+        sve.mod_crit = sv.c.cri_dmg;
         sve.eRate = getElementERate(sv.c.element, elem);
         if (sve.eRate === 'epRate' || elem === 'default') {
             sve.mod_dmg += sv.c.ss_elem_dmg;
             if (sv.lv > 85) {
                 sve.mod_dmg += sv.c.ss_elem_dmg_90;
             }
-            sve.mod_crit += sv.c.ss_elem_cri_dmg;
+            //type 1
+            //sve.mod_crit += sv.c.ss_elem_cri_dmg;
+            //type 2
+            sve.mod_dmg += sv.c.ss_elem_cri_dmg;
         }
     }
 
@@ -283,8 +291,10 @@ var DC = (function () {
                 switch (r) {
                     case 4:
                         mod += wep.e_bs_cri_dmg;
+                        break;
                     case 5:
                         mod += wep.e_bs_cri_dmg5;
+                        break;
                     default:
                 }
             }
@@ -292,8 +302,10 @@ var DC = (function () {
                 switch (r) {
                     case 4:
                         mod += wep.bs_cri_edmg;
+                        break;
                     case 5:
                         mod += wep.bs_cri_edmg5;
+                        break;
                     default:
                 }
             }
