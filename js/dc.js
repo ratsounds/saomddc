@@ -231,11 +231,11 @@ var DC = (function () {
         sve.bs_atk_eq = getWeaponBSAtk(sv.wep, sv.r) + getEqValue(sv.amr, key_bs_atk) + getEqValue(sv.acc, key_bs_atk);
         sve.bs_atk = sv.c.bs_atk + sve.bs_atk_eq;
         //type 1: crit damage up modifier is added to mod_crit
-        //sve.mod_dmg = sv.c.ss_dmg;
-        //sve.mod_crit = sv.c.cri_dmg + sv.c.ss_cri_dmg + getWeaponCriEDmg(sv.wep, sv.r, sv.c, elem);
+        sve.mod_dmg = sv.c.ss_dmg;
+        sve.mod_crit = sv.c.cri_dmg + sv.c.ss_cri_dmg + getWeaponCriEDmg(sv.wep, sv.r, sv.c, elem);
         //type 2: crit damage up modifier is added to mod_dmg
-        sve.mod_dmg = sv.c.ss_dmg + sv.c.ss_cri_dmg + getWeaponCriEDmg(sv.wep, sv.r, sv.c, elem);
-        sve.mod_crit = sv.c.cri_dmg;
+        //sve.mod_dmg = sv.c.ss_dmg + sv.c.ss_cri_dmg + getWeaponCriEDmg(sv.wep, sv.r, sv.c, elem);
+        //sve.mod_crit = sv.c.cri_dmg;
         sve.eRate = getElementERate(sv.c.element, elem);
         if (sve.eRate === 'epRate' || elem === 'default') {
             sve.mod_dmg += sv.c.ss_elem_dmg;
@@ -243,9 +243,9 @@ var DC = (function () {
                 sve.mod_dmg += sv.c.ss_elem_dmg_90;
             }
             //type 1
-            //sve.mod_crit += sv.c.ss_elem_cri_dmg;
+            sve.mod_crit += sv.c.ss_elem_cri_dmg;
             //type 2
-            sve.mod_dmg += sv.c.ss_elem_cri_dmg;
+            //sve.mod_dmg += sv.c.ss_elem_cri_dmg;
         }
     }
 
