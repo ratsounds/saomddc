@@ -378,7 +378,7 @@ function getC2DPM(dcv) {
             mp += dmp;
         }
     }
-    return dcv.damage * (count + ((time - 60) / dcv.c2duration));
+    return dcv.damage * (count + ((time - 60) / ((dcv.duration + dcv.c2duration) / 2)));
 }
 
 function showRanking() {
