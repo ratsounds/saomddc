@@ -39,12 +39,13 @@ DC = (function () {
     }
     function createConditionObject(object, key) {
         for (var i in object) {
-            var condition = {};
             var condition_string = object[i][key];
             if (condition_string !== 0) {
-                var conditions = condition_string.split(/,/);
-                for (var j in conditions) {
-                    var sp = conditions[j].split(/:/);
+                var conditions = []
+                var condition_src = condition_string.split(/,/);
+                for (var j in condition_src) {
+                    var condition = {};
+                    var sp = condition_src[j].split(/:/);
                     condition.expression = sp[0];
                     var values = sp[1].split(/&/);
                     condition.values = {};
@@ -52,25 +53,37 @@ DC = (function () {
                         var kv = values[k].split(/=/);
                         condition.values[kv[0]] = parse(kv[1]);
                     }
+                    conditions.push(condition);
                 }
-                object[i][key] = condition;
+                object[i][key] = conditions;
             }
         }
     }
-    function calcRateAtTryout(c, lv, lb, wep, r, amr, acc, boss, damage) {
-        var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);
-        dcv.rate = damage / ((dcv.atk * dcv.bs * (1 + (dcv.buff - 1) / 1.5) - dcv.def) * dcv.mod) * 1.1;
-        return dcv;
+    function evalConditions(conditions, data) {
+        values = {};
+        for (var i in conditions) {
+            var condition = conditions[i];
+            if (Expression.eval(condition.expression, data)) {
+                for (var key in condition.values) {
+                    if (values[key]) {
+                        values[key] += condition.values[key];
+                    } else {
+                        values[key] = condition.values[key];
+                    }
+                }
+            }
+        }
+        return values;
     }
     function calcRate(c, lv, lb, wep, r, amr, acc, boss, damage) {
         var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);
-        dcv.rate = damage / ((dcv.atk * dcv.bs * dcv.buff - dcv.def) * dcv.mod);
+        dcv.rate = damage / ((dcv.atk * dcv.bs * dcv.buff - dcv.def) * dcv.mod * dcv.crit * dcv.combo);
         return dcv;
     }
     function calcDamage(c, lv, lb, wep, r, amr, acc, boss, custom_rate) {
         var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);
         if (custom_rate) { dcv.rate = custom_rate; }
-        dcv.damage = (dcv.atk * dcv.bs * dcv.buff - dcv.def) * dcv.rate * dcv.mod;
+        dcv.damage = (dcv.atk * dcv.bs * dcv.buff - dcv.def) * dcv.rate * dcv.mod * dcv.crit * dcv.combo;
         return dcv;
     }
     function getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss) {
@@ -81,18 +94,26 @@ DC = (function () {
         }
 
         var exp_obj = { c: c, hp: 100, vs: boss.element ? boss.element.id : undefined, combo: boss.combo, switched: boss.switched };
-        var bs_con_amr = amr && Expression.eval(amr.conditional.expression, exp_obj) ? amr.conditional.values : {};
-        var bs_con_acc = acc && Expression.eval(acc.conditional.expression, exp_obj) ? acc.conditional.values : {};
+        var bs_con_amr = amr ? evalConditions(amr.conditional, exp_obj) : {};
+        var bs_con_acc = acc ? evalConditions(acc.conditional, exp_obj) : {};
         var atk = sv.atk + getEqValue(bs_con_amr, key_atk) + getEqValue(bs_con_acc, key_atk);
         var bs_atk = sve.bs_atk + getEqValue(bs_con_amr, key_bs_atk) + getEqValue(bs_con_acc, key_bs_atk);
 
-        var buff;
+        var buff = 0;
         if (boss.gbuff === undefined) {
-            buff = sv.c.s3_atk;
+            buff += sv.c.s3_atk;
         } else {
-            buff = Math.max(sv.c.s3_atk, boss.gbuff);
+            buff += Math.max(sv.c.s3_atk, boss.gbuff);
         }
-        buff *= boss.trophy;
+        if (boss.cbuff === undefined) {
+            buff += sv.c.s3_catk;
+        } else if (sv.c.s3_catk > 0) {
+            buff += sv.c.s3_catk;
+        } else {
+            buff += boss.cbuff;
+        }
+        buff += boss.trophy;
+        buff += 1;
 
         var debuff = 1.0;
         if (boss.debuff) { debuff = boss.debuff; }
@@ -105,13 +126,12 @@ DC = (function () {
         }
 
         var emod = 1;
-        var crit = sve.mod_crit;
         if (sve.eRate) {
             emod += boss[sve.eRate];
         }
         for (var e in db.element) {
-            if(e===sv.c.element.id){
-                emod += boss[e]; 
+            if (e === sv.c.element.id) {
+                emod += boss[e];
             }
         }
 
@@ -120,23 +140,28 @@ DC = (function () {
 
         var wtmod = boss[c.type.wtype];
 
-        var cmod = Expression.eval(boss.condition.expression, exp_obj) ? boss.condition.values.mod : 0;
+        var conmod = evalConditions(boss.condition, exp_obj).mod;
+        if (conmod === undefined) { conmod = 0; }
 
-        var combo = Math.floor(boss.combo / 10) * 0.05;
+        var crit = 1.0;
+        if (boss.crit > 0) {
+            crit = sve.mod_crit;
+        }
+
+        var combo = 1 + Math.floor(boss.combo / 10) * 0.05;
+        var commod = 0.0;
         if (boss.combo >= 20) {
-            combo += sv.c.combo_damage_20;
+            commod += sv.c.combo_damage_20;
             if (wep) {
-                combo += wep.c20_bs_cri_dmg;
+                commod += wep.c20_bs_cri_dmg;
             }
         }
         if (boss.combo >= 30) {
-            combo += sv.c.combo_damage_30;
+            commod += sv.c.combo_damage_30;
         }
 
-        var mod = Math.min(combo + sve.mod_dmg + emod + dtmod + wtmod + boss.repRate + boss.racc + boss.etcMod + cmod, boss.limit);
-        if (boss.crit > 0) {
-            mod *= crit;
-        }
+        var mod = Math.min(sve.mod_dmg + emod + dtmod + wtmod + boss.repRate + boss.racc + boss.etcMod + conmod + commod, boss.limit);
+
         var dcv = {
             atk: atk,
             bs: (1 + bs_atk),
@@ -144,6 +169,8 @@ DC = (function () {
             def: def,
             rate: sv.c.s3_rate,
             mod: mod,
+            crit: crit,
+            combo: combo,
             sv: sv
         };
         return dcv;
@@ -195,7 +222,7 @@ DC = (function () {
         sv.dtmod = {};
         for (var t in db.dtype) {
             sv.dtmod[t] = c['dtr_' + t];
-        }        
+        }
         return sv;
     }
     function createSVE(sv, elem) {
@@ -203,15 +230,22 @@ DC = (function () {
         sv[elem] = sve;
         sve.bs_atk_eq = getWeaponBSAtk(sv.wep, sv.r) + getEqValue(sv.amr, key_bs_atk) + getEqValue(sv.acc, key_bs_atk);
         sve.bs_atk = sv.c.bs_atk + sve.bs_atk_eq;
+        //type 1: crit damage up modifier is added to mod_crit
         sve.mod_dmg = sv.c.ss_dmg;
         sve.mod_crit = sv.c.cri_dmg + sv.c.ss_cri_dmg + getWeaponCriEDmg(sv.wep, sv.r, sv.c, elem);
+        //type 2: crit damage up modifier is added to mod_dmg
+        //sve.mod_dmg = sv.c.ss_dmg + sv.c.ss_cri_dmg + getWeaponCriEDmg(sv.wep, sv.r, sv.c, elem);
+        //sve.mod_crit = sv.c.cri_dmg;
         sve.eRate = getElementERate(sv.c.element, elem);
         if (sve.eRate === 'epRate' || elem === 'default') {
             sve.mod_dmg += sv.c.ss_elem_dmg;
             if (sv.lv > 85) {
                 sve.mod_dmg += sv.c.ss_elem_dmg_90;
             }
+            //type 1
             sve.mod_crit += sv.c.ss_elem_cri_dmg;
+            //type 2
+            //sve.mod_dmg += sv.c.ss_elem_cri_dmg;
         }
     }
 
@@ -257,8 +291,10 @@ DC = (function () {
                 switch (r) {
                     case 4:
                         mod += wep.e_bs_cri_dmg;
+                        break;
                     case 5:
                         mod += wep.e_bs_cri_dmg5;
+                        break;
                     default:
                 }
             }
@@ -266,8 +302,10 @@ DC = (function () {
                 switch (r) {
                     case 4:
                         mod += wep.bs_cri_edmg;
+                        break;
                     case 5:
                         mod += wep.bs_cri_edmg5;
+                        break;
                     default:
                 }
             }
@@ -346,7 +384,6 @@ DC = (function () {
         loadData: loadData,
         getData: getData,
         getSV: getSV,
-        calcRateAtTryout: calcRateAtTryout,
         calcRate: calcRate,
         calcDamage: calcDamage,
         get: get,

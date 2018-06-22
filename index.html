@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>SAO:MD:DC</title>
+    <title>SAOMD:DC / メモデフ:火力計算機</title>
     <link href="//fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/icon.css" />
@@ -10,6 +10,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="initial-scale=1.0,width=device-width, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no,shrink-to-fit=no">
+    <meta name="description" content="メモデフ 火力計算機 : Unofficial Damage Calculator for Sword Art Online : Memory Defrag (SAOMD) : Don't worry, this is ratsounds' strategy guide."
+    />
     <base target="_top">
 </head>
 
@@ -29,11 +31,14 @@
                 <select id="sort">
                     <option value="damage">Damage</option>
                     <option value="dps">DPS</option>
+                    <option value="cdps">C.DPS</option>
                     <option value="c2dps">C/2 DPS</option>
                     <option value="dpm">DPM</option>
                     <option value="capacity">Capacity</option>
                     <option value="duration">Duration</option>
+                    <option value="cduration">C.Duration</option>
                     <option value="c2duration">C/2 Duration</option>
+                    <option value="gap">Duration Gap</option>
                     <option value="mpr">MP Recovery</option>
                 </select>
             </div>
@@ -64,39 +69,37 @@
                     <option value="1265">1265(SirK)</option>
                 </select>
                 <i class="buff"></i>
-                <input id="cheer_on2" type="radio" name="gbuff" value="1.275">
-                <label for="cheer_on2" class="toggle left">
-                    <span>YUI</span>
-                </label>
-                <input id="cheer_on" type="radio" name="gbuff" value="1.165">
-                <label for="cheer_on" class="toggle">
-                    <span>ON</span>
-                </label>
-                <input id="cheer_off" type="radio" name="gbuff" value="1" checked="true">
-                <label for="cheer_off" class="toggle right">
-                    <span>OFF</span>
-                </label>
+                <select name="gbuff">
+                    <option value="0" selected>0%</option>
+                    <option value="0.1375">13</option>
+                    <option value="0.165">16</option>
+                    <option value="0.205">20</option>
+                    <option value="0.275">27</option>
+                </select>
+                <i class="cbuff"></i>
+                <select name="cbuff">
+                    <option value="0" selected>0%</option>
+                    <option value="0.132">13</option>
+                </select>
+                                
                 <i class="debuff"></i>
-                <input id="debuff_on" type="radio" name="debuff" value="0.5">
-                <label for="debuff_on" class="toggle left">
-                    <span>ON</span>
-                </label>
-                <input id="debuff_off" type="radio" name="debuff" value="1" checked="true">
-                <label for="debuff_off" class="toggle right">
-                    <span>OFF</span>
-                </label>
+                <select name="debuff">
+                    <option value="1" selected>0%</option>
+                    <option value="0.5">50</option>
+                    <option value="0.3">70</option>
+                </select>
                 <i class="combo"></i>
                 <select name="combo">
-                    <option value="0" selected>0</option>
+                    <option value="0" selected>0h</option>
                     <option value="20">20</option>
                     <option value="30">30</option>
                     <option value="50">50</option>
                 </select>
                 <i class="trophy"></i>
                 <select name="trophy">
-                    <option value="1">1.00</option>
-                    <option value="1.01">1.01</option>
-                    <option value="1.03" selected>1.03</option>
+                    <option value="0">0%</option>
+                    <option value="0.01">1%</option>
+                    <option value="0.03" selected>3%</option>
                 </select>
             </div>
             <div class="boss grid">
@@ -120,11 +123,13 @@
                 <select name="none">
                     <option value="0" selected>0.00</option>
                     <option value="0.05">0.05</option>
+                    <option value="0.1">0.10</option>
                     <option value="0.25">0.25</option>
                     <option value="0.5">0.50</option>
                     <option value="0.75">0.75</option>
                     <option value="1">1.00</option>
                     <option value="-0.05">-0.05</option>
+                    <option value="-0.1">-0.10</option>
                     <option value="-0.25">-0.25</option>
                     <option value="-0.5">-0.50</option>
                     <option value="-0.75">-0.75</option>
@@ -133,11 +138,13 @@
                 <select name="light">
                     <option value="0" selected>0.00</option>
                     <option value="0.05">0.05</option>
+                    <option value="0.1">0.10</option>
                     <option value="0.25">0.25</option>
                     <option value="0.5">0.50</option>
                     <option value="0.75">0.75</option>
                     <option value="1">1.00</option>
                     <option value="-0.05">-0.05</option>
+                    <option value="-0.1">-0.10</option>
                     <option value="-0.25">-0.25</option>
                     <option value="-0.5">-0.50</option>
                     <option value="-0.75">-0.75</option>
@@ -146,11 +153,13 @@
                 <select name="dark">
                     <option value="0" selected>0.00</option>
                     <option value="0.05">0.05</option>
+                    <option value="0.1">0.10</option>
                     <option value="0.25">0.25</option>
                     <option value="0.5">0.50</option>
                     <option value="0.75">0.75</option>
                     <option value="1">1.00</option>
                     <option value="-0.05">-0.05</option>
+                    <option value="-0.1">-0.10</option>
                     <option value="-0.25">-0.25</option>
                     <option value="-0.5">-0.50</option>
                     <option value="-0.75">-0.75</option>
@@ -159,11 +168,13 @@
                 <select name="fire">
                     <option value="0" selected>0.00</option>
                     <option value="0.05">0.05</option>
+                    <option value="0.1">0.10</option>
                     <option value="0.25">0.25</option>
                     <option value="0.5">0.50</option>
                     <option value="0.75">0.75</option>
                     <option value="1">1.00</option>
                     <option value="-0.05">-0.05</option>
+                    <option value="-0.1">-0.10</option>
                     <option value="-0.25">-0.25</option>
                     <option value="-0.5">-0.50</option>
                     <option value="-0.75">-0.75</option>
@@ -172,11 +183,13 @@
                 <select name="water">
                     <option value="0" selected>0.00</option>
                     <option value="0.05">0.05</option>
+                    <option value="0.1">0.10</option>
                     <option value="0.25">0.25</option>
                     <option value="0.5">0.50</option>
                     <option value="0.75">0.75</option>
                     <option value="1">1.00</option>
                     <option value="-0.05">-0.05</option>
+                    <option value="-0.1">-0.10</option>
                     <option value="-0.25">-0.25</option>
                     <option value="-0.5">-0.50</option>
                     <option value="-0.75">-0.75</option>
@@ -185,11 +198,13 @@
                 <select name="wind">
                     <option value="0" selected>0.00</option>
                     <option value="0.05">0.05</option>
+                    <option value="0.1">0.10</option>
                     <option value="0.25">0.25</option>
                     <option value="0.5">0.50</option>
                     <option value="0.75">0.75</option>
                     <option value="1">1.00</option>
                     <option value="-0.05">-0.05</option>
+                    <option value="-0.1">-0.10</option>
                     <option value="-0.25">-0.25</option>
                     <option value="-0.5">-0.50</option>
                     <option value="-0.75">-0.75</option>
@@ -198,11 +213,13 @@
                 <select name="earth">
                     <option value="0" selected>0.00</option>
                     <option value="0.05">0.05</option>
+                    <option value="0.1">0.10</option>
                     <option value="0.25">0.25</option>
                     <option value="0.5">0.50</option>
                     <option value="0.75">0.75</option>
                     <option value="1">1.00</option>
                     <option value="-0.05">-0.05</option>
+                    <option value="-0.1">-0.10</option>
                     <option value="-0.25">-0.25</option>
                     <option value="-0.5">-0.50</option>
                     <option value="-0.75">-0.75</option>
@@ -221,6 +238,7 @@
                 <select name="epRate">
                     <option value="0">0.00</option>
                     <option value="0.05">0.05</option>
+                    <option value="0.1">0.10</option>
                     <option value="0.25">0.25</option>
                     <option value="0.5" selected>0.50</option>
                     <option value="0.75">0.75</option>
@@ -239,6 +257,7 @@
                 <select name="repRate">
                     <option value="0" selected>0.00</option>
                     <option value="0.05">0.05</option>
+                    <option value="0.1">0.10</option>
                     <option value="0.25">0.25</option>
                     <option value="0.3">0.30</option>
                     <option value="0.5">0.50</option>
@@ -266,11 +285,13 @@
                 <select name="etcMod">
                     <option value="0" selected>0.00</option>
                     <option value="0.05">0.05</option>
+                    <option value="0.1">0.10</option>
                     <option value="0.25">0.25</option>
                     <option value="0.5">0.50</option>
                     <option value="0.75">0.75</option>
                     <option value="1">1.00</option>
                     <option value="-0.05">-0.05</option>
+                    <option value="-0.1">-0.10</option>
                     <option value="-0.25">-0.25</option>
                     <option value="-0.5">-0.50</option>
                     <option value="-0.75">-0.75</option>
@@ -283,11 +304,13 @@
                 <select name="slash">
                     <option value="0" selected>0.00</option>
                     <option value="0.05">0.05</option>
+                    <option value="0.1">0.10</option>
                     <option value="0.25">0.25</option>
                     <option value="0.5">0.50</option>
                     <option value="0.75">0.75</option>
                     <option value="1">1.00</option>
                     <option value="-0.05">-0.05</option>
+                    <option value="-0.1">-0.10</option>
                     <option value="-0.25">-0.25</option>
                     <option value="-0.5">-0.50</option>
                     <option value="-0.75">-0.75</option>
@@ -297,11 +320,13 @@
                 <select name="pierce">
                     <option value="0" selected>0.00</option>
                     <option value="0.05">0.05</option>
+                    <option value="0.1">0.10</option>
                     <option value="0.25">0.25</option>
                     <option value="0.5">0.50</option>
                     <option value="0.75">0.75</option>
                     <option value="1">1.00</option>
                     <option value="-0.05">-0.05</option>
+                    <option value="-0.1">-0.10</option>
                     <option value="-0.25">-0.25</option>
                     <option value="-0.5">-0.50</option>
                     <option value="-0.75">-0.75</option>
@@ -311,11 +336,13 @@
                 <select name="blunt">
                     <option value="0" selected>0.00</option>
                     <option value="0.05">0.05</option>
+                    <option value="0.1">0.10</option>
                     <option value="0.25">0.25</option>
                     <option value="0.5">0.50</option>
                     <option value="0.75">0.75</option>
                     <option value="1">1.00</option>
                     <option value="-0.05">-0.05</option>
+                    <option value="-0.1">-0.10</option>
                     <option value="-0.25">-0.25</option>
                     <option value="-0.5">-0.50</option>
                     <option value="-0.75">-0.75</option>
@@ -325,11 +352,13 @@
                 <select name="magic">
                     <option value="0" selected>0.00</option>
                     <option value="0.05">0.05</option>
+                    <option value="0.1">0.10</option>
                     <option value="0.25">0.25</option>
                     <option value="0.5">0.50</option>
                     <option value="0.75">0.75</option>
                     <option value="1">1.00</option>
                     <option value="-0.05">-0.05</option>
+                    <option value="-0.1">-0.10</option>
                     <option value="-0.25">-0.25</option>
                     <option value="-0.5">-0.50</option>
                     <option value="-0.75">-0.75</option>
@@ -339,11 +368,13 @@
                 <select name="melee">
                     <option value="0" selected>0.00</option>
                     <option value="0.05">0.05</option>
+                    <option value="0.1">0.10</option>
                     <option value="0.25">0.25</option>
                     <option value="0.5">0.50</option>
                     <option value="0.75">0.75</option>
                     <option value="1">1.00</option>
                     <option value="-0.05">-0.05</option>
+                    <option value="-0.1">-0.10</option>
                     <option value="-0.25">-0.25</option>
                     <option value="-0.5">-0.50</option>
                     <option value="-0.75">-0.75</option>
@@ -353,11 +384,13 @@
                 <select name="range">
                     <option value="0" selected>0.00</option>
                     <option value="0.05">0.05</option>
+                    <option value="0.1">0.10</option>
                     <option value="0.25">0.25</option>
                     <option value="0.5">0.50</option>
                     <option value="0.75">0.75</option>
                     <option value="1">1.00</option>
                     <option value="-0.05">-0.05</option>
+                    <option value="-0.1">-0.10</option>
                     <option value="-0.25">-0.25</option>
                     <option value="-0.5">-0.50</option>
                     <option value="-0.75">-0.75</option>
@@ -390,6 +423,8 @@
                 <label for="mace" class="mace button"></label>
                 <input id="gun" type="checkbox" name="type" value="gun">
                 <label for="gun" class="gun button"></label>
+                <input id="rifle" type="checkbox" name="type" value="rifle">
+                <label for="rifle" class="rifle button"></label>
                 <input id="staff" type="checkbox" name="type" value="staff">
                 <label for="staff" class="staff button"></label>
             </div>
@@ -459,7 +494,7 @@
         <div class="item" id="%id%">
             <div class="rank">%rank%</div>
             <div class="info">
-                <div class="header" style="background-image: linear-gradient( 90deg, %color% %p_dps%\%, transparent 0\% ),linear-gradient( 90deg, %color% %p_damage%\%, transparent 0\% ),linear-gradient( 90deg, %color% %p_capacity%\%, transparent 0\% );">
+                <div class="header" style="background-image: linear-gradient( 90deg, %color% %p_dps%\%, transparent 0\% ),linear-gradient( 90deg, %color% %p_damage%\%, transparent 0\% ),linear-gradient( 90deg, %color% %p_capacity%\%, transparent 0\% ),linear-gradient( -45deg, rgba(0,0,0,0.5) %video%\%, transparent 0\% );">
                     <i class="level l%sv.lv%"></i>
                     <i class="rarelity r%sv.r%"></i>
                     <i class="type %sv.c.type.id%"></i>
