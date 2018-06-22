@@ -427,7 +427,7 @@ function setBoss(boss) {
 // End Userscript unmodified functions --------------------------------------
 
 function calcRanking() {
-    //console.log('calcRanking');
+
     getBoss();
     var cs = DC.getChar();
     ranking = [];
@@ -524,9 +524,6 @@ function calcArmorDCVForChar(oc, myArmor, clvr) {
 }
 
 function setDCVValues(dcv) {
-    // Check getDPM functions if mpr still needs to be on top
-    dcv.mpr = Math.floor(dcv.sv.mpr);
-
     // setList from Ratsounds
     dcv.combo_speed_rate = (1 - dcv.sv.c.combo_speed * Math.floor(boss.combo / 10));
     dcv.duration = dcv.sv.c.s3_duration * dcv.combo_speed_rate;
@@ -544,6 +541,7 @@ function setDCVValues(dcv) {
     dcv.gap = Math.floor((dcv.duration - dcv.cduration) * 100) / 100;
     dcv.capacity = Math.floor(dcv.damage * dcv.sv.mp / dcv.sv.cost);
     dcv.damage = Math.floor(dcv.damage);
+    dcv.mpr = Math.floor(dcv.sv.mpr);
 
     // Personal values
     dcv.c2dpm = Math.floor(getC2DPM(dcv));
@@ -572,8 +570,9 @@ function getDPM(dcv) {
 // End Userscript unmodified functions --------------------------------------
 
 function getC2DPM(dcv) {
-    var time = 0;
     var mp = dcv.sv.mp;
+    var dmp = dcv.sv.c.type.ns_hits * dcv.sv.mpr;
+    var time = 0;
     var count = 0;
     var ns_duration = dcv.sv.c.type.ns_duration * dcv.combo_speed_rate * (dcv.sv.c.s3_speed ? dcv.sv.c.s3_speed : 1);
     while (time <= 60) {
@@ -583,7 +582,7 @@ function getC2DPM(dcv) {
             count++;
         } else { // normal set
             time += ns_duration;
-            mp += dcv.sv.c.type.ns_hits * dcv.mpr;
+            mp += dmp;
         }
     }
     return dcv.damage * (count + ((time - 60) / dcv.c2duration));
