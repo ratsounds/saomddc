@@ -79,12 +79,12 @@ function initHelp(html) {
     for (var i = 0; i < array_cname.length; i++) {
         var item = array_cname[i];
         var html = '';
-        html += '<tr style="color:' + item.color + '; background-color:' + item.body + ';background-image:linear-gradient(45deg,transparent 90%,' + item.body + ' 90%,' + item.body + '),linear-gradient(45deg,transparent 88%,' + item.highlight + ' 88%,' + item.highlight + '), linear-gradient(45deg,transparent 84%,' + item.head + ' 84%,' + item.head + ');"><th>';
+        html += '<tr style="color:' + item.color + '; background-color:' + item.body + ';"><th>';
         html += item.name;
         if (item.nick && item.nick !== item.name) {
             html += '(' + item.nick + ')';
         }
-        html += '</th><td>';
+        html += '</th><td style="background-image:linear-gradient(45deg,transparent 90%,' + item.body + ' 90%,' + item.body + '),linear-gradient(45deg,transparent 88%,' + item.highlight + ' 88%,' + item.highlight + '), linear-gradient(45deg,transparent 84%,' + item.head + ' 84%,' + item.head + ');">';
         html += item.name_en;
         if (item.nick_en && item.nick_en !== item.name_en) {
             html += '(' + item.nick_en + ')';
@@ -175,6 +175,7 @@ function initPre() {
     DO.qid('help_button').on('click', function (ev) {
         DO.qid('help').classList.toggle('hidden');
         ev.target.classList.toggle('on');
+        twttr.widgets.load(DO.q('.tips'));
     });
     DO.qid('config_button').on('click', function (ev) {
         DO.qa('.config_bar').forEach(function (elem) {
@@ -226,6 +227,7 @@ function sortArrayWithFilter(array) {
     var sortKey = elemSort.value;
     switch (sortKey) {
         case 'duration':
+        case 'cduration':
         case 'c2duration':
             sortObjectArray(array, sortKey, true);
             break;
@@ -464,7 +466,6 @@ function calcRanking() {
     }
 
     sortArrayWithFilter(ranking);
-    //console.log('ranking',ranking);
 }
 
 function calcComboDCVForChar(oc, clvr, useCheck, myObjects, comboCall) {
@@ -523,26 +524,30 @@ function calcArmorDCVForChar(oc, myArmor, clvr) {
 }
 
 function setDCVValues(dcv) {
-    //Required setting beforehand
+    // Check getDPM functions if mpr still needs to be on top
     dcv.mpr = Math.floor(dcv.sv.mpr);
+
+    // setList from Ratsounds
     dcv.combo_speed_rate = (1 - dcv.sv.c.combo_speed * Math.floor(boss.combo / 10));
     dcv.duration = dcv.sv.c.s3_duration * dcv.combo_speed_rate;
-    dcv.c2duration = (dcv.sv.c.s3_c_duration ? dcv.sv.c.s3_c_duration : dcv.sv.c.s3_duration * dcv.combo_speed_rate) + dcv.duration;
-
-    //Sortable values
-    dcv.c2dps = Math.floor(dcv.damage / dcv.c2duration);
+    dcv.cduration = dcv.sv.c.s3_c_duration ? dcv.sv.c.s3_c_duration : Infinity;
+    dcv.c2duration = dcv.sv.c.s3_c_duration ? dcv.sv.c.s3_c_duration : dcv.sv.c.s3_duration * dcv.combo_speed_rate;
     dcv.duration_50 = dcv.sv.c.s3_duration * (1 - dcv.sv.c.combo_speed * Math.floor(50 / 10));
-    dcv.dpm = Math.floor(getDPM(dcv));
-    dcv.c2dpm = Math.floor(getC2DPM(dcv));
-
-    //Flooring for ranking list
     dcv.dps = Math.floor(dcv.damage / dcv.duration);
+    dcv.dpm = Math.floor(getDPM(dcv));
+    dcv.cdps = Math.floor(dcv.damage / dcv.cduration);
+    dcv.c2dps = Math.floor(dcv.damage / dcv.duration + dcv.damage / dcv.c2duration);
     dcv.duration = Math.floor(dcv.duration * 100) / 100;
     dcv.duration_50 = Math.floor(dcv.duration_50 * 100) / 100;
-    dcv.c2duration = Math.floor(dcv.c2duration * 100) / 100;
+    dcv.cduration = Math.floor(dcv.cduration * 100) / 100;
+    dcv.c2duration = Math.floor((dcv.c2duration + dcv.duration) * 100) / 100;
+    dcv.gap = Math.floor((dcv.duration - dcv.cduration) * 100) / 100;
     dcv.capacity = Math.floor(dcv.damage * dcv.sv.mp / dcv.sv.cost);
-    dcv.floorcapacity = Math.floor(dcv.damage * Math.floor(dcv.sv.mp / dcv.sv.cost));
     dcv.damage = Math.floor(dcv.damage);
+
+    // Personal values
+    dcv.c2dpm = Math.floor(getC2DPM(dcv));
+    dcv.floorcapacity = Math.floor(dcv.damage * Math.floor(dcv.sv.mp / dcv.sv.cost));
 }
 
 // Begin Userscript unmodified functions --------------------------------------
@@ -615,6 +620,8 @@ function showRanking() {
         dcv.score = dcv[score_key];
         dcv.color = dcv.sv.c.element.color;
         dcv.cname = dcv.sv.c.cname['name' + lang];
+        dcv.video = 0;
+        if (dcv.sv.c.s3_video) { dcv.video = 1; }
         var html = mapperInfo.map(dcv);
         elemRanking.append(DO.new(html));
     }
@@ -661,10 +668,13 @@ function getCharDetail(id) {
 
     html += getKVTableRow('Character Atk', Math.floor(dcv.sv.atk_c));
     html += getKVTableRow('Equipment Atk', Math.floor(dcv.sv.atk_eq));
-    if (c.s3_gatk > 1) {
+    if (c.s3_gatk > 0) {
         html += getKVTableRow('Group Atk Buff', c.s3_gatk);
-    } else if (c.s3_atk > 1) {
+    } else if (c.s3_atk > 0) {
         html += getKVTableRow('Atk Buff', c.s3_atk);
+    }
+    if (c.s3_catk > 0) {
+        html += getKVTableRow('Circle Atk Buff', c.s3_catk);
     }
     if (c.combo_damage_20 > 1) {
         html += getKVTableRow('Combo Damage 20Hit', c.combo_damage_20);
@@ -685,6 +695,8 @@ function getCharDetail(id) {
         html += getKVTableRow('Debuff Rate', c.s3_debuf, true);
         html += getKVTableRow('Debuff P/N Rate', c.s3_debuf_pnr, true);
     }
+    html += getKVTableRow('Hit Count', c.hits === 0 ? 'no data' : c.hits);
+    html += getKVTableRow('Hit Count at Canceled', c.canceled_hits === 0 ? 'no data' : c.canceled_hits);
     html += getKVTableRow('SS MP Cost', c.s3_mp);
     html += getKVTableRow('Possible Max MP', dcv.sv.mp);
     html += getKVTableRow('MP Limit Break', c.mp_lb_total + '(' + c.mp_lb_1 + ',' + c.mp_lb_2 + ',' + c.mp_lb_3 + ',' + c.mp_lb_4 + ') EXPERIMENTAL!');
