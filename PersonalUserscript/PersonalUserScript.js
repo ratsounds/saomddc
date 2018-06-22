@@ -39,7 +39,7 @@ useMy = {
         calcRanking();
         showRanking();
     },
-    //change true -> false if you want to use all characters by default
+    //change true -> false if you want to use default armors by default
     _armor: true,
 };
 
