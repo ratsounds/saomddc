@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ratsounds Own Units & Weps & Armors
 // @namespace    http://tampermonkey.net/
-// @version      2.0.1
+// @version      2.0.2
 // @description  Filters your own units with their own lvl + your own weapons and their rarity + own armors
 // @author       Zehnzen
 // @match        https://ratsounds.github.io/saomddc/
