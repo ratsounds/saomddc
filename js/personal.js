@@ -171,15 +171,15 @@ function removeCharId(id) {
 
 function resetWeps() {
     console.log("resetWeps");
-    curWeapons = jsonCopy(saveMy.weapons);
+    curWeapons = saveMy.weapons;
 }
 function resetChars() {
     console.log("resetChars");
-    curUnits = jsonCopy(saveMy.chars);
+    curUnits = saveMy.chars;
 }
 function resetArmors() {
     console.log("resetArmors");
-    curArmors = jsonCopy(saveMy.armors);
+    curArmors = saveMy.armors;
 }
 
 // MARK: Convenience functions
