@@ -274,9 +274,9 @@ function findIdInArrayFromName(myObject, dbArray) {
 // MARK: Add selected rankId to saveMy
 
 function saveCharWithRankId(id) {
-    var charId = getCharRank(id).charId();
-    var name = getCharRank(id).charName();
-    var lv = getCharRank(id).charLv();
+    var charId = getCharRank(id).charId
+    var name = getCharRank(id).charName;
+    var lv = getCharRank(id).charLv;
     var newChar = { id: charId, name_en: name, lv: lv };
     var newArray = saveMy.chars;
     newArray.push(newChar);
