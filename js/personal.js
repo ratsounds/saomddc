@@ -212,9 +212,7 @@ function fillMissingIds() {
     fillMissingWepIds();
     fillMissingArmorIds();
 
-    // saveMy.chars = myChars;
-    saveMy.weapons = myWeapons;
-    saveMy.armors = myArmors;
+    console.log("filled id's");
 }
 
 function fillMissingCharIds() {
@@ -274,6 +272,13 @@ function saveCharWithRankId(id) {
     var lv = getCharRank(id).charLv();
     var newChar = { id: charId, name_en: name, lv: lv};
     saveMy.chars = saveMy.chars.append(newChar);
+}
+
+function saveCurWeapons() {
+    saveMy.weapons = curWeapons;
+}
+function saveCurArmors() {
+    saveMy.armors = curArmors;
 }
 
 // MARK: Char info from ranking list
