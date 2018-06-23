@@ -244,9 +244,7 @@ function initPost() {
 
     //loading for personal scripts
     cs = DC.getChar();
-    fillMissingCharIds();
-    fillMissingWepIds();
-    fillMissingArmorIds();
+    PS.fillMissingIds();
 
     //create group icon css
     //set app icon
@@ -317,18 +315,18 @@ function initPost() {
 
     elemRanking.onkeydown = function (ev) {
         if (ev.which == 68) { //D press
-            var wepId = getCharRankWepId(lastClicked);
-            var charId = getCharRankCharId(lastClicked);
-            removeWepId(wepId, false);
-            removeCharId(charId);
+            var wepId = PS.getCharRankWepId(lastClicked);
+            var charId = PS.getCharRankCharId(lastClicked);
+            PS.removeWepId(wepId, false);
+            PS.removeCharId(charId);
         }
         if (ev.which == 87) { //W press
-            var wepId = getCharRankWepId(lastClicked);
-            removeWepId(wepId);
+            var wepId = PS.getCharRankWepId(lastClicked);
+            PS.removeWepId(wepId);
         }
         if (ev.which == 82) { //R press
-            resetWeps(false);
-            resetChars();
+            PS.resetWeps(false);
+            PS.resetChars();
         }
     };
 }
@@ -434,7 +432,7 @@ function calcRanking() {
         if (useMy.chars) {
             for (var my in curUnits) {
                 var myUnit = curUnits[my];
-                var c = copy(DC.getChar(myUnit.id));
+                var c = PS.copy(DC.getChar(myUnit.id));
 
                 if (myUnit.lv !== clvr.lv) {
                     continue;
@@ -449,7 +447,7 @@ function calcRanking() {
             }
         } else {
             for (var j in cs) {
-                var c = copy(cs[j]);
+                var c = PS.copy(cs[j]);
 
                 var dcv = calcComboDCVForChar(c, clvr, useMy.weapons, curWeapons, calcWeaponDCVForChar);
                 if (dcv === null) {
@@ -501,7 +499,7 @@ function calcWeaponDCVForChar(oc, myWeapon, clvr) {
         return null;
     }
 
-    var c = copy(oc);
+    var c = PS.copy(oc);
     c.eq_atk_wep = weapon;
 
     return calcComboDCVForChar(c, clvr, useMy.armors, curArmors, calcArmorDCVForChar);
@@ -513,7 +511,7 @@ function calcArmorDCVForChar(oc, myArmor, clvr) {
         return null;
     }
 
-    var c = copy(oc);
+    var c = PS.copy(oc);
     c.eq_atk_amr = armor;
 
     return DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
