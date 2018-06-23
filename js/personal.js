@@ -271,7 +271,7 @@ function saveCharWithRankId(id) {
     var name = getCharRank(id).charName();
     var lv = getCharRank(id).charLv();
     var newChar = { id: charId, name_en: name, lv: lv};
-    saveMy.chars = saveMy.chars.append(newChar);
+    saveMy.chars = JSON.parse(saveMy.chars).push(newChar);
 }
 
 function saveCurWeapons() {
