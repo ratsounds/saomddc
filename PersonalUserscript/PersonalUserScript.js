@@ -66,7 +66,7 @@ myWeapons = [
 ];
 // Use id or name_en for character identification. id is slightly quicker at startup.
 // Use: showAllChars() in console to get a list of all char id's
-myUnits = [
+myChars = [
     { id: "", name_en: "Kirito [Black Wing]", lv: 80}, // works ala name_en is correct
     { id: "ShitTestingId's", name_en: "Leafa [The Blade - facing the feelings]", lv: 80}, // works ala name_en is correct
     { id: "sports_leafa", name_en: "", lv: 80}, // Preferred example
@@ -462,7 +462,7 @@ function resetWeps(refresh = true) {
 }
 function resetChars(refresh = true) {
     console.log("resetChars");
-    curUnits = JSON.parse(JSON.stringify(myUnits));
+    curUnits = JSON.parse(JSON.stringify(myChars));
 
     if (refresh) {
         calcRanking();
@@ -481,8 +481,8 @@ function showAllArmors() {
 }
 
 function fillMissingCharIds() {
-    for (var i in myUnits) {
-        var myUnit = myUnits[i];
+    for (var i in myChars) {
+        var myUnit = myChars[i];
 
         if (myUnit.id !== "" && DC.getChar(myUnit.id)) {
             continue;
@@ -490,7 +490,7 @@ function fillMissingCharIds() {
 
         myUnit.id = findIdInArray(myUnit, cs);
     }
-    curUnits = JSON.parse(JSON.stringify(myUnits));
+    curUnits = JSON.parse(JSON.stringify(myChars));
 }
 function fillMissingWepIds() {
     var allWeps = DC.getWeapon();

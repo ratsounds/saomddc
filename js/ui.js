@@ -26,7 +26,6 @@ DO.onLoad(function () {
 
 function loadDBFromFile(url, callback) {
     fetch(url, { method: 'GET' })
-        //.then(function (response) { return response.json() })
         .then(function (response) { return response.text(); })
         .then(function (text) { return JSON.parse(text); })
         .then(DC.loadData)
@@ -274,8 +273,6 @@ function initPost() {
     //init ui
     elemRanking = DO.qid('ranking');
     elemSort = DO.qid('sort');
-    elemSort.append(DO.new('<option value="' + 'floorcapacity' + '">' + 'Floor Capacity' + '</option>'));
-    elemSort.append(DO.new('<option value="' + 'c2dpm' + '">' + 'C/2 DPM' + '</option>'));
     //load default
     getBoss();
     calcRanking();
@@ -314,6 +311,8 @@ function initPost() {
     });
 
     elemRanking.onkeydown = function (ev) {
+
+        // useMy changes
         if (ev.which == 68) { //D press
             var wepId = getCharRankWepId(lastClicked);
             var charId = getCharRankCharId(lastClicked);
@@ -327,6 +326,11 @@ function initPost() {
         if (ev.which == 82) { //R press
             resetWeps(false);
             resetChars();
+        }
+
+        // saveMy changes
+        if (ev.which == 65) { //A press
+            saveCharWithRankId(lastClicked);
         }
     };
 }
