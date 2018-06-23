@@ -237,13 +237,9 @@ function sortArrayWithFilter(array) {
     }
 }
 
-function initPost() {
-    loadDBFromFile('data/data.json', initPostPost);
-}
-
 lastClicked = -1;
 
-function initPostPost() {
+function initPost() {
     var db = DC.getData();
 
     //loading for personal scripts
