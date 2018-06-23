@@ -310,7 +310,7 @@ function initPost() {
         }
     });
 
-    elemRanking.onkeydown = function (ev) {
+    elemRanking.onkeypress = function (ev) {
 
         // useMy changes
         if (ev.which == 68) { //D press
