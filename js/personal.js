@@ -307,7 +307,7 @@ function saveWepWithRankId(id) {
 
 function idIsInArray(id, array) {
     for (var i in array) {
-        if (id === array[i].id) {
+        if (id == array[i].id) {
             return true;
         }
     }
