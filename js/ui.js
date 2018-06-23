@@ -292,7 +292,7 @@ function initPost() {
     DO.qa('.useMy input').forEach(function (elem) {
         elem.on('change', function (ev) {
             console.log(elem);
-            useMy[elem.name] = elem.checked;
+            useMy[elem.value] = elem.checked;
             showRanking();
         });
     });
