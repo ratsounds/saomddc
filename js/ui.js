@@ -286,6 +286,13 @@ function initPost() {
     });
     DO.qa('.filter input').forEach(function (elem) {
         elem.on('change', function (ev) {
+            console.log(ev);
+            showRanking();
+        });
+    });
+    DO.qa('.useMy input').forEach(function (elem) {
+        elem.on('change', function (ev) {
+            console.log(ev);
             showRanking();
         });
     });
@@ -311,7 +318,6 @@ function initPost() {
     });
 
     elemRanking.onkeydown = function (ev) {
-
         // useMy changes
         if (ev.which == 68) { //D press
             var wepId = getCharRank(lastClicked).wepId;
@@ -614,7 +620,7 @@ function showRanking() {
     var min = Number.MAX_VALUE;
     for (var i = 0; i < ranking.length; i++) {
         var dcv = ranking[i];
-        if (match(dcv.sv.c.meta, filter.keyword) && filter.type[dcv.sv.c.type.id] && (filter.useMy["weapons"] ? true : filter.r[dcv.sv.r]) && (filter.useMy["chars"] ? true : filter.lv[dcv.sv.lv])) {
+        if (match(dcv.sv.c.meta, filter.keyword) && filter.type[dcv.sv.c.type.id] && (useMy.weapons ? true : filter.r[dcv.sv.r]) && (useMy.chars ? true : filter.lv[dcv.sv.lv])) {
             rank++;
             dcv.rank = zero(rank, 3);
             dcv.id = i;
@@ -641,8 +647,9 @@ function showRanking() {
     }
 }
 
+// Begin Userscript unmodified functions --------------------------------------
 function getFilter() {
-    var filter = { lv: {}, r: {}, type: {}, useMy: {} };
+    var filter = { lv: {}, r: {}, type: {} };
     DO.qa('.filter input').forEach(function (item) {
         if (item.name === 'keyword') {
             filter.keyword = item.value;
@@ -662,7 +669,6 @@ function getFilter() {
     return filter;
 }
 
-// Begin Userscript unmodified functions --------------------------------------
 function getCharDetail(id) {
     var dcv = ranking[id];
     var c = dcv.sv.c;
