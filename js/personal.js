@@ -179,6 +179,11 @@ function fillMissingIds() {
     fillMissingCharIds();
     fillMissingWepIds();
     fillMissingArmorIds();
+    Cookies.set('Weapons', myWeapons);
+}
+
+function showCookies() {
+    return Cookies.get();
 }
 
 function fillMissingCharIds() {
