@@ -334,6 +334,7 @@ function removeIdFromArray(id, array) {
     for (var i in array) {
         if (id === array[i].id) {
             console.log("removed id: " + id);
+            array.splice(i, 1);
             return;
         }
     }
