@@ -224,8 +224,8 @@ function saveCurArmors() {
 function setupPersonal() {
     resetChars();
     resetWeps();
-    saveMy.armors = myArmors;
-    resetArmors();
+    fillMissingArmorIds();
+    saveMy.armors = curArmors;
 }
 
 // MARK: import functions
