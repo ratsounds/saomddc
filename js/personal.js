@@ -142,7 +142,9 @@ saveMy = {
     _armor: true,
 }
 
+var curUnits;
 var curWeapons;
+var curArmors;
 
 // MARK: useMy changes to calculations
 
@@ -206,7 +208,7 @@ function showAllArmors() {
 // MARK: Setup own database
 
 function fillMissingIds() {
-    // fillMissingCharIds();
+    fillMissingCharIds();
     fillMissingWepIds();
     fillMissingArmorIds();
 
