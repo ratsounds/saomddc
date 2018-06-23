@@ -277,8 +277,10 @@ function saveCharWithRankId(id) {
     var charId = getCharRank(id).charId();
     var name = getCharRank(id).charName();
     var lv = getCharRank(id).charLv();
-    var newChar = { id: charId, name_en: name, lv: lv};
-    saveMy.chars = JSON.parse(saveMy.chars).push(newChar);
+    var newChar = { id: charId, name_en: name, lv: lv };
+    var newArray = saveMy.chars;
+    newArray.push(newChar);
+    saveMy.chars = newArray;
 }
 
 // MARK: Char info from ranking list
