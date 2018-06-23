@@ -225,7 +225,7 @@ function fillMissingCharIds() {
 
         myUnit.id = findIdInArrayFromName(myUnit, cs);
     }
-    curUnits = jsonCopy(myUnits);
+    curUnits = jsonCopy(myChars);
 }
 function fillMissingWepIds() {
     var allWeps = DC.getWeapon();
