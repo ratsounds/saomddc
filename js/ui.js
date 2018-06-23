@@ -316,21 +316,25 @@ function initPost() {
         if (ev.which == 68) { //D press
             var wepId = getCharRankWepId(lastClicked);
             var charId = getCharRankCharId(lastClicked);
-            removeWepId(wepId, false);
+            removeWepId(wepId);
             removeCharId(charId);
+            refreshRanking();
         }
         if (ev.which == 87) { //W press
             var wepId = PS.getCharRankWepId(lastClicked);
             removeWepId(wepId);
+            refreshRanking();
         }
         if (ev.which == 82) { //R press
-            resetWeps(false);
+            resetWeps();
             resetChars();
+            refreshRanking();
         }
 
         // saveMy changes
         if (ev.which == 65) { //A press
             saveCharWithRankId(lastClicked);
+            refreshRanking();
         }
     };
 }

@@ -5,7 +5,7 @@ useMy = {
     },
     set weapons(val) {
         this._weapon = val;
-        shouldRefreshRanking();
+        refreshRanking();
     },
     //change true -> false if you want to use all weapons by default
     _weapon: true,
@@ -15,7 +15,7 @@ useMy = {
     },
     set chars(val) {
         this._char = val;
-        shouldRefreshRanking();
+        refreshRanking();
     },
     //change true -> false if you want to use all characters by default
     _char: true,
@@ -25,7 +25,7 @@ useMy = {
     },
     set armors(val) {
         this._armor = val;
-        shouldRefreshRanking();
+        refreshRanking();
     },
     //change true -> false if you want to use default armors by default
     _armor: true,
@@ -137,14 +137,16 @@ saveMy = {
     },
     set armors(val) {
         Cookies.set("armors", val);
-        shouldRefreshRanking();
+        resetArmors();
     },
     _armor: true,
 }
 
+var curWeapons;
+
 // MARK: useMy changes to calculations
 
-function removeWepId(id, refresh = true) {
+function removeWepId(id) {
     for (var i in curWeapons) {
         var wep = DC.getWeapon(curWeapons[i].id);
         if (wep.id === id) {
@@ -153,9 +155,8 @@ function removeWepId(id, refresh = true) {
             break;
         }
     }
-    shouldRefreshRanking(refresh);
 }
-function removeCharId(id, refresh = true) {
+function removeCharId(id) {
     for (var i in curUnits) {
         var char = curUnits[i];
         if (char.id === id) {
@@ -164,29 +165,26 @@ function removeCharId(id, refresh = true) {
             break;
         }
     }
-    shouldRefreshRanking(refresh);
 }
 
-function resetWeps(refresh = true) {
+function resetWeps() {
     console.log("resetWeps");
     curWeapons = jsonCopy(saveMy.weapons);
-
-    shouldRefreshRanking(refresh);
 }
-function resetChars(refresh = true) {
+function resetChars() {
     console.log("resetChars");
     curUnits = jsonCopy(saveMy.chars);
-
-    shouldRefreshRanking(refresh);
+}
+function resetArmors() {
+    console.log("resetArmors");
+    curArmors = jsonCopy(saveMy.armors);
 }
 
 // MARK: Convenience functions
 
-function shouldRefreshRanking(refresh = true) {
-    if (refresh) {
+function refreshRanking() {
         calcRanking();
         showRanking();
-    }
 }
 
 // MARK: Console functions
