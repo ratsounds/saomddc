@@ -1,4 +1,5 @@
 
+// Determines if filter uses your personal settings
 useMy = {
     get weapons() {
         return this._weapon;
@@ -142,7 +143,7 @@ saveMy = {
     _armor: true,
 }
 
-var curUnits;
+var curChars;
 var curWeapons;
 var curArmors;
 
@@ -159,11 +160,11 @@ function removeWepId(id) {
     }
 }
 function removeCharId(id) {
-    for (var i in curUnits) {
-        var char = curUnits[i];
+    for (var i in curChars) {
+        var char = curChars[i];
         if (char.id === id) {
             console.log("removed Char: " + id);
-            curUnits.splice(i, 1);
+            curChars.splice(i, 1);
             break;
         }
     }
@@ -175,7 +176,7 @@ function resetWeps() {
 }
 function resetChars() {
     console.log("resetChars");
-    curUnits = saveMy.chars;
+    curChars = saveMy.chars;
 }
 function resetArmors() {
     console.log("resetArmors");
@@ -205,6 +206,10 @@ function showAllArmors() {
     console.log(DC.getArmor());
 }
 
+function saveCurChars() {
+    saveMy.chars = curChars;
+    refreshRanking();
+}
 function saveCurWeapons() {
     saveMy.weapons = curWeapons;
     refreshRanking();
@@ -216,11 +221,14 @@ function saveCurArmors() {
 
 // MARK: Setup own database
 
-function fillMissingIds() {
-    fillMissingCharIds();
-    fillMissingWepIds();
-    fillMissingArmorIds();
+function setupPersonal() {
+    resetChars();
+    resetWeps();
+    saveMy.armors = myArmors;
+    resetArmors();
 }
+
+// MARK: import functions
 
 function fillMissingCharIds() {
     for (var i in myChars) {
@@ -232,7 +240,7 @@ function fillMissingCharIds() {
 
         myUnit.id = findIdInArrayFromName(myUnit, cs);
     }
-    curUnits = jsonCopy(myChars);
+    curChars = jsonCopy(myChars);
 }
 function fillMissingWepIds() {
     var allWeps = DC.getWeapon();
@@ -274,13 +282,62 @@ function findIdInArrayFromName(myObject, dbArray) {
 // MARK: Add selected rankId to saveMy
 
 function saveCharWithRankId(id) {
+    var charArray = saveMy.chars;
+    if (idIsInArray(id, charArray)) {
+        return;
+    }
     var charId = getCharRank(id).charId;
-    var name = getCharRank(id).charName;
-    var lv = getCharRank(id).charLv;
-    var newChar = { id: charId, name_en: name, lv: lv };
-    var newArray = saveMy.chars;
-    newArray.push(newChar);
-    saveMy.chars = newArray;
+    var lv = getCharRank(id).lv;
+    var newChar = { id: charId, lv: lv };
+    charArray.push(newChar);
+    saveMy.chars = charArray;
+}
+
+function saveWepWithRankId(id) {
+    var wepArray = saveMy.weapons;
+    if (idIsInArray(id, wepArray)) {
+        return;
+    }
+    var wepId = getCharRank(id).wepId;
+    var rarity = getCharRank(id).rarity;
+    var newWep = { id: wepId, r: rarity };
+    wepArray.push(newWep);
+    saveMy.weapons = wepArray;
+}
+
+function idIsInArray(id, array) {
+    for (var i in array) {
+        if (id === array[i].id) {
+            return true;
+        }
+    }
+    return false;
+}
+
+// MARK: Remove selected rankId from saveMy
+
+function removeCharWithRankId(id) {
+    var charArray = saveMy.chars;
+    var charId = getCharRank(id).charId;
+    removeIdFromArray(charId, charArray);
+    saveMy.chars = charArray;
+}
+
+function removeWepWithRankId(id) {
+    var wepArray = saveMy.weapons;
+    var wepId = getCharRank(id).wepId;
+    removeIdFromArray(wepId, wepArray);
+    saveMy.weapons = wepArray;
+}
+
+function removeIdFromArray(id, array) {
+    for (var i in array) {
+        if (id === array[i].id) {
+            console.log("removed id: " + id);
+            return;
+        }
+    }
+    console.log("Id not found to remove: " + id);
 }
 
 // MARK: Char info from ranking list
@@ -289,19 +346,22 @@ getCharRank = (function(id) {
 
         var wepId = ranking[id].sv.c.eq_atk_wep.id;
         var charId = ranking[id].sv.c.id;
-        var charLv = ranking[id].sv.lv;
         var charName = ranking[id].sv.c.name_en;
+        var lv = ranking[id].sv.lv;
+        var rarity = ranking[id].sv.r;
 
         return {
             wepId: wepId,
             charId: charId,
-            charLv: charLv,
-            charName: charName
+            charName: charName,
+            lv: lv,
+            rarity: rarity
         }
     }
 );
 
 // MARK: Low level helper functions
+
 function copy(o) {
     var output, v, key;
     output = Array.isArray(o) ? [] : {};

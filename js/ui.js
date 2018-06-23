@@ -243,7 +243,7 @@ function initPost() {
 
     //loading for personal scripts
     cs = DC.getChar();
-    fillMissingIds();
+    setupPersonal();
 
     //create group icon css
     //set app icon
@@ -334,6 +334,19 @@ function initPost() {
         // saveMy changes
         if (ev.which == 65) { //A press
             saveCharWithRankId(lastClicked);
+            refreshRanking();
+        }
+        if (ev.which == 83) { //S press
+            saveWepWithRankId(lastClicked);
+            refreshRanking();
+        }
+
+        if (ev.which == 79) { //O press
+            removeCharWithRankId(lastClicked);
+            refreshRanking();
+        }
+        if (ev.which == 80) { //P press
+            removeWepWithRankId(lastClicked);
             refreshRanking();
         }
     };
@@ -438,8 +451,8 @@ function calcRanking() {
         var clvr = lvr[i];
 
         if (useMy.chars) {
-            for (var my in curUnits) {
-                var myUnit = curUnits[my];
+            for (var my in curChars) {
+                var myUnit = curChars[my];
                 var c = copy(DC.getChar(myUnit.id));
 
                 if (myUnit.lv !== clvr.lv) {
