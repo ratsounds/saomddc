@@ -314,14 +314,14 @@ function initPost() {
 
         // useMy changes
         if (ev.which == 68) { //D press
-            var wepId = getCharRankWepId(lastClicked);
-            var charId = getCharRankCharId(lastClicked);
+            var wepId = getCharRank(lastClicked).wepId;
+            var charId = getCharRank(lastClicked).charId;
             removeWepId(wepId);
             removeCharId(charId);
             refreshRanking();
         }
         if (ev.which == 87) { //W press
-            var wepId = PS.getCharRankWepId(lastClicked);
+            var wepId = getCharRank(lastClicked).wepId;
             removeWepId(wepId);
             refreshRanking();
         }

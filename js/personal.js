@@ -115,7 +115,7 @@ myArmors = [
 // Saves your personal units and settings locally in a cookie
 saveMy = {
     get weapons() {
-        return Cookies.get("weapons");
+        return Cookies.getJSON("weapons");
     },
     set weapons(val) {
         Cookies.set("weapons", val);
@@ -124,7 +124,7 @@ saveMy = {
     _weapons: myWeapons,
 
     get chars() {
-        return Cookies.get("chars");
+        return Cookies.getJSON("chars");
     },
     set chars(val) {
         Cookies.set("chars", val);
@@ -133,7 +133,7 @@ saveMy = {
     _char: true,
 
     get armors() {
-        return Cookies.get("armors");
+        return Cookies.getJSON("armors");
     },
     set armors(val) {
         Cookies.set("armors", val);
@@ -192,7 +192,7 @@ function refreshRanking() {
 // MARK: Console functions
 
 function showCookies() {
-    return JSON.parse(Cookies.get());
+    return Cookies.getJSON();
 }
 
 function showAllWeps() {
@@ -205,14 +205,21 @@ function showAllArmors() {
     console.log(DC.getArmor());
 }
 
+function saveCurWeapons() {
+    saveMy.weapons = curWeapons;
+    refreshRanking();
+}
+function saveCurArmors() {
+    saveMy.armors = curArmors;
+    refreshRanking();
+}
+
 // MARK: Setup own database
 
 function fillMissingIds() {
     fillMissingCharIds();
     fillMissingWepIds();
     fillMissingArmorIds();
-
-    console.log("filled id's");
 }
 
 function fillMissingCharIds() {
@@ -272,13 +279,6 @@ function saveCharWithRankId(id) {
     var lv = getCharRank(id).charLv();
     var newChar = { id: charId, name_en: name, lv: lv};
     saveMy.chars = JSON.parse(saveMy.chars).push(newChar);
-}
-
-function saveCurWeapons() {
-    saveMy.weapons = curWeapons;
-}
-function saveCurArmors() {
-    saveMy.armors = curArmors;
 }
 
 // MARK: Char info from ranking list
