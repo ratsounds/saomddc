@@ -31,36 +31,6 @@ useMy = {
     _armor: true,
 };
 
-// Saves your personal units and settings locally in a cookie
-saveMy = {
-    get weapons() {
-        return Cookies.get("weapons");
-    },
-    set weapons(val) {
-        Cookies.set("weapons", val);
-        resetWeps();
-    },
-    _weapons: myWeapons,
-
-    get chars() {
-        return Cookies.get("chars");
-    },
-    set chars(val) {
-        Cookies.set("chars", val);
-        resetChars();
-    },
-    _char: true,
-
-    get armors() {
-        return Cookies.get("armors");
-    },
-    set armors(val) {
-        Cookies.set("armors", val);
-        shouldRefreshRanking();
-    },
-    _armor: true,
-}
-
 // Use id or name_en for weapon identification. id is slightly quicker at startup.
 // Use: showAllWeps() in console to get a list of all weapon id's
 myWeapons = [
@@ -141,6 +111,36 @@ myArmors = [
     { id: "", name_en: "Scarlet Party Dress"},
     { id: "", name_en: "Celebratory Furisode"},
 ];
+
+// Saves your personal units and settings locally in a cookie
+saveMy = {
+    get weapons() {
+        return Cookies.get("weapons");
+    },
+    set weapons(val) {
+        Cookies.set("weapons", val);
+        resetWeps();
+    },
+    _weapons: myWeapons,
+
+    get chars() {
+        return Cookies.get("chars");
+    },
+    set chars(val) {
+        Cookies.set("chars", val);
+        resetChars();
+    },
+    _char: true,
+
+    get armors() {
+        return Cookies.get("armors");
+    },
+    set armors(val) {
+        Cookies.set("armors", val);
+        shouldRefreshRanking();
+    },
+    _armor: true,
+}
 
 // MARK: useMy changes to calculations
 
