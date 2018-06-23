@@ -149,19 +149,20 @@ var curArmors;
 
 // MARK: useMy changes to calculations
 
-function removeWepId(id) {
-    console.log("Try remove wep from curWeapons");
-    for (var i in curWeapons) {
-        var wepId = DC.getWeapon(curWeapons[i].id).id;
-        removeIdFromArray(wepId, curWeapons);
-    }
+function removeCurWepForRankId(id) {
+    removeWepIdFromCurWeps(getCharRank(id).wepId);
 }
-function removeCharId(id) {
+function removeCurCharForRankId(id) {
+    removeCharIdFromCurChars(getCharRank(id).charId);
+}
+
+function removeWepIdFromCurWeps(id) {
+    console.log("Try remove wep from curWeapons");
+    removeIdFromArray(id, curWeapons);
+}
+function removeCharIdFromCurChars(id) {
     console.log("Try remove char from curChars");
-    for (var i in curChars) {
-        var charId = curChars[i].id;
-        removeIdFromArray(charId, curChars);
-    }
+    removeIdFromArray(id, curChars);
 }
 
 function resetWeps() {

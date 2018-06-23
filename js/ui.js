@@ -286,12 +286,14 @@ function initPost() {
     });
     DO.qa('.filter input').forEach(function (elem) {
         elem.on('change', function (ev) {
+            console.log("filter change");
             console.log(ev);
             showRanking();
         });
     });
     DO.qa('.useMy input').forEach(function (elem) {
         elem.on('change', function (ev) {
+            console.log("useMy filter change");
             console.log(ev);
             showRanking();
         });
@@ -320,15 +322,12 @@ function initPost() {
     elemRanking.onkeydown = function (ev) {
         // useMy changes
         if (ev.which == 68) { //D press
-            var wepId = getCharRank(lastClicked).wepId;
-            var charId = getCharRank(lastClicked).charId;
-            removeWepId(wepId);
-            removeCharId(charId);
+            removeCurWepForRankId(lastClicked);
+            removeCurCharForRankId(lastClicked);
             refreshRanking();
         }
         if (ev.which == 87) { //W press
-            var wepId = getCharRank(lastClicked).wepId;
-            removeWepId(wepId);
+            removeCurWepForRankId(lastClicked);
             refreshRanking();
         }
         if (ev.which == 82) { //R press
