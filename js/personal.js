@@ -119,7 +119,7 @@ saveMy = {
     },
     set weapons(val) {
         Cookies.set("weapons", val);
-        resetWeps();
+        resetWeps(false);
     },
     _weapons: myWeapons,
 
