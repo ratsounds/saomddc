@@ -33,7 +33,7 @@ useMy = {
 
 // Use id or name_en for weapon identification. id is slightly quicker at startup.
 // Use: showAllWeps() in console to get a list of all weapon id's
-var myWeapons = [
+myWeapons = [
     { id: "bride_sword1", name_en: "", r: 4},
     { id: "bonds_sword", name_en: "", r: 4},
     { id: "c_sword", name_en: "", r: 4},
@@ -54,7 +54,7 @@ var myWeapons = [
 ];
 // Use id or name_en for character identification. id is slightly quicker at startup.
 // Use: showAllChars() in console to get a list of all char id's
-var myChars = [
+myChars = [
     { id: "", name_en: "Kirito [Black Wing]", lv: 80}, // works ala name_en is correct
     { id: "ShitTestingId's", name_en: "Leafa [The Blade - facing the feelings]", lv: 80}, // works ala name_en is correct
     { id: "sports_leafa", name_en: "", lv: 80}, // Preferred example
@@ -97,7 +97,7 @@ var myChars = [
 ];
 // NOTE: Not all armors are available in the database.
 // Use: showAllArmors() in console to check which ones are possible.
-var myArmors = [
+myArmors = [
     { id: "mf_dark1", name_en: "Wolf Coat"},
     { id: "f_dark2", name_en: "Pumpkun Dress"}, //Yes pumpk'u'n, I didn't choose that either
     { id: "", name_en: "Gym Clothes in Youth"},
@@ -192,7 +192,7 @@ function shouldRefreshRanking(refresh = true) {
 // MARK: Console functions
 
 function showCookies() {
-    return Cookies.get();
+    return JSON.parse(Cookies.get());
 }
 
 function showAllWeps() {
