@@ -287,24 +287,16 @@ function saveCharWithRankId(id) {
 
 getCharRank = (function(id) {
 
-        function wepId() {
-            return ranking[id].sv.c.eq_atk_wep.id;
-        }
-        function charId() {
-            return ranking[id].sv.c.id;
-        }
-        function charLv() {
-            return ranking[id].sv.lv;
-        }
-        function charName() {
-            return ranking[id].sv.c.name_en;
-        }
+        var wepId = ranking[id].sv.c.eq_atk_wep.id;
+        var charId = ranking[id].sv.c.id;
+        var charLv = ranking[id].sv.lv;
+        var charName = ranking[id].sv.c.name_en;
 
         return {
             wepId: wepId,
             charId: charId,
             charLv: charLv,
-            charName: charName,
+            charName: charName
         }
     }
 );
