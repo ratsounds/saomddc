@@ -286,15 +286,13 @@ function initPost() {
     });
     DO.qa('.filter input').forEach(function (elem) {
         elem.on('change', function (ev) {
-            console.log("filter change");
-            console.log(ev);
             showRanking();
         });
     });
     DO.qa('.useMy input').forEach(function (elem) {
         elem.on('change', function (ev) {
-            console.log("useMy filter change");
-            console.log(ev);
+            console.log(elem);
+            useMy[elem.name] = elem.checked;
             showRanking();
         });
     });

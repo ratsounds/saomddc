@@ -5,6 +5,9 @@ useMy = {
         return this._weapon;
     },
     set weapons(val) {
+        if (this._weapon === val) {
+            return;
+        }
         this._weapon = val;
         refreshRanking();
     },
@@ -15,6 +18,9 @@ useMy = {
         return this._char;
     },
     set chars(val) {
+        if (this._char === val) {
+            return;
+        }
         this._char = val;
         refreshRanking();
     },
@@ -25,6 +31,9 @@ useMy = {
         return this._armor;
     },
     set armors(val) {
+        if (this._armor === val) {
+            return;
+        }
         this._armor = val;
         refreshRanking();
     },
