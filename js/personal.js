@@ -150,23 +150,17 @@ var curArmors;
 // MARK: useMy changes to calculations
 
 function removeWepId(id) {
+    console.log("Try remove wep from curWeapons");
     for (var i in curWeapons) {
-        var wep = DC.getWeapon(curWeapons[i].id);
-        if (wep.id === id) {
-            console.log("removed wep: " + id);
-            curWeapons.splice(i, 1);
-            break;
-        }
+        var wepId = DC.getWeapon(curWeapons[i].id).id;
+        removeIdFromArray(wepId, curWeapons);
     }
 }
 function removeCharId(id) {
+    console.log("Try remove char from curChars");
     for (var i in curChars) {
-        var char = curChars[i];
-        if (char.id === id) {
-            console.log("removed Char: " + id);
-            curChars.splice(i, 1);
-            break;
-        }
+        var charId = curChars[i].id;
+        removeIdFromArray(charId, curChars);
     }
 }
 
@@ -291,6 +285,7 @@ function saveCharWithRankId(id) {
     var newChar = { id: charId, lv: lv };
     charArray.push(newChar);
     saveMy.chars = charArray;
+    console.log("Added char to saveMy: " + charId);
 }
 
 function saveWepWithRankId(id) {
@@ -303,6 +298,7 @@ function saveWepWithRankId(id) {
     var newWep = { id: wepId, r: rarity };
     wepArray.push(newWep);
     saveMy.weapons = wepArray;
+    console.log("Added weapon to saveMy: " + wepId);
 }
 
 function idIsInArray(id, array) {
@@ -317,6 +313,7 @@ function idIsInArray(id, array) {
 // MARK: Remove selected rankId from saveMy
 
 function removeCharWithRankId(id) {
+    console.log("Try remove char from saveMy");
     var charArray = saveMy.chars;
     var charId = getCharRank(id).charId;
     removeIdFromArray(charId, charArray);
@@ -324,6 +321,7 @@ function removeCharWithRankId(id) {
 }
 
 function removeWepWithRankId(id) {
+    console.log("Try remove wep from saveMy");
     var wepArray = saveMy.weapons;
     var wepId = getCharRank(id).wepId;
     removeIdFromArray(wepId, wepArray);
