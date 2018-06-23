@@ -115,7 +115,7 @@ myArmors = [
 // Saves your personal units and settings locally in a cookie
 saveMy = {
     get weapons() {
-        return Cookies.getJSON("weapons");
+        return Cookies.getJSON("weapons") || [];
     },
     set weapons(val) {
         Cookies.set("weapons", val);
@@ -124,7 +124,7 @@ saveMy = {
     _weapons: myWeapons,
 
     get chars() {
-        return Cookies.getJSON("chars");
+        return Cookies.getJSON("chars") || [];
     },
     set chars(val) {
         Cookies.set("chars", val);
@@ -133,7 +133,7 @@ saveMy = {
     _char: true,
 
     get armors() {
-        return Cookies.getJSON("armors");
+        return Cookies.getJSON("armors") || [];
     },
     set armors(val) {
         Cookies.set("armors", val);
