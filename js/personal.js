@@ -283,10 +283,10 @@ function findIdInArrayFromName(myObject, dbArray) {
 
 function saveCharWithRankId(id) {
     var charArray = saveMy.chars;
-    if (idIsInArray(id, charArray)) {
+    var charId = getCharRank(id).charId;
+    if (idIsInArray(charId, charArray)) {
         return;
     }
-    var charId = getCharRank(id).charId;
     var lv = getCharRank(id).lv;
     var newChar = { id: charId, lv: lv };
     charArray.push(newChar);
@@ -295,10 +295,10 @@ function saveCharWithRankId(id) {
 
 function saveWepWithRankId(id) {
     var wepArray = saveMy.weapons;
-    if (idIsInArray(id, wepArray)) {
+    var wepId = getCharRank(id).wepId;
+    if (idIsInArray(wepId, wepArray)) {
         return;
     }
-    var wepId = getCharRank(id).wepId;
     var rarity = getCharRank(id).rarity;
     var newWep = { id: wepId, r: rarity };
     wepArray.push(newWep);
@@ -307,7 +307,7 @@ function saveWepWithRankId(id) {
 
 function idIsInArray(id, array) {
     for (var i in array) {
-        if (id == array[i].id) {
+        if (id === array[i].id) {
             return true;
         }
     }
