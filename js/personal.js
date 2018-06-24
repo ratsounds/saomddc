@@ -254,7 +254,7 @@ function tryAddingToChars(charId, lv) {
     var lvStrings = "80 90 100".split(/\s+/);
     var lvCheck = lvStrings.indexOf(lv) > -1;
     if (char && lvCheck) {
-        saveChar(charId, lv);
+        saveChar(charId, parseInt(lv));
         return true;
     }
     return false;
@@ -266,7 +266,7 @@ function tryAddingToWeps(wepId, rarity) {
     var rarityStrings = "4 5".split(/\s+/);
     var rarityCheck = rarityStrings.indexOf(rarity) > -1;
     if (weapon && rarityCheck) {
-        saveWep(wepId, rarity);
+        saveWep(wepId, parseInt(rarity));
         return true;
     }
     return false;
