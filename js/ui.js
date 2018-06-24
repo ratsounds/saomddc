@@ -524,26 +524,28 @@ function calcComboDCVForChar(oc, clvr, useCheck, myObjects, comboCall) {
     return dcv;
 }
 function calcWeaponDCVForChar(oc, myWeapon, clvr) {
-    var weapon = DC.getWeapon(myWeapon.id);
-    //Check for compatible weapon type
-    if (oc.type.eqtype != weapon.type.id || clvr.r != myWeapon.r) {
-        return null;
-    }
 
+    var weapon = DC.getWeapon(myWeapon.id);
     var c = copy(oc);
-    c.eq_atk_wep = weapon;
+    c.eq_atk_wep = undefined;
+
+    //Check for compatible weapon type
+    if (oc.type.eqtype === weapon.type.id && clvr.r === myWeapon.r) {
+        c.eq_atk_wep = weapon;
+    }
 
     return calcComboDCVForChar(c, clvr, useMy.armors, curArmors, calcArmorDCVForChar);
 }
 function calcArmorDCVForChar(oc, myArmor, clvr) {
-    var armor = DC.getArmor(myArmor.id);
-    //Check for compatible armor type
-    if (!armor.type.includes(oc.cname.gender)) {
-        return null;
-    }
 
+    var armor = DC.getArmor(myArmor.id);
     var c = copy(oc);
-    c.eq_atk_amr = armor;
+    c.eq_atk_amr = undefined;
+
+    //Check for compatible armor type
+    if (armor.type.includes(oc.cname.gender)) {
+        c.eq_atk_amr = armor;
+    }
 
     return DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
 }
