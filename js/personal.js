@@ -38,7 +38,7 @@ useMy = {
         refreshRanking();
     },
     //change true -> false if you want to use default armors by default
-    _armor: false,
+    _armor: false
 };
 
 // Use id or name_en for weapon identification. id is slightly quicker at startup.
@@ -125,43 +125,65 @@ myArmors = [
 // Saves your personal units and settings locally in a cookie
 saveMy = {
     get weapons() {
-        return Cookies.getJSON("weapons") || [];
+        return getCookies("weapons");
     },
     set weapons(val) {
         if (val === null) {
-            Cookies.remove("weapons");
+            setCookies("weapons", []);
         } else {
-            Cookies.set("weapons", val);
+            setCookies("weapons", val);
         }
         resetWeps();
     },
-    _weapons: myWeapons,
 
     get chars() {
-        return Cookies.getJSON("chars") || [];
+        return getCookies("chars");
     },
     set chars(val) {
         if (val === null) {
-            Cookies.remove("chars");
+            setCookies("chars", []);
         } else {
-            Cookies.set("chars", val);
+            setCookies("chars", val);
         }
         resetChars();
     },
-    _char: true,
+    _charCount: 0,
 
     get armors() {
-        return Cookies.getJSON("armors") || [];
+        return getCookies("armors");
     },
     set armors(val) {
         if (val === null) {
-            Cookies.remove("armors");
+            setCookies("armors", []);
         } else {
-            Cookies.set("armors", val);
+            setCookies("armors", val);
         }
         resetArmors();
-    },
-    _armor: true,
+    }
+}
+
+function getCookies(id) {
+    var array = [], i = 0;
+    var tempArray = Cookies.getJSON(id + i.toString());
+    while (tempArray) {
+        array.concat(tempArray);
+        tempArray = Cookies.getJSON(id + i.toString());
+    }
+    return array;
+}
+function setCookies(id, val) {
+    var i, temparray, chunk = 30, count = 0;
+    for (i = 0, count = 0; i < val.length; i += chunk, count++) {
+        temparray = array.slice(i,i+chunk);
+        Cookies.set(id + count.toString(), temparray);
+    }
+
+    var outOfBoundsCookie = Cookies.getJSON(id + count.toString());
+    while (outOfBoundsCookie) {
+        Cookies.remove(id + count.toString());
+        count++;
+        outOfBoundsCookie = Cookies.getJSON(id + count.toString());
+    }
 }
 
 var curChars;
