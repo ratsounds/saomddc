@@ -237,13 +237,39 @@ function setupPersonal() {
 
 function addItemsToPersonal(inputText) {
     var inputs = inputText.toLowerCase().split(/\s+/);
-    for (var i in inputs) {
-        tryAddingToChars(inputs[i]);
+    for (var i = 0; i < inputs.length - 1; i++) { // -1 at inputs.length to accommodate for double parameter formatting.
+        if (tryAddingToChars(inputs[i], inputs[i + 1])) {
+            i++;
+            continue;
+        }
+        if (tryAddingToWeps(inputs[i], inputs[i+1])) {
+            i++;
+        }
     }
 }
 
-function tryAddingToChars(input) {
-    console.log(input);
+function tryAddingToChars(charId, lv) {
+    var char = DC.getChar(input);
+    console.log(char);
+    var lvStrings = "80 90 100".split(/\s+/);
+    var lvCheck = lvStrings.indexOf(lv) > -1;
+    if (char && lvCheck) {
+        saveChar(charId, lv);
+        return true;
+    }
+    return false;
+}
+
+function tryAddingToWeps(wepId, rarity) {
+    var weapon = DC.getWeapon(wepId);
+    console.log(weapon);
+    var rarityStrings = "4 5".split(/\s+/);
+    var rarityCheck = rarityStrings.indexOf(rarity) > -1;
+    if (weapon && rarityCheck) {
+        saveWep(wepId, rarity);
+        return true;
+    }
+    return false;
 }
 
 function fillMissingCharIds() {
@@ -297,30 +323,38 @@ function findIdInArrayFromName(myObject, dbArray) {
 
 // MARK: Add selected rankId to saveMy
 
-function saveCharWithRankId(id) {
+function saveChar(charId, lv) {
     var charArray = saveMy.chars;
-    var charId = getCharRank(id).charId;
     if (idIsInArray(charId, charArray)) {
         return;
     }
-    var lv = getCharRank(id).lv;
     var newChar = { id: charId, lv: lv };
     charArray.push(newChar);
     saveMy.chars = charArray;
     console.log("Added char to saveMy: " + charId);
 }
 
-function saveWepWithRankId(id) {
+function saveWep(wepId, rarity) {
     var wepArray = saveMy.weapons;
-    var wepId = getCharRank(id).wepId;
     if (idIsInArray(wepId, wepArray)) {
         return;
     }
-    var rarity = getCharRank(id).rarity;
     var newWep = { id: wepId, r: rarity };
     wepArray.push(newWep);
     saveMy.weapons = wepArray;
     console.log("Added weapon to saveMy: " + wepId);
+}
+
+function saveCharWithRankId(id) {
+    var charId = getCharRank(id).charId;
+    var lv = getCharRank(id).lv;
+    saveChar(charId, lv);
+}
+
+function saveWepWithRankId(id) {
+    var wepId = getCharRank(id).wepId;
+    var rarity = getCharRank(id).rarity;
+    saveWep(wepId, rarity);
 }
 
 function idIsInArray(id, array) {
