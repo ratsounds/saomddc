@@ -264,8 +264,7 @@ function setupPersonal() {
     Cookies.defaults.expires = 1000;
     resetChars();
     resetWeps();
-    fillMissingArmorIds();
-    saveMy.armors = curArmors;
+    resetArmors();
 }
 
 // MARK: inputText handling functions
@@ -277,6 +276,13 @@ function handlePersonalInput(inputText) {
         
         if (inputs[i] === "clear") {
             if (clearCookieOfType(inputs[i+1])) {
+                i++;
+            }
+            continue;
+        }
+
+        if (inputs[i] === "armor") {
+            if (tryAddingToArmors(inputs[i+1])) {
                 i++;
             }
             continue;
@@ -313,7 +319,6 @@ function clearCookieOfType(type) {
 
 function tryAddingToChars(charId, lv) {
     var char = DC.getChar(charId);
-    console.log(char);
     var lvStrings = "80 90 100".split(/\s+/);
     var lvCheck = lvStrings.indexOf(lv) > -1;
     if (char && lvCheck) {
@@ -325,11 +330,19 @@ function tryAddingToChars(charId, lv) {
 
 function tryAddingToWeps(wepId, rarity) {
     var weapon = DC.getWeapon(wepId);
-    console.log(weapon);
     var rarityStrings = "4 5".split(/\s+/);
     var rarityCheck = rarityStrings.indexOf(rarity) > -1;
     if (weapon && rarityCheck) {
         saveWep(wepId, parseInt(rarity));
+        return true;
+    }
+    return false;
+}
+
+function tryAddingToArmors(armorId) {
+    var armor = DC.getArmor(armorId);
+    if (armor) {
+        saveArmor(armorId);
         return true;
     }
     return false;
@@ -387,25 +400,28 @@ function findIdInArrayFromName(myObject, dbArray) {
 // MARK: Add selected rankId to saveMy
 
 function saveChar(charId, lv) {
-    var charArray = saveMy.chars;
-    if (idIsInArray(charId, charArray)) {
-        return;
-    }
     var newChar = { id: charId, lv: lv };
-    charArray.push(newChar);
-    saveMy.chars = charArray;
-    console.log("Added char to saveMy: " + charId);
+    saveItemToType(charId, "chars", newChar);
 }
 
 function saveWep(wepId, rarity) {
-    var wepArray = saveMy.weapons;
-    if (idIsInArray(wepId, wepArray)) {
+    var newWep = { id: wepId, r: rarity };
+    saveItemToType(wepId, "weapons", newWep);
+}
+
+function saveArmor(armorId) {
+    var newArmor = { id: armorId };
+    saveItemToType(armorId, "weapons", newArmor);
+}
+
+function saveItemToType(id, type, newItem) {
+    var array = saveMy[type];
+    if (idIsInArray(id, array)) {
         return;
     }
-    var newWep = { id: wepId, r: rarity };
-    wepArray.push(newWep);
-    saveMy.weapons = wepArray;
-    console.log("Added weapon to saveMy: " + wepId);
+    array.push(newItem);
+    saveMy[type] = array;
+    console.log("Added " + type + " to saveMy: " + id);
 }
 
 function saveCharWithRankId(id) {
