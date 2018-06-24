@@ -12,7 +12,7 @@ useMy = {
         refreshRanking();
     },
     //change true -> false if you want to use all weapons by default
-    _weapon: true,
+    _weapon: false,
 
     get chars() {
         return this._char;
@@ -25,7 +25,7 @@ useMy = {
         refreshRanking();
     },
     //change true -> false if you want to use all characters by default
-    _char: true,
+    _char: false,
 
     get armors() {
         return this._armor;
@@ -38,7 +38,7 @@ useMy = {
         refreshRanking();
     },
     //change true -> false if you want to use default armors by default
-    _armor: true,
+    _armor: false,
 };
 
 // Use id or name_en for weapon identification. id is slightly quicker at startup.
@@ -226,6 +226,7 @@ function saveCurArmors() {
 // MARK: Setup own database
 
 function setupPersonal() {
+    Cookies.defaults.expires = 1000;
     resetChars();
     resetWeps();
     fillMissingArmorIds();
