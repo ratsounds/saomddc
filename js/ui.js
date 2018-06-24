@@ -299,7 +299,7 @@ function initPost() {
         elem.on('change', function (ev) {
             if (elem.name === 'saveMyId') {
                 console.log(elem.value);
-                addItemsToPersonal(elem.value);
+                handlePersonalInput(elem.value);
             }
         });
     });

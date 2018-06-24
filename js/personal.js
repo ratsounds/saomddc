@@ -128,6 +128,10 @@ saveMy = {
         return Cookies.getJSON("weapons") || [];
     },
     set weapons(val) {
+        if (val === null) {
+            Cookies.remove("weapons");
+            return;
+        }
         Cookies.set("weapons", val);
         resetWeps(false);
     },
@@ -137,6 +141,10 @@ saveMy = {
         return Cookies.getJSON("chars") || [];
     },
     set chars(val) {
+        if (val === null) {
+            Cookies.remove("chars");
+            return;
+        }
         Cookies.set("chars", val);
         resetChars();
     },
@@ -146,6 +154,10 @@ saveMy = {
         return Cookies.getJSON("armors") || [];
     },
     set armors(val) {
+        if (val === null) {
+            Cookies.remove("armors");
+            return;
+        }
         Cookies.set("armors", val);
         resetArmors();
     },
@@ -233,11 +245,17 @@ function setupPersonal() {
     saveMy.armors = curArmors;
 }
 
-// MARK: import functions
+// MARK: inputText handling functions
 
-function addItemsToPersonal(inputText) {
+function handlePersonalInput(inputText) {
     var inputs = inputText.toLowerCase().split(/\s+/);
+
     for (var i = 0; i < inputs.length - 1; i++) { // -1 at inputs.length to accommodate for double parameter formatting.
+        
+        if (inputs[i] === "clear") {
+            clearCookieOfType(inputs[i+1]);
+        }
+
         if (tryAddingToChars(inputs[i], inputs[i + 1])) {
             i++;
             continue;
@@ -245,6 +263,20 @@ function addItemsToPersonal(inputText) {
         if (tryAddingToWeps(inputs[i], inputs[i+1])) {
             i++;
         }
+    }
+    refreshRanking();
+}
+
+function clearCookieOfType(type) {
+    var clearAll = type === "all";
+    if (type === "chars" || clearAll) {
+        saveMy.chars = null;
+    }
+    if (type === "weapons" || type === "weps" || clearAll) {
+        saveMy.weapons = null;
+    }
+    if (type === "armors" || clearAll) {
+        saveMy.armors = null;
     }
 }
 
