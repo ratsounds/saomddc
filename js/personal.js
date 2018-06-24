@@ -166,6 +166,7 @@ function getCookies(id) {
     var array = [], i = 0;
     var tempArray = Cookies.getJSON(id + i.toString());
     while (tempArray) {
+        i++;
         array.concat(tempArray);
         tempArray = Cookies.getJSON(id + i.toString());
     }
