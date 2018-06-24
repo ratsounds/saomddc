@@ -249,7 +249,7 @@ function addItemsToPersonal(inputText) {
 }
 
 function tryAddingToChars(charId, lv) {
-    var char = DC.getChar(input);
+    var char = DC.getChar(charId);
     console.log(char);
     var lvStrings = "80 90 100".split(/\s+/);
     var lvCheck = lvStrings.indexOf(lv) > -1;
