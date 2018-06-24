@@ -218,6 +218,9 @@ function initPre() {
     });
     window.matchMedia('only screen and (orientation:landscape)').addListener(showSidebar);
     mapperInfo = new Mapper(DO.qid('item_info').innerHTML);
+
+    //Personal modifications
+    DO.qid('help_button').click();
 }
 
 // End Userscript unmodified functions --------------------------------------

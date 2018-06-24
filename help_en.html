@@ -1,3 +1,74 @@
+<h2>Personal Units, Weapons (&Armor)</h2>
+<p>Welcome to the modified part of Ratsounds unofficial damage calculator.<br/>
+    (Press the ? icon to hide this help if you already know how it works)<br/>
+    On this website you can save the units, weapons and armors you have ingame as cookies to the website (Yes hereby you accept cookies, if you don't you're supposed to leave).<br/>
+    In this way you can adjust the damage calculator to only use the stuff you actually own instead of that new gacha with that fancy wep noone pulls.<br/>
+    Furthermore this site is dependant on changes at <a href="https://ratsounds.github.io/saomddc/">ratsounds calculator</a> hence until either he incorporates this or I find a way to deal with updates automatically
+    I'll need to update his changes manually to here which causes delay in functionality.<br/>
+    Anyways let's get to it and explain it in some more detail how to use.</p>
+<h2>Modified UI</h2>
+<p>The three new icons signify the personal items you want to use (icons chosen under lack of photoshop skills).<br/>
+    The one mostleft (sword) signifies if you want to use your own units. <br/>
+    The middle one (shieldSword) signifies using your own weapons.<br/>
+    The last one (staff) is for using your own armors.<br/>
+Armors are relatively irrelevant and this filter will only take effect when also enabling the personalWeapon filter.
+If you haven't added any items yet then the list will be empty when enabling these filters.</p>
+<h2>Controls</h2>
+<p>For any of the following controls to work you'll need to have focus on the ranking list (click a unit in the list to focus there).
+Here's a list of the effect pressing each button will have.</p>
+<p>Peronal items actions</p>
+<div class="sample">
+    <p>A = Add the currently selected unit from the ranking to your personal Characters</p>
+    <p>S = Add the Weapon of the currently selected unit to your personal Weapons</p>
+    <p>O = Remove the currently selected unit from the ranking from your personal Characters</p>
+    <p>P = Remove the Weapon of the currently selected unit from your personal Weapons</p>
+</div>
+<p>Current weapon actions. These temporarily remove the unit / weapon from calculations for ease of use when already equipping the wep on one char.</p>
+<div class="sample">
+    <p>R = Reset all items from your personal list and discard any temporary changes in available units.</p>
+    <p>D = Remove the selected character and their weapon from the calculations until reload or pressing R</p>
+    <p>W = Remove only the weapon of the selected character from the calculations</p>
+</div>
+<h2>How to get Id's</h2>
+<p>Most of the weapons you have will not appear in the list for you to add since they're the best weapons. The lowest searchBar fulfills the purpose
+of manually adding Characters, Weapons and armors to your personal list.<br/>
+    All items can only be add with the use of their database id. You have 2 options to find your id.<br/>
+    You can either view the database by clicking <a href="https://raw.githubusercontent.com/zehnzen/saomddc/master/data/data-uncompressed.json">this link</a> and find your item with CTRL + F (recommended method).<br/>
+    Or you can view the database by using the browser's console. Console can be opened in chrome by pressing F12 and selecting console (2nd item topbar). When using the below functions
+an object will popup, expand the object by pressing the triangle. Press CTRL + F to find the desired item in the response. Use the textfield at the bottom with the placeholder text "Find string in logs".</p>
+<p>E.g. id's</p>
+<p class="math"><var>CharacterId</var> = <var>bride_alice</var></p>
+<p class="math"><var>WeaponId</var> = <var>sports_sword</var></p>
+<p class="math"><var>ArmorId</var> = <var>mf_dark1</var></p>
+<p>Console functions for showing Database</p>
+<div class="sample">
+    <p>showAllChars() shows database list of all char id's / names</p>
+    <p>showAllWeps() shows database list of all weapon id's / names</p>
+    <p>showAllArmors() shows database list of all armor id's / names</p>
+</div>
+<h2>Personal textfield commands</h2>
+<p>When you have the id's you can add the items according to the following format.<br/>charId's should be followed by their lvl (80, 90, 100).<br/>Weapons by their rarity (4, 5).<br/>
+    Armor id's need to be added after the "armor" prefix.<br/>
+    Every word needs to be separated by spaces. Multiple commands can be chained when separated by spaces.</p>
+<p class="math"><var>AddChar</var> = <var>bride_alice</var> <var>90</var></p>
+<p class="math"><var>AddWeapon</var> = <var>sports_sword</var> <var>4</var></p>
+<p class="math"><var>AddArmor</var> = armor <var>mf_dark1</var></p>
+<p>E.g. Adding multiple weapons in on go when pasting into the personalTextField and pressing enter (or clicking somewhere outside the textfield)</p>
+<p class="sample">bride_sword1 4 bonds_sword 4 c_sword 4 jr_dual 4 moonlight_sword 4
+    moonlight_sword1 4 ninja_rapier 4 princess_sword 4 ps_mace 4</p>
+<p>If you want to clear all or part of your personal items you can enter the following commands to remove them (removes their cookies)</p>
+<div class="sample">
+    <p class="math"><var>clear All</var> Removes all your personal Chars & Weapons & Armors</p>
+    <p class="math"><var>clear chars</var> Removes all your personal Chars</p>
+    <p class="math"><var>clear weapons</var> Removes all your personal Weapons</p>
+    <p class="math"><var>clear armors</var> Removes all your personal Armors</p>
+</div>
+<h2>Afterword</h2>
+<p>The code for this website is forked from ratsounds original damage calculator this simply builds upon and improves functionality.
+The github for this project is located at <a href="https://github.com/zehnzen/saomddc">https://github.com/zehnzen/saomddc</a> this is a friendlier implementation
+of the userscript it originally started out as with less hassle for new users (I hope).<br/>
+    For feedback you can create an issue on the project's github.<br/>
+    Otherwise you can contact me on Discord: zehnzen#9235</p>
 <h2>Current Ranking Events</h2>
 <div id="rankingevents">
 </div>
