@@ -174,7 +174,7 @@ function getCookies(id) {
 function setCookies(id, val) {
     var i, temparray, chunk = 30, count = 0;
     for (i = 0, count = 0; i < val.length; i += chunk, count++) {
-        temparray = array.slice(i,i+chunk);
+        temparray = val.slice(i,i+chunk);
         Cookies.set(id + count.toString(), temparray);
     }
 
@@ -375,7 +375,7 @@ function fillMissingArmorIds() {
 
 function findIdInArrayFromName(myObject, dbArray) {
     for (var i in dbArray) {
-        if (myObject.name_en.toLowerCase() == dbArray[i].name_en.toLowerCase()) {
+        if (myObject.name_en.toLowerCase() === dbArray[i].name_en.toLowerCase()) {
             return dbArray[i].id;
         }
     }
