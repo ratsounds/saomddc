@@ -130,10 +130,10 @@ saveMy = {
     set weapons(val) {
         if (val === null) {
             Cookies.remove("weapons");
-            return;
+        } else {
+            Cookies.set("weapons", val);
         }
-        Cookies.set("weapons", val);
-        resetWeps(false);
+        resetWeps();
     },
     _weapons: myWeapons,
 
@@ -143,9 +143,9 @@ saveMy = {
     set chars(val) {
         if (val === null) {
             Cookies.remove("chars");
-            return;
+        } else {
+            Cookies.set("chars", val);
         }
-        Cookies.set("chars", val);
         resetChars();
     },
     _char: true,
@@ -156,9 +156,9 @@ saveMy = {
     set armors(val) {
         if (val === null) {
             Cookies.remove("armors");
-            return;
+        } else {
+            Cookies.set("armors", val);
         }
-        Cookies.set("armors", val);
         resetArmors();
     },
     _armor: true,
