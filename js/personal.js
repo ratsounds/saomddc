@@ -190,8 +190,8 @@ function resetArmors() {
 // MARK: Convenience functions
 
 function refreshRanking() {
-        calcRanking();
-        showRanking();
+    calcRanking();
+    showRanking();
 }
 
 // MARK: Console functions
@@ -233,6 +233,17 @@ function setupPersonal() {
 }
 
 // MARK: import functions
+
+function addItemsToPersonal(inputText) {
+    var inputs = inputText.toLowerCase().split(/\s+/);
+    for (var i in inputs) {
+        tryAddingToChars(inputs[i]);
+    }
+}
+
+function tryAddingToChars(input) {
+    console.log(input);
+}
 
 function fillMissingCharIds() {
     for (var i in myChars) {

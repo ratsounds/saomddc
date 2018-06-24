@@ -291,9 +291,16 @@ function initPost() {
     });
     DO.qa('.useMy input').forEach(function (elem) {
         elem.on('change', function (ev) {
-            console.log(elem);
             useMy[elem.value] = elem.checked;
-            showRanking();
+            refreshRanking();
+        });
+    });
+    DO.qa('.saveMy input').forEach(function(elem){
+        elem.on('change', function (ev) {
+            if (item.name === 'saveMyId') {
+                console.log(elem.value);
+                addItemsToPersonal(elem.value);
+            }
         });
     });
     elemPreset.on('change', function (ev) {
