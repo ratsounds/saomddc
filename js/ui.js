@@ -297,7 +297,7 @@ function initPost() {
     });
     DO.qa('.saveMy input').forEach(function(elem){
         elem.on('change', function (ev) {
-            if (item.name === 'saveMyId') {
+            if (elem.name === 'saveMyId') {
                 console.log(elem.value);
                 addItemsToPersonal(elem.value);
             }
