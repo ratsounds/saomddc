@@ -275,7 +275,10 @@ function handlePersonalInput(inputText) {
     for (var i = 0; i < inputs.length - 1; i++) { // -1 at inputs.length to accommodate for double parameter formatting.
         
         if (inputs[i] === "clear") {
-            clearCookieOfType(inputs[i+1]);
+            if (clearCookieOfType(inputs[i+1])) {
+                i++;
+            }
+            continue;
         }
 
         if (tryAddingToChars(inputs[i], inputs[i + 1])) {
@@ -291,15 +294,20 @@ function handlePersonalInput(inputText) {
 
 function clearCookieOfType(type) {
     var clearAll = type === "all";
+    var cleared = false;
     if (type === "chars" || clearAll) {
         saveMy.chars = null;
+        cleared = true;
     }
     if (type === "weapons" || type === "weps" || clearAll) {
         saveMy.weapons = null;
+        cleared = true;
     }
     if (type === "armors" || clearAll) {
         saveMy.armors = null;
+        cleared = true;
     }
+    return cleared;
 }
 
 function tryAddingToChars(charId, lv) {
