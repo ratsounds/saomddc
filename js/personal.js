@@ -173,7 +173,7 @@ function getCookies(id) {
     return array;
 }
 function setCookies(id, val) {
-    var i, temparray, chunk = 30, count = 0;
+    var i, temparray, chunk = 80, count = 0;
     for (i = 0, count = 0; i < val.length; i += chunk, count++) {
         temparray = val.slice(i,i+chunk);
         Cookies.set(id + count.toString(), temparray);
@@ -411,7 +411,7 @@ function saveWep(wepId, rarity) {
 
 function saveArmor(armorId) {
     var newArmor = { id: armorId };
-    saveItemToType(armorId, "weapons", newArmor);
+    saveItemToType(armorId, "armors", newArmor);
 }
 
 function saveItemToType(id, type, newItem) {
