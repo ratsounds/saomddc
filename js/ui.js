@@ -248,6 +248,16 @@ function initPost() {
     cs = DC.getChar();
     setupPersonal();
 
+    //Setup alerts defaults
+    alertify.minimalDialog || alertify.dialog('minimalDialog',function(){
+        return {
+            main:function(title, content){
+                this.setHeader(title);
+                this.setContent(content);
+            }
+        };
+    });
+
     //create group icon css
     //set app icon
     fetch('data/appicon.json', { method: 'GET' })
@@ -300,11 +310,15 @@ function initPost() {
     });
     DO.qa('.saveMy input').forEach(function(elem){
         elem.on('change', function (ev) {
-            if (elem.name === 'saveMyId') {
+            console.log(elem.value);
+            handlePersonalInput(elem.value);
+        });
+        elem.onkeydown = function (ev) {
+            if (ev.which == 13) { // ENTER press
                 console.log(elem.value);
                 handlePersonalInput(elem.value);
             }
-        });
+        }
     });
     elemPreset.on('change', function (ev) {
         setBoss(db.preset[ev.target.value]);
@@ -330,11 +344,19 @@ function initPost() {
     elemRanking.onkeydown = function (ev) {
         // useMy changes
         if (ev.which == 68) { //D press
+            if (!useMy.chars) {
+                alertify.alert("Not in myChar filter");
+                return;
+            }
             removeCurWepForRankId(lastClicked);
             removeCurCharForRankId(lastClicked);
             refreshRanking();
         }
         if (ev.which == 87) { //W press
+            if (!useMy.weapons) {
+                alertify.message("Not in myWep filter");
+                return;
+            }
             removeCurWepForRankId(lastClicked);
             refreshRanking();
         }
@@ -346,19 +368,35 @@ function initPost() {
 
         // saveMy changes
         if (ev.which == 65) { //A press
+            if (useMy.chars) {
+                alertify.message("Already in myChar filter");
+                return;
+            }
             saveCharWithRankId(lastClicked);
             refreshRanking();
         }
         if (ev.which == 83) { //S press
+            if (useMy.weapons) {
+                alertify.message("Already in myWep filter");
+                return;
+            }
             saveWepWithRankId(lastClicked);
             refreshRanking();
         }
 
         if (ev.which == 79) { //O press
+            if (!useMy.chars) {
+                alertify.message("Not in myChar filter");
+                return;
+            }
             removeCharWithRankId(lastClicked);
             refreshRanking();
         }
         if (ev.which == 80) { //P press
+            if (!useMy.weapons) {
+                alertify.message("Not in myWep filter");
+                return;
+            }
             removeWepWithRankId(lastClicked);
             refreshRanking();
         }

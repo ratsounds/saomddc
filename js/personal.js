@@ -173,7 +173,7 @@ function getCookies(id) {
     return array;
 }
 function setCookies(id, val) {
-    var i, temparray, chunk = 80, count = 0;
+    var i, count, temparray, chunk = 80;
     for (i = 0, count = 0; i < val.length; i += chunk, count++) {
         temparray = val.slice(i,i+chunk);
         Cookies.set(id + count.toString(), temparray);
@@ -202,23 +202,27 @@ function removeCurCharForRankId(id) {
 
 function removeWepIdFromCurWeps(id) {
     console.log("Try remove wep from curWeapons");
-    removeIdFromArray(id, curWeapons);
+    if (removeIdFromArray(id, curWeapons)) {
+        alertify.success("removed curWeapons: " + id);
+    }
 }
 function removeCharIdFromCurChars(id) {
     console.log("Try remove char from curChars");
-    removeIdFromArray(id, curChars);
+    if (removeIdFromArray(id, curChars)) {
+        alertify.success("removed curChars: " + id);
+    }
 }
 
 function resetWeps() {
-    console.log("resetWeps");
+    console.log("Reset Weps");
     curWeapons = saveMy.weapons;
 }
 function resetChars() {
-    console.log("resetChars");
+    console.log("Reset Chars");
     curChars = saveMy.chars;
 }
 function resetArmors() {
-    console.log("resetArmors");
+    console.log("Reset Armors");
     curArmors = saveMy.armors;
 }
 
@@ -281,6 +285,13 @@ function handlePersonalInput(inputText) {
             continue;
         }
 
+        if (inputs[i] === "export") {
+            if (exportItemOfType(inputs[i+1])) {
+                i++;
+            }
+            continue;
+        }
+
         if (inputs[i] === "armor") {
             if (tryAddingToArmors(inputs[i+1])) {
                 i++;
@@ -300,21 +311,47 @@ function handlePersonalInput(inputText) {
 }
 
 function clearCookieOfType(type) {
-    var clearAll = type === "all";
-    var cleared = false;
-    if (type === "chars" || clearAll) {
-        saveMy.chars = null;
-        cleared = true;
+    return forTypeDoMethod(type, function(typeId) {
+        saveMy[typeId] = null;
+        alertify.success("Removed Cookies: " + typeId);
+    });
+}
+function exportItemOfType(type) {
+    var exportString = "";
+    var didMethod = forTypeDoMethod(type, function(typeId) {
+        var output = JSON.stringify(saveMy[typeId]);
+        var regex = /([a-z]|[0-9]|_)+/g;
+        var strings = output.match(regex);
+        for (var i in strings) {
+            var sub = strings[i];
+            if (sub === "id" || sub === "r" || sub === "lv") { // TODO: Suck less at regex to exclude this in the match above
+                continue;
+            }
+            exportString += sub + " ";
+        }
+    });
+    if (didMethod) {
+        alertify.minimalDialog("Export " + type, exportString);
     }
-    if (type === "weapons" || type === "weps" || clearAll) {
-        saveMy.weapons = null;
-        cleared = true;
+    return didMethod;
+}
+
+function forTypeDoMethod(type, method) {
+    var doAll = type === "all";
+    var didMethod = false;
+    if (type === "chars" || doAll) {
+        method("chars");
+        didMethod = true;
     }
-    if (type === "armors" || clearAll) {
-        saveMy.armors = null;
-        cleared = true;
+    if (type === "weapons" || type === "weps" || doAll) {
+        method("weapons");
+        didMethod = true;
     }
-    return cleared;
+    if (type === "armors" || doAll) {
+        method("armors");
+        didMethod = true;
+    }
+    return didMethod;
 }
 
 function tryAddingToChars(charId, lv) {
@@ -421,7 +458,7 @@ function saveItemToType(id, type, newItem) {
     }
     array.push(newItem);
     saveMy[type] = array;
-    console.log("Added " + type + " to saveMy: " + id);
+    alertify.success("Added " + type + " to saveMy: " + id);
 }
 
 function saveCharWithRankId(id) {
@@ -439,6 +476,7 @@ function saveWepWithRankId(id) {
 function idIsInArray(id, array) {
     for (var i in array) {
         if (id === array[i].id) {
+            alertify.message("Id: " + id + " already in array");
             return true;
         }
     }
@@ -451,7 +489,9 @@ function removeCharWithRankId(id) {
     console.log("Try remove char from saveMy");
     var charArray = saveMy.chars;
     var charId = getCharRank(id).charId;
-    removeIdFromArray(charId, charArray);
+    if (removeIdFromArray(charId, charArray)) {
+        alertify.success("removed savedChar: " + charId);
+    }
     saveMy.chars = charArray;
 }
 
@@ -459,7 +499,9 @@ function removeWepWithRankId(id) {
     console.log("Try remove wep from saveMy");
     var wepArray = saveMy.weapons;
     var wepId = getCharRank(id).wepId;
-    removeIdFromArray(wepId, wepArray);
+    if (removeIdFromArray(wepId, wepArray)) {
+        alertify.success("removed savedWep: " + wepId);
+    }
     saveMy.weapons = wepArray;
 }
 
@@ -468,10 +510,10 @@ function removeIdFromArray(id, array) {
         if (id === array[i].id) {
             console.log("removed id: " + id);
             array.splice(i, 1);
-            return;
+            return true;
         }
     }
-    console.log("Id not found to remove: " + id);
+    alertify.error("Id not found to remove: " + id);
 }
 
 // MARK: Char info from ranking list
