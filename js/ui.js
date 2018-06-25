@@ -401,6 +401,31 @@ function initPost() {
             refreshRanking();
         }
     };
+
+    //init meta word list
+    /*
+    var metalist = DO.qid('metalist');
+    var meta = [];
+    for (var i in db.base) {
+        var c = db.base[i];
+        var words = c.meta.split(']')[1].trim().split(' ');
+        words[0] = words[0].replace(words[5], '');
+        for (var j in words) {
+            var word = words[j].trim();
+            var entry = meta.find(obj => obj.word === word);
+            if (entry) {
+                entry.count++;
+            } else {
+                meta.push({ word: word, count: 1 });
+            }
+        }
+    }
+    meta.sort((a, b) => b.count - a.count);
+    for (var i in meta) {
+        var word = meta[i].word;
+        metalist.append(DO.new('<option value="' + word + '">' + word + '</option>'));
+    }
+    */
 }
 
 // Begin Userscript unmodified functions --------------------------------------
