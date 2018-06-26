@@ -1,4 +1,3 @@
-// Begin Userscript unmodified functions --------------------------
 
 var lvr = [
     { lv: 80, r: 4 },
@@ -226,8 +225,6 @@ function initPre() {
     }
 }
 
-// End Userscript unmodified functions --------------------------------------
-
 function sortArrayWithFilter(array) {
     var sortKey = elemSort.value;
     switch (sortKey) {
@@ -312,10 +309,6 @@ function initPost() {
         });
     });
     DO.qa('.saveMy input').forEach(function(elem){
-        elem.on('change', function (ev) {
-            console.log(elem.value);
-            handlePersonalInput(elem.value);
-        });
         elem.onkeydown = function (ev) {
             if (ev.which == 13) { // ENTER press
                 console.log(elem.value);
@@ -431,8 +424,6 @@ function initPost() {
     */
 }
 
-// Begin Userscript unmodified functions --------------------------------------
-
 function getThemeConfig() {
     return {
         preset: DO.qid('theme_preset').value,
@@ -517,8 +508,6 @@ function setBoss(boss) {
         DO.qid('keyword').value = boss.filter;
     }
 }
-
-// End Userscript unmodified functions --------------------------------------
 
 function calcRanking() {
 
@@ -666,7 +655,6 @@ function setDCVValues(dcv) {
     dcv.floorcapacity = Math.floor(dcv.damage * Math.floor(dcv.sv.mp / dcv.sv.cost));
 }
 
-// Begin Userscript unmodified functions --------------------------------------
 function getDPM(dcv) {
     var mp = dcv.sv.mp;
     var dmp = dcv.sv.c.type.ns_hits * dcv.sv.mpr;
@@ -685,7 +673,6 @@ function getDPM(dcv) {
     }
     return dcv.damage * (count + ((time - 60) / dcv.duration));
 }
-// End Userscript unmodified functions --------------------------------------
 
 function getC2DPM(dcv) {
     var mp = dcv.sv.mp;
@@ -744,7 +731,6 @@ function showRanking() {
     }
 }
 
-// Begin Userscript unmodified functions --------------------------------------
 function getFilter() {
     var filter = { lv: {}, r: {}, type: {} };
     DO.qa('.filter input').forEach(function (item) {
@@ -833,4 +819,3 @@ function getKVTableRow(key, value, float) {
 function formatFloat(value) {
     return Math.floor(value * 100) / 100;
 }
-// End Userscript unmodified functions --------------------------------------
