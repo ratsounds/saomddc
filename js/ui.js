@@ -696,10 +696,10 @@ function getC2DPM(dcv) {
 function showRanking() {
     var filter = getFilter();
     elemRanking.html('');
-    var filtered = [];
     var score_key = elemSort.value;
     var rank = 0;
 
+    var filtered = [];
     var max = 0;
     var min = Number.MAX_VALUE;
     for (var i = 0; i < ranking.length; i++) {
