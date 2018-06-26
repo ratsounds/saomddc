@@ -1,15 +1,15 @@
 // Begin Userscript unmodified functions --------------------------
 
 var lvr = [
-    { lv: 80, r: 0 },
     { lv: 80, r: 4 },
     { lv: 80, r: 5 },
-    { lv: 90, r: 0 },
     { lv: 90, r: 4 },
     { lv: 90, r: 5 },
-    { lv: 100, r: 0 },
     { lv: 100, r: 4 },
     { lv: 100, r: 5 },
+    { lv: 80, r: 0 },
+    { lv: 90, r: 0 },
+    { lv: 100, r: 0 },
 ];
 var ranking;
 var boss;
@@ -220,7 +220,10 @@ function initPre() {
     mapperInfo = new Mapper(DO.qid('item_info').innerHTML);
 
     //Personal modifications
-    DO.qid('help_button').click();
+    if (!Cookies.get("showedHelp")) {
+        DO.qid('help_button').click();
+        Cookies.set("showedHelp", true);
+    }
 }
 
 // End Userscript unmodified functions --------------------------------------
@@ -523,95 +526,119 @@ function calcRanking() {
     var cs = DC.getChar();
     ranking = [];
 
-    for (var i in lvr) {
-        var clvr = lvr[i];
-
-        if (useMy.chars) {
-            for (var my in curChars) {
-                var myUnit = curChars[my];
-                var c = copy(DC.getChar(myUnit.id));
-
-                if (myUnit.lv !== clvr.lv) {
-                    continue;
-                }
-
-                var dcv = calcComboDCVForChar(c, clvr, useMy.weapons, curWeapons, calcWeaponDCVForChar);
-                if (dcv === null) {
-                    continue;
-                }
-                ranking.push(dcv);
-                setDCVValues(dcv);
-            }
-        } else {
-            for (var j in cs) {
-                var c = copy(cs[j]);
-
-                var dcv = calcComboDCVForChar(c, clvr, useMy.weapons, curWeapons, calcWeaponDCVForChar);
-                if (dcv === null) {
-                    continue;
-                }
-                ranking.push(dcv);
-                setDCVValues(dcv);
-            }
+    if (useMy.chars) {
+        for (var my in curChars) {
+            var myUnit = curChars[my];
+            var char = DC.getChar(myUnit.id);
+            calcCharDCV(char, true, myUnit.lv);
         }
+    } else {
+        for (var j in cs) {
+            calcCharDCV(cs[j], false);
+        }
+    }
+
+    function calcCharDCV(char, checkLv, charLv) {
+        var charRanks = [];
+        for (var i in lvr) {
+            var clvr = lvr[i];
+            var emptyWep = false;
+
+            if (checkLv && charLv !== clvr.lv) {
+                continue;
+            }
+
+            var wepRanks = getWeaponsOfChar(char, clvr);
+
+            if (wepRanks.length <= 0 && useMy.weapons) {
+                if (clvr.r !== 0 || (i - 6) !== charRanks.length) {
+                    continue;
+                }
+                var wc = copy(char);
+                wc.eq_atk_wep = undefined;
+                wepRanks.push(wc);
+                emptyWep = true;
+            }
+
+            var armorRanks = [];
+            for (var j in wepRanks) {
+                var newArmors = getArmorsOfChar(wepRanks[j]);
+                armorRanks = armorRanks.concat(newArmors);
+            }
+
+            if (armorRanks.length <= 0) {
+                console.log("armorRanks empty");
+                var ac = copy(char);
+                if (emptyWep) {
+                    ac.eq_atk_wep = undefined;
+                }
+                ac.eq_atk_amr = undefined;
+                armorRanks.push(ac);
+            }
+
+            var allCombos = [];
+            for (var k in armorRanks) {
+                var c = armorRanks[k];
+                var dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, clvr.r === 0 ? undefined : c.eq_atk_acc, boss);
+                setDCVValues(dcv);
+                allCombos.push(dcv);
+            }
+
+            sortArrayWithFilter(allCombos);
+            charRanks.push(allCombos[0]);
+        }
+
+        ranking = ranking.concat(charRanks);
+    }
+
+    function getWeaponsOfChar(char, clvr) {
+        return getArrayOfChar(char, useMy.weapons, "eq_atk_wep", curWeapons, function (wepId, it) {
+            var weapon = DC.getWeapon(wepId);
+            //Check for incompatible weapon type
+            if (char.type.eqtype !== weapon.type.id || clvr.r !== curWeapons[it].r) {
+                return null;
+            }
+            return weapon;
+        });
+    }
+
+    function getArmorsOfChar(char) {
+        return getArrayOfChar(char, useMy.armors, "eq_atk_amr", curArmors, function (armorId) {
+            var armor = DC.getArmor(armorId);
+            // Check if armor is incompatible
+            if (!armor.type.includes(char.cname.gender)) {
+                return null;
+            }
+            return armor;
+        });
+    }
+
+    function getArrayOfChar(char, useObjects, type, myObjects, validation) {
+        var array = [];
+
+        if (!useObjects) {
+            array.push(copy(char));
+            return array;
+        }
+
+        for (var i in myObjects) {
+
+            var equip = validation(myObjects[i].id, i);
+
+            if (!equip) {
+                continue;
+            }
+
+            var c = copy(char);
+            c[type] = equip;
+
+            array.push(c);
+        }
+
+        return array;
     }
 
     sortArrayWithFilter(ranking);
-}
-
-function calcComboDCVForChar(oc, clvr, useCheck, myObjects, comboCall) {
-    var dcv;
-
-    if (useCheck) {
-
-        var allCombos = [];
-        for (var i in myObjects) {
-            var combo = comboCall(oc, myObjects[i], clvr);
-            if (combo === null) {
-                continue;
-            }
-            allCombos.push(combo);
-            setDCVValues(combo);
-        }
-
-        if (allCombos.length <= 0) {
-            return null;
-        }
-
-        sortArrayWithFilter(allCombos);
-        dcv = allCombos[0];
-
-    } else if (clvr.r > 0) { // weapon & armor, accessory
-        dcv = DC.calcDamage(oc, clvr.lv, 4, oc.eq_atk_wep, clvr.r, oc.eq_atk_amr, oc.eq_atk_acc, boss);
-    } else { // no weapon & armor, accessory
-        dcv = DC.calcDamage(oc, clvr.lv, 4, undefined, clvr.r, undefined, undefined, boss);
-    }
-
-    return dcv;
-}
-function calcWeaponDCVForChar(oc, myWeapon, clvr) {
-    var weapon = DC.getWeapon(myWeapon.id);
-    //Check for compatible weapon type
-    if (oc.type.eqtype != weapon.type.id || clvr.r != myWeapon.r) {
-        return null;
-    }
-
-    var c = copy(oc);
-    c.eq_atk_wep = weapon;
-
-    return calcComboDCVForChar(c, clvr, useMy.armors, curArmors, calcArmorDCVForChar);
-}
-function calcArmorDCVForChar(oc, myArmor, clvr) {
-    var armor = DC.getArmor(myArmor.id);
-    //Check for compatible armor type
-    if (!armor.type.includes(oc.cname.gender)) {
-        return null;
-    }
-
-    var c = copy(oc);
-    c.eq_atk_amr = armor;
-
-    return DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
 }
 
 function setDCVValues(dcv) {
@@ -746,8 +773,8 @@ function getCharDetail(id) {
     var name_key = 'name' + lang;
     html += getKVTableRow('Name', c[name_key]);
     html += getKVTableRow('Gacha', c.group['long' + lang]);
-    html += getKVTableRow('Atk Weapon', c.eq_atk_wep[name_key]);
-    html += getKVTableRow('Atk Armor', c.eq_atk_amr[name_key]);
+    html += getKVTableRow('Atk Weapon', c.eq_atk_wep ? c.eq_atk_wep[name_key] : "None");
+    html += getKVTableRow('Atk Armor', c.eq_atk_amr ? c.eq_atk_amr[name_key] : "None");
     html += getKVTableRow('Atk Accessory', c.eq_atk_acc[name_key]);
     html += getKVTableRow('MP Weapon', c.eq_mp_wep[name_key]);
     html += getKVTableRow('MP Armor', c.eq_mp_amr[name_key]);

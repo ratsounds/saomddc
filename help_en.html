@@ -1,9 +1,9 @@
 <h2>Personal Units, Weapons (&Armor)</h2>
 <p>Welcome to the modified part of Ratsounds unofficial damage calculator.<br/>
     (Press the ? icon to hide this help if you already know how it works)<br/>
-    On this website you can save the units, weapons and armors you have ingame as cookies to the website (Yes hereby you accept cookies, if you don't you're supposed to leave).<br/>
+    On this website you can save the units, weapons and armors you have ingame, as cookies to the website (Yes hereby you accept cookies, if you don't you're supposed to leave, They last for 1000 days).<br/>
     In this way you can adjust the damage calculator to only use the stuff you actually own instead of that new gacha with that fancy wep noone pulls.<br/>
-    Furthermore this site is dependant on changes at <a href="https://ratsounds.github.io/saomddc/">ratsounds calculator</a> hence until either he incorporates this or I find a way to deal with updates automatically
+    Furthermore this site is dependant on changes at <a href="https://ratsounds.github.io/saomddc/">ratsounds calculator</a>. Hence until either he incorporates this or I find a way to deal with updates automatically,
     I'll need to update his changes manually to here which causes delay in functionality.<br/>
     Anyways let's get to it and explain it in some more detail how to use.</p>
 <h2>Modified UI</h2>
@@ -11,8 +11,10 @@
     The one mostleft (sword) signifies if you want to use your own units. <br/>
     The middle one (shieldSword) signifies using your own weapons.<br/>
     The last one (staff) is for using your own armors.<br/>
-Armors are relatively irrelevant and this filter will only take effect when also enabling the personalWeapon filter.
-If you haven't added any items yet then the list will be empty when enabling these filters.</p>
+    If you haven't added any characters yet then the list will be empty when the char filter<br/>
+    When you don't have a compatible weapon or armor for a char they will be treated as having none equipped.<br/>
+    (Shown as "None" when you open the char details).
+</p>
 <h2>Controls</h2>
 <p>For any of the following controls to work you'll need to have focus on the ranking list (click a unit in the list to focus there).
 Here's a list of the effect pressing each button will have.</p>
@@ -25,9 +27,9 @@ Here's a list of the effect pressing each button will have.</p>
 </div>
 <p>Current weapon actions. These temporarily remove the unit / weapon from calculations for ease of use when already equipping the wep on one char.</p>
 <div class="sample">
-    <p>R = Reset all items from your personal list and discard any temporary changes in available units.</p>
-    <p>D = Remove the selected character and their weapon from the calculations until reload or pressing R</p>
-    <p>W = Remove only the weapon of the selected character from the calculations</p>
+    <p>R = Resets all items from your calculations list with your personal items</p>
+    <p>D = Remove the selected character and their weapon from the calculations.</p>
+    <p>W = Remove only the weapon of the selected character from the calculations.</p>
 </div>
 <h2>How to get Id's</h2>
 <p>Most of the weapons you have will not appear in the list for you to add since they're the best weapons. The lowest searchBar fulfills the purpose
@@ -53,7 +55,7 @@ an object will popup, expand the object by pressing the triangle. Press CTRL + F
 <p class="math"><var>AddChar</var> = <var>bride_alice</var> <var>90</var></p>
 <p class="math"><var>AddWeapon</var> = <var>sports_sword</var> <var>4</var></p>
 <p class="math"><var>AddArmor</var> = armor <var>mf_dark1</var></p>
-<p>E.g. Adding multiple weapons in on go when pasting into the personalTextField and pressing enter (or clicking somewhere outside the textfield)</p>
+<p>E.g. Adding multiple weapons in on go when pasting into the personalTextField and pressing enter.</p>
 <p class="sample">bride_sword1 4 bonds_sword 4 c_sword 4 jr_dual 4 moonlight_sword 4
     moonlight_sword1 4 ninja_rapier 4 princess_sword 4 ps_mace 4</p>
 <p>You can get an export of all your personal items with the following commands.</p>
@@ -72,7 +74,7 @@ an object will popup, expand the object by pressing the triangle. Press CTRL + F
 </div>
 <h2>Afterword</h2>
 <p>The code for this website is forked from ratsounds original damage calculator this simply builds upon and improves functionality.
-The github for this project is located at <a href="https://github.com/zehnzen/saomddc">https://github.com/zehnzen/saomddc</a> this is a friendlier implementation
+The github for this project is located at <a href="https://github.com/zehnzen/saomddc">https://github.com/zehnzen/saomddc</a> (gh-pages branch) this is a friendlier implementation
 of the userscript it originally started out as with less hassle for new users (I hope).<br/>
     For feedback you can create an issue on the project's github.<br/>
     Otherwise you can contact me on Discord: zehnzen#9235</p>
