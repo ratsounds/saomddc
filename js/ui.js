@@ -556,7 +556,6 @@ function calcRanking() {
             }
 
             if (armorRanks.length <= 0) {
-                console.log("armorRanks empty");
                 var ac = copy(char);
                 if (emptyWep) {
                     ac.eq_atk_wep = undefined;
