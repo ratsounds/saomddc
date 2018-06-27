@@ -540,7 +540,7 @@ function calcRanking() {
             var wepRanks = getWeaponsOfChar(char, clvr);
 
             if (wepRanks.length <= 0 && useMy.weapons) {
-                if (clvr.r !== 0 || (i - 6) !== charRanks.length) {
+                if (clvr.r !== 0 || (i - 6) !== charRanks.length || (checkLv && charRanks.length > 0)) {
                     continue;
                 }
                 var wc = copy(char);
