@@ -217,12 +217,6 @@ function initPre() {
     });
     window.matchMedia('only screen and (orientation:landscape)').addListener(showSidebar);
     mapperInfo = new Mapper(DO.qid('item_info').innerHTML);
-
-    //Personal modifications
-    if (!Cookies.get("showedHelp")) {
-        DO.qid('help_button').click();
-        Cookies.set("showedHelp", true);
-    }
 }
 
 function sortArrayWithFilter(array) {
@@ -257,6 +251,12 @@ function initPost() {
             }
         };
     });
+
+    //Personal modifications
+    if (!Cookies.get("showedHelp")) {
+        DO.qid('help_button').click();
+        Cookies.set("showedHelp", true);
+    }
 
     //create group icon css
     //set app icon
