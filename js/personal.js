@@ -123,12 +123,16 @@ function removeWepIdFromCurWeps(id) {
     console.log("Try remove wep from curWeapons");
     if (removeIdFromArray(id, curWeapons)) {
         alertify.success("removed curWeapons: " + id);
+    } else {
+        alertify.error("Id not found to remove: " + id);
     }
 }
 function removeCharIdFromCurChars(id) {
     console.log("Try remove char from curChars");
     if (removeIdFromArray(id, curChars)) {
         alertify.success("removed curChars: " + id);
+    } else {
+        alertify.error("Id not found to remove: " + id);
     }
 }
 
@@ -211,6 +215,13 @@ function handlePersonalInput(inputText) {
             continue;
         }
 
+        if (inputs[i] === "remove") {
+            if (tryRemoveFromSaveMy(inputs[i+1])) {
+                i++;
+            }
+            continue;
+        }
+
         if (inputs[i] === "armor") {
             if (tryAddingToArmors(inputs[i+1])) {
                 i++;
@@ -271,6 +282,31 @@ function forTypeDoMethod(type, method) {
         didMethod = true;
     }
     return didMethod;
+}
+
+function tryRemoveFromSaveMy(id) {
+    var types = ["weapons", "armors", "chars"];
+
+    var hasRemoved = types.some(function (value) {
+        return removeFromSaveMyWithType(id, value);
+    });
+
+    if (hasRemoved) {
+        return true;
+    }
+
+    alertify.error("Id not found to remove in saveMy: " + id);
+    return false;
+}
+
+function removeFromSaveMyWithType(id, type) {
+    var array = saveMy[type];
+    if (removeIdFromArray(id, array)) {
+        saveMy[type] = array;
+        alertify.success("removed id: " + id + " from saveMy: " + type);
+        return true;
+    }
+    return false;
 }
 
 function tryAddingToChars(charId, lv) {
@@ -414,6 +450,8 @@ function removeCharWithRankId(id) {
     var charId = getCharRank(id).charId;
     if (removeIdFromArray(charId, charArray)) {
         alertify.success("removed savedChar: " + charId);
+    } else {
+        alertify.error("Id not found to remove: " + id);
     }
     saveMy.chars = charArray;
 }
@@ -424,6 +462,8 @@ function removeWepWithRankId(id) {
     var wepId = getCharRank(id).wepId;
     if (removeIdFromArray(wepId, wepArray)) {
         alertify.success("removed savedWep: " + wepId);
+    } else {
+        alertify.error("Id not found to remove: " + id);
     }
     saveMy.weapons = wepArray;
 }
@@ -436,7 +476,8 @@ function removeIdFromArray(id, array) {
             return true;
         }
     }
-    alertify.error("Id not found to remove: " + id);
+    console.log("Id not found to remove: " + id);
+    return false;
 }
 
 // MARK: Char info from ranking list
