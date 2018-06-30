@@ -288,13 +288,11 @@ function initPost() {
     elemSort = DO.qid('sort');
     //load default
     getBoss();
-    calcRanking();
-    showRanking();
+    refreshRanking();
     //init events
     DO.qa('.boss input,.boss select').forEach(function (elem) {
         elem.on('change', function (ev) {
-            calcRanking();
-            showRanking();
+            refreshRanking();
         });
     });
     DO.qa('.filter input').forEach(function (elem) {
@@ -318,12 +316,10 @@ function initPost() {
     });
     elemPreset.on('change', function (ev) {
         setBoss(db.preset[ev.target.value]);
-        calcRanking();
-        showRanking();
+        refreshRanking();
     });
     elemSort.on('change', function (ev) {
-        calcRanking();
-        showRanking();
+        refreshRanking();
     });
     elemRanking.on('.item', 'click', function (ev) {
         var elemDetail = this.q('.detail');
@@ -539,7 +535,7 @@ function calcRanking() {
 
             var wepRanks = getWeaponsOfChar(char, clvr);
 
-            if (wepRanks.length <= 0 && useMy.weapons) {
+            if (wepRanks.length <= 0 && useMy.weapons) { // TODO: Make this checking sequence readable
                 if (clvr.r !== 0 || (i - 6) !== charRanks.length || (checkLv && charRanks.length > 0)) {
                     continue;
                 }
@@ -568,7 +564,10 @@ function calcRanking() {
             var allCombos = [];
             for (var k in armorRanks) {
                 var c = armorRanks[k];
-                var dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, clvr.r === 0 ? undefined : c.eq_atk_acc, boss);
+                if (clvr.r ===0) {
+                    c.eq_atk_acc = undefined;
+                }
+                var dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
                 setDCVValues(dcv);
                 allCombos.push(dcv);
             }
@@ -761,7 +760,7 @@ function getCharDetail(id) {
     html += getKVTableRow('Gacha', c.group['long' + lang]);
     html += getKVTableRow('Atk Weapon', c.eq_atk_wep ? c.eq_atk_wep[name_key] : "None");
     html += getKVTableRow('Atk Armor', c.eq_atk_amr ? c.eq_atk_amr[name_key] : "None");
-    html += getKVTableRow('Atk Accessory', c.eq_atk_acc[name_key]);
+    html += getKVTableRow('Atk Accessory', c.eq_atk_acc ? c.eq_atk_acc[name_key] : "None");
     html += getKVTableRow('MP Weapon', c.eq_mp_wep[name_key]);
     html += getKVTableRow('MP Armor', c.eq_mp_amr[name_key]);
     html += getKVTableRow('MP Accessory', c.eq_mp_acc[name_key]);
