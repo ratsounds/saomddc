@@ -41,41 +41,45 @@ useMy = {
     _armor: false
 };
 
+const kWeapons = "weapons";
+const kChars = "chars";
+const kArmors = "armors";
+
 // Saves your personal units and settings locally in a cookie
 saveMy = {
     get weapons() {
-        return getCookies("weapons");
+        return getCookies(kWeapons);
     },
     set weapons(val) {
         if (val === null) {
-            setCookies("weapons", []);
+            setCookies(kWeapons, []);
         } else {
-            setCookies("weapons", val);
+            setCookies(kWeapons, val);
         }
         resetWeps();
     },
 
     get chars() {
-        return getCookies("chars");
+        return getCookies(kChars);
     },
     set chars(val) {
         if (val === null) {
-            setCookies("chars", []);
+            setCookies(kChars, []);
         } else {
-            setCookies("chars", val);
+            setCookies(kChars, val);
         }
         resetChars();
     },
     _charCount: 0,
 
     get armors() {
-        return getCookies("armors");
+        return getCookies(kArmors);
     },
     set armors(val) {
         if (val === null) {
-            setCookies("armors", []);
+            setCookies(kArmors, []);
         } else {
-            setCookies("armors", val);
+            setCookies(kArmors, val);
         }
         resetArmors();
     }
@@ -257,6 +261,10 @@ function exportItemOfType(type) {
             if (sub === "id" || sub === "r" || sub === "lv") { // TODO: Suck less at regex to exclude this in the match above
                 continue;
             }
+            if (typeId === kArmors) {
+                exportString += "armor" + " ";
+            }
+
             exportString += sub + " ";
         }
     });
@@ -269,23 +277,23 @@ function exportItemOfType(type) {
 function forTypeDoMethod(type, method) {
     var doAll = type === "all";
     var didMethod = false;
-    if (type === "chars" || doAll) {
-        method("chars");
+    if (type === kChars || doAll) {
+        method(kChars);
         didMethod = true;
     }
-    if (type === "weapons" || type === "weps" || doAll) {
-        method("weapons");
+    if (type === kWeapons || type === "weps" || doAll) {
+        method(kWeapons);
         didMethod = true;
     }
-    if (type === "armors" || doAll) {
-        method("armors");
+    if (type === kArmors || doAll) {
+        method(kArmors);
         didMethod = true;
     }
     return didMethod;
 }
 
 function tryRemoveFromSaveMy(id) {
-    var types = ["weapons", "armors", "chars"];
+    var types = [kWeapons, kArmors, kChars];
 
     var hasRemoved = types.some(function (value) {
         return removeFromSaveMyWithType(id, value);
@@ -311,8 +319,8 @@ function removeFromSaveMyWithType(id, type) {
 
 function tryAddingToChars(charId, lv) {
     var char = DC.getChar(charId);
-    var lvStrings = "80 90 100".split(/\s+/);
-    var lvCheck = lvStrings.indexOf(lv) > -1;
+    var lvArray = ["80", "90", "100"];
+    var lvCheck = lvArray.indexOf(lv) > -1;
     if (char && lvCheck) {
         saveChar(charId, parseInt(lv));
         return true;
@@ -322,8 +330,8 @@ function tryAddingToChars(charId, lv) {
 
 function tryAddingToWeps(wepId, rarity) {
     var weapon = DC.getWeapon(wepId);
-    var rarityStrings = "4 5".split(/\s+/);
-    var rarityCheck = rarityStrings.indexOf(rarity) > -1;
+    var rarityArray = ["4", "5"];
+    var rarityCheck = rarityArray.indexOf(rarity) > -1;
     if (weapon && rarityCheck) {
         saveWep(wepId, parseInt(rarity));
         return true;
@@ -397,17 +405,17 @@ function findIdInArrayFromName(myObject, dbArray) {
 
 function saveChar(charId, lv) {
     var newChar = { id: charId, lv: lv };
-    saveItemToType(charId, "chars", newChar);
+    saveItemToType(charId, kChars, newChar);
 }
 
 function saveWep(wepId, rarity) {
     var newWep = { id: wepId, r: rarity };
-    saveItemToType(wepId, "weapons", newWep);
+    saveItemToType(wepId, kWeapons, newWep);
 }
 
 function saveArmor(armorId) {
     var newArmor = { id: armorId };
-    saveItemToType(armorId, "armors", newArmor);
+    saveItemToType(armorId, kArmors, newArmor);
 }
 
 function saveItemToType(id, type, newItem) {
