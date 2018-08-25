@@ -32323,7 +32323,7 @@
             "type": "rapier",
             "element": "fire",
             "world": "pso",
-            "rarity": 4,
+            "rarity": 5,
             "ls_atk": 1.06,
             "cs": "c.element.id=fire:mod_dmg=1.05",
             "hp": 11523,
@@ -32381,7 +32381,7 @@
             "eq_combo_wep": "rays_rapier",
             "eq_combo_amr": "f_none7",
             "eq_combo_acc": "mf_water8",
-            "meta": "【シャミセン・ロック】プレミア premiere [shamisen rock] バンドプレミア band premiere ★4 *4 プレミア premiere f 女性 @female pop star online live battle!! 報酬 pop star online live battle!! reward 報酬 reward 制限 restricted 火 fire pso ダメージ アップ damage up 属性ダメージ アップ elemental damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce グループ pt 全体 ゾーン攻撃バフ atk attack group buff サークル circle コンボダメージアップ combo damage up コンボダメージアップ combo damage up 発生保障 発生保証 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【シャミセン・ロック】プレミア premiere [shamisen rock] バンドプレミア band premiere ★5 *5 プレミア premiere f 女性 @female pop star online live battle!! 報酬 pop star online live battle!! reward 報酬 reward 制限 restricted 火 fire pso ダメージ アップ damage up 属性ダメージ アップ elemental damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce グループ pt 全体 ゾーン攻撃バフ atk attack group buff サークル circle コンボダメージアップ combo damage up コンボダメージアップ combo damage up 発生保障 発生保証 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "sj2_llenn": {
             "id": "sj2_llenn",
