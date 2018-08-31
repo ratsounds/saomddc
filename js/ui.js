@@ -417,10 +417,11 @@ function calcRanking() {
             }
             ranking.push(dcv);
             dcv.combo_speed_rate = (1 - dcv.sv.c.combo_speed * Math.floor(boss.combo / 10));
-            dcv.duration = dcv.sv.c.s3_duration * dcv.combo_speed_rate;
-            dcv.cduration = dcv.sv.c.s3_c_duration ? dcv.sv.c.s3_c_duration * dcv.combo_speed_rate: Infinity;
+            dcv.acceleration_rate = dcv.sv.c.rarity === 6 ? 3 : 1;
+            dcv.duration = dcv.sv.c.s3_duration * dcv.combo_speed_rate / dcv.acceleration_rate;
+            dcv.cduration = dcv.sv.c.s3_c_duration ? dcv.sv.c.s3_c_duration * dcv.combo_speed_rate / dcv.acceleration_rate : Infinity;
             dcv.c2duration = dcv.duration + dcv.sv.c.s3_c_duration ? dcv.cduration : dcv.duration;
-            dcv.duration_50 = dcv.sv.c.s3_duration * (1 - dcv.sv.c.combo_speed * Math.floor(50 / 10));
+            dcv.duration_50 = dcv.sv.c.s3_duration * (1 - dcv.sv.c.combo_speed * Math.floor(50 / 10)) / dcv.acceleration_rate;
             dcv.dps = Math.floor(dcv.damage / dcv.duration);
             dcv.dpm = Math.floor(getDPM(dcv));
             dcv.cdps = Math.floor(dcv.damage / dcv.cduration);
