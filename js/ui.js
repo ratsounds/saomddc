@@ -521,14 +521,14 @@ function showRanking() {
             min = Math.min(min, dcv.dps);
         }
     }
-    //adjust scale of damage to 1.5 and capacity to 2/3
+    //adjust scale of damage to 1.25 and capacity to 2/3
     var dif = max * 2 / 3 - min;
     var offset = 30;
     var remains = 100 - offset;
     for (var i = 0; i < filtered.length; i++) {
         var dcv = filtered[i];
         dcv.p_dps = offset + remains * (dcv.dps - min) / dif;
-        dcv.p_damage = offset + remains * (dcv.damage * 1.5 - min) / dif;
+        dcv.p_damage = offset + remains * (dcv.damage * 1.25 - min) / dif;
         dcv.p_capacity = offset + remains * (dcv.capacity * 2 / 3 - min) / dif;
         dcv.score = dcv[score_key];
         dcv.color = dcv.sv.c.element.color;
