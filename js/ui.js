@@ -366,6 +366,8 @@ function getBoss() {
                     boss[item.name] = parse(item.value);
                 }
             }
+        } else if (item.type === 'checkbox') {
+            boss[item.name] = item.checked;
         } else {
             boss[item.name] = parse(item.value);
         }
@@ -387,6 +389,8 @@ function setBoss(boss) {
             } else {
                 item.checked = boss[item.name] === parse(item.value);
             }
+        } else if (item.type === 'checkbox') {
+            item.checked = boss[item.name];
         } else {
             item.value = boss[item.name];
         }
@@ -416,12 +420,17 @@ function calcRanking() {
                 dcv = DC.calcDamage(c, clvr.lv, 4, undefined, clvr.r, undefined, undefined, boss);
             }
             ranking.push(dcv);
-            dcv.combo_speed_rate = (1 - dcv.sv.c.combo_speed * Math.floor(boss.combo / 10));
-            dcv.acceleration_rate = dcv.sv.c.rarity === 6 ? 3 : 1;
-            dcv.duration = dcv.sv.c.s3_duration * dcv.combo_speed_rate / dcv.acceleration_rate;
-            dcv.cduration = dcv.sv.c.s3_c_duration ? dcv.sv.c.s3_c_duration * dcv.combo_speed_rate / dcv.acceleration_rate : Infinity;
+            dcv.combo_speed_rate = getComboSpeedRate(dcv.sv.c.combo_speed, boss.combo);
+            dcv.acceleration_rate = dcv.sv.c.rarity === 6 && boss.ingame ? 3 : 1;
+            var dca_x = getDCA(dcv.sv.c.s3_duration, dcv.sv.c.s3_c_duration, dcv.sv.c.s3_acceleration, dcv.combo_speed_rate, dcv.acceleration_rate);
+            dcv.duration = dca_x.duration;
+            dcv.cduration = dca_x.combination;
+            dcv.acceleration = dca_x.acceleration;
             dcv.c2duration = dcv.duration + dcv.sv.c.s3_c_duration ? dcv.cduration : dcv.duration;
-            dcv.duration_50 = dcv.sv.c.s3_duration * (1 - dcv.sv.c.combo_speed * Math.floor(50 / 10)) / dcv.acceleration_rate;
+            var dca_50 = getDCA(dcv.sv.c.s3_duration, dcv.sv.c.s3_c_duration, dcv.sv.c.s3_acceleration, getComboSpeedRate(dcv.sv.c.combo_speed, 50), dcv.acceleration_rate);
+            dcv.duration_50 = dca_50.duration;
+            dcv.cduration_50 = dca_50.combination;
+            dcv.acceleration_50 = dca_50.acceleration;
             dcv.dps = Math.floor(dcv.damage / dcv.duration);
             dcv.dpm = Math.floor(getDPM(dcv));
             dcv.cdps = Math.floor(dcv.damage / dcv.cduration);
@@ -449,6 +458,29 @@ function calcRanking() {
             break;
     }
     //console.log('ranking',ranking);
+}
+function getDCA(duration, combination, acceleration, speed_rate, acceleration_rate) {
+    var dca = {};
+    acceleration_offset = acceleration_rate > 1 ? 0.0 : 1.0;
+    if (duration > acceleration) {
+        dca.duration = speed_rate * (duration - acceleration + acceleration / acceleration_rate) + acceleration_offset;
+    } else {
+        dca.duration = speed_rate * duration / acceleration_rate + acceleration_offset;
+    }
+    if (combination) {
+        if (combination > acceleration) {
+            dca.combination = speed_rate * (acceleration / acceleration_rate + combination - acceleration) + acceleration_offset;
+        } else {
+            dca.combination = speed_rate * combination / acceleration_rate + acceleration_offset;
+        }
+    } else {
+        dca.combination = Infinity;
+    }
+    dca.acceleration = acceleration * speed_rate;
+    return dca;
+}
+function getComboSpeedRate(combo_speed, combo) {
+    return (1 - combo_speed * Math.floor(combo / 10));
 }
 function getDPM(dcv) {
     var mp = dcv.sv.mp;
@@ -489,13 +521,14 @@ function showRanking() {
             min = Math.min(min, dcv.dps);
         }
     }
+    //adjust scale of damage to 1.5 and capacity to 2/3
     var dif = max * 2 / 3 - min;
     var offset = 30;
     var remains = 100 - offset;
     for (var i = 0; i < filtered.length; i++) {
         var dcv = filtered[i];
         dcv.p_dps = offset + remains * (dcv.dps - min) / dif;
-        dcv.p_damage = offset + remains * (dcv.damage - min) / dif;
+        dcv.p_damage = offset + remains * (dcv.damage * 1.5 - min) / dif;
         dcv.p_capacity = offset + remains * (dcv.capacity * 2 / 3 - min) / dif;
         dcv.score = dcv[score_key];
         dcv.color = dcv.sv.c.element.color;
@@ -561,12 +594,21 @@ function getCharDetail(id) {
     if (c.combo_damage_30 > 1) {
         html += getKVTableRow('Combo Damage 30Hit', c.combo_damage_30);
     }
-    html += getKVTableRow('Skill Duration', dcv.duration, true);
+    html += getKVTableRow('Skill Duration', c.s3_duration, true);
     if (c.combo_speed > 0) {
         html += getKVTableRow('Skill Duration (50Hit)', dcv.duration_50, true);
     }
     if (c.s3_c_duration > 0) {
         html += getKVTableRow('Combination (sec)', c.s3_c_duration, true);
+        if (c.combo_speed > 0) {
+            html += getKVTableRow('Combination (50Hit)', dcv.cduration_50, true);
+        }
+    }
+    if (c.s3_acceleration > 0) {
+        html += getKVTableRow('Acceleration (sec)', c.s3_acceleration, true);
+        if (c.combo_speed > 0) {
+            html += getKVTableRow('Acceleration (50Hit)', dcv.acceleration_50, true);
+        }
     }
     html += getKVTableRow('Skill Rate', c.s3_rate, true);
     html += getKVTableRow('Slash/Pierce/Blunt/Magic', formatFloat(c.dtr_slash) + '/' + formatFloat(c.dtr_pierce) + '/' + formatFloat(c.dtr_blunt) + '/' + formatFloat(c.dtr_magic));

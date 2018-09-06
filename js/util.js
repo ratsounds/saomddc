@@ -194,10 +194,10 @@ var Expression = (function () {
     var opc = {
         '=': function (a, b) { return a === b; },
         '!=': function (a, b) { return a !== b; },
-        '>': function (a, b) { return a > b; },
-        '<': function (a, b) { return a < b; },
         '>=': function (a, b) { return a >= b; },
-        '<=': function (a, b) { return a <= b; }
+        '<=': function (a, b) { return a <= b; },
+        '>': function (a, b) { return a > b; },
+        '<': function (a, b) { return a < b; }
     };
     var opls = '(\\||&)'
     var rel = new RegExp('(.*?)' + opls + '(.*)', 'im');

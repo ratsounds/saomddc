@@ -262,6 +262,11 @@ button{
   height: 2.5em;
 }
 
+.button.small {
+  min-width: 2em;
+  height: 2em;
+}
+
 .button {
   background-position: center;
   background-repeat: no-repeat;
