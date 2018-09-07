@@ -421,13 +421,21 @@ function calcRanking() {
             }
             ranking.push(dcv);
             dcv.combo_speed_rate = getComboSpeedRate(dcv.sv.c.combo_speed, boss.combo);
-            dcv.acceleration_rate = dcv.sv.c.rarity === 6 && boss.ingame ? 3 : 1;
-            var dca_x = getDCA(dcv.sv.c.s3_duration, dcv.sv.c.s3_c_duration, dcv.sv.c.s3_acceleration, dcv.combo_speed_rate, dcv.acceleration_rate);
+            dcv.acceleration_rate = 1.0;
+            dcv.acceleration_offset = 0.0;
+            if(dcv.sv.c.rarity === 6){
+                if(boss.ingame){
+                    dcv.acceleration_rate = 3.0;
+                } else {
+                    dcv.acceleration_offset = 1.0;        
+                }
+            }
+            var dca_x = getDCA(dcv.sv.c.s3_duration, dcv.sv.c.s3_c_duration, dcv.sv.c.s3_acceleration, dcv.combo_speed_rate, dcv.acceleration_rate,dcv.acceleration_offset);
             dcv.duration = dca_x.duration;
             dcv.cduration = dca_x.combination;
             dcv.acceleration = dca_x.acceleration;
             dcv.c2duration = dcv.duration + dcv.sv.c.s3_c_duration ? dcv.cduration : dcv.duration;
-            var dca_50 = getDCA(dcv.sv.c.s3_duration, dcv.sv.c.s3_c_duration, dcv.sv.c.s3_acceleration, getComboSpeedRate(dcv.sv.c.combo_speed, 50), dcv.acceleration_rate);
+            var dca_50 = getDCA(dcv.sv.c.s3_duration, dcv.sv.c.s3_c_duration, dcv.sv.c.s3_acceleration, getComboSpeedRate(dcv.sv.c.combo_speed, 50), dcv.acceleration_rate,dcv.acceleration_offset);
             dcv.duration_50 = dca_50.duration;
             dcv.cduration_50 = dca_50.combination;
             dcv.acceleration_50 = dca_50.acceleration;
@@ -459,9 +467,8 @@ function calcRanking() {
     }
     //console.log('ranking',ranking);
 }
-function getDCA(duration, combination, acceleration, speed_rate, acceleration_rate) {
+function getDCA(duration, combination, acceleration, speed_rate, acceleration_rate, acceleration_offset) {
     var dca = {};
-    acceleration_offset = acceleration_rate > 1 ? 0.0 : 1.0;
     if (duration > acceleration) {
         dca.duration = speed_rate * (duration - acceleration + acceleration / acceleration_rate) + acceleration_offset;
     } else {
@@ -469,7 +476,7 @@ function getDCA(duration, combination, acceleration, speed_rate, acceleration_ra
     }
     if (combination) {
         if (combination > acceleration) {
-            dca.combination = speed_rate * (acceleration / acceleration_rate + combination - acceleration) + acceleration_offset;
+            dca.combination = speed_rate * (combination - acceleration + acceleration / acceleration_rate) + acceleration_offset;
         } else {
             dca.combination = speed_rate * combination / acceleration_rate + acceleration_offset;
         }
