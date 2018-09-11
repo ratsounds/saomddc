@@ -9536,11 +9536,11 @@
             "bs_cri": 0,
             "conditional": "combo>=30:bs_atk=0.03"
         },
-        "fm_dark": {
-            "id": "fm_dark",
+        "mf_dark3": {
+            "id": "mf_dark3",
             "name": "デモン・メイル",
             "name_en": "Demon Chainmail",
-            "type": "FM",
+            "type": "MF",
             "element": "dark",
             "hp": 3842,
             "mp": 0,
@@ -9553,6 +9553,24 @@
             "bs_def": 0,
             "bs_cri": 0,
             "conditional": 0
+        },
+        "mf_dark4": {
+            "id": "mf_dark4",
+            "name": "ジ・インペリアルスタンダード",
+            "name_en": "The Imperial Standard",
+            "type": "MF",
+            "element": "dark",
+            "hp": 4083,
+            "mp": 0,
+            "atk": 205,
+            "def": 696,
+            "cri": 0,
+            "bs_hp": 0,
+            "bs_mp": 0.03,
+            "bs_atk": 0,
+            "bs_def": 0,
+            "bs_cri": 0,
+            "conditional": "c.cname.alias=makoto:bs_atk=0.03"
         }
     },
     "accessory": {
