@@ -1566,17 +1566,6 @@
             "meta": "ガチャ gacha スカウト scout ",
             "restricted": 0
         },
-        "smtz": {
-            "id": "smtz",
-            "short": "剣聖TZ",
-            "short_en": "SMTZ",
-            "long": "戦場に集いし剣聖",
-            "long_en": "Master Swordsmen in the Battlefield",
-            "date": 1525014000000,
-            "class": "smtz",
-            "meta": "ガチャ gacha スカウト scout ",
-            "restricted": 0
-        },
         "grenade": {
             "id": "grenade",
             "short": "グレネ",
@@ -1788,8 +1777,8 @@
         },
         "anniv2": {
             "id": "anniv2",
-            "short": "2周年",
-            "short_en": "Anniv2",
+            "short": "2A1",
+            "short_en": "2A1",
             "long": "交差する世界 時を超える絆",
             "long_en": "The Crossover World - Timeless Bond",
             "date": 1535641200000,
@@ -1821,8 +1810,8 @@
         },
         "anniv22": {
             "id": "anniv22",
-            "short": "2周年",
-            "short_en": "Anniv2",
+            "short": "2A2",
+            "short_en": "2A2",
             "long": "時を超える疾風と嚆矢",
             "long_en": "Gales & Arrows -Transcending Time",
             "date": 1536505200000,
@@ -37570,8 +37559,8 @@
             "id": "anniv2_kirito",
             "name": "【神速の二刀流】キリト",
             "name_en": "Kirito [Ultrafast Dualblades]",
-            "short": "2周年キリト",
-            "short_en": "Anniv2 Kirito",
+            "short": "2A1キリト",
+            "short_en": "2A1 Kirito",
             "cname": "kirito",
             "group": "anniv2",
             "type": "dual",
@@ -37636,14 +37625,14 @@
             "eq_combo_wep": "anniv2_dual",
             "eq_combo_amr": "m_none2",
             "eq_combo_acc": "mf_none4",
-            "meta": "【神速の二刀流】キリト kirito [ultrafast dualblades] 2周年キリト anniv2 kirito ★6 *6 キリト kirito m 男性 @male 交差する世界 時を超える絆 the crossover world - timeless bond ガチャ gacha スカウト scout 無 none sao ダメージ アップ damage up 属性ダメージ アップ elemental damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 全体クリティカルダメージ アップ group critical damage up コンボダメージアップ combo damage up コンボ速度アップ combo speed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【神速の二刀流】キリト kirito [ultrafast dualblades] 2a1キリト 2a1 kirito ★6 *6 キリト kirito m 男性 @male 交差する世界 時を超える絆 the crossover world - timeless bond ガチャ gacha スカウト scout 無 none sao ダメージ アップ damage up 属性ダメージ アップ elemental damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 全体クリティカルダメージ アップ group critical damage up コンボダメージアップ combo damage up コンボ速度アップ combo speed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "anniv2_asuna": {
             "id": "anniv2_asuna",
             "name": "【未来へと繋ぐ想い】アスナ",
             "name_en": "Asuna [Linked to the Future]",
-            "short": "2周年アスナ",
-            "short_en": "Anniv2 Asuna",
+            "short": "2A1アスナ",
+            "short_en": "2A1 Asuna",
             "cname": "asuna",
             "group": "anniv2",
             "type": "rapier",
@@ -37708,14 +37697,14 @@
             "eq_combo_wep": "anniv2_rapier",
             "eq_combo_amr": "f_none4",
             "eq_combo_acc": "mf_none4",
-            "meta": "【未来へと繋ぐ想い】アスナ asuna [linked to the future] 2周年アスナ anniv2 asuna ★6 *6 アスナ asuna f 女性 @female 交差する世界 時を超える絆 the crossover world - timeless bond ガチャ gacha スカウト scout 無 none sao ダメージ アップ damage up 属性ダメージ アップ elemental damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 全体クリティカルダメージ アップ group critical damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【未来へと繋ぐ想い】アスナ asuna [linked to the future] 2a1アスナ 2a1 asuna ★6 *6 アスナ asuna f 女性 @female 交差する世界 時を超える絆 the crossover world - timeless bond ガチャ gacha スカウト scout 無 none sao ダメージ アップ damage up 属性ダメージ アップ elemental damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 全体クリティカルダメージ アップ group critical damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "anniv2_alice": {
             "id": "anniv2_alice",
             "name": "【大地を穿つ金木犀】アリス",
             "name_en": "Alice [Great Fragrant Olive Tree]",
-            "short": "2周年アリス",
-            "short_en": "Anniv2 Alice",
+            "short": "2A1アリス",
+            "short_en": "2A1 Alice",
             "cname": "alice",
             "group": "anniv2",
             "type": "sword",
@@ -37780,14 +37769,14 @@
             "eq_combo_wep": "anniv2_sword",
             "eq_combo_amr": "f_none7",
             "eq_combo_acc": "mf_earth4",
-            "meta": "【大地を穿つ金木犀】アリス alice [great fragrant olive tree] 2周年アリス anniv2 alice ★6 *6 アリス alice f 女性 @female 交差する世界 時を超える絆 the crossover world - timeless bond ガチャ gacha スカウト scout 土 earth uw ダメージ アップ damage up 属性ダメージ アップ elemental damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 全体クリティカルダメージ アップ group critical damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【大地を穿つ金木犀】アリス alice [great fragrant olive tree] 2a1アリス 2a1 alice ★6 *6 アリス alice f 女性 @female 交差する世界 時を超える絆 the crossover world - timeless bond ガチャ gacha スカウト scout 土 earth uw ダメージ アップ damage up 属性ダメージ アップ elemental damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 全体クリティカルダメージ アップ group critical damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "anniv2_eugeo": {
             "id": "anniv2_eugeo",
             "name": "【命を咲かせる青薔薇】ユージオ",
             "name_en": "Eugeo [Blue Rose in Full Glory]",
-            "short": "2周年ユージオ",
-            "short_en": "Anniv2 Eugeo",
+            "short": "2A1ユージオ",
+            "short_en": "2A1 Eugeo",
             "cname": "eugeo",
             "group": "anniv2",
             "type": "sword",
@@ -37852,7 +37841,7 @@
             "eq_combo_wep": "master2_sword1",
             "eq_combo_amr": "m_light1",
             "eq_combo_acc": "mf_water9",
-            "meta": "【命を咲かせる青薔薇】ユージオ eugeo [blue rose in full glory] 2周年ユージオ anniv2 eugeo ★6 *6 ユージオ eugeo m 男性 @male 交差する世界 時を超える絆 the crossover world - timeless bond ガチャ gacha スカウト scout 水 water uw ダメージ アップ damage up 属性ダメージ アップ elemental damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 全体クリティカルダメージ アップ group critical damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【命を咲かせる青薔薇】ユージオ eugeo [blue rose in full glory] 2a1ユージオ 2a1 eugeo ★6 *6 ユージオ eugeo m 男性 @male 交差する世界 時を超える絆 the crossover world - timeless bond ガチャ gacha スカウト scout 水 water uw ダメージ アップ damage up 属性ダメージ アップ elemental damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 全体クリティカルダメージ アップ group critical damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "helheim_makoto": {
             "id": "helheim_makoto",
@@ -38074,8 +38063,8 @@
             "id": "anniv22_sinon",
             "name": "【世界を紡ぐ一本の矢】シノン",
             "name_en": "Sinon [The World Linking Arrow]",
-            "short": "2周年シノン",
-            "short_en": "Anniv2 Sinon",
+            "short": "2A2シノン",
+            "short_en": "2A2 Sinon",
             "cname": "sinon",
             "group": "anniv22",
             "type": "bow",
@@ -38140,14 +38129,14 @@
             "eq_combo_wep": "anniv22_bow",
             "eq_combo_amr": "f_none6",
             "eq_combo_acc": "mf_water9",
-            "meta": "【世界を紡ぐ一本の矢】シノン sinon [the world linking arrow] 2周年シノン anniv2 sinon ★6 *6 シノン sinon f 女性 @female 時を超える疾風と嚆矢 gales & arrows -transcending time ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 全体クリティカルダメージ アップ group critical damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【世界を紡ぐ一本の矢】シノン sinon [the world linking arrow] 2a2シノン 2a2 sinon ★6 *6 シノン sinon f 女性 @female 時を超える疾風と嚆矢 gales & arrows -transcending time ガチャ gacha スカウト scout 水 water alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 全体クリティカルダメージ アップ group critical damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "anniv22_leafa": {
             "id": "anniv22_leafa",
             "name": "【時空を貫く疾風】リーファ",
             "name_en": "Leafa [A Gale Blows Via Time & Space]",
-            "short": "2周年リーファ",
-            "short_en": "Anniv2 Leafa",
+            "short": "2A2リーファ",
+            "short_en": "2A2 Leafa",
             "cname": "leafa",
             "group": "anniv22",
             "type": "sword",
@@ -38212,7 +38201,7 @@
             "eq_combo_wep": "anniv22_sword",
             "eq_combo_amr": "f_wind3",
             "eq_combo_acc": "mf_wind8",
-            "meta": "【時空を貫く疾風】リーファ leafa [a gale blows via time & space] 2周年リーファ anniv2 leafa ★6 *6 リーファ leafa f 女性 @female 時を超える疾風と嚆矢 gales & arrows -transcending time ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 全体クリティカルダメージ アップ group critical damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
+            "meta": "【時空を貫く疾風】リーファ leafa [a gale blows via time & space] 2a2リーファ 2a2 leafa ★6 *6 リーファ leafa f 女性 @female 時を超える疾風と嚆矢 gales & arrows -transcending time ガチャ gacha スカウト scout 風 wind alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 斬 slash slice 全体クリティカルダメージ アップ group critical damage up コンボダメージアップ combo damage up コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         }
     },
     "type": {
