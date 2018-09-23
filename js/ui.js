@@ -434,7 +434,7 @@ function calcRanking() {
             dcv.duration = dca_x.duration;
             dcv.cduration = dca_x.combination;
             dcv.acceleration = dca_x.acceleration;
-            dcv.c2duration = dcv.duration + dcv.sv.c.s3_c_duration ? dcv.cduration : dcv.duration;
+            dcv.c2duration = dcv.duration + (dcv.sv.c.s3_c_duration ? dcv.cduration : dcv.duration);
             var dca_50 = getDCA(dcv.sv.c.s3_duration, dcv.sv.c.s3_c_duration, dcv.sv.c.s3_acceleration, getComboSpeedRate(dcv.sv.c.combo_speed, 50), dcv.acceleration_rate,dcv.acceleration_offset);
             dcv.duration_50 = dca_50.duration;
             dcv.cduration_50 = dca_50.combination;
