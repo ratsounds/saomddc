@@ -1834,6 +1834,17 @@
             "id": "hw18",
             "short": "ハロ18",
             "short_en": "Hw18",
+            "long": "麗しき乙女のナイトメア - ハロウィン",
+            "long_en": "Beauty's Nightmare - Halloween",
+            "date": 1538233200000,
+            "class": "hw18",
+            "meta": "ガチャ gacha スカウト scout ",
+            "restricted": 0
+        },
+        "hw18r": {
+            "id": "hw18r",
+            "short": "ハロ18",
+            "short_en": "Hw18",
             "long": "かぼちゃのメダル 報酬 - ハロウィン",
             "long_en": "Pumpkin Medal Reward  - Halloween",
             "date": 1538233200000,
@@ -38659,7 +38670,7 @@
             "eq_combo_wep": "hw18_lance",
             "eq_combo_amr": "f_none4",
             "eq_combo_acc": "mf_dark4",
-            "meta": "#VALUE!"
+            "meta": "【月夜の戯れ】アスナ asuna [moonlit lark] ハロ18アスナ hw18 asuna ★6 *6 アスナ asuna f 女性 @female 麗しき乙女のナイトメア - ハロウィン beauty's nightmare - halloween ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 全体クリティカルダメージ アップ group critical damage up コンボダメージアップ combo damage up コンボダメージアップ combo damage up 発生保障 発生保証 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         },
         "hw18_alice": {
             "id": "hw18_alice",
@@ -38731,7 +38742,7 @@
             "eq_combo_wep": "os4_rapier1",
             "eq_combo_amr": "f_dark4",
             "eq_combo_acc": "mf_dark4",
-            "meta": "#VALUE!"
+            "meta": "【美しき怪物】アリス alice [beautiful monster] ハロ18アリス hw18 alice ★6 *6 アリス alice f 女性 @female 麗しき乙女のナイトメア - ハロウィン beauty's nightmare - halloween ガチャ gacha スカウト scout 闇 dark alo ダメージ アップ damage up 属性ダメージ アップ elemental damage up 属性クリティカルダメージ アップ elemental critical damage up 属性ダメージ アップ elemental damage up 突 pierce 全体クリティカルダメージ アップ group critical damage up コンボダメージアップ combo damage up コンボダメージアップ combo damage up 発生保障 発生保証 guaranteed コンボ持続 combo duration up 連携 combination リーダースキル ls leader skill"
         }
     },
     "type": {
