@@ -40744,7 +40744,7 @@
             "range": 0,
             "etcMod": -0.5,
             "limit": 5,
-            "repRate": 0.5,
+            "repRate": 1,
             "racc": 0.1,
             "gbuff": 0,
             "cbuff": 0,
