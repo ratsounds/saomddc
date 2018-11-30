@@ -285,7 +285,7 @@ function initPost() {
             createTweetWidgets(elemDetail);
         }
         if (!ev.target.parents('.tcontainer')) {
-            elemDetail.classList.toggle('hidden');            
+            elemDetail.classList.toggle('hidden');
         }
     });
     //init meta word list
@@ -455,6 +455,7 @@ function calcRanking() {
             dcv.damage = Math.floor(dcv.damage);
             dcv.mpr = Math.floor(dcv.sv.mpr);
             dcv.hits = dcv.sv.c.hits;
+            dcv.rate = Math.floor(dcv.rate * 100) / 100
         }
     }
     var sortKey = elemSort.value;
@@ -639,9 +640,9 @@ function getCharDetail(id) {
 }
 function createTweetWidgets(detail) {
     var container = detail.q('.tcontainer');
-    if(container) {
+    if (container) {
         var id = container.q('a').href.split('/status/')[1];
-        twttr.widgets.createTweet(id, container, { width: '100%' }).then(()=>
+        twttr.widgets.createTweet(id, container, { width: '100%' }).then(() =>
             container.classList.toggle('hidden')
         );
     }
