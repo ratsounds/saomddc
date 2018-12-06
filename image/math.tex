@@ -1,0 +1,76 @@
+\[
+{\it damage}
+=
+\left(
+\sum{\it ATK}
+\cdot
+\sum{\it MOD^{\it atk}}
+\cdot{\it rng\left(t\right)}
++
+\sum{{\it SLOT}^{\it atk}}
+-
+{{\it def}\cdot{\it debuf}}
+\right)
+\cdot{\it rate}
+\cdot{\it crit}
+\cdot{\it elem}
+\cdot\sum{{\it MOD}^{\it damage}}
+\cdot{\it combo}
+\cdot{\it guard}
+\]
+{\rm where}
+
+{\it ATK}=\left\{
+{\it atk}_{\it unit},
+{\it atk}_{\it weapon},
+{\it atk}_{\it armor},
+{\it atk}_{\it accessory}
+\right\},
+
+{{\it MOD}^{\it atk}}=\left\{
+1,
+\sum{\it BS}^{\it atk},
+\max\left\{{\it buf}_{\it self},{\it buf}_{\it group}\right\},
+{\it buf}^{\it zone},
+{\it title},
+{\it leader},
+{\it sub}
+\right\},
+
+{{\it BS}^{\it atk}}=\left\{
+{\it bs}^{\it unit}_0,
+{\it bs}^{\it unit}_1,
+{\it bs}^{\it weapon}_0,
+{\it bs}^{\it weapon}_1,
+{\it bs}^{\it armor}_0,
+{\it bs}^{\it armor}_1,
+{\it bs}^{\it accessory}_0,
+{\it bs}^{\it accessory}_1,
+\cdots
+\right\},
+
+{{\it SLOT}^{\it atk}}=\left\{
+{\it slot}^{\it atk},
+{\it slot}^{\it atk}_{\it level90},
+\cdots
+\right\},
+
+{{\it MOD}^{\it damage}}=\left\{
+1,
+{\it parry},
+{\it damage\_type},
+{\it weapon\_type},
+{\it elem}^{\it ex},
+\max\left\{{\it buf}^{\it crit}_{\it self},{\it buf}^{\it crit}_{\it group}\right\},
+\sum{\it BS}^{\it damage},
+{\it ranking\_accessory}
+\right\},
+
+{{\it BS}^{\it damage}}=\left\{
+{\it bs}^{\it damage}_0,
+{\it bs}^{\it damage}_1,
+{\it bs}^{\it damage}_2,
+\cdots
+\right\},
+
+{\it rng}\colon{T}\to R,T=\left\{1,2,3,\cdots\right\},R=\left[1,1.1\right]
