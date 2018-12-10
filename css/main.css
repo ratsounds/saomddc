@@ -672,5 +672,7 @@ img {
 }
 
 #sidebar{
+  border-width: 0;
+  border-style: none;
   z-index: 1;
 }
