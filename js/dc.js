@@ -76,14 +76,14 @@ var DC = (function () {
         return values;
     }
     function calcRate(c, lv, lb, wep, r, amr, acc, boss, damage) {
-        var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);
-        dcv.rate = damage / ((dcv.atk * dcv.atk_mod + dcv.atk_ss - dcv.def) * dcv.mod * dcv.crit * dcv.combo);
+        var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);        
+        dcv.rate = damage / ((dcv.atk * dcv.atk_mod + dcv.atk_ss - dcv.def) * dcv.mod * dcv.crit * dcv.elem * dcv.combo / dcv.guard);
         return dcv;
     }
     function calcDamage(c, lv, lb, wep, r, amr, acc, boss, custom_rate) {
         var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);
         if (custom_rate) { dcv.rate = custom_rate; }
-        dcv.damage = (dcv.atk * dcv.atk_mod + dcv.atk_ss - dcv.def) * dcv.rate * dcv.mod * dcv.crit * dcv.combo;
+        dcv.damage = (dcv.atk * dcv.atk_mod + dcv.atk_ss - dcv.def) * dcv.rate * dcv.crit * dcv.elem * dcv.mod  * dcv.combo / dcv.guard;
         return dcv;
     }
     function getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss) {
@@ -112,6 +112,7 @@ var DC = (function () {
             atk_mod += boss.cbuff;
         }
         atk_mod += boss.trophy;
+        atk_mod += boss.ls;
         atk_mod += 1;
 
         var debuff = 1.0;
@@ -124,9 +125,10 @@ var DC = (function () {
             def = boss.def * (1 - sv.c.s3_debuf_pnr + sv.c.s3_debuf * sv.c.s3_debuf_pnr);
         }
 
-        var emod = 1;
+        var elem = 1; //primary elem: it is multiplied to damage
+        var emod = 0; //sub elem modifier: it is added to damage modifiers  
         if (sve.eRate) {
-            emod += boss[sve.eRate];
+            elem += boss[sve.eRate];
         }
         for (var e in db.element) {
             if (e === sv.c.element.id) {
@@ -134,13 +136,13 @@ var DC = (function () {
             }
         }
 
-        var dtmod = 0;
+        var dtmod = 0; // damage type modifier
         for (var t in db.dtype) { dtmod += boss[t] * sv.dtmod[t]; }
 
-        var wtmod = boss[c.type.wtype];
+        var wtmod = boss[c.type.wtype]; // weapon type moodifier
 
-        var conmod = evalConditions(boss.condition, exp_obj).mod;
-        if (conmod === undefined) { conmod = 0; }
+        var conditionalMod = evalConditions(boss.condition, exp_obj).mod;
+        if (conditionalMod === undefined) { conditionalMod = 0; }
 
         var crit = 1.0;
         var mod_cri_dmg = 0.0;
@@ -155,18 +157,18 @@ var DC = (function () {
         }
 
         var combo = 1 + Math.floor(boss.combo / 10) * 0.05;
-        var commod = 0.0;
+        var comboMod = 0.0; // BS from the Ccondition of Combo
         if (boss.combo >= 20) {
-            commod += sv.c.combo_damage_20;
+            comboMod += sv.c.combo_damage_20;
             if (wep) {
-                commod += wep.c20_bs_cri_dmg;
+                comboMod += wep.c20_bs_cri_dmg;
             }
         }
         if (boss.combo >= 30) {
-            commod += sv.c.combo_damage_30;
+            comboMod += sv.c.combo_damage_30;
         }
 
-        var mod = Math.min(sve.mod_dmg + mod_cri_dmg + emod + dtmod + wtmod + boss.repRate + boss.racc + boss.etcMod + conmod + commod, boss.limit);
+        var mod = Math.min(1.0 + sve.mod_dmg + mod_cri_dmg + emod + dtmod + wtmod + boss.repRate + boss.racc + boss.etcMod + conditionalMod + comboMod, boss.limit);
 
         var dcv = {
             atk: atk,
@@ -176,7 +178,9 @@ var DC = (function () {
             rate: sv.c.s3_rate,
             mod: mod,
             crit: crit,
+            elem: elem,
             combo: combo,
+            guard: boss.guard,
             sv: sv
         };
         return dcv;

@@ -15,6 +15,8 @@
 .limit{background-image: url(../icons/limit.png);}
 .etcmod{background-image: url(../icons/etcmod.png);}
 .trophy{background-image: url(../icons/trophy.png);}
+.ls{background-image: url(../icons/ls.png);}
+.guard{background-image: url(../icons/guard.png);}
 .scale{background-image: url(../icons/scale_realtime.png);}
 #scale:checked+label{background-image: url(../icons/scale_ingame.png);}
 .racc{background-image: url(../icons/racc.png);}
