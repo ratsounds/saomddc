@@ -28,15 +28,18 @@ var DC = (function () {
         sd = {};
         return db;
     }
+
     function getData() {
         return db;
     }
+
     function refer(src, dst, key) {
         for (var i in src) {
             var value = src[i][key];
             src[i][key] = dst[value];
         }
     }
+
     function createConditionObject(object, key) {
         for (var i in object) {
             var condition_string = object[i][key];
@@ -59,6 +62,7 @@ var DC = (function () {
             }
         }
     }
+
     function evalConditions(conditions, data) {
         var values = {};
         for (var i in conditions) {
@@ -75,17 +79,22 @@ var DC = (function () {
         }
         return values;
     }
+
     function calcRate(c, lv, lb, wep, r, amr, acc, boss, damage) {
-        var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);        
+        var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);
         dcv.rate = damage / ((dcv.atk * dcv.atk_mod + dcv.atk_ss - dcv.def) * dcv.mod * dcv.crit * dcv.elem * dcv.combo / dcv.guard);
         return dcv;
     }
+
     function calcDamage(c, lv, lb, wep, r, amr, acc, boss, custom_rate) {
         var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);
-        if (custom_rate) { dcv.rate = custom_rate; }
-        dcv.damage = (dcv.atk * dcv.atk_mod + dcv.atk_ss - dcv.def) * dcv.rate * dcv.crit * dcv.elem * dcv.mod  * dcv.combo / dcv.guard;
+        if (custom_rate) {
+            dcv.rate = custom_rate;
+        }
+        dcv.damage = (dcv.atk * dcv.atk_mod + dcv.atk_ss - dcv.def) * dcv.rate * dcv.crit * dcv.elem * dcv.mod * dcv.combo / dcv.guard;
         return dcv;
     }
+
     function getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss) {
         var sv = getSV(c, lv, lb, wep, r, amr, acc);
         var sve = sv['default'];
@@ -93,7 +102,13 @@ var DC = (function () {
             sve = sv[boss.element.id];
         }
 
-        var exp_obj = { c: c, hp: 100, vs: boss.element ? boss.element.id : undefined, combo: boss.combo, switched: boss.switched };
+        var exp_obj = {
+            c: c,
+            hp: 100,
+            vs: boss.element ? boss.element.id : undefined,
+            combo: boss.combo,
+            switched: boss.switched
+        };
         var bs_con_amr = amr ? evalConditions(amr.conditional, exp_obj) : {};
         var bs_con_acc = acc ? evalConditions(acc.conditional, exp_obj) : {};
         var atk = sv.atk + getEqValue(bs_con_amr, key_atk) + getEqValue(bs_con_acc, key_atk);
@@ -116,7 +131,9 @@ var DC = (function () {
         atk_mod += 1;
 
         var debuff = 1.0;
-        if (boss.debuff) { debuff = boss.debuff; }
+        if (boss.debuff) {
+            debuff = boss.debuff;
+        }
 
         var def;
         if (boss.debuff < 1.0) { //debuff on
@@ -137,12 +154,16 @@ var DC = (function () {
         }
 
         var dtmod = 0; // damage type modifier
-        for (var t in db.dtype) { dtmod += boss[t] * sv.dtmod[t]; }
+        for (var t in db.dtype) {
+            dtmod += boss[t] * sv.dtmod[t];
+        }
 
         var wtmod = boss[c.type.wtype]; // weapon type moodifier
 
         var conditionalMod = evalConditions(boss.condition, exp_obj).mod;
-        if (conditionalMod === undefined) { conditionalMod = 0; }
+        if (conditionalMod === undefined) {
+            conditionalMod = 0;
+        }
 
         var crit = 1.0;
         var mod_cri_dmg = 0.0;
@@ -185,6 +206,7 @@ var DC = (function () {
         };
         return dcv;
     }
+
     function getSV(c, lv, lb, wep, r, amr, acc) {
         var obj = sd;
         obj = getSubObject(obj, c.id);
@@ -199,12 +221,14 @@ var DC = (function () {
         }
         return obj;
     }
+
     function getSubObject(obj, key) {
         if (obj[key] === undefined) {
             obj[key] = {};
         }
         return obj[key];
     }
+
     function createSV(c, lv, lb, wep, r, amr, acc, sv) {
         sv.c = c;
         sv.lv = lv;
@@ -235,6 +259,7 @@ var DC = (function () {
         }
         return sv;
     }
+
     function createSVE(sv, elem) {
         var sve = {};
         sv[elem] = sve;
@@ -275,6 +300,7 @@ var DC = (function () {
                 return atk * 0;
         }
     }
+
     function getWeaponBSAtk(wep, r) {
         if (wep) {
             switch (r) {
@@ -288,6 +314,7 @@ var DC = (function () {
         }
         return 0;
     }
+
     function getWeaponCriEDmg(wep, r, c, vs) {
         var mod = 0;
         if (wep) {
@@ -316,6 +343,7 @@ var DC = (function () {
         }
         return mod;
     }
+
     function getWeaponMpDec(c, wep) {
         var mpdec = 0;
         if (wep) {
@@ -326,6 +354,7 @@ var DC = (function () {
         }
         return mpdec;
     }
+
     function getEqValueWithElem(c, eq, key) {
         var value = getEqValue(eq, key);
         if (value && c.element === eq.element) {
@@ -334,10 +363,14 @@ var DC = (function () {
             return value;
         }
     }
+
     function getEqValue(eq, key) {
-        if (eq === undefined || eq[key] === undefined) { return 0; }
+        if (eq === undefined || eq[key] === undefined) {
+            return 0;
+        }
         return eq[key];
     }
+
     function get(itemKey, mKey, mValue) {
         var items = db[itemKey];
         for (var i in items) {
@@ -348,40 +381,67 @@ var DC = (function () {
         }
         return undefined;
     }
+
     function getChar(id) {
-        if (id) { return db.base[id]; }
+        if (id) {
+            return db.base[id];
+        }
         return db.base;
     }
+
     function getWeapon(id) {
-        if (id) { return db.weapon[id]; }
+        if (id) {
+            return db.weapon[id];
+        }
         return db.weapon;
     }
+
     function getArmor(id) {
-        if (id) { return db.armor[id]; }
+        if (id) {
+            return db.armor[id];
+        }
         return db.armor;
     }
+
     function getAccessory(id) {
-        if (id) { return db.accessory[id]; }
+        if (id) {
+            return db.accessory[id];
+        }
         return db.accessory;
     }
+
     function getBoss(name) {
-        if (name) { return get('preset', 'name', name); }
+        if (name) {
+            return get('preset', 'name', name);
+        }
         return db.preset;
     }
+
     function getCname(id) {
-        if (id) { return db.cname[id]; }
+        if (id) {
+            return db.cname[id];
+        }
         return db.cname;
     }
+
     function getElement(id) {
-        if (id) { return db.element[id]; }
+        if (id) {
+            return db.element[id];
+        }
         return db.element;
     }
+
     function getType(id) {
-        if (id) { return db.type[id]; }
+        if (id) {
+            return db.type[id];
+        }
         return db.type;
     }
+
     function getDtype(id) {
-        if (id) { return db.dtype[id]; }
+        if (id) {
+            return db.dtype[id];
+        }
         return db.dtype;
     }
     return {
