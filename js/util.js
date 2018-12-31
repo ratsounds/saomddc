@@ -14,7 +14,7 @@ const DO = {
     },
     new: function (html) {
         this._template.innerHTML = html;
-        return this._template.content;//document.createRange().createContextualFragment(html);
+        return this._template.content; //document.createRange().createContextualFragment(html);
     },
     qid: function (id) {
         return document.getElementById(id);
@@ -26,9 +26,15 @@ const DO = {
         return document.querySelectorAll(q);
     }
 };
-Element.prototype.qid = function (id) { return this.getElementById(id); };
-Element.prototype.q = function (q) { return this.querySelector(q); };
-Element.prototype.qa = function (q) { return this.querySelectorAll(q); };
+Element.prototype.qid = function (id) {
+    return this.getElementById(id);
+};
+Element.prototype.q = function (q) {
+    return this.querySelector(q);
+};
+Element.prototype.qa = function (q) {
+    return this.querySelectorAll(q);
+};
 Element.prototype.html = function (html) {
     this.innerHTML = html;
     return this;
@@ -96,6 +102,7 @@ TextEscaper.prototype = {
         return r;
     }
 }
+
 function escapeRegExpString(str) {
     return str.replace(/([.*+?^=!:${}()|[\]\/\\])/g, "\\$1");
 };
@@ -107,9 +114,14 @@ function Mapper(template) {
     this.init(template);
 }
 Mapper.prototype = {
-    encoder: new TextEscaper([
-        { keyword: '%', replace: '@esc@p@' },
-        { keyword: '$', replace: '@esc@d@' }
+    encoder: new TextEscaper([{
+            keyword: '%',
+            replace: '@esc@p@'
+        },
+        {
+            keyword: '$',
+            replace: '@esc@d@'
+        }
     ]),
     init: function (template) {
         var src = this.encoder.encode(template);
@@ -180,7 +192,9 @@ function match(src, keywords) {
     var r = true;
     for (var i in keywords) {
         r &= src.indexOf(keywords[i]) >= 0;
-        if (!r) { return r };
+        if (!r) {
+            return r
+        };
     }
     return r;
 }
@@ -188,21 +202,38 @@ function match(src, keywords) {
 //handle logical expression string in given data object
 var Expression = (function () {
     var opl = {
-        '&': function (a, b) { return a & b; },
-        '|': function (a, b) { return a | b; }
+        '&': function (a, b) {
+            return a & b;
+        },
+        '|': function (a, b) {
+            return a | b;
+        }
     };
     var opc = {
-        '=': function (a, b) { return a === b; },
-        '!=': function (a, b) { return a !== b; },
-        '>=': function (a, b) { return a >= b; },
-        '<=': function (a, b) { return a <= b; },
-        '>': function (a, b) { return a > b; },
-        '<': function (a, b) { return a < b; }
+        '=': function (a, b) {
+            return a === b;
+        },
+        '!=': function (a, b) {
+            return a !== b;
+        },
+        '>=': function (a, b) {
+            return a >= b;
+        },
+        '<=': function (a, b) {
+            return a <= b;
+        },
+        '>': function (a, b) {
+            return a > b;
+        },
+        '<': function (a, b) {
+            return a < b;
+        }
     };
     var opls = '(\\||&)'
     var rel = new RegExp('(.*?)' + opls + '(.*)', 'im');
     var opcs = '(' + Object.keys(opc).join('|') + ')';
     var rec = new RegExp('(.*?)' + opcs + '(.*)', 'im');
+
     function eval(exp, data) {
         var ml = rel.exec(exp);
         if (ml === null) {
@@ -214,14 +245,19 @@ var Expression = (function () {
                 var b = mc[3].trim();
                 var va = getValueFromKeyString(data, a);
                 var vb = getValueFromKeyString(data, b);
-                if (va === undefined) { va = a; }
-                if (vb === undefined) { vb = b; }
+                if (va === undefined) {
+                    va = a;
+                }
+                if (vb === undefined) {
+                    vb = b;
+                }
                 return opc[mc[2]](parse(va), parse(vb));
             }
         } else {
             return opl[ml[2]](eval(ml[1].trim(), data), eval(ml[3].trim(), data));
         }
     }
+
     function getValueFromKeyString(object, key) {
         var keys = key.split('.');
         var value = object[keys[0]];

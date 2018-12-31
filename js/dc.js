@@ -80,6 +80,33 @@ var DC = (function () {
         return values;
     }
 
+    function estimateDef(opts) {
+        var total = 0;
+        for(var opt of opts){            
+            total+=calcDef(opt.c, opt.lv, opt.lb, opt.wep, opt.r, opt.amr, opt.acc, opt.boss, opt.damage);
+        }
+        return total/opts.length;
+    }
+    function estimateMod(opts) {
+        var total = 0;
+        for(var opt of opts){            
+            total+=calcMod(opt.c, opt.lv, opt.lb, opt.wep, opt.r, opt.amr, opt.acc, opt.boss, opt.damage);
+        }
+        return total/opts.length;
+    }
+
+    function calcDef(c, lv, lb, wep, r, amr, acc, boss, damage) {
+        var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);
+        dcv.def = (dcv.atk * dcv.atk_mod + dcv.atk_ss) * (dcv.rate * dcv.crit * dcv.elem * dcv.mod * dcv.combo / dcv.guard) / dcv.damage;
+        return dcv;
+    }
+
+    function calcMod(c, lv, lb, wep, r, amr, acc, boss, damage) {
+        var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);
+        dcv.mod = dcv.damage * dcv.guard / ((dcv.atk * dcv.atk_mod + dcv.atk_ss - dcv.def) * dcv.rate * dcv.crit * dcv.elem * dcv.combo);
+        return dcv;
+    }
+
     function calcRate(c, lv, lb, wep, r, amr, acc, boss, damage) {
         var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);
         dcv.rate = damage / ((dcv.atk * dcv.atk_mod + dcv.atk_ss - dcv.def) * dcv.mod * dcv.crit * dcv.elem * dcv.combo / dcv.guard);
