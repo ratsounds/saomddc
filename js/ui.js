@@ -453,6 +453,7 @@ function calcRanking() {
             dcv.gap = Math.floor((dcv.duration - dcv.cduration) * 100) / 100;
             dcv.capacity = Math.floor(dcv.damage * dcv.sv.mp / dcv.sv.cost);
             dcv.damage = Math.floor(dcv.damage);
+            dcv.mp = dcv.sv.mp;
             dcv.mpr = Math.floor(dcv.sv.mpr);
             dcv.hits = dcv.sv.c.hits;
             dcv.rate = Math.floor(dcv.rate * 100) / 100
