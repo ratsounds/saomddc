@@ -5,7 +5,6 @@ const capture = require('./capture.js');
  * @param {string} file - file path for output image
  * @param {number} max_height - max height of screenshot
  * @param {number} overrap - overrap pixel size for each column
- * @return {Promise} this function returns promise with Jimp image object of destination
  */
 capture(
   'https://api-defrag.wrightflyer.net/webview/announcement-detail?id=490703&phone_type=2',

@@ -12,7 +12,6 @@ const Jimp = require("jimp");
  * @param {string} file - file path for output image
  * @param {number} max_height - max height of screenshot
  * @param {number} overrap - overrap pixel size for each column
- * @return {Promise} this function returns promise with Jimp image object of destination
  */
 async function capture(url, file, src_width, max_height, overrap) {
   const browser = await puppeteer.launch();
