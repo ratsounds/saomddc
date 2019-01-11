@@ -8,7 +8,7 @@ const capture = require('./capture.js');
  * @param {number} overrap - overrap pixel size for each column
  */
 capture(
-  'https://api-defrag.wrightflyer.net/webview/announcement-detail?id=490703&phone_type=2',
+  'https://api-defrag.wrightflyer.net/webview/announcement-detail?id=20189904&phone_type=2',
   'info.png',
   1024,
   4096,

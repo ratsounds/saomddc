@@ -1,5 +1,6 @@
 /**
- * this script require puppeteer and jimp
+ * capture.js is node module for multi-column screenshot.
+ * this script takes full size screenshot from given url and wrapped it by max_height px.
  * this script require puppeteer and jimp.
  */
 
@@ -36,7 +37,7 @@ function convertIntoMultiColumn(src_path, dst_path, max_height, overrap) {
     Jimp.read(src_path, (err, src) => {
       if (err) { reject(err) }
       let w = 0;
-      let h = max_height;
+      let h = Math.min(max_height,src.bitmap.height);
       let cy = 0;
       let lines = [];
       while (cy < src.bitmap.height) {
