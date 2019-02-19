@@ -492,7 +492,7 @@ function getDCA(duration, combination, acceleration, speed_rate, acceleration_ra
     return dca;
 }
 function getComboSpeedRate(combo_speed, combo) {
-    return (1 - combo_speed * Math.floor(combo / 10));
+    return (1 - combo_speed * Math.min(Math.floor(combo / 10),5));
 }
 function getDPM(dcv) {
     var mp = dcv.sv.mp;
