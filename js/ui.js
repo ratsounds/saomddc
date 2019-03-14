@@ -578,8 +578,11 @@ function getCharDetail(id) {
     var c = dcv.sv.c;
     var html = '<table><tbody>';
     var name_key = 'name' + lang;
-    html += getKVTableRow('Name', c[name_key]);
-    html += getKVTableRow('Gacha', c.group['long' + lang]);
+    html += getKVTableRow('Short Name', c.short+' / '+c.short_en);
+    html += getKVTableRow('Name(Jp)', c.name);
+    html += getKVTableRow('Name(En)', c.name_en);
+    html += getKVTableRow('Gacha(Jp)', c.group.long);
+    html += getKVTableRow('Gacha(En)', c.group.long_en);
     html += getKVTableRow('Atk Weapon', c.eq_atk_wep[name_key]);
     html += getKVTableRow('Atk Armor', c.eq_atk_amr[name_key]);
     html += getKVTableRow('Atk Accessory', c.eq_atk_acc[name_key]);

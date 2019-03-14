@@ -484,6 +484,7 @@ tr:nth-child(even) {
 }
 th {
   text-align: right;
+  vertical-align: text-top;
   margin: 0;
   padding: 0em 0.5em;
   background-color: #fff;
