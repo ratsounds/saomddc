@@ -7,7 +7,7 @@ var lvr = [
     { lv: 90, r: 5 },
     { lv: 100, r: 0 },
     { lv: 100, r: 4 },
-    { lv: 100, r: 5 },
+    { lv: 100, r: 5 }
 ];
 var ranking;
 var boss;
@@ -17,7 +17,7 @@ var elemSort;
 var config;
 var mapperInfo;
 
-DO.onLoad(function () {
+DO.onLoad(function() {
     initPre();
     loadDBFromFile('data/data.json', init);
 });
@@ -25,11 +25,17 @@ DO.onLoad(function () {
 function loadDBFromFile(url, callback) {
     fetch(url, { method: 'GET' })
         //.then(function (response) { return response.json() })
-        .then(function (response) { return response.text(); })
-        .then(function (text) { return JSON.parse(text); })
+        .then(function(response) {
+            return response.text();
+        })
+        .then(function(text) {
+            return JSON.parse(text);
+        })
         .then(DC.loadData)
         .then(callback)
-        .catch(function (error) { console.log(error); });
+        .catch(function(error) {
+            console.log(error);
+        });
 }
 
 function init() {
@@ -39,9 +45,13 @@ function init() {
 
 function loadHelp() {
     fetch('help' + lang + '.html', { method: 'GET' })
-        .then(function (responce) { return responce.text() })
+        .then(function(responce) {
+            return responce.text();
+        })
         .then(initHelp)
-        .catch(function (error) { console.log(error); });
+        .catch(function(error) {
+            console.log(error);
+        });
 }
 
 function initHelp(html) {
@@ -55,17 +65,49 @@ function initHelp(html) {
             var today = new Date().getTime();
             var key = encodeURIComponent(item['name' + lang].substr(1).split(' ')[0]);
             if (today > item.start && today < item.end) {
-                var html = '<p><a href="https://twitter.com/hashtag/' + key + '" target="_blank">' + item['name' + lang] + '</a>';
-                html += ' is running until ' + new Date(item.end).toLocaleDateString() + '</p>';
-                elmRankingEvent.append(DO.new(html));
+                elmRankingEvent.append(
+                    DO.new(
+                        [
+                            '<p><a href="https://twitter.com/hashtag/',
+                            key,
+                            '" target="_blank">',
+                            item['name' + lang],
+                            '</a>',
+                            ' is running until ',
+                            new Date(item.end).toLocaleDateString(),
+                            '</p>'
+                        ].join('')
+                    )
+                );
             } else if (today > item.start - day * 3 && today < item.end) {
-                var html = '<p><a href="https://twitter.com/hashtag/' + key + '" target="_blank">' + item['name' + lang] + '</a>';
-                html += ' is comming at ' + new Date(item.start).toLocaleDateString() + '</p>';
-                elmRankingEvent.append(DO.new(html));
+                elmRankingEvent.append(
+                    DO.new(
+                        [
+                            '<p><a href="https://twitter.com/hashtag/',
+                            key,
+                            '" target="_blank">',
+                            item['name' + lang],
+                            '</a>',
+                            ' is comming at ',
+                            new Date(item.start).toLocaleDateString(),
+                            '</p>'
+                        ].join('')
+                    )
+                );
             } else if (today < item.end + day * 7) {
-                var html = '<p><a href="https://twitter.com/hashtag/' + key + '" target="_blank">' + item['name' + lang] + '</a>';
-                html += ' was finished at ' + new Date(item.end).toLocaleDateString() + '</p>';
-                elmRankingEvent.append(DO.new(html));
+                elmRankingEvent.append(
+                    DO.new(
+                        [
+                            '<p><a href="https://twitter.com/hashtag/' + key,
+                            '" target="_blank">',
+                            item['name' + lang],
+                            '</a>',
+                            ' was finished at ',
+                            new Date(item.end).toLocaleDateString(),
+                            '</p>'
+                        ].join('')
+                    )
+                );
             }
         }
     }
@@ -76,34 +118,53 @@ function initHelp(html) {
     sortObjectArray(array_cname, 'name_en', true);
     for (var i = 0; i < array_cname.length; i++) {
         var item = array_cname[i];
-        var html = '';
-        html += '<tr style="color:' + item.color + '; background-color:' + item.body + ';"><th>';
-        html += item.name;
-        if (item.nick && item.nick !== item.name) {
-            html += '(' + item.nick + ')';
-        }
-        html += '</th><td style="background-image:linear-gradient(45deg,transparent 90%,' + item.body + ' 90%,' + item.body + '),linear-gradient(45deg,transparent 88%,' + item.highlight + ' 88%,' + item.highlight + '), linear-gradient(45deg,transparent 84%,' + item.head + ' 84%,' + item.head + ');">';
-        html += item.name_en;
-        if (item.nick_en && item.nick_en !== item.name_en) {
-            html += '(' + item.nick_en + ')';
-        }
-        html += '</td></tr>';
-        html += '';
-        elemCname.append(DO.new(html));
-        var cn = item['name' + lang]
+        elemCname.append(
+            DO.new(
+                [
+                    '<tr style="color:',
+                    item.color,
+                    '; background-color:',
+                    item.body,
+                    ';"><th>',
+                    item.name,
+                    item.nick && item.nick !== item.name ? '(' + item.nick + ')' : '',
+                    '</th><td style="background-image:linear-gradient(45deg,transparent 90%,',
+                    item.body,
+                    ' 90%,',
+                    item.body,
+                    '),linear-gradient(45deg,transparent 88%,',
+                    item.highlight,
+                    ' 88%,',
+                    item.highlight,
+                    '), linear-gradient(45deg,transparent 84%,',
+                    item.head,
+                    ' 84%,',
+                    item.head,
+                    ');">',
+                    item.name_en,
+                    item.nick_en && item.nick_en !== item.name_en ? '(' + item.nick_en + ')' : '',
+                    '</td></tr>',
+                    ''
+                ].join('')
+            )
+        );
+        var cn = item['name' + lang];
         elemThemePreset.append(DO.new('<option value="' + item.id + '">' + cn + '</option>'));
     }
     elemThemePreset.value = config.theme.preset;
     var elemGacha = DO.q('#gacha tbody').html('');
     var array_group = getObjectArray(db.group);
     sortObjectArray(array_group, 'group_date', true);
-    var mapperGroup = new Mapper('<tr><th class="icon"><i class="g%class%"></i></th><td class="short">%short% / %short_en%</td><td>%long% / %long_en%</td></tr>');
+    var mapperGroup = new Mapper(
+        '<tr><th class="icon"><i class="g%class%"></i></th><td class="short">%short% / %short_en%</td><td>%long% / %long_en%</td></tr>'
+    );
     for (var i = 0; i < array_group.length; i++) {
         var item = array_group[i];
         var html = mapperGroup.map(item);
         elemGacha.append(DO.new(html));
     }
 }
+
 function getObjectArray(obj) {
     var array = [];
     for (var i in obj) {
@@ -111,26 +172,38 @@ function getObjectArray(obj) {
     }
     return array;
 }
+
 function sortObjectArray(obj, key, asend) {
     if (asend) {
-        obj.sort(function (a, b) {
-            if (a[key] < b[key]) { return -1; }
-            if (a[key] > b[key]) { return 1; }
+        obj.sort(function(a, b) {
+            if (a[key] < b[key]) {
+                return -1;
+            }
+            if (a[key] > b[key]) {
+                return 1;
+            }
             return 0;
         });
     } else {
-        obj.sort(function (a, b) {
-            if (a[key] > b[key]) { return -1; }
-            if (a[key] < b[key]) { return 1; }
+        obj.sort(function(a, b) {
+            if (a[key] > b[key]) {
+                return -1;
+            }
+            if (a[key] < b[key]) {
+                return 1;
+            }
             return 0;
         });
     }
 }
 
 function initPre() {
-
     //get lang
-    var language = (window.navigator.languages && window.navigator.languages[0]) || window.navigator.language || window.navigator.userLanguage || window.navigator.browserLanguage;
+    var language =
+        (window.navigator.languages && window.navigator.languages[0]) ||
+        window.navigator.language ||
+        window.navigator.userLanguage ||
+        window.navigator.browserLanguage;
     if (language.substr(0, 2) === 'ja') {
         lang = '';
     } else {
@@ -141,10 +214,7 @@ function initPre() {
     //init config
     config = store.get('config');
     if (config === undefined) {
-        config = {
-            wallpaper_url: '',
-            wallpaper_effect: 'smoke',
-        };
+        config = { wallpaper_url: '', wallpaper_effect: 'smoke' };
         store.set('config', config);
     }
     //set theme
@@ -163,43 +233,42 @@ function initPre() {
     //set sidebar
     if (config.sidebar === undefined) {
         config.sidebar = '';
-        store.set('config', config)
+        store.set('config', config);
     }
     DO.qid('sidebar_url').value = config.sidebar;
 
     showSidebar();
 
     //set config ui events;
-    DO.qid('help_button').on('click', function (ev) {
+    DO.qid('help_button').on('click', function(ev) {
         DO.qid('help').classList.toggle('hidden');
         ev.target.classList.toggle('on');
         twttr.widgets.load(DO.q('.tips'));
-
     });
-    DO.qid('config_button').on('click', function (ev) {
-        DO.qa('.config_bar').forEach(function (elem) {
+    DO.qid('config_button').on('click', function(ev) {
+        DO.qa('.config_bar').forEach(function(elem) {
             elem.classList.toggle('hidden');
         });
         ev.target.classList.toggle('on');
     });
-    DO.qid('wallpaper').on('change', function (ev) {
+    DO.qid('wallpaper').on('change', function(ev) {
         config.wallpaper_url = ev.target.value;
         setWallpaper(config.wallpaper_url);
         store.set('config', config);
     });
-    DO.qid('effect').on('change', function (ev) {
+    DO.qid('effect').on('change', function(ev) {
         config.wallpaper_effect = ev.target.value;
         DO.qid('main').className = config.wallpaper_effect;
         store.set('config', config);
     });
-    DO.qa('.theme_value').forEach(function (elem) {
-        elem.on('change', function (ev) {
+    DO.qa('.theme_value').forEach(function(elem) {
+        elem.on('change', function(ev) {
             config.theme = getThemeConfig();
             setTheme(config.theme);
             store.set('config', config);
         });
     });
-    DO.qid('theme_preset').on('change', function (ev) {
+    DO.qid('theme_preset').on('change', function(ev) {
         var cn = DC.getCname()[ev.target.value];
         if (cn) {
             DO.qid('theme_color').value = cn.color;
@@ -211,29 +280,36 @@ function initPre() {
             store.set('config', config);
         }
     });
-    DO.qid('sidebar_url').on('change', function (ev) {
+    DO.qid('sidebar_url').on('change', function(ev) {
         config.sidebar = ev.target.value;
         showSidebar();
         store.set('config', config);
     });
-    window.addEventListener('resize', function (ev) {
+    window.addEventListener('resize', function(ev) {
         console.log('resize');
         showSidebar();
     });
     mapperInfo = new Mapper(DO.qid('item_info').innerHTML);
 }
+
 function initPost() {
     var db = DC.getData();
 
     //create group icon css
     //set app icon
     fetch('data/appicon.json', { method: 'GET' })
-        .then(function (responce) { return responce.text() })
-        .then(function (text) { return JSON.parse(text); })
-        .then(function (json) {
+        .then(function(responce) {
+            return responce.text();
+        })
+        .then(function(text) {
+            return JSON.parse(text);
+        })
+        .then(function(json) {
             var gcss = '<style type="text/css">';
             var url = json[Math.floor(Math.random() * json.length)];
-            if (url) { gcss += '.app {background-image:url(' + url + ')!important} '; }
+            if (url) {
+                gcss += '.app {background-image:url(' + url + ')!important} ';
+            }
             for (var i in db.group) {
                 var gclass = 'g' + db.group[i].class;
                 gcss += '.' + gclass + ' {background-image:url(icons/' + gclass + '.png)} ';
@@ -241,7 +317,9 @@ function initPost() {
             gcss += '</style>';
             DO.q('head').append(DO.new(gcss));
         })
-        .catch(function (error) { console.log(error); });
+        .catch(function(error) {
+            console.log(error);
+        });
 
     //load preset
     var elemPreset = DO.qid('preset').html('');
@@ -258,27 +336,27 @@ function initPost() {
     calcRanking();
     showRanking();
     //init events
-    DO.qa('.boss input,.boss select').forEach(function (elem) {
-        elem.on('change', function (ev) {
+    DO.qa('.boss input,.boss select').forEach(function(elem) {
+        elem.on('change', function(ev) {
             calcRanking();
             showRanking();
         });
     });
-    DO.qa('.filter input').forEach(function (elem) {
-        elem.on('change', function (ev) {
+    DO.qa('.filter input').forEach(function(elem) {
+        elem.on('change', function(ev) {
             showRanking();
         });
     });
-    elemPreset.on('change', function (ev) {
+    elemPreset.on('change', function(ev) {
         setBoss(db.preset[ev.target.value]);
         calcRanking();
         showRanking();
     });
-    elemSort.on('change', function (ev) {
+    elemSort.on('change', function(ev) {
         calcRanking();
         showRanking();
     });
-    elemRanking.on('.item', 'click', function (ev) {
+    elemRanking.on('.item', 'click', function(ev) {
         var elemDetail = this.q('.detail');
         if (elemDetail.innerHTML.trim() === '') {
             elemDetail.html(getCharDetail(this.id));
@@ -290,28 +368,23 @@ function initPost() {
     });
     //init meta word list
     /*
-    var metalist = DO.qid('metalist');
-    var meta = [];
-    for (var i in db.base) {
-        var c = db.base[i];
-        var words = c.meta.split(']')[1].trim().split(' ');
-        words[0] = words[0].replace(words[5], '');
-        for (var j in words) {
-            var word = words[j].trim();
-            var entry = meta.find(obj => obj.word === word);
-            if (entry) {
-                entry.count++;
-            } else {
-                meta.push({ word: word, count: 1 });
-            }
-        }
-    }
-    meta.sort((a, b) => b.count - a.count);
-    for (var i in meta) {
-        var word = meta[i].word;
-        metalist.append(DO.new('<option value="' + word + '">' + word + '</option>'));
-    }
-    */
+      var metalist = DO.qid('metalist');
+      var meta = [];
+      for (var i in db.base) {          var c = db.base[i];
+          var words = c.meta.split(']')[1].trim().split(' ');
+          words[0] = words[0].replace(words[5], '');
+          for (var j in words) {              var word = words[j].trim();
+              var entry = meta.find(obj => obj.word === word);
+              if (entry) {                  entry.count++;
+              } else {                  meta.push({ word: word, count: 1 });
+              }
+          }
+      }
+      meta.sort((a, b) => b.count - a.count);
+      for (var i in meta) {          var word = meta[i].word;
+          metalist.append(DO.new('<option value="' + word + '">' + word + '</option>'));
+      }
+      */
 }
 
 function getThemeConfig() {
@@ -320,20 +393,31 @@ function getThemeConfig() {
         color: DO.qid('theme_color').value,
         body: DO.qid('theme_body').value,
         head: DO.qid('theme_head').value,
-        highlight: DO.qid('theme_highlight').value,
-    }
+        highlight: DO.qid('theme_highlight').value
+    };
 }
+
 function setTheme(theme) {
     DO.qid('header').css({
-        'color': theme.color,
+        color: theme.color,
         'background-color': theme.body,
-        'background-image': 'linear-gradient(45deg,transparent 90%,' + theme.body + ' 90%,' + theme.body + '),linear-gradient(45deg,transparent 88%,' + theme.highlight + ' 88%,' + theme.highlight + '), linear-gradient(45deg,transparent 84%,' + theme.head + ' 84%,' + theme.head + ')'
+        'background-image':
+            'linear-gradient(45deg,transparent 90%,' +
+            theme.body +
+            ' 90%,' +
+            theme.body +
+            '),linear-gradient(45deg,transparent 88%,' +
+            theme.highlight +
+            ' 88%,' +
+            theme.highlight +
+            '), linear-gradient(45deg,transparent 84%,' +
+            theme.head +
+            ' 84%,' +
+            theme.head +
+            ')'
     });
     DO.q('#header i.app').css('border-color', theme.body);
-    DO.qid('footer').css({
-        'color': theme.color,
-        'background-color': theme.body
-    });
+    DO.qid('footer').css({ color: theme.color, 'background-color': theme.body });
 }
 
 function setWallpaper(url) {
@@ -360,7 +444,7 @@ function showSidebar() {
 function getBoss() {
     var db = DC.getData();
     boss = { crit: 1 };
-    DO.qa('.boss input,.boss select').forEach(function (item) {
+    DO.qa('.boss input,.boss select').forEach(function(item) {
         if (item.type === 'radio') {
             if (item.checked) {
                 if (item.name === 'element' && item.getAttribute('disabled') !== 'disabled') {
@@ -383,7 +467,7 @@ function getBoss() {
 function setBoss(boss) {
     //console.log('setBoss',boss);
     DO.qid('ena').checked = true;
-    DO.qa('.boss input,.boss select').forEach(function (item) {
+    DO.qa('.boss input,.boss select').forEach(function(item) {
         if (item.type === 'radio') {
             if (item.name === 'element') {
                 if (boss[item.name]) {
@@ -413,13 +497,15 @@ function calcRanking() {
         for (var j in cs) {
             var c = cs[j];
             var dcv;
-            if (clvr.r > 0) { // weapon & armor, accessory
+            if (clvr.r > 0) {
+                // weapon & armor, accessory
                 if (boss.combo > 0) {
                     dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_combo_wep, clvr.r, c.eq_combo_amr, c.eq_combo_acc, boss);
                 } else {
                     dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
                 }
-            } else { // no weapon & armor, accessory
+            } else {
+                // no weapon & armor, accessory
                 dcv = DC.calcDamage(c, clvr.lv, 4, undefined, clvr.r, undefined, undefined, boss);
             }
             ranking.push(dcv);
@@ -433,12 +519,26 @@ function calcRanking() {
                     dcv.acceleration_offset = 1.0;
                 }
             }
-            var dca_x = getDCA(dcv.sv.c.s3_duration, dcv.sv.c.s3_c_duration, dcv.sv.c.s3_acceleration, dcv.combo_speed_rate, dcv.acceleration_rate, dcv.acceleration_offset);
+            var dca_x = getDCA(
+                dcv.sv.c.s3_duration,
+                dcv.sv.c.s3_c_duration,
+                dcv.sv.c.s3_acceleration,
+                dcv.combo_speed_rate,
+                dcv.acceleration_rate,
+                dcv.acceleration_offset
+            );
             dcv.duration = dca_x.duration;
             dcv.cduration = dca_x.combination;
             dcv.acceleration = dca_x.acceleration;
             dcv.c2duration = dcv.duration + (dcv.sv.c.s3_c_duration ? dcv.cduration : dcv.duration);
-            var dca_50 = getDCA(dcv.sv.c.s3_duration, dcv.sv.c.s3_c_duration, dcv.sv.c.s3_acceleration, getComboSpeedRate(dcv.sv.c.combo_speed, 50), dcv.acceleration_rate, dcv.acceleration_offset);
+            var dca_50 = getDCA(
+                dcv.sv.c.s3_duration,
+                dcv.sv.c.s3_c_duration,
+                dcv.sv.c.s3_acceleration,
+                getComboSpeedRate(dcv.sv.c.combo_speed, 50),
+                dcv.acceleration_rate,
+                dcv.acceleration_offset
+            );
             dcv.duration_50 = dca_50.duration;
             dcv.cduration_50 = dca_50.combination;
             dcv.acceleration_50 = dca_50.acceleration;
@@ -451,12 +551,12 @@ function calcRanking() {
             dcv.cduration = Math.floor(dcv.cduration * 100) / 100;
             dcv.c2duration = Math.floor(dcv.c2duration * 100) / 100;
             dcv.gap = Math.floor((dcv.duration - dcv.cduration) * 100) / 100;
-            dcv.capacity = Math.floor(dcv.damage * dcv.sv.mp / dcv.sv.cost);
+            dcv.capacity = Math.floor((dcv.damage * dcv.sv.mp) / dcv.sv.cost);
             dcv.damage = Math.floor(dcv.damage);
             dcv.mp = dcv.sv.mp;
             dcv.mpr = Math.floor(dcv.sv.mpr);
             dcv.hits = dcv.sv.c.hits;
-            dcv.rate = Math.floor(dcv.rate * 100) / 100
+            dcv.rate = Math.floor(dcv.rate * 100) / 100;
         }
     }
     var sortKey = elemSort.value;
@@ -472,18 +572,20 @@ function calcRanking() {
     }
     //console.log('ranking',ranking);
 }
+
 function getDCA(duration, combination, acceleration, speed_rate, acceleration_rate, acceleration_offset) {
     var dca = {};
     if (duration > acceleration) {
         dca.duration = speed_rate * (duration - acceleration + acceleration / acceleration_rate) + acceleration_offset;
     } else {
-        dca.duration = speed_rate * duration / acceleration_rate + acceleration_offset;
+        dca.duration = (speed_rate * duration) / acceleration_rate + acceleration_offset;
     }
     if (combination) {
         if (combination > acceleration) {
-            dca.combination = speed_rate * (combination - acceleration + acceleration / acceleration_rate) + acceleration_offset;
+            dca.combination =
+                speed_rate * (combination - acceleration + acceleration / acceleration_rate) + acceleration_offset;
         } else {
-            dca.combination = speed_rate * combination / acceleration_rate + acceleration_offset;
+            dca.combination = (speed_rate * combination) / acceleration_rate + acceleration_offset;
         }
     } else {
         dca.combination = Infinity;
@@ -491,9 +593,11 @@ function getDCA(duration, combination, acceleration, speed_rate, acceleration_ra
     dca.acceleration = acceleration * speed_rate;
     return dca;
 }
+
 function getComboSpeedRate(combo_speed, combo) {
-    return (1 - combo_speed * Math.min(Math.floor(combo / 10),5));
+    return 1 - combo_speed * Math.min(Math.floor(combo / 10), 5);
 }
+
 function getDPM(dcv) {
     var mp = dcv.sv.mp;
     var dmp = dcv.sv.c.type.ns_hits * dcv.sv.mpr;
@@ -501,16 +605,18 @@ function getDPM(dcv) {
     var time = 0;
     var count = 0;
     while (time <= 60) {
-        if (mp >= dcv.sv.cost) { // s3
+        if (mp >= dcv.sv.cost) {
+            // s3
             time += dcv.duration;
             mp -= dcv.sv.cost;
             count++;
-        } else { // normal set
+        } else {
+            // normal set
             time += ns_duration;
             mp += dmp;
         }
     }
-    return dcv.damage * (count + ((time - 60) / dcv.duration));
+    return dcv.damage * (count + (time - 60) / dcv.duration);
 }
 
 function showRanking() {
@@ -524,7 +630,12 @@ function showRanking() {
     var min = Number.MAX_VALUE;
     for (var i = 0; i < ranking.length; i++) {
         var dcv = ranking[i];
-        if (filter.lv[dcv.sv.lv] && filter.r[dcv.sv.r] && filter.type[dcv.sv.c.type.id] && match(dcv.sv.c.meta, filter.keyword)) {
+        if (
+            filter.lv[dcv.sv.lv] &&
+            filter.r[dcv.sv.r] &&
+            filter.type[dcv.sv.c.type.id] &&
+            match(dcv.sv.c.meta, filter.keyword)
+        ) {
             rank++;
             dcv.rank = zero(rank, 3);
             dcv.id = i;
@@ -534,19 +645,21 @@ function showRanking() {
         }
     }
     //adjust scale of damage to 1.25 and capacity to 2/3
-    var dif = max * 2 / 3 - min;
+    var dif = (max * 2) / 3 - min;
     var offset = 30;
     var remains = 100 - offset;
     for (var i = 0; i < filtered.length; i++) {
         var dcv = filtered[i];
-        dcv.p_dps = offset + remains * (dcv.dps - min) / dif;
-        dcv.p_damage = offset + remains * (dcv.damage * 1.25 - min) / dif;
-        dcv.p_capacity = offset + remains * (dcv.capacity * 2 / 3 - min) / dif;
+        dcv.p_dps = offset + (remains * (dcv.dps - min)) / dif;
+        dcv.p_damage = offset + (remains * (dcv.damage * 1.25 - min)) / dif;
+        dcv.p_capacity = offset + (remains * ((dcv.capacity * 2) / 3 - min)) / dif;
         dcv.score = dcv[score_key];
         dcv.color = dcv.sv.c.element.color;
         dcv.cname = dcv.sv.c.cname['name' + lang];
         dcv.video = 0;
-        if (dcv.sv.c.s3_video) { dcv.video = 1; }
+        if (dcv.sv.c.s3_video) {
+            dcv.video = 1;
+        }
         var html = mapperInfo.map(dcv);
         elemRanking.append(DO.new(html));
     }
@@ -554,7 +667,7 @@ function showRanking() {
 
 function getFilter() {
     var filter = { lv: {}, r: {}, type: {} };
-    DO.qa('.filter input').forEach(function (item) {
+    DO.qa('.filter input').forEach(function(item) {
         if (item.name === 'keyword') {
             filter.keyword = item.value;
         } else {
@@ -576,81 +689,97 @@ function getFilter() {
 function getCharDetail(id) {
     var dcv = ranking[id];
     var c = dcv.sv.c;
-    var html = '<table><tbody>';
     var name_key = 'name' + lang;
-    html += getKVTableRow('Short Name', c.short+' / '+c.short_en);
-    html += getKVTableRow('Name(Jp)', c.name);
-    html += getKVTableRow('Name(En)', c.name_en);
-    html += getKVTableRow('Gacha(Jp)', c.group.long);
-    html += getKVTableRow('Gacha(En)', c.group.long_en);
-    html += getKVTableRow('Atk Weapon', c.eq_atk_wep[name_key]);
-    html += getKVTableRow('Atk Armor', c.eq_atk_amr[name_key]);
-    html += getKVTableRow('Atk Accessory', c.eq_atk_acc[name_key]);
-    html += getKVTableRow('MP Weapon', c.eq_mp_wep[name_key]);
-    html += getKVTableRow('MP Armor', c.eq_mp_amr[name_key]);
-    html += getKVTableRow('MP Accessory', c.eq_mp_acc[name_key]);
-    html += getKVTableRow('Combo Atk Weapon', c.eq_combo_wep[name_key]);
-    html += getKVTableRow('Combo Atk Armor', c.eq_combo_amr[name_key]);
-    html += getKVTableRow('Combo Atk Accessory', c.eq_combo_acc[name_key]);
+    var html = ['<table><tbody>'];
+    html.push(getKVTableRow('Short Name', c.short + ' / ' + c.short_en));
+    html.push(getKVTableRow('Name(Jp)', c.name));
+    html.push(getKVTableRow('Name(En)', c.name_en));
+    html.push(getKVTableRow('Gacha(Jp)', c.group.long));
+    html.push(getKVTableRow('Gacha(En)', c.group.long_en));
+    html.push(getKVTableRow('Atk Weapon', c.eq_atk_wep[name_key]));
+    html.push(getKVTableRow('Atk Armor', c.eq_atk_amr[name_key]));
+    html.push(getKVTableRow('Atk Accessory', c.eq_atk_acc[name_key]));
+    html.push(getKVTableRow('MP Weapon', c.eq_mp_wep[name_key]));
+    html.push(getKVTableRow('MP Armor', c.eq_mp_amr[name_key]));
+    html.push(getKVTableRow('MP Accessory', c.eq_mp_acc[name_key]));
+    html.push(getKVTableRow('Combo Atk Weapon', c.eq_combo_wep[name_key]));
+    html.push(getKVTableRow('Combo Atk Armor', c.eq_combo_amr[name_key]));
+    html.push(getKVTableRow('Combo Atk Accessory', c.eq_combo_acc[name_key]));
 
-    html += getKVTableRow('Character Atk', Math.floor(dcv.sv.atk_c));
-    html += getKVTableRow('Equipment Atk', Math.floor(dcv.sv.atk_eq));
+    html.push(getKVTableRow('Character Atk', Math.floor(dcv.sv.atk_c)));
+    html.push(getKVTableRow('Equipment Atk', Math.floor(dcv.sv.atk_eq)));
     if (c.s3_gatk > 0) {
-        html += getKVTableRow('Group Atk Buff', c.s3_gatk);
+        html.push(getKVTableRow('Group Atk Buff', c.s3_gatk));
     } else if (c.s3_atk > 0) {
-        html += getKVTableRow('Atk Buff', c.s3_atk);
+        html.push(getKVTableRow('Atk Buff', c.s3_atk));
     }
     if (c.s3_catk > 0) {
-        html += getKVTableRow('Circle Atk Buff', c.s3_catk);
+        html.push(getKVTableRow('Circle Atk Buff', c.s3_catk));
     }
     if (c.combo_damage_20 > 1) {
-        html += getKVTableRow('Combo Damage 20Hit', c.combo_damage_20);
+        html.push(getKVTableRow('Combo Damage 20Hit', c.combo_damage_20));
     }
     if (c.combo_damage_30 > 1) {
-        html += getKVTableRow('Combo Damage 30Hit', c.combo_damage_30);
+        html.push(getKVTableRow('Combo Damage 30Hit', c.combo_damage_30));
     }
-    html += getKVTableRow('Skill Duration', c.s3_duration, true);
+    html.push(getKVTableRow('Skill Duration', c.s3_duration, true));
     if (c.combo_speed > 0) {
-        html += getKVTableRow('Skill Duration (50Hit)', dcv.duration_50, true);
+        html.push(getKVTableRow('Skill Duration (50Hit)', dcv.duration_50, true));
     }
     if (c.s3_c_duration > 0) {
-        html += getKVTableRow('Combination (sec)', c.s3_c_duration, true);
+        html.push(getKVTableRow('Combination (sec)', c.s3_c_duration, true));
         if (c.combo_speed > 0) {
-            html += getKVTableRow('Combination (50Hit)', dcv.cduration_50, true);
+            html.push(getKVTableRow('Combination (50Hit)', dcv.cduration_50, true));
         }
     }
     if (c.s3_acceleration > 0) {
-        html += getKVTableRow('Acceleration (sec)', c.s3_acceleration, true);
+        html.push(getKVTableRow('Acceleration (sec)', c.s3_acceleration, true));
         if (c.combo_speed > 0) {
-            html += getKVTableRow('Acceleration (50Hit)', dcv.acceleration_50, true);
+            html.push(getKVTableRow('Acceleration (50Hit)', dcv.acceleration_50, true));
         }
     }
-    html += getKVTableRow('Skill Rate', c.s3_rate, true);
-    html += getKVTableRow('Slash/Pierce/Blunt/Magic', formatFloat(c.dtr_slash) + '/' + formatFloat(c.dtr_pierce) + '/' + formatFloat(c.dtr_blunt) + '/' + formatFloat(c.dtr_magic));
+    html.push(getKVTableRow('Skill Rate', c.s3_rate, true));
+    html.push(
+        getKVTableRow(
+            'Slash/Pierce/Blunt/Magic',
+            formatFloat(c.dtr_slash) +
+                '/' +
+                formatFloat(c.dtr_pierce) +
+                '/' +
+                formatFloat(c.dtr_blunt) +
+                '/' +
+                formatFloat(c.dtr_magic)
+        )
+    );
     if (c.s3_debuf > 0) {
-        html += getKVTableRow('Debuff Rate', c.s3_debuf, true);
-        html += getKVTableRow('Debuff P/N Rate', c.s3_debuf_pnr, true);
+        html.push(getKVTableRow('Debuff Rate', c.s3_debuf, true));
+        html.push(getKVTableRow('Debuff P/N Rate', c.s3_debuf_pnr, true));
     }
-    html += getKVTableRow('Hit Count', c.hits === 0 ? 'no data' : c.hits);
-    html += getKVTableRow('Hit Count at Canceled', c.canceled_hits === 0 ? 'no data' : c.canceled_hits);
-    html += getKVTableRow('SS MP Cost', c.s3_mp);
-    html += getKVTableRow('Possible Max MP', dcv.sv.mp);
-    html += getKVTableRow('MP Limit Break', c.mp_lb_total + '(' + c.mp_lb_1 + ',' + c.mp_lb_2 + ',' + c.mp_lb_3 + ',' + c.mp_lb_4 + ') EXPERIMENTAL!');
-    html += '</tbody></table>'
+    html.push(getKVTableRow('Hit Count', c.hits === 0 ? 'no data' : c.hits));
+    html.push(getKVTableRow('Hit Count at Canceled', c.canceled_hits === 0 ? 'no data' : c.canceled_hits));
+    html.push(getKVTableRow('SS MP Cost', c.s3_mp));
+    html.push(getKVTableRow('Possible Max MP', dcv.sv.mp));
+    html.push(
+        getKVTableRow(
+            'MP Limit Break',
+            c.mp_lb_total + '(' + c.mp_lb_1 + ',' + c.mp_lb_2 + ',' + c.mp_lb_3 + ',' + c.mp_lb_4 + ') EXPERIMENTAL!'
+        )
+    );
+    html.push('</tbody></table>');
     if (c.s3_video) {
-        html += '<div class="tcontainer hidden"><a class="hidden" href="' + c.s3_video + '"></a><div>';
+        html.push('<div class="tcontainer hidden"><a class="hidden" href="' + c.s3_video + '"></a><div>');
     }
-    return html;
+    return html.join('');
 }
+
 function createTweetWidgets(detail) {
     var container = detail.q('.tcontainer');
     if (container) {
         var id = container.q('a').href.split('/status/')[1];
-        twttr.widgets.createTweet(id, container, { width: '100%' }).then(() =>
-            container.classList.toggle('hidden')
-        );
+        twttr.widgets.createTweet(id, container, { width: '100%' }).then(() => container.classList.toggle('hidden'));
     }
 }
+
 function getKVTableRow(key, value, float) {
     var v = value;
     if (float) {
@@ -658,7 +787,7 @@ function getKVTableRow(key, value, float) {
     }
     return '<tr><th>' + key + '</th><td>' + v + '</td></tr>';
 }
+
 function formatFloat(value) {
     return Math.floor(value * 100) / 100;
 }
-

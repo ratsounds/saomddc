@@ -82,17 +82,18 @@ var DC = (function () {
 
     function estimateDef(opts) {
         var total = 0;
-        for(var opt of opts){            
-            total+=calcDef(opt.c, opt.lv, opt.lb, opt.wep, opt.r, opt.amr, opt.acc, opt.boss, opt.damage);
+        for (var opt of opts) {
+            total += calcDef(opt.c, opt.lv, opt.lb, opt.wep, opt.r, opt.amr, opt.acc, opt.boss, opt.damage);
         }
-        return total/opts.length;
+        return total / opts.length;
     }
+
     function estimateMod(opts) {
         var total = 0;
-        for(var opt of opts){            
-            total+=calcMod(opt.c, opt.lv, opt.lb, opt.wep, opt.r, opt.amr, opt.acc, opt.boss, opt.damage);
+        for (var opt of opts) {
+            total += calcMod(opt.c, opt.lv, opt.lb, opt.wep, opt.r, opt.amr, opt.acc, opt.boss, opt.damage);
         }
-        return total/opts.length;
+        return total / opts.length;
     }
 
     function calcDef(c, lv, lb, wep, r, amr, acc, boss, damage) {
