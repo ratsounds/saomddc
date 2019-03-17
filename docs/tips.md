@@ -1,7 +1,7 @@
 ---
 layout: page
-title: How To Use
-permalink: /usage/
+title: Tips & Tricks
+permalink: /tips/
 ---
-## How To Use
+## Usage
 Unofficial Damage Calculator for Sword Art Online - Memory Defrag

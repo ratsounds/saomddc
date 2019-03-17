@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Aggregation
-permalink: /aggregation/
+title: Knowledge
+permalink: /knowlede/
 ---
-## Data Aggregation
+## Knowledge
 Unofficial Damage Calculator for Sword Art Online - Memory Defrag
