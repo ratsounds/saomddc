@@ -18,8 +18,8 @@ show_excerpts: false # set to true to show excerpts on the homepage
 
   # generate social links in footer
   #social_links:
-    #twitter: ratsounds
-    #github:  ratsounds
+    #twitter: jekyll
+    #github:  jekyll
     # rss: rss
     # dribbble: jekyll
     # facebook: jekyll
