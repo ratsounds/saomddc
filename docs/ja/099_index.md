@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: 火力計算機について
 permalink: /ja/about/
 ---
 ## SAO:MD:DCについて
