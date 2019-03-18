@@ -1,6 +1,6 @@
 ---
 layout: page
-title: How To Use
+title: 使い方
 permalink: /ja/usage/
 ---
 ## 火力計算機の利用方法

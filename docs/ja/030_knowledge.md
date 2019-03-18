@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Knowledge
+title: ダメージ計算
 permalink: /ja/knowlede/
 mathjax: true
 ---

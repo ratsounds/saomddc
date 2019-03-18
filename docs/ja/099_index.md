@@ -8,7 +8,7 @@ permalink: /ja/about/
 
 ## 目次
 1. [火力計算機の使い方](/ja/usage)
-2. [メモデフの用語やテクニック](/ja/tips)
+2. [メモデフの用語とテクニック](/ja/tips)
 3. [ダメージ計算に関する知識](/ja/knowledge)
 4. [開発者向け情報](/ja/developer)
 

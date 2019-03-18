@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Tips & Tricks
+title: 用語とテクニック
 permalink: /ja/tips/
 mathjax: true
 ---
