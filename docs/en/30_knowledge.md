@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Knowledge
-permalink: /knowlede/
+permalink: /en/knowlede/
 ---
 ## Basics of Damage Calculation
 ![fomula](/image/math.png)

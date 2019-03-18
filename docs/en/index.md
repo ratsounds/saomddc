@@ -1,16 +1,16 @@
 ---
 layout: page
 title: About
-permalink: /about/
+permalink: /en/about/
 ---
 ## About SAO:MD:DC
 This web site is an unofficial damage calculation tool for Sword Art Online: Memory Defrag. The damage calculation method and the hidden parameters for units are estimated from observation by volunteer works without reverse engineering.
 
 ## Index
-1. [How to Use Damage Calculator](/usage)
-2. [Tips & Tricks for SAO:MD](/tips)
-3. [Knowledge for Damage Calculation](/knowledge)
-4. [Developer Info.](/developer)
+1. [How to Use Damage Calculator](/en/usage)
+2. [Tips & Tricks for SAO:MD](/en/tips)
+3. [Knowledge for Damage Calculation](/en/knowledge)
+4. [Developer Info.](/en/developer)
 
 ## Acknowledgement
 Thank you so much for all contributors on

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Tips & Tricks
-permalink: /tips/
+permalink: /en/tips/
 ---
 ### カットイン ON/OFF (Cut-in ON/OFF)
 > カットインのON/OFFで敵がHP0になった時の挙動が異なるので目的に応じて使い分ける。動画では言及していないものの、カットインONで敵を倒した場合、倒した時点で敵の攻撃モーションが終わらず被弾する場合がある。

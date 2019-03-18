@@ -1,6 +1,6 @@
 ---
 layout: page
 title: Developer
-permalink: /developer/
+permalink: /ja/developer/
 ---
 Developer Info.

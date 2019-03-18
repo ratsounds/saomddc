@@ -1,7 +1,7 @@
 ---
 layout: page
 title: How To Use
-permalink: /usage/
+permalink: /en/usage/
 ---
 ## Overview of Damage Calculator Usage
 1. Choose Boss Preset.
