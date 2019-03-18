@@ -10,10 +10,13 @@ mathjax: true
 
 ### ダメージ計算の基本 
 メモデフでの与ダメージは大雑把に次式で推定できる。
+
 $$
 damage = ({\it atk}-{\it def})\cdot{\it rate}\cdot{\it crit}\cdot{\it elem}\cdot{\it mod}\cdot{\it combo}\cdot{\it guard}
 $$
+
 このとき各変数は下記の通りである。
+
 |変数|説明|
 |:--:|----|
 |[$atk$](#攻撃力の計算)|プレイヤキャラの攻撃力。バトルスキル(BS)やスキルスロット、バフ等で補正される。|
@@ -27,6 +30,7 @@ $$
 
 ### 攻撃力の計算
 攻撃力は次式で計算できる。
+
 $$
 \sum{\it ATK}
 \cdot
@@ -34,6 +38,7 @@ $$
 +
 \sum{\it SLOT}^{\it atk}
 $$
+
 ここで
 $\sum{\it ATK}$はキャラ、武器、アクセサリ等、攻撃力の総和、
 $\sum{\it MOD}^{\it atk}$はBSやバフ等、攻撃力補正値の総和、
@@ -93,12 +98,15 @@ $$
 
 ### 防御力の計算
 防御力は次式で計算できる。
+
 $$
 {\it def}\cdot{\it debuf}
 $$
+
 デバフの防御補正${\it debuf}$は0から-1の値で、例えば防御補正44％であればボスの防御力を約半分、防御補正29％の強化デバフでは約1/3にすることができる。デバフの防御補正値については[代表的な攻撃力バフとデバフの効果](#代表的な攻撃力バフとデバフの効果)を参照のこと。
 
 ### 代表的な攻撃力バフとデバフの効果
+
 |種類|攻撃力補正|防御補正|補足|
 |--|:--:|:--:|--|
 |強連携バフ|33%||強化済み連携バフキャラ|
@@ -116,30 +124,33 @@ $$
 
 ### ダメージ補正値の計算
 ダメージ補正値は基底値1(100%)に全ての％単位で示されるダメージ補正値の総和を加算したもので次式のように示すことができる。
+
 $$
 {\it MOD}^{\it damage}=\left\{
 1,
 {\it parry},
-{\it damage\_type},
-{\it weapon\_type},
+{\it type_{damage}},
+{\it type_{weapon}},
 {\it elem}^{\it ex},
 \max\left\{ {\it buf}^{\it crit}_{\it self},{\it buf}^{\it crit}_{\it group}\right\},
 \sum{\it BS}^{\it damage},
-{\it ranking\_accessory}
+{\it racc}
 \right\},
 $$
+
 各ダメージ補正値は、有利≒ダメージ増加の場合は正の値、不利≒ダメージ減の場合は負の値をとる。
 ダメージ補正値はランイベ等でのアクセ、パリィ補正やダメージ属性補正、ダメージ増加BS等多岐に渡るが、代表的なダメージ補正値の一覧を次に示す。
+
 |攻撃力補正の変数|説明|
 |----|----|
 |${\it parry}$|ランイベ等でのパリィ直後のダメージ補正。俗に言う赤Weak補正。|
-|${\it damage\_type}$|斬・突・打・魔ダメージ種による補正。|
-|${\it weapon\_type}$|武器種による補正。|
+|${\it type_{damage}}$|斬・突・打・魔ダメージ種による補正。|
+|${\it type_{weapon}}$|武器種による補正。|
 |${\it elem}^{\it ex}$|追加の属性補正。副属性はここで加算される。また主属性の属性補正が大きい場合はここで追加分が加算される。|
 |${\it buf}^{\it crit}_{\it self}$|クリティカルダメージ増加自己バフによる補正。|
 |${\it buf}^{\it crit}_{\it group}$|クリティカルダメージ増加全体バフによる補正。自己と攻撃バフと同様に全体バフで値の大きなものが優先されると思われる。|
 |$\sum{\it BS}^{\it damage}$|各種ダメージ増加BS。クリティカルダメージ増加等も含まれる。|
-|${\it ranking\_accessory}$|ランイベアクセによるダメージ補正。|}
+|${\it racc}$|ランイベアクセによるダメージ補正。|}
 
 ### ダメージ倍率
 ダメージの高さを決定するパラメータで、通常攻撃や各ソードスキルに対し個別に設定されている。通常攻撃では0.5～1.0、ソードスキルではSS3で10.0-15.0前後の値を持つ。仮に攻撃力が低いキャラクターでもソードスキルのダメージ倍率が高ければ高い与ダメを出すことから、基本的にはステータス画面の攻撃力は飾りで、ダメージ倍率がキャラクターの強さを決定していると言って良い。
@@ -163,14 +174,19 @@ $$
 
 ### 乱数によるダメージのばらつき
 ゲーム内における実際の与ダメージは乱数により10％ほどばらつくことが知られており、直感的には次式のように考えることが出来る。
+
 $$
 damage = ({\it atk}-{\it def})\cdot{\it rate}\cdot{\it crit}\cdot{\it elem}\cdot{\it mod}\cdot{\it combo}\cdot{\it guard}\cdot{\it rng\left(t\right)}
 $$
+
 このとき${\it rng\left(t\right)}$は$min$から$max$の値をランダムに出力する関数で、次式のように定義できる。
+
 $$
 {\it rng}\colon{T}\to R,T=\left\{1,2,3,\cdots\right\},R=\left[min,max\right]
 $$
+
 この場合、例えば10％上方にばらつくのであれば$min=1,max=1.1$と考えることが出来る。一方で、最近の調査では次式のように攻撃力がばらついていると思われる結果が得られているが、膨大なダメージ計測サンプルが必要となることから厳密な調査は難しく、仮に乱数の寄与の仕方が明らかになったところでプレイする上でのメリットがほとんどないことからこれ以上の調査は必要がない。
+
 $$
 damage = ({\it atk}\cdot{\it rng\left(t\right)}-{\it def})\cdot{\it rate}\cdot{\it crit}\cdot{\it elem}\cdot{\it mod}\cdot{\it combo}\cdot{\it guard}
 $$
@@ -181,27 +197,34 @@ $$
 
 #### 既知の倍率と与ダメージからの防御力の推定
 各武器種毎に通常攻撃の倍率が既知の為、その他の補正値についても既知であればダメージから次式により推定できる。
+
 $$
 {\it def}={\it atk}-{\it damage}/({\it rate}\cdot{\it crit}\cdot{\it elem}\cdot{\it mod}\cdot{\it combo}\cdot{\it guard})
 $$
+
 例えば、クリティカル無し、属性補正無し、その他補正無し、コンボ補正無しの条件であれば次式のように簡略化することができる。
+
 $$
 {\it def}={\it atk}-{\it damage}/({\it rate}\cdot{\it guard})
 $$
+
 補正値が少ないほど計算が簡略化できることから、補正がからないようキャラ選択と条件設定することで、簡単かつ高い精度で推定できる。
 
 実際のダメージは乱数によって10％のばらつきがある為、複数サンプルの最大値を取るか平均や中央値を0.95で除算する等すると誤差が減る。厳密には 0<攻撃-防御<1の時、倍率1未満の通常攻撃はダメージ1になり、倍率1以上のスキルは1より大きいダメになる為、誤差なく防御を求める事ができる。
 
 #### 最低保証ダメージ境界値による厳密な防御力の測定
 $atk-def=0$ (つまり$atk=def$) になるatkを探すことで厳密に防御力を求める。実際には$atk-def$が負の値になることはなく、$atk-def=0$の場合も最低保障ダメージとして1ダメージを与えることができる為、具体的には余ダメージが2になる$atk$を探す(実用上は10ダメ程度が目標)。これらを考慮して、より厳密なダメージ計算式は次式のように書くことができる。
+
 $$
 damage = (\max\{ {\it atk}-{\it def},0\}\cdot{\it rate}\cdot{\it crit}\cdot{\it elem}\cdot{\it mod}\cdot{\it combo}+1)\cdot{\it guard}
 $$
+
 なお、常時ガードがあるボスにおいて最低保証ダメージになった場合、$1/3<1.0$となり与ダメが表示されない現象が起こる（このときはヒットしていない扱いになっておりMP回復もしない）。
 
 防御力測定の注意点として、攻撃力はBSや称号等によって補正を受けることから、できる限り称号や攻撃力増加BSのないキャラや装備を選択し、必要に応じて[攻撃力の計算](#攻撃力の計算)を参考に最終的な攻撃力を求める必要がある。最近のランイベではボスの防御力が700-1500な為、★3未満のキャラや未育成のキャラ等を用いることが多い。
 
 #### 既知の防御力
+
 |ボス|防御力|属性|補足|
 |:--:|:--:|:--:|:--|
 |お試しコボルド|1450|無||
@@ -210,6 +233,7 @@ $$
 
 ### 補正の測定
 属性相性や武器相性の補正はボスによって異なり、防御力や倍率が既知であれば測定したダメージの比率からクリティカル等の既知の補正を除外した値で求められる。例えば異なるキャラクターや条件で測定した${damage_A}$と${damage_B}$のダメージ比率は次式のようになる。
+
 $$
 \frac{damage_A}{damage_B}
 =
@@ -219,7 +243,9 @@ $$
 ({\it atk_B}-{\it def})\cdot{\it rate_B}\cdot{\it crit_B}\cdot{\it elem_B}\cdot{\it mod_B}\cdot{\it combo_B}\cdot{\it guard}
 }
 $$
+
 倍率、クリティカル補正、属性補正等が同等である(例えば$rate_A=rate_B$)場合は次式のように簡略化することができる。
+
 $$
 \frac{damage_A}{damage_B}
 =
@@ -229,7 +255,9 @@ $$
 ({\it atk_B}-{\it def})\cdot{\it mod_B}
 }
 $$
+
 ここで$mod$は次式のように各種補正値の総和である。
+
 $$
 \begin{aligned}
 {\it mod}&=
@@ -238,13 +266,15 @@ $$
 &=
 1+
 {\it parry}+
-{\it damage\_type}+
-{\it weapon\_type}+
+{\it type_{damage}}+
+{\it type_{weapon}}+
 {\it elem}^{\it ex}+
 \cdots
 \end{aligned}
 $$
+
 例えば$parry$以外の補正が無いと予想される場合のダメージ$damage_{parry}$、補正値無しの理論値ダメージ$damage_0$との比率は次式のようになり、ダメージ比率から1を減算することで$parry$を求めることができる。
+
 $$
 \begin{aligned}
 \frac{damage_{parry}}{damage_0}
@@ -259,58 +289,67 @@ $$
 1+{parry}
 \end{aligned}
 $$
-$parry$が求められたので、次に武器種補正値$damage\_type$を求めることを考える。同様にして、武器種補正が有ると予想されるキャラAの与ダメージと武器種補正が無いと予想されるキャラBの与ダメージのダメージ比率を求める。
+
+$parry$が求められたので、次に武器種補正値$type_{damage}$を求めることを考える。同様にして、武器種補正が有ると予想されるキャラAの与ダメージと武器種補正が無いと予想されるキャラBの与ダメージのダメージ比率を求める。
+
 $$
 \frac{damage_A}{damage_B}
 =
 \frac{
-({\it atk_A}-{\it def})\cdot(1+{parry}+damage\_type+\cdots)
+({\it atk_A}-{\it def})\cdot(1+{parry}+type_{damage}+\cdots)
 }{
 ({\it atk_B}-{\it def})\cdot(1+{parry}+0+\cdots)
 }
 $$
+
 この時、両キャラの攻撃力や属性補正の有無等を揃えるとより容易に求めることができる。仮に両キャラの攻撃力がほぼ等しくパリィ補正とダメージ種の補正以外がない場合、次のようにしてダメージ種補正を求めることができる。
+
 $$
 \begin{aligned}
 \frac{damage_A}{damage_B}
 &\approx
 \frac{
-1+{parry}+damage\_type
+1+{parry}+type_{damage}
 }{
 1+{parry}+0
 }
 \\
-damage\_type &= \frac{damage_A}{damage_B}\cdot(1+{parry})-(1+{parry})
+type_{damage} &= \frac{damage_A}{damage_B}\cdot(1+{parry})-(1+{parry})
 \\
 &=\left(\frac{damage_A}{damage_B}-1\right)\cdot\left(1+{parry}\right)
 \end{aligned}
 $$
+
 複数の補正が複合的にかかる場合は計算が複雑になる為、出来る限り攻撃力を揃えると良い。この場合、未知の補正値$mod_{unknown}$を求める式は、他の既知の補正値を$mod_{known}$とすると、次式で一般化できる。
+
 $$
 mod_{unknown} \approx \frac{damage_A}{damage_B}\cdot(1+{mod_{known}})-(1+mod_{known})
 $$
 
 ### お試しコボルドからのダメージ倍率測定
 お試しコボルドは無属性で防御1450なので、与ダメージからスキルの倍率を推定できる。お試しでのキャラクターはLv.80でBSおよびスキルスロットをすべて解放した状態である。ソードスキルのレベルも初期とは異なりレベル2で且つソードスキル強化スキルスロットが解放済みの状態である。通常とことなる特性としてLv.80のキャラにもかかわらず、Lv.90以上で解放のスキルスロットも解放済みであることに注意。お試しコボルドは属性由来以外の補正を受けないので次式により倍率を求めることができる。
+
 $$
 {\it rate}=
 \frac{damage}{({\it atk}-{\it def})\cdot{\it crit}\cdot{\it elem}\cdot{\it mod}}
 $$
+
 防御力は1450であるが、$def$はデバフの影響を受けるので注意すること。
 
 ### 攻撃バフ効果の測定方法
 攻撃バフの効果はバフの有無における単純なダメージの比率で計算出来ないため、必ず既知の防御を持つ敵で測定しダメージ計算式から逆算する。同じキャラでバフ有り時ダメージ${damage_{normal}}$と無し時ダメージ${damage_{buffed}}$をバフの有無以外同条件で測定した場合、次式のようにダメージ比率はからバフによる攻撃力補正を求めることができる。
+
 $$
 \begin{aligned}
 \frac{\it damage_{\it buffed}}{\it damage_{\it normal}}
 &=
 \frac{
-({\it atk}\cdot{\it buff}-{\it def})
+({\it atk}\cdot{\it buf}-{\it def})
 }{
 ({\it atk}-{\it def})
 }
 \\
-{\it buff}
+{\it buf}
 &=
 \frac{\it damage_{\it buffed}}{\it damage_{\it normal}}
 \cdot
@@ -320,14 +359,16 @@ $$
 
 \end{aligned}
 $$
+
 また別の手法として、同じキャラで同じ敵に対してダメージ測定を行った場合、バフ有無時のダメージ増分がバフによる攻撃力増分から次式のように求めることも出来る。
+
 $$
 \begin{aligned}
 {\it damage_{\it buffed}}-{\it damage_{\it normal}} 
 &= 
-({\it atk}\cdot{\it buff}-{\it atk})\cdot{\it rate}\cdot{\it crit}\cdot{\it elem}\cdot{\it mod}
+({\it atk}\cdot{\it buf}-{\it atk})\cdot{\it rate}\cdot{\it crit}\cdot{\it elem}\cdot{\it mod}
 \\
-{\it buff}
+{\it buf}
 &=
 \frac{({\it damage_{\it buffed}}-{\it damage_{\it normal}} )}{ {\it rate}\cdot{\it crit}\cdot{\it elem}\cdot{\it mod}\cdot{\it atk}}+1
 \end{aligned}
