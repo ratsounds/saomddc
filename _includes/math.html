@@ -1,0 +1,20 @@
+{% if page.mathjax %}
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  displayAlign: "left",
+  displayIndent: "2em",
+  TeX: {
+    equationNumbers: { autoNumber: "AMS" },
+  },
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+</script>
+<script
+  type="text/javascript"
+  charset="utf-8"
+  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+{% endif %}

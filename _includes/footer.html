@@ -1,15 +1,12 @@
 <footer class="site-footer h-card">
     <data class="u-url" href="{{ " / " | relative_url }}"></data>
-
     <div class="wrapper">
-
         <div class="footer-col-wrapper">
             <div class="footer-col">
                 {{ site.title | escape }} - Don't worry, this is 
                 <a href="https://twitter.com/{{ site.twitter | cgi_escape | escape }}" title="{{ site.twitter | escape }}">{{ site.author | escape }}</a>' strategy guide.
             </div>
         </div>
-
     </div>
-
 </footer>
+{% include math.html %}
