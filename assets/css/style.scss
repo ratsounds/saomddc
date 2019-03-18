@@ -1,0 +1,19 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+.site-nav .page-link:not(:last-child).lang-link {
+    margin-right:5px;
+}
+.lang-link {
+    margin-left:5px;
+}
+
+.ja .ja{
+    font-weight:bold;
+}
+.en .en{
+    font-weight:bold;
+}

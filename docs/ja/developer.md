@@ -1,6 +1,8 @@
 ---
 layout: page
-title: 開発者向け情報
+title: Developer
 permalink: /ja/developer/
+lang: ja
+order: 40
 ---
 Developer Info.

@@ -1,8 +1,10 @@
 ---
 layout: page
-title: ダメージ計算
+title: Knowledge
 permalink: /ja/knowlede/
 mathjax: true
+lang: ja
+order: 30
 ---
 ## ダメージ計算
 前半でメモデフにおけるダメージ計算方法について記述し、
@@ -199,18 +201,20 @@ $$
 各武器種毎に通常攻撃の倍率が既知の為、その他の補正値についても既知であればダメージから次式により推定できる。
 
 $$
-{\it def}={\it atk}-{\it damage}/({\it rate}\cdot{\it crit}\cdot{\it elem}\cdot{\it mod}\cdot{\it combo}\cdot{\it guard})
+{\it def}
+=
+{\it atk}-\frac{\it damage}{ {\it rate}\cdot{\it crit}\cdot{\it elem}\cdot{\it mod}\cdot{\it combo}\cdot{\it guard}}
 $$
 
 例えば、クリティカル無し、属性補正無し、その他補正無し、コンボ補正無しの条件であれば次式のように簡略化することができる。
 
 $$
-{\it def}={\it atk}-{\it damage}/({\it rate}\cdot{\it guard})
+{\it def}={\it atk}-\frac{\it damage}{ {\it rate}\cdot{\it guard}}
 $$
 
 補正値が少ないほど計算が簡略化できることから、補正がからないようキャラ選択と条件設定することで、簡単かつ高い精度で推定できる。
 
-実際のダメージは乱数によって10％のばらつきがある為、複数サンプルの最大値を取るか平均や中央値を0.95で除算する等すると誤差が減る。厳密には 0<攻撃-防御<1の時、倍率1未満の通常攻撃はダメージ1になり、倍率1以上のスキルは1より大きいダメになる為、誤差なく防御を求める事ができる。
+実際のダメージは乱数によってばらつきがある為、複数サンプルの最大値を取るか平均や中央値をとる。境界付近の場合、$0.1<atk-def<1.0$の時、倍率1未満の通常攻撃はダメージ1になり、倍率1以上のスキルは1より大きいダメージになる為、誤差なく防御を求める事ができる。
 
 #### 最低保証ダメージ境界値による厳密な防御力の測定
 $atk-def=0$ (つまり$atk=def$) になるatkを探すことで厳密に防御力を求める。実際には$atk-def$が負の値になることはなく、$atk-def=0$の場合も最低保障ダメージとして1ダメージを与えることができる為、具体的には余ダメージが2になる$atk$を探す(実用上は10ダメ程度が目標)。これらを考慮して、より厳密なダメージ計算式は次式のように書くことができる。
@@ -323,7 +327,7 @@ $$
 複数の補正が複合的にかかる場合は計算が複雑になる為、出来る限り攻撃力を揃えると良い。この場合、未知の補正値$mod_{unknown}$を求める式は、他の既知の補正値を$mod_{known}$とすると、次式で一般化できる。
 
 $$
-mod_{unknown} \approx \frac{damage_A}{damage_B}\cdot(1+{mod_{known}})-(1+mod_{known})
+mod_{unknown} \approx \left(\frac{damage_A}{damage_B}-1\right)\cdot\left(1+mod_{known}\right)
 $$
 
 ### お試しコボルドからのダメージ倍率測定

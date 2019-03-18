@@ -2,6 +2,8 @@
 layout: page
 title: Knowledge
 permalink: /en/knowlede/
+lang: en
+order: 30
 ---
 ## Basics of Damage Calculation
 ![fomula](/image/math.png)

@@ -2,6 +2,8 @@
 layout: page
 title: How To Use
 permalink: /en/usage/
+lang: en
+order: 10
 ---
 ## Overview of Damage Calculator Usage
 1. Choose Boss Preset.

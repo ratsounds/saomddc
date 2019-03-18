@@ -1,7 +1,9 @@
 ---
 layout: page
-title: 使い方
+title: How To Use
 permalink: /ja/usage/
+lang: ja
+order: 10
 ---
 ## 火力計算機の利用方法
 1. ボスのプリセットを選択
