@@ -52,7 +52,7 @@ $$
 {\it MOD}^{\it atk}&=\left\{
 1,
 \sum{\it BS}^{\it atk},
-\max\left\{{\it buf}_{\it self},{\it buf}_{\it group}\right\}
+\max\left\{ {\it buf}_{\it self},{\it buf}_{\it group}\right\}
 {\it buf}_{\it zone},
 {\it title},
 {\it leader},
@@ -123,7 +123,7 @@ $$
 {\it damage\_type},
 {\it weapon\_type},
 {\it elem}^{\it ex},
-\max\left\{{\it buf}^{\it crit}_{\it self},{\it buf}^{\it crit}_{\it group}\right\},
+\max\left\{ {\it buf}^{\it crit}_{\it self},{\it buf}^{\it crit}_{\it group}\right\},
 \sum{\it BS}^{\it damage},
 {\it ranking\_accessory}
 \right\},
@@ -195,7 +195,7 @@ $$
 #### 最低保証ダメージ境界値による厳密な防御力の測定
 $atk-def=0$ (つまり$atk=def$) になるatkを探すことで厳密に防御力を求める。実際には$atk-def$が負の値になることはなく、$atk-def=0$の場合も最低保障ダメージとして1ダメージを与えることができる為、具体的には余ダメージが2になる$atk$を探す(実用上は10ダメ程度が目標)。これらを考慮して、より厳密なダメージ計算式は次式のように書くことができる。
 $$
-damage = (\max\{{\it atk}-{\it def},0\}\cdot{\it rate}\cdot{\it crit}\cdot{\it elem}\cdot{\it mod}\cdot{\it combo}+1)\cdot{\it guard}
+damage = (\max\{ {\it atk}-{\it def},0\}\cdot{\it rate}\cdot{\it crit}\cdot{\it elem}\cdot{\it mod}\cdot{\it combo}+1)\cdot{\it guard}
 $$
 なお、常時ガードがあるボスにおいて最低保証ダメージになった場合、$1/3<1.0$となり与ダメが表示されない現象が起こる（このときはヒットしていない扱いになっておりMP回復もしない）。
 
@@ -329,6 +329,6 @@ $$
 \\
 {\it buff}
 &=
-\frac{({\it damage_{\it buffed}}-{\it damage_{\it normal}} )}{{\it rate}\cdot{\it crit}\cdot{\it elem}\cdot{\it mod}\cdot{\it atk}}+1
+\frac{({\it damage_{\it buffed}}-{\it damage_{\it normal}} )}{ {\it rate}\cdot{\it crit}\cdot{\it elem}\cdot{\it mod}\cdot{\it atk}}+1
 \end{aligned}
 $$
