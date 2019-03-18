@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Knowledge
-permalink: /knowlede/
+permalink: /ja/knowlede/
 mathjax: true
 ---
 ## ダメージ計算
@@ -30,14 +30,14 @@ $$
 $$
 \sum{\it ATK}
 \cdot
-\sum{\it MOD^{\it atk}}
+\sum{\it MOD}^{\it atk}
 +
-\sum{{\it SLOT}^{\it atk}}
+\sum{\it SLOT}^{\it atk}
 $$
 ここで
 $\sum{\it ATK}$はキャラ、武器、アクセサリ等、攻撃力の総和、
-$\sum{\it MOD^{\it atk}}$はBSやバフ等、攻撃力補正値の総和、
-$\sum{{\it SLOT}^{\it atk}}$は武器レベルスキルスロットの総和で、
+$\sum{\it MOD}^{\it atk}$はBSやバフ等、攻撃力補正値の総和、
+$\sum{\it SLOT}^{\it atk}$は武器レベルスキルスロットの総和で、
 それぞれ次式により計算できる。
 
 $$
@@ -233,7 +233,7 @@ $$
 $$
 \begin{aligned}
 {\it mod}&=
-\sum{{\it MOD}^{\it damage}}
+\sum{\it MOD}^{\it damage}
 \\
 &=
 1+
