@@ -49,7 +49,7 @@ $$
 {\it atk}_{\it accessory}
 \right\},
 \\
-{{\it MOD}^{\it atk}}&=\left\{
+{\it MOD}^{\it atk}&=\left\{
 1,
 \sum{\it BS}^{\it atk},
 \max\left\{{\it buf}_{\it self},{\it buf}_{\it group}\right\}
