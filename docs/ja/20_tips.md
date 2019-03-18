@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Tips & Tricks
-permalink: /ja/tips/
+permalink: /tips/
 mathjax: true
 ---
 ### カットイン ON/OFF (Cut-in ON/OFF)

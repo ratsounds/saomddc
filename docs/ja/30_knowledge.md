@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Knowledge
-permalink: /ja/knowlede/
+permalink: /knowlede/
 mathjax: true
 ---
 ## ダメージ計算

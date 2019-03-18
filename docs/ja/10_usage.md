@@ -1,7 +1,7 @@
 ---
 layout: page
 title: How To Use
-permalink: /ja/usage/
+permalink: /usage/
 ---
 ## 火力計算機の利用方法
 1. ボスのプリセットを選択
