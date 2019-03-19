@@ -19,7 +19,9 @@
           <div class="trigger">
             {%- for page_title in page_titles -%}
               {%- assign my_page = site.pages | where: "title", page_title | where: "lang", page.lang | first -%}
-              <a class="page-link" href="{{ my_page.url | relative_url }}">{{ page_title | escape }}</a>
+              {%- if my_page.lang -%}
+                <a class="page-link" href="{{ my_page.url | relative_url }}">{{ page_title | escape }}</a>
+              {%- endif -%}
             {%- endfor -%}
             <span class="lang-selector">
               {%- for lang in langs -%}
