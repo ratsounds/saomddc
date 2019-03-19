@@ -151,6 +151,7 @@ class|short|short_en|long|long_en
 ![ghina.png](../../icons/ghina.png)|雛|Hina|雛人形のメダル 報酬 - ひな祭り|Hina-Matsuri Medal Reward - Hina-Matsuri
 ![gik.png](../../icons/gik.png)|時天|TS|時と天を穿つ刃 - 整合騎士|Blades Beyond Time and Space - Integrity Knights
 ![guni.png](../../icons/guni.png)|修剣|Uniform|修剣士制服と異世界の剣士たち 〜アスナとユウキ〜|Swordsman in School Uniform - Asuna & Yuuki -
+![geye.png](../../icons/geye.png)|眼帯|Eyepatch|アニメクライマックス記念|Anime Climax Special
 
 ## Characters
 
