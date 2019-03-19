@@ -8,6 +8,7 @@ order: 20
 ---
 ### カットイン ON/OFF (Cut-in ON/OFF)
 > カットインのON/OFFで敵がHP0になった時の挙動が異なるので目的に応じて使い分ける。動画では言及していないものの、カットインONで敵を倒した場合、倒した時点で敵の攻撃モーションが終わらず被弾する場合がある。
+> <blockquote class="twitter-tweet"><a href="https://twitter.com/ratsounds/status/863807949931552768">[ref]</a></blockquote>
 
 ### スキルスロットの表記 (Skill Slot Notation)
 > スキルスロットの解放状況を簡潔に表記する為に解放済みのスキルスロットレベルを左から順に"-"区切りの数字で表記する。

@@ -5,7 +5,7 @@ permalink: /en/usage/
 lang: en
 order: 10
 ---
-## Overview of Damage Calculator Usage
+## Simplest Usage
 1. Choose Boss Preset.
 2. Choose Metrics.
 3. Check Filter if you need.

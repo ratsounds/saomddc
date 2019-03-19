@@ -3,6 +3,6 @@ layout: page
 title: Developer
 permalink: /en/developer/
 lang: en
-order: 40
+order: 50
 ---
 Developer Info.

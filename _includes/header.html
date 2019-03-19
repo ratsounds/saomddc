@@ -21,12 +21,12 @@
               {%- assign my_page = site.pages | where: "title", page_title | where: "lang", page.lang | first -%}
               <a class="page-link" href="{{ my_page.url | relative_url }}">{{ page_title | escape }}</a>
             {%- endfor -%}
-            [
-            {%- for lang in langs -%}
-              {%- assign cur_page = site.pages | where: "title", page.title | where: "lang", lang | first -%}
-              <a class="page-link lang-link {{ lang }} " href="{{ cur_page.url | relative_url }}">{{ lang | escape }}</a>
-            {%- endfor -%}
-            ]
+            <span class="lang-selector">
+              {%- for lang in langs -%}
+                {%- assign cur_page = site.pages | where: "title", page.title | where: "lang", lang | first -%}
+                <a class="page-link lang-link {{ lang }} " href="{{ cur_page.url | relative_url }}">{{ lang | escape }}</a>
+              {%- endfor -%}
+            </span>
           </div>
         </nav>
       {%- endif -%}

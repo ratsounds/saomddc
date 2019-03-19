@@ -4,16 +4,37 @@
 
 @import "minima";
 
-.site-nav .page-link:not(:last-child).lang-link {
-    margin-right:5px;
+h1, h2, h3, h4, h5, h6 {
+    border-bottom: 1px solid #e8e8e8;
 }
 .lang-link {
-    margin-left:5px;
+    margin-right:0px!important;
+}
+.lang-selector :first-child{
+    border-top-left-radius:0.5em;
+    border-bottom-left-radius:0.5em;
+}
+.lang-selector :last-child{
+    border-top-right-radius:0.5em;
+    border-bottom-right-radius:0.5em;
 }
 
-.ja .ja{
+.ja .ja,.en .en{
     font-weight:bold;
+    background-color:#e8e8e8;
 }
-.en .en{
-    font-weight:bold;
+
+.ja,.en{
+    padding: 0.25em 0.5em;
+    font-weight:normal;
+    border: 1px solid #e8e8e8;
+}
+
+.color-box {
+    margin: -10px -15px;
+    padding: 0.25em 0.5em;
+    border: 1px solid #e8e8e8;
+    border-radius:0.5em;
+    width:20em;
+    display:inline-block;
 }

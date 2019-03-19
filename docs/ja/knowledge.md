@@ -4,9 +4,8 @@ title: Knowledge
 permalink: /ja/knowlede/
 mathjax: true
 lang: ja
-order: 30
+order: 40
 ---
-## ダメージ計算
 前半でメモデフにおけるダメージ計算方法について記述し、
 後半では各種パラメータの測定方法について記述する。
 
