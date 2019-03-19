@@ -127,16 +127,19 @@ $$
 ダメージ補正値は基底値1(100%)に全ての％単位で示されるダメージ補正値の総和を加算したもので次式のように示すことができる。
 
 $$
-{\it MOD}^{\it damage}=\left\{
+\begin{aligned}
+{\it MOD}^{\it damage}=\{
 1,
 {\it parry},
-{\it type_{damage}},
+&{\it type_{damage}},
 {\it type_{weapon}},
 {\it elem}^{\it ex},
-\max\left\{ {\it buf}^{\it crit}_{\it self},{\it buf}^{\it crit}_{\it group}\right\},
+\\
+&\max\left\{ {\it buf}^{\it crit}_{\it self},{\it buf}^{\it crit}_{\it group}\right\},
 \sum{\it BS}^{\it damage},
 {\it racc}
-\right\},
+\},
+\end{aligned}
 $$
 
 各ダメージ補正値は、有利≒ダメージ増加の場合は正の値、不利≒ダメージ減の場合は負の値をとる。
