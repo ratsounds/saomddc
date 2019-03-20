@@ -92,3 +92,10 @@ ul {
   float:right;
   width:33%;
 }
+
+.MathJax_SVG_Display > .MathJax_SVG{
+  /*max-width:100%;*/
+}
+.MathJax_SVG_Display > .MathJax_SVG > svg{
+  max-width: 100%;
+}

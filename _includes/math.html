@@ -1,20 +1,25 @@
 {% if page.mathjax %}
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
-  displayAlign: "left",
-  displayIndent: "2em",
+  displayAlign: "center",
+  displayIndent: "0em",
   TeX: {
     equationNumbers: { autoNumber: "AMS" },
   },
   tex2jax: {
     inlineMath: [['$','$'], ['\\(','\\)']],
     processEscapes: true
-  }
+  },
 });
+
+MathJax.Hub.Queue(function () {
+  var elems = document.querySelectorAll('.MathJax_SVG_Display > .MathJax_SVG > svg');
+  Array.prototype.forEach.call(elems,function(elem){
+    elem.preserveAspectRatio="xMidYMid meet";
+  });
+});
+
 </script>
-<script
-  type="text/javascript"
-  charset="utf-8"
-  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" charset="utf-8" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG">
 </script>
 {% endif %}
