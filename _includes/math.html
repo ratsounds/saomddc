@@ -1,14 +1,19 @@
 {% if page.mathjax %}
 <script type="text/x-mathjax-config">
+MathJax.HTML.Cookie.Set("menu",{});
+
 MathJax.Hub.Config({
   displayAlign: "center",
   displayIndent: "0em",
+  showMathMenu: false,
+  messageStyle: "none",
   TeX: {
     equationNumbers: { autoNumber: "AMS" },
   },
   tex2jax: {
     inlineMath: [['$','$'], ['\\(','\\)']],
-    processEscapes: true
+    processEscapes: true,
+    preview: "none"
   },
 });
 
