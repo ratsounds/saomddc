@@ -59,14 +59,7 @@ function getUnitStyle(item) {
 function writeMD(filename, frontmatter, out) {
     fs.writeFileSync(filename, frontmatter + out, 'utf8');
 }
-writeMD('./docs/ja/data.md', [
-        '---',
-        'layout: page',
-        'title: Data',
-        'permalink: /ja/data/',
-        'lang: ja',
-        'order: 30',
-        '---',
+writeMD('./_includes/data.md', [
         '',
     ].join('\n'),
     getMDTable('Banners', data.group, [
@@ -84,28 +77,3 @@ writeMD('./docs/ja/data.md', [
     ]) // cname list 
 );
 
-
-writeMD('./docs/en/data.md', [
-        '---',
-        'layout: page',
-        'title: Data',
-        'permalink: /en/data/',
-        'lang: en',
-        'order: 30',
-        '---',
-        '',
-    ].join('\n'),
-    getMDTable('Banners', data.group, [
-        { key: 'class', map: function(value) { return '![g' + value + '.png](../../icons/g' + value + '.png)' } },
-        'short',
-        'short_en',
-        'long',
-        'long_en'
-    ]) // group list 
-    +
-    getMDTable('Characters', data.cname, [
-        'name',
-        'name_en',
-        { key: 'color', map: function(value, item) { return '<span class="color-box" style="' + getUnitStyle(item) + '">__theme__</span>' } },
-    ]) // cname list 
-);

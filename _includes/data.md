@@ -1,10 +1,3 @@
----
-layout: page
-title: Data
-permalink: /en/data/
-lang: en
-order: 30
----
 ## Banners
 
 class|short|short_en|long|long_en
