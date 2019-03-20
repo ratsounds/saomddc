@@ -89,7 +89,7 @@ DefaultおよびDefault 50Hitプリセット等のように属性無視に設定
 |:--|:--|:--|
 |Duration|${Duration}$|
 |CSec|${CSec}$|
-|C/2 Duration|$\begin{aligned} \begin{cases} ★6,★5 & {Duration}+{CSec} \\ otherwise & {Duration}\times2\end{cases} \end{aligned}$|
+|C/2 Duration|$$\begin{aligned} \begin{cases} ★6,★5 & {Duration}+{CSec} \\ otherwise & {Duration}\times2\end{cases} \end{aligned}$$|
 |Duration Gap|${Duration}-{CSec}$|
 |Damage|${Damage}$|
 |DPS|${Damage}/{Duration}$|
