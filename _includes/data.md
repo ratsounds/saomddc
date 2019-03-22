@@ -145,6 +145,7 @@ class|short|short_en|long|long_en
 ![gik.png](../../icons/gik.png)|時天|TS|時と天を穿つ刃 - 整合騎士|Blades Beyond Time and Space - Integrity Knights
 ![guni.png](../../icons/guni.png)|修剣|Uniform|修剣士制服と異世界の剣士たち 〜アスナとユウキ〜|Swordsman in School Uniform - Asuna & Yuuki -
 ![geye.png](../../icons/geye.png)|眼帯|Eyepatch|アニメクライマックス記念|Anime Climax Special
+![guni.png](../../icons/guni.png)|修剣|Uniform|修剣士制服と異世界の勇士たち 〜シノンとレイン|Swordsman in School Uniform～Sinon & Rain
 
 ## Characters
 
