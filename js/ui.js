@@ -18,7 +18,6 @@ var config;
 var mapperInfo;
 
 DO.onLoad(function() {
-    initPre();
     loadDBFromFile('data/data.json', init);
 });
 
@@ -36,133 +35,6 @@ function loadDBFromFile(url, callback) {
         .catch(function(error) {
             console.log(error);
         });
-}
-
-function init() {
-    loadHelp();
-    initPost();
-}
-
-function loadHelp() {
-    fetch('help' + lang + '.html', { method: 'GET' })
-        .then(function(responce) {
-            return responce.text();
-        })
-        .then(initHelp)
-        .catch(function(error) {
-            console.log(error);
-        });
-}
-
-function initHelp(html) {
-    DO.qid('help').html(html);
-    var elmRankingEvent = DO.qid('rankingevents');
-    var day = 24 * 60 * 60 * 1000;
-    var db = DC.getData();
-    for (var i in db.preset) {
-        var item = db.preset[i];
-        if (item.start && item.end) {
-            var today = new Date().getTime();
-            var key = encodeURIComponent(item['name' + lang].substr(1).split(' ')[0]);
-            if (today > item.start && today < item.end) {
-                elmRankingEvent.append(
-                    DO.new(
-                        [
-                            '<p><a href="https://twitter.com/hashtag/',
-                            key,
-                            '" target="_blank">',
-                            item['name' + lang],
-                            '</a>',
-                            ' is running until ',
-                            new Date(item.end).toLocaleDateString(),
-                            '</p>'
-                        ].join('')
-                    )
-                );
-            } else if (today > item.start - day * 3 && today < item.end) {
-                elmRankingEvent.append(
-                    DO.new(
-                        [
-                            '<p><a href="https://twitter.com/hashtag/',
-                            key,
-                            '" target="_blank">',
-                            item['name' + lang],
-                            '</a>',
-                            ' is comming at ',
-                            new Date(item.start).toLocaleDateString(),
-                            '</p>'
-                        ].join('')
-                    )
-                );
-            } else if (today < item.end + day * 7) {
-                elmRankingEvent.append(
-                    DO.new(
-                        [
-                            '<p><a href="https://twitter.com/hashtag/' + key,
-                            '" target="_blank">',
-                            item['name' + lang],
-                            '</a>',
-                            ' was finished at ',
-                            new Date(item.end).toLocaleDateString(),
-                            '</p>'
-                        ].join('')
-                    )
-                );
-            }
-        }
-    }
-
-    var elemCname = DO.q('#cname tbody').html('');
-    var elemThemePreset = DO.qid('theme_preset').html('');
-    var array_cname = getObjectArray(db.cname);
-    sortObjectArray(array_cname, 'name_en', true);
-    for (var i = 0; i < array_cname.length; i++) {
-        var item = array_cname[i];
-        elemCname.append(
-            DO.new(
-                [
-                    '<tr style="color:',
-                    item.color,
-                    '; background-color:',
-                    item.body,
-                    ';"><th>',
-                    item.name,
-                    item.nick && item.nick !== item.name ? '(' + item.nick + ')' : '',
-                    '</th><td style="background-image:linear-gradient(45deg,transparent 90%,',
-                    item.body,
-                    ' 90%,',
-                    item.body,
-                    '),linear-gradient(45deg,transparent 88%,',
-                    item.highlight,
-                    ' 88%,',
-                    item.highlight,
-                    '), linear-gradient(45deg,transparent 84%,',
-                    item.head,
-                    ' 84%,',
-                    item.head,
-                    ');">',
-                    item.name_en,
-                    item.nick_en && item.nick_en !== item.name_en ? '(' + item.nick_en + ')' : '',
-                    '</td></tr>',
-                    ''
-                ].join('')
-            )
-        );
-        var cn = item['name' + lang];
-        elemThemePreset.append(DO.new('<option value="' + item.id + '">' + cn + '</option>'));
-    }
-    elemThemePreset.value = config.theme.preset;
-    var elemGacha = DO.q('#gacha tbody').html('');
-    var array_group = getObjectArray(db.group);
-    sortObjectArray(array_group, 'group_date', true);
-    var mapperGroup = new Mapper(
-        '<tr><th class="icon"><i class="g%class%"></i></th><td class="short">%short% / %short_en%</td><td>%long% / %long_en%</td></tr>'
-    );
-    for (var i = 0; i < array_group.length; i++) {
-        var item = array_group[i];
-        var html = mapperGroup.map(item);
-        elemGacha.append(DO.new(html));
-    }
 }
 
 function getObjectArray(obj) {
@@ -197,7 +69,8 @@ function sortObjectArray(obj, key, asend) {
     }
 }
 
-function initPre() {
+function init() {
+    var db = DC.getData();
     //get lang
     var language =
         (window.navigator.languages && window.navigator.languages[0]) ||
@@ -208,20 +81,32 @@ function initPre() {
         lang = '';
     } else {
         lang = '_en';
+        // set help lang
+        DO.qid('help').href="/en/usage/"
     }
     DO.qid('ranking').focus();
 
+    // set theme list
+    var elemThemePreset = DO.qid('theme_preset').html('');
+    var array_cname = getObjectArray(db.cname);
+    sortObjectArray(array_cname, 'name_en', true);
+    for (var i = 0; i < array_cname.length; i++) {
+        var item = array_cname[i];
+        elemThemePreset.append(DO.new('<option value="' + item.id + '">' + item['name' + lang] + '</option>'));
+    }
     //init config
     config = store.get('config');
     if (config === undefined) {
         config = { wallpaper_url: '', wallpaper_effect: 'smoke' };
         store.set('config', config);
     }
+
     //set theme
     if (config.theme === undefined) {
         config.theme = getThemeConfig();
         store.set('config', config);
     }
+    elemThemePreset.value = config.theme.preset;
     setTheme(config.theme);
 
     //set wallpaper
@@ -239,18 +124,13 @@ function initPre() {
 
     showSidebar();
 
-    //set config ui events;
-    DO.qid('help_button').on('click', function(ev) {
-        DO.qid('help').classList.toggle('hidden');
-        ev.target.classList.toggle('on');
-        twttr.widgets.load(DO.q('.tips'));
-    });
     DO.qid('config_button').on('click', function(ev) {
         DO.qa('.config_bar').forEach(function(elem) {
             elem.classList.toggle('hidden');
         });
         ev.target.classList.toggle('on');
     });
+
     DO.qid('wallpaper').on('change', function(ev) {
         config.wallpaper_url = ev.target.value;
         setWallpaper(config.wallpaper_url);
@@ -290,10 +170,6 @@ function initPre() {
         showSidebar();
     });
     mapperInfo = new Mapper(DO.qid('item_info').innerHTML);
-}
-
-function initPost() {
-    var db = DC.getData();
 
     //create group icon css
     //set app icon
@@ -402,21 +278,22 @@ function setTheme(theme) {
         color: theme.color,
         'background-color': theme.body,
         'background-image':
-            'linear-gradient(45deg,transparent 90%,' +
+            'linear-gradient(45deg,transparent 88%,' +
             theme.body +
-            ' 90%,' +
-            theme.body +
-            '),linear-gradient(45deg,transparent 88%,' +
-            theme.highlight +
             ' 88%,' +
+            theme.body +
+            '),linear-gradient(45deg,transparent 86%,' +
             theme.highlight +
-            '), linear-gradient(45deg,transparent 84%,' +
+            ' 86%,' +
+            theme.highlight +
+            '), linear-gradient(45deg,transparent 82%,' +
             theme.head +
-            ' 84%,' +
+            ' 82%,' +
             theme.head +
             ')'
     });
-    DO.q('#header i.app').css('border-color', theme.body);
+    DO.qid('help').css({'border': '0.1em solid '+theme.color});
+    DO.q('#header i.app').css({'border-color': theme.body});    
     DO.qid('footer').css({ color: theme.color, 'background-color': theme.body });
 }
 
@@ -632,6 +509,7 @@ function showRanking() {
         var dcv = ranking[i];
         if (
             filter.lv[dcv.sv.lv] &&
+            filter.s[dcv.sv.c.rarity] &&
             filter.r[dcv.sv.r] &&
             filter.type[dcv.sv.c.type.id] &&
             match(dcv.sv.c.meta, filter.keyword)
@@ -666,7 +544,7 @@ function showRanking() {
 }
 
 function getFilter() {
-    var filter = { lv: {}, r: {}, type: {} };
+    var filter = { lv: {}, s:{},r: {}, type: {} };
     DO.qa('.filter input').forEach(function(item) {
         if (item.name === 'keyword') {
             filter.keyword = item.value;

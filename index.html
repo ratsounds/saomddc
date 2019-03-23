@@ -9,18 +9,21 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <base target="_top">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="initial-scale=1.0,width=device-width, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no,shrink-to-fit=no" />
+    <meta name="viewport"
+        content="initial-scale=1.0,width=device-width, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no,shrink-to-fit=no" />
 
     <!-- Primary Meta Tags -->
     <title>SAOMD: Damage Calculator / メモデフ:火力計算機</title>
     <meta name="title" content="SAOMD: Damage Calculator / メモデフ:火力計算機" />
-    <meta name="description" content="メモデフ 火力計算機 : Unofficial Damage Calculator for Sword Art Online : Memory Defrag (SAOMD) : Don't worry, this is ratsounds' strategy guide." />
+    <meta name="description"
+        content="メモデフ 火力計算機 : Unofficial Damage Calculator for Sword Art Online : Memory Defrag (SAOMD) : Don't worry, this is ratsounds' strategy guide." />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ratsounds.github.io/saomddc/" />
     <meta property="og:title" content="SAOMD: Damage Calculator / メモデフ:火力計算機" />
-    <meta property="og:description" content="メモデフ 火力計算機 : Unofficial Damage Calculator for Sword Art Online : Memory Defrag (SAOMD) : Don't worry, this is ratsounds' strategy guide." />
+    <meta property="og:description"
+        content="メモデフ 火力計算機 : Unofficial Damage Calculator for Sword Art Online : Memory Defrag (SAOMD) : Don't worry, this is ratsounds' strategy guide." />
     <meta property="og:image" content="https://ratsounds.github.io/saomddc/image/ss.jpg" />
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -33,7 +36,8 @@
 <body>
     <div id="header">
         <i class="app"></i>
-        <p>SAOMD Damage Calculator</p>
+        <p id="title">SAO:MD:DC</p>
+        <a id="help" href="/ja/usage/">Help</a>
     </div>
     <div id="main" class="smoke">
         <div id="control">
@@ -648,9 +652,14 @@
                     <label for="r4" class="r4 button"></label>
                     <input id="r5" type="checkbox" name="r" value="5">
                     <label for="r5" class="r5 button"></label>
+                    <input id="s4" type="checkbox" name="s" value="4" checked>
+                    <label for="s4" class="s4 button"></label>
+                    <input id="s5" type="checkbox" name="s" value="5" checked>
+                    <label for="s5" class="s5 button"></label>
+                    <input id="s6" type="checkbox" name="s" value="6" checked>
+                    <label for="s6" class="s6 button"></label>
                 </div>
                 <div class="config_panel">
-                    <button id="help_button" class="help_icon"></button>
                     <button id="config_button" class="config"></button>
                 </div>
             </div>
@@ -693,14 +702,16 @@
     <div id="footer">
         <p>Don&rsquo;t worry, this is
             <span class="argo">(&lsquo; ω &lsquo;ミ)</span>&rsquo;s guidebook.</p>
-        <a href="https://twitter.com/ratsounds" class="twitter-follow-button" data-show-count="false">Follow @ratsounds</a>
+        <a href="https://twitter.com/ratsounds" class="twitter-follow-button" data-show-count="false">Follow
+            @ratsounds</a>
     </div>
 
     <template id="item_info">
         <div class="item" id="%id%">
             <div class="rank">%rank%</div>
             <div class="info">
-                <div class="header" style="background-image: linear-gradient( 90deg, %color% %p_dps%\%, transparent 0\% ),linear-gradient( 90deg, %color% %p_damage%\%, transparent 0\% ),linear-gradient( 90deg, %color% %p_capacity%\%, transparent 0\% ),linear-gradient( -45deg, rgba(0,0,0,0.5) %video%\%, transparent 0\% );">
+                <div class="header"
+                    style="background-image: linear-gradient( 90deg, %color% %p_dps%\%, transparent 0\% ),linear-gradient( 90deg, %color% %p_damage%\%, transparent 0\% ),linear-gradient( 90deg, %color% %p_capacity%\%, transparent 0\% ),linear-gradient( -45deg, rgba(0,0,0,0.5) %video%\%, transparent 0\% );">
                     <i class="level l%sv.lv%"></i>
                     <i class="rarelity r%sv.r%"></i>
                     <i class="type %sv.c.type.id%"></i>
