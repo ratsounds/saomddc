@@ -82,7 +82,7 @@ function init() {
     } else {
         lang = '_en';
         // set help lang
-        DO.qid('help').href="/en/usage/"
+        DO.qid('help').href="en/usage/"
     }
     DO.qid('ranking').focus();
 
