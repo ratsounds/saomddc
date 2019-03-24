@@ -5,33 +5,172 @@ permalink: /en/usage/
 lang: en
 order: 10
 ---
-## Simplest Usage
+
+## Quick Usage
 1. Choose Boss Preset.
-2. Choose Metrics.
-3. Check Filter if you need.
-4. See Unit List.
+1. Choose Metrics.
+1. Check Filter if you need.
+1. Verify Unit List.
+
+![Quick Help](../images/quick_help.jpg)
 
 ## Unit List & Metrics
-### Unit Indicator
-![Metrics Indicator](/image/saomd%20dc%20help.jpg)
+### Unit List & Indicator
+Unit List is sorted by metrics selected by drop-down list at top right.
+Refer [Unit Metrics](#unit%20metrics) for the description for each metric.
+Unit information is consist of Level, Weapon Rarity, Weapon Type and [Banner Icons](#banners) and the gradient colored Unit Indicator for damage specs. Shown number is value of selected metric.
 
-### キャラの評価基準 (Character Metrics)
-> |Metric|Formula|Description|
-> |:--|:--|:--|
-> |Duration|||
-> |CSec|||
-> |C/2 Duration|||
-> |Duration Gap|||
-> |DPS|||
-> |CDPS|||
-> |C/2 DPS|||
-> |DPM|||
-> |Capacity|||
+![Metrics Indicator](../images/metrics_indicator.jpg)
+
+Unit Indicator intuitively shows the characteristics of damage specs other than selected metrics.
+For example in next figure, 
+SC Kirito always stays on 1st place under the list sorted by Damage but, from indicator, you can see DPS is lower than other units and SC Kirito is not good at ranking events due to low DPS. 
+In another case on comparison of Band Leafa and Will Eugeo, Damage output is almost same but acceleration and max mp 6 star unit advantages can be seen from the difference of DPS and Capacity.
+
+![Metrics Comparison](../images/metrics_comparison.jpg)
+Detail information is opened by clicking Unit Indicator.
+Small black triangle at bottom right shows the existence of [SS3 video](https://twitter.com/search?src=typd&q=%23S3%E7%99%BA%E5%8B%95%E6%99%82%E9%96%93).
+
+![Detail Top](../images/detail_top.jpg)
+
+### Unit Metrics
+メモデフのランキングイベントは「出来る限り早くボスを倒すゲーム」であることが多く、キャラを評価する上でスキル単発のダメージ量だけでなくモーションの時間的な長さ(Duration)を考慮したDPS(Damage Per Second:1秒あたりの与ダメージ)が最も重要である。メモデフは★５実装以降、連携によりあるスキルの途中で別のキャラのスキルを発動可能になった為、これらも考慮してDPSを計算する必要がある。火力計算機ではこれらのDPSを計算する為に、独自の時間長を示す変数を定義している。時間長やダメージ計算の仕様と、代表的なキャラの評価基準の説明は以降で記する。
+
+ランイベ等で応用するなら、C/2 DPSを見ることで大雑把にキャラの強さを測ることができるので、まずはC/2 DPSをみてキャラ選びをした後、火力が足らなければDamageを参照して選び直したり、Duration GapとDurationを参照して連携順を最適化したりする。
+
+#### 時間長(Duration)の仕様
+次の図は青と赤のキャラで青赤赤青で折り返し4連携した場合の時間的流れと、キャラが持つパラメータを可視化したものである。
+
+![Durations](../images/durations.png)
+
+Durationがスキル全体の時間長を示し、CSec(Combination Second)がスキル発動を基準として連携可能になる時間である。DurationとCSecはキャラ毎に個別の値が設定されており、軽微な処理落ちを除き固定である。特に連携世代以降のキャラ性能評価で重要なのはC/2 Durationとこれを基にしたDPS(C/2 DPS)である。C/2はCombination or Twiceの略で、C/2 Durationは★5以上なら連携★4なら2連発した時の時間長を示す。より直感的な理解の為に先の連携時の時間的流れの図を参照のこと。
+
+★6以降ではアクセラレーションによるゲーム内時間の時間短縮が加わったことがら、アクセラレーションの時間長もデータとして参照している。アクセラレーションはゲーム内時間を実時間の1/3に短縮し、アクセラレーション時間は連携と同様スキル発動から固定の時間長に設定されている。したがって、ゲーム内でのDurationとCSecは以下のようにして計算できる。
+
+$$
+\begin{aligned}
+{Duration_{ingame}}&={Accel}/3+Duration_{realtime}-{Accel}
+\\
+{CSec_{ingame}}&=
+\begin{cases}
+{CSec_{realtime}}<{Accel} &CSec_{realtime}/3
+\\
+{CSec_{realtime}}>{Accel} &{Accel}/3+CSec_{realtime}-{Accel}
+\end{cases}
+\end{aligned}
+$$
+
+DPS計算ではゲーム内時間を基本としているが、画面右上のトグルスイッチによりゲーム内と実時間の切り替えが可能である。
+
+![Setting Time](../images/setting_time.jpg)
+
+#### ダメージ計算の仕様
+ダメージは設定パネル下部の武器装備設定の範囲で最も攻撃力が高くなる装備をした状態で計算される。したがって、ボスのHPが増加し最大MPが重要なパラメータとなる現環境では実際の与ダメージよりやや高い計算結果となる。装備中の武器や防具はインジケータをクリックして詳細を表示すると確認することができる。なお、防具やアクセサリも最も攻撃力が高くなるものが選択されるが、武器無しを選択した場合のみ防具とアクセサリも無しの状態で計算される。
+
+![Setting Equip](../images/setting_equip.jpg)
+
+DefaultおよびDefault 50Hitプリセット等のように属性無視に設定した場合は、特定の属性のボスに対して効果を発揮するようなBSも全て考慮して計算される。
+
+#### 代表的な評価基準の説明
+
+|基準|説明|
+|:--|:--|
+|Duration|スキル発動からスキルの硬直が解けて動けるようになるまでの時間長で、モーションの速さの基準。|
+|CSec|スキル発動から連携可能になるまでの時間長で、連携の速さの基準。|
+|C/2 Duration|DurationとCSecを加算した値で、例えば連携可能なAとBの2キャラでABBAの折返し4連携をした時のAとBのスキル時間長。連携を考慮した総合的な速さの基準。連携可能でないキャラの場合はスキルを二連発した時の値（=${Duration}\times2$）になる。|
+|Duration Gap|DurationとCSecの差分で、Gapが大きいほど連携元にした場合の時間短縮が得られることから、連携元適正の基準値になる。また、連携後に連携元キャラが画面に残っている時間の近似になる(画面に残っている時間はDuration Gapにステップで画面外へ出るモーションの時間長を足した長さ)。基本的にはDuration Gapが大きい方を連携元にしたほうが早くなる。|
+|Damage|与ダメージ。火力の評価基準。|
+|DPS|単位時間(1sec)あたりの与ダメージで、ランイベ適正の評価基準。連携世代以降はC/2 DPSを参照するのが望ましい。|
+|CDPS|連携元にした場合のみなしDPSで、パリィ戦略向けランイベ適正の評価基準。連携までに全てのダメージを与えているとみなした場合のDPSなので注意。|
+|C/2 DPS|C/2 Durationを基にしたみなしDPSで、ランイベ適正の汎用的な評価基準。ABBAの折返し4連携でのDPSの高さと理解して良い。|
+|DPM|単位時間(1min)あたりの与ダメージで、ギルラン適正の評価基準。MPが有る場合はスキルを撃ち、MPが足りない場合は通常攻撃1セットでMP回復するを1分間繰り返した場合の与ダメージ。|
+|Capacity|MP回復無しでMPを使い切るまでスキルを撃った場合の総与ダメージの近似で、硬いボスに対する適正の基準値。例えば同じMP消費100でMP総量390と300のキャラでは、明確に硬いボスに対する適正が異なることから、計算上は3.7回のように小数点以下を持つ回数で乗算する。|
+
+#### 代表的な評価基準の計算方法
+
+|基準|計算方法|
+|:--|:--|:--|
+|Duration|${Duration}$|
+|CSec|${CSec}$|
+|C/2 Duration|$$\begin{aligned} \begin{cases} ★6,★5 & {Duration}+{CSec} \\ otherwise & {Duration}\times2\end{cases} \end{aligned}$$|
+|Duration Gap|${Duration}-{CSec}$|
+|Damage|${Damage}$|
+|DPS|${Damage}/{Duration}$|
+|CDPS|${Damage}/{CSec}$|
+|C/2 DPS|$2\cdot{Damage}/{\it C2Duration}$|
+|DPM|${Damage}\cdot{\it SS3TimesPer60s}$, ここで${\it SS3TimesPer60s}$ is calculated from duration of normal attacks and mp recovery |
+|Capacity|${Damage}\cdot{MP_{max}}/{MP_{cost}}$|
 
 ## Boss Presets & Settings
-![Boss Setting](/image/saomd%20dc%20help.jpg)
+与ダメージはボスの属性とキャラの属性相性や、防御力、特殊な特攻や耐性によって変化することから適切に設定することでより正しくキャラの有利不利を知ることが出来る。一方でその設定は多岐に渡る為、典型的なボスや最新のランイベ用のプリセットを用意している。まずはプリセットの設定内容を確認しながら、各種ボスのパラメータ設定に慣れると良い。
+
+特にアクセス頻度が高いのは設定パネル最上段のデバフとバフ、コンボ関連の設定なのでまずはここだけでも設定できるようにすると良い。
+
+### 防御力とデバフの設定
+防御は詳細な調査が必要なのでプリセットを参照するのが良い。自分で防御力を測定する場合は[防御の測定](knowledge#防御の測定)を参照のこと。デバフはデバフがかった状態で火力の出せるキャラを探す場合に設定する。デバフの値は防御力の減少率なので、値が高いほどダメージ増加効果が高いことに注意する。
+
+![Setting DEF](../images/setting_def.jpg)
+
+### 攻撃力とバフの設定
+全体バフや連携バフを受けた状態で火力の出せるキャラを探す場合に設定する。このとき自己攻撃バフを持つキャラは設定した攻撃バフと効果の高い方が優先して計算される。また、自己/全体攻撃バフと範囲バフは重複して効果を発揮する。
+
+![Setting ATK](../images/setting_atk.jpg)
+
+### コンボ補正の設定
+スキル使用時のコンボヒット数を設定する。コンボによる補正はダメージだけではなく双剣などのようなコンボ加速によるDuration減少も計算されるのでDPS等に変化がある。特に最近のランイベでは開始からコンボを稼ぎ継続する戦略が主流なため設定する機会が多い。
+
+![Setting Combo](../images/setting_combo.jpg)
+
+### 設定項目一覧
+
+|項目|設定の説明|
+|:--:|:--|
+|![def](../../icons/def.png)|ボスの防御。最近のランイベでは700前後が多い。デバフ接待の場合は4000前後。|
+|![buff](../../icons/buff.png)|全体攻撃バフ。詳しくは[代表的な攻撃力バフとデバフの効果](#代表的な攻撃力バフとデバフの効果)を参照のこと。|
+|![cbuff](../../icons/cbuff.png)|範囲攻撃バフ。詳しくは[代表的な攻撃力バフとデバフの効果](#代表的な攻撃力バフとデバフの効果)を参照のこと。|
+|![gcrit](../../icons/gcrit.png)|クリティカルダメージアップ。現状確認されているのはダメージ+10％効果のみ。|
+|![debuff](../../icons/debuff.png)|デバフによる防御減少率。詳しくは[代表的な攻撃力バフとデバフの効果](#代表的な攻撃力バフとデバフの効果)を参照のこと。|
+|![combo](../../icons/combo.png)|コンボ数を設定する。ダメージ補正とコンボ加速によるDuration減少が計算される。|
+|![exelem](../../icons/exelement.png)|追加属性補正。ボス属性とキャラ属性の主属性相性補正は上段の属性設定により一律+50/-25％の補正がかかっている。|
+|![red weak](../../icons/rweak.png)|赤Weakが表示される時のような、パリィボーナスやスタンボーナス補正。|
+|![etc](../../icons/etcmod.png)|その他のダメージ補正。一般的には通常殴りでresist表示になる時にダメージ耐性を設定する。|
+|![gurad](../../icons/guard.png)|ランイベ等での常時ガードを持つボスの場合の補正。だいたい3固定。|
+|![rank acc](../../icons/racc.png)|ランキングアクセサリによるダメージ補正。なおアクセサリは厳密な計算をしておらず、最も攻撃力が高くなるアクセサリで且つこの設定によるランキングアクセサリの補正が加算される。|
+|![trophy](../../icons/trophy.png)|称号による攻撃力補正。|
+|![ls](../../icons/ls.png)|リーダースキルとサブリーダースキルによる攻撃力補正。|
+
+### 代表的な攻撃力バフとデバフの効果
+
+|種類|攻撃力補正|防御補正|補足|
+|--|:--:|:--:|--|
+|強連携バフ|33%||強化済み連携バフキャラ|
+|中連携バフ|27%||報酬連携バフキャラ|
+|連携バフ|21%||強化前連携バフキャラ|
+|強化チア|27%||強化後チアキャラ|
+|強全体バフ|21%||強化前チア、★6全体バフキャラ|
+|強範囲バフ|21%||★6範囲バフキャラ|
+|全体バフ|16%|||
+|範囲バフ|16%|||
+|海賊バフ|16%|52％|海賊キャラ|
+|デバフ||44％||
+|中デバフ||34％|土ユウキ|
+|強デバフ||29％|強化済みコスプレキャラ|
 
 ## App Configurations
-![App Configurations](/image/saomd%20dc%20help.jpg)
+設定パネル右下のトグルスイッチでアプリ設定パネルが表示できる。設定項目はブラウザ毎に保存される。
+
+![App Config](../images/config.jpg)
+
+|項目|説明|
+|:--:|:--|
+|![wallpaper](../../icons/wallpaper.png)|壁紙設定。左側に画像のURLを指定。右側はエフェクトを選択。エフェクトはMistで全体的に白く、Smokeで黒くしコントラストを下げることで視認性が上がる。また低解像度の壁紙を利用する場合はLineやGridにすると良い。|
+|![ls](../../icons/theme.png)|テーマのプリセット。テーマと言っても最上部のタイトルバーの色だけ。プリセットの一覧は[Characters](#characters)を参照。|
+|![ls](../../icons/theme_color.png)|タイトルバーの文字色。|
+|![ls](../../icons/theme_body.png)|タイトルバー背景色。|
+|![ls](../../icons/theme_head.png)|タイトルバーのハイライトその１。|
+|![ls](../../icons/theme_highlight.png)|タイトルバーのハイライトその２。|
+|![ls](../../icons/info_icon.png)|PC等横長の画面の場合にサイドバーで指定したURLを表示することができる。お知らせを設定するのがおすすめ。メモデフお知らせ([日本語版](https://api-defrag.wrightflyer.net/webview/announcement?phone_type=2) : [英語版](https://api-defrag-ap.wrightflyer.net/webview/announcement?phone_type=2&lang=en))|
+
+{% include data.md %}
 
 

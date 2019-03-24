@@ -26,7 +26,7 @@ index: true
 
 ![Metrics Comparison](../images/metrics_comparison.jpg)
 
-キャラリストのインジケータをクリックすると詳細を確認することができる。インジケータ右下に黒三角が付いているキャラは詳細でスキルの動画があるキャラである。
+キャラリストのインジケータをクリックすると詳細を確認することができる。インジケータ右下に黒三角が付いているキャラは詳細で[スキルの動画](https://twitter.com/search?src=typd&q=%23S3%E7%99%BA%E5%8B%95%E6%99%82%E9%96%93)があるキャラである。
 
 ![Detail Top](../images/detail_top.jpg)
 
@@ -74,12 +74,12 @@ DefaultおよびDefault 50Hitプリセット等のように属性無視に設定
 |:--|:--|
 |Duration|スキル発動からスキルの硬直が解けて動けるようになるまでの時間長で、モーションの速さの基準。|
 |CSec|スキル発動から連携可能になるまでの時間長で、連携の速さの基準。|
-|C/2 Duration|DurationとCSecを加算した値で、例えば連携可能なAとBの2キャラでABBAの折返し4連携をした時のAとBのスキル時間長。連携を考慮した総合的な速さの基準。連携可能でないキャラの場合はスキルを二連発した時の値（=${Duration}\times2$）になる。|
-|Duration Gap|DurationとCSecの差分で、Gapが大きいほど連携元にした場合の時間短縮が得られることから、連携元適正の基準値になる。また、連携後に連携元キャラが画面に残っている時間の近似になる(画面に残っている時間はDuration Gapにステップで画面外へ出るモーションの時間長を足した長さ)。基本的にはDuration Gapが大きい方を連携元にしたほうが早くなる。|
+|C/2&nbsp;Duration|DurationとCSecを加算した値で、例えば連携可能なAとBの2キャラでABBAの折返し4連携をした時のAとBのスキル時間長。連携を考慮した総合的な速さの基準。連携可能でないキャラの場合はスキルを二連発した時の値（=${Duration}\times2$）になる。|
+|Duration&nbsp;Gap|DurationとCSecの差分で、Gapが大きいほど連携元にした場合の時間短縮が得られることから、連携元適正の基準値になる。また、連携後に連携元キャラが画面に残っている時間の近似になる(画面に残っている時間はDuration Gapにステップで画面外へ出るモーションの時間長を足した長さ)。基本的にはDuration Gapが大きい方を連携元にしたほうが早くなる。|
 |Damage|与ダメージ。火力の評価基準。|
 |DPS|単位時間(1sec)あたりの与ダメージで、ランイベ適正の評価基準。連携世代以降はC/2 DPSを参照するのが望ましい。|
 |CDPS|連携元にした場合のみなしDPSで、パリィ戦略向けランイベ適正の評価基準。連携までに全てのダメージを与えているとみなした場合のDPSなので注意。|
-|C/2 DPS|C/2 Durationを基にしたみなしDPSで、ランイベ適正の汎用的な評価基準。ABBAの折返し4連携でのDPSの高さと理解して良い。|
+|C/2&nbsp;DPS|C/2 Durationを基にしたみなしDPSで、ランイベ適正の汎用的な評価基準。ABBAの折返し4連携でのDPSの高さと理解して良い。|
 |DPM|単位時間(1min)あたりの与ダメージで、ギルラン適正の評価基準。MPが有る場合はスキルを撃ち、MPが足りない場合は通常攻撃1セットでMP回復するを1分間繰り返した場合の与ダメージ。|
 |Capacity|MP回復無しでMPを使い切るまでスキルを撃った場合の総与ダメージの近似で、硬いボスに対する適正の基準値。例えば同じMP消費100でMP総量390と300のキャラでは、明確に硬いボスに対する適正が異なることから、計算上は3.7回のように小数点以下を持つ回数で乗算する。|
 
@@ -89,12 +89,12 @@ DefaultおよびDefault 50Hitプリセット等のように属性無視に設定
 |:--|:--|:--|
 |Duration|${Duration}$|
 |CSec|${CSec}$|
-|C/2 Duration|$$\begin{aligned} \begin{cases} ★6,★5 & {Duration}+{CSec} \\ otherwise & {Duration}\times2\end{cases} \end{aligned}$$|
-|Duration Gap|${Duration}-{CSec}$|
+|C/2&nbsp;Duration|$$\begin{aligned} \begin{cases} ★6,★5 & {Duration}+{CSec} \\ otherwise & {Duration}\times2\end{cases} \end{aligned}$$|
+|Duration&nbsp;Gap|${Duration}-{CSec}$|
 |Damage|${Damage}$|
 |DPS|${Damage}/{Duration}$|
 |CDPS|${Damage}/{CSec}$|
-|C/2 DPS|$2\cdot{Damage}/{\it C2Duration}$|
+|C/2&nbsp;DPS|$2\cdot{Damage}/{\it C2Duration}$|
 |DPM|${Damage}\cdot{\it SS3TimesPer60s}$, ここで${\it SS3TimesPer60s}$は通常攻撃の時間長とMP回復量を考慮して計算 |
 |Capacity|${Damage}\cdot{MP_{max}}/{MP_{cost}}$|
 
