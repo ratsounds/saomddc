@@ -99,3 +99,23 @@ ul {
 .MathJax_SVG_Display > .MathJax_SVG > svg{
   max-width: 100%;
 }
+
+#search {
+  float: right;
+}
+#search > i{
+  font-size: medium;
+}
+#keyword{
+  border:none;
+  padding: 0.5em;
+  background-color: transparent;
+  outline: none;
+}
+
+.post-content > h3.hidden{
+  display: none;
+}
+.post-content > h3.hidden + blockquote{
+  display: none;
+}

@@ -1,1 +1,50 @@
-<div> inc test</div>
+<script>
+    const Search = (function() {
+        let keyword;
+        const items = [];
+
+        function init(keyword_input) {
+            loadContents();
+            keyword = document.getElementById('keyword');
+            keyword.addEventListener('input', search);
+        }
+
+        function loadContents() {
+            const headers = document.querySelectorAll('.post-content > h3')
+            Array.prototype.forEach.call(headers, (header) => {
+                const item = {
+                    header: header,
+                    content: header.nextElementSibling,
+                }
+                item.text = item.header.innerText.toLowerCase().trim() + item.content.innerText.toLowerCase().trim();
+                items.push(item);
+            });
+        }
+
+        function search() {
+            const key = keyword.value.toLowerCase().trim();
+            for (let item of items) {
+                if (item.text.indexOf(key) >= 0) {
+                    item.header.classList.remove('hidden');
+                }
+                else {
+                    item.header.classList.add('hidden')
+                }
+            }
+        }
+
+        return {
+            init: init,
+        }
+    })();
+
+    if (window.addEventListener) {
+        window.addEventListener('load', Search.init, false);
+    }
+    else if (window.attachEvent) {
+        window.attachEvent('onload', Search.init);
+    }
+    else {
+        window.onload = Search.init;
+    }
+</script>
