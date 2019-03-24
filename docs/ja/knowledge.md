@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Knowledge
-permalink: /ja/knowlede/
+permalink: /ja/knowledge/
 mathjax: true
 lang: ja
 order: 40
