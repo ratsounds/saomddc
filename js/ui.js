@@ -396,13 +396,15 @@ function calcRanking() {
                     dcv.acceleration_offset = 1.0;
                 }
             }
+            var isChargeSkill = dcv.sv.c.group.id.indexOf('c3') > 0;
             var dca_x = getDCA(
                 dcv.sv.c.s3_duration,
                 dcv.sv.c.s3_c_duration,
                 dcv.sv.c.s3_acceleration,
                 dcv.combo_speed_rate,
                 dcv.acceleration_rate,
-                dcv.acceleration_offset
+                dcv.acceleration_offset,
+                isChargeSkill
             );
             dcv.duration = dca_x.duration;
             dcv.cduration = dca_x.combination;
@@ -414,7 +416,8 @@ function calcRanking() {
                 dcv.sv.c.s3_acceleration,
                 getComboSpeedRate(dcv.sv.c.combo_speed, 50),
                 dcv.acceleration_rate,
-                dcv.acceleration_offset
+                dcv.acceleration_offset,
+                isChargeSkill
             );
             dcv.duration_50 = dca_50.duration;
             dcv.cduration_50 = dca_50.combination;
@@ -450,7 +453,7 @@ function calcRanking() {
     //console.log('ranking',ranking);
 }
 
-function getDCA(duration, combination, acceleration, speed_rate, acceleration_rate, acceleration_offset) {
+function getDCA(duration, combination, acceleration, speed_rate, acceleration_rate, acceleration_offset, isChargeSkill) {
     var dca = {};
     if (duration > acceleration) {
         dca.duration = speed_rate * (duration - acceleration + acceleration / acceleration_rate) + acceleration_offset;
@@ -468,6 +471,10 @@ function getDCA(duration, combination, acceleration, speed_rate, acceleration_ra
         dca.combination = Infinity;
     }
     dca.acceleration = acceleration * speed_rate;
+    if(isChargeSkill){
+        dca.duration+=1;
+        dca.combination+=1;
+    }
     return dca;
 }
 
