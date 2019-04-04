@@ -245,7 +245,7 @@ search: true
 > [チャージスキル](#チャージスキル-charge-skill)を連携キャンセルすることによりチャージレベルを次のスキルまで継続すること。チャージスキルのリセットがスキルのモーション終了時なようで、連携キャンセルするとチャージレベルがリセットされない為、チャージレベルが次のスキルまで継続する。[高速スイッチバック](#高速スイッチバック-anim-skip-aba)と相性が良い。
 > <blockquote class="twitter-tweet"><a href="https://twitter.com/ratsounds/status/1113462968983756800">[ref]</a></blockquote>
 
-### パリィ溜めキャン (Parry Charging Cancel)
+### パリィ溜めキャン (Charging Parry Cancel)
 > パリィモーションの後半はチャージスキルの「溜めモーション」でキャンセル可能。パリィ入力から早めにS3ボタンを押すことでパリィ直後にスキル発動が可能。槍や杖のパリィキャンセルと同様、早すぎるとスキルが当たらない。
 > <blockquote class="twitter-tweet"><a href="https://twitter.com/ratsounds/status/1113645771201507329">[ref]</a></blockquote>
 
