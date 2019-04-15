@@ -146,10 +146,12 @@ class|short|short_en|long|long_en
 ![guni.png](../../icons/guni.png)|修剣|Uniform|修剣士制服と異世界の剣士たち 〜アスナとユウキ〜|Swordsman in School Uniform - Asuna & Yuuki -
 ![geye.png](../../icons/geye.png)|眼帯|Eyepatch|アニメクライマックス記念|Anime Climax Special
 ![guni.png](../../icons/guni.png)|修剣|Uniform|修剣士制服と異世界の勇士たち 〜シノンとレイン|Swordsman in School Uniform～Sinon & Rain
-![gsto.png](../../icons/gsto.png)|添寝|STO|夢見のチケット|Sleeping Together Ticket
-![gsto.png](../../icons/gsto.png)|添寝|STO|ふわふわSweetDreams|Sweet Happy Dreams
-![gstom.png](../../icons/gstom.png)|添寝C3|STOC3|ふわふわSweetDreams|Sweet Happy Dreams
+![gsto.png](../../icons/gsto.png)|添寝|STO|夢見のチケット - Sleeping Together Online|Sleeping Together Ticket - Sleeping Together Online
+![gsto.png](../../icons/gsto.png)|添寝|STO|ふわふわSweetDreams - Sleeping Together Online|Sweet Happy Dreams - Sleeping Together Online
+![gstom.png](../../icons/gstom.png)|添寝C3|STOC3|ふわふわSweetDreams - Sleeping Together Online|Sweet Happy Dreams - Sleeping Together Online
 ![gtree.png](../../icons/gtree.png)|世界樹|WTree|世界樹の上の再会|Reunion at the World Tree
+![gsto.png](../../icons/gsto.png)|添寝|STO|うたた寝StarryNight - Sleeping Together Online|Catnap on a Starry Night - Sleeping Together Online
+![gstom.png](../../icons/gstom.png)|添寝C3|STOC3|うたた寝StarryNight - Sleeping Together Online|Catnap on a Starry Night - Sleeping Together Online
 
 ## Characters
 
@@ -203,4 +205,5 @@ name|name_en|color
 ファナティオ|Fanatio|<span class="color-box" style="color:#fff; background-color:#70428e;background-image:linear-gradient(45deg,transparent 90%,#70428e 90%,#70428e),linear-gradient(45deg,transparent 88%,#efe8f7 88%,#efe8f7), linear-gradient(45deg,transparent 84%,#493b5f 84%,#493b5f);">__theme__</span>
 ベルクーリ|Bercouli|<span class="color-box" style="color:#fff; background-color:#567ca1;background-image:linear-gradient(45deg,transparent 90%,#567ca1 90%,#567ca1),linear-gradient(45deg,transparent 88%,#729aae 88%,#729aae), linear-gradient(45deg,transparent 84%,#729aae 84%,#729aae);">__theme__</span>
 アドミン|Administrator|<span class="color-box" style="color:#381852; background-color:#ffe5df;background-image:linear-gradient(45deg,transparent 90%,#ffe5df 90%,#ffe5df),linear-gradient(45deg,transparent 88%,#f6f6f8 88%,#f6f6f8), linear-gradient(45deg,transparent 84%,#ecd7fe 84%,#ecd7fe);">__theme__</span>
+クイネラ|Quinella|<span class="color-box" style="color:#381852; background-color:#ffe5df;background-image:linear-gradient(45deg,transparent 90%,#ffe5df 90%,#ffe5df),linear-gradient(45deg,transparent 88%,#f6f6f8 88%,#f6f6f8), linear-gradient(45deg,transparent 84%,#ecd7fe 84%,#ecd7fe);">__theme__</span>
 
