@@ -1,13 +1,39 @@
-var lvr = [
-    { lv: 80, r: 0 },
-    { lv: 80, r: 4 },
-    { lv: 80, r: 5 },
-    { lv: 90, r: 0 },
-    { lv: 90, r: 4 },
-    { lv: 90, r: 5 },
-    { lv: 100, r: 0 },
-    { lv: 100, r: 4 },
-    { lv: 100, r: 5 }
+var lvr = [{
+        lv: 80,
+        r: 0
+    },
+    {
+        lv: 80,
+        r: 4
+    },
+    {
+        lv: 80,
+        r: 5
+    },
+    {
+        lv: 90,
+        r: 0
+    },
+    {
+        lv: 90,
+        r: 4
+    },
+    {
+        lv: 90,
+        r: 5
+    },
+    {
+        lv: 100,
+        r: 0
+    },
+    {
+        lv: 100,
+        r: 4
+    },
+    {
+        lv: 100,
+        r: 5
+    }
 ];
 var ranking;
 var boss;
@@ -17,22 +43,24 @@ var elemSort;
 var config;
 var mapperInfo;
 
-DO.onLoad(function() {
+DO.onLoad(function () {
     loadDBFromFile('data/data.json', init);
 });
 
 function loadDBFromFile(url, callback) {
-    fetch(url, { method: 'GET' })
+    fetch(url, {
+            method: 'GET'
+        })
         //.then(function (response) { return response.json() })
-        .then(function(response) {
+        .then(function (response) {
             return response.text();
         })
-        .then(function(text) {
+        .then(function (text) {
             return JSON.parse(text);
         })
         .then(DC.loadData)
         .then(callback)
-        .catch(function(error) {
+        .catch(function (error) {
             console.log(error);
         });
 }
@@ -47,7 +75,7 @@ function getObjectArray(obj) {
 
 function sortObjectArray(obj, key, asend) {
     if (asend) {
-        obj.sort(function(a, b) {
+        obj.sort(function (a, b) {
             if (a[key] < b[key]) {
                 return -1;
             }
@@ -57,7 +85,7 @@ function sortObjectArray(obj, key, asend) {
             return 0;
         });
     } else {
-        obj.sort(function(a, b) {
+        obj.sort(function (a, b) {
             if (a[key] > b[key]) {
                 return -1;
             }
@@ -82,7 +110,7 @@ function init() {
     } else {
         lang = '_en';
         // set help lang
-        DO.qid('help').href="en/usage/"
+        DO.qid('help').href = "en/usage/"
     }
     DO.qid('ranking').focus();
 
@@ -97,7 +125,10 @@ function init() {
     //init config
     config = store.get('config');
     if (config === undefined) {
-        config = { wallpaper_url: '', wallpaper_effect: 'smoke' };
+        config = {
+            wallpaper_url: '',
+            wallpaper_effect: 'smoke'
+        };
         store.set('config', config);
     }
 
@@ -124,31 +155,31 @@ function init() {
 
     showSidebar();
 
-    DO.qid('config_button').on('click', function(ev) {
-        DO.qa('.config_bar').forEach(function(elem) {
+    DO.qid('config_button').on('click', function (ev) {
+        DO.qa('.config_bar').forEach(function (elem) {
             elem.classList.toggle('hidden');
         });
         ev.target.classList.toggle('on');
     });
 
-    DO.qid('wallpaper').on('change', function(ev) {
+    DO.qid('wallpaper').on('change', function (ev) {
         config.wallpaper_url = ev.target.value;
         setWallpaper(config.wallpaper_url);
         store.set('config', config);
     });
-    DO.qid('effect').on('change', function(ev) {
+    DO.qid('effect').on('change', function (ev) {
         config.wallpaper_effect = ev.target.value;
         DO.qid('main').className = config.wallpaper_effect;
         store.set('config', config);
     });
-    DO.qa('.theme_value').forEach(function(elem) {
-        elem.on('change', function(ev) {
+    DO.qa('.theme_value').forEach(function (elem) {
+        elem.on('change', function (ev) {
             config.theme = getThemeConfig();
             setTheme(config.theme);
             store.set('config', config);
         });
     });
-    DO.qid('theme_preset').on('change', function(ev) {
+    DO.qid('theme_preset').on('change', function (ev) {
         var cn = DC.getCname()[ev.target.value];
         if (cn) {
             DO.qid('theme_color').value = cn.color;
@@ -160,12 +191,12 @@ function init() {
             store.set('config', config);
         }
     });
-    DO.qid('sidebar_url').on('change', function(ev) {
+    DO.qid('sidebar_url').on('change', function (ev) {
         config.sidebar = ev.target.value;
         showSidebar();
         store.set('config', config);
     });
-    window.addEventListener('resize', function(ev) {
+    window.addEventListener('resize', function (ev) {
         console.log('resize');
         showSidebar();
     });
@@ -173,14 +204,16 @@ function init() {
 
     //create group icon css
     //set app icon
-    fetch('data/appicon.json', { method: 'GET' })
-        .then(function(responce) {
+    fetch('data/appicon.json', {
+            method: 'GET'
+        })
+        .then(function (responce) {
             return responce.text();
         })
-        .then(function(text) {
+        .then(function (text) {
             return JSON.parse(text);
         })
-        .then(function(json) {
+        .then(function (json) {
             var gcss = '<style type="text/css">';
             var url = json[Math.floor(Math.random() * json.length)];
             if (url) {
@@ -193,7 +226,7 @@ function init() {
             gcss += '</style>';
             DO.q('head').append(DO.new(gcss));
         })
-        .catch(function(error) {
+        .catch(function (error) {
             console.log(error);
         });
 
@@ -212,27 +245,27 @@ function init() {
     calcRanking();
     showRanking();
     //init events
-    DO.qa('.boss input,.boss select').forEach(function(elem) {
-        elem.on('change', function(ev) {
+    DO.qa('.boss input,.boss select').forEach(function (elem) {
+        elem.on('change', function (ev) {
             calcRanking();
             showRanking();
         });
     });
-    DO.qa('.filter input').forEach(function(elem) {
-        elem.on('change', function(ev) {
+    DO.qa('.filter input').forEach(function (elem) {
+        elem.on('change', function (ev) {
             showRanking();
         });
     });
-    elemPreset.on('change', function(ev) {
+    elemPreset.on('change', function (ev) {
         setBoss(db.preset[ev.target.value]);
         calcRanking();
         showRanking();
     });
-    elemSort.on('change', function(ev) {
+    elemSort.on('change', function (ev) {
         calcRanking();
         showRanking();
     });
-    elemRanking.on('.item', 'click', function(ev) {
+    elemRanking.on('.item', 'click', function (ev) {
         var elemDetail = this.q('.detail');
         if (elemDetail.innerHTML.trim() === '') {
             elemDetail.html(getCharDetail(this.id));
@@ -277,8 +310,7 @@ function setTheme(theme) {
     DO.qid('header').css({
         color: theme.color,
         'background-color': theme.body,
-        'background-image':
-            'linear-gradient(45deg,transparent 88%,' +
+        'background-image': 'linear-gradient(45deg,transparent 88%,' +
             theme.body +
             ' 88%,' +
             theme.body +
@@ -292,13 +324,22 @@ function setTheme(theme) {
             theme.head +
             ')'
     });
-    DO.qid('help').css({'border': '0.1em solid '+theme.color});
-    DO.q('#header i.app').css({'border-color': theme.body});    
-    DO.qid('footer').css({ color: theme.color, 'background-color': theme.body });
+    DO.qid('help').css({
+        'border': '0.1em solid ' + theme.color
+    });
+    DO.q('#header i.app').css({
+        'border-color': theme.body
+    });
+    DO.qid('footer').css({
+        color: theme.color,
+        'background-color': theme.body
+    });
 }
 
 function setWallpaper(url) {
-    DO.qid('main').css({ 'background-image': 'url(' + url + ')' });
+    DO.qid('main').css({
+        'background-image': 'url(' + url + ')'
+    });
 }
 
 function showSidebar() {
@@ -320,8 +361,10 @@ function showSidebar() {
 
 function getBoss() {
     var db = DC.getData();
-    boss = { crit: 1 };
-    DO.qa('.boss input,.boss select').forEach(function(item) {
+    boss = {
+        crit: 1
+    };
+    DO.qa('.boss input,.boss select').forEach(function (item) {
         if (item.type === 'radio') {
             if (item.checked) {
                 if (item.name === 'element' && item.getAttribute('disabled') !== 'disabled') {
@@ -344,7 +387,7 @@ function getBoss() {
 function setBoss(boss) {
     //console.log('setBoss',boss);
     DO.qid('ena').checked = true;
-    DO.qa('.boss input,.boss select').forEach(function(item) {
+    DO.qa('.boss input,.boss select').forEach(function (item) {
         if (item.type === 'radio') {
             if (item.name === 'element') {
                 if (boss[item.name]) {
@@ -430,6 +473,9 @@ function calcRanking() {
             dcv.duration_50 = Math.floor(dcv.duration_50 * 100) / 100;
             dcv.cduration = Math.floor(dcv.cduration * 100) / 100;
             dcv.c2duration = Math.floor(dcv.c2duration * 100) / 100;
+            var pduration = dcv.sv.c.type.id === 'lance' || dcv.sv.c.type.id === 'staff' || dcv.sv.c.group.id.indexOf('sto1')>=0 ||dcv.sv.c.group.id.indexOf('sto2')>=0? 0.2 : 0.0;
+            dcv.pdps = Math.floor(dcv.damage / (dcv.duration - pduration));
+            dcv.pcdps = Math.floor(dcv.damage / (dcv.cduration - pduration));
             dcv.gap = Math.floor((dcv.duration - dcv.cduration) * 100) / 100;
             dcv.capacity = Math.floor((dcv.damage * dcv.sv.mp) / dcv.sv.cost);
             dcv.damage = Math.floor(dcv.damage);
@@ -471,9 +517,9 @@ function getDCA(duration, combination, acceleration, speed_rate, acceleration_ra
         dca.combination = Infinity;
     }
     dca.acceleration = acceleration * speed_rate;
-    if(isChargeSkill){
-        dca.duration+=1;
-        dca.combination+=1;
+    if (isChargeSkill) {
+        dca.duration += 1;
+        dca.combination += 1;
     }
     return dca;
 }
@@ -551,8 +597,13 @@ function showRanking() {
 }
 
 function getFilter() {
-    var filter = { lv: {}, s:{},r: {}, type: {} };
-    DO.qa('.filter input').forEach(function(item) {
+    var filter = {
+        lv: {},
+        s: {},
+        r: {},
+        type: {}
+    };
+    DO.qa('.filter input').forEach(function (item) {
         if (item.name === 'keyword') {
             filter.keyword = item.value;
         } else {
@@ -628,12 +679,12 @@ function getCharDetail(id) {
         getKVTableRow(
             'Slash/Pierce/Blunt/Magic',
             formatFloat(c.dtr_slash) +
-                '/' +
-                formatFloat(c.dtr_pierce) +
-                '/' +
-                formatFloat(c.dtr_blunt) +
-                '/' +
-                formatFloat(c.dtr_magic)
+            '/' +
+            formatFloat(c.dtr_pierce) +
+            '/' +
+            formatFloat(c.dtr_blunt) +
+            '/' +
+            formatFloat(c.dtr_magic)
         )
     );
     if (c.s3_debuf > 0) {
@@ -661,7 +712,9 @@ function createTweetWidgets(detail) {
     var container = detail.q('.tcontainer');
     if (container) {
         var id = container.q('a').href.split('/status/')[1];
-        twttr.widgets.createTweet(id, container, { width: '100%' }).then(() => container.classList.toggle('hidden'));
+        twttr.widgets.createTweet(id, container, {
+            width: '100%'
+        }).then(() => container.classList.toggle('hidden'));
     }
 }
 
