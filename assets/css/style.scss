@@ -31,18 +31,16 @@ h6 {
   border-top-right-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
 }
-
-.ja .ja,
-.en .en {
-  font-weight: bold;
-  background-color: #e8e8e8;
-}
-
-.ja,
-.en {
+.lang-link {
   padding: 0.25em 0.5em;
   font-weight: normal;
   border: 1px solid #e8e8e8;
+}
+.ja .ja,
+.en .en,
+.zh .zh{
+  font-weight: bold;
+  background-color: #e8e8e8;
 }
 
 .color-box {

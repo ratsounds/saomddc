@@ -1,42 +1,47 @@
 var lvr = [{
-        lv: 80,
-        r: 0
-    },
-    {
-        lv: 80,
-        r: 4
-    },
-    {
-        lv: 80,
-        r: 5
-    },
-    {
-        lv: 90,
-        r: 0
-    },
-    {
-        lv: 90,
-        r: 4
-    },
-    {
-        lv: 90,
-        r: 5
-    },
-    {
-        lv: 100,
-        r: 0
-    },
-    {
-        lv: 100,
-        r: 4
-    },
-    {
-        lv: 100,
-        r: 5
-    }
-];
+    lv: 80,
+    r: 0
+}, {
+    lv: 80,
+    r: 4
+}, {
+    lv: 80,
+    r: 5
+}, {
+    lv: 90,
+    r: 0
+}, {
+    lv: 90,
+    r: 4
+}, {
+    lv: 90,
+    r: 5
+}, {
+    lv: 100,
+    r: 0
+}, {
+    lv: 100,
+    r: 4
+}, {
+    lv: 100,
+    r: 5
+}];
 var ranking;
 var boss;
+var langs = {
+    ja: {
+        lang: '',
+        help: 'ja/usage'
+    },
+    en: {
+        lang: '_en',
+        help: 'en/usage'
+    },
+    zh: {
+        lang: '_en',
+        help: 'zh/usage'
+    },
+}
 var lang;
 var elemRanking;
 var elemSort;
@@ -99,19 +104,34 @@ function sortObjectArray(obj, key, asend) {
 
 function init() {
     var db = DC.getData();
-    //get lang
-    var language =
-        (window.navigator.languages && window.navigator.languages[0]) ||
+
+    //get language
+    var languages = window.navigator.languages || [
         window.navigator.language ||
         window.navigator.userLanguage ||
-        window.navigator.browserLanguage;
-    if (language.substr(0, 2) === 'ja') {
-        lang = '';
-    } else {
-        lang = '_en';
-        // set help lang
-        DO.qid('help').href = "en/usage/"
+        window.navigator.browserLanguage
+    ];
+    var lang_setting;
+    for (let i = 0; i < languages.length; i++) {
+        var language = languages[i];
+        for (let key in langs) {
+            if (language.indexOf(key) === 0) {
+                lang_setting = langs[key];
+            }
+            if (lang_setting) {
+                break;
+            }
+        }
+        if (lang_setting) {
+            break;
+        }
     }
+    if (lang_setting === undefined) {
+        lang_setting = langs['en']
+    }
+    lang = lang_setting.lang;
+    DO.qid('help').href = lang_setting.help
+
     DO.qid('ranking').focus();
 
     // set theme list
@@ -473,7 +493,7 @@ function calcRanking() {
             dcv.duration_50 = Math.floor(dcv.duration_50 * 100) / 100;
             dcv.cduration = Math.floor(dcv.cduration * 100) / 100;
             dcv.c2duration = Math.floor(dcv.c2duration * 100) / 100;
-            var pduration = dcv.sv.c.type.id === 'lance' || dcv.sv.c.type.id === 'staff' || dcv.sv.c.group.id.indexOf('sto1')>=0 ||dcv.sv.c.group.id.indexOf('sto2')>=0? 0.2 : 0.0;
+            var pduration = dcv.sv.c.type.id === 'lance' || dcv.sv.c.type.id === 'staff' || dcv.sv.c.group.id.indexOf('sto1') >= 0 || dcv.sv.c.group.id.indexOf('sto2') >= 0 ? 0.2 : 0.0;
             dcv.pdps = Math.floor(dcv.damage / (dcv.duration - pduration));
             dcv.pcdps = Math.floor(dcv.damage / (dcv.cduration - pduration));
             dcv.gap = Math.floor((dcv.duration - dcv.cduration) * 100) / 100;
