@@ -2,8 +2,10 @@
 layout: page
 title: How To Use
 permalink: /en/usage/
+mathjax: true
 lang: en
 order: 10
+index: true
 ---
 
 ## Quick Usage

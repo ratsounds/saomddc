@@ -2,6 +2,7 @@
 layout: page
 title: Knowledge
 permalink: /en/knowlede/
+mathjax: true
 lang: en
 order: 40
 ---

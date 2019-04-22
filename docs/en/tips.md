@@ -2,6 +2,7 @@
 layout: page
 title: Tips & Tricks
 permalink: /en/tips/
+mathjax: true
 lang: en
 order: 20
 search: true
