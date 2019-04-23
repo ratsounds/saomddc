@@ -5,16 +5,15 @@ permalink: /zh/about/
 lang: zh
 order: 100
 ---
-このWebサイトはソードアート・オンライン メモリー・デフラグの非公式ダメージ計算ツールです。ダメージ計算方法や一部のキャラクターパラメータは、有志によって収集されたデータを基に推定されており、ゲームクライアントのリバースエンジニアリングによるものではありません。
+此網站為刀劍神域記憶重組的非官方傷害計算工具。傷害計算方法和一部分的角色參數，並非由遊戲客戶端的逆向工程而得出，而是基於由志願者收集的數據而推斷出來的。
 
-## 目次
-1. [火力計算機の使い方](/ja/usage)
-2. [メモデフの用語とテクニック](/ja/tips)
-3. [ダメージ計算に関する知識](/ja/knowledge)
-4. [開発者向け情報](/ja/developer)
+## 目錄
+1. [火力計算機的使用方法](/zh/usage)
+2. [記憶重組的用語及技巧](/zh/tips)
+3. [關於傷害計算的知識](/zh/knowledge)
+4. [開發者向情報](/zh/developer)
 
-## 謝辞
-Thank you so much for all contributors on
+## 謝辭 Thank you so much for all contributors on
 [SAOMD - Database](https://saomd-fanadata.fr/)
 and
 [Twitter #メモデフ](https://twitter.com/search?q=%23%E3%83%A1%E3%83%A2%E3%83%87%E3%83%95)
