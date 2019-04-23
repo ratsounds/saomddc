@@ -13,7 +13,8 @@ order: 100
 3. [關於傷害計算的知識](/zh/knowledge)
 4. [開發者向情報](/zh/developer)
 
-## 謝辭 Thank you so much for all contributors on
+## 謝辭
+Thank you so much for all contributors on
 [SAOMD - Database](https://saomd-fanadata.fr/)
 and
 [Twitter #メモデフ](https://twitter.com/search?q=%23%E3%83%A1%E3%83%A2%E3%83%87%E3%83%95)
