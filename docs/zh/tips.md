@@ -353,7 +353,7 @@ search: true
 > <blockquote class="twitter-tweet" data-conversation="none"><a href="https://twitter.com/ratsounds/status/1086607292525506561">[ref]</a></blockquote>
 
 ### buff和debuff的效果
-
+>
 > |種類|攻撃力補正|防禦補正|補充|
 > |--|:--:|:--:|--|
 > |強連結buff|33%||已強化連結buff角色バフキャラ|
