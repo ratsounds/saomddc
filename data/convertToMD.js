@@ -4,6 +4,7 @@
 const fs = require('fs');
 const data = require('./data.json');
 
+
 function getMDTable(title, src, props) {
     if (props === undefined) {
         for (let key in src) {
@@ -24,8 +25,7 @@ function getMDTable(title, src, props) {
             const prop = props[p];
             if (prop.map) {
                 line.push(prop.map(item[prop.key], item));
-            }
-            else {
+            } else {
                 line.push(item[prop]);
             }
         }
@@ -59,10 +59,14 @@ function getUnitStyle(item) {
 function writeMD(filename, frontmatter, out) {
     fs.writeFileSync(filename, frontmatter + out, 'utf8');
 }
+
+
+const group = Object.values(data.group).sort((a, b) => { return a.date - b.date });
+const cname = Object.values(data.cname).sort((a, b) => { return a.name.localeCompare(b.name) });
 writeMD('./_includes/data.md', [
         '',
     ].join('\n'),
-    getMDTable('Banners', data.group, [
+    getMDTable('Banners', group, [
         { key: 'class', map: function(value) { return '![g' + value + '.png](../../icons/g' + value + '.png)' } },
         'short',
         'short_en',
@@ -70,10 +74,9 @@ writeMD('./_includes/data.md', [
         'long_en'
     ]) // group list 
     +
-    getMDTable('Characters', data.cname, [
+    getMDTable('Characters', cname, [
         'name',
         'name_en',
         { key: 'color', map: function(value, item) { return '<span class="color-box" style="' + getUnitStyle(item) + '">__theme__</span>' } },
     ]) // cname list 
 );
-
