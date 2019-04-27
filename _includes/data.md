@@ -153,6 +153,7 @@ class|short|short_en|long|long_en
 ![gtree.png](../../icons/gtree.png)|世界樹|WTree|世界樹の上の再会|Reunion at the World Tree
 ![gsto.png](../../icons/gsto.png)|添寝|STO|うたた寝StarryNight - Sleeping Together Online|Catnap on a Starry Night - Sleeping Together Online
 ![gstom.png](../../icons/gstom.png)|添寝C3|STOC3|うたた寝StarryNight - Sleeping Together Online|Catnap on a Starry Night - Sleeping Together Online
+![ganthology.png](../../icons/ganthology.png)|アンソロ|Anthology|「コミックアンソロジー」発売記念|Comic Anthology Celebration
 
 ## Characters
 
