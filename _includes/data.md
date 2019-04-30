@@ -154,6 +154,8 @@ class|short|short_en|long|long_en
 ![gsto.png](../../icons/gsto.png)|添寝|STO|うたた寝StarryNight - Sleeping Together Online|Catnap on a Starry Night - Sleeping Together Online
 ![gstom.png](../../icons/gstom.png)|添寝C3|STOC3|うたた寝StarryNight - Sleeping Together Online|Catnap on a Starry Night - Sleeping Together Online
 ![ganthology.png](../../icons/ganthology.png)|アンソロ|Anthology|「コミックアンソロジー」発売記念|Comic Anthology Celebration
+![gfallen.png](../../icons/gfallen.png)|堕|Fallen|冥府に魅せられし妖精たち|Fascinated Fairies in the Netherworld
+![gfallenm.png](../../icons/gfallenm.png)|堕C3|FallenC3|冥府に魅せられし妖精たち|Fascinated Fairies in the Netherworld
 
 ## Characters
 
