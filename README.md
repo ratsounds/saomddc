@@ -6,6 +6,8 @@ Unofficial Damage Calculator for Sword Art Online - Memory Defrag
 
 This web site is an unofficial damage calculation tool for Sword Art Online: Memory Defrag. The damage calculation method and the hidden parameters for units are estimated from observation by volunteer works without reverse engineering.
 
+此網站為刀劍神域記憶重組的非官方傷害計算工具。傷害計算方法和一部分的角色參數，並非由遊戲客戶端的逆向工程而得出，而是基於由志願者收集的數據而推斷出來的。
+
 ## 目次
 1. [火力計算機の使い方](https://ratsounds.github.io/saomddc/ja/usage)
 2. [メモデフの用語やテクニック](https://ratsounds.github.io/saomddc/ja/tips)
@@ -17,6 +19,12 @@ This web site is an unofficial damage calculation tool for Sword Art Online: Mem
 2. [Tips & Tricks for SAO:MD](https://ratsounds.github.io/saomddc/en/tips)
 3. [Knowledge for Damage Calculation](https://ratsounds.github.io/saomddc/en/knowledge)
 4. [Developer Info.](https://ratsounds.github.io/saomddc/en/developer)
+
+## 目錄
+1. [火力計算機的使用方法](https://ratsounds.github.io/saomddc/zh/usage)
+2. [記憶重組的用語及技巧](https://ratsounds.github.io/saomddc/zh/tips)
+3. [關於傷害計算的知識](https://ratsounds.github.io/saomddc/zh/knowledge)
+4. [開發者向情報](https://ratsounds.github.io/saomddc/zh/developer)
 
 ## 謝辞 / Acknowledgement
 Thank you so much for all contributors on
