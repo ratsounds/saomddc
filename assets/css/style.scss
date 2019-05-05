@@ -25,6 +25,7 @@ h6 {
 .lang-selector :first-child {
   border-top-left-radius: 0.5em;
   border-bottom-left-radius: 0.5em;
+  border-left: 1px solid #e8e8e8;
 }
 
 .lang-selector :last-child {
@@ -33,8 +34,12 @@ h6 {
 }
 .lang-link {
   padding: 0.25em 0.5em;
+  width: 1em;
+  display: inline-block;
   font-weight: normal;
-  border: 1px solid #e8e8e8;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
 }
 .ja .ja,
 .en .en,

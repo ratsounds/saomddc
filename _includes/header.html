@@ -1,7 +1,7 @@
 <header class="site-header {{page.lang}}">
 
     <div class="wrapper">
-      {%- assign langs = site.pages | map: 'lang' | uniq | compact -%}
+      {%- assign langs = site.pages | map: 'lang' | uniq | compact | sort -%}
       {%- assign page_titles = site.pages | sort: "order" | map: 'title' | uniq | compact -%}
       {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
       <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>

@@ -36,18 +36,18 @@ Small black triangle at bottom right shows the existence of [SS3 video](https://
 ![Detail Top](../images/detail_top.jpg)
 
 ### Unit Metrics
-メモデフのランキングイベントは「出来る限り早くボスを倒すゲーム」であることが多く、キャラを評価する上でスキル単発のダメージ量だけでなくモーションの時間的な長さ(Duration)を考慮したDPS(Damage Per Second:1秒あたりの与ダメージ)が最も重要である。メモデフは★５実装以降、連携によりあるスキルの途中で別のキャラのスキルを発動可能になった為、これらも考慮してDPSを計算する必要がある。火力計算機ではこれらのDPSを計算する為に、独自の時間長を示す変数を定義している。時間長やダメージ計算の仕様と、代表的なキャラの評価基準の説明は以降で記する。
+The game type of standard ranking event can be considered as "Game to defeat boss as quickly as possible", therefore DPS(Damage Per Second) is most important metrics for unit rating.
+SAO:MD:DC defines a type of DPS Metrics called "C/2 DPS" in order to handle combination skills' DPS. See table below for the detail of metrics specification.
 
-ランイベ等で応用するなら、C/2 DPSを見ることで大雑把にキャラの強さを測ることができるので、まずはC/2 DPSをみてキャラ選びをした後、火力が足らなければDamageを参照して選び直したり、Duration GapとDurationを参照して連携順を最適化したりする。
+For the application in ranking events, pick three higher C/2 DPS units first. After that, exchange a unit to higher damage / shorter duration unit when dealt damage is insufficient / sufficient, and optimize combination order from Duration Gap.
 
-#### 時間長(Duration)の仕様
-次の図は青と赤のキャラで青赤赤青で折り返し4連携した場合の時間的流れと、キャラが持つパラメータを可視化したものである。
+#### Durations
+The following figure is a timeline of ABBA combination (A:blue and B:red) and duration parameters. 
 
 ![Durations](../images/durations.png)
 
-Durationがスキル全体の時間長を示し、CSec(Combination Second)がスキル発動を基準として連携可能になる時間である。DurationとCSecはキャラ毎に個別の値が設定されており、軽微な処理落ちを除き固定である。特に連携世代以降のキャラ性能評価で重要なのはC/2 Durationとこれを基にしたDPS(C/2 DPS)である。C/2はCombination or Twiceの略で、C/2 Durationは★5以上なら連携★4なら2連発した時の時間長を示す。より直感的な理解の為に先の連携時の時間的流れの図を参照のこと。
-
-★6以降ではアクセラレーションによるゲーム内時間の時間短縮が加わったことがら、アクセラレーションの時間長もデータとして参照している。アクセラレーションはゲーム内時間を実時間の1/3に短縮し、アクセラレーション時間は連携と同様スキル発動から固定の時間長に設定されている。したがって、ゲーム内でのDurationとCSecは以下のようにして計算できる。
+Duration is whole skill motion, CSec(Combination Second) is combination-able time from skill triggered. Duration and CSec is independently and statically defined for each unit without tinny lags. Most important parameters are C/2 Duration and DPS based on C/2 Duration(C/2 DPS). C/2 (that is abbreviation of Combination or Twice) means duration of Self to Self combination for over 5 star or Twice non-combination skills for under 4 star.
+After the 6 star generation, Acceleration duration is used as duration parameters since Acceleration occurs in-game time delaying. Acceleration delays time count for 1/3 of real-time counting. Acceleration duration is independently and statically defined for each unit same as CSec. Thus in-game Duration and CSec can be calculated as follow.
 
 $$
 \begin{aligned}
@@ -62,68 +62,72 @@ $$
 \end{aligned}
 $$
 
-DPS計算ではゲーム内時間を基本としているが、画面右上のトグルスイッチによりゲーム内と実時間の切り替えが可能である。
+DPS calculation is based on in-game for default setting but you can change setting by in-game / real-time toggle switch at top right.
 
 ![Setting Time](../images/setting_time.jpg)
 
-#### ダメージ計算の仕様
-ダメージは設定パネル下部の武器装備設定の範囲で最も攻撃力が高くなる装備をした状態で計算される。したがって、ボスのHPが増加し最大MPが重要なパラメータとなる現環境では実際の与ダメージよりやや高い計算結果となる。装備中の武器や防具はインジケータをクリックして詳細を表示すると確認することができる。なお、防具やアクセサリも最も攻撃力が高くなるものが選択されるが、武器無しを選択した場合のみ防具とアクセサリも無しの状態で計算される。
+#### Damage Calculation Specification
+Damage is calculated with highest Atk equipment in given level and equipment setting from bottom of config panel. Therefore, calculated damage tend to be bit higher than real damage under current ranking environment with MP equipments. Automatically selected equipment can be seen at detail information that shown by clicking unit indicator. Armor and Accessory are also selected to be highest Atk but Armor and Accessory are un-equipped when non-weapon is selected.
 
 ![Setting Equip](../images/setting_equip.jpg)
 
-DefaultおよびDefault 50Hitプリセット等のように属性無視に設定した場合は、特定の属性のボスに対して効果を発揮するようなBSも全て考慮して計算される。
+If boss element is set to null element like as Default and Default 50Hit preset, all elemental specific BS and damage modifier effect is activated in damage calculation for the comparison over element relations.
 
-#### 代表的な評価基準の説明
+#### Descriptions of Unit Metrics
 
-|基準|説明|
+|Metrics|Description|
 |:--|:--|
-|Duration|スキル発動からスキルの硬直が解けて動けるようになるまでの時間長で、モーションの速さの基準。|
-|CSec|スキル発動から連携可能になるまでの時間長で、連携の速さの基準。|
-|C/2 Duration|DurationとCSecを加算した値で、例えば連携可能なAとBの2キャラでABBAの折返し4連携をした時のAとBのスキル時間長。連携を考慮した総合的な速さの基準。連携可能でないキャラの場合はスキルを二連発した時の値（=${Duration}\times2$）になる。|
-|Duration Gap|DurationとCSecの差分で、Gapが大きいほど連携元にした場合の時間短縮が得られることから、連携元適正の基準値になる。また、連携後に連携元キャラが画面に残っている時間の近似になる(画面に残っている時間はDuration Gapにステップで画面外へ出るモーションの時間長を足した長さ)。基本的にはDuration Gapが大きい方を連携元にしたほうが早くなる。|
-|Damage|与ダメージ。火力の評価基準。|
-|DPS|単位時間(1sec)あたりの与ダメージで、ランイベ適正の評価基準。連携世代以降はC/2 DPSを参照するのが望ましい。|
-|CDPS|連携元にした場合のみなしDPSで、パリィ戦略向けランイベ適正の評価基準。連携までに全てのダメージを与えているとみなした場合のDPSなので注意。|
-|C/2 DPS|C/2 Durationを基にしたみなしDPSで、ランイベ適正の汎用的な評価基準。ABBAの折返し4連携でのDPSの高さと理解して良い。|
-|DPM|単位時間(1min)あたりの与ダメージで、ギルラン適正の評価基準。MPが有る場合はスキルを撃ち、MPが足りない場合は通常攻撃1セットでMP回復するを1分間繰り返した場合の与ダメージ。|
-|Capacity|MP回復無しでMPを使い切るまでスキルを撃った場合の総与ダメージの近似で、硬いボスに対する適正の基準値。例えば同じMP消費100でMP総量390と300のキャラでは、明確に硬いボスに対する適正が異なることから、計算上は3.7回のように小数点以下を持つ回数で乗算する。|
+|Duration|A metric for skill quickness that is defined by duration time between skill triggered frame (frame that MP is spent) to last frame of skill motion (previous frame of frame that can be move to next action).|
+|CSec|A metric for combination host quickness that is defined by skill triggered frame to combination-able first frame.|
+|C/2&nbsp;Duration|A metric for overall skill quickness that is defined by ${Duration}+{CSec}$ for combination-able unit and ${Duration}\times2$ for others. C/2 Duration means B's duration time on ABBA combination.|
+|Duration&nbsp;Gap|a metric for combination host suitability that is defined by ${Duration}-{CSec}$. Generally, total duration of combination become shorter when larger Duration Gap unit is used as combination host.|
+|Damage|A simple metric for Damage. |
+|DPS|A metric for ranking suitability that is defined by DPS. C/2 DPS is better for over 5 star|
+|CDPS|A metric for ranking suitability as combination host that is defined by presumptive DPS substitute CSec for Duration.|
+|C/2&nbsp;DPS|A metric for overall ranking suitability that is defined by DPS substitute C/2 Duration for Duration. C/2 DPS almost equals to DPS in ABBA combination.|
+|DPM|A metric for guild ranking that is defined by DPM(Damage Per Minute). DPM is calculated with simple bot that uses skill when MP is sufficient and uses 1set of normal attack when MP is insufficient in order to consider MP recovery capacity by weapon type. |
+|Capacity|A metric for vs large HP boss suitability that is defined by approximated total damage of skills when spent all MP without MP recovery. Considering the difference of total damage output capability from Max MP, skill times (${Max MP}/{MP cost}$) is calculated as decimal value.|
+|P.DPS|A metric for DPS with parry cancel such as lance, staff, and charge units. Corresponding units get -0.2sec for duration in DPS calculation.|
+|P.CDPS|A metric for CDPS with parry cancel such as lance, staff, and charge units. Corresponding units get -0.2sec for duration in DPS calculation.|
 
-#### 代表的な評価基準の計算方法
+#### Calculation of Unit Metrics
 
-|基準|計算方法|
+|Metrics|Formula|
 |:--|:--|:--|
 |Duration|${Duration}$|
 |CSec|${CSec}$|
-|C/2 Duration|$$\begin{aligned} \begin{cases} ★6,★5 & {Duration}+{CSec} \\ otherwise & {Duration}\times2\end{cases} \end{aligned}$$|
-|Duration Gap|${Duration}-{CSec}$|
+|C/2&nbsp;Duration|$$\begin{aligned} \begin{cases} ★6,★5 & {Duration}+{CSec} \\ otherwise & {Duration}\times2\end{cases} \end{aligned}$$|
+|Duration&nbsp;Gap|${Duration}-{CSec}$|
 |Damage|${Damage}$|
 |DPS|${Damage}/{Duration}$|
 |CDPS|${Damage}/{CSec}$|
-|C/2 DPS|$2\cdot{Damage}/{\it C2Duration}$|
-|DPM|${Damage}\cdot{\it SS3TimesPer60s}$, ここで${\it SS3TimesPer60s}$ is calculated from duration of normal attacks and mp recovery |
+|C/2&nbsp;DPS|$2\cdot{Damage}/{\it C2Duration}$|
+|DPM|${Damage}\cdot{\it SS3TimesPer60s}$, ここで${\it SS3TimesPer60s}$は通常攻撃の時間長とMP回復量を考慮して計算 |
 |Capacity|${Damage}\cdot{MP_{max}}/{MP_{cost}}$|
+|P.DPS|${Damage}/({Duration}-0.2)$|
+|P.CDPS|${Damage}/({CSec}-0.2)$|
 
-## Boss Presets & Settings
+## Preset and Boss Config
 与ダメージはボスの属性とキャラの属性相性や、防御力、特殊な特攻や耐性によって変化することから適切に設定することでより正しくキャラの有利不利を知ることが出来る。一方でその設定は多岐に渡る為、典型的なボスや最新のランイベ用のプリセットを用意している。まずはプリセットの設定内容を確認しながら、各種ボスのパラメータ設定に慣れると良い。
 
 特にアクセス頻度が高いのは設定パネル最上段のデバフとバフ、コンボ関連の設定なのでまずはここだけでも設定できるようにすると良い。
 
-### 防御力とデバフの設定
-防御は詳細な調査が必要なのでプリセットを参照するのが良い。自分で防御力を測定する場合は[防御の測定](knowledge#防御の測定)を参照のこと。デバフはデバフがかった状態で火力の出せるキャラを探す場合に設定する。デバフの値は防御力の減少率なので、値が高いほどダメージ増加効果が高いことに注意する。
+### Def and Debuff
+防御は詳細な調査が必要なのでプリセットを参照するのが良い。自分で防御力を測定する場合は[防御の測定](../knowledge/#防御の測定)を参照のこと。デバフはデバフがかった状態で火力の出せるキャラを探す場合に設定する。デバフの値は防御力の減少率なので、値が低いほどダメージ増加効果が高いことに注意する。
 
 ![Setting DEF](../images/setting_def.jpg)
 
-### 攻撃力とバフの設定
+### Atk and Buff
 全体バフや連携バフを受けた状態で火力の出せるキャラを探す場合に設定する。このとき自己攻撃バフを持つキャラは設定した攻撃バフと効果の高い方が優先して計算される。また、自己/全体攻撃バフと範囲バフは重複して効果を発揮する。
 
 ![Setting ATK](../images/setting_atk.jpg)
 
-### コンボ補正の設定
+### Combo Modifier
 スキル使用時のコンボヒット数を設定する。コンボによる補正はダメージだけではなく双剣などのようなコンボ加速によるDuration減少も計算されるのでDPS等に変化がある。特に最近のランイベでは開始からコンボを稼ぎ継続する戦略が主流なため設定する機会が多い。
 
 ![Setting Combo](../images/setting_combo.jpg)
 
-### 設定項目一覧
+### List of Parameters
 
 |項目|設定の説明|
 |:--:|:--|
@@ -141,7 +145,7 @@ DefaultおよびDefault 50Hitプリセット等のように属性無視に設定
 |![trophy](../../icons/trophy.png)|称号による攻撃力補正。|
 |![ls](../../icons/ls.png)|リーダースキルとサブリーダースキルによる攻撃力補正。|
 
-### 代表的な攻撃力バフとデバフの効果
+### List of Buff and Debuff
 
 |種類|攻撃力補正|防御補正|補足|
 |--|:--:|:--:|--|
@@ -158,7 +162,7 @@ DefaultおよびDefault 50Hitプリセット等のように属性無視に設定
 |中デバフ||34％|土ユウキ|
 |強デバフ||29％|強化済みコスプレキャラ|
 
-## App Configurations
+## App Config
 設定パネル右下のトグルスイッチでアプリ設定パネルが表示できる。設定項目はブラウザ毎に保存される。
 
 ![App Config](../images/config.jpg)
