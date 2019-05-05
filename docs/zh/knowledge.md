@@ -106,7 +106,7 @@ $$
 {\it def}\cdot{\it debuf}
 $$
 
-debuff的防禦補正${\it debuf}$會是0至-1的値，例如防禦補正44％的話會大約把頭目的防禦力減半，防禦補正29％的強化debuff的話會大約使頭目的防禦力減至1/3。關於debuff的防禦補正值請參考[代表性的攻撃力buff和debuff効果](#代表性的攻撃力buff和debuff効果)。
+debuff的防禦補正${\it debuf}$會是0至1的値，例如防禦補正44％的話會大約把頭目的防禦力減半，防禦補正29％的強化debuff的話會大約使頭目的防禦力減至1/3。關於debuff的防禦補正值請參考[代表性的攻撃力buff和debuff効果](#代表性的攻撃力buff和debuff効果)。
 
 ### 代表性的攻撃力buff和debuff効果
 
