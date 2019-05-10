@@ -93,7 +93,7 @@ class|short|short_en|long|long_en
 ![gband.png](../../icons/gband.png)|バンド|Band|Rainbow Sky|Rainbow Sky
 ![gmaster.png](../../icons/gmaster.png)|剣聖|Master|戦場に集いし剣聖|Master Swordsmen in the Battlefield
 ![ggrenade.png](../../icons/ggrenade.png)|グレネ|Grenade|グレネード弾メダル 報酬|Grenade Medal Reward
-![gloli.png](../../icons/gloli.png)|ロリ|Loli|つないだ手と手 こどもの日|Hand in Hand - Children’s Day
+![gloli.png](../../icons/gloli.png)|子供|Child|つないだ手と手 - こどもの日|Hand in Hand - Children’s Day
 ![ggunners.png](../../icons/ggunners.png)|銃士|Gunners|銃士たちの休息日|A Rest Day for Gunners
 ![gbride.png](../../icons/gbride.png)|嫁18|Bride18|烈火の想い秘め咲く花嫁|Passionate Bloom
 ![gbride.png](../../icons/gbride.png)|嫁18|Bride18|かんざしメダル 報酬|Hairpin Medal Reward
@@ -156,6 +156,7 @@ class|short|short_en|long|long_en
 ![ganthology.png](../../icons/ganthology.png)|アンソロ|Anthology|「コミックアンソロジー」発売記念|Comic Anthology Celebration
 ![gfallen.png](../../icons/gfallen.png)|堕|Fallen|冥府に魅せられし妖精たち|Fascinated Fairies in the Netherworld
 ![gfallenm.png](../../icons/gfallenm.png)|堕C3|FallenC3|冥府に魅せられし妖精たち|Fascinated Fairies in the Netherworld
+![gloli.png](../../icons/gloli.png)|子供|Child|キュートなお日様ガール - こどもの日|The Cute Sun Girl - Children’s Day
 
 ## Characters
 
