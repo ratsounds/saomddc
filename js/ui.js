@@ -442,7 +442,8 @@ function calcRanking() {
                 if (boss.combo > 0) {
                     dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_combo_wep, clvr.r, c.eq_combo_amr, c.eq_combo_acc, boss);
                 } else {
-                    dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
+                    //dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
+                    dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_mp_wep, clvr.r, c.eq_mp_amr, c.eq_mp_acc, boss);
                 }
             } else {
                 // no weapon & armor, accessory
@@ -501,6 +502,7 @@ function calcRanking() {
             dcv.damage = Math.floor(dcv.damage);
             dcv.mp = dcv.sv.mp;
             dcv.mpr = Math.floor(dcv.sv.mpr);
+            dcv.mpcost = Math.floor(dcv.sv.mp * 100 / dcv.sv.cost) / 100;
             dcv.hits = dcv.sv.c.hits;
             dcv.rate = Math.floor(dcv.rate * 100) / 100;
         }
