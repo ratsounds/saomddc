@@ -156,7 +156,17 @@ class|short|short_en|long|long_en
 ![ganthology.png](../../icons/ganthology.png)|アンソロ|Anthology|「コミックアンソロジー」発売記念|Comic Anthology Celebration
 ![gfallen.png](../../icons/gfallen.png)|堕|Fallen|冥府に魅せられし妖精たち|Fascinated Fairies in the Netherworld
 ![gfallenm.png](../../icons/gfallenm.png)|堕C3|FallenC3|冥府に魅せられし妖精たち|Fascinated Fairies in the Netherworld
+![gfallen.png](../../icons/gfallen.png)|堕|Fallen|ヘルヘイムのメダル  報酬|Helheim Medal Reward
+![gfallenm.png](../../icons/gfallenm.png)|堕C3|FallenC3|ヘルヘイムのメダル  報酬|Helheim Medal Reward
 ![gloli.png](../../icons/gloli.png)|子供|Child|キュートなお日様ガール - こどもの日|The Cute Sun Girl - Children’s Day
+![gfb3.png](../../icons/gfb3.png)|FB3|FB3|騎士たちの新たなる戦場|The Knights New Battleground
+![gfb3m.png](../../icons/gfb3m.png)|FB3C3|FB3C3|騎士たちの新たなる戦場|The Knights New Battleground
+![gorg.png](../../icons/gorg.png)|オリ|Org|SAOゲームシリーズ5周年記念オリジナルアバター大募集|SAO Game Series 5 Year Anniversary Original Avatar Big Collection
+![gorgm.png](../../icons/gorgm.png)|オリC3|OrgC3|SAOゲームシリーズ5周年記念オリジナルアバター大募集|SAO Game Series 5 Year Anniversary Original Avatar Big Collection
+![gbride.png](../../icons/gbride.png)|嫁19|Bride19|弾丸舞い散る烈風の花嫁|Bride of Whirling Bullets
+![gbride.png](../../icons/gbride.png)|嫁19|Bride19|戦場の花嫁のメダル  報酬|Battlefield Bride Medal  Reward
+![gbridem.png](../../icons/gbridem.png)|嫁19C3|Bride19C3|戦場の花嫁のメダル  報酬|Battlefield Bride Medal  Reward
+![gpool.png](../../icons/gpool.png)|プール|Pool|胸騒ぎのプールサイド|Heart Fluttering Poolside
 
 ## Characters
 
@@ -166,6 +176,7 @@ name|name_en|color
 アドミン|Administrator|<span class="color-box" style="color:#381852; background-color:#ffe5df;background-image:linear-gradient(45deg,transparent 90%,#ffe5df 90%,#ffe5df),linear-gradient(45deg,transparent 88%,#f6f6f8 88%,#f6f6f8), linear-gradient(45deg,transparent 84%,#ecd7fe 84%,#ecd7fe);">__theme__</span>
 アリス|Alice|<span class="color-box" style="color:#569; background-color:#fe8;background-image:linear-gradient(45deg,transparent 90%,#fe8 90%,#fe8),linear-gradient(45deg,transparent 88%,#fff 88%,#fff), linear-gradient(45deg,transparent 84%,#569 84%,#569);">__theme__</span>
 アルゴ|Argo|<span class="color-box" style="color:#fff; background-color:#ba8;background-image:linear-gradient(45deg,transparent 90%,#ba8 90%,#ba8),linear-gradient(45deg,transparent 88%,#b95 88%,#b95), linear-gradient(45deg,transparent 84%,#fea 84%,#fea);">__theme__</span>
+ウミノ|Umino|<span class="color-box" style="color:#881a51; background-color:#faf1f1;background-image:linear-gradient(45deg,transparent 90%,#faf1f1 90%,#faf1f1),linear-gradient(45deg,transparent 88%,#881a51 88%,#881a51), linear-gradient(45deg,transparent 84%,#d79a85 84%,#d79a85);">__theme__</span>
 エイジ|Eiji|<span class="color-box" style="color:#fff; background-color:#434;background-image:linear-gradient(45deg,transparent 90%,#434 90%,#434),linear-gradient(45deg,transparent 88%,#c8f 88%,#c8f), linear-gradient(45deg,transparent 84%,#000 84%,#000);">__theme__</span>
 エギル|Agil|<span class="color-box" style="color:#fff; background-color:#375;background-image:linear-gradient(45deg,transparent 90%,#375 90%,#375),linear-gradient(45deg,transparent 88%,#889 88%,#889), linear-gradient(45deg,transparent 84%,#b84 84%,#b84);">__theme__</span>
 オベイロン|Oberon|<span class="color-box" style="color:#fff; background-color:#464;background-image:linear-gradient(45deg,transparent 90%,#464 90%,#464),linear-gradient(45deg,transparent 88%,#eee 88%,#eee), linear-gradient(45deg,transparent 84%,#fc9 84%,#fc9);">__theme__</span>
