@@ -503,6 +503,18 @@ input[type="checkbox"]:checked+label {
   padding: 0;
   background-size: auto 90%;
 }
+#content i.charge {
+  margin-left: -2em;
+  margin-top: 1.5em;
+  background-position: 50% 105%;
+  background-size: auto 300%;
+  height: 0.6em;
+}
+#content i.g-c1,#content i.g-c2,#content i.g-c3 {
+  background-position: 50% -20%;
+  background-size: auto 138.461538462%;
+  height: 1.3em;
+}
 
 #content .name {
   -webkit-box-flex: 1;

@@ -178,5 +178,5 @@ If boss element is set to null element like as Default and Default 50Hit preset,
 |![ls](../../icons/info_icon.png)|PC等横長の画面の場合にサイドバーで指定したURLを表示することができる。お知らせを設定するのがおすすめ。メモデフお知らせ([日本語版](https://api-defrag.wrightflyer.net/webview/announcement?phone_type=2) : [英語版](https://api-defrag-ap.wrightflyer.net/webview/announcement?phone_type=2&lang=en))|
 
 {% include data.md %}
-
+{% include keywords.md %}
 

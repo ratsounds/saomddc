@@ -173,5 +173,5 @@ DPS計算基本上以遊戲內時間作為基準，可以透過右上的切換�
 |![ls](../../icons/info_icon.png)|PC等横向畫面可以透過指定URL來設定標題欄。推薦設定為遊戲通知。記憶重組通知([日文版](https://api-defrag.wrightflyer.net/webview/announcement?phone_type=2) : [英文版](https://api-defrag-ap.wrightflyer.net/webview/announcement?phone_type=2&lang=en) : [中文版](https://api-defrag-ap.wrightflyer.net/webview/announcement?phone_type=2&lang=tc))|
 
 {% include data.md %}
-
+{% include keywords.md %}
 

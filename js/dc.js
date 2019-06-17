@@ -12,9 +12,40 @@ var DC = (function () {
     var key_e_mp_dec = 'e_mp_dec';
     var key_atk = 'atk';
     var key_bs_atk = 'bs_atk';
+    var charge_skill = [{
+            ss_dmg: 0.3,
+            s3_mp: 1.10,
+            s3_charge_offset: 0.3,
+        },
+        {
+            ss_dmg: 0.6,
+            s3_mp: 1.15,
+            s3_charge_offset: 0.6,
+        },
+        {
+            ss_dmg: 1.0,
+            s3_mp: 1.20,
+            s3_charge_offset: 1.0,
+        },
+    ];
+
 
     function loadData(raw) {
         db = raw;
+        //create charge skill unit variant
+        if (Object.assign) { // skip on google apps scripts
+            for (var key in db.base) {
+                var c = db.base[key];
+                if (c.s3_charge > 0) {
+                    var unit = createChargeSkillUnit(c, 1);
+                    db.base[unit.id] = unit;
+                    var unit = createChargeSkillUnit(c, 2);
+                    db.base[unit.id] = unit;
+                    var unit = createChargeSkillUnit(c, 3);
+                    db.base[unit.id] = unit;
+                }
+            }
+        }
         //init relation
         for (var i = 0; i < db.relation.length; i++) {
             var rel = db.relation[i];
@@ -27,6 +58,17 @@ var DC = (function () {
         //init static data
         sd = {};
         return db;
+    }
+
+    function createChargeSkillUnit(c, charge_lv) {
+        var unit = Object.assign({}, c);
+        var prms = charge_skill[charge_lv - 1];
+        unit.s3_charge_lv = charge_lv;
+        unit.ss_dmg += prms.ss_dmg;
+        unit.s3_mp *= prms.s3_mp;
+        unit.s3_charge_offset = prms.s3_charge_offset;
+        unit.id = c.id + 'c' + charge_lv;
+        return unit;
     }
 
     function getData() {
@@ -82,7 +124,8 @@ var DC = (function () {
 
     function estimateDef(opts) {
         var total = 0;
-        for (var opt of opts) {
+        for (var i in opts) {
+            var opt = opts[i];
             total += calcDef(opt.c, opt.lv, opt.lb, opt.wep, opt.r, opt.amr, opt.acc, opt.boss, opt.damage);
         }
         return total / opts.length;
@@ -90,7 +133,8 @@ var DC = (function () {
 
     function estimateMod(opts) {
         var total = 0;
-        for (var opt of opts) {
+        for (var i in opts) {
+            var opt = opts[i];
             total += calcMod(opt.c, opt.lv, opt.lb, opt.wep, opt.r, opt.amr, opt.acc, opt.boss, opt.damage);
         }
         return total / opts.length;
@@ -211,6 +255,11 @@ var DC = (function () {
             comboMod += sv.c.combo_damage_20;
             if (wep) {
                 comboMod += wep.c20_bs_cri_dmg;
+                comboMod += wep.c20_bs_skill_dmg;
+            }
+        } else {
+            if (wep && r > 4) {
+                comboMod += wep.c20_bs_skill_dmg;
             }
         }
         if (boss.combo >= 30) {
