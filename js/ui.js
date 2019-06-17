@@ -460,7 +460,6 @@ function calcRanking() {
                     dcv.acceleration_offset = 1.0;
                 }
             }
-            var isChargeSkill = dcv.sv.c.group.id.indexOf('c3') > 0;
             var dca_x = getDCA(
                 dcv.sv.c.s3_duration,
                 dcv.sv.c.s3_c_duration,
@@ -468,7 +467,7 @@ function calcRanking() {
                 dcv.combo_speed_rate,
                 dcv.acceleration_rate,
                 dcv.acceleration_offset,
-                isChargeSkill
+                dcv.sv.c.s3_charge_offset
             );
             dcv.duration = dca_x.duration;
             dcv.cduration = dca_x.combination;
@@ -481,7 +480,7 @@ function calcRanking() {
                 getComboSpeedRate(dcv.sv.c.combo_speed, 50),
                 dcv.acceleration_rate,
                 dcv.acceleration_offset,
-                isChargeSkill
+                dcv.sv.c.s3_charge_offset
             );
             dcv.duration_50 = dca_50.duration;
             dcv.cduration_50 = dca_50.combination;
@@ -521,7 +520,7 @@ function calcRanking() {
     //console.log('ranking',ranking);
 }
 
-function getDCA(duration, combination, acceleration, speed_rate, acceleration_rate, acceleration_offset, isChargeSkill) {
+function getDCA(duration, combination, acceleration, speed_rate, acceleration_rate, acceleration_offset, charge_offset) {
     var dca = {};
     if (duration > acceleration) {
         dca.duration = speed_rate * (duration - acceleration + acceleration / acceleration_rate) + acceleration_offset;
@@ -539,9 +538,9 @@ function getDCA(duration, combination, acceleration, speed_rate, acceleration_ra
         dca.combination = Infinity;
     }
     dca.acceleration = acceleration * speed_rate;
-    if (isChargeSkill) {
-        dca.duration += 1;
-        dca.combination += 1;
+    if (charge_offset) {
+        dca.duration += charge_offset;
+        dca.combination += charge_offset;
     }
     return dca;
 }
@@ -587,6 +586,7 @@ function showRanking() {
             filter.s[dcv.sv.c.rarity] &&
             filter.r[dcv.sv.r] &&
             filter.type[dcv.sv.c.type.id] &&
+            filter.charge[dcv.sv.c.s3_charge_lv] &&
             match(dcv.sv.c.meta, filter.keyword)
         ) {
             rank++;
@@ -623,6 +623,7 @@ function getFilter() {
         lv: {},
         s: {},
         r: {},
+        charge: {},
         type: {}
     };
     DO.qa('.filter input').forEach(function (item) {
@@ -635,6 +636,7 @@ function getFilter() {
     flipAllZero(filter.lv);
     flipAllZero(filter.r);
     flipAllZero(filter.type);
+    filter.charge[undefined]=true;
     if (filter.keyword === '') {
         filter.keyword = [];
     } else {
