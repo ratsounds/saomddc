@@ -135,7 +135,6 @@ class|short|short_en|long|long_en
 ![gneww.png](../../icons/gneww.png)|始|NWorld|始まりの世界 紡ぐ絆|A New World - Bonding
 ![ggoddess.png](../../icons/ggoddess.png)|三神|Goddess|新年を告げる三貴神|The Sankishin
 ![gg2.png](../../icons/gg2.png)|G2|G2|海外2周年記念|Global 2nd Anniversary
-![gg2m.png](../../icons/gg2m.png)|G2C3|G2C3|海外2周年記念|Global 2nd Anniversary
 ![gos5.png](../../icons/gos5.png)|OS5|OS5|永遠に響く歌声|Eternal Singing Voice
 ![gvalentine.png](../../icons/gvalentine.png)|V19|V19|ショコラティエメダル 報酬 - バレンタイン|Chocolatier Medal Reward - Valentine's
 ![gwill.png](../../icons/gwill.png)|思|Will|彼方を目指す強き思い|Strong Will to Go Beyond
@@ -149,24 +148,18 @@ class|short|short_en|long|long_en
 ![guni.png](../../icons/guni.png)|修剣|Uniform|修剣士制服と異世界の勇士たち 〜シノンとレイン|Swordsman in School Uniform～Sinon & Rain
 ![gsto.png](../../icons/gsto.png)|添寝|STO|夢見のチケット - Sleeping Together Online|Sleeping Together Ticket - Sleeping Together Online
 ![gsto.png](../../icons/gsto.png)|添寝|STO|ふわふわSweetDreams - Sleeping Together Online|Sweet Happy Dreams - Sleeping Together Online
-![gstom.png](../../icons/gstom.png)|添寝C3|STOC3|ふわふわSweetDreams - Sleeping Together Online|Sweet Happy Dreams - Sleeping Together Online
 ![gtree.png](../../icons/gtree.png)|世界樹|WTree|世界樹の上の再会|Reunion at the World Tree
 ![gsto.png](../../icons/gsto.png)|添寝|STO|うたた寝StarryNight - Sleeping Together Online|Catnap on a Starry Night - Sleeping Together Online
-![gstom.png](../../icons/gstom.png)|添寝C3|STOC3|うたた寝StarryNight - Sleeping Together Online|Catnap on a Starry Night - Sleeping Together Online
 ![ganthology.png](../../icons/ganthology.png)|アンソロ|Anthology|「コミックアンソロジー」発売記念|Comic Anthology Celebration
 ![gfallen.png](../../icons/gfallen.png)|堕|Fallen|冥府に魅せられし妖精たち|Fascinated Fairies in the Netherworld
-![gfallenm.png](../../icons/gfallenm.png)|堕C3|FallenC3|冥府に魅せられし妖精たち|Fascinated Fairies in the Netherworld
 ![gfallen.png](../../icons/gfallen.png)|堕|Fallen|ヘルヘイムのメダル  報酬|Helheim Medal Reward
-![gfallenm.png](../../icons/gfallenm.png)|堕C3|FallenC3|ヘルヘイムのメダル  報酬|Helheim Medal Reward
 ![gloli.png](../../icons/gloli.png)|子供|Child|キュートなお日様ガール - こどもの日|The Cute Sun Girl - Children’s Day
 ![gfb3.png](../../icons/gfb3.png)|FB3|FB3|騎士たちの新たなる戦場|The Knights New Battleground
-![gfb3m.png](../../icons/gfb3m.png)|FB3C3|FB3C3|騎士たちの新たなる戦場|The Knights New Battleground
 ![gorg.png](../../icons/gorg.png)|オリ|Org|SAOゲームシリーズ5周年記念オリジナルアバター大募集|SAO Game Series 5 Year Anniversary Original Avatar Big Collection
-![gorgm.png](../../icons/gorgm.png)|オリC3|OrgC3|SAOゲームシリーズ5周年記念オリジナルアバター大募集|SAO Game Series 5 Year Anniversary Original Avatar Big Collection
 ![gbride.png](../../icons/gbride.png)|嫁19|Bride19|弾丸舞い散る烈風の花嫁|Bride of Whirling Bullets
 ![gbride.png](../../icons/gbride.png)|嫁19|Bride19|戦場の花嫁のメダル  報酬|Battlefield Bride Medal  Reward
-![gbridem.png](../../icons/gbridem.png)|嫁19C3|Bride19C3|戦場の花嫁のメダル  報酬|Battlefield Bride Medal  Reward
 ![gpool.png](../../icons/gpool.png)|プール|Pool|胸騒ぎのプールサイド|Heart Fluttering Poolside
+![gbride.png](../../icons/gbride.png)|嫁19|Bride19|戦場を駆ける真紅の花嫁|Battlefield Blitz Bloody Bride
 
 ## Characters
 
