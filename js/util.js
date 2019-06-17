@@ -142,7 +142,11 @@ Mapper.prototype = {
     map: function (obj) {
         var html = this.first;
         for (var i = 0; i < this.texts.length; i++) {
-            html += getValueFrom(obj, this.keys[i]);
+            var value = getValueFrom(obj, this.keys[i]);
+            if (value === undefined) {
+                value = ''
+            }
+            html += value;
             html += this.texts[i];
         }
         return html;
