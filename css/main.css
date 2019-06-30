@@ -1,3 +1,26 @@
+:root {
+  /* SAO */
+  --bg:#000;
+  --main-color: #666;
+  --main-bg: #eee;
+  --main-active: #fff;
+  --main-deactive: #888;
+  --main-form:#ccc;
+/* GGO - under testing
+  --bg:#000;
+  --main-color: #8fc;
+  --main-bg: #444;
+  --main-active: #8fc;
+  --main-deactive: #222;
+  --main-form:#222;
+*/
+  --bar-color: #444;
+  --bar-body: #fff;
+  --bar-head: #fff;
+  --bar-highlight: #fff;
+}
+
+
 html {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
@@ -13,7 +36,7 @@ body {
   font-family: "M PLUS 1p";
   font-weight: bold;
   font-size: 3vw;
-  color: #666;
+  color: var(--main-color);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,24 +66,24 @@ p {
 ::-webkit-scrollbar {
   width: 8px;
   height: 4px;
-  border-color: #fff;
+  border-color: var(--bar-body);
 }
 
 ::-webkit-scrollbar-button {
-  height: 8px;
-  background-color: #ccc;
-  border: 2px solid #fff;
+  height: 0px;
+  background-color: var(--bar-color);
+  border: 2px solid var(--bar-body);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #ccc;
-  border-left: 2px solid #fff;
-  border-right: 2px solid #fff;
+  background-color: var(--bar-body);
+  border-left: 2px solid var(--bar-body);
+  border-right: 2px solid var(--bar-body);
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #888;
-  border: 2px solid #fff;
+  background-color:var(--bar-color);
+  border: 2px solid var(--bar-body);
 }
 
 ::-webkit-scrollbar-corner {
@@ -117,8 +140,8 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #666;
-  background-color: #fff;
+  color: var(--bar-color);
+  background-color: var(--bar-body);
   z-index: 2;
   -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
@@ -143,7 +166,8 @@ p {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  background-color: #fff;
+  color: var(--bar-color);
+  background-color: var(--bar-body);
   font-size: 50%;
   z-index: 2;
   -webkit-box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.5);
@@ -197,8 +221,8 @@ p {
   display: flex;
   margin: 0 0.25em;
   padding: 0.1em 0.25em;
-  border-bottom: 1px solid #ccc;
-  background-color: #f0f0f0;
+  border-bottom: 1px solid var(--main-form);
+  background-color: var(--main-bg);
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -230,11 +254,11 @@ i.exelement {
 }
 
 #control div.config_panel {
-  background-color: #e0e0e0;
+  background-color: var(--main-form);
 }
 
 #control div.config_bar {
-  background-color: #e0e0e0;
+  background-color: var(--main-form);
 }
 
 #control div select#preset,
@@ -263,7 +287,7 @@ select,
 label {
   margin: 0.1em 0.1em;
   background: none;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color:var(--main-form);
   color: inherit;
   border: none;
   border-radius: 0.1em;
@@ -302,7 +326,7 @@ button {
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto 80%;
-  background-color: #fff;
+  background-color: var(--main-active);
   width: 2.5em;
   height: 2.5em;
 }
@@ -316,14 +340,14 @@ button {
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto 80%;
-  background-color: #888;
+  background-color: var(--main-deactive);
   min-width: 2.5em;
   height: 2.5em;
   cursor: pointer;
 }
 
 button:active {
-  background-color: #ccc;
+  
 }
 
 button:hover {
@@ -332,7 +356,7 @@ button:hover {
 }
 
 button.on {
-  background-color: #888;
+  background-color: var(--main-deactive);
 }
 
 input[type="radio"] {
@@ -343,8 +367,8 @@ label.toggle {
   width: 2em;
   text-align: center;
   cursor: pointer;
-  color: #ccc;
-  background-color: #888;
+  color: var(--main-form);
+  background-color: var(--main-deactive);
   margin: 0.3em 0;
   border-radius: 0px;
 }
@@ -366,17 +390,17 @@ label.toggle.right {
 }
 
 input[type="radio"]:checked+label.toggle {
-  color: #666;
-  background-color: #fff;
+  color: var(--main-color);
+  background-color:var(--main-active);
 }
 
 input[type="radio"]:checked+label {
-  color: #666;
+  color: var(--main-color);
 }
 
 input[type="radio"]:disabled+label {
-  color: #666 !important;
-  background-color: #ccc !important;
+  color: var(--main-color)!important;
+  background-color: var(--main-form) !important;
 }
 
 label.na {
@@ -448,7 +472,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked+label {
-  background-color: #fff;
+  background-color: var(--main-active);
 }
 
 #content div#ranking {
