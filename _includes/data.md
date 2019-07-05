@@ -160,6 +160,10 @@ class|short|short_en|long|long_en
 ![gbride.png](../../icons/gbride.png)|嫁19|Bride19|戦場の花嫁のメダル  報酬|Battlefield Bride Medal  Reward
 ![gpool.png](../../icons/gpool.png)|プール|Pool|胸騒ぎのプールサイド|Heart Fluttering Poolside
 ![gbride.png](../../icons/gbride.png)|嫁19|Bride19|戦場を駆ける真紅の花嫁|Battlefield Blitz Bloody Bride
+![gmyhero.png](../../icons/gmyhero.png)|英雄|Hero|僕の親友 ぼくの英雄|My Friend My Hero
+![gggo3.png](../../icons/gggo3.png)|GGO3|GGO3|交錯する鋼鉄の世界 開幕|Raising the Curtain in the World of Mixed Steel
+![gggo3.png](../../icons/gggo3.png)|GGO3|GGO3|手榴弾のメダル 報酬|Hand Grenade Medal Reward
+![gggo4.png](../../icons/gggo4.png)|GGO4|GGO4|交錯する鋼鉄の世界 波乱|Disturbance in the World of Mixed Steel
 
 ## Characters
 
