@@ -473,6 +473,7 @@ search: true
 > |全隊buff|16%|||
 > |範圍buff|16%|||
 > |海盜buff|16%|52％|海盜角色|
+> |弱debuff||63％|花嫁19幸|
 > |debuff|44％||
 > |中debuff||34％|土有紀|
 > |強debuff||29％|已強化cosplay角色|
