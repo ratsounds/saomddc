@@ -164,6 +164,7 @@ class|short|short_en|long|long_en
 ![gggo3.png](../../icons/gggo3.png)|GGO3|GGO3|交錯する鋼鉄の世界 開幕|Raising the Curtain in the World of Mixed Steel
 ![gggo3.png](../../icons/gggo3.png)|GGO3|GGO3|手榴弾のメダル 報酬|Hand Grenade Medal Reward
 ![gggo4.png](../../icons/gggo4.png)|GGO4|GGO4|交錯する鋼鉄の世界 波乱|Disturbance in the World of Mixed Steel
+![gns.png](../../icons/gns.png)|新鋭|NS|交錯する鋼鉄の世界 新鋭|New Start in the World of Mixed Steel 
 
 ## Characters
 
