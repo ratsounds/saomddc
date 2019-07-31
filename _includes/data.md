@@ -106,14 +106,14 @@ class|short|short_en|long|long_en
 ![gsbreeze.png](../../icons/gsbreeze.png)|夏風|SBreeze|風を感じて♪ウェルカムサマー!|Feel the Breeze ♪ Welcome Summer
 ![gsaop.png](../../icons/gsaop.png)|P|P|プログレッシブ編連動|Progressive Manga Linked
 ![ggods.png](../../icons/ggods.png)|神々|Gods|ラグナロクに挑みし神々|Gods' Toughest Fight with Ragnarok 
-![ggods.png](../../icons/ggods.png)|天使|Prophet|2ndカウントダウンチケット 報酬|#2 Countdown Ticket VIP Reward
+![ggods.png](../../icons/ggods.png)|天使|Prophet|2ndカウントダウンチケット 報酬|2nd Countdown Ticket VIP Reward
 ![ggods.png](../../icons/ggods.png)|神々|Inferno|激闘を告げる神々の炎|Fierce Fight in the Inferno of the Gods 
 ![grays.png](../../icons/grays.png)|T|T|異世界の英雄たち テイルズ オブ ザ レイズ コラボ|Heroes in Another World - Collaboration with TALES OF THE RAYS
 ![grays.png](../../icons/grays.png)|T|T|妖精の国の英雄譚 -Tales of ALO- テイルズ オブ ザ レイズ コラボ|Fairyland Saga -Tales of ALO-  Collaboration with TALES OF THE RAYS
 ![grays.png](../../icons/grays.png)|T|T|テイルズ オブ ザ レイズ コラボ|Collaboration with TALES OF THE RAYS
 ![ganniv2.png](../../icons/ganniv2.png)|2A1|2A1|交差する世界 時を超える絆|The Crossover World - Timeless Bond
 ![gcm2.png](../../icons/gcm2.png)|CM2|CM2|CM記念 第二弾|CM Memorial #2
-![ghelheim.png](../../icons/ghelheim.png)|死者|Hel|2ndアニバーサリーチケット 報酬|#2 Anniversary Ticket VIP Reward
+![ghelheim.png](../../icons/ghelheim.png)|死者|Hel|2ndアニバーサリーチケット 報酬|2nd Anniversary Ticket VIP Reward
 ![ganniv2.png](../../icons/ganniv2.png)|2A2|2A2|時を超える疾風と嚆矢|Gales & Arrows -Transcending Time
 ![ganniv2.png](../../icons/ganniv2.png)|2A3|2A3|空翔ける世界 新たな絆|The World You Can Fly - New Bond
 ![ghw18.png](../../icons/ghw18.png)|ハロ18|Hw18|麗しき乙女のナイトメア - ハロウィン|Beauty's Nightmare - Halloween
@@ -165,6 +165,9 @@ class|short|short_en|long|long_en
 ![gggo3.png](../../icons/gggo3.png)|GGO3|GGO3|手榴弾のメダル 報酬|Hand Grenade Medal Reward
 ![gggo4.png](../../icons/gggo4.png)|GGO4|GGO4|交錯する鋼鉄の世界 波乱|Disturbance in the World of Mixed Steel
 ![gns.png](../../icons/gns.png)|新鋭|NS|交錯する鋼鉄の世界 新鋭|New Start in the World of Mixed Steel 
+![gwoof.png](../../icons/gwoof.png)|犬|Woof|韓国版リリース2周年記念|2nd Korean Ver. Release Anniversary
+![gmaiden.png](../../icons/gmaiden.png)|乙女|Maiden|ミッドガルドの乙女戦士 〜初夏〜|Midgard Maiden Warriors - First Summer -
+![gsukumizu.png](../../icons/gsukumizu.png)|スク水|Sukumizu|3rdカウントダウンチケット|3rd Countdown Ticket VIP Reward
 
 ## Characters
 
