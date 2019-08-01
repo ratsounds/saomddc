@@ -167,7 +167,7 @@ class|short|short_en|long|long_en
 ![gns.png](../../icons/gns.png)|新鋭|NS|交錯する鋼鉄の世界 新鋭|New Start in the World of Mixed Steel 
 ![gwoof.png](../../icons/gwoof.png)|犬|Woof|韓国版リリース2周年記念|2nd Korean Ver. Release Anniversary
 ![gmaiden.png](../../icons/gmaiden.png)|乙女|Maiden|ミッドガルドの乙女戦士 〜初夏〜|Midgard Maiden Warriors - First Summer -
-![gsukumizu.png](../../icons/gsukumizu.png)|スク水|Sukumizu|3rdカウントダウンチケット|3rd Countdown Ticket VIP Reward
+![gshell.png](../../icons/gshell.png)|スク水|Sukumizu|3rdカウントダウンチケット|3rd Countdown Ticket VIP Reward
 
 ## Characters
 
