@@ -168,6 +168,7 @@ class|short|short_en|long|long_en
 ![gwoof.png](../../icons/gwoof.png)|犬|Woof|韓国版リリース2周年記念|2nd Korean Ver. Release Anniversary
 ![gmaiden.png](../../icons/gmaiden.png)|乙女|Maiden|ミッドガルドの乙女戦士 〜初夏〜|Midgard Maiden Warriors - First Summer -
 ![gshell.png](../../icons/gshell.png)|スク水|Sukumizu|3rdカウントダウンチケット|3rd Countdown Ticket VIP Reward
+![gdestiny.png](../../icons/gdestiny.png)|運命|Destiny|宿命の二人|Duo of Destiny
 
 ## Characters
 
@@ -181,6 +182,7 @@ name|name_en|color
 エイジ|Eiji|<span class="color-box" style="color:#fff; background-color:#434;background-image:linear-gradient(45deg,transparent 90%,#434 90%,#434),linear-gradient(45deg,transparent 88%,#c8f 88%,#c8f), linear-gradient(45deg,transparent 84%,#000 84%,#000);">__theme__</span>
 エギル|Agil|<span class="color-box" style="color:#fff; background-color:#375;background-image:linear-gradient(45deg,transparent 90%,#375 90%,#375),linear-gradient(45deg,transparent 88%,#889 88%,#889), linear-gradient(45deg,transparent 84%,#b84 84%,#b84);">__theme__</span>
 オベイロン|Oberon|<span class="color-box" style="color:#fff; background-color:#464;background-image:linear-gradient(45deg,transparent 90%,#464 90%,#464),linear-gradient(45deg,transparent 88%,#eee 88%,#eee), linear-gradient(45deg,transparent 84%,#fc9 84%,#fc9);">__theme__</span>
+カーディナル|Cardinal|<span class="color-box" style="color:#fff; background-color:#3c2c36;background-image:linear-gradient(45deg,transparent 90%,#3c2c36 90%,#3c2c36),linear-gradient(45deg,transparent 88%,#653a58 88%,#653a58), linear-gradient(45deg,transparent 84%,#c69e77 84%,#c69e77);">__theme__</span>
 キズメル|Kizmel|<span class="color-box" style="color:#fff; background-color:#98a;background-image:linear-gradient(45deg,transparent 90%,#98a 90%,#98a),linear-gradient(45deg,transparent 88%,#546 88%,#546), linear-gradient(45deg,transparent 84%,#859 84%,#859);">__theme__</span>
 キリト|Kirito|<span class="color-box" style="color:#fff; background-color:#444;background-image:linear-gradient(45deg,transparent 90%,#444 90%,#444),linear-gradient(45deg,transparent 88%,#888 88%,#888), linear-gradient(45deg,transparent 84%,#000 84%,#000);">__theme__</span>
 クイネラ|Quinella|<span class="color-box" style="color:#381852; background-color:#ffe5df;background-image:linear-gradient(45deg,transparent 90%,#ffe5df 90%,#ffe5df),linear-gradient(45deg,transparent 88%,#f6f6f8 88%,#f6f6f8), linear-gradient(45deg,transparent 84%,#ecd7fe 84%,#ecd7fe);">__theme__</span>
