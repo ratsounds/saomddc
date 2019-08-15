@@ -169,6 +169,7 @@ class|short|short_en|long|long_en
 ![gmaiden.png](../../icons/gmaiden.png)|乙女|Maiden|ミッドガルドの乙女戦士 〜初夏〜|Midgard Maiden Warriors - First Summer -
 ![gshell.png](../../icons/gshell.png)|スク水|Sukumizu|3rdカウントダウンチケット|3rd Countdown Ticket VIP Reward
 ![gdestiny.png](../../icons/gdestiny.png)|運命|Destiny|宿命の二人|Duo of Destiny
+![gmaiden.png](../../icons/gmaiden.png)|乙女|Maiden|ミッドガルドの乙女戦士 〜盛夏〜|Midgard Maiden Warriors - MidSummer -
 
 ## Characters
 
