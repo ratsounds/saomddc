@@ -170,6 +170,10 @@ class|short|short_en|long|long_en
 ![gshell.png](../../icons/gshell.png)|スク水|Sukumizu|3rdカウントダウンチケット|3rd Countdown Ticket VIP Reward
 ![gdestiny.png](../../icons/gdestiny.png)|運命|Destiny|宿命の二人|Duo of Destiny
 ![gmaiden.png](../../icons/gmaiden.png)|乙女|Maiden|ミッドガルドの乙女戦士 〜盛夏〜|Midgard Maiden Warriors - MidSummer -
+![gcm3.png](../../icons/gcm3.png)|CM3|CM3|CM記念 第三弾|CM Memorial #3
+![ganniv3.png](../../icons/ganniv3.png)|3A|3A|リライブ・ザ・メモリー 1st|Relive The Memory 1st
+![ganniv3.png](../../icons/ganniv3.png)|3A|3A|3rdアニバーサリーチケット 報酬|3rd Anniversary Ticket VIP Reward
+![gggo5.png](../../icons/gggo5.png)|GGO5|GGO5|リライブ・ザ・メモリー 2nd|Relive The Memory 2nd
 
 ## Characters
 
