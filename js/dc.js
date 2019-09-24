@@ -161,9 +161,10 @@ var DC = (function () {
     function calcDamage(c, lv, lb, wep, r, amr, acc, boss, custom_rate) {
         var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);
         if (custom_rate) {
-            dcv.rate = custom_rate;
+            dcv.damage = (dcv.atk * dcv.atk_mod + dcv.atk_ss - dcv.def) * custom_rate * dcv.crit * dcv.elem * dcv.mod * dcv.combo / dcv.guard;
+        } else {
+            dcv.damage = (dcv.atk * dcv.atk_mod + dcv.atk_ss - dcv.def) * dcv.rate * dcv.crit * dcv.elem * dcv.mod * dcv.combo / dcv.guard;
         }
-        dcv.damage = (dcv.atk * dcv.atk_mod + dcv.atk_ss - dcv.def) * dcv.rate * dcv.crit * dcv.elem * dcv.mod * dcv.combo / dcv.guard;
         return dcv;
     }
 

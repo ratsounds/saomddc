@@ -1,4 +1,4 @@
-var lvr = [{
+const lvr = [{
     lv: 80,
     r: 0
 }, {
@@ -26,9 +26,9 @@ var lvr = [{
     lv: 100,
     r: 5
 }];
-var ranking;
-var boss;
-var langs = {
+let ranking;
+let boss;
+const langs = {
     ja: {
         lang: '',
         help: 'ja/usage'
@@ -42,11 +42,11 @@ var langs = {
         help: 'zh/usage'
     },
 }
-var lang;
-var elemRanking;
-var elemSort;
-var config;
-var mapperInfo;
+let lang;
+let elemRanking;
+let elemSort;
+let config;
+let mapperInfo;
 
 DO.onLoad(function () {
     loadDBFromFile('data/data.json', init);
@@ -71,8 +71,8 @@ function loadDBFromFile(url, callback) {
 }
 
 function getObjectArray(obj) {
-    var array = [];
-    for (var i in obj) {
+    const array = [];
+    for (let i in obj) {
         array.push(obj[i]);
     }
     return array;
@@ -103,17 +103,17 @@ function sortObjectArray(obj, key, asend) {
 }
 
 function init() {
-    var db = DC.getData();
+    const db = DC.getData();
 
     //get language
-    var languages = window.navigator.languages || [
+    const languages = window.navigator.languages || [
         window.navigator.language ||
         window.navigator.userLanguage ||
         window.navigator.browserLanguage
     ];
-    var lang_setting;
+    let lang_setting;
     for (let i = 0; i < languages.length; i++) {
-        var language = languages[i];
+        const language = languages[i];
         for (let key in langs) {
             if (language.indexOf(key) === 0) {
                 lang_setting = langs[key];
@@ -135,11 +135,11 @@ function init() {
     DO.qid('ranking').focus();
 
     // set theme list
-    var elemThemePreset = DO.qid('theme_preset').html('');
-    var array_cname = getObjectArray(db.cname);
+    const elemThemePreset = DO.qid('theme_preset').html('');
+    const array_cname = getObjectArray(db.cname);
     sortObjectArray(array_cname, 'name_en', true);
-    for (var i = 0; i < array_cname.length; i++) {
-        var item = array_cname[i];
+    for (let i = 0; i < array_cname.length; i++) {
+        const item = array_cname[i];
         elemThemePreset.append(DO.new('<option value="' + item.id + '">' + item['name' + lang] + '</option>'));
     }
     //init config
@@ -200,7 +200,7 @@ function init() {
         });
     });
     DO.qid('theme_preset').on('change', function (ev) {
-        var cn = DC.getCname()[ev.target.value];
+        const cn = DC.getCname()[ev.target.value];
         if (cn) {
             DO.qid('theme_color').value = cn.color;
             DO.qid('theme_body').value = cn.body;
@@ -234,13 +234,13 @@ function init() {
             return JSON.parse(text);
         })
         .then(function (json) {
-            var gcss = '<style type="text/css">';
-            var url = json[Math.floor(Math.random() * json.length)];
+            let gcss = '<style type="text/css">';
+            const url = json[Math.floor(Math.random() * json.length)];
             if (url) {
                 gcss += '.app {background-image:url(' + url + ')!important} ';
             }
-            for (var i in db.group) {
-                var gclass = 'g' + db.group[i].class;
+            for (let i in db.group) {
+                const gclass = 'g' + db.group[i].class;
                 gcss += '.' + gclass + ' {background-image:url(icons/' + gclass + '.png)} ';
             }
             gcss += '</style>';
@@ -251,9 +251,9 @@ function init() {
         });
 
     //load preset
-    var elemPreset = DO.qid('preset').html('');
-    for (var i = 0; i < db.preset.length; i++) {
-        var name = db.preset[i]['name' + lang];
+    const elemPreset = DO.qid('preset').html('');
+    for (let i = 0; i < db.preset.length; i++) {
+        const name = db.preset[i]['name' + lang];
         elemPreset.append(DO.new('<option value="' + i + '">' + name + '</option>'));
     }
 
@@ -286,7 +286,7 @@ function init() {
         showRanking();
     });
     elemRanking.on('.item', 'click', function (ev) {
-        var elemDetail = this.q('.detail');
+        const elemDetail = this.q('.detail');
         if (elemDetail.innerHTML.trim() === '') {
             elemDetail.html(getCharDetail(this.id));
             createTweetWidgets(elemDetail);
@@ -297,20 +297,20 @@ function init() {
     });
     //init meta word list
     /*
-      var metalist = DO.qid('metalist');
-      var meta = [];
-      for (var i in db.base) {          var c = db.base[i];
-          var words = c.meta.split(']')[1].trim().split(' ');
+      const metalist = DO.qid('metalist');
+      const meta = [];
+      for (let i in db.base) {          const c = db.base[i];
+          const words = c.meta.split(']')[1].trim().split(' ');
           words[0] = words[0].replace(words[5], '');
-          for (var j in words) {              var word = words[j].trim();
-              var entry = meta.find(obj => obj.word === word);
+          for (let j in words) {              const word = words[j].trim();
+              const entry = meta.find(obj => obj.word === word);
               if (entry) {                  entry.count++;
               } else {                  meta.push({ word: word, count: 1 });
               }
           }
       }
       meta.sort((a, b) => b.count - a.count);
-      for (var i in meta) {          var word = meta[i].word;
+      for (let i in meta) {          const word = meta[i].word;
           metalist.append(DO.new('<option value="' + word + '">' + word + '</option>'));
       }
       */
@@ -363,9 +363,9 @@ function setWallpaper(url) {
 }
 
 function showSidebar() {
-    var elemMain = DO.qid('main');
-    var elemBody = DO.q('body');
-    var elemSidebar = DO.qid('sidebar');
+    const elemMain = DO.qid('main');
+    const elemBody = DO.q('body');
+    const elemSidebar = DO.qid('sidebar');
     if (elemSidebar) {
         elemMain.removeChild(elemSidebar);
     }
@@ -380,7 +380,7 @@ function showSidebar() {
 }
 
 function getBoss() {
-    var db = DC.getData();
+    const db = DC.getData();
     boss = {
         crit: 1
     };
@@ -430,24 +430,38 @@ function setBoss(boss) {
 function calcRanking() {
     //console.log('calcRanking');
     getBoss();
-    var cs = DC.getChar();
+    const cs = DC.getChar();
     ranking = [];
-    for (var i in lvr) {
-        var clvr = lvr[i];
-        for (var j in cs) {
-            var c = cs[j];
-            var dcv;
+    for (let i in lvr) {
+        const clvr = lvr[i];
+        for (let j in cs) {
+            const c = cs[j];
+            let dcv;
             if (clvr.r > 0) {
                 // weapon & armor, accessory
                 if (boss.combo > 0) {
                     dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_combo_wep, clvr.r, c.eq_combo_amr, c.eq_combo_acc, boss);
                 } else {
-                    //dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_atk_wep, clvr.r, c.eq_atk_amr, c.eq_atk_acc, boss);
                     dcv = DC.calcDamage(c, clvr.lv, 4, c.eq_mp_wep, clvr.r, c.eq_mp_amr, c.eq_mp_acc, boss);
                 }
             } else {
                 // no weapon & armor, accessory
                 dcv = DC.calcDamage(c, clvr.lv, 4, undefined, clvr.r, undefined, undefined, boss);
+            }
+            let xdcv; // extra dcv for XS+AA
+            if (c.mp_link > 0) {
+                const xa_s3_rate = c.s3_rate + 2.0; // rate for XS+AA
+                if (clvr.r > 0) {
+                    // weapon & armor, accessory
+                    if (boss.combo > 0) {
+                        xdcv = DC.calcDamage(c, clvr.lv, 4, c.eq_combo_wep, clvr.r, c.eq_combo_amr, c.eq_combo_acc, boss, xa_s3_rate);
+                    } else {
+                        xdcv = DC.calcDamage(c, clvr.lv, 4, c.eq_mp_wep, clvr.r, c.eq_mp_amr, c.eq_mp_acc, boss, xa_s3_rate);
+                    }
+                } else {
+                    // no weapon & armor, accessory
+                    xdcv = DC.calcDamage(c, clvr.lv, 4, undefined, clvr.r, undefined, undefined, boss, xa_s3_rate);
+                }
             }
             ranking.push(dcv);
             dcv.combo_speed_rate = getComboSpeedRate(dcv.sv.c.combo_speed, boss.combo);
@@ -460,7 +474,7 @@ function calcRanking() {
                     dcv.acceleration_offset = 1.0;
                 }
             }
-            var dca_x = getDCA(
+            const dca_x = getDCA(
                 dcv.sv.c.s3_duration,
                 dcv.sv.c.s3_c_duration,
                 dcv.sv.c.s3_acceleration,
@@ -473,7 +487,7 @@ function calcRanking() {
             dcv.cduration = dca_x.combination;
             dcv.acceleration = dca_x.acceleration;
             dcv.c2duration = dcv.duration + (dcv.sv.c.s3_c_duration ? dcv.cduration : dcv.duration);
-            var dca_50 = getDCA(
+            const dca_50 = getDCA(
                 dcv.sv.c.s3_duration,
                 dcv.sv.c.s3_c_duration,
                 dcv.sv.c.s3_acceleration,
@@ -493,7 +507,7 @@ function calcRanking() {
             dcv.duration_50 = Math.floor(dcv.duration_50 * 100) / 100;
             dcv.cduration = Math.floor(dcv.cduration * 100) / 100;
             dcv.c2duration = Math.floor(dcv.c2duration * 100) / 100;
-            var pduration = dcv.sv.c.type.id === 'lance' || dcv.sv.c.type.id === 'staff' || dcv.sv.c.group.id.indexOf('sto1') >= 0 || dcv.sv.c.group.id.indexOf('sto2') >= 0 ? 0.2 : 0.0;
+            const pduration = dcv.sv.c.type.id === 'lance' || dcv.sv.c.type.id === 'staff' || dcv.sv.c.group.id.indexOf('sto1') >= 0 || dcv.sv.c.group.id.indexOf('sto2') >= 0 ? 0.2 : 0.0;
             dcv.pdps = Math.floor(dcv.damage / (dcv.duration - pduration));
             dcv.pcdps = Math.floor(dcv.damage / (dcv.cduration - pduration));
             dcv.gap = Math.floor((dcv.duration - dcv.cduration) * 100) / 100;
@@ -504,9 +518,23 @@ function calcRanking() {
             dcv.mpcost = Math.floor(dcv.sv.mp * 100 / dcv.sv.cost) / 100;
             dcv.hits = dcv.sv.c.hits;
             dcv.rate = Math.floor(dcv.rate * 100) / 100;
+            // XS metrics
+            if (xdcv) {
+                dcv.xadps = Math.floor(xdcv.damage / dcv.duration); // XS+AA DPS
+                dcv.xc2dps = dcv.dps * 2 // XS C/2.DPS
+                dcv.xac2dps = dcv.xadps * 2; // XS+AA C/2.DPS
+                dcv.xacapacity = Math.floor((xdcv.damage * dcv.sv.mp) / dcv.sv.cost); // XS+AA Capacity
+                dcv.xadamage = Math.floor(xdcv.damage); // XS+AA Damage
+            } else {
+                dcv.xadps = dcv.dps;
+                dcv.xc2dps = dcv.c2dps;
+                dcv.xac2dps = dcv.c2dps;
+                dcv.xacapacity = dcv.capacity;
+                dcv.xadamage = dcv.damage;
+            }
         }
     }
-    var sortKey = elemSort.value;
+    const sortKey = elemSort.value;
     switch (sortKey) {
         case 'duration':
         case 'cduration':
@@ -521,7 +549,7 @@ function calcRanking() {
 }
 
 function getDCA(duration, combination, acceleration, speed_rate, acceleration_rate, acceleration_offset, charge_offset) {
-    var dca = {};
+    const dca = {};
     if (duration > acceleration) {
         dca.duration = speed_rate * (duration - acceleration + acceleration / acceleration_rate) + acceleration_offset;
     } else {
@@ -550,11 +578,11 @@ function getComboSpeedRate(combo_speed, combo) {
 }
 
 function getDPM(dcv) {
-    var mp = dcv.sv.mp;
-    var dmp = dcv.sv.c.type.ns_hits * dcv.sv.mpr;
-    var ns_duration = dcv.sv.c.type.ns_duration * dcv.combo_speed_rate * dcv.sv.c.s3_speed ? dcv.sv.c.s3_speed : 1;
-    var time = 0;
-    var count = 0;
+    let mp = dcv.sv.mp;
+    const dmp = dcv.sv.c.type.ns_hits * dcv.sv.mpr;
+    const ns_duration = dcv.sv.c.type.ns_duration * dcv.combo_speed_rate * dcv.sv.c.s3_speed ? dcv.sv.c.s3_speed : 1;
+    let time = 0;
+    let count = 0;
     while (time <= 60) {
         if (mp >= dcv.sv.cost) {
             // s3
@@ -571,16 +599,16 @@ function getDPM(dcv) {
 }
 
 function showRanking() {
-    var filter = getFilter();
+    const filter = getFilter();
     elemRanking.html('');
-    var score_key = elemSort.value;
-    var rank = 0;
+    const score_key = elemSort.value;
+    let rank = 0;
 
-    var filtered = [];
-    var max = 0;
-    var min = Number.MAX_VALUE;
-    for (var i = 0; i < ranking.length; i++) {
-        var dcv = ranking[i];
+    const filtered = [];
+    let max = 0;
+    let  min = Number.MAX_VALUE;
+    for (let i = 0; i < ranking.length; i++) {
+        const dcv = ranking[i];
         if (
             filter.lv[dcv.sv.lv] &&
             filter.s[dcv.sv.c.rarity] &&
@@ -598,11 +626,11 @@ function showRanking() {
         }
     }
     //adjust scale of damage to 1.25 and capacity to 2/3
-    var dif = (max * 2) / 3 - min;
-    var offset = 30;
-    var remains = 100 - offset;
-    for (var i = 0; i < filtered.length; i++) {
-        var dcv = filtered[i];
+    const dif = (max * 2) / 3 - min;
+    const offset = 30;
+    const remains = 100 - offset;
+    for (let i = 0; i < filtered.length; i++) {
+        const dcv = filtered[i];
         dcv.p_dps = offset + (remains * (dcv.dps - min)) / dif;
         dcv.p_damage = offset + (remains * (dcv.damage * 1.25 - min)) / dif;
         dcv.p_capacity = offset + (remains * ((dcv.capacity * 2) / 3 - min)) / dif;
@@ -613,13 +641,13 @@ function showRanking() {
         if (dcv.sv.c.s3_video) {
             dcv.video = 1;
         }
-        var html = mapperInfo.map(dcv);
+        const html = mapperInfo.map(dcv);
         elemRanking.append(DO.new(html));
     }
 }
 
 function getFilter() {
-    var filter = {
+    const filter = {
         lv: {},
         s: {},
         r: {},
@@ -636,7 +664,7 @@ function getFilter() {
     flipAllZero(filter.lv);
     flipAllZero(filter.r);
     flipAllZero(filter.type);
-    filter.charge[undefined]=true;
+    filter.charge[undefined] = true;
     if (filter.keyword === '') {
         filter.keyword = [];
     } else {
@@ -647,10 +675,10 @@ function getFilter() {
 }
 
 function getCharDetail(id) {
-    var dcv = ranking[id];
-    var c = dcv.sv.c;
-    var name_key = 'name' + lang;
-    var html = ['<table><tbody>'];
+    const dcv = ranking[id];
+    const c = dcv.sv.c;
+    const name_key = 'name' + lang;
+    const html = ['<table><tbody>'];
     html.push(getKVTableRow('Short Name', c.short + ' / ' + c.short_en));
     html.push(getKVTableRow('Name(Jp)', c.name));
     html.push(getKVTableRow('Name(En)', c.name_en));
@@ -733,9 +761,9 @@ function getCharDetail(id) {
 }
 
 function createTweetWidgets(detail) {
-    var container = detail.q('.tcontainer');
+    const container = detail.q('.tcontainer');
     if (container) {
-        var id = container.q('a').href.split('/status/')[1];
+        const id = container.q('a').href.split('/status/')[1];
         twttr.widgets.createTweet(id, container, {
             width: '100%'
         }).then(() => container.classList.toggle('hidden'));
@@ -743,7 +771,7 @@ function createTweetWidgets(detail) {
 }
 
 function getKVTableRow(key, value, float) {
-    var v = value;
+    let v = value;
     if (float) {
         v = formatFloat(v);
     }
