@@ -174,6 +174,7 @@ class|short|short_en|long|long_en
 ![ganniv3.png](../../icons/ganniv3.png)|3A|3A|リライブ・ザ・メモリー 1st|Relive The Memory 1st
 ![ganniv3.png](../../icons/ganniv3.png)|3A|3A|3rdアニバーサリーチケット 報酬|3rd Anniversary Ticket VIP Reward
 ![gggo5.png](../../icons/gggo5.png)|GGO5|GGO5|リライブ・ザ・メモリー 2nd|Relive The Memory 2nd
+![ganniv3.png](../../icons/ganniv3.png)|3A3|3A3|リライブ・ザ・メモリー 3rd|Relive The Memory 3rd
 
 ## Characters
 

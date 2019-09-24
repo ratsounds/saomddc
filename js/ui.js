@@ -449,7 +449,7 @@ function calcRanking() {
                 dcv = DC.calcDamage(c, clvr.lv, 4, undefined, clvr.r, undefined, undefined, boss);
             }
             let xdcv; // extra dcv for XS+AA
-            if (c.mp_link > 0) {
+            if (c.mp_link > 0 || c.atk_link > 0) {
                 const xa_s3_rate = c.s3_rate + 2.0; // rate for XS+AA
                 if (clvr.r > 0) {
                     // weapon & armor, accessory
@@ -606,7 +606,7 @@ function showRanking() {
 
     const filtered = [];
     let max = 0;
-    let  min = Number.MAX_VALUE;
+    let min = Number.MAX_VALUE;
     for (let i = 0; i < ranking.length; i++) {
         const dcv = ranking[i];
         if (
