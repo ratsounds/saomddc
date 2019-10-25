@@ -72616,7 +72616,7 @@
             "short_en": "Return Selka",
             "cname": "selka",
             "group": "return",
-            "type": "mace",
+            "type": "staff",
             "element": "light",
             "world": "uw",
             "base_rarity": 6,
