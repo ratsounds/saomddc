@@ -175,9 +175,6 @@ class|short|short_en|long|long_en
 ![ganniv3.png](../../icons/ganniv3.png)|3A|3A|3rdアニバーサリーチケット 報酬|3rd Anniversary Ticket VIP Reward
 ![gggo5.png](../../icons/gggo5.png)|GGO5|GGO5|リライブ・ザ・メモリー 2nd|Relive The Memory 2nd
 ![ganniv3.png](../../icons/ganniv3.png)|3A3|3A3|リライブ・ザ・メモリー 3rd|Relive The Memory 3rd
-![ganniv3.png](../../icons/ganniv3.png)|3A4|3A4|リライブ・ザ・メモリー 4th|Relive The Memory 4th
-![gnosta.png](../../icons/gnosta.png)|追憶|Nosta|追憶のカセドラル|Cathedral of Nostalgia
-![glantern.png](../../icons/glantern.png)|誘惑|Allure|ランタンメダル 報酬|Lantern Medal Reward
 
 ## Characters
 
