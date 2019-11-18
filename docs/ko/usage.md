@@ -44,11 +44,9 @@ index: true
 ![Durations](../images/durations.png)
 
 &nbsp;&nbsp;&nbsp;Duration이 스킬 전체의 시전 시간을 나타내며 CSec(Combination Second)가 스킬 사용을 기준으로 연계가 가능해지는 시간입니다. Duration과 CSec는 캐릭터마다 개별 값이 설정되어 있으며, 모션을 처리하면서 생기는 약간의 시스템 지연을 제외하면 고정되어 있습니다.  
-&nbsp;&nbsp;&nbsp;특히 ★5 이상 캐릭터 성능 평가에서 중요한 것은 C/2 Duration과 이를 바탕으로 한 DPS(C/2 DPS)입니다. C/2는 Combination or Twice의 약자로, C/2 Duration은 ★5 이상이라면 연계, ★4라면 SS3을 2연속으로 사용했을 때의 시전 시간을 나타냅니다.  
-&nbsp;&nbsp;&nbsp;앞의 연계할 때의 시간 흐름 그림을 참조하면 보다 직관적으로 이해가 가능합니다.
+&nbsp;&nbsp;&nbsp;특히 ★5 이상 캐릭터 성능 평가에서 중요한 것은 C/2 Duration과 이를 바탕으로 한 DPS(C/2 DPS)입니다. C/2는 Combination or Twice의 약자로, C/2 Duration은 ★5 이상이라면 연계, ★4라면 SS3을 2연속으로 사용했을 때의 시전 시간을 나타냅니다. 앞의 연계할 때의 시간 흐름 그림을 참조하면 보다 직관적으로 이해가 가능합니다.
 
-&nbsp;&nbsp;&nbsp;★6 이후에는 액셀러레이션을 통해 인 게임 시간을 단축하는 요소가 추가되어서 액셀러레이션 지속시간도 데이터로 참조하고 있습니다. 액셀러레이션은 인 게임 시간을 실시간으로 1/3으로 단축하고 액셀러레이션 시간도 연계와 마찬가지로 스킬을 사용한 순간부터 고정된 지속시간이 설정되어 있습니다.  
-&nbsp;&nbsp;&nbsp;따라서 인 게임에서의 Duration과 CSec는 아래와 같이 계산할 수 있습니다.
+&nbsp;&nbsp;&nbsp;★6 이후에는 액셀러레이션을 통해 인 게임 시간을 단축하는 요소가 추가되어서 액셀러레이션 지속시간도 데이터로 참조하고 있습니다. 액셀러레이션은 인 게임 시간을 실시간으로 1/3으로 단축하고 액셀러레이션 시간도 연계와 마찬가지로 스킬을 사용한 순간부터 고정된 지속시간이 설정되어 있습니다. 따라서 인 게임에서의 Duration과 CSec는 아래와 같이 계산할 수 있습니다.
 
 $$
 \begin{aligned}
@@ -63,7 +61,7 @@ $$
 \end{aligned}
 $$
 
-DPS 계산에는 인 게임 시간을 기본으로 하고 있지만, 화면 오른쪽 위의 토글스위치를 통해서 인 게임 시간과 실제 시간의 전환이 가능합니다.
+&nbsp;DPS 계산에는 인 게임 시간을 기본으로 하고 있지만, 화면 오른쪽 위의 토글스위치를 통해서 인 게임 시간과 실제 시간의 전환이 가능합니다.
 
 ![Setting Time](../images/setting_time.jpg)
 
@@ -110,14 +108,12 @@ DPS 계산에는 인 게임 시간을 기본으로 하고 있지만, 화면 오�
 |P.CDPS|${Damage}/({CSec}-0.2)$|
 
 ## 보스 프리셋과 설정
-&nbsp;&nbsp;&nbsp;입히는 대미지는 보스의 속성과 캐릭터의 속성 상성, 방어력, 특수한 추가대미지나 내성에 따라 변하므로, 적절하게 설정하는 것으로 캐릭터의 유리함·불리함을 보다 정확하게 알 수 있습니다. 반면 이쪽은 설정해야 하는 파라미터가 많으므로, 전형적인 보스나 최신 랭킹 이벤트 전용 프리셋을 준비해놓았습니다.  
-&nbsp;&nbsp;&nbsp;우선은 프리셋의 설정 내용을 확인하면서 각종 보스의 파라미터 설정에 익숙해지는 것이 좋습니다.
+&nbsp;&nbsp;&nbsp;입히는 대미지는 보스의 속성과 캐릭터의 속성 상성, 방어력, 특수한 추가대미지나 내성에 따라 변하므로, 적절하게 설정하는 것으로 캐릭터의 유리함·불리함을 보다 정확하게 알 수 있습니다. 반면 이쪽은 설정해야 하는 파라미터가 많으므로, 전형적인 보스나 최신 랭킹 이벤트 전용 프리셋을 준비해놓았습니다. 우선은 프리셋의 설정 내용을 확인하면서 각종 보스의 파라미터 설정에 익숙해지는 것이 좋습니다.
 
 &nbsp;&nbsp;&nbsp;특히 사용 빈도가 높은 부분은 설정 패널 맨 위의 디버프와 버프, 콤보 관련 설정인데, 우선은 이 파라미터만 설정할 수 있게 되어도 좋습니다.
 
 ### 방어력과 디버프 설정
-&nbsp;&nbsp;&nbsp;방어력은 상세한 조사가 필요하므로 프리셋을 참조하는 것이 좋습니다. 스스로 방어력을 측정할 때는 [방어력 측정](../knowledge/#방어력-측정)을 참조하세요.  
-&nbsp;&nbsp;&nbsp;디버프는 적이 디버프를 받은 상태에서 화력을 낼 수 있는 캐릭터를 찾을 때 설정합니다. 디버프 값은 방어력 감소율이므로 값이 낮을수록 대미지 증가 효과가 높다는 점을 유의해주세요.
+&nbsp;&nbsp;&nbsp;방어력은 상세한 조사가 필요하므로 프리셋을 참조하는 것이 좋습니다. 스스로 방어력을 측정할 때는 [방어력 측정](../knowledge/#방어력-측정)을 참조하세요. 디버프는 적이 디버프를 받은 상태에서 화력을 낼 수 있는 캐릭터를 찾을 때 설정합니다. 디버프 값은 방어력 감소율이므로 값이 낮을수록 대미지 증가 효과가 높다는 점을 유의해주세요.
 
 ![Setting DEF](../images/setting_def.jpg)
 
@@ -127,8 +123,7 @@ DPS 계산에는 인 게임 시간을 기본으로 하고 있지만, 화면 오�
 ![Setting ATK](../images/setting_atk.jpg)
 
 ### 콤보 보정 설정
-&nbsp;&nbsp;&nbsp;스킬을 사용할 때의 콤보 히트 수를 설정합니다. 콤보에 의한 보정은 대미지뿐만 아니라 쌍검과 같이 콤보 가속에 따른 Duration 감소도 계산되므로 DPS 등에 변화가 있습니다.  
-&nbsp;&nbsp;&nbsp;특히 최근 랭킹 이벤트에서는 첫 패리 전에 콤보를 쌓는 전략이 주류가 되었기에 설정할 기회가 많습니다.
+&nbsp;&nbsp;&nbsp;스킬을 사용할 때의 콤보 히트 수를 설정합니다. 콤보에 의한 보정은 대미지뿐만 아니라 쌍검과 같이 콤보 가속에 따른 Duration 감소도 계산되므로 DPS 등에 변화가 있습니다. 특히 최근 랭킹 이벤트에서는 첫 패리 전에 콤보를 쌓는 전략이 주류가 되었기에 설정할 기회가 많습니다.
 
 ![Setting Combo](../images/setting_combo.jpg)
 
@@ -181,7 +176,7 @@ DPS 계산에는 인 게임 시간을 기본으로 하고 있지만, 화면 오�
 |![ls](../../icons/theme_body.png)|타이틀 바의 배경 색입니다.|
 |![ls](../../icons/theme_head.png)|타이틀 바의 하이라이트 1.|
 |![ls](../../icons/theme_highlight.png)|타이틀 바의 하이라이트 2.|
-|![ls](../../icons/info_icon.png)|PC처럼 가로가 긴 화면일 경우 사이드바에 지정한 URL을 표시할 수 있습니다. 공지를 설정하는 것을 추천합니다. 메모디프 공지 ([일본어](https://api-defrag.wrightflyer.net/webview/announcement?phone_type=2) : [영어](https://api-defrag-ap.wrightflyer.net/webview/announcement?phone_type=2&lang=en) : [중국어](https://api-defrag-ap.wrightflyer.net/webview/announcement?phone_type=2&lang=tc) : [한국어](https://api-defrag-ap.wrightflyer.net/webview/announcement?phone_type=2&lang=kr))|
+|![ls](../../icons/info_icon.png)|PC처럼 가로가 긴 화면일 때 사이드바에 지정한 URL을 표시할 수 있습니다. 공지를 설정하는 것을 추천합니다. 메모디프 공지 ([일본어](https://api-defrag.wrightflyer.net/webview/announcement?phone_type=2) : [영어](https://api-defrag-ap.wrightflyer.net/webview/announcement?phone_type=2&lang=en) : [중국어](https://api-defrag-ap.wrightflyer.net/webview/announcement?phone_type=2&lang=tc) : [한국어](https://api-defrag-ap.wrightflyer.net/webview/announcement?phone_type=2&lang=kr))|
 
 {% include data.md %}
 {% include keywords.md %}
