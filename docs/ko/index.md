@@ -5,16 +5,16 @@ permalink: /ko/about/
 lang: ko
 order: 100
 ---
-このWebサイトはソードアート・オンライン メモリー・デフラグの非公式ダメージ計算ツールです。ダメージ計算方法や一部のキャラクターパラメータは、有志によって収集されたデータを基に推定されており、ゲームクライアントのリバースエンジニアリングによるものではありません。
+&nbsp;&nbsp;&nbsp;이 웹 사이트는 소드 아트 온라인 메모리 디프래그의 비공식 대미지 계산 툴입니다. 대미지 계산 방법이나 일부 캐릭터 파라미터는 지원자가 수집한 데이터를 바탕으로 추정하고 있으며, 게임 클라이언트를 리버스 엔지니어링 하여 파생된 것이 아닙니다.
 
-## 目次
-1. [火力計算機の使い方](/ja/usage)
-2. [メモデフの用語とテクニック](/ja/tips)
-3. [ダメージ計算に関する知識](/ja/knowledge)
-4. [開発者向け情報](/ja/developer)
+## 목차
+1. [화력 계산기 사용법](/saomddc/ko/usage)
+2. [메모디프 용어와 테크닉](/saomddc/ko/tips)
+3. [대미지 계산에 관한 지식](/saomddc/ko/knowledge)
+4. [개발자용 정보](/saomddc/ko/developer)
 
-## 謝辞
-Thank you so much for all contributors on
+## 감사의 말
+&nbsp;&nbsp;&nbsp;Thank you so much for all contributors on
 [SAOMD - Database](https://saomd-fanadata.fr/)
 and
 [Twitter #メモデフ](https://twitter.com/search?q=%23%E3%83%A1%E3%83%A2%E3%83%87%E3%83%95)
