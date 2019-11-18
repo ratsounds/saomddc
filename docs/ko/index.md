@@ -5,7 +5,7 @@ permalink: /ko/about/
 lang: ko
 order: 100
 ---
-이 웹 사이트는 소드 아트 온라인 메모리 디프래그의 비공식 대미지 계산 툴입니다. 대미지 계산 방법이나 일부 캐릭터 파라미터는 지원자가 수집한 데이터를 바탕으로 추정하고 있으며, 게임 클라이언트를 리버스 엔지니어링 하여 파생된 것이 아닙니다.
+　이 웹 사이트는 소드 아트 온라인 메모리 디프래그의 비공식 대미지 계산 툴입니다. 대미지 계산 방법이나 일부 캐릭터 파라미터는 지원자가 수집한 데이터를 바탕으로 추정하고 있으며, 게임 클라이언트를 리버스 엔지니어링 하여 파생된 것이 아닙니다.
 
 ## 목차
 1. [화력 계산기 사용법](/saomddc/ko/usage)
@@ -14,7 +14,7 @@ order: 100
 4. [개발자용 정보](/saomddc/ko/developer)
 
 ## 감사의 말
-Thank you so much for all contributors on
+　Thank you so much for all contributors on
 [SAOMD - Database](https://saomd-fanadata.fr/)
 and
 [Twitter #メモデフ](https://twitter.com/search?q=%23%E3%83%A1%E3%83%A2%E3%83%87%E3%83%95)
