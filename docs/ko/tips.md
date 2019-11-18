@@ -421,11 +421,11 @@ search: true
 > [차지 스킬](#차지-스킬-charge-skill)을 연계 캔슬하면 차지 레벨이 다음 스킬까지 이어집니다. 차지 스킬의 레벨은 스킬 모션이 끝나는 순간에 리셋되므로 연계 캔슬을 사용하면 차지 레벨이 리셋되지 않고 다음 스킬까지 이어집니다. [고속 스위치 백](#고속-스위치-백-anim-skip-aba)이랑 상성이 좋습니다.
 > <blockquote class="twitter-tweet" data-conversation="none"><a href="https://twitter.com/ratsounds/status/1113462968983756800">[ref]</a></blockquote>
 
-### 패리 모으기 캔슬(Charging Parry Cancel)
+### 패리 모으기 캔슬 (Charging Parry Cancel)
 > 패리 모션의 후반은 차지 스킬의 "모으기 모션"으로 캔슬할 수 있습니다. 패리 입력 후에 빠르게 SS3 버튼을 누르면 패리 직후에 스킬을 사용할 수 있습니다. 창이나 지팡이의 패리 캔슬과 같은 사양입니다.
 > <blockquote class="twitter-tweet" data-conversation="none"><a href="https://twitter.com/ratsounds/status/1113645771201507329">[ref]</a></blockquote>
 
-### 후면 패리 모으기 캔슬(Flip Charging Parry Cancel)
+### 후면 패리 모으기 캔슬 (Flip Charging Parry Cancel)
 > 활 차지 캐릭터로 패리 모으기 캔슬을 응용한 것으로, 후면 스위치로 나오는 백스텝으로 패리를 하고 차지 스킬로 캔슬하는 테크닉. 전제지식으로 활로 원거리 후면 스위치를 하면 백스텝이 나오는 것이 포인트!(참고로 창은 원거리 후면 스위치를 해도 반대 방향으로 스텝을 합니다) 그다음은 다른 무기의 패리 캔슬과 마찬가지입니다. 백스텝 중에 차지 입력을 시작했다가 패리 판정이 성립한 직후에 떼는 것으로 모으기 캔슬을 할 수 있습니다. 활의 백스텝은 패리가 성립했을 때에만 패리 모션으로 이행하므로, 패리가 성립되지 않았을 때는 평범한 백스텝이라서 캔슬을 할 수 없습니다.
 > <blockquote class="twitter-tweet" data-conversation="none"><a href="https://twitter.com/ratsounds/status/1123510781549600769">[ref]</a></blockquote>
 
@@ -467,7 +467,7 @@ search: true
 > <blockquote class="twitter-tweet" data-conversation="none"><a href="https://twitter.com/ratsounds/status/970657111712477184">[ref]</a></blockquote>
 
 
-### 변칙 스위치 백(Adv Anim Skip ABCB)
+### 변칙 스위치 백 (Adv Anim Skip ABCB)
 > 고속 스위치 백이랑은 다른 조건으로 연계 시간을 무시해서 4연계하는 테크닉. 실제로는 연계 시간은커녕 연계 구조까지 초월했습니다. 변칙 스위치 백이 성립하는 조건은 후 연계 캐릭터가 SS3 모션을 종료하는 시점에 선 연계 캐릭터의 SS3 모션이 이어지고 있을 것. 즉 ↓를 만족하는 경우입니다.
 > 
 > $$
@@ -577,7 +577,7 @@ search: true
 > #### 참고 영상 VIP딜러 (화력 겸 디버프+연계MPx2)
 > <blockquote class="twitter-tweet" data-conversation="none"><a href="https://twitter.com/M3590M/status/1016569580750114817">[ref]</a></blockquote>
 
-### 컨셉 파티(縛り)
+### 컨셉 파티 (縛り)
 > 캐릭터 선택에 제한을 둔 파티로 노는 것을 말합니다. ★3 컨셉 파티와 ★5 컨셉 파티, 캐릭터 컨셉 파티가 대표적입니다. 컨셉 파티는 멀티로 모집하기 어려워서 SNS를 주로 활용합니다. [Twitter #メモデフ #縛り(일본어)](https://twitter.com/search?q=%23%E3%83%A1%E3%83%A2%E3%83%87%E3%83%95%20%23%E7%B8%9B%E3%82%8A)등으로 검색해보면 컨셉 파티 동료를 찾을 수 있을지도 모릅니다. ★3 컨셉 파티는 플레이 스킬적인 방향으로 봐도 메모디프의 엔드 콘텐츠라 해도 좋습니다.
 
 ### ◯◯파라(パラ), ◯◯파
