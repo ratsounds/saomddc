@@ -670,7 +670,7 @@ function getFilter() {
     } else {
         filter.keyword = filter.keyword.toLowerCase().split(/\s+/);
     }
-    //console.log(filter);
+    console.log(filter);
     return filter;
 }
 
