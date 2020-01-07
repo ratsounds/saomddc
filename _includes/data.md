@@ -58,8 +58,8 @@ class|short|short_en|long|long_en
 ![gnycc.png](../../icons/gnycc.png)|NY|NYCC|NYCC記念|NYCC Memorial
 ![gsports.png](../../icons/gsports.png)|運動|Sports|友情のバトン！ 秋の大運動会|Baton of Friendship! Sports Festival
 ![gwa.png](../../icons/gwa.png)|婿|Groom|キリト&アスナ結婚記念日 2017|Kirito & Asuna Wedding Anniversary 2017
-![gsteamy.png](../../icons/gsteamy.png)|湯煙|Steamy |どきどき 湯けむり美人の湯|Steamy Beauty Bath Time 
-![gsteamy.png](../../icons/gsteamy.png)|湯煙|Steamy |どきどき 湯けむり美人の湯 報酬|Steamy Beauty Bath Time Reward
+![gsteamy.png](../../icons/gsteamy.png)|湯煙|Steamy |どきどき 湯けむり美人の湯 - 温泉|Steamy Beauty Bath Time - Hot Spring
+![gsteamy.png](../../icons/gsteamy.png)|湯煙|Steamy |どきどき 湯けむり美人の湯 報酬 - 温泉|Steamy Beauty Bath Time Reward - Hot Spring
 ![gggo1.png](../../icons/gggo1.png)|GGO1|GGO1|幻影の弾丸が繋ぐ二人の絆|The Two - Bonded By Phantom Bullets Scout
 ![gtrump.png](../../icons/gtrump.png)|切札|Trump|紅蓮の切り札|The Crimson Trump Card
 ![gkorea.png](../../icons/gkorea.png)|韓|Korea|G-Star記念|G-Star Memorial
@@ -124,7 +124,7 @@ class|short|short_en|long|long_en
 ![gonibi.png](../../icons/gonibi.png)|鬼火|Onibi|秋夜に舞う妖艶な鬼火|Bewitching Fatuous Fire
 ![gkimono.png](../../icons/gkimono.png)|忍|Ninja|着物のメダル 報酬|Kimono Medal Reward
 ![ggale.png](../../icons/ggale.png)|剣客|Gale|疾風の剣客|Gale Blade
-![gglow.png](../../icons/gglow.png)|玉肌|Glow|朧月夜と色づく玉肌|Glowing Skin in Hazy Moonlight 
+![gsteamy.png](../../icons/gsteamy.png)|玉肌|Glow|朧月夜と色づく玉肌 - 温泉|Glowing Skin in Hazy Moonlight - Hot Spring
 ![gpromise.png](../../icons/gpromise.png)|約束|Promise|約束の剣に込めた意志|Promised Sword
 ![gx18.png](../../icons/gx18.png)|X18|X18|荒野に降り立つ白雪のガンナー - クリスマス|The Snowy Gunners - Xmas
 ![gx18.png](../../icons/gx18.png)|X18|X18|ベルのメダル 報酬 - クリスマス|Bell Medal Reward - Xmas
@@ -177,7 +177,21 @@ class|short|short_en|long|long_en
 ![ganniv3.png](../../icons/ganniv3.png)|3A3|3A3|リライブ・ザ・メモリー 3rd|Relive The Memory 3rd
 ![ganniv3.png](../../icons/ganniv3.png)|3A4|3A4|リライブ・ザ・メモリー 4th|Relive The Memory 4th
 ![gnosta.png](../../icons/gnosta.png)|追憶|Nosta|追憶のカセドラル|Cathedral of Nostalgia
-![glantern.png](../../icons/glantern.png)|誘惑|Allure|ランタンメダル 報酬|Lantern Medal Reward
+![ghw18.png](../../icons/ghw18.png)|誘惑|Allure|ランタンメダル 報酬|Lantern Medal Reward
+![greturn.png](../../icons/greturn.png)|再会|Return|ルーリッドの再会|Return to Rulid Village
+![genchanting.png](../../icons/genchanting.png)|魅惑|Enchanting|魅惑のアラビアン・キャラバン|The Enchanting Arabian Caravan
+![gwa.png](../../icons/gwa.png)|WA19|WA19|キリト&アスナ結婚記念日 2019|Kirito & Asuna Wedding Anniversary 2019
+![gsteamy.png](../../icons/gsteamy.png)|回想|Memoir|ぽかぽか湯けむり回想録 - 温泉|Memoir of a Steamy Bath Time - Hot Spring
+![gsteamy.png](../../icons/gsteamy.png)|くつろぎ|Relaxing|湯桶メダル 報酬 - 温泉|Bathtub Medal Reward - Hot Spring
+![gik.png](../../icons/gik.png)|大戦|KB|騎士たちの大戦前夜|Night Before the Knight's Battle
+![gnp.png](../../icons/gnp.png)|天獄|NP|天獄のニーベルング 〜解放〜|Nibelungen Purgatory ~Liberation~
+![gdragon.png](../../icons/gdragon.png)|雨縁|Dragon|アニメ放映記念スカウト|Anime Premiere Special Scout
+![gikd.png](../../icons/gikd.png)|夢幻|Ikd|夢幻の整合騎士 〜挑戦〜|The Integrity Knight of Dreams ~Challenge~
+![ggd.png](../../icons/ggd.png)|創世神|gd|舞い降りた創世神|Descended Goddess of Creation
+![gikd.png](../../icons/gikd.png)|夢幻|Ikd|夢幻の整合騎士 ～決着～|The Integrity Knight of Dreams ~Settlement~
+![gx19.png](../../icons/gx19.png)|サンタ|X19|騎士メダル 報酬|Knight Medal Reward
+![ggos.png](../../icons/ggos.png)|ゴシップ|Gos|戦場のガールズトーク|Gossip on the Battlefield
+![gfeast.png](../../icons/gfeast.png)|宴|Feast|新年祝う　晴れ着の宴　～初詣～|New Year's Feast ~Shrine Visiting~
 
 ## Characters
 
@@ -207,6 +221,7 @@ name|name_en|color
 スレイ|Sorey|<span class="color-box" style="color:#666; background-color:#fff;background-image:linear-gradient(45deg,transparent 90%,#fff 90%,#fff),linear-gradient(45deg,transparent 88%,#448 88%,#448), linear-gradient(45deg,transparent 84%,#666 84%,#666);">__theme__</span>
 セック|Thokk|<span class="color-box" style="color:#fff; background-color:#444;background-image:linear-gradient(45deg,transparent 90%,#444 90%,#444),linear-gradient(45deg,transparent 88%,#f8c 88%,#f8c), linear-gradient(45deg,transparent 84%,#fef 84%,#fef);">__theme__</span>
 セブン|Seven|<span class="color-box" style="color:#fff; background-color:#7cd;background-image:linear-gradient(45deg,transparent 90%,#7cd 90%,#7cd),linear-gradient(45deg,transparent 88%,#16c 88%,#16c), linear-gradient(45deg,transparent 84%,#fd6 84%,#fd6);">__theme__</span>
+セルカ|Selka|<span class="color-box" style="color:#fff; background-color:#fff;background-image:linear-gradient(45deg,transparent 90%,#fff 90%,#fff),linear-gradient(45deg,transparent 88%,#f3efee 88%,#f3efee), linear-gradient(45deg,transparent 84%,#e6af5c 84%,#e6af5c);">__theme__</span>
 ソルティリーナ|Sortiliena|<span class="color-box" style="color:#fff; background-color:#64a;background-image:linear-gradient(45deg,transparent 90%,#64a 90%,#64a),linear-gradient(45deg,transparent 88%,#fff 88%,#fff), linear-gradient(45deg,transparent 84%,#a76 84%,#a76);">__theme__</span>
 ティーゼ|Tiese|<span class="color-box" style="color:#fff; background-color:#666f78;background-image:linear-gradient(45deg,transparent 90%,#666f78 90%,#666f78),linear-gradient(45deg,transparent 88%,#eef2f1 88%,#eef2f1), linear-gradient(45deg,transparent 84%,#c7473c 84%,#c7473c);">__theme__</span>
 デスガン|Death Gun|<span class="color-box" style="color:#fff; background-color:#333;background-image:linear-gradient(45deg,transparent 90%,#333 90%,#333),linear-gradient(45deg,transparent 88%,#f22 88%,#f22), linear-gradient(45deg,transparent 84%,#ccc 84%,#ccc);">__theme__</span>

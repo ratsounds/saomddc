@@ -258,7 +258,7 @@ i.exelement {
 }
 
 #control div.config_bar {
-  background-color: var(--main-form);
+  background-color: var(--main-bg);
 }
 
 #control div select#preset,
