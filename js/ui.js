@@ -467,7 +467,7 @@ function calcRanking() {
             dcv.combo_speed_rate = getComboSpeedRate(dcv.sv.c.combo_speed, boss.combo);
             dcv.acceleration_rate = 1.0;
             dcv.acceleration_offset = 0.0;
-            if (dcv.sv.c.rarity === 6) {
+            if (dcv.sv.c.rarity >= 6) {
                 if (boss.ingame) {
                     dcv.acceleration_rate = 3.0;
                 } else {
