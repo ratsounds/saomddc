@@ -471,7 +471,11 @@ function calcRanking() {
                 if (boss.ingame) {
                     dcv.acceleration_rate = 3.0;
                 } else {
-                    dcv.acceleration_offset = 1.0;
+                    if (dcv.sv.c.rarity >= 6.5) {
+                        dcv.acceleration_offset = 2.0;
+                    }else {
+                        dcv.acceleration_offset = 1.0;
+                    }
                 }
             }
             const dca_x = getDCA(
