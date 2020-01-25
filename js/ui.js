@@ -449,7 +449,7 @@ function calcRanking() {
                 dcv = DC.calcDamage(c, clvr.lv, 4, undefined, clvr.r, undefined, undefined, boss);
             }
             let xdcv; // extra dcv for XS+AA
-            if (c.mp_link > 0 || c.atk_link > 0) {
+            if (c.rarity >= 6.5) {
                 const xa_s3_rate = c.s3_rate + 2.0; // rate for XS+AA
                 if (clvr.r > 0) {
                     // weapon & armor, accessory
@@ -467,11 +467,15 @@ function calcRanking() {
             dcv.combo_speed_rate = getComboSpeedRate(dcv.sv.c.combo_speed, boss.combo);
             dcv.acceleration_rate = 1.0;
             dcv.acceleration_offset = 0.0;
-            if (dcv.sv.c.rarity === 6) {
+            if (dcv.sv.c.rarity >= 6) {
                 if (boss.ingame) {
                     dcv.acceleration_rate = 3.0;
                 } else {
-                    dcv.acceleration_offset = 1.0;
+                    if (dcv.sv.c.rarity >= 6.5) {
+                        dcv.acceleration_offset = 2.0;
+                    }else {
+                        dcv.acceleration_offset = 1.0;
+                    }
                 }
             }
             const dca_x = getDCA(

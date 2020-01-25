@@ -1,10 +1,14 @@
 var DC = (function () {
-    var db;
-    var sd;
-    var lvup_rate = 0.005245;
-    var lb_rate = {
+    var db; // base data
+    var sd; // cache for SV
+    /* SV (Static Variables)
+        SV is static variables in Damage Calculation when only unit parameters (without boss stats) are given.
+        DC module cache these static variables in order to improve calculation time.
+    */
+    var lvup_rate = 0.005245; // stats increase rate after lv80
+    var lb_rate = { // stats increase rate for limit break
         normal: 0.025775,
-        high: 0.041275
+        high: 0.041275 // for old reward units
     }
     var key_mp = 'mp';
     var key_bs_mp = 'bs_mp';
@@ -12,7 +16,8 @@ var DC = (function () {
     var key_e_mp_dec = 'e_mp_dec';
     var key_atk = 'atk';
     var key_bs_atk = 'bs_atk';
-    var charge_skill = [{
+    var charge_skill = [ // charge skill table
+        {
             ss_dmg: 0.3,
             s3_mp: 1.10,
             s3_charge_offset: 0.3,
@@ -29,11 +34,15 @@ var DC = (function () {
         },
     ];
 
-
+    /**
+     * load base data
+     * @param {Object} raw object parsed from data.json or local cache
+     * @returns {Object} db
+     */
     function loadData(raw) {
         db = raw;
         //create charge skill unit variant
-        if (Object.assign) { // skip on google apps scripts
+        if (Object.assign) { // skipped on google apps scripts (skipped in data manager on google spreadsheet)
             for (var key in db.base) {
                 var c = db.base[key];
                 if (c.s3_charge > 0) {
@@ -55,11 +64,17 @@ var DC = (function () {
         createConditionObject(db.armor, 'conditional');
         createConditionObject(db.accessory, 'conditional');
         createConditionObject(db.preset, 'condition');
-        //init static data
+        //init static variables cache
         sd = {};
         return db;
     }
 
+    /**
+     * create charge skill unit variants.
+     * @param {Object} c object for unit base data
+     * @param {number} charge_lv set number of charge lv in 1 to 3
+     * @returns {Object} unit base data for given charge lv
+     */
     function createChargeSkillUnit(c, charge_lv) {
         var unit = Object.assign({}, c);
         var prms = charge_skill[charge_lv - 1];
@@ -75,6 +90,12 @@ var DC = (function () {
         return db;
     }
 
+    /**
+     * create one to many relation from dst to items.key in src.
+     * @param {Array} src source items
+     * @param {Object} dst referred key/values
+     * @param {String} key key in source items
+     */
     function refer(src, dst, key) {
         for (var i in src) {
             var value = src[i][key];
@@ -82,6 +103,11 @@ var DC = (function () {
         }
     }
 
+    /**
+     * replace condition string into object
+     * @param {Object} object source object
+     * @param {String} key key for condition string in source object
+     */
     function createConditionObject(object, key) {
         for (var i in object) {
             var condition_string = object[i][key];
@@ -158,6 +184,19 @@ var DC = (function () {
         return dcv;
     }
 
+    /**
+     * calculate damage
+     * @param {Object} c unit base data
+     * @param {Number} lv number of level
+     * @param {Number} lb number of ATK limit break
+     * @param {Object} wep weapon
+     * @param {Object} r rarity of weapon
+     * @param {Object} amr armor
+     * @param {Object} acc accessory
+     * @param {Object} boss boss params
+     * @param {Number} custom_rate optional. override skill rate by custom_rate. it is used in old implementation for charged units
+     * @returns {Object} damage calculation variables with damage
+     */
     function calcDamage(c, lv, lb, wep, r, amr, acc, boss, custom_rate) {
         var dcv = getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss);
         if (custom_rate) {
@@ -168,6 +207,18 @@ var DC = (function () {
         return dcv;
     }
 
+    /**
+     * create damage calculation variables
+     * @param {Object} c unit base data
+     * @param {Number} lv number of level
+     * @param {Number} lb number of ATK limit break
+     * @param {Object} wep weapon
+     * @param {Object} r rarity of weapon
+     * @param {Object} amr armor
+     * @param {Object} acc accessory
+     * @param {Object} boss boss params
+     * @returns {Object} damage calculation variables
+     */
     function getDamageCalculationVariables(c, lv, lb, wep, r, amr, acc, boss) {
         var sv = getSV(c, lv, lb, wep, r, amr, acc);
         var sve = sv['default'];
@@ -285,17 +336,28 @@ var DC = (function () {
         return dcv;
     }
 
+    /**
+     * get static variable from cache or newly created
+     * @param {Object} c unit base data
+     * @param {Number} lv number of level
+     * @param {Number} lb number of ATK limit break
+     * @param {Object} wep weapon
+     * @param {Object} r rarity of weapon
+     * @param {Object} amr armor
+     * @param {Object} acc accessory
+     * @returns {Object} static variable
+     */
     function getSV(c, lv, lb, wep, r, amr, acc) {
-        var obj = sd;
-        obj = getSubObject(obj, c.id);
-        obj = getSubObject(obj, lv);
-        obj = getSubObject(obj, lb);
-        obj = getSubObject(obj, wep ? wep.id : 'undefined');
+        var obj = sd; // set obj as sd root.
+        obj = getSubObject(obj, c.id); // search sd[c.id]
+        obj = getSubObject(obj, lv);   // search sc[c.id][lv]
+        obj = getSubObject(obj, lb);   // search sc[c.id][lv][lb]...bla bla bla
+        obj = getSubObject(obj, wep ? wep.id : 'undefined'); 
         obj = getSubObject(obj, r);
         obj = getSubObject(obj, amr ? amr.id : 'undefined');
         obj = getSubObject(obj, acc ? acc.id : 'undefined');
         if (Object.keys(obj).length <= 0) {
-            obj = createSV(c, lv, lb, wep, r, amr, acc, obj);
+            obj = createSV(c, lv, lb, wep, r, amr, acc);
         }
         return obj;
     }
@@ -307,7 +369,19 @@ var DC = (function () {
         return obj[key];
     }
 
-    function createSV(c, lv, lb, wep, r, amr, acc, sv) {
+    /**
+     * get static variable from cache or newly created
+     * @param {Object} c unit base data
+     * @param {Number} lv number of level
+     * @param {Number} lb number of ATK limit break
+     * @param {Object} wep weapon
+     * @param {Object} r rarity of weapon
+     * @param {Object} amr armor
+     * @param {Object} acc accessory
+     * @returns {Object} static variable
+     */
+    function createSV(c, lv, lb, wep, r, amr, acc) {
+        sv = {};
         sv.c = c;
         sv.lv = lv;
         sv.wep = wep;
@@ -315,22 +389,24 @@ var DC = (function () {
         sv.amr = amr;
         sv.acc = acc;
         sv.mp = Math.floor((c.mp + getEqValueWithElem(c, amr, key_mp) + getEqValueWithElem(c, acc, key_mp)) * (1 + c.bs_mp + getEqValue(amr, key_bs_mp) + getEqValue(acc, key_bs_mp)));
-        sv.mpr = sv.mp * c.type.mpr;
+        sv.mpr = sv.mp * c.type.mpr; // mp recovery per hit
         sv.cost = c.s3_mp - c.s3_mp * getWeaponMpDec(c, wep);
-
-        var lv_dif = lv - 80;
-        sv.atk_ss = c.ss_atk;
+        // calc atk
+        var lv_dif = lv - 80;        
+        sv.atk_ss = c.ss_atk; // handle skill slot
         if (lv > 80) {
             sv.atk_ss += c.ss_atk_85;
         }
-        sv.lb = Math.min(lb, Math.floor(lv_dif / 5))
-        sv.atk_c = c.atk + c.atk * lv_dif * lvup_rate + c.atk * sv.lb * lb_rate[c.lvup];
-        sv.atk_eq = getWeaponAtk(c, wep, r) + getEqValueWithElem(c, amr, key_atk) + getEqValueWithElem(c, acc, key_atk);
-        sv.atk = sv.atk_c + sv.atk_eq;
+        sv.lb = Math.min(lb, Math.floor(lv_dif / 5)) // handle limit break
+        sv.atk_c = c.atk + c.atk * lv_dif * lvup_rate + c.atk * sv.lb * lb_rate[c.lvup]; // unit base atk
+        sv.atk_eq = getWeaponAtk(c, wep, r) + getEqValueWithElem(c, amr, key_atk) + getEqValueWithElem(c, acc, key_atk); // equip atk
+        sv.atk = sv.atk_c + sv.atk_eq; // total atk
+        // calc sv for each element
         createSVE(sv, 'default');
         for (var elem in db.element) {
             createSVE(sv, elem);
         }
+        // calc damage type modifiers
         sv.dtmod = {}
         for (var t in db.dtype) {
             sv.dtmod[t] = c['dtr_' + t];
@@ -338,6 +414,11 @@ var DC = (function () {
         return sv;
     }
 
+    /**
+     * calculate static variables for given element
+     * @param {Object} sv base sv
+     * @param {elem} elem element id
+     */
     function createSVE(sv, elem) {
         var sve = {};
         sv[elem] = sve;
