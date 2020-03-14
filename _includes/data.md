@@ -192,6 +192,19 @@ class|short|short_en|long|long_en
 ![gx19.png](../../icons/gx19.png)|サンタ|X19|騎士メダル 報酬|Knight Medal Reward
 ![ggos.png](../../icons/ggos.png)|ゴシップ|Gos|戦場のガールズトーク|Gossip on the Battlefield
 ![gfeast.png](../../icons/gfeast.png)|宴|Feast|新年祝う　晴れ着の宴　～初詣～|New Year's Feast ~Shrine Visiting~
+![gfeast.png](../../icons/gfeast.png)|舞|Dance|3rdグローバルチケット 報酬|3nd Anniversary Ticket VIP Reward
+![gfeast.png](../../icons/gfeast.png)|宴|Feast|新年祝う　晴れ着の宴　～初夢～|New Year's Feast ~First Dream~
+![gnp.png](../../icons/gnp.png)|天獄|NP|天獄のニーベルング 〜奇策〜|Nibelungen Purgatory ~Clever Scheme~
+![gg3.png](../../icons/gg3.png)|G3|G3|海外3周年記念★6確定ステップアップスカウト|Global 3rd Anniversary Scout
+![gsacred.png](../../icons/gsacred.png)|霊峰|Sacred|霊峰より来たりし剣神|Sword God of the Sacred Mountain
+![gvalentine.png](../../icons/gvalentine.png)|V20|V20|リボンメダル 報酬|Ribbon Medal Reward
+![gos6.png](../../icons/gos6.png)|彼方|Eternity|彼方に届く歌|A Song to Eternity
+![gp5r.png](../../icons/gp5r.png)|P5R|p5r|反逆の意志を持つ者|Possessors of Spirits of Rebellion
+![gp5r.png](../../icons/gp5r.png)|P5R|p5r|ペルソナ5Rコラボ|Persona 5R Collab
+![gp5r.png](../../icons/gp5r.png)|P5R|p5r|怪盗団メダル 報酬|Phantom Thieves Medal Reward
+![gp5r.png](../../icons/gp5r.png)|P5R|p5r|VR世界のトリックスター|VR World Trickster
+![gbunny.png](../../icons/gbunny.png)|バニー|bunny|一獲千金!?魅惑のバニーガール|Get Rich Quick?! The Captivating Bunny Girls
+![gnp.png](../../icons/gnp.png)|天獄|NP|天獄のニーベルング ～昇華～|Nibelungen Purgatory ~Ascension~
 
 ## Characters
 
@@ -201,6 +214,7 @@ name|name_en|color
 アドミン|Administrator|<span class="color-box" style="color:#381852; background-color:#ffe5df;background-image:linear-gradient(45deg,transparent 90%,#ffe5df 90%,#ffe5df),linear-gradient(45deg,transparent 88%,#f6f6f8 88%,#f6f6f8), linear-gradient(45deg,transparent 84%,#ecd7fe 84%,#ecd7fe);">__theme__</span>
 アリス|Alice|<span class="color-box" style="color:#569; background-color:#fe8;background-image:linear-gradient(45deg,transparent 90%,#fe8 90%,#fe8),linear-gradient(45deg,transparent 88%,#fff 88%,#fff), linear-gradient(45deg,transparent 84%,#569 84%,#569);">__theme__</span>
 アルゴ|Argo|<span class="color-box" style="color:#fff; background-color:#ba8;background-image:linear-gradient(45deg,transparent 90%,#ba8 90%,#ba8),linear-gradient(45deg,transparent 88%,#b95 88%,#b95), linear-gradient(45deg,transparent 84%,#fea 84%,#fea);">__theme__</span>
+ヴァイオレット|Violet|<span class="color-box" style="color:#666; background-color:#fff;background-image:linear-gradient(45deg,transparent 90%,#fff 90%,#fff),linear-gradient(45deg,transparent 88%,#fbefde 88%,#fbefde), linear-gradient(45deg,transparent 84%,#aa2238 84%,#aa2238);">__theme__</span>
 ウミノ|Umino|<span class="color-box" style="color:#881a51; background-color:#faf1f1;background-image:linear-gradient(45deg,transparent 90%,#faf1f1 90%,#faf1f1),linear-gradient(45deg,transparent 88%,#881a51 88%,#881a51), linear-gradient(45deg,transparent 84%,#d79a85 84%,#d79a85);">__theme__</span>
 エイジ|Eiji|<span class="color-box" style="color:#fff; background-color:#434;background-image:linear-gradient(45deg,transparent 90%,#434 90%,#434),linear-gradient(45deg,transparent 88%,#c8f 88%,#c8f), linear-gradient(45deg,transparent 84%,#000 84%,#000);">__theme__</span>
 エギル|Agil|<span class="color-box" style="color:#fff; background-color:#375;background-image:linear-gradient(45deg,transparent 90%,#375 90%,#375),linear-gradient(45deg,transparent 88%,#889 88%,#889), linear-gradient(45deg,transparent 84%,#b84 84%,#b84);">__theme__</span>
@@ -215,7 +229,9 @@ name|name_en|color
 サチ|Sachi|<span class="color-box" style="color:#666; background-color:#def;background-image:linear-gradient(45deg,transparent 90%,#def 90%,#def),linear-gradient(45deg,transparent 88%,#57b 88%,#57b), linear-gradient(45deg,transparent 84%,#346 84%,#346);">__theme__</span>
 ジーマ|Sima|<span class="color-box" style="color:#fff; background-color:#8cd;background-image:linear-gradient(45deg,transparent 90%,#8cd 90%,#8cd),linear-gradient(45deg,transparent 88%,#236 88%,#236), linear-gradient(45deg,transparent 84%,#854 84%,#854);">__theme__</span>
 シノン|Sinon|<span class="color-box" style="color:#fff; background-color:#9b5;background-image:linear-gradient(45deg,transparent 90%,#9b5 90%,#9b5),linear-gradient(45deg,transparent 88%,#555 88%,#555), linear-gradient(45deg,transparent 84%,#bfd 84%,#bfd);">__theme__</span>
+ジョーカー|Joker|<span class="color-box" style="color:#666; background-color:#000;background-image:linear-gradient(45deg,transparent 90%,#000 90%,#000),linear-gradient(45deg,transparent 88%,#3d4245 88%,#3d4245), linear-gradient(45deg,transparent 84%,#000 84%,#000);">__theme__</span>
 シリカ|Silica|<span class="color-box" style="color:#fff; background-color:#b33;background-image:linear-gradient(45deg,transparent 90%,#b33 90%,#b33),linear-gradient(45deg,transparent 88%,#445 88%,#445), linear-gradient(45deg,transparent 84%,#c96 84%,#c96);">__theme__</span>
+スカル|Skull|<span class="color-box" style="color:#fff; background-color:#000;background-image:linear-gradient(45deg,transparent 90%,#000 90%,#000),linear-gradient(45deg,transparent 88%,#d91612 88%,#d91612), linear-gradient(45deg,transparent 84%,#eddf9e 84%,#eddf9e);">__theme__</span>
 ストレア|Strea|<span class="color-box" style="color:#fff; background-color:#97a;background-image:linear-gradient(45deg,transparent 90%,#97a 90%,#97a),linear-gradient(45deg,transparent 88%,#435 88%,#435), linear-gradient(45deg,transparent 84%,#fef 84%,#fef);">__theme__</span>
 スフィカ|Sphica|<span class="color-box" style="color:#fff; background-color:#758;background-image:linear-gradient(45deg,transparent 90%,#758 90%,#758),linear-gradient(45deg,transparent 88%,#c85 88%,#c85), linear-gradient(45deg,transparent 84%,#fae 84%,#fae);">__theme__</span>
 スレイ|Sorey|<span class="color-box" style="color:#666; background-color:#fff;background-image:linear-gradient(45deg,transparent 90%,#fff 90%,#fff),linear-gradient(45deg,transparent 88%,#448 88%,#448), linear-gradient(45deg,transparent 84%,#666 84%,#666);">__theme__</span>
@@ -227,6 +243,7 @@ name|name_en|color
 デスガン|Death Gun|<span class="color-box" style="color:#fff; background-color:#333;background-image:linear-gradient(45deg,transparent 90%,#333 90%,#333),linear-gradient(45deg,transparent 88%,#f22 88%,#f22), linear-gradient(45deg,transparent 84%,#ccc 84%,#ccc);">__theme__</span>
 ノーチラス|Nautilus|<span class="color-box" style="color:#666; background-color:#fff;background-image:linear-gradient(45deg,transparent 90%,#fff 90%,#fff),linear-gradient(45deg,transparent 88%,#922 88%,#922), linear-gradient(45deg,transparent 84%,#a86 84%,#a86);">__theme__</span>
 ノブナガ|Nobunaga|<span class="color-box" style="color:#666; background-color:#fef;background-image:linear-gradient(45deg,transparent 90%,#fef 90%,#fef),linear-gradient(45deg,transparent 88%,#446 88%,#446), linear-gradient(45deg,transparent 84%,#c44 84%,#c44);">__theme__</span>
+パンサー|Panther|<span class="color-box" style="color:#fff; background-color:#a80000;background-image:linear-gradient(45deg,transparent 90%,#a80000 90%,#a80000),linear-gradient(45deg,transparent 88%,#ffeee1 88%,#ffeee1), linear-gradient(45deg,transparent 84%,#d3cfbb 84%,#d3cfbb);">__theme__</span>
 ヒースクリフ|Heathcliff|<span class="color-box" style="color:#fff; background-color:#922;background-image:linear-gradient(45deg,transparent 90%,#922 90%,#922),linear-gradient(45deg,transparent 88%,#fff 88%,#fff), linear-gradient(45deg,transparent 84%,#aaa 84%,#aaa);">__theme__</span>
 ピトフーイ|Pitohui|<span class="color-box" style="color:#fff; background-color:#333;background-image:linear-gradient(45deg,transparent 90%,#333 90%,#333),linear-gradient(45deg,transparent 88%,#ccc 88%,#ccc), linear-gradient(45deg,transparent 84%,#888 84%,#888);">__theme__</span>
 ファナティオ|Fanatio|<span class="color-box" style="color:#fff; background-color:#70428e;background-image:linear-gradient(45deg,transparent 90%,#70428e 90%,#70428e),linear-gradient(45deg,transparent 88%,#efe8f7 88%,#efe8f7), linear-gradient(45deg,transparent 84%,#493b5f 84%,#493b5f);">__theme__</span>
