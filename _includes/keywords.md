@@ -52,3 +52,4 @@
 |選ばれし者 chosen|
 |コンボ持続 combo duration up|
 |発生保障 発生保証 guaranteed|
+
