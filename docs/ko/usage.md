@@ -180,5 +180,7 @@ $$
 |![ls](../../icons/info_icon.png)|PC처럼 가로가 긴 화면일 때 사이드바에 지정한 URL을 표시할 수 있습니다. 공지를 설정하는 것을 추천합니다. 메모디프 공지 ([일본어](https://api-defrag.wrightflyer.net/webview/announcement?phone_type=2) : [영어](https://api-defrag-ap.wrightflyer.net/webview/announcement?phone_type=2&lang=en) : [중국어](https://api-defrag-ap.wrightflyer.net/webview/announcement?phone_type=2&lang=tc) : [한국어](https://api-defrag-ap.wrightflyer.net/webview/announcement?phone_type=2&lang=kr))|
 
 {% include data.md %}
+
 {% include keywords.md %}
 
+{% include events.md %}
