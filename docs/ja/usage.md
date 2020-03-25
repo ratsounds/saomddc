@@ -175,4 +175,4 @@ DefaultおよびDefault 50Hitプリセット等のように属性無視に設定
 
 {% include data.md %}
 {% include keywords.md %}
-
+{% include events.md %}
