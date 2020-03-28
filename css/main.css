@@ -642,7 +642,8 @@ img {
   height: 2em;
   border-radius: 2em;
   border: 3px solid #fff;
-  background-image: url("../icons/login.gif");
+  /*background-image: url("../icons/app_icon_yui.gif");*/
+  background-image: url("../icons/app_icon_yui.gif");
   background-position: 0 0.1em;
   background-size: cover;
   margin: -0.5em 0 -0.5em -0.5em;
