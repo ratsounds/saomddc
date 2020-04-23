@@ -519,6 +519,8 @@ function calcRanking() {
             dcv.damage = Math.floor(dcv.damage);
             dcv.mp = dcv.sv.mp;
             dcv.mpr = Math.floor(dcv.sv.mpr);
+            dcv.mprc = Math.floor(dcv.sv.mprc * 100) /100;
+            dcv.mprrc = Math.floor(dcv.sv.mprrc * 100) /100;
             dcv.mpcost = Math.floor(dcv.sv.mp * 100 / dcv.sv.cost) / 100;
             dcv.hits = dcv.sv.c.hits;
             dcv.rate = Math.floor(dcv.rate * 100) / 100;

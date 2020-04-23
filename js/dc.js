@@ -389,7 +389,14 @@ var DC = (function () {
         sv.amr = amr;
         sv.acc = acc;
         sv.mp = Math.floor((c.mp + getEqValueWithElem(c, amr, key_mp) + getEqValueWithElem(c, acc, key_mp)) * (1 + c.bs_mp + getEqValue(amr, key_bs_mp) + getEqValue(acc, key_bs_mp)));
-        sv.mpr = sv.mp * c.type.mpr; // mp recovery per hit
+        if (c.normal_atk_mp_recov_rate > 0){ // mp recovery rate
+            sv.mprr = c.normal_atk_mp_recov_rate;
+        } else {
+            sv.mprr = c.type.mpr;
+        }
+        sv.mpr = sv.mp * sv.mprr; // mp recovery
+        sv.mprrc = c.type.ns_hits * sv.mprr; // mp recovery rate / normal 1set
+        sv.mprc = c.type.ns_hits * sv.mpr; // mp recovery / normal 1set
         sv.cost = c.s3_mp - c.s3_mp * getWeaponMpDec(c, wep);
         // calc atk
         var lv_dif = lv - 80;        
