@@ -464,7 +464,7 @@ function calcRanking() {
                 }
             }
             ranking.push(dcv);
-            dcv.combo_speed_rate = getComboSpeedRate(dcv.sv.c.combo_speed, boss.combo);
+            dcv.combo_speed_rate = dcv.sv.c.rarity>6?1:getComboSpeedRate(dcv.sv.c.combo_speed, boss.combo);
             dcv.acceleration_rate = 1.0;
             dcv.acceleration_offset = 0.0;
             if (dcv.sv.c.rarity >= 6) {
@@ -495,7 +495,7 @@ function calcRanking() {
                 dcv.sv.c.s3_duration,
                 dcv.sv.c.s3_c_duration,
                 dcv.sv.c.s3_acceleration,
-                getComboSpeedRate(dcv.sv.c.combo_speed, 50),
+                dcv.sv.c.rarity>6?1:getComboSpeedRate(dcv.sv.c.combo_speed, 50),
                 dcv.acceleration_rate,
                 dcv.acceleration_offset,
                 dcv.sv.c.s3_charge_offset
