@@ -3,7 +3,8 @@
 class|short|short_en|long|long_en
 :--:|:--:|:--:|:--:|:--:
 ![ge16.png](../../icons/ge16.png)|E16|E16|イベント 2016|Event limited 2016
-![gnw.png](../../icons/gnw.png)|キャミ|NW|キャミソール|Ranking Nightwear
+![gnw.png](../../icons/gnw.png)|キャミ|NW|キャミソール (ネグリジェ)|Ranking Nightwear (Negligee)
+![gnw.png](../../icons/gnw.png)|配布キャミ|Gift NW|配布 キャミソール (ネグリジェ)|Gift Nightwear (Negligee)
 ![gg16.png](../../icons/gg16.png)|配布16|Gift16|配布 2016|Event limited (Gift) 2016
 ![gsao.png](../../icons/gsao.png)|初期|SAO|スタートダッシュ|Starting Dash
 ![galo.png](../../icons/galo.png)|旧水|ALO|生まれ変わったALfheim|Alfheim Reborn
@@ -204,7 +205,25 @@ class|short|short_en|long|long_en
 ![gp5r.png](../../icons/gp5r.png)|P5R|p5r|怪盗団メダル 報酬|Phantom Thieves Medal Reward
 ![gp5r.png](../../icons/gp5r.png)|P5R|p5r|VR世界のトリックスター|VR World Trickster
 ![gbunny.png](../../icons/gbunny.png)|バニー|bunny|一獲千金!?魅惑のバニーガール|Get Rich Quick?! The Captivating Bunny Girls
+![gdip.png](../../icons/gdip.png)|卒業|Dip|卒業証書メダル　報酬|Diploma Medal Reward
 ![gnp.png](../../icons/gnp.png)|天獄|NP|天獄のニーベルング ～昇華～|Nibelungen Purgatory ~Ascension~
+![gbb.png](../../icons/gbb.png)|夢見|Bb|夢見の街の麗しき強敵たち ～前編～|Brilliant Bosses in the Dreaming City ~Part 1~
+![geaster.png](../../icons/geaster.png)|イースター|Easter|イースターチケット 報酬|Easter Ticket Scout VIP Reward
+![ghb.png](../../icons/ghb.png)|願い|Hb|願いを繋ぐ光|Hope-Binding Light
+![gbb.png](../../icons/gbb.png)|夢見|Bb|夢見の街の麗しき強敵たち ～後編～|Brilliant Bosses in the Dreaming City ~ Part 2~
+![ggd2.png](../../icons/ggd2.png)|太陽神|gd|戦地に降臨せし女神～太陽神ソルス～|Goddess on the Battlefront ~Sun Goddess Solus~
+![ggd3.png](../../icons/ggd3.png)|地神|gd|戦地に降臨せし女神～地神テラリア～|Goddess on the Battlefront ~Earth Goddess Terraria~
+![gft.png](../../icons/gft.png)|憧れ|ft|憧れのプリンセスストーリー|Fairy Tale Princess Story
+![gbl.png](../../icons/gbl.png)|黒百合|bl|戦場に咲く一輪の黒百合|Black Lily on the Battlefield
+![gft.png](../../icons/gft.png)|憧れ|ft|童話メダル　報酬|Fairy Tale Medal Reward
+![gmoon.png](../../icons/gmoon.png)|満月|moon|満月照らす百鬼夜行|Yokai Parade Under the Full Moon
+![gsoul.png](../../icons/gsoul.png)|魂|soul|銃を介す魂の激闘|Fierce Battle of the Armed Soul
+![gbride.png](../../icons/gbride.png)|嫁20|Bride20|夢の中の花嫁たち ～前編～|The Brides of Your Dreams ~Part 1~
+![gbride.png](../../icons/gbride.png)|嫁20|Bride20|紫陽花メダル　報酬|Hydrangea Medal Reward
+![gwill2.png](../../icons/gwill2.png)|意志|Will2|揺るぎない意志|Unwavering Will
+![gbride.png](../../icons/gbride.png)|嫁20|Bride20|夢の中の花嫁たち ～後編～|The Brides of Your Dreams ~Part 2~
+![gnw.png](../../icons/gnw.png)|晴|ss|晴れやかな空の下で (ネグリジェ)|Under Sunny Skies (Negligee)
+![ggt.png](../../icons/ggt.png)|三女神|gt|戦地に集結せし三女神|Goddess Trinity on the Battlefront
 
 ## Characters
 
@@ -227,7 +246,9 @@ name|name_en|color
 クレハ|Kureha|<span class="color-box" style="color:#444; background-color:#f8c;background-image:linear-gradient(45deg,transparent 90%,#f8c 90%,#f8c),linear-gradient(45deg,transparent 88%,#444 88%,#444), linear-gradient(45deg,transparent 84%,#f48 84%,#f48);">__theme__</span>
 サクヤ|Sakuya|<span class="color-box" style="color:#fff; background-color:#9a6;background-image:linear-gradient(45deg,transparent 90%,#9a6 90%,#9a6),linear-gradient(45deg,transparent 88%,#968 88%,#968), linear-gradient(45deg,transparent 84%,#454 84%,#454);">__theme__</span>
 サチ|Sachi|<span class="color-box" style="color:#666; background-color:#def;background-image:linear-gradient(45deg,transparent 90%,#def 90%,#def),linear-gradient(45deg,transparent 88%,#57b 88%,#57b), linear-gradient(45deg,transparent 84%,#346 84%,#346);">__theme__</span>
+サトライザー|Subtilizer|<span class="color-box" style="color:#fff; background-color:#7d786c;background-image:linear-gradient(45deg,transparent 90%,#7d786c 90%,#7d786c),linear-gradient(45deg,transparent 88%,#7d786c 88%,#7d786c), linear-gradient(45deg,transparent 84%,#e4dc98 84%,#e4dc98);">__theme__</span>
 ジーマ|Sima|<span class="color-box" style="color:#fff; background-color:#8cd;background-image:linear-gradient(45deg,transparent 90%,#8cd 90%,#8cd),linear-gradient(45deg,transparent 88%,#236 88%,#236), linear-gradient(45deg,transparent 84%,#854 84%,#854);">__theme__</span>
+シェータ|Sheyta|<span class="color-box" style="color:#fff; background-color:#2a252b;background-image:linear-gradient(45deg,transparent 90%,#2a252b 90%,#2a252b),linear-gradient(45deg,transparent 88%,#d2b9cf 88%,#d2b9cf), linear-gradient(45deg,transparent 84%,#746f6b 84%,#746f6b);">__theme__</span>
 シノン|Sinon|<span class="color-box" style="color:#fff; background-color:#9b5;background-image:linear-gradient(45deg,transparent 90%,#9b5 90%,#9b5),linear-gradient(45deg,transparent 88%,#555 88%,#555), linear-gradient(45deg,transparent 84%,#bfd 84%,#bfd);">__theme__</span>
 ジョーカー|Joker|<span class="color-box" style="color:#666; background-color:#000;background-image:linear-gradient(45deg,transparent 90%,#000 90%,#000),linear-gradient(45deg,transparent 88%,#3d4245 88%,#3d4245), linear-gradient(45deg,transparent 84%,#000 84%,#000);">__theme__</span>
 シリカ|Silica|<span class="color-box" style="color:#fff; background-color:#b33;background-image:linear-gradient(45deg,transparent 90%,#b33 90%,#b33),linear-gradient(45deg,transparent 88%,#445 88%,#445), linear-gradient(45deg,transparent 84%,#c96 84%,#c96);">__theme__</span>
