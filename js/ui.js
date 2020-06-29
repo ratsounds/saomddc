@@ -464,7 +464,7 @@ function calcRanking() {
                 }
             }
             ranking.push(dcv);
-            dcv.combo_speed_rate = dcv.sv.c.rarity>6?1:getComboSpeedRate(dcv.sv.c.combo_speed, boss.combo);
+            dcv.combo_speed_rate = dcv.sv.c.rarity > 6 ? 1 : getComboSpeedRate(dcv.sv.c.combo_speed, boss.combo);
             dcv.acceleration_rate = 1.0;
             dcv.acceleration_offset = 0.0;
             if (dcv.sv.c.rarity >= 6) {
@@ -473,7 +473,7 @@ function calcRanking() {
                 } else {
                     if (dcv.sv.c.rarity >= 6.5) {
                         dcv.acceleration_offset = 2.0;
-                    }else {
+                    } else {
                         dcv.acceleration_offset = 1.0;
                     }
                 }
@@ -495,7 +495,7 @@ function calcRanking() {
                 dcv.sv.c.s3_duration,
                 dcv.sv.c.s3_c_duration,
                 dcv.sv.c.s3_acceleration,
-                dcv.sv.c.rarity>6?1:getComboSpeedRate(dcv.sv.c.combo_speed, 50),
+                dcv.sv.c.rarity > 6 ? 1 : getComboSpeedRate(dcv.sv.c.combo_speed, 50),
                 dcv.acceleration_rate,
                 dcv.acceleration_offset,
                 dcv.sv.c.s3_charge_offset
@@ -519,8 +519,8 @@ function calcRanking() {
             dcv.damage = Math.floor(dcv.damage);
             dcv.mp = dcv.sv.mp;
             dcv.mpr = Math.floor(dcv.sv.mpr);
-            dcv.mprc = Math.floor(dcv.sv.mprc * 100) /100;
-            dcv.mprrc = Math.floor(dcv.sv.mprrc * 100) /100;
+            dcv.mprc = Math.floor(dcv.sv.mprc * 100) / 100;
+            dcv.mprrc = Math.floor(dcv.sv.mprrc * 100) / 100;
             dcv.mpcost = Math.floor(dcv.sv.mp * 100 / dcv.sv.cost) / 100;
             dcv.hits = dcv.sv.c.hits;
             dcv.rate = Math.floor(dcv.rate * 100) / 100;
@@ -770,9 +770,16 @@ function createTweetWidgets(detail) {
     const container = detail.q('.tcontainer');
     if (container) {
         const id = container.q('a').href.split('/status/')[1];
+        /*
         twttr.widgets.createTweet(id, container, {
             width: '100%'
         }).then(() => container.classList.toggle('hidden'));
+        */
+        // temporal bug fix for twitter api specification or bug
+        twttr.widgets.createTweet(id, container, {
+            width: '100%'
+        })
+        container.classList.toggle('hidden')
     }
 }
 
