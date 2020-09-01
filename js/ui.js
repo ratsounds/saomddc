@@ -515,6 +515,7 @@ function calcRanking() {
             dcv.pdps = Math.floor(dcv.damage / (dcv.duration - pduration));
             dcv.pcdps = Math.floor(dcv.damage / (dcv.cduration - pduration));
             dcv.gap = Math.floor((dcv.duration - dcv.cduration) * 100) / 100;
+            dcv.acceleration = Math.floor(dcv.acceleration * 100) / 100;
             dcv.capacity = Math.floor((dcv.damage * dcv.sv.mp) / dcv.sv.cost);
             dcv.damage = Math.floor(dcv.damage);
             dcv.mp = dcv.sv.mp;
